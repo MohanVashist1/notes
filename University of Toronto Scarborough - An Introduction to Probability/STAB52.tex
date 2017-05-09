@@ -8,6 +8,8 @@
 
 \usepackage[utf8]{inputenc}
 
+\usepackage{mathtools}
+
 \usepackage[english]{babel}
 
 \usepackage{tikz}
@@ -17,6 +19,18 @@
 \usepackage{amsthm,amssymb}
 
 \setlength{\parindent}{0cm}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{An Introduction to Probability -- Summer 2017}
+\fancyhead[RE,LO]{Joshua Concon}
+\fancyfoot[CE,CO]{\leftmark}
+\fancyfoot[LE,RO]{\thepage}
+
 
 \begin{document}
 
@@ -32,7 +46,7 @@ Instructor is Dr. Mahinda Samarakoon. I highly recommend sitting at the front si
 
 \pagebreak
 
-\section{Lecture 1 - Wednesday, May 3, 2017}
+\section{Lecture - Wednesday, May 3, 2017}
 
 \subsection{What is probability?}
 
@@ -42,7 +56,7 @@ After a few guesses, he gave us a definition.
 
 \subsection{Relative Frequency Definition of Probability}
 
-\begin{tcolorbox}[title=Definition: Relative Frequency]
+\begin{tcolorbox}[title=Relative Frequency]
 
 Consider the case where an experiment is performed $n$ times.\\
 \\
@@ -64,7 +78,7 @@ He doesn't actually get into the definition of probability this lecture, instead
 
 \begin{itemize}
 	\item{
-	\underline{Sample Space ($S$)}: the set of all possible outcomes in an experiment. Size of $S$ is denoted by $n(S)$ or $\#S$\\
+	\underline{Sample Space ($S$)}: the set of all possible outcomes in an experiment. Size of $S$ is denoted by $n(S)$, $\#S$ or $|S|$\\
 	\\
 	\underline{ex.} Tossing a coin once: $S = \{ H,T \}$, $n(S) = 2$\\
 	\\
@@ -138,23 +152,218 @@ He doesn't actually get into the definition of probability this lecture, instead
 
 \newpage
 
-\section{Lecture 2 - Friday, May 5, 2017}
+\section{Lecture - Friday, May 5, 2017}
 
 \subsection{Formal Definition of Probability}
 
-\begin{tcolorbox}[title=Definition: Probability Measure Function]
+\begin{tcolorbox}[title= Probability Measure Function (PMF)]
 
-A function $P:S\longmapsto [0,1]$ defined on sample space $S$ is called a \textbf{Probability Measure Function}. It satisfies the following:
+A function $P:S\longmapsto [0,1]$ defined on sample space $S$ is called a \textbf{Probability Measure Function}. It satisfies the following axioms:
 \begin{enumerate}
 	\item{$0 \geq P(A) \geq 1$}
 	\item{$P(S) = 1$ where $S$ is a sample space}
 	\item{
 	For disjoint events $A_1, ... , A_n$ (disjoint means where $A_i \cap A_k = \varnothing$\\
-	$\forall i,k \in\mathbb{N}$ $1 \geq i < k \geq n$)
+	$\forall i,k \in\mathbb{N}$ $1 \geq i < k \geq n$)\\
+	then $P(A_1) \cup A_2 \cup ... \cup A_n = P(A_1) + P(A_2) + ... + P(A_n)$
 	}
 	\item{$P(\varnothing) = 0$}
 \end{enumerate}
-
 \end{tcolorbox}
+
+\subsection{Properties of Probability Measure Functions}
+
+Dr. Mahinda ends up adding \textbf{Result 1} to the definition of the Probability Measure Function (4) to stay consistent with the book, but also adds it here as well. It will be left again as a property to stay consistent with the lecture and the numbering.
+
+\paragraph{Result 1:} $P(\varnothing) = 0$
+\paragraph{Result 2:} If $A_1, ... , A_n$ is a finite collection of disjoint events, then
+
+\begin{align*}
+P(\bigcup\limits_{i=1}^n A_i) &= P(A_1 \cup A_2 \cup ... \cup A_n)\\
+&= \sum\limits_{i=1}^n P(A_i)
+\end{align*}
+
+\begin{proof}
+
+(Proof of Result 2)\\
+\\
+Define $A_i = \varnothing$, $i \geq n+1$\\
+So since there is a finite amount of events, $A_i$ where $i \geq n+1$ are just the null set
+$$\bigcup\limits_{i=1}^{\infty} A_i = \bigcup\limits_{i=1}^{n} A_i$$
+
+\begin{align*}
+\bigcup\limits_{i=1}^{\infty} A_i &= \sum\limits_{i=1}^{\infty} P(A_i)
+\shortintertext{By Axiom 3 of the PMF}
+&= \sum\limits_{i=n+1}^{\infty} P(A_i) + \sum\limits_{i=1}^{n} P(A_i)\\
+&= \sum\limits_{i=n+1}^{\infty} P(\varnothing) + \sum\limits_{i=1}^{n} P(A_i)\\
+&= 0 + \sum\limits_{i=1}^{n} P(A_i)
+\shortintertext{By Axiom 4 of the PMF}
+&= \sum\limits_{i=1}^{n} P(A_i)
+\end{align*}
+
+\end{proof}
+
+\paragraph{Result 3:} If $A_1, A_2, A_3, ...$ is a partition of $S$ and $B$ is any event then $$P(B) = \sum\limits_{i=1}^{\infty} P(A_i \cap B)$$
+
+\begin{tcolorbox}[title=Partitions]
+A parition is a collection of events satisfying the following axioms:
+\begin{enumerate}
+	\item{$A_1, A_2, A_3, ...$ are disjoint events}
+	\item{$\bigcup\limits_{i=1}^{\infty} A_i = S$}
+\end{enumerate}
+\end{tcolorbox}
+
+\begin{proof}
+(Proof of Result 3)\\
+\\
+For an arbitrary event $B$, Consider the partition $A_1, A_2, A_3, ...$ of $S$\\
+The events $B \cap A_1, B \cap A_2, B \cap A_3, ...$ are, by the definition of partitions...
+\begin{enumerate}
+	\item{disjoint}
+	\item{$\bigcup\limits_{i=1}^{\infty} B \cap A_i = B \cap S = B$}
+\end{enumerate}
+Therefore
+$$P(B) = P(\bigcup\limits_{i=1}^{\infty} B \cap A_i) = \sum\limits_{i=1}^{\infty} P(A_i \cap B)$$
+By Axiom 3 of the PMF
+\end{proof}
+
+\begin{tcolorbox}[title=Set Difference]
+	For arbitrary sets $A,B$\\
+	$A \setminus B$ or $A \cap B^c$ refers to everything in $A$ but not in $B$.
+\end{tcolorbox}
+
+\paragraph{Result 4:} $P(A \setminus B) = P(A) - P(A \cap B)$
+
+\begin{proof}
+	(Proof of Result 4)\\
+	\\
+	Note that $A \setminus B$ and $A \cap B$ are disjoint\\
+	$P((A \setminus B) \cup (A \cap B)) = P(A \setminus B) + P(A \cap B)$\\
+	Since $A \setminus B$ is disjoint from $A \cap B$
+	\\
+	So for arbitrary events $A,B$\\
+	$P(A) = P(A \setminus B) + P(A \cap B) \Longrightarrow P(A \setminus B) = P(A) - P(A \cap B)$
+\end{proof}
+
+\underline{Note:} if $B \subseteq A$ then $P(A \setminus B) = P(A) - P(B)$
+
+\begin{proof}
+	(Proof of Note)\\
+	\\
+	if $B \subseteq A$ then $A \cap B = B$\\
+	therefore $P(A \setminus B) = P(A) - P(A \cap B) = P(A) - P(B)$
+\end{proof}
+
+\paragraph{Result 5:} If $A \subseteq B$ then $P(A) \leq P(B)$\\
+
+\begin{proof}
+(Proof of Result 5)
+\begin{align*}
+	A \subseteq B \Longrightarrow & P(A \setminus B)\\
+	= & P(B) - P(A) \geq 0
+	\shortintertext{By Axiom 1 of the PMF}
+	\Longrightarrow & P(A) \leq P(B)
+\end{align*}
+
+\end{proof}
+
+\paragraph{Result 6:} $P(A^c) = 1 - P(A)$
+
+\begin{proof}
+	(Proof of Result 6)\\
+	Consider an arbitrary event $A \subseteq S$\\
+	Since we know that if $A \subseteq S$ then $P(A \setminus B) = P(B) - P(A)$\\
+	and that $A^c = S \setminus A$\\
+	\begin{align*}
+		P(A^c) = P(S \setminus A) &= P(S) - P(A)\\
+		&= 1 - P(A)
+	\end{align*}
+\end{proof}
+
+\paragraph{Result 7:} we know $P(A \cup B) = P(A) + P(B)$ if $A,B$ are disjoint and $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ for any 2 events $A,B$.
+
+\begin{proof}
+	(Proof for Result 7)\\
+	since we know that $A \cup B = A \cup (B \setminus A)$ and that events $A$ and $(B \setminus A)$ are disjoint.\\
+	\begin{align*}
+		P(A \cup B) &= P(A \cup (B \setminus A))\\
+		&= P(A) + P(B \setminus A)\\
+		&= P(A) + P(B) - P(A \cup B)
+		\shortintertext{By Result 4}
+	\end{align*}
+\end{proof}
+
+\underline{Note:} This result can be extended to more than 2 events \underline{e.g.}
+$$P(A\cup B \cup C) = P(A) + P(B) + P(C) - P(A \cap B) - P(A \cap C) - P(B \cap C) + P(A \cap B \cap C)$$
+
+\textbf{Example 1:} Consider a bag with 3 red marbles and 7 green marbles inside the bag. What is the probability that you would select a red marble from the bag at random? How about the probability of selecting a green marble?\\
+\\
+\textbf{Solution 1:} Simply consider all possible events, and then for each probability $x$, take all the events where $x$ happens and divide it by the sample space. Let $R,G$ represent the events where a red and green marble respectively is selected.\\
+$$P(R) = \frac{R}{R+G} = 0.3$$
+$$P(G) = \frac{G}{R+G} = 0.7$$
+
+\textbf{Example 2:} Consider a class of 33 students, 17 of them aced the midterm, 14 of them aced the final and 11 did not have As on either. How many of them aced both the midterm and the final?\\
+\\
+\textbf{Solution 2:} Let $A,B$ refer to the students who have aced the midterm and final respectively. We are trying to solve for $P(A \cap B)$.\\
+$$P(A) = 17/33$$
+$$P(B) = 14/33$$
+$$P(A \cup B) = 22/33$$
+\begin{align*}
+	P(A \cup B) &= P(A) + P(B) - P(A \cap B)\\
+	22/33 &= 17/33 + 14/33 - P(A \cap B)\\
+	22/33 &= 31/33 - P(A \cap B)\\
+	22/33 + P(A \cap B) &= 31/33\\
+	P(A \cap B) &= 31/33 - 22/33\\
+	P(A \cap B) &= 9/33\\
+\end{align*}
+
+\subsection{Uniform Probability Measure on Finite Sample Spaces}
+
+\begin{tcolorbox}[title=Uniform Probability Measure on Finite Sample Spaces (UPMFSS)]
+	If $S$ is a finite sample space (\underline{i.e.} $|S| < \infty$) of \underline{equally likely} outcomes, and $A$ is any event, then $P(A) = \frac{|A|}{|S|}$
+\end{tcolorbox}
+
+But is this sample space a probability measure?
+
+\begin{proof}
+	(Proof of UPMFSS being a probability measure)\\
+	\begin{enumerate}
+		\item{
+		\underline{$0 \leq P(A) \leq 1$ for an arbitrary event $A$}
+		\begin{align*}
+			\varnothing \subseteq & A \subseteq S\\
+			|\varnothing| \leq & |A| \leq |S|\\
+			0 \leq & \frac{|A|}{|S|} \leq 1
+		\end{align*}
+		}
+		\item{
+		\underline{$P(S) = 1$}
+		$$P(S) = \frac{|S|}{|S|} = 1$$
+		}
+		\item{
+		\underline{$P(A_1) \cup A_2 \cup ... \cup A_n = P(A_1) + P(A_2) + ... + P(A_n)$}\\
+		Let $A_1, A_2, ...$ be disjoint events\\
+		Consider $|\bigcup\limits_{i=1}^{\infty} A_i|$
+		\begin{align*}
+			|\bigcup\limits_{i=1}^{\infty} A_i| &= |A_1| + |A_2| + ...
+			\shortintertext{Since the $A_i$'s are disjoint}
+			\frac{|\bigcup\limits_{i=1}^{\infty} A_i|}{|S|} &= \frac{|A_1|}{|S|} + \frac{|A_2|}{|S|} + ...\\
+			P(|\bigcup\limits_{i=1}^{\infty} A_i|) &= P(A_1) + P(A_2) + ...
+		\end{align*}
+		}
+	\end{enumerate}
+\end{proof}
+
+\subsection{Counting (Combinatorics)}
+
+\textbf{Example 1:} How many 4 digit numbers can be formed from digits $1,2,...,9$ if repeats are not allowed?\\
+\\
+\textbf{Solution 1:} $P(9,4) = \frac{9!}{4!} = 9 \cdot 8 \cdot 7 \cdot 6 \cdot 5$ since there are 9 numbers to choose from and there are 4 digits that these numbers can "occupy".\\
+\\
+\textbf{Example 2:} Find the probability that the 4-digit number formed from the question above is divisible by 5.\\
+\\
+\textbf{Solution 2:} $\frac{P(8,3)}{P(9,4)} = \frac{8 \cdot 7 \cdot 6}{9 \cdot 8 \cdot 7 \cdot 6} = \frac{1}{9}$ since there are $P(9,4)$ combinations in total and the numbers divisible by 5 end with a 5 (since it is not possible for the number in the question above to end in a 0). So there are 3 digits left to be assigned a number with only 8 numbers since 5 is already used, so the numerator is $P(8,3)$.\\
+\\
+\textbf{Counting Subsets:} The number of subsets of size $k$ that can be formed from $n$ objects is $$\frac{n!}{k!(n-k)!} = C(n,k)$$
 
 \end{document}

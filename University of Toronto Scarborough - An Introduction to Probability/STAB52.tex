@@ -1,0 +1,160 @@
+\documentclass[12pt]{article}
+
+\usepackage{upgreek}
+
+\usepackage{amsmath}
+
+\usepackage{dsfont}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[english]{babel}
+
+\usepackage{tikz}
+
+\usepackage{tcolorbox}
+
+\usepackage{amsthm,amssymb}
+
+\setlength{\parindent}{0cm}
+
+\begin{document}
+
+\title{STAB52: An Introduction to Probability}
+\date{University of Toronto Scarborough -- Summer 2017}
+\author{Joshua Concon}
+\maketitle
+
+Pre-reqs are MATA37, which is Calculus for Mathematical Sciences II.
+Instructor is Dr. Mahinda Samarakoon. I highly recommend sitting at the front since he likes to teach with the board and can have a bit of trouble projecting his voice in large lecture halls.
+
+\tableofcontents
+
+\pagebreak
+
+\section{Lecture 1 - Wednesday, May 3, 2017}
+
+\subsection{What is probability?}
+
+He wanted us to think about what it really was. i.e. What does it mean for something to have a 50\% probability? If a coin landing on heads has a 50\% probability, it doesn't guarantee that such an event would occur if you flipped a coin twice.\\
+\\
+After a few guesses, he gave us a definition.
+
+\subsection{Relative Frequency Definition of Probability}
+
+\begin{tcolorbox}[title=Definition: Relative Frequency]
+
+Consider the case where an experiment is performed $n$ times.\\
+\\
+Let $|A|$ be the number of trials resulting in 'event' $A$.\\
+\\
+The \textbf{Relative Frequency} of $A = \frac{|A|}{n} = \gamma_n$\\
+
+\end{tcolorbox}
+
+This is the Probability of $A$ when $n$ is large $\gamma_n$ by itself is not an accurate definition of the probability of $A$ occurring, so we take the limit as n goes to infinity and then we have such:
+
+$$\lim_{n\to\infty} \gamma_n$$
+
+This definition is difficult to use in most cases but relatively easy to understand. So here is a definition that is easier to do calculations with:
+
+\subsection{Formal Definition of Probability}
+
+He doesn't actually get into the definition of probability this lecture, instead he goes through a few terms that we need to define before we get to this definition.
+
+\begin{itemize}
+	\item{
+	\underline{Sample Space ($S$)}: the set of all possible outcomes in an experiment. Size of $S$ is denoted by $n(S)$ or $\#S$\\
+	\\
+	\underline{ex.} Tossing a coin once: $S = \{ H,T \}$, $n(S) = 2$\\
+	\\
+	\underline{ex.} Rolling a 6-sided die: $S = \{ 1,2,3,4,5,6 \}$, $n(S) = 6$\\
+	\\
+	\underline{ex.} Tossing 2 different coins: $S = \{ HH, HT, TH, TT \}$, $n(S) = 4$
+	}
+	\item{
+	\underline{Events:} Subsets of a sample space\\
+	\\
+	\underline{ex.} Experiment rolling a die, $S = \{ 1,2,3,4,5,6 \}$\\
+	$A = \{ 1,2 \}$, $A \subseteq S$, so $A$ is an event of $S$.\\
+	$B = \{ 5,7 \}$, $B \nsubseteq S$, so $B$ is not an event of $S$.\\
+	\\
+	You can also describe events with words.\\
+	\\
+	$C =$ the result is an odd number $= \{ 1,3,5 \}$, $C \subseteq S$, so $C$ is an event of $S$.\\
+	\\
+	An event can be the entire sample space and the null set.\\
+	\\
+	$D = S \subseteq S$, so $D$ is an event of $S$.\\
+	$E = \varnothing \subseteq S$, so $E$ is an event of $S$.\\
+	}
+	\item{
+	\underline{Operations on Events} (Unless specified, valid for all events $A,B$)
+	\begin{enumerate}
+		\item{
+		Where $S = \{ 1,2,3,4,5,6 \}$, $A =  \{ 1,2 \}$, $B = \{ 2,4,5 \}$\\
+		$A \cup B$ : elements in A or B\\
+		\underline{ex.}
+		$A \cup B = \{ 1,2,4,5 \}$
+		}
+		\item{
+		Where $S = \{ 1,2,3,4,5,6 \}$, $A =  \{ 1,2 \}$, $B = \{ 2,4,5 \}$\\
+		$A \cap B$ : elements in A and B\\
+		\underline{ex.} $A \cap B = \{ 2 \}$\\
+		And for $C = \{ 5,6 \}$\\
+		$A \cap C = \varnothing$\\
+		\\
+		\begin{tcolorbox}
+		\underline{Recall:} So essentially all of the logic laws from CSCA67 hold for these sets as well.\\
+		\underline{i.e.}\\
+		$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$\\
+		$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
+		\end{tcolorbox}
+		}
+		\item{
+		$(A \cap B)^c = (A^c \cup B^c)$ (where $A^c$ is the complement of $A$, which is the elements in $S$ that is not in $A$)\\
+		\underline{ex.}\\
+		Consider $A = \{ 1,2 \}$ and $S = \{ 1,2,3,4,5,6 \}$\\
+		$A^c = S - A = \{ 3,4,5,6 \}$
+		}
+		\item{
+		$(A \cup B)^c = (A^c \cap B^c)$
+		}
+		\item{
+		$A \cup \varnothing = A$
+		}
+		\item{
+		$A \cap \varnothing = \varnothing$
+		}
+	\end{enumerate}
+	}
+	\item{
+	\underline{Event Space:} Is a set of all the possible events of $S$ (\underline{i.e} All the possible subsets of the set $S$). Denoted P\\
+	\underline{ex.}
+	The Event Space of the set $\{ 1,2,3 \}$ is\\
+	$\{ $\{ 1 \}$,$\{ 2 \}$,$\{ 3 \}$, $\{ 1,2 \}$, $\{ 2,3 \}$, $\{ 1,3 \}$, $\{ 1,2,3 \}$ \}$
+	}
+\end{itemize}
+
+\newpage
+
+\section{Lecture 2 - Friday, May 5, 2017}
+
+\subsection{Formal Definition of Probability}
+
+\begin{tcolorbox}[title=Definition: Probability Measure Function]
+
+A function $P:S\longmapsto [0,1]$ defined on sample space $S$ is called a \textbf{Probability Measure Function}. It satisfies the following:
+\begin{enumerate}
+	\item{$0 \geq P(A) \geq 1$}
+	\item{$P(S) = 1$ where $S$ is a sample space}
+	\item{
+	For disjoint events $A_1, ... , A_n$ (disjoint means where $A_i \cap A_k = \varnothing$\\
+	$\forall i,k \in\mathbb{N}$ $1 \geq i < k \geq n$)
+	}
+	\item{$P(\varnothing) = 0$}
+\end{enumerate}
+
+\end{tcolorbox}
+
+\end{document}

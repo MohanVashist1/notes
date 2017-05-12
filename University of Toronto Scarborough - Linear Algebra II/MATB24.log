@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 MAY 2017 19:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  12 MAY 2017 13:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**STAB52.tex
-(./STAB52.tex
+**MATB24.tex
+(./MATB24.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
@@ -758,8 +758,8 @@ less on input line 31.
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 32.
 
-(./STAB52.aux)
-\openout1 = `STAB52.aux'.
+(./MATB24.aux)
+\openout1 = `MATB24.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
@@ -844,276 +844,37 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 40.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./STAB52.toc)
+) (./MATB24.toc)
 \tf@toc=\write6
-\openout6 = `STAB52.toc'.
+\openout6 = `MATB24.toc'.
 
 
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 53--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--66
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 84--89
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--89
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--105
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--105
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--105
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--105
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--105
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 116--127
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 116--127
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 151.
-
- (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 151.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 190--194
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 219--223
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 240--248
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 253--257
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 275--279
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 288--290
-
- []
-
-
-Overfull \hbox (22.01788pt too wide) detected at line 299
-\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 [ \OML/c
-mm/m/it/12 B \OMS/cmsy/m/n/12 [ \OML/cmm/m/it/12 C\OT1/cmr/m/n/12 ) = \OML/cmm/
-m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/1
-2 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 B\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 P\OT
-1/cmr/m/n/12 (\OML/cmm/m/it/12 C\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm
-/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/
-12 B\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\
-OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 C\OT1/cmr/m/n/12 ) \OMS/c
-msy/m/n/12 ^^@ \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 B \OMS/cmsy/
-m/n/12 \ \OML/cmm/m/it/12 C\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 P\OT1/cmr/m/n/1
-2 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 B \OMS/cmsy/m/n/12 \ 
-\OML/cmm/m/it/12 C\OT1/cmr/m/n/12 )
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 301--304
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 301--304
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 307--310
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 307--310
-
- []
-
-
-Overfull \hbox (24.30457pt too wide) in paragraph at lines 322--322
-[]\OT1/cmr/bx/n/14.4 Uniform Prob-a-bil-ity Mea-sure on Fi-nite Sam-ple Spaces 
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--369
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--369
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--369
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--369
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[10]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[11] (./STAB52.aux) ) 
+[2] (./MATB24.aux) ) 
 Here is how much of TeX's memory you used:
- 15397 strings out of 493089
- 302801 string characters out of 6134842
- 349580 words of memory out of 5000000
- 18570 multiletter control sequences out of 15000+600000
- 14448 words of font info for 55 fonts, out of 8000000 for 9000
+ 15300 strings out of 493089
+ 301004 string characters out of 6134842
+ 342450 words of memory out of 5000000
+ 18484 multiletter control sequences out of 15000+600000
+ 8598 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,73p,809b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
-am10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbol
-s/msbm10.pfb>
-Output written on STAB52.pdf (11 pages, 145018 bytes).
+ 55i,11n,73p,809b,239s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr17.pfb>
+Output written on MATB24.pdf (2 pages, 40733 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 26 PDF objects out of 1000 (max. 8388607)
+ 18 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

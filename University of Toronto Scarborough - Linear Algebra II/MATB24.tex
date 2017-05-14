@@ -14,6 +14,8 @@
 
 \usepackage{tikz}
 
+\newcommand{\ts}{\textsuperscript}
+
 \usepackage{tcolorbox}
 
 \usepackage{amsthm,amssymb}
@@ -46,8 +48,144 @@ Instructor is Dr. Louis de Thanhoffer de Volcsey. I highly recommend sitting at 
 
 \pagebreak
 
-\section{Lecture - Wednesday, May 3, 2017}
+\section{Wednesday, May 3, 2017}
 
-test
+Before he got to the definition of fields, Dr. Louis de Thanhoffer de Volcsey talked a lot about how MATB24 was simply going to be a generalization of everything in MATA23 and various specific examples of fields as well as practical applications, but since fields were never defined, I will omit all of that stuff since it does not really make any sense without the formal definition of fields.\\
+\\
+In the definition of the field, the lecturer presents the unique additive identity as $0$, the unique additive inverse as $(-a)$ for $a$, the unique multiplicative identity as $1$, and the unique multiplicative inverse of $a$ as $(a^{-1})$. Although this is true for fields like $\mathbb{R}$, this is misleading, as the inverses and identities are supposed to be general, and thinking of the additive inverse for example as $(-a)$ is not necessarily true for some fields.\\
+\\
+Take for example the field $\mathbb{Z}_2 = \{ 0,1 \}$ (This is essentially all of $\mathbb{Z}$ but each element $a$ becomes the remainder of $a/2$, so $0,1,2,3,4,5$ becomes $0,1,0,1,0,1$).\\
+\\
+If you consider the case when $a = 1$, the additive inverse of 1 is 1 (\underline{i.e.} $1 + 1 = 0$). So using the definition of $(-a)$ as the additive inverse in this case is confusing since $(-a) = a = 1$. So in the definition of a field, these are all generalized.
+
+\subsection{Fields}
+
+\begin{tcolorbox}[title=Fields]
+	A field ($\mathbb{F}$) is a set with two operations:
+	\begin{itemize}
+		\item{$+:\mathbb{F} \times \mathbb{F} \longrightarrow \mathbb{F}$}
+		\item{$\circ:\mathbb{F} \times \mathbb{F} \longrightarrow \mathbb{F}$}
+	\end{itemize}
+	And these two operations must satisfy all of the following axioms:\\
+	(Axioms are for $\forall a,b,c \in \mathbb{F}$)\\
+	\textbf{Axioms for $+$:}
+	\begin{itemize}
+		\item{\underline{associative:} $(a + b) + c = a + (b + c)$}
+		\item{\underline{commutative:} $a + b = b + a$}
+		\item{\underline{(unique) additive identity:} $\exists j \in \mathbb{F} : j + a = a$}
+		\item{\underline{(unique) additive inverse:} $\exists k \in \mathbb{F} : k + a = j$ where $j$ is the unique additive identity}
+	\end{itemize}
+	\textbf{Axioms for $\circ$:}
+	\begin{itemize}
+		\item{\underline{associative:} $(a \circ b) \circ c = a \circ (b \circ c)$}
+		\item{\underline{commutative:} $a \circ b = b \circ a$}
+		\item{\underline{(unique) multiplicative identity:} $\exists q \in \mathbb{F} : q \circ a = a$}
+		\item{\underline{(unique) multiplicative inverse:} $\exists w \in \mathbb{F}\setminus\{ j \} : w \circ a = q$ where $q$ is the unique multiplicative identity and $j$ is the unique additive identity}
+	\end{itemize}
+	\textbf{Axioms for both:}
+	\begin{itemize}
+		\item{\underline{distributive:} $a \circ (b + c) = (a \circ b) + (c \circ a)$}
+	\end{itemize}
+\end{tcolorbox}
+
+\textbf{Example 1:} Is $\mathbb{Z}$ a field?\\
+\\
+\textbf{Solution 1:} No, since $2 \in\mathbb{Z}$ has no multiplicative inverse in $\mathbb{Z}$\\ (\underline{i.e.} $\nexists a \in\mathbb{Z} : 2a = 1$), however, $\mathbb{Q}$ is a field and solves this problem.
+
+\section{Friday, May 5, 2017}
+
+\subsection{Vector Spaces}
+
+Vector spaces are, in the paraphrased words of the lecturer, "simply the generalization of the real-valued vectors from MATA23". So they are a collection of elements where each element is in a field $(\mathbb{F})$.\\
+\\
+The following definition of Vector Spaces is also slightly inconsistent when compared to the lecture and the textbook definition to be more general for reasons provided before (for the definition of a field). Like a single mother who is pulled into a conversation with her child about the missing paternal figure, I would prefer to just tell a more truthful definition now that may be more abstract and slightly harder to understand in order to be more consistent, rather than clearing up disinformation later.
+
+\begin{tcolorbox}[title=Vector Spaces]
+A Vector Space over the field $\mathbb{F}$ is a set $V$ with the following operations:
+\begin{itemize}
+	\item{$+:V \times V \longrightarrow V$ (vector addition)}
+	\item{$\circ:\mathbb{F} \times V \longrightarrow V$ (scalar multiplication)}
+\end{itemize}
+And these two operations must satisfy all of the following axioms:\\
+(axioms are for $\forall v,w,u \in V$ and $\forall a,b \in\mathbb{F}$)\\
+\textbf{Axioms for $+$:}
+\begin{itemize}
+	\item{\underline{associative:} $(v + w) + u = v + (w + u)$}
+	\item{\underline{commutative:} $v + w = w + v$}
+	\item{\underline{existence of the zero vector:} $\exists n \in V : n + v = v$ ($n$ must also be unique)}
+	\item{\underline{existence of the inverse vector:} $\exists b \in V : b + v = n$ where $n$ is the zero vector and $b$ is unique for each vector $v$.}
+\end{itemize}
+\textbf{Axioms for $\circ$:}
+\begin{itemize}
+	\item{\underline{associative:} $(ab) \circ v = a \circ (b \circ v)$}
+	\item{\underline{preservation of scale:} $\exists j \in\mathbb{F} : j \circ v = v$ ($j $ is usually 1 here)}
+\end{itemize}
+\textbf{Axioms for both:}
+\begin{itemize}
+	\item{\underline{distributive:} $(a + b) \circ v = (a \circ v) + (b \circ v)$\\
+	$a \circ (v + w) = (a \circ v) + (a \circ w)$}
+\end{itemize}
+\end{tcolorbox}
+
+\textbf{Example 1:} Prove the distributive axiom for $\mathbb{F}^n$ which is a vector space over $\mathbb{F}$ with operations $(+, \circ)$ from the real numbers $(\mathbb{R})$ and:
+\begin{itemize}
+	\item{$v = (v_1, ... ,  v_n) \in\mathbb{F}^n$}
+	\item{$w = (w_1, ... ,  w_n) \in\mathbb{F}^n$}
+	\item{$a,b \in\mathbb{F}$}
+\end{itemize}
+
+\textbf{Solution 1:} Since we are using the $(+, \circ)$ operations from the real numbers, then we know that...
+\begin{itemize}
+	\item{$v+w = (v_1 + w_1, ... ,  v_n + w_n)$}
+	\item{$a \circ v = (a \circ v_1, ... , a \circ v_n)$}
+\end{itemize}
+Consider $a \circ (v + w)$
+\begin{align*}
+a \circ (v + w) &= a \circ (v_1 + w_1, ... ,  v_n + w_n)\\
+&= (a \circ (v_1 + w_1), ... ,a \circ (v_n + w_n))\\
+&= ((a \circ v_1) + (a \circ w_1), ... , (a \circ v_n) + (a \circ w_n))\\
+&= ((a \circ v_1) + ... + (a \circ v_n)) + ((a \circ w_1) + ... + (a \circ w_n))\\
+&= (a \circ (v_1, ... ,  v_n)) + (a \circ (w_1, ... ,  w_n))\\
+&= (a \circ v) + (a \circ w)
+\end{align*}
+Consider $(a + b) \circ v$
+\begin{align*}
+	(a + b) \circ v &= (v_1, ... ,  v_n)\\
+	&= (((a + b) \circ v_1), ... ,  ((a + b) \circ v_n))\\
+	&= ((a \circ v_1) + (b \circ v_1), ... ,  (a \circ v_n) + (b \circ v_n))\\
+	&= ((a \circ v_1), ... ,  (a \circ v_n)) + ((b \circ v_1), ... ,  (b \circ v_n))\\
+	&= (a \circ (v_1, ... ,  v_n)) + (b \circ (v_1, ... ,  v_n))\\
+	&= (a \circ v) + (b \circ v)
+\end{align*}
+
+\textbf{Example 2:} $\mathbb{M}_{k,l}(\mathbb{F})$ which is all $k \times l$ matrices with coefficients in $\mathbb{F}$.\\
+This is also field, for example:\\
+($\forall M,N \in \mathbb{M}_{k,l}(\mathbb{F})$, $\forall a \in\mathbb{F}$ and $\forall i,j : 1 \leq i \leq k, 1 \leq j \leq l$)
+
+\begin{itemize}
+	\item{$M + N = (M + N)$ where $(M+N)_{ij} = M_{ij} + N_{ij}$ (ij\ts{th} entry addition)}
+	\item{0 is the zero matrix where $0_{ij} = 0$}
+	\item{$a \circ M = (aM)$ where $(aM)_{ij} = a (M_{ij})$ (scalar multiplication)}
+	\item{$M + (-M) = 0$ where $(-M)_{ij} = -(M_{ij})$ (existence of the inverse vector)}
+\end{itemize}
+
+\textbf{Example 3:} $\mathbb{M}_{k,l}^{1}(\mathbb{F})$ (all $k \times l$ matrices with coefficients in $\mathbb{F}$ and $\forall M \in \mathbb{M}_{k,l}^{1}(\mathbb{F})$, $M_{1,1} = 1$)\\
+\\
+This is not a Vector Space because scalar multiplication does not work if the scalar being multiplied by is not 1. (\underline{i.e.} if $a \neq 1$ then $a(M_{1,1}) = a \neq 1$)\\
+\\
+\textbf{Example 4:} $\mathbb{M}_{k,l}^{0}(\mathbb{F})$ however, is a vector space, since\\ $\forall a \in\mathbb{F}$ and $\forall M \in \mathbb{M}_{k,l}^{0}(\mathbb{F})$, that $a(M_{1,1}) = a \cdot 0 = 0$.\\
+\\
+\textbf{Example 5:} $P(\mathbb{F})$ which is all the polynomials over the field $\mathbb{F}$, defined by:
+$$P(\mathbb{F}) = \langle \sum_{i=1}^{n} {\alpha_i \cdot x^i} \rangle$$
+This is also a Vector Space, here are some examples of how the operations work.
+\begin{itemize}
+	\item{$\sum_{i=1}^{n} {\alpha_i \cdot x^i} + \sum_{i=1}^{n} {\beta_i \cdot x^i} = \sum_{i=1}^{n} {(\alpha_i + \beta_i) \cdot x^i}$ (vector addition)}
+	\item{$\gamma\sum_{i=1}^{n} {\alpha_i \cdot x^i} = \sum_{i=1}^{n} {(\gamma\alpha_i) \cdot x^i}$ (scalar multiplication)}
+\end{itemize}
+
+\textbf{Example 6:} Take any set $X$, $V$ is a vector space over $\mathbb{F}$\\
+$V^X = \{ functions : X \longrightarrow V \}$ is a vector space over $\mathbb{F}$\\
+Consider $f,g \in V^X$, $\forall \alpha \in \mathbb{F}$
+$$(f + g)(x) = f(x) + g(x)$$
 
 \end{document}

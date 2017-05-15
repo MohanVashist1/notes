@@ -372,8 +372,73 @@ But is this sample space a probability measure?
 
 \section{Wednesday, May 10, 2017}
 
-\textbf{Example 1:} A professor will select 5 out of 10 questions for an exam, and a student studies the answers to 6 of these 10 questions. What is the probability that the professor will select questions that the student has studied for all 5 questions?\\
+\subsection{Counting (continued)}
+
+\textbf{Example 1:} A professor will select 5 out of 10 questions for an exam, and a student studies the answers to 6 of these 10 questions. What is the probability that all the questions that the professor will select questions are questions that the student has studied for?\\
 \\
-\textbf{Solution 1:}
+\textbf{Solution 1:} The sample space $|S| = \binom{10}{5}$ and the cases that all the questions that the professor will select questions that the student has studied for is $\binom{6}{5}$ so the probability is:
+
+$$\frac{\binom{6}{5}}{\binom{10}{5}}$$
+
+\textbf{Example 2:} There are 20 members in a group. We want to divide this group into 3 sub-groups (say, $A, B, C$) of sizes $8,8,4$ respectively. In how many ways can we do this?\\
+
+\textbf{Solution 2:} We choose 8 for $A$, and then 8 from the remaining 12 for $B$ where the order does not matter and the rest go to $C$, so we have.
+
+$$\binom{20}{8} \binom{12}{8} \binom{4}{4} = \frac{20!}{8! 12!} \cdot \frac{12!}{8! 4!} \cdot \frac{4!}{4!} = \frac{12!}{8!8!4!} = \binom{12}{8\:\: 8\:\: 4}$$
+\\
+\textbf{Example 3:} A deck of 52 cards has 12 picture cards. We want to divide this among 4 players (say, $A, B, C, D$). What is the probability that each player will get exactly 3 picture cards?\\
+\\
+\textbf{Solution 3:} The sample space $|S| = \binom{52}{13\:\:13\:\:13\:\:13}$ The cases for distributing all of the 12 picture cards between the 4 players is $\binom{12}{3\:\:3\:\:3\:\:3}$ and the cases for distributing all of the 40 regular cards between the players is $\binom{40}{10\:\:10\:\:10\:\:10}$ so the total probability is:
+
+$$\frac{\binom{12}{3\:\:3\:\:3\:\:3} \cdot \binom{40}{10\:\:10\:\:10\:\:10}}{\binom{52}{13\:\:13\:\:13\:\:13}}$$
+
+\subsection{Conditional Probability}
+
+\begin{tcolorbox}[title=Conditional Probability]
+	Let $A,B$ be two events such that $P(B) > 0$, then the conditional probability of $A$ given $B$ is:
+	$$P(A | B) = \frac{P(A \cap B)}{P(B)}$$
+\end{tcolorbox}
+
+\begin{proof}
+	(Proof that $P(\cdot | B)$ is a probability measure)\\
+	\textbf{Axiom 1}\\
+	\begin{align*}
+		\varnothing \subseteq A \cap B &\subseteq B\\
+		P(\varnothing) \leq P(A \cap B) &\leq P(B)\\
+		0 \leq \frac{P(A \cap B}{P(B)} &\leq 1
+	\end{align*}
+	Therefore $P(\cdot | B)$ satisfies axiom 1.\\
+	\\
+	\textbf{Axiom 2}\\
+	Let $S$ be the sample space, and let $B$ be any event\\
+	\begin{align*}
+		S \cap B &= B\\
+		P(S \cap B) &= P(B)\\
+		P(S | B) = \frac{P(S \cap B)}{P(B)} = 1
+	\end{align*}
+	Therefore $P(\cdot | B)$ satisfies axiom 2.\\
+	\\
+	\textbf{Axiom 3}\\
+	Let $A_1, A_2, ...$ be a collection of disjoint sets\\
+	Note that $\forall$ events $B$ that $A_1 \cap B, A_2 \cap B,A_3 \cap B, ...$ are also disjoint.
+	\begin{align*}
+		P((A_1 \cap B) \cup (A_2 \cap B) \cup (A_3 \cap B) \cup ...) &= P(A_1 \cap B) + P(A_2 \cap B) + P(A_3 \cap B) + ...\\
+		&= P((A_1 \cup A_2 \cup A_3 \cup ...) \cap B)\\
+		\frac{P((A_1 \cup A_2 \cup A_3 \cup ...) \cap B)}{P(B)} &= \frac{P(A_1 \cap B)}{P(B)} + \frac{P(A_2 \cap B)}{P(B)} + \frac{P(A_3 \cap B)}{P(B)} + ...\\
+		P(A_1 \cup A_2 \cup A_3 \cup ...  | B) &= P(A_1 | B) + P(A_2 | B) + P(A_3 | B) + ...
+	\end{align*}
+	Therefore $P(\cdot | B)$ satisfies axiom 3.\\
+	Therefore $P(\cdot | B)$ is a probability measure.
+\end{proof}
+
+\textbf{Example 4:} Consider the two events $A,B$ such that\\
+$P(A) = 0.5, P(B) = 0.3, P(AB) = 0.1$. Find...
+\begin{enumerate}
+	\item{$P(A|B) = \frac{P(AB)}{P(B)} = \frac{0.1}{0.3} = \frac{1}{3}$}
+	\item{$P(B|A) = \frac{P(AB)}{P(A)} = \frac{0.1}{0.5} = \frac{1}{5}$}
+	\item{$P(A|A\cup B) = \frac{P(A\cap(A\cup B))}{P(A \cup B)} = \frac{P(A)}{P(A)+P(B)-P(AB)} = \frac{0.5}{0.5+0.3-0.1} = \frac{5}{7}$}
+	\item{$P(A|A\cap B) = \frac{P(A\cap A\cap B)}{P(A\cap B)} = \frac{P(A\cap B)}{P(A\cap B)} =1$}
+	\item{$P(AB | A\cup B) = \frac{P(AB \cap (A\cup B))}{P(A \cup B)} = \frac{P(AB)}{P(A\cup B)} = \frac{0.1}{0.5+0.3-0.1} = \frac{1}{7}$}
+\end{enumerate}
 
 \end{document}

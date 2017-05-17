@@ -441,4 +441,158 @@ $P(A) = 0.5, P(B) = 0.3, P(AB) = 0.1$. Find...
 	\item{$P(AB | A\cup B) = \frac{P(AB \cap (A\cup B))}{P(A \cup B)} = \frac{P(AB)}{P(A\cup B)} = \frac{0.1}{0.5+0.3-0.1} = \frac{1}{7}$}
 \end{enumerate}
 
+\newpage
+
+\section{Friday, May 12, 2017}
+
+\subsection{Conditional Probability (continued)}
+
+\textbf{Example 1:} An unbiased coin is flipped twice. What is the probability that both flips result in Heads given that the first flip does?\\
+\\
+\textbf{Solution 1:} $S = \{ HH, TH, HT, HH \}$\\
+$$P(HH | \{ HT, HH \}) = \frac{P(HH \cap \{ HT, HH \})}{P(\{ HT, HH \})} = \frac{P(HH)}{P(\{ HT, HH \})} = \frac{1}{2}$$
+
+\begin{tcolorbox}[title=Theorem: Law of Total Conditional Probability]
+	Let $A_1, A_2, ...$ be a partition of $S$ such that $P(A_i) > 0 \forall i$.\\
+	Then $\forall$events $B$, $P(B) = \sum\limits_{i=1}^{\infty} P(B | A_i)\cdot P(A_i)$
+\end{tcolorbox}
+
+\begin{proof}
+	(Proof of the Law of Total Conditional Probability)\\
+	$$P(B) = P(B \cap A_1) + P(B \cap A_1) + ...$$
+	since we know that $P(B | A_i) = \frac{P(B \cap A_i)}{P(A_i)} \Longleftrightarrow P(B \cap A_i) = P(B | A_i)\cdot P(A_i)$\\
+	so now we can conclude that...\\
+	$$P(B) = P(B | A_1)\cdot P(A_1) + P(B | A_2)\cdot P(A_2) + ... = \sum\limits_{i=1}^{\infty} P(B | A_i)\cdot P(A_i)$$
+\end{proof}
+
+\begin{tcolorbox}[title = Theorem: Bayes' Theorem]
+	If $A,B$ are events such that $P(A), P(B) > 0$\\
+	then $P(A | B) = \frac{P(A)}{P(B)} \cdot P(B | A)$
+\end{tcolorbox}
+
+\begin{proof}
+	(Proof of Bayes' Theorem)\\
+	$$P(A | B) = \frac{P(A \cap B)}{P(B)}\cdot \frac{P(A)}{P(A)} = \frac{P(A \cap B)}{P(B)}\cdot \frac{P(A)}{P(B)} = \frac{P(A)}{P(B)} \cdot P(B | A)$$
+\end{proof}
+
+\textbf{Example 2:} In a population of voters, 40\% are Republican and 60\% are Democrats. 30\% of Republicans and 50\% of Democrats support an election issue. A person is selected at random from this population and he supports the election issue, find the probability that he is a democrat.\\
+
+\textbf{Solution 2:} Let $Su$ be the probability that the person supports the issue.
+$$P(R) = 0.4, P(D) = 0.6, P(Su | R) = 0.3, P(Su | D) = 0.5$$
+\begin{align*}
+	P(Su) &= P(Su | R) \cdot P(R) + P(Su | D) \cdot P(D)\\
+	&= (0.3)(0.4) + (0.5)(0.6)\\
+	&= 0.42
+\end{align*}
+$$P(D | Su) = P(Su | D) \cdot \frac{P(D)}{P(Su)} = 0.5 \cdot \frac{0.6}{0.42} = \frac{0.3}{0.42}$$
+
+\begin{tcolorbox}[title= Definition: Independent Events]
+	Two events $A,B$ are independent $(A \perp B)$ if $P(A \cap B) = P(A) \cdot P(B)$\\
+	\underline{Weaker Version:} If $P(B) > 0$ then $A \perp B$ if $P(A | B) = P(A)$
+\end{tcolorbox}
+
+\textbf{Example 3:} Consider the experiment where you roll a 6-sided die:\\
+Let $A$ be the events where the result is an odd number on the die. Let $B$ be the events where the result is an even number on the die. Let $C = \{ 1,2 \}$
+\begin{enumerate}
+	\item{Are $A$ and $B$ independent?\\
+	$P(A) = P(B) = \frac{1}{2}$\\
+	$AB = \varnothing$\\
+	$P(AB) = 0 \neq P(A) \cdot P(B)$\\
+	No.}
+	\item{Are $A$ and $C$ independent?\\
+	$AC = \{ 1 \}\\
+	P(AC) = \frac{1}{6} = P(A) \cdot P(C)\\
+	Yes.$}
+\end{enumerate}
+
+\textbf{Result 1:} $A \perp B$ then $A \perp B^c$
+\begin{proof} (Proof of Result 1)\\
+	Assume $A \perp B$.\\
+	Consider $P(A \cap B^c)$
+	\begin{align*}
+		P(A \cap B^c) &= P(A \setminus B)\\
+		&= P(A) - P(AB)\\
+		&= P(A) - P(A) \cdot P(B)\\
+		&= P(A) \cdot (1 - P(B))\\
+		&= P(A) \cdot P(B^c)
+	\end{align*}
+	Therefore $A \perp B \Longrightarrow A \perp B^c$
+\end{proof}
+
+\begin{tcolorbox}[title=Definition: General Definition of Independent Events]
+	The events $A_1, A_2, ...$ are independent if for every subcollection of events $A_i1, A_i2, ... A_ik$ where a subcollection is a subset of a collection of events.
+\end{tcolorbox}
+
+\textbf{Example 4:} Consider the experiment where a fair 4 sided die is rolled, and Let $A = \{ 1,2 \}$, $B = \{ 1,3 \}$, $C = \{ 1,4 \}$
+
+Are A,B,C pairwise independent? Are they independent?
+\\
+\textbf{Solution 4:} We know $P(A) = P(B) = P(C) = 1/2$\\
+So are $A$ and $B$ independent?
+$$P(AB) = P(\{ 1 \}) = 1/4 = P(A)\cdot P(B)$$
+Yes, so are $A$ and $C$ independent?
+$$P(AC) = P(\{ 1 \}) = 1/4 = P(A)\cdot P(C)$$
+Yes, so are $B$ and $C$ independent?
+$$P(BC) = P(\{ 1 \}) = 1/4 = P(B)\cdot P(C)$$
+Yes, so $A, B, C$ are pairwise independent.\\
+Are $A,B,C$ independent?
+$P(A\cap B \cap C) = 1 \neq P(A) \cdot P(B) \cdot P(C) = 1/8$
+So no, they are not independent.
+
+\begin{tcolorbox}[title=Definition: Continuous]
+	A function $f$ [Domain$(f) \subseteq \mathbb{R}$] is continuous at $x_0$ if for every sequence $\{x_n\}$ such that if $$\lim_{n\to\infty} x_n = x_0$$ then $$\lim_{n\to\infty} f(x_n) = f(x_0)$$
+\end{tcolorbox}
+
+so $$\lim_{n\to\infty} f(x_n) = f(\lim_{n\to\infty} x_n)$$
+
+\begin{tcolorbox}[title=Definition: Increase$\backslash$Decrease to]
+We say that $\{A_n\}$ increases to $A$ (write $\{A_n\}\uparrow A$) if\\
+$A_1 \subseteq A_2 \subseteq ... \subseteq A$ ; $\bigcup\limits_{n=1}^{\infty} A_n = A$ ; $\lim_{n\to\infty} A_n = A$\\
+\\
+We say that $\{A_n\}$ decreases to $A$ (write $\{A_n\}\downarrow A$) if\\
+$A_1 \supseteq A_2 \supseteq ... \supseteq A$ ; $\bigcap\limits_{n=1}^{\infty} A_n = A$ ; $\lim_{n\to\infty} A_n = A$
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Theorem: Continuous Function]
+$P$ is a continuous function if $\{A_n\}\uparrow A$ or $\{A_n\}\downarrow A$ then $P(A) = \lim_{n\to\infty} P(A_n)$
+\end{tcolorbox}
+
+\begin{proof} (Proof of the Continuous Function Theorem)\\
+	\textbf{Case 1:} $\{A_n\}\uparrow A$\\
+	Define $A_2, A_3, ..., A$ as\\
+	$$A_2 = A_1 \cup (A_2 \setminus A_1)$$
+	$$A_3 = A_1 \cup (A_2 \setminus A_1) \cup (A_3 \setminus A_2)$$
+	$$...$$
+	$$A_ = A_1 \cup (A_2 \setminus A_1) \cup (A_3 \setminus A_2) \cup ...$$
+	Consider $P(A)$
+	\begin{align*}
+		P(A) &= P(A_1 \cup (A_2 \setminus A_1) \cup (A_3 \setminus A_2) \cup ...)\\
+		&= P(A_1) + P(A_2 \setminus A_1) + P(A_3 \setminus A_2) + ...\\
+		&= P(A_1) + \sum\limits_{i=2}^{\infty} P(A_i \setminus A_{i-1})\\
+		&= P(A_1) + \lim_{n\to\infty} \sum\limits_{i=2}^{n} P(A_i \setminus A_{i-1})\\
+		&= P(A_1) + \lim_{n\to\infty} \sum\limits_{i=2}^{n} [P(A_i) - P(A_{i-1})]
+		\shortintertext{Notice that the series is telescoping}
+		&= P(A_1) - P(A_1) + \lim_{n\to\infty} P(A_n)\\
+		&= \lim_{n\to\infty} P(A_n)
+	\end{align*}
+	
+	\textbf{Case 2:} $\{A_n\}\downarrow A$\\
+	if $\{A_n\}\downarrow A$ then $\{A_n^c\}\uparrow A^c$\\
+	\underline{i.e.} $P(A^c) = \lim_{n\to\infty} P(A_n^c)$\\
+	Consider $(1 - P(A))$\\
+	\begin{align*}
+		(1 - P(A)) &= 1 - [\lim_{n\to\infty} P(A_n^c)]\\
+		- P(A) &= - \lim_{n\to\infty} P(A_n^c)\\
+		P(A) &= \lim_{n\to\infty} P(A_n^c)
+	\end{align*}
+\end{proof}
+
+\textbf{Example 5:} Suppose $P([0,\frac{8}{4+n})) = \frac{2 + e^{-n}}{6}$ find $P(\{ 0 \})$\\\\
+\textbf{Solution 5:} $\{A_n\}\uparrow 0$\\
+\begin{align*}
+	P(\{ 0 \}) &= \lim_{n\to\infty} P(A_n)\\
+	&= \frac{2 + e^{-n}}{6}\\
+	&= \frac{1}{3}
+\end{align*}	
+
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 MAY 2017 14:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  16 MAY 2017 20:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1147,12 +1147,99 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14] (./STAB52.aux) ) 
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 450--453
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 450--453
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 462--465
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 549--554
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 560--563
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 579--583
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 590--592
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 590--592
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19] (./STAB52.aux) ) 
 Here is how much of TeX's memory you used:
- 15388 strings out of 493089
- 302654 string characters out of 6134842
+ 15389 strings out of 493089
+ 302673 string characters out of 6134842
  349476 words of memory out of 5000000
- 18561 multiletter control sequences out of 15000+600000
+ 18562 multiletter control sequences out of 15000+600000
  14448 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,73p,809b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1160,19 +1247,21 @@ Here is how much of TeX's memory you used:
 fonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12
+ts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10
 .pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
-am10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbol
-s/msbm10.pfb>
-Output written on STAB52.pdf (14 pages, 153341 bytes).
+bm10.pfb>
+Output written on STAB52.pdf (19 pages, 182907 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
+ 125 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

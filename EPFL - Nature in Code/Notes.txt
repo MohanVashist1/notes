@@ -118,3 +118,12 @@ calculate the next generation as we have done before
 </html>
 
 we can use functions to prevent copy and pasting code
+
+————————————————————————————————————————————————————————————————————————————————————————————————
+Hardy-Weinberg Principles in Javascript - Javascript functions
+————————————————————————————————————————————————————————————————————————————————————————————————
+
+
+————————————————————————————————————————————————————————————————————————————————————————————————
+Hardy-Weinberg Principles in Javascript - Generic Functions and return values
+————————————————————————————————————————————————————————————————————————————————————————————————

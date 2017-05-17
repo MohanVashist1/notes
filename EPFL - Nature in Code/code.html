@@ -10,42 +10,23 @@
       var p = a1a1 + (a1a2/2);
       var q = 1 - p
 
-      console.log("generation 0:", a1a1, a1a2, a2a2);
+      function round_number(value, decimals){
+        var shift = Math.pow(10, decimals);
+        return Math.round(value * shift) / shift;
+      }
 
-      // calculating next generation
-      a1a1 = p * p
-      a1a2 = 2 * p * q
-      a2a2 = q * q
+      function create_next_generation(){
+        a1a1 = p * p;
+        a1a2 = 2 * p * q;
+        a2a2 = q * q;
+      }
 
-      console.log("generation 1:", a1a1, a1a2, a2a2);
+      for(var i = 0; i < 6; i = i + 1){
 
-      // calculating next generation
-      a1a1 = p * p
-      a1a2 = 2 * p * q
-      a2a2 = q * q
+        console.log("generation " + i + ":", round_number(a1a1, 2), round_number(a1a2, 2), round_number(a2a2, 2));
+        create_next_generation();
+      }
 
-      console.log("generation 2:", a1a1, a1a2, a2a2);
-
-      // calculating next generation
-      a1a1 = p * p
-      a1a2 = 2 * p * q
-      a2a2 = q * q
-
-      console.log("generation 3:", a1a1, a1a2, a2a2);
-
-      // calculating next generation
-      a1a1 = p * p
-      a1a2 = 2 * p * q
-      a2a2 = q * q
-
-      console.log("generation 4:", a1a1, a1a2, a2a2);
-
-      // calculating next generation
-      a1a1 = p * p
-      a1a2 = 2 * p * q
-      a2a2 = q * q
-
-      console.log("generation 5:", a1a1, a1a2, a2a2);
     </script>
   </head>
   <body>

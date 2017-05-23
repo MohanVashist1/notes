@@ -539,6 +539,8 @@ Are $A,B,C$ independent?
 $P(A\cap B \cap C) = 1 \neq P(A) \cdot P(B) \cdot P(C) = 1/8$
 So no, they are not independent.
 
+\subsection{Continuity of $P$}
+
 \begin{tcolorbox}[title=Definition: Continuous]
 	A function $f$ [Domain$(f) \subseteq \mathbb{R}$] is continuous at $x_0$ if for every sequence $\{x_n\}$ such that if $$\lim_{n\to\infty} x_n = x_0$$ then $$\lim_{n\to\infty} f(x_n) = f(x_0)$$
 \end{tcolorbox}
@@ -593,6 +595,143 @@ $P$ is a continuous function if $\{A_n\}\uparrow A$ or $\{A_n\}\downarrow A$ the
 	P(\{ 0 \}) &= \lim_{n\to\infty} P(A_n)\\
 	&= \frac{2 + e^{-n}}{6}\\
 	&= \frac{1}{3}
-\end{align*}	
+\end{align*}
+
+\section{Wednesday, May 17, 2017}
+
+\subsection{Random Variables}
+
+\begin{tcolorbox}[title=Definition: Random Variables]
+	A random variable $X$ is a function from $S$ to the set of real numbers ($\mathbb{R}$)
+\end{tcolorbox}
+
+\textbf{Example 1:} Consider the experiment where you roll a die ($S = \{ 1,2,3,4,5,6 \}$).\\
+\\
+Define $\forall s\in S$ that $X$ as $X(s) = s$. So $X(5) = 5$, $X(2) = 2$, and etc.
+\\
+\\
+\textbf{Example 2:} The Indicator Function\\
+$$X(s) =
+\begin{cases}
+	1, & s \in A\\
+	0, & \text{otherwise}
+\end{cases}
+$$
+
+\subsection{Distribution of a Random Variable}
+
+\begin{tcolorbox}
+	For random variable $X$ and $B \subseteq S$, $X \in B = \{ s \in S | X(S) \in B \}$. Note that $X \in B \subseteq S$ is an event.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: The Distribution of a Random Variable $X$]
+	The collection of probabilities $P(x \in B)$, $\forall$ subset of $\mathbb{R}$ is called the \textbf{Distribution of $X$}.
+\end{tcolorbox}
+
+\textbf{Example 3:} Consider $S = \{ \text{Clear, Sunny, Rain} \}$ and $P(\{ \text{Clear} \}) = 0.5$, $P(\{ \text{Sunny} \}) = 0.2$, $P(\{ \text{Rain} \}) = 0.3$.\\
+\\
+And define $X(\text{Clear}) = 200$, $X(\text{Sunny}) = 100$, $X(\text{Rain}) = -50$.\\
+\\
+Find the distribution of $X$.\\
+$P(x \in B) = (0.5) \cdot I_B (200) + (0.2) \cdot I_B (100) + (0.5) \cdot I_B (-50)$ for any $B \in \mathbb{R}$\\
+$P(X \in \{ -50, 100, 200 \}) = 0.5 + 0.2 + 0.3 = 1.0$
+
+\subsection{Discrete Random Variables}
+
+\begin{tcolorbox}[title=Definition: Discrete Random Variables]
+	A random variable $X$ is discrete of there is a finite or countable set of real numbers $x_1, x_2, ...$ and a corresponding sequence of non-negative real numbers $p_1, p_2, ...$ such that
+	$$P(X = x_i) = p_i, \forall i, and \sum_{i} p_i = 1$$
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Probability Mass Function]
+	The Probability Mass Function of a discrete random variable $X$ is the function $P_X : \mathbb{R} \rightarrow [ 0,1 ]$ defined by $P_X (x) = P(X = x)$. Note: $$P(X \in A) = \sum_{x \in A} P(X = x) = \sum_{x \in A} P_X (x)$$
+\end{tcolorbox}
+
+\subsection{Important Discrete Distributions}
+\begin{enumerate}
+	\item{
+	\textbf{Degenerate (Point Mass) Distribution}\\
+	A random variable $X$ is $S$ and has a degenerate distribution if
+	$$P_X (x) = 
+	\begin{cases}
+	1, & x=c\\
+	0, & x\neq x
+\end{cases}$$
+	}
+	\item{
+	\textbf{Bernouelli Distribution}\\
+	A random variable $X$ is said to have a Bernoulli Distribution $(X \sim \text{Ber}(\theta))$ if\\
+	\\
+	$P_X (1) = P(X = 1) = \theta$ while $P_X (0) = P(X = 0) = 1-\theta$
+	}
+	\item{
+	\textbf{Binomial Distribution}\\
+	A random variable $X$ is said to have a binomial distribution with parameters $n$ and $\theta$ if
+	$$P_X (x) =
+	\begin{cases} 
+		\binom{n}{x} \theta^x (1-\theta)^{n-x} & \text{ for } x = 0,1,2,...,n\\
+		0 & \text{ otherwise }
+	\end{cases}$$
+	
+	\textbf{Example 4:} Toss a coin $n$ times ($P(H) = \theta$)\\
+Let $X$ be the number of heads\\
+$$P_X (x) = P(X = x) = \binom{n}{x} \theta^x (1-\theta)^{n-x}$$
+
+\underline{Binomial Experiment must satisfy the following conditions}
+\begin{enumerate}
+	\item{A fixed number of trials $(n)$}
+	\item{Trials must be independent}
+	\item{Outcomes must fall into 2 categories (either success or failure)}
+	\item{Probability of a success should be the same for all trials}
+\end{enumerate}
+
+\begin{tcolorbox}[title=Note]
+	\begin{enumerate}
+		\item{$P_X (x) \geq 0$}
+		\item{$\sum_{x=0}^n P_X (x) = 1$}
+	\end{enumerate}
+\end{tcolorbox}
+
+\begin{proof}
+	(Proof of (2.) in Note)\\
+	\begin{align*}
+		\sum_{x=0}^n P_X (x) &= \sum_{x=0}^n \binom{n}{x} \theta^x (1-\theta)^{n-x}\\
+		&= (\theta + 1 - \theta)^n = 1^n = 1
+	\end{align*}
+	\underline{Recall that} $$(a+b)^n = \sum_{x=0}^n a^x b^{n-x}$$
+\end{proof}
+	
+	}
+	\item{
+	\textbf{Geometric Distribution}\\
+	A random variable $X$ is said to have a geometric distribution with parameter ($\theta \in (0,1)$) if $P_X (x) = (1 - \theta)^x \cdot \theta$ for $x = 0,1,2,...$\\
+	\\
+	\underline{Note:} $P_X (x) \geq 0$ $\forall x$, but is it a Probability Measure Function?\\
+	\begin{proof}
+	(Proof of axiom 3 and 2 of a PMF)\\
+	\begin{align*}
+		\sum_{n=0}^{\infty} P_X (x) &= \sum_{n=0}^{\infty} (1 - \theta)^x \theta\\
+		&= \theta \sum_{n=0}^{\infty} \gamma^x (\text{ where } \gamma = 1 - \theta)\\
+		&= \theta \frac{1}{1 - \gamma}\\
+		&=\theta \frac{1}{\theta}\\
+		&= 1
+	\end{align*}
+	\end{proof}
+	}
+	\item{
+	\textbf{Negative Binomial Distribution}\\
+	We need $r$ successes and where $x$ is the failures before the $r$th success
+	$$P(X = x) = \binom{x+r - 1}{x} (1 - \theta)^x \theta^{r-1} \theta$$
+	
+	A random variable $X$ is said to have a negative binomial distribution with parameters $r$ and $\theta$ where $\theta \in (0,1)$ if\\
+	$$P_X (x) = 
+	\begin{cases}
+		\binom{x+r - 1}{x} (1 - \theta)^x \theta^{r} \theta & x = 0,1,2,...\\
+		0 & \text{otherwise}
+	\end{cases}$$
+	}
+\end{enumerate}
+
+
 
 \end{document}

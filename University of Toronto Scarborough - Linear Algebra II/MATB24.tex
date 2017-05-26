@@ -188,4 +188,38 @@ $V^X = \{ functions : X \longrightarrow V \}$ is a vector space over $\mathbb{F}
 Consider $f,g \in V^X$, $\forall \alpha \in \mathbb{F}$
 $$(f + g)(x) = f(x) + g(x)$$
 
+\newpage
+
+\section{Wednesday, May 10, 2017}
+
+\subsection{Basics of Vector Spaces}
+
+\textbf{Basic Example of a Vector Space:} $\mathbb{F}^n$
+
+\begin{tcolorbox}[title=Definition: Subspace]
+	A subspace $W$ of a vector space $V$ is a non-empty subset of $V$ with the following axioms:
+	\begin{itemize}
+		\item{$\forall w_1, w_2 \in W : w_1 + w_2 \in W$}
+		\item{$\forall \alpha \in \mathbb{F}, w \in W : \alpha \cdot w \in W$}
+	\end{itemize}
+\end{tcolorbox}
+
+\textbf{Example 1:} Is $P(\mathbb{F}) = \{ \sum_{i=0}^{\infty} \alpha_i \cdot x^i : \alpha_i \in \mathbb{F} \}$ a subspace?\\
+
+\textbf{Solution 1:} $0 \in P(\mathbb{F})$, therefore $P(\mathbb{F})$ is non-empty.\\
+\\
+Consider $\forall w, v \in P(\mathbb{F})$ and $\forall r \in\mathbb{F}$\\
+where $w = \sum_{i=0}^{\infty} w_i \cdot x^i$ and $v = \sum_{i=0}^{\infty} v_i \cdot x^i$
+$$w+w = \sum_{i=0}^{\infty} w_i \cdot x^i + \sum_{i=0}^{\infty} v_i \cdot x^i = \sum_{i=0}^{\infty} (w_i + v_i) \cdot x^i \in P(\mathbb{F})$$
+$$rw = r\sum_{i=0}^{\infty} w_i \cdot x^i = \sum_{i=0}^{\infty} (r\cdot w_i) \cdot x^i \in P(\mathbb{F})$$
+Therefore $P(\mathbb{F})$ is a subspace\\
+\\
+\textbf{Example 2:} Is $P_n (\mathbb{F}) = \{ \sum_{i=0}^{\infty} \alpha_i \cdot x^i : \alpha_i \in \mathbb{F}, \text{ degree} = n \}$ a subspace?\\
+
+\textbf{Solution 2:} Consider $1 + 2x + 3x^2, -3x^2 \in P_2 (\mathbb{F})$
+$$1 + 2x + 3x^2 + (-3x^2) = 1 + 2x \text{ which is not in } P_2 (\mathbb{F})$$
+Therefore $P_n (\mathbb{F})$ is not a vector space.\\
+\\
+\underline{Note:} The easiest way to check if something ($V$) is not a vector space is to check if $0 \in V$.
+
 \end{document}

@@ -26,3 +26,8 @@
 \contentsline {subsection}{\numberline {5.2}Distribution of a Random Variable}{21}
 \contentsline {subsection}{\numberline {5.3}Discrete Random Variables}{22}
 \contentsline {subsection}{\numberline {5.4}Important Discrete Distributions}{22}
+\contentsline {section}{\numberline {6}Friday, May 19, 2017}{25}
+\contentsline {subsection}{\numberline {6.1}TODO}{25}
+\contentsline {section}{\numberline {7}Wednesday, May 24, 2017}{26}
+\contentsline {subsection}{\numberline {7.1}Important Distributions (continued)}{26}
+\contentsline {subsection}{\numberline {7.2}Poisson Distribution}{26}

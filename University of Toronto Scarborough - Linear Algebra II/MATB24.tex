@@ -220,6 +220,81 @@ Therefore $P(\mathbb{F})$ is a subspace\\
 $$1 + 2x + 3x^2 + (-3x^2) = 1 + 2x \text{ which is not in } P_2 (\mathbb{F})$$
 Therefore $P_n (\mathbb{F})$ is not a vector space.\\
 \\
-\underline{Note:} The easiest way to check if something ($V$) is not a vector space is to check if $0 \in V$.
+\underline{Note:} The easiest way to check if something ($V$) is not a vector space is to check if $0 \in V$.\\
+\\
+\textbf{Example 3:} Are all matrices $A$ with $det(A) = 0$\\
+\\
+\textbf{Solution 3:} Consider $UT_n (\mathbb{F}) = \{ M \in M_{m,n} (\mathbb{F}) | M_{ij} = 0, i \geq j \}$\\
+Take $M_1, M_2 \in UT_n (\mathbb{F})$\\
+$$(M_1 + M_2)_{ij} = M_{1ij} + M_{2ij} = 0 + 0 = 0, \forall i,j$$
+$$\forall \alpha \in \mathbb{F} : (\alpha M)_{ij} = \alpha (M_{ij}) = \alpha \cdot 0 = 0$$
+Therefore $UT_n (\mathbb{F})$ is a subspace.
+
+\subsection{Operations on Subspaces}
+Considering subspaces $U,W$ of a vector space $V$
+\begin{itemize}
+	\item{$(U \cap W) = \{ v \in V : v\in U, v \in W \}$ is a subspace}
+	\item{$(U + W) = \{ u+w : u \in U, w \in W \}$ is also a subspace}
+	\item{However, $(U \cup W)$ is not a subspace because of the following example:\\
+	Consider in $P(\mathbb{F})$ the subspaces $U = \{ \alpha x : \alpha \in \mathbb{F} \}$ and $W = \{ \alpha x^2 : \alpha \in \mathbb{F} \}$} and $U \cup W$ is not a subspace since it does not contain $x + x^2$, and so is not closed under vector addition.
+\end{itemize}
+
+\textbf{Recall:} if $v_1, ... , v_n$ is a basis, then all vectors are of the form $\sum_i \alpha_i v_i$
+\begin{itemize}
+\item{$sp\{v_1, ... , v_n\} = \{ \sum_i \alpha_i v_i : \alpha_i \in \mathbb{F} \}$}
+\end{itemize}
+
+\textbf{Result:} $sp(v_1, ... , v_n)$ is the smallest subspace containing $\{v_1, ... , v_n \}$\\
+\begin{proof}
+	(Proof of Result)\\
+	Take $u,w \in sp(v_1, ... , v_n)$, so $u = \sum_i \alpha_i v_i, w = \sum_i \beta_i v_i$\\ so this implies that $u+w = \sum_i \alpha_i v_i + \sum_i \beta_i v_i = \sum_i (\beta_i + \alpha_i) v_i$.\\
+	And Taking a $\gamma \in \mathbb{F} : \gamma u = \gamma \sum_i \alpha_i v_i = \sum_i (\alpha_i \cdot \gamma) v_i$\\
+	So now we assume $W$ is the subspace containing $\{v_1, ... , v_n \}$\\
+	$$\longrightarrow \forall \alpha \in \mathbb{F}, \alpha_i x_i \in W $$
+	$$\longrightarrow sp\{v_1, ... , v_n \} \in W$$
+	so $sp\{v_1, ... , v_n \}$ is the smallest subspace containing $\{v_1, ... , v_n \}$ since for every subspace $W$ containing $\{v_1, ... , v_n \}$, they must also contain $sp\{v_1, ... , v_n \}$
+\end{proof}
+
+\textbf{Example 4:} $sp\{1, 1+x, x^2 -1 \} \in P(\mathbb{F})$ ?\\
+\\
+\textbf{Solution 4:} A good war to check if a set is a subspace is to write the subspace as a span.\\
+\begin{align*}
+	sp\{1, 1+x, x^2 -1 \} &= a + b(1 + x) + c(x^2 - 1) | a,b,c \in\mathbb{F}\\
+	&= (a+b-c) + bx + cx^2 | a,b,c \in\mathbb{F}\\
+	&= P_{\leq 2} (\mathbb{F}) \in P(\mathbb{F})
+\end{align*}
+
+\textbf{Example 5:} $sp\{e_1, e_2 \} = sp\{(1,0), (0,1) \} \in M_{m,n} (\mathbb{F})$
+$$E_{ij} \text{ has a coefficient of 0 everywhere except for a coefficient of 1 in entry } (i,j)$$
+
+\textbf{Note:} $$\left( \begin{smallmatrix} a&b\\ c&d \end{smallmatrix} \right) = aE_{11} + bE_{12} + cE_{21} dE_{22}$$
+
+\textbf{Example 5:}
+\begin{align*}
+	sp\{v_1, v_2, v_1 + v_2 \} &= av_1 + bv_2 + c(v_1 + v_2) |a,b,c \in\mathbb{F}\\
+	&= (a+c)v_1 + (b+c)v_2 |a,b,c \in\mathbb{F}\\
+	&= sp\{v_1, v_2 \}
+\end{align*}
+So when do we know that we have the minimum amount of terms to generate a Vector Space from a span of these terms?
+
+\begin{tcolorbox}[title=Definition: Linearly Dependent]
+	A vector $V$ is \textbf{linearly dependent} of vectors $\{v_1, ... , v_n \}$ if it is a linear combination of them.
+\end{tcolorbox}
+
+So if $v = (v_1, ... , v_n)$ is linearly dependent of $\{u_1, ... , u_n \}$ then $$sp\{v_1, ... , v_n \} = sp\{u_1, ... , u_n \}$$
+
+A set of vectors is linearly independent if no vector is linearly dependent on the other vectors in the set.\\
+\\
+\textbf{Fact:} a set is linearly independent if $\sum_i a_i v_i = 0 \longrightarrow \forall a_i = 0$
+
+\begin{proof}
+	Assume $\sum_i a_i v_i = 0 \longrightarrow \forall a_i = 0$ and that some vector
+	$$v_i = \sum_{j \neq i} a_j v_j, u_0 = \sum_{j = 0} a_j v_j$$
+	$$|v_0 - a_1 v_1 - a_2 v_2 - ... - a_n v_n| = 0$$
+	Assume that $\sum_i a_i v_i = 0$ (linearly independence)\\
+	Assume that for some coefficient is not 0, say $a_1 \neq 0$.\\
+	$$a_1 v_1 + \sum_{i\geq 2} a_i v_i = 0, v_1 = \sum_{i\geq 2} (\frac{-a_i}{a_1}) v_i$$
+	This shows that $v_1$ is a linear combination of the other vectors, which violates our assumption that all these vectors $v_i$ are linearly independent. So it must be the case that $\sum_i a_i v_i = 0, \forall a_i = 0$ implies linear independence
+\end{proof}
 
 \end{document}

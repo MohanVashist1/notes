@@ -770,7 +770,110 @@ What is $P(X = 2)$?\\
 	\item{At least 2 customers arrive}
 \end{enumerate}
 
-\textbf{Solution 3:} 
+\textbf{Solution 3:}
+\begin{enumerate}
+	\item{
+	Let $X = $ \# of costumers that arrive $\sim$ Poisson$(X = 7)$
+	\begin{align*}
+		P(X \leq 3) &= P(X = 3) + P(X = 2) + P(X = 1) + P(X = 0)\\
+		&= e^{-7} \frac{7^3}{3!} + e^{-7} \frac{7^2}{2!} + e^{-7} \frac{7}{1} + e^{-7}\\
+		&= e^{-7} (\frac{7^3}{3!} + \frac{7^2}{2!} + 8)
+	\end{align*}
+	}
+	\item{
+	\begin{align*}
+		P(X \geq 2) &= 1 - P(X < 2)\\
+		&= 1 - (P(X = 1) + P(X = 0))\\
+		&= 1 - (e^{-7}7 + e^{-7})\\
+		&= 1 - e^{-7}(8)
+	\end{align*}
+	}
+\end{enumerate}
 
+\begin{tcolorbox}[title=Definition: Continuous Random Variables]
+	A random variable $X$ is continous if $P(X = x) = 0,  \forall x \in\mathbb{R}$
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: Density Function]
+	A function $f:\mathbb{R} \longrightarrow \mathbb{R}$ is a density function if:
+	\begin{itemize}
+		\item{$f(x) \geq 0, \forall x \in\mathbb{R}$}
+		\item{$\int_{-\infty}^{\infty} f(x) dx = 1$}
+	\end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: Absolutely Continuous Random Variables]
+	A random variable $X$ is absolutely continuous if there exists a density function $f$ such that $$P(a \leq X \leq b ) = \int_{a}^{b} f(x) dx \text{ whenever } a \leq b$$
+	we call this density function the probability density function of $X$ (PDF of $X$).
+\end{tcolorbox}
+
+\textbf{Example 4:} An absolutely continuous random variable has a PDF $$f(x) = \begin{cases}
+	kx, & 1 \leq x \leq 5\\
+	0, & \text{otherwise}
+\end{cases}
+$$
+\begin{enumerate}
+	\item{Find $k$}
+	\item{Find $P(2 \leq X \leq 3)$}
+\end{enumerate}
+
+\textbf{Solution 4:}
+\begin{enumerate}
+	\item{
+	\begin{align*}
+		\int_{-\infty}^{\infty} f(x) dx &= \int_{-\infty}^{1} f(x) dx + \int_{1}^{5} f(x) dx + \int_{5}^{\infty} f(x) dx\\
+		&= 0 + \int_{1}^{5} f(x) dx + 0\\
+		&= \int_{1}^{5} f(x) dx\\
+		&= k[\frac{x^2}{2}]^{5}_{1}\\
+		k &= 1/12
+	\end{align*}
+	}
+	\item{
+	\begin{align*}
+		P(2 \leq X \leq 3) &= \int_{2}^{3} \frac{1}{12}x dx\\
+		&= \frac{1}{12}[\frac{x^2}{2}]^{3}_{2}\\
+		&= \frac{1}{12}((9-4)/2)\\
+		&= \frac{5}{24}
+	\end{align*}
+	}
+\end{enumerate}
+
+\textbf{Example 5:} A random variable $X$ has the PDF 
+$$f_X (x) = 
+\begin{cases}
+	0.2, & -1 \leq x \leq 0\\
+	0.2 + cx, & 0 \leq x \leq 1\\
+	0, & \text{otherwise}
+\end{cases}
+$$
+\begin{enumerate}
+	\item{Find $c$}
+	\item{Find $P(-0.5 \leq X \leq 0.05)$}
+\end{enumerate}
+
+\textbf{Solution 5:}
+\begin{enumerate}
+	\item{
+	\begin{align*}
+		\int_{-\infty}^{\infty} f(x) dx &= 1\\
+		\int_{-\infty}^{-1} f(x) dx + \int_{-1}^{0} f(x) dx + \int_{0}^{1} f(x) dx + \int_{1}^{\infty} f(x) dx &= 1\\
+		0 + \int_{-1}^{0} f(x) dx + \int_{0}^{1} f(x) dx + 0 &= 1\\
+		0.2\int_{-1}^{0} dx + \int_{0}^{1} (0.2+cx) dx &= 1\\
+		0.2 + [0.2x + \frac{cx^2}{2}]^{1}_{0} &= 1\\
+		0.2 + 0.2 + c/2 &=1 \\
+		0.4 + c/2 &= 1\\
+		c &= 1.2
+	\end{align*}
+	}
+	\item{
+	\begin{align*}
+		P(-0.5 \leq X \leq 0.05) &= \int_{-0.5}^{0} f(x) dx + \int_{0}^{0.05} f(x) dx\\
+		&= 0.2 \int_{-0.5}^{0} dx + \int_{0}^{0.05} (0.2 + 1.2x) dx\\
+		&= 0.1 + [0.2x + 1.2x^2]^{0.05}_{0}\\
+		&= 0.1 + 0.01 + 0.003\\
+		&= 0.113
+	\end{align*}
+	}
+\end{enumerate}
 
 \end{document}

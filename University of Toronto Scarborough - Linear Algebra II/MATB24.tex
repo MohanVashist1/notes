@@ -36,7 +36,7 @@
 
 \begin{document}
 
-\title{MATB24: Linear Algebra II}
+\title{MATB24 Lecture Notes}
 \date{University of Toronto Scarborough -- Summer 2017}
 \author{Joshua Concon}
 \maketitle
@@ -296,5 +296,24 @@ A set of vectors is linearly independent if no vector is linearly dependent on t
 	$$a_1 v_1 + \sum_{i\geq 2} a_i v_i = 0, v_1 = \sum_{i\geq 2} (\frac{-a_i}{a_1}) v_i$$
 	This shows that $v_1$ is a linear combination of the other vectors, which violates our assumption that all these vectors $v_i$ are linearly independent. So it must be the case that $\sum_i a_i v_i = 0, \forall a_i = 0$ implies linear independence
 \end{proof}
+
+\newpage
+
+\section{Friday, May 12, 2017}
+
+\subsection{Bases of Vector Spaces}
+
+\begin{tcolorbox}[title=Definition: A Basis of Vector Spaces]
+	A basis for $V$ is a spanning set that is linearly independent
+\end{tcolorbox}
+
+\textbf{Result:} A spanning set $\{v_1, ..., v_n \}$ for $V$ is a basis $\Longleftrightarrow \forall v, \exists a_i, v = \sum^n_{i = 1} a_i v_i$
+
+\begin{proof}(Proof of Result)\\
+	\underline{Proof of $\longrightarrow$}\\
+	$\forall v, \exists a_i, v = \sum^n_{i = 1} a_i v_i$, so since every vector $v$ can be made with the vectors $\{v_1, ..., v_n \}$ 
+\end{proof}
+
+
 
 \end{document}

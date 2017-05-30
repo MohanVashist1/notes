@@ -4,6 +4,8 @@
 
 \usepackage{amsmath}
 
+\usepackage{graphicx}
+
 \usepackage{dsfont}
 
 \usepackage[utf8]{inputenc}
@@ -790,6 +792,8 @@ What is $P(X = 2)$?\\
 	}
 \end{enumerate}
 
+\subsection{Continuous Distributions}
+
 \begin{tcolorbox}[title=Definition: Continuous Random Variables]
 	A random variable $X$ is continous if $P(X = x) = 0,  \forall x \in\mathbb{R}$
 \end{tcolorbox}
@@ -873,6 +877,235 @@ $$
 		&= 0.1 + 0.01 + 0.003\\
 		&= 0.113
 	\end{align*}
+	}
+\end{enumerate}
+
+\newpage
+
+\section{Friday, May 26, 2017}
+
+\subsection{Continuous Distributions (continued)}
+
+\textbf{Clarification: } What is the difference between discrete and continuous random variables?
+
+Consider $X(s) = s$ where $s = \{1,2,3,4,5,6 \}$.\\
+This is discrete because the output can only be these 6 values.\\
+\\
+Now, consider the different heights of people in the range of $[20,50]$. Every height in this range is technically possible to have, so this is continuous.
+
+\subsection{Important Continuous Distributions}
+
+\begin{enumerate}
+	\item{
+	\textbf{Uniform Distribution over some interval $[L,R]$}
+	
+	\begin{tcolorbox}[title=Defintion: Uniform Distribution]
+		A random variable $X$ has a Uniform $[L,R]$ Distribution if 
+		$$f_X (x) = \begin{cases}
+		\frac{1}{R-L} , & L \leq x \leq R\\
+		0 , & \text{otherwise}
+		\end{cases}$$
+	\end{tcolorbox}
+
+	\textbf{Example 1:} $X \sim $Uniform$[5,10]$
+	\begin{enumerate}
+		\item{Find $P(6 \leq x \leq 8)$}
+		\item{Find $P(8 \leq x \leq 12)$}
+	\end{enumerate}
+	
+	\textbf{Solution 1:}
+	\begin{enumerate}
+		\item{
+		\begin{align*}
+			P(6 \leq X \leq 8) &= \int^{8}_{6} \frac{1}{10-5} dx\\
+			&= (1/5) \int^{8}_{6} dx\\
+			&= (2/5)
+		\end{align*}
+		}
+		\item{
+		\begin{align*}
+			P(8 \leq X \leq 12) &= P(8 \leq X \leq 10) + P(10 \leq X \leq 12)\\
+			&= \int^{10}_{8} \frac{1}{10-5} dx + 0\\
+			&= (2/5)
+		\end{align*}
+		}
+	\end{enumerate}
+	}
+	
+	\item{
+	
+	\textbf{Exponential Distribution}
+	
+	\begin{tcolorbox}[title=Defintion: Exponential Distribution]
+		A random variable $X$ has a Exponential Distribution with the parameter $(\lambda > 0)$ if 
+		$$f_X (x) = \begin{cases}
+		\lambda e^{-\lambda x} , & x \geq 0\\
+		0 , & \text{otherwise}
+		\end{cases}$$
+	\end{tcolorbox}
+	
+	\textbf{Example 2:} $X \sim $Exponential$(\lambda = 0.2)$, Find $P(x > 10)$\\
+	\\
+	\textbf{Solution 2:}
+	\begin{align*}
+		P(X > 10) &= \int^{\infty}_{10} 0.2e^{-0.2x} dx\\
+		&= [0.2 \frac{e^{-0.2x}}{-0.2}]^{\infty}_{10}\\
+		&= [ -e^{-0.2x}]^{\infty}_{10}\\
+		&= e^{-2}
+	\end{align*}
+	
+	\textbf{Note:}
+	\begin{itemize}
+		\item{For Uniform Distribution, $f_X (x) \geq 0$}
+		\item{For Exponential Distribution, $$\int^{\infty}_{0} f_X (x) dx = \int^{\infty}_{0} \lambda e^{-\lambda x} dx = \lambda [\frac{e^{-\lambda x}}{-\lambda}]^{\infty}_{0} = [e^{-\lambda x}]^{\infty}_{0} = 1$$}
+	\end{itemize}
+
+	Therefore $f_X (x)$ is a density function.
+	
+	}
+	\item{
+	\textbf{Normal Distribution}
+	
+	\begin{tcolorbox}[title=Defintion: Normal Distribution]
+		A random variable $X$ has a Normal Distribution with the parameter $(\mu \in\mathbb{R})$ and $(\sigma \in\mathbb{R}^{+})$ if 
+		$$f_X (x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-(1/2)(\frac{x - \mu}{\sigma})^2} \text{ where } x\in\mathbb{R}$$
+		We write $X \sim $Exponential$(\mu, \sigma^2 )$
+	\end{tcolorbox}
+	
+	\textbf{Note:} $N(\mu = 0, \sigma^2 = 1)$ is called the Standard Normal Distribution ($f_X (x) = \frac{1}{\sqrt{2\pi}} e^{-(1/2)x^2}$)
+	
+	\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black,title= Multivariable Calculus and Polar Coordinates Crash Course]
+	
+	Dr. Mahinda sort of speeds through these parts, so feel free to refer to other resources to understand what is happening here, since you need to understand these concepts to understand what is happening in the following material.
+	
+	\tcblower
+	
+	So in single variable calculus, you're probably used to integrals which find the area under an curve. Well, double integration is finding the area in-between two curves at different boundaries. Kind of like a circle, centred around the origin, you can either represent it as two integrals of the bottom and top part of the circle, or as a double integral, with the x going from the leftmost side of the circle to the rightmost side, and the y going from the top of the circle to the bottom. As an example, consider the circle with radius 1.
+	
+	$$\int^{1}_{-1} \sqrt{1 - x^2} dx + \int^{1}_{-1} -\sqrt{1 - x^2} dx = \int^{1}_{-1} \int^{\sqrt{1 - x^2}}_{-\sqrt{1 - x^2}}1 dy dx$$
+
+	with the general case for double integrals being
+	
+	$$\int\int f(x,y) dA \text{ where } dA = dxdy$$
+	
+	We also have polar coordinates that make it a lot easier to find the area of these types of circles, the definition being that $x = rcos\theta$, $y = rsin\theta$, $dxdy = rdrd\theta$ and
+	$$\int\int f(x,y) dA = \int\int f(rcos\theta, rsin\theta) rdrd\theta$$
+	
+	So we can represent a circle with radius 1 centred around the origin as
+	
+	$$\int^{1}_{-1} \int^{\sqrt{1 - x^2}}_{-\sqrt{1 - x^2}}1 dy dx = \int^{1}_{0}\int^{2\pi}_{0} 1 d\theta dr$$
+	
+	\end{tcolorbox}
+	
+	So, is $$\int^{\infty}_{-\infty} \frac{1}{\sqrt{2\pi}} e^{-(1/2)x^2} = 1 \text{ ?}$$
+	
+	\begin{proof}
+		\begin{align*}
+			 \sqrt{2\pi} = I &= \int^{\infty}_{-\infty} e^{-(1/2)x^2} dx  && \text{(so we need to prove that $I = \sqrt{2\pi}$)}\\
+			I &= \int^{\infty}_{-\infty} e^{-(1/2)y^2} dy  && \text{(Variable change)}\\
+			I^2 &= \int^{\infty}_{-\infty} \int^{\infty}_{-\infty} e^{-(1/2)y^2} e^{-(1/2)x^2} dy dx && \text{("just assume this is true" - Mahinda)}\\
+			&= \int^{\infty}_{-\infty} \int^{\infty}_{-\infty} e^{-(1/2)(y^2 + x^2)} dx dy\\
+			&= \int^{2\pi}_{0} \int^{\infty}_{0} e^{-(1/2)(r^2 cos^2 \theta + r^2 sin^2 \theta)} r dr \int^{2\pi}_{0} && \text{(change to polar coordinates)}\\
+			&=\int^{2\pi}_{0} [-e^{-(1/2)r^2}]^{\infty}_{0} d\theta\\
+			&=\int^{2\pi}_{0} 1 d\theta\\
+			I^2 &= 2\pi\\
+			I &= \sqrt{2\pi}
+		\end{align*}
+	\end{proof}
+
+	\textbf{Considering} $N(\mu, \sigma^2), f_X (x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-(1/2)(\frac{x - \mu}{\sigma})^2}$
+	
+		$$\int^{\infty}_\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-(1/2)(\frac{x - \mu}{\sigma})^2} dx$$
+		
+		\begin{tcolorbox}
+			sub $z = \frac{x - \mu}{\sigma}$ we also get:
+			$$dz = \frac{1}{\sigma} dx$$
+		\end{tcolorbox}
+		
+		so now we have 
+		$$\int^{\infty}_\infty \frac{1}{\sigma \sqrt{2\pi}} e^{-(1/2)z^2} \sigma dz = \int^{\infty}_\infty \frac{1}{\sqrt{2\pi}} e^{-(1/2)z^2} dz$$
+		And this is the standard normal distribution
+
+	}
+	\item{
+	\textbf{Gamma Distribution}
+	
+	\begin{tcolorbox}[title=Definition: Gamma Function]
+		For $\alpha > 0$, $$\Gamma (\alpha) = \int^\infty_0 x^{\alpha - 1} e^{-x} dx$$
+	\end{tcolorbox}
+
+	\textbf{Properties of the Gamma Function}
+	\begin{enumerate}
+		\item{$\Gamma (1) = 1$}
+		\item{If $\alpha > 1$ then $\Gamma (\alpha) = (\alpha - 1)(\Gamma (\alpha - 1))$}
+		\item{If $\alpha$ is a positive integer, $\Gamma (\alpha) = (\alpha - 1)!$}
+		\item{$\Gamma (\frac{1}{2}) = \sqrt{\pi}$}
+	\end{enumerate}
+
+	\begin{proof}
+		(Proof of (d))\\
+		\begin{align*}
+			\Gamma (\frac{1}{2}) &= \int^\infty_0 x^{\frac{1}{2}} e^{-x} dx\\
+			&& \text{ sub } x = \frac{1}{2}t^2\\
+			&& dx = t dt\\
+			&= \int^\infty_0 (\frac{1}{2}t^2)^{\frac{1}{2}} e^{-(\frac{1}{2}t^2)} t dt\\
+			&= \sqrt{2} \int^\infty_0 t^{-1} e^{-(\frac{1}{2}t^2)} t dt\\
+			&= \sqrt{2} \int^\infty_0 e^{-(\frac{1}{2}t^2)} dt\\
+			&= \sqrt{2} \frac{\sqrt{2\pi}}{2}\\
+			&= \sqrt{\pi}
+		\end{align*}
+
+	\end{proof}
+	
+	Now Consider $\Gamma (\alpha) = \int^\infty_0 x^{\alpha - 1} e^{-x} dx$
+
+	\begin{align*}
+		\Gamma (\alpha) &= \int^\infty_0 x^{\alpha - 1} e^{-x} dx\\
+		&& \text{for $\lambda > 0$, sub } x = \lambda t\\
+		&& dx = \lambda dt\\
+		&= \int^\infty_0 \lambda^{\alpha - 1} t^{\alpha - 1} e^{-x} \lambda dt\\
+		&= \int^\infty_0 \lambda^{\alpha} t^{\alpha - 1} e^{-x} dt\\
+		\frac{\Gamma (\alpha)}{\Gamma (\alpha)} &= \frac{\int^\infty_0 \lambda^{\alpha} t^{\alpha - 1} e^{-x} dt}{\Gamma (\alpha)}\\
+		\int^\infty_0 \frac{\lambda^{\alpha} t^{\alpha - 1} e^{-x}}{\Gamma (\alpha)} dt &= 1
+	\end{align*}
+	
+	\begin{tcolorbox}[title=Definition: Gamma Distribution]
+		A random variable has a Gamma Distribution with parameters $(\alpha > 0, \lambda > 0)$ if
+		$$f_X (x) = 
+		\begin{cases}
+		\frac{\lambda^{\alpha} t^{\alpha - 1} e^{-x}}{\Gamma (\alpha)}, & x \geq 0\\
+		0, & \text{otherwise}
+		\end{cases}
+$$
+	\end{tcolorbox}
+
+	\textbf{Note:} Gamma$(\alpha = 1, \lambda)$ = Exponential$(\lambda)$
+	
+	}
+	\item{
+	\textbf{Beta Distribution}\\
+	\begin{tcolorbox}[title=Definition: Beta Function]
+		A Beta $(a,b)$ function for $a > 0, b > 0$ is defined as
+		$$B(a,b) = \int^1_0 x^{a - 1} (1-x)^{b-1} dx$$
+	\end{tcolorbox}
+
+	\textbf{Result:} It can be shown that $B(a,b) = \frac{\Gamma (a) \Gamma (b)}{\Gamma (a+b)}$
+	\begin{align*}
+		\int^1_0 x^{a - 1} (1-x)^{b-1} dx &= \frac{\Gamma (a) \Gamma (b)}{\Gamma (a+b)}\\
+		\int^1_0 \frac{\Gamma (a+b)}{\Gamma (a) \Gamma (b)} x^{a - 1} (1-x)^{b-1} dx &= 1
+	\end{align*}
+
+	\begin{tcolorbox}[title=Beta Distribution]
+		A random variable $X$ has a Beta Distribution with $a > 0, b > 0$ if
+		$$f_X (x) = \begin{cases}
+		\frac{\Gamma (a+b)}{\Gamma (a) \Gamma (b)} x^{a - 1} (1-x)^{b-1}, & 0 \leq x \leq 1\\
+		0, & \text{otherwise}
+		\end{cases}
+		$$
+	\end{tcolorbox}
+
+	\textbf{Example 3:} $$\int^1_0 x^9 (1-x)^{19} dx = \frac{\Gamma (10)\Gamma (20)}{\Gamma (30)}$$
+
 	}
 \end{enumerate}
 

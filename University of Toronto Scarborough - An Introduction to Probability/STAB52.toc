@@ -31,3 +31,7 @@
 \contentsline {section}{\numberline {7}Wednesday, May 24, 2017}{26}
 \contentsline {subsection}{\numberline {7.1}Important Distributions (continued)}{26}
 \contentsline {subsection}{\numberline {7.2}Poisson Distribution}{26}
+\contentsline {subsection}{\numberline {7.3}Continuous Distributions}{27}
+\contentsline {section}{\numberline {8}Friday, May 26, 2017}{30}
+\contentsline {subsection}{\numberline {8.1}Continuous Distributions (continued)}{30}
+\contentsline {subsection}{\numberline {8.2}Important Continuous Distributions}{30}

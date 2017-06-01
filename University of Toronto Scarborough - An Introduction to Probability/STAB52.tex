@@ -1109,4 +1109,93 @@ $$
 	}
 \end{enumerate}
 
+\newpage
+
+\section{Wednesday, May 31, 2017}
+
+\textbf{Note:} For the Normal Distribution, a larger sigma results in a larger horizontal spread.
+
+\subsection{Cumulative Distribution Functions (CDF)}
+
+\begin{tcolorbox}[title=Definition: Cumulative Distribution Functions]
+	Given a random variable $X$, the function $F_X : \mathbb{R} \longrightarrow [0,1]$ defined by $F_X (x) = P(X \leq x)$ is called the Cumulative Distribution Function of $X$.
+\end{tcolorbox}
+
+\textbf{Properties:}
+\begin{enumerate}
+	\item{$0 \leq F_X (x) \leq 1$ since $F_X (x)$ is a probability}
+	\item{$x \leq y$ implies that $F_X (x) \leq F_X (y)$\\
+	\begin{proof}(Proof of 2)\\
+	\begin{align*}
+		x_1 \leq x_2 & \Longleftrightarrow (X \leq x_1) \subseteq (X \leq x_2)\\
+		& \Longleftrightarrow P(X \leq x_1) \leq P(X \leq x_2)\\
+		& \Longleftrightarrow F_X (x_1) \leq F_X (x_2)
+	\end{align*}
+	\underline{i.e.} $F_X$ is a non-decreasing function
+\end{proof}}
+	\item{$\lim_{x\to\infty} F_X (x) = 1$}
+	\item{$\lim_{x\to -\infty} F_X (x) = 0$}
+	\item{If $a < b, P(x \in (a,b]) = F_X (b) - F_X (a)$\\
+	\begin{proof}
+		(Proof of 5)\\
+		\begin{align*}
+			x \in (a,b] &= a < x \leq b\\
+			&= (x \leq b) \setminus (x \leq a)\\
+			&= P(x \leq b) - P(x \leq a)\\
+			&= F_X (b) - F_X (a)
+		\end{align*}
+
+	\end{proof}
+}
+	\item{
+	If $a \leq b, P(x \in [a,b]) = F_X (b) - F_X (a)$ where $F_X (a-) = \lim_{n\to\infty} F_X (a-\frac{1}{n}) $\\
+	\begin{proof} (Proof of 6)\\
+		Let $A = x \in [a,b], A_n = x \in (a - \frac{1}{n}], n \in \mathbb{N}$\\
+		\\
+		\textbf{Note:} $a \in A_n \forall n$ therefore $a \in \bigcap\limits_{n} A_n $\\
+		$A_n \downarrow A = [a,b]$\\
+		By continuity of probability $P(A) = \lim_{n\to\infty} P(A_n)$
+		\begin{align*}
+			P(x\in [a,b]) &= \lim_{n\to\infty} P(x\in (a-\frac{1}{n}, b])\\
+			&= \lim_{n\to\infty} [F_X (b) - F_X (a-\frac{1}{n})]\\
+			&= F_X (b) - F_X (a-)
+		\end{align*}
+	\end{proof}
+
+	\textbf{Note:} if $a=b, P(x \in [a,a]) = P(x=a) = F_X (a) - F_X (a-)$
+	}
+	\item{
+	If $a < b, P(x \in (a,b)) = F_X (b-) - F_X (a)$
+	\begin{proof}
+		(Proof of 7)\\
+		Let $A = x \in (a,b)$, $A_n = x \in (a,b-\frac{1}{n}]$\\
+		$A_n \uparrow A = x \in (a,b)$ since $b \not\in A_n \forall n$\\
+		By continuity of Probability:
+		\begin{align*}
+		P(x\in (a,b)) &= \lim_{n\to\infty} P(a,b-\frac{1}{n}]\\
+		&= \lim_{n\to\infty} [F_X (b - \frac{1}{n}) - F_X (a)]\\
+		&= \lim_{n\to\infty} F_X (b - \frac{1}{n}) - F_X (a)\\
+		&= F_X (b-) - F_X (a)
+		\end{align*}
+
+	\end{proof}
+	}
+\end{enumerate}
+
+\subsection{Cumulative Distribution Function for Discrete Random Variables}
+
+\textbf{Ex.} Roll a 4-sided die, $S = \{ 1,2,3,4 \}$. Define $X(s)=s$, this random variable is a discrete random variable.
+$$F_X (x) = P(X \leq x) = \begin{cases}
+0, & x < 1\\
+\frac{1}{4}, & 1 \leq x < 2\\
+\frac{2}{4}, & 2 \leq x < 3\\
+\frac{3}{4}, & 3 \leq x < 4\\
+1, & \text{otherwise}
+\end{cases}
+$$
+
+\textbf{Note:} if $F_X (x) = F_X (x+), F_X$ is considered to be right continuous.
+
+
+
 \end{document}

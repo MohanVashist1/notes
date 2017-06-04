@@ -311,9 +311,32 @@ A set of vectors is linearly independent if no vector is linearly dependent on t
 
 \begin{proof}(Proof of Result)\\
 	\underline{Proof of $\longrightarrow$}\\
-	$\forall v, \exists a_i, v = \sum^n_{i = 1} a_i v_i$, so since every vector $v$ can be made with the vectors $\{v_1, ..., v_n \}$
+	$\forall v, \exists a_i, v = \sum^n_{i = 1} a_i v_i$, so since every vector $v$ can be made with the vectors $\{v_1, ..., v_n \}$, so this is a basis.\\
+	\\
+	\underline{Proof of $\longleftarrow$}\\
+	For this, we need to show uniqueness. Consider $v = \sum^n_{i = 1} b_i v_i$
+	\begin{align*}
+		v = \sum^n_{i = 1} b_i v_i & \longrightarrow 0 = \sum^n_{i = 1} (a_i - b_i) v_i\\
+		& \longrightarrow a_i - b_i = 0\\
+		& \longrightarrow a_i = b_i
+	\end{align*}
+	Since these vectors are unique, this basis is unique, so every vector in $V$ can be formed by a linear combination of these unique vectors.
 \end{proof}
 
+\textbf{Corollary:} Assume we have a finite basis of size $n$.\\
+Define a function
+$$\{v_1, ..., v_n \} : V \mapsto \mathbb{F}^n, v \mapsto (a_1, ... , a_n) \text{ such that } v = \sum a_i v_i$$
+
+These are the coordinates of the vector $v$ with respect to the basis $\{v_1, ..., v_n \}$
+
+\begin{enumerate}
+	\item{
+	Every vector space has a basis, sometimes, this basis can be mysterious, such as:\\
+	$\mathbb{R}^{\mathbb{R}}$, which does not have a basis that can be written.\\
+	\\
+	More precisely: every spanning set becomes a basis after removing linearly dependent vector.
+	}
+\end{enumerate}
 
 
 \end{document}

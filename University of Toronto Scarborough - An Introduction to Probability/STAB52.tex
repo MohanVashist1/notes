@@ -1182,7 +1182,7 @@ $$
 	}
 \end{enumerate}
 
-\subsection{Cumulative Distribution Function for Discrete Random Variables}
+\subsection{Cumulative Distribution Functions for Discrete Random Variables}
 
 \textbf{Ex.} Roll a 4-sided die, $S = \{ 1,2,3,4 \}$. Define $X(s)=s$, this random variable is a discrete random variable.
 $$F_X (x) = P(X \leq x) = \begin{cases}
@@ -1196,6 +1196,169 @@ $$
 
 \textbf{Note:} if $F_X (x) = F_X (x+), F_X$ is considered to be right continuous.
 
+\textbf{Note:} In the example above, each of the discontinuity points is right continuous, but not left continuous or just continuous.
 
+\newpage
+
+\section{Friday, June 2, 2017}
+
+\subsection{Cumulative Distribution Functions of Absolutely Continuous Random Variables}
+(i.e. random variables that have density functions)
+$$F_X (x) = P(X \leq x) = \int^x_{-\infty} f(t) dt, \text{ where $f(t)$ is the density function}$$
+
+\textbf{Note:} $f_X (x) = \frac{dF_X (x)}{dx}$ if $F_X (x)$ is differentiable at $x$.\\
+\\
+\textbf{Example 1:} Find the Probability Density Function of $X$ if $$F_X (x) = \begin{cases}
+0, & x < 0\\
+x, & 0 \leq x \leq 1\\
+1, & x > 1
+\end{cases}
+$$
+
+\textbf{Solution 1:} $$f_X (x) = \frac{dF_X (x)}{dx} = \begin{cases}
+1, & 0 < x < 1\\
+0, & \text{otherwise}
+\end{cases}
+$$
+
+And since $0 \leq f_X (x) \forall x$ and that $$\int^\infty_{-\infty} f(x) dx = \int^1_{0} 1 \cdot dx = x\rvert^1_0 = 1$$
+Therefore, this is a Probability Density Function.\\
+\\
+For the Standard Normal Distribution, the probability density function is denoted by $\phi$
+$$\phi (x) = \frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}x^2}, x \in\mathbb{R}$$
+
+The Cumulative Distribution Function of the Normal Distribution
+$$\Phi (x) = \int^x_{-\infty} \phi (t) dt = \int^x_{-\infty} \frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}t^2} dt$$
+
+Although this integral is integrate, no one actually knows how to actually integrate this, so they made a table of set values of different outputs, called Normal Tables.\\
+
+\textbf{Example 2:} $X\sim N(\mu = 0,\sigma^2 = 1)$, Find $P(-0.63 \leq X \leq 2.0)$\\
+
+\textbf{Solution 2:}
+\begin{align*}
+	P(-0.63 \leq X \leq 2.0) &= \Phi (2.00) - \Phi (-0.63)\\
+	&= 1 - \Phi (-2.00) - \Phi (-0.63)\\
+	&= 1 - 0.0228 - 0.2643 && \text{By Normal Tables}
+\end{align*}
+
+\textbf{The General Normal Distribution Case:} If $X\sim N(\mu,\sigma^2)$
+\begin{align*}
+	P(a \leq X \leq b) &= \int^b_a \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x - \mu}{\sigma})^2} dx &&\text{ sub } z = \frac{x-\mu}{\sigma}\\
+	&& dx = \sigma dz\\
+	&= \int^{((b-\mu)/\sigma)}_{((a-\mu)/\sigma)} \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}z^2} dx\\
+	&= \Phi (\frac{b - \mu}{\sigma}) - \Phi (\frac{a - \mu}{\sigma})
+\end{align*}
+
+\textbf{Example 3:} $Y\sim N(\mu =-8, \sigma^2 = 4)$
+\begin{enumerate}
+	\item{Find $P(-2 \leq Y \leq 7)$}
+	\item{Find $P(Y \geq 7)$}
+\end{enumerate}
+
+\textbf{Solution 3:}
+\begin{enumerate}
+	\item{
+	\begin{align*}
+		P(-2 \leq Y \leq 7) &= \Phi (\frac{7 - (-8)}{2}) - \Phi (\frac{-2 - (-8)}{2})\\
+		&= \Phi (7.5) - \Phi (3)\\
+		&= [1 - \Phi (-7.5)] - [1 - \Phi (-3)]\\
+		&& \forall x < -3.5, \Phi (x) = \text{basically 0}\\
+		&= [1-0]-[1-0.0013]
+	\end{align*}
+	}
+	\item{
+	\begin{align*}
+		P(Y \geq 3) &= 1 - P(Y \leq 3)\\
+		&= 1 - \Phi ((3-(-8))/2)\\
+		&= 1 - \Phi (5.5)\\
+		&= 1 - [1 - \Phi (-5.5)]\\
+		&= 1-1 = 0
+	\end{align*}
+
+	}
+	
+	\underline{Note:} $P(Y < 3) = P(Y \leq 3) - P(Y = 3)$ and since Y is continuous, $P(Y = 3) = 0$, so $P(Y < 3) = P(Y \leq 3)$.
+	
+\end{enumerate}
+
+\subsection{Mixture Distributions}
+
+\begin{tcolorbox}[title=Definition: Mixture Distribution]
+	Let $F_1, F_2, ... , F_k$ be cumulative distribution functions and $p_1, p_2, ..., p_k$ are positive real numbers such that $\sum_{i=1}^k p_i = 1$. Then $p_1 F_1 + p_2 F_2 + ... + p_k F_k$ is a cumulative distribution function. The distribution with cumulative distribution function $p_1 F_1 + p_2 F_2 + ... + p_k F_k$ is called the Mixture Distribution of $F_1, F_2, ..., F_k$.
+\end{tcolorbox}
+
+With this, there exists distributions that are neither continuous nor discrete.\\
+\\
+\textbf{Recall:} \begin{itemize}
+	\item{Discrete: $\sum_i P(X = x_i) = 1$}
+	\item{Continuous: $P(X = x) = 0 \forall x$}
+\end{itemize}
+
+\textbf{Example 4:} Let $X_1 \sim P(\lambda = 3)$, $X_2 \sim N(0,1)$. Let $F_1, F_2$ be the Cumulative Distribution Functions of $X_1$ and $X_2$ respectfully.\\
+\\
+Let $Y$ be a random variable with the CDF of $F_Y (y) = 0.2 F_1 (y) + 0.8 F_2 (y)$, Let $y\in\mathbb{R}$.
+\begin{align*}
+	P(Y = y) &= F_Y (y) - F_Y (y-)\\
+	&= [0.2 F_1 (y) + 0.8 F_2 (y)] - [0.2 F_1 (y-) + 0.8 F_2 (y-)]\\
+&= 0.2 [F_1 (y) - F_1 (y-)] + 0.8 [F_2 (y) - F_2 (y-)]\\
+&= 0.2 P(X_1 = y) + 0.8 P(X_2 = y)\\
+\shortintertext{$P(X_2 = y) = 0$ since $X_2$ is absolutely continuous.}
+	&= \begin{cases}
+0.2(e^{-3} \frac{3^y}{y!}), & y = 0,1,2,...\\
+0, & \text{otherwise}
+\end{cases}
+\end{align*}
+
+\textbf{Check if discrete:} $$\sum^\infty_{y=0} P(Y = y) = \sum^\infty_{y=0} 0.2 e^{-3} \frac{3^y}{y!} = 0.2 \sum^\infty_{y=0} e^{-3} \frac{3^y}{y!} = 0.2(1) = 0.2, \text{therefore, not discrete}$$
+
+\textbf{Check if Y is continuous:} $$P(Y = 0) = 0.2 e^{-3} \frac{3^0}{0!} \neq 0, \text{therefore, not continuous}$$
+
+\subsection{One-dimensional change of variables}
+
+\textbf{Idea:} Given a distribution of $X$ ($P_x$ or $f_X$), we have $y = h(x)$, What is the PDF/PMF of $Y$?\\
+\\
+\textbf{Discrete Case:} \textbf{Example 5:} Let $X$ be a random variable taking possible values of $m = \{ -3, -2, -1, 0, 1, 2, 3 \}$ with equal probability.
+$$P_X (x) = \begin{cases}
+	\frac{1}{7}, & x\in m\\
+	0, & \text{otherwise}
+\end{cases}
+$$
+Let $Y = X^2 - X$, find the probability measure function of $Y$.\\
+\\
+\textbf{Solution 5:} Let $h : X \mapsto Y$, so that: $h(-3) = 12$, $h(-2) = 6$, $h(-1) = 2$, $h(0) = 0$, $h(1) = 0$, $h(2) = 2$, $h(3) = 6$.\\
+\\
+Consider $P_Y (0) = P(Y = 0) = P(X = 0) + P(X = 1) = 1/7 + 1/7 = 2/7$\\
+\\
+Let $h^{-1} : Y \mapsto X$, so that $h^{-1} (y) = \{ x : h(x) = y \}$\\
+\\
+So $P_Y (y) = \sum_{i \in h^{-1} (y)} P_X (i) = \begin{cases}
+	2/7, & y \in \{ 0,2,6 \}\\
+	1/7, & y = 12\\
+	0, & \text{otherwise}
+\end{cases}
+$
+\\
+\textbf{Absolutely Continuous Case:} \text{Example 6:} Let $X$ be a random variable with the PDF of $f_X (x) = \begin{cases}
+	2(1-x), & 0 \leq x \leq 1\\
+	0, & \text{otherwise}
+\end{cases}
+$. Let $Y = 2X - 1 (h(X) = 2X - 1)$, Find the PDF of $Y$.\\
+\\
+\textbf{Solution 6:} \underline{Method 1: (Distribution Function Method)}\\
+\\
+Find the CDF of $Y$ first and then differentiate.
+$$F_Y (y) = P(Y \leq y) = P(2X - 1 \leq y) = P(X \leq \frac{y+1}{2}) = F_X (\frac{y+1}{2})$$
+
+$$f_Y (y) = \frac{d}{dy} F_Y (y) = \frac{d}{dy} F_X (\frac{y+1}{2}) = f_X (\frac{y+1}{2}) \frac{1}{2} = \begin{cases}
+	2(1 - (\frac{y+1}{2}))\frac{1}{2}, & 0 \leq \frac{y+1}{2} \leq 1\\
+	0, & \text{otherwise}
+\end{cases}
+$$
+
+$$f_Y (y) = \begin{cases}
+	\frac{1-y}{2}, & |y| < 1, y \neq 1\\
+	0, & \text{otherwise}
+\end{cases}
+$$
 
 \end{document}

@@ -740,14 +740,57 @@ $$P_X (x) = P(X = x) = \binom{n}{x} \theta^x (1-\theta)^{n-x}$$
 
 \section{Friday, May 19, 2017}
 
-\subsection{TODO}
-i must remember to get legible notes for this part
+\subsection{Important Distributions (continued again)}
+\textbf{Some Notes on Binomial Distributions}
+\begin{itemize}
+	\item{
+	Experiments Involving the Binomial Distributions have the following properties:
+	\begin{enumerate}
+		\item{Fixed Number of trials}
+		\item{Each trial should result in 1 of 2 possible outcomes}
+		\item{The trials must all be independent}
+		\item{The probability of success should be the same in every trial}
+	\end{enumerate}
+	}
+	\item{
+	Is this distribution (Negative Binomial Distribution) a probability measure function?\\
+	i.e. is $\sum^\infty_{x=0} P_X (x) = 1$?
+	\begin{align*}
+		\sum^\infty_{x=0} P_X (x) &= \sum^\infty_{x=0} \binom{x+r - 1}{x} (1 - \theta)^x \theta^{r}\\
+		&= \theta^{r} \sum^\infty_{x=0} \binom{x+r - 1}{x} (1 - \theta)^x\\
+		&= \theta^{r} \sum^\infty_{x=0} (-1)^x \binom{-r}{x} (1 - \theta)^x\\
+		&= \theta^{r} \sum^\infty_{x=0} \binom{-r}{x} (1 - \theta)^x\\
+		&= \theta^{r} (1 + \theta - 1)^{-r}\\
+		&= \theta^{r} \theta^{-r} = 1
+	\end{align*}
+	Therefore it is a probability measure function.
+
+	}
+\end{itemize}
+
+\subsection{Hyper Geometric Distribution}
+\begin{tcolorbox}[title=Definition: Hyper Geometric Distribution]
+	A random variable $X$ is said to have a Hyper Geometric Distribution if
+	$$P_X (x) = \frac{\binom{M}{x} \binom{N-M}{m-x}}{\binom{N}{m}}$$
+	where $x \geq 0, m-x \leq N-M, x \geq m + M - N$\\
+	Denoted as $X\sim$ Hyper-Geometric$(N,M,m)$
+\end{tcolorbox}
+
+\textbf{Note: } $P_X (x) \geq 0 \: \forall x\in\mathbb{R}$\\
+\\
+\underline{Is $\sum_x P_X (x) = 1$?}\\
+The number of ways of choosing $n$ balls with exactly $x$ white balls is
+$$\binom{M}{x}\binom{N-M}{m-x}$$
+$$\sum_x \binom{M}{x}\binom{N-M}{m-x} = \text{Number of ways of choosing m balls} = \binom{N}{m}$$
+$$\sum_x \frac{\binom{M}{x}\binom{N-M}{m-x}}{\binom{N}{m}} = 1 \text{, so yes, it is.}$$
+
+
 
 \newpage
 
 \section{Wednesday, May 24, 2017}
 
-\subsection{Important Distributions (continued)}
+\subsection{Important Distributions (continued again)}
 
 \textbf{Example 1:} $5\%$ of products produced are defectives. Take a random sample of $n = 20$ items.\\
 $X = $ $\sim$ Binomial$(m = 20, \theta = 0.05)$  (\# of defectives)\\

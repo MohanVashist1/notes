@@ -758,6 +758,10 @@ $$P_X (x) = P(X = x) = \binom{n}{x} \theta^x (1-\theta)^{n-x}$$
 	\begin{align*}
 		\sum^\infty_{x=0} P_X (x) &= \sum^\infty_{x=0} \binom{x+r - 1}{x} (1 - \theta)^x \theta^{r}\\
 		&= \theta^{r} \sum^\infty_{x=0} \binom{x+r - 1}{x} (1 - \theta)^x\\
+		&= \theta^{r} \sum^\infty_{x=0} \frac{(r+x-1)(r+x-2)...(r+x-1-(x-1))}{1 \cdot 2 \cdot ... \cdot x} (1 - \theta)^x\\
+		&= \theta^{r} \sum^\infty_{x=0} \frac{(r+x-1)(r+x-2)...(r)}{1 \cdot 2 \cdot ... \cdot x} (1 - \theta)^x\\
+		&= \theta^{r} \sum^\infty_{x=0} \frac{r(r+1)(r+2)...(r+x-1)}{1 \cdot 2 \cdot ... \cdot x} (1 - \theta)^x\\
+		&= \theta^{r} \sum^\infty_{x=0} \frac{(-1)^x[(-r)(-r-1)(-r-2)...(-r-(x-1))]}{1 \cdot 2 \cdot ... \cdot x} (1 - \theta)^x\\
 		&= \theta^{r} \sum^\infty_{x=0} (-1)^x \binom{-r}{x} (1 - \theta)^x\\
 		&= \theta^{r} \sum^\infty_{x=0} \binom{-r}{x} (1 - \theta)^x\\
 		&= \theta^{r} (1 + \theta - 1)^{-r}\\

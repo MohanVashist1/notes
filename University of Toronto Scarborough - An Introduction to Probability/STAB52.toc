@@ -28,18 +28,18 @@
 \contentsline {subsection}{\numberline {5.4}Important Discrete Distributions}{22}
 \contentsline {section}{\numberline {6}Friday, May 19, 2017}{25}
 \contentsline {subsection}{\numberline {6.1}Important Distributions (continued again)}{25}
-\contentsline {subsection}{\numberline {6.2}Hyper Geometric Distribution}{26}
-\contentsline {section}{\numberline {7}Wednesday, May 24, 2017}{27}
-\contentsline {subsection}{\numberline {7.1}Important Distributions (continued again)}{27}
-\contentsline {subsection}{\numberline {7.2}Poisson Distribution}{27}
-\contentsline {subsection}{\numberline {7.3}Continuous Distributions}{28}
-\contentsline {section}{\numberline {8}Friday, May 26, 2017}{31}
-\contentsline {subsection}{\numberline {8.1}Continuous Distributions (continued)}{31}
-\contentsline {subsection}{\numberline {8.2}Important Continuous Distributions}{31}
-\contentsline {section}{\numberline {9}Wednesday, May 31, 2017}{39}
-\contentsline {subsection}{\numberline {9.1}Cumulative Distribution Functions (CDF)}{39}
-\contentsline {subsection}{\numberline {9.2}Cumulative Distribution Functions for Discrete Random Variables}{41}
-\contentsline {section}{\numberline {10}Friday, June 2, 2017}{42}
-\contentsline {subsection}{\numberline {10.1}Cumulative Distribution Functions of Absolutely Continuous Random Variables}{42}
-\contentsline {subsection}{\numberline {10.2}Mixture Distributions}{44}
-\contentsline {subsection}{\numberline {10.3}One-dimensional change of variables}{45}
+\contentsline {subsection}{\numberline {6.2}Hyper Geometric Distribution}{27}
+\contentsline {section}{\numberline {7}Wednesday, May 24, 2017}{28}
+\contentsline {subsection}{\numberline {7.1}Important Distributions (continued again)}{28}
+\contentsline {subsection}{\numberline {7.2}Poisson Distribution}{28}
+\contentsline {subsection}{\numberline {7.3}Continuous Distributions}{29}
+\contentsline {section}{\numberline {8}Friday, May 26, 2017}{32}
+\contentsline {subsection}{\numberline {8.1}Continuous Distributions (continued)}{32}
+\contentsline {subsection}{\numberline {8.2}Important Continuous Distributions}{32}
+\contentsline {section}{\numberline {9}Wednesday, May 31, 2017}{40}
+\contentsline {subsection}{\numberline {9.1}Cumulative Distribution Functions (CDF)}{40}
+\contentsline {subsection}{\numberline {9.2}Cumulative Distribution Functions for Discrete Random Variables}{42}
+\contentsline {section}{\numberline {10}Friday, June 2, 2017}{43}
+\contentsline {subsection}{\numberline {10.1}Cumulative Distribution Functions of Absolutely Continuous Random Variables}{43}
+\contentsline {subsection}{\numberline {10.2}Mixture Distributions}{45}
+\contentsline {subsection}{\numberline {10.3}One-dimensional change of variables}{46}

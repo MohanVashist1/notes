@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt, twoside]{article}
 
 \usepackage{upgreek}
 
@@ -1414,6 +1414,8 @@ $$
 
 \section{Wednesday, June 7, 2017}
 
+\subsection{R syntax and Basic R functions}
+
 Mahinda just talks about programming in R as well as the syntax and how to calculate probabilities and solve integrals with it. He simply showed how to use R while referring to these notes:\\
 \url{http://fisher.utstat.utoronto.ca/~mahinda/stab52/wk6Rcodes.pdf}.\\
 \\
@@ -1422,5 +1424,64 @@ I don't really see the need to type out notes for this section since everything 
 In terms of this lecture, he stated that students of STAB52 don't have to know how to code in R but need to be able to read the syntax for midterm and final exam questions.
 
 \newpage
+
+\section{Friday, June 9, 2017}
+
+\subsection{One-dimensional change of variables (continued)}
+
+Given a distribution of a random variable $X$ and $Y = h(X)$, we want the probability density function of $Y$ (i.e. $f_Y$). There are two methods to solve this:
+\begin{enumerate}
+	\item{Cumulative Distribution Function (shown 2 lectures ago)}
+	\item{Transformation Formula}
+\end{enumerate}
+
+\begin{tcolorbox}[title=Theorem: Transformation Formula]
+	Let $X$ be an absolute continuous random variable and $Y = h(X)$ where $h:\mathbb{R}\mapsto \mathbb{R}$ is a function that is differentiable and either strictly increasing or strictly decreasing \underline{on the support of f(x)}, then $Y$ is an absolutely continuous random variable and
+	$$f_Y (y) = \frac{f_X (h^{-1} (y))}{|h'(h^{-1} (y))|} \text{ where } h'(x) = \frac{d}{dx} h(x)$$
+\end{tcolorbox}
+
+\underline{Definition of "support of distribution/random variable/density function":}$$f_X = \{ x | f_X (x) > 0 \}$$
+
+\textbf{Example 1:} To continue from our example for the Cumulative Distribution Function. $Y = 1 - 2X = h(X)$.\\
+\\
+\textbf{Solution 1:} This implies that
+$$h^{-1} (Y) = \frac{1-Y}{2} \text{ and } h'(X) = -2$$
+
+Using the transformation formula
+
+$$f_Y (y) = \frac{f_X (h^{-1} (y))}{|h'(h^{-1} (y))|} = 
+\begin{cases}
+	\frac{2(1- \frac{1-y}{2})}{|-2|}, & 0 \leq \frac{1-y}{2} \leq 1\\
+	0, & \text{otherwise}
+\end{cases}
+= \begin{cases}
+	\frac{1+y}{2}, & -1 \leq y \leq 1\\
+	0, & \text{otherwise}
+\end{cases}
+$$
+
+\textbf{Example 2:} considering $Y = X^2 = h(X)$, find $f_Y$
+
+\textbf{Solution 2:} If the support is $[0,1]$, we can use method 2, since the function would be increasing and differentiable on the interval. So we're just gonna pretend like it is so we have an actual example to solve.
+$$h^{-1} (y) = \sqrt{y}, h'(x) = 2x$$
+$$f_Y (y) = \frac{f_X (h^{-1} (y))}{|h'(h^{-1} (y))|} =  
+\begin{cases}
+	\frac{2(1- \sqrt{y})}{2\sqrt{y}}, & 0 \leq \sqrt{y} \leq 1\\
+	0, & \text{otherwise}
+\end{cases} = 
+\begin{cases}
+	\frac{1 - \sqrt{y}}{\sqrt{y}}, & 0 \leq y \leq 1\\
+	0, & \text{otherwise}
+\end{cases}$$
+
+\subsection{Joint Distributions}
+
+\begin{tcolorbox}[title=Definition: Joint Distribution]
+	Let $X,Y$ be 2 random variables, then the collection of probability $P((X,Y)\in B), B \subseteq \mathbb{R}^2$ is called the Joint Distribution of $X$ and $Y$
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: Joint Cumulative Distribution Function of 2 Random Variables $X$ and $Y$]
+	Let $X,Y$ be 2 random variables, then the function $F_{X,Y} : \mathbb{R}^2 \mapsto [0,1]$ defined by $F_{X,Y} (x,y) = P(X \leq x, Y \leq y)$ is called the Joint Cumulative Distribution Function of $X$ and $Y$.
+\end{tcolorbox}
 
 \end{document}

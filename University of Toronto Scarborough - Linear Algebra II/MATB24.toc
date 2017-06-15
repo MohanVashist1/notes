@@ -1,10 +1,10 @@
 \select@language {english}
-\contentsline {section}{\numberline {1}Wednesday, May 3, 2017}{2}
-\contentsline {subsection}{\numberline {1.1}Fields}{3}
-\contentsline {section}{\numberline {2}Friday, May 5, 2017}{4}
-\contentsline {subsection}{\numberline {2.1}Vector Spaces}{4}
-\contentsline {section}{\numberline {3}Wednesday, May 10, 2017}{8}
-\contentsline {subsection}{\numberline {3.1}Basics of Vector Spaces}{8}
-\contentsline {subsection}{\numberline {3.2}Operations on Subspaces}{9}
-\contentsline {section}{\numberline {4}Friday, May 12, 2017}{12}
-\contentsline {subsection}{\numberline {4.1}Bases of Vector Spaces}{12}
+\contentsline {section}{\numberline {1}Wednesday, May 3, 2017}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Fields}{3}{subsection.1.1}
+\contentsline {section}{\numberline {2}Friday, May 5, 2017}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Vector Spaces}{4}{subsection.2.1}
+\contentsline {section}{\numberline {3}Wednesday, May 10, 2017}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Basics of Vector Spaces}{8}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Operations on Subspaces}{9}{subsection.3.2}
+\contentsline {section}{\numberline {4}Friday, May 12, 2017}{12}{section.4}
+\contentsline {subsection}{\numberline {4.1}Bases of Vector Spaces}{12}{subsection.4.1}

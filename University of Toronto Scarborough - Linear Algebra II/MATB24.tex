@@ -14,6 +14,8 @@
 
 \usepackage{tikz}
 
+\usepackage{hyperref}
+
 \newcommand{\ts}{\textsuperscript}
 
 \usepackage{tcolorbox}
@@ -334,9 +336,28 @@ These are the coordinates of the vector $v$ with respect to the basis $\{v_1, ..
 	Every vector space has a basis, sometimes, this basis can be mysterious, such as:\\
 	$\mathbb{R}^{\mathbb{R}}$, which does not have a basis that can be written.\\
 	\\
-	More precisely: every spanning set becomes a basis after removing linearly dependent vector.
+	More precisely: every spanning set becomes a basis after removing linearly dependent vectors.\\
+	\\
+	\textbf{Corollary:} Consider spanning set $A = \{ v_1, ... ,v_n \}$ and basis $B = \{w_1, ..., w_n \}$.\\
+	$A$ being a spanning set implies $m \leq n$. $B$ being a basis implies that $n \leq m$. Both of these imply that $n=m$
+	}
+	\item{
+	Bases a Vector Space $V$ always have the same number of elements between other bases of $V$.
 	}
 \end{enumerate}
 
+\begin{tcolorbox}[title=Definition: Dimension]
+	The number of elements in the basis of a Vector Space $V$ is called the dimension of $V$.
+\end{tcolorbox}
+
+\textbf{Example 1:} $\mathbb{F}^n = [e_1, ..., e_n]$ is a basis.\\
+$\forall v\in V$ where $V$ is a Vector Space. $v = (v_1, ... , v_n) = \sum^n_{i=1} v_i\cdot e_i$\\
+\\
+\textbf{Corollary:} Any set of $n$ linearly independent vectors is a basis, and every vector can be represented as such:
+$$\mathbb{F}\mapsto\mathbb{F}^n : v \mapsto (v_1, ..., v_n)$$
+
+Consider $M_{m,n} (\mathbb{F})$ elementary matrices, where $E_{i,j}$ has 0 in all of it's entries except for a 1 at position $(i,j)$.\\
+\\
+\underline{Basis for $M_{m,n} (\mathbb{F})$:}
 
 \end{document}

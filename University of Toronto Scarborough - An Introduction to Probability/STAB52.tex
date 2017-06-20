@@ -1506,10 +1506,101 @@ $$f_Y (y) = \frac{f_X (h^{-1} (y))}{|h'(h^{-1} (y))|} =
 \textbf{Solution 3:}
 \begin{enumerate}
 	\item{$$P_{X,Y} (x,y) = \begin{cases}
-		
+		\frac{1}{12}, & x\in \{ 1,2,3,4,5,6 \}, y\in \{ 0,1 \}\\
+		0, & \text{otherwise}
 	\end{cases}
 $$}
+	\item{$$F_{X,Y} (2,0) = P(X \leq 2, Y \leq 0) = P(1,0) + P(2,0) = \frac{2}{12} = \frac{1}{6}$$}
 \end{enumerate}
+
+\begin{tcolorbox}[title=Marginal Probability Measure Function of $X$]
+	$$\sum_y P_{X,Y} (x,y) = P_X (x)$$
+\end{tcolorbox}
+
+\textbf{Example 4:} $X,Y$ are jointly discrete with a Joint Probability Measure Function of:
+$$P_{X,Y} (x,y) = \begin{cases}
+	\frac{2}{9}, & (x,y) \in \{ (1,1), (2,1) (2,0) \}\\
+	\frac{1}{9}, & (x,y)\in \{ (1,0), (1,2), (3,0) \}\\
+	0, & \text{otherwise}
+\end{cases}$$ Find the marginal PMF of $X$\\
+\\
+\textbf{Solution 4:} We first need to check that all the values add up to 1 and that there are no negative values to see if this PMF is valid. We can trivially see that from the function. The Marginal PMF of $X$ is:
+$$P_X (x) = \begin{cases}
+	\frac{4}{9}, & x = 1\\
+	\frac{4}{9}, & x = 2\\
+	\frac{1}{9}, & x = 3
+\end{cases}
+$$
+
+\subsection{Absolutely Continuous Random Variables}
+
+\begin{tcolorbox}[title=Definition: Joint Density Function]
+	A function $f:\mathbb{R}^2 \mapsto \mathbb{R}$ is a joint density function if
+	\begin{enumerate}
+		\item{$f(x,y) \geq 0 \forall x,y\in\mathbb{R}$}
+		\item{$$\int^{\infty}_{-\infty} \int^{\infty}_{-\infty} f(x,y) dx dy  = 1$$}
+	\end{enumerate}
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: Jointly Absolutely Continuous Random Variables]
+	Random variables $X,Y$ are jointly absolutely continuous if there exists a joint probability density function $f_{X,Y}$ such that
+	$$P(a \leq X \leq b, c \leq Y \leq d) = \int^d_c \int^b_a f_{X,Y}(x,y) dx dy$$
+\end{tcolorbox}
+
+\textbf{Example 5:} Let $X,Y$ have the joint probability density function: $$f_{X,Y} (x,y) = \begin{cases}
+	kxy, & 0 \leq x \leq 1, 0 \leq y \leq 1\\
+	0, & \text{otherwise}
+\end{cases}
+$$
+\begin{enumerate}
+	\item{Find the value of $k$}
+	\item{Find $P(x \leq \frac{1}{2}, y \leq \frac{3}{4})$}
+\end{enumerate}
+
+\textbf{Solution 5:}
+\begin{enumerate}
+	\item{
+	\begin{align*}
+		\int^1_0 \int^1_0 f_{X,Y}(x,y) dx dy &= 1\\
+		\int^1_0 \int^1_0 (kxy) dx dy &= 1\\
+		\int^1_0 ky[\frac{x^2}{2}]^1_0 dy &= 1\\
+		\frac{k}{2} [\frac{y^2}{2}]^1_0 &= 1\\
+		\frac{k}{4} &= 1\\
+		k &= 4
+	\end{align*}
+	}
+	\item{
+	\begin{align*}
+		P(x \leq \frac{1}{2}, y \leq \frac{3}{4}) &= \int_0^{\frac{1}{2}} \int_0^{\frac{3}{4}} 4xydydx\\
+		&= 4 \int_0^{\frac{1}{2}} x[\frac{y^2}{2}]^{\frac{3}{4}}_0 dx\\
+		&= 2 \int_0^{\frac{1}{2}} \frac{9}{16} x dx\\
+		&=\frac{9}{64}
+	\end{align*}
+	}
+\end{enumerate}
+
+\textbf{Example 6:} Let $X,Y$ be jointly absolutely continuous with the joint PDF of $$f_{X,Y} (x,y) = \begin{cases}
+	k(1-y), & 0 \leq x \leq y \leq 1\\
+	0, & \text{otherwise}
+\end{cases}
+$$
+
+find k.
+
+\textbf{Solution 6:} 
+
+\begin{align*}
+	\int_0^1 \int_x^1 f_{X,Y} (x,y) dy dx &= 1\\
+	\int_0^1 \int_x^1 k(1-y) dy dx &= 1\\
+	k\int_0^1 \int_x^1 (1-y) dy dx &= 1\\
+	k\int_0^1 [y - \frac{y^2}{2}]^1_x dx &= 1\\
+	k\int_0^1 [(1-\frac{1}{2}) - (x - \frac{x^2}{2})] dx &= 1\\
+	k\int_0^1 [0.5 - x + \frac{x^2}{2}] dx &= 1\\
+	k[0.5x - \frac{x^2}{2} + \frac{x^3}{6}]^1_0 &= 1\\
+	k(0.5 - \frac{1}{2} + \frac{1}{6}) &= 1\\
+	\frac{k}{6} &= 1\\
+	k &= 6
+\end{align*}
 
 
 \end{document}

@@ -48,3 +48,4 @@
 \contentsline {section}{\numberline {12}Friday, June 9, 2017}{49}{section.12}
 \contentsline {subsection}{\numberline {12.1}One-dimensional change of variables (continued)}{49}{subsection.12.1}
 \contentsline {subsection}{\numberline {12.2}Joint Distributions}{50}{subsection.12.2}
+\contentsline {subsection}{\numberline {12.3}Absolutely Continuous Random Variables}{52}{subsection.12.3}

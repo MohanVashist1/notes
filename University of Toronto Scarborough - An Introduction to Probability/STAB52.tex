@@ -599,7 +599,7 @@ $P$ is a continuous function if $\{A_n\}\uparrow A$ or $\{A_n\}\downarrow A$ the
 \textbf{Solution 5:} $\{A_n\}\uparrow 0$\\
 \begin{align*}
 	P(\{ 0 \}) &= \lim_{n\to\infty} P(A_n)\\
-	&= \frac{2 + e^{-n}}{6}\\
+	&= \lim_{n\to\infty} \frac{2 + e^{-n}}{6}\\
 	&= \frac{1}{3}
 \end{align*}
 
@@ -716,8 +716,8 @@ $$P_X (x) = P(X = x) = \binom{n}{x} \theta^x (1-\theta)^{n-x}$$
 	\begin{proof}
 	(Proof of axiom 3 and 2 of a PMF)\\
 	\begin{align*}
-		\sum_{n=0}^{\infty} P_X (x) &= \sum_{n=0}^{\infty} (1 - \theta)^x \theta\\
-		&= \theta \sum_{n=0}^{\infty} \gamma^x (\text{ where } \gamma = 1 - \theta)\\
+		\sum_{n=0}^{\infty} P_X (x) &= \sum_{x=0}^{\infty} (1 - \theta)^x \theta\\
+		&= \theta \sum_{x=0}^{\infty} \gamma^x (\text{ where } \gamma = 1 - \theta)\\
 		&= \theta \frac{1}{1 - \gamma}\\
 		&=\theta \frac{1}{\theta}\\
 		&= 1
@@ -788,7 +788,7 @@ $$P_X (x) = P(X = x) = \binom{n}{x} \theta^x (1-\theta)^{n-x}$$
 The number of ways of choosing $n$ balls with exactly $x$ white balls is
 $$\binom{M}{x}\binom{N-M}{m-x}$$
 $$\sum_x \binom{M}{x}\binom{N-M}{m-x} = \text{Number of ways of choosing m balls} = \binom{N}{m}$$
-$$\sum_x \frac{\binom{M}{x}\binom{N-M}{m-x}}{\binom{N}{m}} = 1 \text{, so yes, it is.}$$
+$$\sum_x \frac{\binom{M}{x}\binom{N-M}{m-x}}{\binom{N}{m}} = 1 \text{, since we are adding all possible $x$ values and it results in 1, it is.}$$
 
 
 

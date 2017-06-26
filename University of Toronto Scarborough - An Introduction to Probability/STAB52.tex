@@ -168,12 +168,12 @@ He doesn't actually get into the definition of probability this lecture, instead
 
 A function $P:S\longmapsto [0,1]$ defined on sample space $S$ is called a \textbf{Probability Measure Function}. It satisfies the following axioms:
 \begin{enumerate}
-	\item{$0 \geq P(A) \geq 1$}
+	\item{$0 \leq P(A) \leq 1$}
 	\item{$P(S) = 1$ where $S$ is a sample space}
 	\item{
 	For disjoint events $A_1, ... , A_n$ (disjoint means where $A_i \cap A_k = \varnothing$\\
 	$\forall i,k \in\mathbb{N}$ $1 \geq i < k \geq n$)\\
-	then $P(A_1) \cup A_2 \cup ... \cup A_n = P(A_1) + P(A_2) + ... + P(A_n)$
+	then $P(A_1 \cup A_2 \cup ... \cup A_n) = P(A_1) + P(A_2) + ... + P(A_n)$
 	}
 	\item{$P(\varnothing) = 0$}
 \end{enumerate}
@@ -548,7 +548,7 @@ So no, they are not independent.
 \subsection{Continuity of $P$}
 
 \begin{tcolorbox}[title=Definition: Continuous]
-	A function $f$ [Domain$(f) \subseteq \mathbb{R}$] is continuous at $x_0$ if for every sequence $\{x_n\}$ such that if $$\lim_{n\to\infty} x_n = x_0$$ then $$\lim_{n\to\infty} f(x_n) = f(x_0)$$
+	A function $f$ [Domain$(f) \subseteq \mathbb{R}$] is continuous at $x_0$ if for every sequence $\{x_n\}$ such that $$\lim_{n\to\infty} x_n = x_0$$ then $$\lim_{n\to\infty} f(x_n) = f(x_0)$$
 \end{tcolorbox}
 
 so $$\lim_{n\to\infty} f(x_n) = f(\lim_{n\to\infty} x_n)$$
@@ -596,7 +596,7 @@ $P$ is a continuous function if $\{A_n\}\uparrow A$ or $\{A_n\}\downarrow A$ the
 \end{proof}
 
 \textbf{Example 5:} Suppose $P([0,\frac{8}{4+n})) = \frac{2 + e^{-n}}{6}$ find $P(\{ 0 \})$\\\\
-\textbf{Solution 5:} $\{A_n\}\uparrow 0$\\
+\textbf{Solution 5:} $\{A_n\}\downarrow 0$\\
 \begin{align*}
 	P(\{ 0 \}) &= \lim_{n\to\infty} P(A_n)\\
 	&= \lim_{n\to\infty} \frac{2 + e^{-n}}{6}\\
@@ -646,7 +646,7 @@ $P(X \in \{ -50, 100, 200 \}) = 0.5 + 0.2 + 0.3 = 1.0$
 
 \begin{tcolorbox}[title=Definition: Discrete Random Variables]
 	A random variable $X$ is discrete of there is a finite or countable set of real numbers $x_1, x_2, ...$ and a corresponding sequence of non-negative real numbers $p_1, p_2, ...$ such that
-	$$P(X = x_i) = p_i, \forall i, and \sum_{i} p_i = 1$$
+	$$P(X = x_i) = p_i, \forall i\text{, and } \sum_{i} p_i = 1$$
 \end{tcolorbox}
 
 \begin{tcolorbox}[title=Probability Mass Function]
@@ -1018,7 +1018,7 @@ Now, consider the different heights of people in the range of $[20,50]$. Every h
 	\begin{tcolorbox}[title=Defintion: Normal Distribution]
 		A random variable $X$ has a Normal Distribution with the parameter $(\mu \in\mathbb{R})$ and $(\sigma \in\mathbb{R}^{+})$ if 
 		$$f_X (x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-(1/2)(\frac{x - \mu}{\sigma})^2} \text{ where } x\in\mathbb{R}$$
-		We write $X \sim $Exponential$(\mu, \sigma^2 )$
+		We write $X \sim $N$(\mu, \sigma^2 )$
 	\end{tcolorbox}
 	
 	\textbf{Note:} $N(\mu = 0, \sigma^2 = 1)$ is called the Standard Normal Distribution ($f_X (x) = \frac{1}{\sqrt{2\pi}} e^{-(1/2)x^2}$)
@@ -1122,7 +1122,7 @@ Now, consider the different heights of people in the range of $[20,50]$. Every h
 		A random variable has a Gamma Distribution with parameters $(\alpha > 0, \lambda > 0)$ if
 		$$f_X (x) = 
 		\begin{cases}
-		\frac{\lambda^{\alpha} t^{\alpha - 1} e^{-x}}{\Gamma (\alpha)}, & x \geq 0\\
+		\frac{\lambda^{\alpha} x^{\alpha - 1} e^{-x}}{\Gamma (\alpha)}, & x \geq 0\\
 		0, & \text{otherwise}
 		\end{cases}
 $$
@@ -1197,7 +1197,7 @@ $$
 	\end{proof}
 }
 	\item{
-	If $a \leq b, P(x \in [a,b]) = F_X (b) - F_X (a)$ where $F_X (a-) = \lim_{n\to\infty} F_X (a-\frac{1}{n}) $\\
+	If $a \leq b, P(x \in [a,b]) = F_X (b) - F_X (a-)$ where $F_X (a-) = \lim_{n\to\infty} F_X (a-\frac{1}{n}) $\\
 	\begin{proof} (Proof of 6)\\
 		Let $A = x \in [a,b], A_n = x \in (a - \frac{1}{n}], n \in \mathbb{N}$\\
 		\\

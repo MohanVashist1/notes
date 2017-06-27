@@ -240,3 +240,25 @@ Gradient Descent with Multiple Features - Features and polynomial regression:
 - possible with small change to linear regression
 - x_1 = (size)^1 … x_n = (size)^n  if the focus is on one feature. This means that feature scaling is very important
 - can also use roots instead of powers
+
+
+
+——————————————————————————————————————————————————————————————————————————————————————————————————————————————
+Normal Equation:
+
+- So far we’ve been using gradient descent, to find the min, we take iterative steps to converge
+- Normal equation solves for theta analytically
++ get to theta in one step
++ has advantages and disadvantages
+
+- Ex. J(theta) = a theta^2 + b theta + c
++ to find the min, just derivate and find it when it is 0
+
+-but the cost function is more complicated
++ must take every partial derivative of the function, set each of those equations to 0, and then solve for all the thetas.
+
+- ex. m=4 (training examples)
+- take dataset and add another column and extra column of this extra parameter x_0 that always takes a value of 1
+- create a matrix X with all the data, create a vector of the data called y.
+- X is a m x (n+1) dimensional matrix, y is a m-dimensional vector
+- \theta = (X^T X)^-1 X^T y

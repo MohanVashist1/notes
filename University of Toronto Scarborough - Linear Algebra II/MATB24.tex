@@ -24,6 +24,12 @@
 
 \setlength{\parindent}{0cm}
 
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
 \renewcommand\qedsymbol{$\blacksquare$}
 
 \usepackage{fancyhdr}
@@ -44,7 +50,10 @@
 \maketitle
 
 Pre-reqs are MATA23, which is Linear Algebra I.
-Instructor is Dr. Louis de Thanhoffer de Volcsey. I highly recommend sitting at the front since he likes to teach with the blackboards. If you find any problems in these notes, feel free to contact me at conconjoshua@gmail.com.
+Instructor is Dr. Louis de Thanhoffer de Volcsey. I highly recommend sitting at the front since he likes to teach with the blackboards. The only pre-requisite for this course is MATA23, which is linear algebra I. If you find any problems in these notes, feel free to contact me at conconjoshua@gmail.com.
+
+Note that from Sections Wednesday, May 17, 2017 and onwards, I stop typing up lecture notes as all the topics are sporatic and sometimes not clearly explained, so I begin to learn the content from the Textbook (Linear Algebra -- Edition 3
+by John B. Fraleigh, Raymond A. Beauregard) and teach the concepts that the lectures are supposed to cover, but instead, purely based of the textbook.
 
 \tableofcontents
 
@@ -346,6 +355,8 @@ These are the coordinates of the vector $v$ with respect to the basis $\{v_1, ..
 	}
 \end{enumerate}
 
+\subsection{Dimension}
+
 \begin{tcolorbox}[title=Definition: Dimension]
 	The number of elements in the basis of a Vector Space $V$ is called the dimension of $V$.
 \end{tcolorbox}
@@ -358,6 +369,187 @@ $$\mathbb{F}\mapsto\mathbb{F}^n : v \mapsto (v_1, ..., v_n)$$
 
 Consider $M_{m,n} (\mathbb{F})$ elementary matrices, where $E_{i,j}$ has 0 in all of it's entries except for a 1 at position $(i,j)$.\\
 \\
-\underline{Basis for $M_{m,n} (\mathbb{F})$:}
+\underline{Basis for $M_{m,n} (\mathbb{F})$:} $$\bigcup\limits_{j=1}^{n} \bigcup\limits_{i=1}^{m} E_{i,j}$$ Which is, if you consider a $M_{m,n} (\mathbb{F})$ matrix, a 1 in each one of that matrix's indices.\\
+\\
+For example: The Basis for $M_{2,2} (\mathbb{R})$ is $\{ 
+\begin{bmatrix} 
+1 & 0 \\
+0 & 0 
+\end{bmatrix},
+\begin{bmatrix} 
+0 & 0 \\
+1 & 0 
+\end{bmatrix},
+\begin{bmatrix} 
+0 & 1 \\
+0 & 0 
+\end{bmatrix},
+\begin{bmatrix} 
+0 & 0 \\
+0 & 1 
+\end{bmatrix}
+ \}$
+ 
+\newpage
+
+\section{Wednesday, May 17, 2017 (Section 3.2)}
+
+From this point, I will be explaining Lecture topics, but based off the textbook, as I have a hard time following the Lecture Notes.
+
+\subsection{Basis (but in English)}
+
+\begin{tcolorbox}[title=Basis for a Vector Space]
+	Let $V$ be a vector space. A set of vectors in V is a basis for V if:
+	(Let that set of vectors be $B$)
+	\begin{itemize}
+		\item{The set of vectors spans V. (i.e. span$(B) = V$)}
+		\item{$B$ is linearly independent.}
+	\end{itemize}
+\end{tcolorbox}
+
+\underline{Note:} Any linearly independent set of V can be extended to a basis of V.
+
+\textbf{Example 1:} Find a basis in $P_3 (\mathbb{F})$ that contains $\{ (x^2 + 1),(x^2 - 1) \}$
+\\
+\\
+\textbf{Solution 2:} Start with the set $B = \{ (x^2 + 1),(x^2 - 1) \}$\\
+\\
+We know that $\{1,x,x^2,x^3\}$ is a Basis for $P_3 (\mathbb{F})$, so we will combine these two sets. So now $B = \{ (x^2 + 1),(x^2 - 1),1,x,x^2,x^3 \}$, which is a spanning set of $P_3 (\mathbb{F})$\\
+\\
+Now we have to remove items from B until B is a linearly independent set.\\
+\\
+since $1 = \frac{1}{2}((x^2 + 1) - (x^2 - 1))$, we must remove 1.\\
+since $x^2 =  \frac{1}{2}((x^2 + 1) + (x^2 - 1))$, we must remove $x^2$.\\
+\\
+So now $B = \{ (x^2 + 1),(x^2 - 1),x,x^3 \}$, which is a spanning set of $P_3 (\mathbb{F})$ and is linearly independent.\\
+\\
+\underline{Note:} $B$ contains the same amount of elements as the dimension of $P_3 (\mathbb{F})$ (which is 4).\\
+
+\begin{tcolorbox}
+	Any spanning set contains a basis.
+\end{tcolorbox}
+
+\begin{proof}
+	Consider the spanning set $S$ of vector space $V$, with the dependent vectors $v_1,...,v_n$. (So $S \setminus \{v_1,...,v_n\}$ is linearly independent.)
+	Now, considering $S$ and $S \setminus \{v_1,...,v_n\}$\\
+	$$span(S \setminus \{v_1,...,v_n\}) \subseteq span(S)$$ as there are more elements in $S$ 	than in $S \setminus \{v_1,...,v_n\}$, but since for $v_1,...,v_n$ that each of these 	vectors can be written as a linear combination of all the elements in $S \setminus \{v_1,...,v_n\}$, then that means
+	$$span(S \setminus \{v_1,...,v_n\}) \supseteq span(S)$$
+	so this means that
+	$$span(S \setminus \{v_1,...,v_n\}) = span(S)$$
+	and since $S \setminus \{v_1,...,v_n\}$ is linearly independent, then it is a basis.
+	
+	Therefore, any spanning set S of vector space V contains a basis.
+\end{proof}
+
+\textbf{Example 2:} Consider $V = span\{[1,2,3],[2,1,1] \}$ and $W = span\{[1,0,1],[3,0,-1]\}$. Find a basis for $(V + W) = \{ v + w | v\in V, w \in W\}$
+\\
+\\
+\textbf{Solution 2:} Let $U = V + W = span\{[1,2,3],[2,1,1],[1,0,1],[3,0,-1] \}$\\
+\\
+Since $2[2,1,1] - [1,2,3] = [3,0,-1]$, so $V + W = span\{[1,2,3],[2,1,1],[1,0,1]\}$ And we will put the remaining vectors in a matrix as column vectors and use Gauss-Jordan to prove that they are linearly independent.
+
+$$\begin{amatrix}{3}
+1 & 2 & 1 & 0 \\
+2 & 1 & 0 & 0 \\
+3 & 1 & 1 & 0
+\end{amatrix} \thicksim
+\begin{amatrix}{3}
+1 & 2 & 3 & 0 \\
+0 & -3 & -5 & 0 \\
+0 & 0 & -2 & 0
+\end{amatrix}$$
+
+Since this matrix is in reduced row echelon form with the number of pivots equal to the number of column vectors, this implies linear independence.
+
+\begin{tcolorbox}[title=Unique Combination Criterion for a Basis]
+	Let $B$ be a set of nonzero vectors in a vector space $V$. Then $B$ is a basis for $V$ if and only if each vector $v \in V$ can be uniquely expressed in the form
+	$$\sum_i r_i b_i \text{ where } b_i \in B, r_i \in \mathbb{F}$$
+\end{tcolorbox}
+
+\begin{proof}
+	Consider two vectors $v,w$ of vector space $V$ of dimension $k$. Let these two vectors have the coordinate vectors $v=[v_1, ..., v_k]$ and $w=[w_1, ..., w_k]$, and assume that they both have the same representation for the Basis $B=[b_1, ..., b_k]$, this implies that...
+	\begin{align*}
+		\sum_{i=1}^k w_ib_i &= \sum_{i=1}^k v_ib_i\\
+		\sum_{i=1}^k w_ib_i - \sum_{i=1}^k v_ib_i &= 0\\
+		\sum_{i=1}^k (w_i - v_i)b_i&= 0
+	\end{align*}
+And since $B$ is a basis, $B$ is also linearly independent, so that must mean that $w_i - v_i = 0$ for all $i, 1 \leq i \leq k$, so $w_i = v_i$. So therefore, every vector can be uniquely expressed. 
+	
+\end{proof}
+
+\subsection{Dimension (but in English)}
+
+\begin{tcolorbox}[title=Dimension]
+	Let V be a finitely generated vector space. The number of elements in a basis for $V$ is the dimension of $V$. Denoted by $dim(V)$
+\end{tcolorbox}
+
+\textbf{Properties of Dimension} (If $dim(V) = d$)
+\begin{enumerate}
+	\item{Any spanning set of $V$ with $d$ elements is a basis}
+	\item{Any linearly independent set of $d$ elements in $V$ is also a basis}
+\end{enumerate}
+
+\newpage
+
+\section{Friday, May 19, 2017 (Section 3.3)}
+
+\subsection{Coordinatization of Vectors}
+
+\begin{tcolorbox}[title=Coordinate Vector of $V$ relative to the ordered basis $B$]
+	Let $B = (b_1, b_2, ..., b_n)$	be an ordered basis for a finite-dimensional vector space $V$, and let
+	$$v = r_1 b_1 + r_2 b_2 + ... + r_n b_n$$
+	The vector $[r_1, r_2, ... , r_n]$ is the coordinate vector of $v$ relative to the ordered basis $B$, and is denoted by $v_B$
+\end{tcolorbox}
+
+\textbf{Example 1:} What is the coordinate vector of $v = -x + x^3 + 2x^4$ in the Bases $B = (1,x,x^2,x^3,x^4), E = (x^4, x^3, x^2, x, 1)$\\
+\\
+\textbf{Solution 1:} $v_B = [0, -1, 0 , 1, 2], v_E = [2,1,0,-1,0]$\\
+
+\underline{Note:} For coordinate vectors, the bases that they are relative to must be ordered rather than just a set, since if just a set (unordered) is used, both $v_B$ and $v_E$ could represent either basis $B$ or $E$, which would be confusing. So it would be more useful for each vector to have a unique coordinate vector relating to it.\\
+\\
+\underline{i.e.} If $E = (x^4, x^3, x^2, x, 1)$ was just a set rather than a ordered basis, $v_E$ could be any permutation of $2,1,0,-1,0 ([2,1,0,-1,0], [2,1,0,0,-1],...)$\\
+\\
+\textbf{Example 2:} Find the coordinate vector of $[1,2,-2]$ relative to the ordered basis $B = ([1,1,1], [1,2,0], [1,0,1])$\\
+\\
+\textbf{Solution 2:} To find the coordinate vector representation of $[1,2,-2]$, we must express it as a linear combination of the items in $B$.
+
+$$a[1,1,1] + b[1,2,0] + c[1,0,1] = [1,2,-2]$$
+
+To solve for $a,b,c$ we can put these system of equations into a matrix.
+
+$$
+\begin{amatrix}{3}
+1 & 1 & 1 & 1 \\
+1 & 2 & 0 & 2 \\
+1 & 0 & 1 & -2
+\end{amatrix} 
+\thicksim
+\begin{amatrix}{3}
+1 & 1 & 1 & 1 \\
+0 & 1 & -1 & 1 \\
+0 & -1 & 0 & -3
+\end{amatrix} 
+\thicksim
+\begin{amatrix}{3}
+1 & 0 & 2 & 0 \\
+0 & 1 & -1 & 1 \\
+0 & 0 & -1 & -2
+\end{amatrix}
+\thicksim
+\begin{amatrix}{3}
+1 & 0 & 0 & -4 \\
+0 & 1 & 0 & 3 \\
+0 & 0 & 1 & 2
+\end{amatrix}
+$$
+
+So the coordinate vector for $[1,2,-2]$ with respect to $B$ is $[-4,3,2]$ $([1,2,-2]_B = [-4,3,2])$.\\
+\\
+We can do this method of taking each basis vector in an augmented matrix with the vector we are trying to find the coordinate vector representation of, for all finite bases and vectors within the span of those finite bases.
+\subsection{Coordinatization of Finite-Dimensional Vector Spaces}
+
+Coordinatization of a Finite-Dimensional Vector Space $V$ just means that there's gonna be a one-to-one relationship between the vectors in a Vector Space $V$ and their Coordinate Vector Representations, which means that just like vectors in $V$, the coordinate vectors mirror the same operations of scalar multiplication and vector addition.
+
+
 
 \end{document}

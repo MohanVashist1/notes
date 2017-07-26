@@ -5,7 +5,7 @@ The notes will be typed out in a rough plain text file or written by hand and th
 
 ### IN PROGRESS:
 
-- STANFORD: Machine Learning [(Coursera)](https://www.coursera.org/learn/machine-learning)
+- STANFORD: Machine Learning [(Coursera)](https://www.coursera.org/learn/machine-learning) [(pdf)](https://github.com/JoshuaConcon/notes/raw/master/Stanford%20-%20Machine%20Learning/Machine%20Learning.pdf)
 - UNIVERSITY OF TORONTO SCARBOROUGH: An Introduction to Probability [(Course Website)](http://fisher.utstat.utoronto.ca/~mahinda/stab52/STAB52.html) [(pdf)](https://github.com/JoshuaConcon/notes/raw/master/University%20of%20Toronto%20Scarborough%20-%20An%20Introduction%20to%20Probability/STAB52.pdf)
 - UNIVERSITY OF TORONTO SCARBOROUGH: Linear Algebra II [(pdf)](https://github.com/JoshuaConcon/notes/raw/master/University%20of%20Toronto%20Scarborough%20-%20Linear%20Algebra%20II/MATB24.pdf)
 

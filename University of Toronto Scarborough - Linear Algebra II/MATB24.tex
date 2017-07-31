@@ -548,8 +548,106 @@ So the coordinate vector for $[1,2,-2]$ with respect to $B$ is $[-4,3,2]$ $([1,2
 We can do this method of taking each basis vector in an augmented matrix with the vector we are trying to find the coordinate vector representation of, for all finite bases and vectors within the span of those finite bases.
 \subsection{Coordinatization of Finite-Dimensional Vector Spaces}
 
-Coordinatization of a Finite-Dimensional Vector Space $V$ just means that there's gonna be a one-to-one relationship between the vectors in a Vector Space $V$ and their Coordinate Vector Representations, which means that just like vectors in $V$, the coordinate vectors mirror the same operations of scalar multiplication and vector addition.
+Coordinatization of a Finite-Dimensional Vector Space $V$ just means that there's gonna be a one-to-one relationship between the vectors in a Vector Space $V$ and their Coordinate Vector Representations, which means that just like vectors in $V$, the coordinate vectors mirror the same operations of scalar multiplication and vector addition. i.e:
 
+$$(v + w)_B = v_B + w_B$$
+$$(tv)_B = t(v)_B$$
 
+For vectors $v,w \in V$ and $t \in \mathbb{F}$. This is generally easy to prove.
+
+\begin{proof} Consider vector $v \in V$ where $v_B = [v_1, ... ,v_n]$ and vector $w \in V$ where $w_B = [w_1, ... ,w_n]$ and a scalar $t \in \mathbb{F}$\\
+(Proof of closure under vector addition)
+\begin{align*}
+	v_B + w_B &= [v_1, ... ,v_n] + [w_1, ... ,w_n]\\
+	&= [v_1 + w_1, ... ,v_n + w_n]\\
+	&= (v + w)_B
+\end{align*}
+
+(Proof of closure under scalar multiplication)
+\begin{align*}
+	t(v_B) &= t[v_1, ... ,v_n]\\
+	&= [t(v_1), ... ,t(v_n)]\\
+	&= (tv)_B
+\end{align*}
+
+\end{proof}
+
+This tells us that a vectors in a vector space $V$ can be renamed in their unique coordinate vector relative to a basis $B$ (that coordinate vector space would be $\mathbb{F}^n$) and this coordinate vector space $\mathbb{F}^n$ would be structurally identical to $V$. We say that $V$ and $\mathbb{F}^n$ are isomorphic vector spaces, or that every vector space $V$ with a basis of $n$ vectors is isomorphic to $\mathbb{F}^n$, as each vector in $V$ can be renamed to a vector in $\mathbb{F}^n$ relative to $B$. We use 'isomorphic' to describe algebraic structures that are identical except in name and elements.\\
+\\
+For $V$ to be isomorphic to $\mathbb{F}^n$, all of the algebraic properties of $V$ must also apply to vectors in $\mathbb{F}^n$. Since we know this about $V$ and $\mathbb{F}^n$, we can use coordinate vectors in $\mathbb{F}^n$ and vector properties to learn about properties of the corresponding vectors space $V$.\\
+\\
+\textbf{Example 2:} Determine whether $x^2 - 3x + 2, 3x^2 + 5x - 4, 7x^2 + 21x - 16$ are linearly independent in the vector space $P_2 (\mathbb{F})$\\
+\\
+\textbf{Solution 2:} We can just convert these to coordinate vectors and put them in a matrix and do row reduction to find out if they are linearly independent.\\
+\\
+Let's use basis $B = (x^2, x, 1)$\\
+$$(x^2 - 3x + 2)_B = [1,-3,2]$$
+$$(3x^2 + 5x - 4)_B = [3,5,-4]$$
+$$(7x^2 + 21x - 16)_B = [7,21,-16]$$
+
+And now let's put them in a matrix as column vectors and do row reduction.
+
+$$\begin{bmatrix} 
+1 & 3 & 7\\
+-3 & 5 & 21\\
+2 & -4 & -16 
+\end{bmatrix}
+\thicksim
+\begin{bmatrix} 
+1 & 3 & 7\\
+0 & 14 & 42\\
+0 & -10 & -30 
+\end{bmatrix}
+\thicksim
+\begin{bmatrix} 
+1 & 3 & 7\\
+0 & 1 & 3\\
+0 & 0 & 0 
+\end{bmatrix}$$
+
+Since there are 3 coordinate vectors, but only 2 pivots in the resulting matrix, we can conclude that 1 of the vectors is linearly dependent in the set. So that set of polynomials is linearly dependent.\\
+\\
+\underline{Note:} Since the pivots are in the positions of the vectors $(x^2 - 3x + 2)_B = [1,-3,2]$ and $(3x^2 + 5x - 4)_B = [3,5,-4]$, that means $\{ x^2 - 3x + 2, 3x^2 + 5x - 4 \}$ is linearly independent, so this is helpful for finding the basis of a Vector Space.
+
+\textbf{Example 3:} Find the coordinate vector of $p(x) = x^3 + x^2 - x - 1$ relative to the ordered basis $A = ((x+1)^3, (x+1)^2, x+1, 1)$\\
+\\
+\textbf{Solution 3:} The plan here is to convert each vector in the basis $A$ into an coordinate vector relative to an easier basis to work with. Let's use the basis $B = (x^3, x^2, x, 1)$ for $P_3 (\mathbb{R})$.
+
+$$((x+1)^3)_B = (x^3 + 3x^2 + 3x + 1)_B = [1,3,3,1]$$
+$$((x+1)^2)_B = (x^2 + 2x + 1)_B = [0,1,2,1]$$
+$$(x+1)_B = [0,0,1,1]$$
+$$(1)_B = [0,0,0,1]$$
+\\
+$$(x^3 + x^2 - x - 1)_B = [1,1,-1,-1]$$
+
+Now if we put the coordinate vectors of the basis as column vectors into a matrix and augment the vector we are trying to solve for ($p(x)$), we get.
+
+$$
+\begin{amatrix}{4}
+1 & 0 & 0 & 0 & 1\\
+3 & 1 & 0 & 0 & 1\\
+3 & 2 & 1 & 0 & -1\\
+1 & 1 & 1 & 1 & -1
+\end{amatrix}
+\thicksim
+\begin{amatrix}{4}
+1 & 0 & 0 & 0 & 1\\
+0 & 1 & 0 & 0 & -2\\
+0 & 2 & 1 & 0 & -4\\
+0 & 1 & 1 & 1 & -2
+\end{amatrix}
+\thicksim
+\begin{amatrix}{4}
+1 & 0 & 0 & 0 & 1\\
+0 & 1 & 0 & 0 & -2\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 & 0
+\end{amatrix}
+$$
+
+Therefore $p(x)_B = [1,-2,0,0]$ and so...
+$$x^3 + x^2 - x - 1 = (x+1)^3 - 2(x+1)^2$$
+
+\newpage
 
 \end{document}

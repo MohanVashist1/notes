@@ -3,10 +3,11 @@ Just my notes of various courses that I am taking.
 
 The notes will be typed out in a rough plain text file or written by hand and then will be typed out in LaTeX.
 
-### IN PROGRESS:
+### COURSES IN PROGRESS:
 
 - STANFORD: Machine Learning [(Coursera)](https://www.coursera.org/learn/machine-learning) [(pdf)](https://github.com/JoshuaConcon/notes/raw/master/Stanford%20-%20Machine%20Learning/Machine%20Learning.pdf)
-- UNIVERSITY OF TORONTO SCARBOROUGH: An Introduction to Probability [(Course Website)](http://fisher.utstat.utoronto.ca/~mahinda/stab52/STAB52.html) [(pdf)](https://github.com/JoshuaConcon/notes/raw/master/University%20of%20Toronto%20Scarborough%20-%20An%20Introduction%20to%20Probability/STAB52.pdf)
-- UNIVERSITY OF TORONTO SCARBOROUGH: Linear Algebra II [(pdf)](https://github.com/JoshuaConcon/notes/raw/master/University%20of%20Toronto%20Scarborough%20-%20Linear%20Algebra%20II/MATB24.pdf)
 
-### COMPLETED:
+### COMPLETED COURSES:
+
+- UNIVERSITY OF TORONTO SCARBOROUGH: Linear Algebra II [(pdf)<span style="color:red">{Only up to and including week 3}</span>](https://github.com/JoshuaConcon/notes/raw/master/University%20of%20Toronto%20Scarborough%20-%20Linear%20Algebra%20II/MATB24.pdf)
+- UNIVERSITY OF TORONTO SCARBOROUGH: An Introduction to Probability [(Course Website)](http://fisher.utstat.utoronto.ca/~mahinda/stab52/STAB52.html) [(pdf)<span style="color:red">{Only up to and including week 6}</span>](https://github.com/JoshuaConcon/notes/raw/master/University%20of%20Toronto%20Scarborough%20-%20An%20Introduction%20to%20Probability/STAB52.pdf)

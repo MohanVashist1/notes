@@ -1,0 +1,9 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Wednesday, September 6, 2017}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Greedy Algorithms}{2}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Interval Scheduling (KT 4.1)}{2}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}Possible sort orders}{3}{subsubsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.3}Proof of Correctness (optimality)}{5}{subsubsection.1.1.3}
+\contentsline {paragraph}{Claim 1:}{5}{section*.2}
+\contentsline {paragraph}{Claim 2:}{5}{section*.3}
+\contentsline {paragraph}{Claim 3:}{7}{section*.4}

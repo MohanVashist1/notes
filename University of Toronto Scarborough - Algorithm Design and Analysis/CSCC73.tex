@@ -9,6 +9,34 @@
 
 \usepackage{listings}
 
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+
 \usepackage{dsfont}
 
 \usepackage{hyperref}
@@ -83,7 +111,7 @@ Solutions that satisfies constraints are called \textbf{feasible}.
 \underline{e.g.} $\{ b,c,d,e \}, \{ b,g,d,e \}$ (from figure 1)\\
 \\
 \underline{Greedy "Schema":}\\
-\begin{lstlisting}
+\begin{lstlisting}[language=Python]
 sort jobs in some order
 A := null
 for each job i in sorted order do
@@ -202,6 +230,88 @@ For each iteration $i$ in a Greedy Algorithm, there exists an optimal set $A^*$ 
 
 \underline{Generalization of Interval Scheduling:}\\
 Interval Scheduling can be generalized to cover different problems, such as Weighted Intervals, finding the minimum amount of concurrent machine to perform all intervals.
+
+\section{Monday, September 11, 2017}
+
+\subsection{Min-Max Lateness (KT 4.1)}
+
+\underline{Input:}
+\begin{itemize}
+	\item{release time $r$ (earliest time to start all jobs)}
+	\item{$n$ jobs $1,2,...,n$}
+	\item{for each job $i$}
+	\begin{itemize}
+		\item{length $t(i) \geq 0$}
+		\item{deadline $d(i)$}
+	\end{itemize}
+	\item{can only do jobs one at a time}
+\end{itemize}
+
+We want to minimize the maximum lateness of any job.\\
+\\
+\underline{Schedule:} $S$ specifies start time of each job $i$. $(s(i) \geq r)$\\
+\\
+end time of $i = s(i) + t(i)$, such that $[ s(i), s(i)+t(i) ]$ and $[ s(j), s(j)+t(j) ]$ do not overlap for all jobs $i,j$ where $i \neq j$\\
+\\
+\underline{Output:} Find an $S$ that minimizes the max lateness of any job.\\
+
+\textbf{Example:}
+
+\includegraphics[scale=0.15]{minmax1}
+
+This $S$ is optimal, but is not unique in optimality for the smallest max lateness (you can get another optimal solution by swapping $d$ and $b$)\\
+
+\underline{Algorithm (Earliest Deadline First):}
+
+\begin{lstlisting}[language=Python]
+ALGO:
+	Sort jobs by increasing deadline
+	Let d[1,..,n] be deadlines (in sorted order)
+	Let t[1,...,n] be durations of corresponding jobs
+	F := r # max finish time of all jobs schedules so far
+	for i:= 1 to n do
+		gs(i) := F
+		F := gs(i) +t (i)
+	return gs
+\end{lstlisting}
+
+\underline{Running Time:} $\Theta (nlogn)$\\
+\\
+\begin{tcolorbox}[title=Inversion]
+	An \textbf{inversion} in schedule $S$ is a pair of jobs $i,j$ such that $s(i) < s(j)$ but $d(i) > d(j)$\\
+	\\
+	\underline{i.e.}\\
+	 \includegraphics[scale=0.1]{minmax2}
+\end{tcolorbox}
+
+This algorithm has no gaps and no inversions, which both properties ensures optimality.\\
+\\
+
+\begin{tcolorbox}[title=Theorem]
+	Any schedule with no gaps and no inversions is optimal
+\end{tcolorbox}
+
+\underline{Observation 1:} There is an optimal schedule with no gaps\\
+\\
+\underline{Observation 2:} All schedules with no gaps or inversions have the same max lateness\\
+\\
+Given $S$ with no gaps and at least 1 inversion, there exists a pair of jobs $i,j$ that have an inversion and are consecutive in s.\\
+\\
+\includegraphics[scale=0.11]{minmax4}
+\\
+\\
+Let $S'$ be a schedule like $S$ except $i,j$ are swapped.\\
+\\
+\includegraphics[scale=0.11]{minmax4}
+\\
+\\
+\begin{itemize}
+	\item{All jobs that are not $i,j$ have the same lateness in $S$ as in $S'$}
+	\item{Lateness of $j$ in $S'$ does not increase}
+	\item{Lateness of $i$ in $S'$ may increase though, but less than lateness of $j$ in $S$}
+\end{itemize}
+This implies that the max lateness in $S'$ $\leq$ max lateness in $S$.
+
 
 \end{document}
 

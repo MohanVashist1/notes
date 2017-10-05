@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 SEP 2017 15:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 OCT 2017 18:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -146,6 +146,14 @@ File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
 Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
@@ -766,6 +774,7 @@ Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
@@ -1042,43 +1051,43 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 38.
+less on input line 66.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 39.
+less on input line 67.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 40.
+less on input line 68.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 41.
+less on input line 69.
 
 (./CSCC73.aux)
 \openout1 = `CSCC73.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 72.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    ... okay on input line 72.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1110,7 +1119,7 @@ e
 ))
 \c@lstlisting=\count151
 \AtBeginShipoutBox=\box50
-Package hyperref Info: Link coloring OFF on input line 44.
+Package hyperref Info: Link coloring OFF on input line 72.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1120,21 +1129,21 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count152
 )
-LaTeX Info: Redefining \ref on input line 44.
-LaTeX Info: Redefining \pageref on input line 44.
-LaTeX Info: Redefining \nameref on input line 44.
+LaTeX Info: Redefining \ref on input line 72.
+LaTeX Info: Redefining \pageref on input line 72.
+LaTeX Info: Redefining \nameref on input line 72.
 
 (./CSCC73.out) (./CSCC73.out)
 \@outlinefile=\write6
 \openout6 = `CSCC73.out'.
 
  ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 50.
+LaTeX Font Info:    Try loading font information for U+msa on input line 78.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 50.
+LaTeX Font Info:    Try loading font information for U+msb on input line 78.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1146,33 +1155,35 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<imgs/interval1.png, id=41, 200.75pt x 153.57375pt>
+<imgs/interval1.png, id=51, 200.75pt x 153.57375pt>
 File: imgs/interval1.png Graphic file (type png)
  <use imgs/interval1.png>
-Package pdftex.def Info: imgs/interval1.png used on input line 71.
+Package pdftex.def Info: imgs/interval1.png used on input line 99.
 (pdftex.def)             Requested size: 200.7495pt x 153.57336pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--74
+Underfull \hbox (badness 10000) in paragraph at lines 99--102
+
+ []
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+Underfull \hbox (badness 10000) in paragraph at lines 107--114
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--86
+Underfull \hbox (badness 10000) in paragraph at lines 107--114
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--86
+Underfull \hbox (badness 10000) in paragraph at lines 107--114
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--86
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--86
+Underfull \hbox (badness 10000) in paragraph at lines 107--114
 
  []
 
@@ -1183,41 +1194,68 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2 <./imgs/interval1.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 91.
+
+Package xcolor Warning: Incompatible color definition on input line 114.
+
+
+Package xcolor Warning: Incompatible color definition on input line 114.
+
+
+Package xcolor Warning: Incompatible color definition on input line 114.
+
+
+Package xcolor Warning: Incompatible color definition on input line 115.
+
+
+Package xcolor Warning: Incompatible color definition on input line 116.
+
+
+Package xcolor Warning: Incompatible color definition on input line 117.
+
+
+Package xcolor Warning: Incompatible color definition on input line 118.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 119.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 91.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 119.
 
-<imgs/interval2.png, id=52, 200.75pt x 153.57375pt>
+
+Package xcolor Warning: Incompatible color definition on input line 120.
+
+<imgs/interval2.png, id=62, 200.75pt x 153.57375pt>
 File: imgs/interval2.png Graphic file (type png)
  <use imgs/interval2.png>
-Package pdftex.def Info: imgs/interval2.png used on input line 104.
+Package pdftex.def Info: imgs/interval2.png used on input line 132.
 (pdftex.def)             Requested size: 200.7495pt x 153.57336pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--108
+Underfull \hbox (badness 10000) in paragraph at lines 129--136
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--108
+Underfull \hbox (badness 10000) in paragraph at lines 129--136
 
  []
 
-<imgs/interval3.png, id=53, 200.75pt x 153.57375pt>
+<imgs/interval3.png, id=63, 200.75pt x 153.57375pt>
 File: imgs/interval3.png Graphic file (type png)
  <use imgs/interval3.png>
-Package pdftex.def Info: imgs/interval3.png used on input line 112.
+Package pdftex.def Info: imgs/interval3.png used on input line 140.
 (pdftex.def)             Requested size: 200.7495pt x 153.57336pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--116
+Underfull \hbox (badness 10000) in paragraph at lines 137--144
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--116
+Underfull \hbox (badness 10000) in paragraph at lines 137--144
 
  []
 
@@ -1227,24 +1265,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3 <./imgs/interval2.png>] <imgs/interval4.png, id=68, 200.75pt x 153.57375pt>
+[3 <./imgs/interval2.png>] <imgs/interval4.png, id=80, 200.75pt x 153.57375pt>
 File: imgs/interval4.png Graphic file (type png)
 
 <use imgs/interval4.png>
-Package pdftex.def Info: imgs/interval4.png used on input line 120.
+Package pdftex.def Info: imgs/interval4.png used on input line 148.
 (pdftex.def)             Requested size: 200.7495pt x 153.57336pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--124
+Underfull \hbox (badness 10000) in paragraph at lines 145--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--124
+Underfull \hbox (badness 10000) in paragraph at lines 145--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--129
+Underfull \hbox (badness 10000) in paragraph at lines 153--157
 
  []
 
@@ -1255,59 +1293,93 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [4 <./imgs/interval3.png> <./imgs/interval4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 137.
+
+Package xcolor Warning: Incompatible color definition on input line 160.
+
+
+Package xcolor Warning: Incompatible color definition on input line 160.
+
+
+Package xcolor Warning: Incompatible color definition on input line 160.
+
+
+Package xcolor Warning: Incompatible color definition on input line 161.
+
+
+Package xcolor Warning: Incompatible color definition on input line 162.
+
+
+Package xcolor Warning: Incompatible color definition on input line 163.
+
+
+Package xcolor Warning: Incompatible color definition on input line 164.
+
+
+Package xcolor Warning: Incompatible color definition on input line 165.
+
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 165.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 137.
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 165.
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--152
+
+Package xcolor Warning: Incompatible color definition on input line 166.
+
+
+Package xcolor Warning: Incompatible color definition on input line 167.
+
+
+Package xcolor Warning: Incompatible color definition on input line 168.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--180
 
  []
 
-<imgs/interval5.png, id=77, 401.5pt x 307.64937pt>
+<imgs/interval5.png, id=89, 401.5pt x 307.64937pt>
 File: imgs/interval5.png Graphic file (type png)
  <use imgs/interval5.png>
-Package pdftex.def Info: imgs/interval5.png used on input line 164.
+Package pdftex.def Info: imgs/interval5.png used on input line 192.
 (pdftex.def)             Requested size: 401.49901pt x 307.6486pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--169
+Underfull \hbox (badness 10000) in paragraph at lines 183--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--169
+Underfull \hbox (badness 10000) in paragraph at lines 183--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--169
+Underfull \hbox (badness 10000) in paragraph at lines 183--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--169
+Underfull \hbox (badness 10000) in paragraph at lines 183--197
 
  []
 
 
-Overfull \hbox (11.49901pt too wide) in paragraph at lines 155--169
+Overfull \hbox (11.49901pt too wide) in paragraph at lines 183--197
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--169
+Underfull \hbox (badness 10000) in paragraph at lines 183--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--169
+Underfull \hbox (badness 10000) in paragraph at lines 183--197
 
  []
 
@@ -1325,33 +1397,33 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [6 <./imgs/interval5.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
 
  []
 
-<imgs/interval6.png, id=103, 319.69438pt x 233.37187pt>
+<imgs/interval6.png, id=116, 319.69438pt x 233.37187pt>
 File: imgs/interval6.png Graphic file (type png)
 
 <use imgs/interval6.png>
-Package pdftex.def Info: imgs/interval6.png used on input line 193.
+Package pdftex.def Info: imgs/interval6.png used on input line 221.
 (pdftex.def)             Requested size: 319.69359pt x 233.37129pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--198
+Underfull \hbox (badness 10000) in paragraph at lines 218--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--198
+Underfull \hbox (badness 10000) in paragraph at lines 218--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--198
+Underfull \hbox (badness 10000) in paragraph at lines 218--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--202
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
 
  []
 
@@ -1362,6 +1434,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [7 <./imgs/interval6.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 250--257
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--257
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--257
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--257
+
+ []
+
+<imgs/minmax1.jpg, id=125, 3157.7975pt x 1703.36375pt>
+File: imgs/minmax1.jpg Graphic file (type jpg)
+ <use imgs/minmax1.jpg>
+Package pdftex.def Info: imgs/minmax1.jpg used on input line 260.
+(pdftex.def)             Requested size: 473.6492pt x 255.49353pt.
+
+Overfull \hbox (83.6492pt too wide) in paragraph at lines 260--261
+[][] 
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1369,39 +1470,234 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 206.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 206.
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
+
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 266.
+
+
+Package xcolor Warning: Incompatible color definition on input line 266.
+
+
+Package xcolor Warning: Incompatible color definition on input line 266.
+
+
+Package xcolor Warning: Incompatible color definition on input line 267.
+
+
+Package xcolor Warning: Incompatible color definition on input line 268.
+
+
+Package xcolor Warning: Incompatible color definition on input line 269.
+
+
+Package xcolor Warning: Incompatible color definition on input line 270.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 272.
+
+
+Package xcolor Warning: Incompatible color definition on input line 273.
+
+
+Package xcolor Warning: Incompatible color definition on input line 274.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+<imgs/minmax2.jpg, id=130, 1731.46875pt x 809.0225pt>
+File: imgs/minmax2.jpg Graphic file (type jpg)
+ <use imgs/minmax2.jpg>
+Package pdftex.def Info: imgs/minmax2.jpg used on input line 284.
+(pdftex.def)             Requested size: 173.15701pt x 80.90698pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--285
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--285
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--285
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9 <./imgs/minmax1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 287--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--289
+
+ []
+
+<imgs/minmax4.jpg, id=145, 3112.62875pt x 1157.32375pt>
+File: imgs/minmax4.jpg Graphic file (type jpg)
+ <use imgs/minmax4.jpg>
+Package pdftex.def Info: imgs/minmax4.jpg used on input line 300.
+(pdftex.def)             Requested size: 342.39023pt x 127.306pt.
+File: imgs/minmax4.jpg Graphic file (type jpg)
+
+<use imgs/minmax4.jpg>
+Package pdftex.def Info: imgs/minmax4.jpg used on input line 305.
+(pdftex.def)             Requested size: 342.39023pt x 127.306pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--308
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--308
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--308
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--308
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--308
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--308
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--308
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10 <./imgs/minmax2.jpg> <./imgs/minmax4.jpg>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 316.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 316.
  (./CSCC73.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 206.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 206.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 316.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 316.
 Package rerunfilecheck Info: File `CSCC73.out' has not changed.
-(rerunfilecheck)             Checksum: 3906BF6464BED76058820B0A77A253D9;391.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 206.
+(rerunfilecheck)             Checksum: A356D4A01B0F919B235A22875FF98417;528.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 316.
  ) 
 Here is how much of TeX's memory you used:
- 21020 strings out of 493089
- 384884 string characters out of 6134842
- 452124 words of memory out of 5000000
- 24091 multiletter control sequences out of 15000+600000
+ 21290 strings out of 493089
+ 388271 string characters out of 6134842
+ 494214 words of memory out of 5000000
+ 24334 multiletter control sequences out of 15000+600000
  15713 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,13n,73p,925b,1231s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,13n,73p,925b,1492s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on CSCC73.pdf (8 pages, 194258 bytes).
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on CSCC73.pdf (11 pages, 1842931 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 216 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
+ 55 named destinations out of 1000 (max. 500000)
+ 114 words of extra memory for PDF output out of 10000 (max. 10000000)
 

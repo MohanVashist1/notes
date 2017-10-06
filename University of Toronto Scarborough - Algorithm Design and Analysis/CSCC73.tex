@@ -231,6 +231,8 @@ For each iteration $i$ in a Greedy Algorithm, there exists an optimal set $A^*$ 
 \underline{Generalization of Interval Scheduling:}\\
 Interval Scheduling can be generalized to cover different problems, such as Weighted Intervals, finding the minimum amount of concurrent machine to perform all intervals.
 
+\newpage
+
 \section{Monday, September 11, 2017}
 
 \subsection{Min-Max Lateness (KT 4.1)}
@@ -311,6 +313,131 @@ Let $S'$ be a schedule like $S$ except $i,j$ are swapped.\\
 	\item{Lateness of $i$ in $S'$ may increase though, but less than lateness of $j$ in $S$}
 \end{itemize}
 This implies that the max lateness in $S'$ $\leq$ max lateness in $S$.
+
+\newpage
+
+\section{Wednesday, September 13, 2017}
+
+\subsection{Dijkstra's Shortest Path Algorithm (KT 4.4, DPV 4.4)}
+
+$wt(P) = $ sum of the weights of edges of the path $P$\\
+\\
+\underline{Input:} 
+\begin{itemize}
+	\item{Weighted (di)graph $(G=(V,E))$}
+	\item{source node $s\in V$}
+	\item{weight of edges $wt(u,v) \geq 0, \forall (u,v) \in E$}
+\end{itemize}
+
+\underline{Output:} $\forall v \in V$
+\begin{itemize}
+	\item{$\delta (v) = $ minimum weight of $s \rightarrow v$ path}
+	\item{$p(v) = $ predecessor of $v$ on a shortest $s \rightarrow v$ path}
+\end{itemize}
+
+We must maintain a set of nodes $R$, and $\forall u\in V, d(u)$
+
+\underline{Intervals:}
+\begin{enumerate}
+	\item{$\forall u\in V, d(u) = $ minimum weight of any $s \rightarrow u$ path in which all nodes that are not $u$ are in $R$ ("$R$ - path")\\
+	\\
+	\underline{Visualization:}\\
+	\\
+	(insert pic here)
+	\\
+	\\
+	or $d(u) = \infty$, if no such path exists}
+	\item{$\forall u \in R, \forall u' \not\in R, d(u) \leq d(u')$}
+\end{enumerate}
+
+\underline{Note:}
+\begin{itemize}
+	\item{$\forall u, d(u) \geq \delta (u)$}
+	\item{$\forall u \in R, d(u) = \delta (u)$}
+\end{itemize}
+
+\subsection{Algorithm}
+
+\begin{lstlisting}[language=Python]
+ALGO:
+	R := {s}
+	d(s) := 0
+	p(s) := NULL
+	for each node u != s do
+		if (s,u) in E then
+			d(u) := wt(s,u)
+			p(u) := s
+		else
+			d(u) := infinity
+			P(u) := NULL
+	while R != V do
+		let v be node not in R such that d(v) is min
+		R := UNION(R,v)
+		for each node u such that (v,u) in E do
+			if d(u) > d(v) + wt(v,u)
+				d(u) := d(v) + wt(v,u)
+				p(u) := v
+\end{lstlisting}
+
+\underline{Visualization:}\\
+\\
+(insert pic here)
+
+\subsection{Running Time}
+
+($n = |V|, m = |E|$)
+
+\begin{enumerate}
+	\item{ \underline{Native Implementation:} $O(n) + O(n)O(n) = O(n^2)$\\
+	\\
+	The first $O(n)$ from the left is the running time for the initialization of all nodes before the while loop begins, the second $O(n)$ refers to how many times the while loop runs, and the last $O(n)$ refers to how long each loop takes. This results in a running time of $O(n^2)$}
+	\item{ \underline{"Sophisticated" Implementation:}\\ $O(n) + O(n) + O(nlogn) + O(mlogn) = O((n+m)logn)$ or $O(mlogn)$ if it is assumed that there are no unreachable nodes from $s$}\\
+	\\
+	The first $O(n)$ refers to the initialization of all nodes before the while loop begins, the second $O(n)$ refers to the execution of BUILDHEAP on the nodes, the $O(nlogn)$ refers to the $O(n)$ EXTRACTMIN operations from this heap, and $O(mlogn)$ refers to all the change key operations for this heap.
+\end{enumerate}
+
+$O(n^2)$ vs. $O(mlogn)$, worst case $m = n^2$ (all nodes are connected to a linear amount of nodes).\\
+\\
+if $G$ is "dense" (i.e. $m = \Theta (n^2)$) then naive is faster\\
+if $G$ is "sparse" then it's the opposite
+
+\underline{Why non-negative weights for the edges?}\\
+\\
+(insert picture here)
+\\
+\\
+With $s = A$, the fastest route to $C$ from $A$ is $A \rightarrow B \rightarrow C$ which is wrong.
+
+\subsection{Correctness}
+
+$R_i, d_i = $ values of $R,d$ at the end of $i$th iteration.
+
+\paragraph{Claim 1:} If invariants $(1)$ and $(2)$ hold. $\forall u \in R_{i+1}, d_i (u) = \delta (u)$\\
+(\underline{Note:} $R_{i+1} = R_i \cup \{ v \}$)
+
+\begin{proof}
+	(Proof of Claim 1:)\\
+	Let $u \in R_i \cup \{ v \}$ and $P$ be a minimum weight $s \rightarrow u$ path.\\
+	\\
+	If $P$ is on $R_i$-path, then done by invariant (1)
+	If $P$ is not on $R_i$-path...\\
+	\\
+	(insert picture)
+	\\
+	\\
+	Note how $u' \in R_i$, and $u \in R_{i+1}$
+		\begin{align*}
+		\delta (u) &= weight(P)\\
+		&\geq weight(P') \:\:\:\text{since $wt \geq 0$}\\
+		&\geq d_i (u') \:\:\:\text{by invariant 1, since $P'$ is an $s \rightarrow u'$ is an $R_i$ - path}\\
+		&\geq d_i (u) \:\:\:\text{if $u\in R_i$ by invariant 2, $u=v$ by choice of $v$}\\
+		&\geq \delta (u) \:\:\:\text{by A ???????}
+	\end{align*}
+	
+	and this implies that $d_i (u) = \delta (u)$
+
+\end{proof}
+
 
 
 \end{document}

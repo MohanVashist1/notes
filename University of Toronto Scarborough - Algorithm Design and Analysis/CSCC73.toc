@@ -9,3 +9,9 @@
 \contentsline {paragraph}{Claim 3:}{7}{section*.4}
 \contentsline {section}{\numberline {2}Monday, September 11, 2017}{8}{section.2}
 \contentsline {subsection}{\numberline {2.1}Min-Max Lateness (KT 4.1)}{8}{subsection.2.1}
+\contentsline {section}{\numberline {3}Wednesday, September 13, 2017}{12}{section.3}
+\contentsline {subsection}{\numberline {3.1}Dijkstra's Shortest Path Algorithm (KT 4.4, DPV 4.4)}{12}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Algorithm}{13}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Running Time}{13}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Correctness}{14}{subsection.3.4}
+\contentsline {paragraph}{Claim 1:}{14}{section*.5}

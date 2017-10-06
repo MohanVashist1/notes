@@ -2,3 +2,40 @@
 \contentsline {section}{\numberline {1}Thursday, September 7, 2017}{2}{section.1}
 \contentsline {subsection}{\numberline {1.1}Definitions}{2}{subsection.1.1}
 \contentsline {paragraph}{Data}{2}{section*.2}
+\contentsline {paragraph}{Structured Data}{2}{section*.3}
+\contentsline {paragraph}{Unstructured Data}{2}{section*.4}
+\contentsline {paragraph}{Database}{2}{section*.5}
+\contentsline {paragraph}{Database Management System (DBMS)}{2}{section*.6}
+\contentsline {paragraph}{Information}{3}{section*.7}
+\contentsline {paragraph}{Metadata}{3}{section*.8}
+\contentsline {subsection}{\numberline {1.2}How do we store data?}{3}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Traditional File System}{4}{subsubsection.1.2.1}
+\contentsline {paragraph}{Program-Data Dependence}{4}{section*.9}
+\contentsline {paragraph}{Duplication of Data}{4}{section*.10}
+\contentsline {paragraph}{Limited Data Sharing}{5}{section*.11}
+\contentsline {paragraph}{Length Development Times}{5}{section*.12}
+\contentsline {paragraph}{Excessive Program Maintenance}{5}{section*.13}
+\contentsline {subsubsection}{\numberline {1.2.2}Database Approach}{5}{subsubsection.1.2.2}
+\contentsline {subsection}{\numberline {1.3}Relational Data Model}{6}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}Advantages}{6}{subsubsection.1.3.1}
+\contentsline {paragraph}{Program-data independence}{6}{section*.14}
+\contentsline {paragraph}{Planned data redundancy}{6}{section*.15}
+\contentsline {paragraph}{Improved data consistency}{6}{section*.16}
+\contentsline {paragraph}{Increased productivity of application development}{6}{section*.17}
+\contentsline {paragraph}{Enforcement of standards}{6}{section*.18}
+\contentsline {paragraph}{Improved data quality}{6}{section*.19}
+\contentsline {paragraph}{Improved data accessibility and responsiveness}{7}{section*.20}
+\contentsline {paragraph}{Reduced program maintenance}{7}{section*.21}
+\contentsline {paragraph}{Improved data sharing}{7}{section*.22}
+\contentsline {subsubsection}{\numberline {1.3.2}Cost and Risk}{7}{subsubsection.1.3.2}
+\contentsline {paragraph}{New specialized personnel}{7}{section*.23}
+\contentsline {paragraph}{Installation and Management of Cost and Complexity}{7}{section*.24}
+\contentsline {paragraph}{Conversion Costs}{7}{section*.25}
+\contentsline {paragraph}{Need for backup and recovery}{7}{section*.26}
+\contentsline {paragraph}{Organizational Conflict}{7}{section*.27}
+\contentsline {subsection}{\numberline {1.4}Database Development Process}{7}{subsection.1.4}
+\contentsline {paragraph}{Model the rule of the organization}{7}{section*.28}
+\contentsline {paragraph}{Explore a relation between various entities}{7}{section*.29}
+\contentsline {paragraph}{Create your relation}{7}{section*.30}
+\contentsline {paragraph}{Normalize your relation}{7}{section*.31}
+\contentsline {paragraph}{Implementation}{8}{section*.32}

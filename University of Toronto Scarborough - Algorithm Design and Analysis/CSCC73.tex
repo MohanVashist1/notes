@@ -426,19 +426,53 @@ $R_i, d_i = $ values of $R,d$ at the end of $i$th iteration.
 	\\
 	\\
 	Note how $u' \in R_i$, and $u \in R_{i+1}$
-		\begin{align*}
+	\begin{align*}
 		\delta (u) &= weight(P)\\
 		&\geq weight(P') \:\:\:\text{since $wt \geq 0$}\\
 		&\geq d_i (u') \:\:\:\text{by invariant 1, since $P'$ is an $s \rightarrow u'$ is an $R_i$ - path}\\
 		&\geq d_i (u) \:\:\:\text{if $u\in R_i$ by invariant 2, $u=v$ by choice of $v$}\\
-		&\geq \delta (u) \:\:\:\text{by A ???????}
+		&\geq \delta (u) \:\:\:\text{[since $\forall u, d(u) \geq \delta (u)$]}
 	\end{align*}
 	
 	and this implies that $d_i (u) = \delta (u)$
 
 \end{proof}
 
+Why if invariants (1) and (2) hold after the $i$th iteration, invariant (1) holds after $(i+1)$st iteration for nodes $u \not\in R_{i+1}$\\
+\\
+Let $P$ be minimum-weight $s\rightarrow u$ $R_{i+1}$-path with the fewest occurrences of the new node $v$.\\
+\\
+\underline{Case 1: $v$ does not occur in $P$ at all}. This implies that $P$ is an $R_i$-path.
 
+\begin{align*}
+	&= minimum-weight\:\:\: s\rightarrow u\:\:\: R_{i+1}-path\\
+	&= minimum-weight\:\:\: s\rightarrow u\:\:\: R_{i}-path\\
+	&= d_i (u) \:\:\:\text{By the Induction Hypothesis}\\
+	&= d_{i+1} (u)
+\end{align*}
+
+\underline{Case 2: $v$ occurs in $P$}\\
+\\
+Consider $R_i$, and there is an edge that connects a node from $R_i$ to a node $v$ outside of $R_i$, and there is yet another edge that connects that node $v$ to another node $u$, which is also outside of $R_i$. If $P$ is like this, then the algorithm computes a minimum-weight $s\rightarrow u$ $R_{i+1}$-path, so done.\\
+\\
+What happens if you get multiple instances of $v$ with are all outside $R_i$, so $R_i$ is divided into multiple sections because of the multiple instances of $v$ before having an edge connecting to a node in the most recent $R_i$ section to $u$?\\
+\\
+The answer is that this it can't happen, and here's why.
+Consider the node in the most recent $R_i$ section that has an edge connecting to $u$, lets call this node $u'$.\\
+\\
+\underline{This node cannot be $v$}, as if it was, since the connections previous are non-negative, since there are multiple instances of $v$ and we are trying to find the minimum weight $s\rightarrow v$ path, then this case will not happen and would look more like case 2.
+\\
+\\
+For contradiction, we are going to assume that this weird case where there are multiple instances of $v$ can happen, and that $u' \neq v$
+$$d_i (u') \leq d_i (v)$$
+
+We know this because $u' \in R_i$ and $v \not\in R_i$, do the $d_i$ value for $u'$ is smaller than the $d_i$ value for $v$ (so by invariant 2).\\
+
+This implies that $\exists s\rightarrow u'$ $R_i$-path $P'$ such that\\
+$wt(P') \leq $  minimum-weight of $s\rightarrow v$ $R_i$-path $= d_i (v)$
+
+And therefore, $\exists s\rightarrow u$ $R_i$-path ($P'$ followed by $(u',v)$)\\
+ with weight $\leq d_i (v) + wt(v,u) \leq wt(P)$ with no occurrences of $v$, with is contradictory to the definition of $P$, so this case can never happen, only Case 1 or Case 2 are possible.
 
 \end{document}
 

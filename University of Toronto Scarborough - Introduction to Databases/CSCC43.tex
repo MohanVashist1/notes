@@ -48,7 +48,7 @@
 \author{Joshua Concon}
 \maketitle
 Pre-reqs are CSCB63 and STAB52.
-Instructor is Dr. Marzieh Ahmadzadeh. Check RateMyProf. If you find any problems in these notes, feel free to contact me at conconjoshua@gmail.com.
+Instructor is Dr. Marzieh Ahmadzadeh. Check RateMyProf. If you find any problems in these notes, feel free to contact me at conconjoshua@gmail.com. I own nothing, all copyrighted works belong to their respective owners (University of Toronto and Pearson Education).
 
 \tableofcontents
 
@@ -195,6 +195,122 @@ The main concept of the relational data model is a relation, which is based off 
 \paragraph{Implementation} Actual Implementation of the database
 
 \newpage
+
+\section{Thursday, September 14, 2017}
+
+\subsection{Relational Data Model}
+
+A relational data model has 3 components, one of which is an \textbf{Entity}, which contains the Entity itself: which is a concept that we maintain data about, an \textbf{Entity Type}: which corresponds to a table and what the information in the table refers to, and an \textbf{Entity Instance}, which is an instance of an entity, such as (100, Jane, 3.5), which refers to a student named Jane with a Student ID of 100 and a cGPA of 3.5.\\
+
+The notation for the entities is as follows (It's mostly just a rectangle tbh):\\
+\\
+\includegraphics[scale=0.5]{lec2-1}
+
+
+Another one of the 3 components is a \textbf{Relationship}, which contains a \textbf{Relationship Instance}: which is an association between entity instances itself, such as a Student named Jane taking 3 courses (which is a 1:M relationship as 1 student can take many courses) and a \textbf{Relationship Type}: which was the type of relationship, such as (1:M) as described in the previous example.\\
+\\
+The notation for relationship types is as follows:\\
+\\
+\includegraphics[scale=0.5]{lec2-2}
+
+The last of the 3 components are \textbf{attributes}, which are properties or characteristics of an entity, which often corresponds to a field in a table. For example, for a student entity, an example attribute for this student entity would be "cgpa" or "student ID".
+
+\subsection{Database Analysis}
+
+Before the database can be created, you must first gather user requirements for the data, what exactly we need this data to do and what kind of constraints we need. We'll need to know the entities we would have to make for the database and what relationships these entities have with each other.\\
+\\
+Afterwards, we must develop a data model, more specifically, an Entity Relationship (ER) model.
+
+\subsection{Business Rules}
+
+Business Rules are statements that define or constrain some aspect of the business. For Example: "at UofT, a student must take at least one course in each semester." These statements are usually derived from policies, procedures, events, and functions, for example: "at UofT, a student should have passed the prerequisites to be able to take a course." These constraints and definitions must also be familiar to the end users and must be automatically enforced by the Database Management Software.\\
+\\
+We gather these business rules by speaking to people involved in the business that this database is being created for and by investigating business documents.
+
+\subsubsection{Cardinality Constraints}
+
+\textbf{Cardinality Constraints} are rules that specifies the number of instances of one entity that can be associated with each instance of another entity. Examples include:
+\begin{itemize}
+	\item{"Each student at UofT can take \underline{at most 5} courses each semester"}
+	\item{"Each person can have \underline{at most 1} family doctor"}
+	\item{"A movie can be screened \underline{at most 6} times a day"}
+\end{itemize}
+
+\textbf{Minimum Cardinality} is the minimum number of instances of one entity that can be related to the other instance.\\
+\\
+\textbf{Maximum Cardinality} is the maximum number of instances of one entity that may be related to each instance of another entity.\\
+\\
+The notation for these cardinality constraints are as such:\\
+\\
+\includegraphics[scale=0.5]{lec2-3}
+
+\subsection{Entity Relationship (ER) Model}
+
+After business rules have been collected, from these rules, relationships between entities can be modelled, and for this, we will use the Entity Relationship Model. This model is a logical representation of the data for an organization, the entities are to represent the data, and the relationships are to show the associations between entities.
+
+\subsubsection{Entity}
+
+An entity is the building block of the Entity Relationship Model, such examples include:
+\begin{itemize}
+	\item{Person: \textit{employee, student, patient}}
+	\item{Place: \textit{store, warehouse, state, drugstore}}
+	\item{Object: \textit{machine, building, automobile}}
+\end{itemize}
+
+An entity is supposed to have a noun name and is meant to be general.\\
+\\
+Each entity usually consists of several \textbf{attributes.}\\
+\\
+An entity should be an object that will have many instances in the database, and object that will be composed of multiple attributes, and/or an object that we are trying to model. However, it should also not be a user of the database system or an output of the database system.
+
+\subsubsection{The Weak shall fear the Strong}
+
+There are two different types of Entities, \textbf{Strong} and \textbf{Weak} entities.\\
+\\
+\underline{Strong entities} exist independently of other types of entities and have their own unique identifier (e.g students, employee, course, surgeon, independent black woman who need no man).\\
+\\
+\underline{Weak entities} depend on a strong entity, which may or may not be their identifying owner, and cannot exist on it's own. They also do not have a unique identifier, only a partial identifier, and the entity box and partial identifier have double lines.\\
+\\
+The following is an example of a weak entity:\\
+\\
+\includegraphics[scale=0.5]{lec2-4}
+
+\subsubsection{Attributes}
+
+Each entity type has a set of \textbf{attributes} associated with it, and by default, the name of an attribute starts with a capital.\\s
+\\
+An attribute has different types, including: required, optional, simple, composite, single values, multivalued, stored, derived, and identifier.
+\paragraph{Required Attributes} Required Attributes should have a value. Must be boldfaced or represented by a special character in E-R Diagrams.
+
+\paragraph{Optional Attributes} Optional Attributes can be null. May be represented by an 'o' in E-R Diagrams.
+
+\paragraph{Composite Attributes} An attribute that has meaningful component parts. For example: an address can be broken down to city, street, etc. It is up to the user as how to define these attributes. If you might use only part of an attribute, you might want to separate it as its own attribute.
+
+\paragraph{Simple Attributes} An attribute that cannot be broken down into smaller components, such as a StudentID.
+
+\paragraph{Multivalued Attributes} An attribute that can have more that one value. For example, skill can be 'programmer', 'analyst', etc. This type of attribute is represented with curly braces {} in ER diagrams.
+
+\paragraph{Single Valued Attributes} An attribute that can only have one value, such as an attribute that can only be a boolean (True or False).
+
+\paragraph{Derived Attributes} An attribute that is derived from other stored attributes. For example, years employed can be derived from today's date minus date employed. This type of attribute is represented with square brackets [] in ER diagrams.
+
+\paragraph{Stored Attributes} An attribute that is not derived from other stored attributes, and is just stored.
+
+\paragraph{Identifier Attributes} An attribute whose value distinguishes instances of an entity type, so no two instances are referred to by one identifier, such as an EmployeeID for example.
+
+\paragraph{Composite Identifier} An identifier that consists of a composite attribute.
+
+For naming these attributes, it should be a unique singular noun or noun phrase such as 'Customer ID' or 'Product Minimum Price'. The name should also follow a standard for uniqueness, such as [Entity type name { [ Qualifier ] }] Class, where the Qualifier is a phrase to constrain the class, and the Class is the properties of the entities. An example of an attribute under this template is 'Customer hourly wage'. Similar attributes of different entity types should use the same qualifiers and classes, such as 'Faculty Residence City' and 'Student Residence City'.
+
+\subsubsection{Criteria for Identifiers}
+
+Identifiers must be values that will never be null and will not change in value. It is ideal to substitute new, simple keys for long, composite keys if possible.
+
+\subsubsection{Modelling Relationships}
+
+A relationship in E-R diagrams are modelled by verbs and is represented by a line labelled with the name of the relationship.
+
+\paragraph{Degree of Relationships} The degree of a relationship is the number of entity types  that participate in it, so for example, a \textbf{Unary} relationship would refer to one entity related to another of the same type, a \textbf{Binary} relationship would refer to two different entities, a \textbf{Ternary} relationship would refer to three different entity types.
 
 \end{document}
 

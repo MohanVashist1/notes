@@ -2,3 +2,9 @@
 \contentsline {section}{\numberline {1}Tuesday, September 5, 2017}{2}{section.1}
 \contentsline {subsection}{\numberline {1.1}The Seven Bridges of Konigsberg}{2}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}(Outline) Solution to Konigsberg}{4}{subsection.1.2}
+\contentsline {section}{\numberline {2}Friday, September 8, 2017}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Graphs}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Graph Theory Applications}{6}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Uber}{6}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Monge's Theorem (on matching)}{6}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Marriage (Stable) Problem}{7}{subsubsection.2.2.3}

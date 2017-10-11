@@ -89,6 +89,69 @@ Consider a vertex that isn't the first or last vertex travelled in the path (i.e
 There must be an even number of edges for each of the nodes in between the edges in the path (excluding the first and the last node visited, unless the first and the last node visited are the same node).\\
 \\
 Since there are an odd number of adjacent nodes for all 4 nodes, this path does not exist. Therefore, there is no solution to Konigsberg.
+
+\newpage
+
+\section{Friday, September 8, 2017}
+
+\subsection{Graphs}
+
+\begin{tcolorbox}[title=Definition: Graphs]
+	A graph $G$ consists of 2 (finite) sets:
+	\begin{itemize}
+		\item{$V(G)$ : vertex set}
+		\item{$E(G)$ : edge set}
+	\end{itemize}
+
+	Together with an assignment from $E(G)$ to the set of subsets $V(G)$, where the subset is of size 1 or 2, containing the node(s) at the ends of the endpoints of each edge.
+\end{tcolorbox}
+
+If an edge has the same node at both of it's endpoints, it is called a \textbf{loop}.\\
+\\
+If 2 vertices are endpoints of more than one edge, we say that they are \textbf{multiply-edged}.\\
+\\
+A graph without multiply-edged vertices is called \textbf{simple}.\\
+\\
+\underline{Example:}
+
+\includegraphics[scale=0.125]{lec2-1}
+
+$$E(G) = \{ e_1, ... , e_7 \}$$
+$$V(G) = \{ N_1, ... , N_4 \}$$
+
+some of the assignments of $E(G) \mapsto V(G)$ include:
+$$e_5 \mapsto \{ N_1, N_4 \}$$
+
+\textbf{Adjacent edges} are edges with a vertex that is a common endpoint.
+
+\subsection{Graph Theory Applications}
+
+\subsubsection{Uber}
+
+$$V = \text{People Using Uber (both drivers and passengers)}$$
+$$E = \text{If it is realistic for a driver to pick up a person}$$
+
+\includegraphics[scale=0.125]{lec2-2}
+
+\begin{tcolorbox}[title=Definition: Matching]
+	A \textbf{matching} in a group is a set of edges, none of which are adjacent
+\end{tcolorbox}
+
+\underline{Note:} $V(G) = S_1 \sqcup S_2$ and there are no edges between of $S_1$ with respect to $S_2$ ($\sqcup$ : refers to a union between two disjoint sets).\\
+\\
+These two sets $S_1, S_2$ are independent sets\\
+\\
+A \textbf{bipartite} graph has $V(G) = S_1 \sqcup S_2$ where both $S_1, S_2$ are independent.
+
+\subsubsection{Monge's Theorem (on matching)}
+
+Split a deck of 52 cards into 13 piles of 4, is it always possible to count an ace,2,3,...., Jack, Queen, King using 1 card drawn from each pile?
+
+\subsubsection{Marriage (Stable) Problem}
+
+Matching $n$ men with $n$ women
+
+
 \end{document}
 
 

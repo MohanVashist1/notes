@@ -312,6 +312,82 @@ A relationship in E-R diagrams are modelled by verbs and is represented by a lin
 
 \paragraph{Degree of Relationships} The degree of a relationship is the number of entity types  that participate in it, so for example, a \textbf{Unary} relationship would refer to one entity related to another of the same type, a \textbf{Binary} relationship would refer to two different entities, a \textbf{Ternary} relationship would refer to three different entity types.
 
+\section{Thursday, September 21, 2017}
+
+\subsection{Associative Entity}
+
+When you have a many to many relationship, and that relationship requires to have attributes assigned to it, you can create an associative entity.\\
+\\
+\underline{Example:}\\
+\includegraphics[scale=0.5]{lec3-1}
+
+To denote an associative entity, you use a rounded box for the attributes, you define an identifier, and for a Many to Many relationship between entities $A$ and $B$, define the associative entity as $C$ and relate the entities as such $A:C$, as one to many and $B:C$ as one to many as well.\\
+\\
+\begin{tcolorbox}
+	Note that Many to Many relationships cannot be implemented using a relational database.
+\end{tcolorbox}
+
+\subsection{Multiple Relationships}
+
+It is possible that one entity can participate in more than one relationship. The relationship could be in any degree or cardinality (Mandatory or optional, any combination of 1 or many to 1 or many).\\
+\\
+\underline{Example:}\\
+In $X$ Company, Sue manages 2 departments (finances and sale) in which 10 and 5 people work respectively. Mike manages human resource department in which 3 people are working. He is also responsible for managing project $A$ in this organization.\\
+\\
+The ER diagram looks like the following:\\
+\includegraphics[scale=0.5]{lec3-2}
+
+\subsection{Representing Multivalued Attribute}
+
+It's generally not a good idea to have a multivalued attribute, as it can be represented as an attribute or an entity, and if it is represented by an entity, identifiers are needed for that entity. As an entity, it will result in a one to many relationship.
+
+\subsection{Time -- Dependent Data}
+
+Some data change their value over time and you may need to keep the history of this change. We would need to keep track of \textbf{Time stamps}, time values that is associated with a data value, often indicating when some event occurred that affected the data value.
+
+\subsection{Enhanced ER diagram (EER)}
+
+The ER model has been suitable for modelling most common business problems, but as business relationships get more complex, business data get more complex as well, so we would need a more complex tool to represent our model, such as an EER.\\
+\\
+An EER model is a model that has resulted from extending the original Entity Relationship model with new modelling constructs. The most important modelling construct incorporated in the EER model is the supertype/subtype relationships. The ideas of supertypes, subtypes and inheritance are the same parent-child concepts in object oriented software design. The only difference is that in object oriented programming, there is also the concept of behaviour, but in EER, the entities only inherit attributes.
+
+\subsubsection{Attribute Inheritance}
+
+Subtype entities inherit values of all attributes of the supertype, and an instance of a subtype is also an instance of a supertype.\\
+\\
+\underline{Examples:}\\
+\includegraphics[scale=0.5]{lec3-3}\\
+\\
+and notation is as follows:\\
+\includegraphics[scale=0.5]{lec3-4}
+
+\subsection{Relationships}
+
+Relationships at the supertype level indicate that all subtypes will participate in the relationship. The instances of a subtype may participate in a relationship unique to that subtype. In this situation, the relationship is shown at the subtype level.\\
+\\
+\underline{Example of Supertype/subtype relationships in a hospital:}\\
+\includegraphics[scale=0.5]{lec3-5}
+
+\subsection{Constraints in Relationship}
+
+\textbf{Completeness Constraints} is whether an instance of a supertype must also be a member of at least one subtype. If yes, then this is a \textbf{total specialization rule} that is denoted by a double line, examples of total specialization include animal types being a specific species, paper publication types, etc. If no, then this is a \textbf{partial specialization rule}, and is denoted by a single line.\\
+\\
+\textbf{Disjointness Constraints} is whether an instance of a supertype may simultaneously be a member of two (or more) subtypes. If no (that an instance of the supertype can be only one of the subtypes at a time), then it is called the \textbf{Disjoint Rule} and is represented by a $d$, If yes (that an instance of the supertype could be more than one of the subtypes), then it is called the \textbf{Overlap Rule} and is represented by an $o$.\\
+\\
+\underline{Examples:}\\
+\includegraphics[scale=0.5]{lec3-6}\\
+\\
+\includegraphics[scale=0.5]{lec3-7}
+
+\subsection{Subtype Discriminator}
+
+An attribute of the subtype whose values determine the target subtype. These subtypes are known as disjoint subtypes.\\
+\\
+\underline{Example of notation:}\\
+\includegraphics[scale=0.5]{lec3-8}\\
+
+Overlapping also exists for subtype discriminators, it refers to a composite attribute whos subparts pertain to different subtypes. Each subpart contains a boolean value to indicate whether or not the instance belongs to the associated subtype.
+
 \end{document}
 
 

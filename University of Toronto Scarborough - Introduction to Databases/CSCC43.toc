@@ -61,3 +61,13 @@
 \contentsline {subsubsection}{\numberline {2.4.4}Criteria for Identifiers}{15}{subsubsection.2.4.4}
 \contentsline {subsubsection}{\numberline {2.4.5}Modelling Relationships}{15}{subsubsection.2.4.5}
 \contentsline {paragraph}{Degree of Relationships}{16}{section*.43}
+\contentsline {section}{\numberline {3}Thursday, September 21, 2017}{16}{section.3}
+\contentsline {subsection}{\numberline {3.1}Associative Entity}{16}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Multiple Relationships}{16}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Representing Multivalued Attribute}{17}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Time -- Dependent Data}{17}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Enhanced ER diagram (EER)}{17}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Attribute Inheritance}{18}{subsubsection.3.5.1}
+\contentsline {subsection}{\numberline {3.6}Relationships}{19}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Constraints in Relationship}{20}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.8}Subtype Discriminator}{21}{subsection.3.8}

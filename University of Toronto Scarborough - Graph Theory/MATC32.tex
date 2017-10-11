@@ -151,6 +151,61 @@ Split a deck of 52 cards into 13 piles of 4, is it always possible to count an a
 
 Matching $n$ men with $n$ women
 
+\subsubsection{Scheduling (Graph Colouring)}
+
+Let $V$ represent different courses, and edges between courses mean that a student can take both courses at the same time. The problem is to reduce the edges between vertices with the same label or colour.\\
+\\
+$X(G)$ is the chromatic number of a graph $G$ and is the minimum number of colours needed to colour a graph without the edges having endpoints with two vertices of the same colour. To distribute these colours, there is a mapping from $V(G) \mapsto C$ where $C$ is a set of colours.\\
+\\
+\underline{Statement:} In a room of people, we can always be certain that 3 people either know each other or are all strangers for a room of 6+ people. So if we represent the people in the room as vertices in a non simple graph, and edge connections between people as the two unique people at the endpoints refer to familiarity or unfamiliarity, then you can always form a triangle with the edges.\\
+\\
+This is the proof of $R(3,3)=6$ for Ramsey's Theorem.\\
+\\
+\begin{tcolorbox}[title=Definition: Complete Graph]
+	A Complete Graph is a simple graph where any 2 vertices are adjacent.
+\end{tcolorbox}
+
+A \textbf{clique} is a subset of vertices $C$ such that all vertices are adjacent.
+
+\begin{tcolorbox}[title=Theorem: Ramsey's theorem]
+	For a high enough number $R(n,m)$, we can guarantee that after colouring a complete graph of $m$ vertices with $2$ colours (in any way), there will be a clique of $n$ vertices of the same colour.
+\end{tcolorbox}
+
+\subsubsection{Network Problems}
+
+A path is a series of vertices $v_1, .., v_n$ where $v_i$ and $v_{i+1}$ are adjacent for all $i, 1 \leq i \leq n-1$.\\
+\\
+Say 2 vertices are \textbf{connected} if there exists a path between them.\\
+\\
+Cutting number of 2 vertices $m,n$ are the amount of vertices that need to be removed such that vertices $m,n$ are not connected.
+\\
+\\
+\underline{Example:}\\
+\includegraphics[scale=0.125]{lec2-3}
+
+\subsubsection{Uber (Pathfinding)}
+
+Pathfinding is a graph problem where $V$ represents all the intersections of a map and $E$ is all the roads. For a path $v_1, ... ,v_n$, the length is the number $m$, which is the sum of all the edge weights $\geq 0$, and for 2 connected vertices, we are trying to find the path of the least length. Dijsktra's Algorithm solves this problem.
+
+\subsection{Morphism}
+
+A morphism of graphs $G \mapsto G'$ consists of 2 functions:
+\begin{itemize}
+	\item{$\gamma_1 : V(G) \mapsto V(G')$}
+	\item{$\gamma_2 : E(G) \mapsto E(G')$}
+\end{itemize}
+
+$\forall e$, if $e \in E(G)$ has endpoints $v_1, v_2$, this implies that $\gamma_2 (e)$ has endpoints $\gamma_1 (v_1), \gamma_1 (v_2)$.\\
+\\
+\begin{tcolorbox}
+	Note: This definition is more general than the book.
+\end{tcolorbox}
+
+An isomorphism is a morphism such that $\gamma_1, \gamma_2$ are both bijective.
+\\
+\\
+\underline{Example of a morphism:} (Note that $\simeq$ denotes a morphism)\\
+\includegraphics[scale=0.125]{lec2-4}
 
 \end{document}
 

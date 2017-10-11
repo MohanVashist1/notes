@@ -8,3 +8,7 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Uber}{6}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}Monge's Theorem (on matching)}{6}{subsubsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.3}Marriage (Stable) Problem}{7}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Scheduling (Graph Colouring)}{7}{subsubsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.5}Network Problems}{8}{subsubsection.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.6}Uber (Pathfinding)}{8}{subsubsection.2.2.6}
+\contentsline {subsection}{\numberline {2.3}Morphism}{8}{subsection.2.3}

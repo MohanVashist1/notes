@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  10 OCT 2017 16:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  11 OCT 2017 15:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1120,7 +1120,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<imgs/Konigsberg_bridges.png, id=61, 303.1325pt x 238.8925pt>
+<imgs/Konigsberg_bridges.png, id=81, 303.1325pt x 238.8925pt>
 File: imgs/Konigsberg_bridges.png Graphic file (type png)
 
 <use imgs/Konigsberg_bridges.png>
@@ -1141,7 +1141,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--63
 
  []
 
-<imgs/Konigsberg_bridges_graph.png, id=62, 301.125pt x 352.31625pt>
+<imgs/Konigsberg_bridges_graph.png, id=82, 301.125pt x 352.31625pt>
 File: imgs/Konigsberg_bridges_graph.png Graphic file (type png)
 
 <use imgs/Konigsberg_bridges_graph.png>
@@ -1217,7 +1217,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--116
 
  []
 
-<imgs/lec2-1.jpg, id=84, 2346.7675pt x 1617.04124pt>
+<imgs/lec2-1.jpg, id=104, 2346.7675pt x 1617.04124pt>
 File: imgs/lec2-1.jpg Graphic file (type jpg)
  <use imgs/lec2-1.jpg>
 Package pdftex.def Info: imgs/lec2-1.jpg used on input line 117.
@@ -1229,7 +1229,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./imgs/lec2-1.jpg>] <imgs/lec2-2.jpg, id=90, 1998.46625pt x 798.985pt>
+[5 <./imgs/lec2-1.jpg>] <imgs/lec2-2.jpg, id=110, 1998.46625pt x 798.985pt>
 File: imgs/lec2-2.jpg Graphic file (type jpg)
 
 <use imgs/lec2-2.jpg>
@@ -1252,6 +1252,50 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [6 <./imgs/lec2-2.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 156--166
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--166
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--166
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--166
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--166
+
+ []
+
+<imgs/lec2-3.jpg, id=115, 2849.64626pt x 1048.91875pt>
+File: imgs/lec2-3.jpg Graphic file (type jpg)
+ <use imgs/lec2-3.jpg>
+Package pdftex.def Info: imgs/lec2-3.jpg used on input line 184.
+(pdftex.def)             Requested size: 356.20491pt x 131.11452pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--185
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--185
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--185
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1259,20 +1303,53 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
+Underfull \hbox (badness 10000) in paragraph at lines 198--202
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--202
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8 <./imgs/lec2-3.jpg>] <imgs/lec2-4.jpg, id=126, 1551.7975pt x 653.44125pt>
+File: imgs/lec2-4.jpg Graphic file (type jpg)
+
+<use imgs/lec2-4.jpg>
+Package pdftex.def Info: imgs/lec2-4.jpg used on input line 208.
+(pdftex.def)             Requested size: 193.97421pt x 81.67995pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--209
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9 <./imgs/lec2-4.jpg>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 210.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 210.
  (./MATC32.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 210.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 210.
 Package rerunfilecheck Info: File `MATC32.out' has not changed.
-(rerunfilecheck)             Checksum: 148BCB7A4F2971614141C4C716A27219;652.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
+(rerunfilecheck)             Checksum: 1A695D598358A0869648634EDCC68750;956.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 210.
  ) 
 Here is how much of TeX's memory you used:
- 19373 strings out of 493089
- 363213 string characters out of 6134842
- 426064 words of memory out of 5000000
- 22487 multiletter control sequences out of 15000+600000
+ 19396 strings out of 493089
+ 363624 string characters out of 6134842
+ 428064 words of memory out of 5000000
+ 22502 multiletter control sequences out of 15000+600000
  14438 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,73p,925b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1284,11 +1361,12 @@ sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on MATC32.pdf (7 pages, 839988 bytes).
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on MATC32.pdf (9 pages, 1321335 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 147 words of extra memory for PDF output out of 10000 (max. 10000000)
 

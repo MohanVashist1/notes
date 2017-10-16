@@ -71,3 +71,23 @@
 \contentsline {subsection}{\numberline {3.6}Relationships}{20}{subsection.3.6}
 \contentsline {subsection}{\numberline {3.7}Constraints in Relationship}{20}{subsection.3.7}
 \contentsline {subsection}{\numberline {3.8}Subtype Discriminator}{21}{subsection.3.8}
+\contentsline {section}{\numberline {4}Thursday, September 28, 2017}{23}{section.4}
+\contentsline {subsection}{\numberline {4.1}Database Design}{23}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Relational Data Model}{23}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Relations}{23}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Key Fields}{24}{subsubsection.4.2.2}
+\contentsline {paragraph}{Primary Key}{24}{section*.44}
+\contentsline {paragraph}{Composite Keys}{24}{section*.45}
+\contentsline {paragraph}{Foreign Key}{24}{section*.46}
+\contentsline {subsubsection}{\numberline {4.2.3}Databases}{24}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.4}Data Integrity}{25}{subsubsection.4.2.4}
+\contentsline {paragraph}{Domain Constraints}{25}{section*.47}
+\contentsline {paragraph}{Entity Integrity}{25}{section*.48}
+\contentsline {paragraph}{Referential Integrity}{26}{section*.49}
+\contentsline {subsection}{\numberline {4.3}Transforming EER Diagrams into Relations}{26}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Map Regular Entities}{26}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}Map Weak Entities}{27}{subsubsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.3}Mapping Binary Relationships}{27}{subsubsection.4.3.3}
+\contentsline {paragraph}{one to many}{27}{section*.50}
+\contentsline {paragraph}{many to many}{27}{section*.51}
+\contentsline {paragraph}{one to one}{27}{section*.52}

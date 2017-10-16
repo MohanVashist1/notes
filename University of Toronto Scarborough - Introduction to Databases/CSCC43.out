@@ -28,3 +28,14 @@
 \BOOKMARK [2][-]{subsection.3.6}{Relationships}{section.3}% 28
 \BOOKMARK [2][-]{subsection.3.7}{Constraints in Relationship}{section.3}% 29
 \BOOKMARK [2][-]{subsection.3.8}{Subtype Discriminator}{section.3}% 30
+\BOOKMARK [1][-]{section.4}{Thursday, September 28, 2017}{}% 31
+\BOOKMARK [2][-]{subsection.4.1}{Database Design}{section.4}% 32
+\BOOKMARK [2][-]{subsection.4.2}{Relational Data Model}{section.4}% 33
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Relations}{subsection.4.2}% 34
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Key Fields}{subsection.4.2}% 35
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Databases}{subsection.4.2}% 36
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Data Integrity}{subsection.4.2}% 37
+\BOOKMARK [2][-]{subsection.4.3}{Transforming EER Diagrams into Relations}{section.4}% 38
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Map Regular Entities}{subsection.4.3}% 39
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Map Weak Entities}{subsection.4.3}% 40
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Mapping Binary Relationships}{subsection.4.3}% 41

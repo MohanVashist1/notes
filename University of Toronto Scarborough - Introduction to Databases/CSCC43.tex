@@ -390,6 +390,102 @@ An attribute of the subtype whose values determine the target subtype. These sub
 
 Overlapping also exists for subtype discriminators, it refers to a composite attribute whos subparts pertain to different subtypes. Each subpart contains a boolean value to indicate whether or not the instance belongs to the associated subtype.
 
+\newpage
+
+\section{Thursday, September 28, 2017}
+
+\subsection{Database Design}
+
+\textbf{Database design} is the process of converting EER Models into a relational data model. There are two steps for database design, Logical database design and Physical database design.
+
+\subsection{Relational Data Model}
+
+The relational data model has 3 components, one being the \textbf{Data structure}, such as tables (relations), rows, and columns. Another component being \textbf{Data manipulation}, such as using SQL to retrieve and modify data, and the last being \textbf{Data integrity}, which include mechanisms to implement business rules to maintain integrity of manipulated data.
+
+\subsubsection{Relations}
+
+A relation is a named 2-dimensional table of data, which consists of a set of named columns (attributes / fields) and an arbitrary number of rows (records). An example of short-hand notation of a relation would be (note that the underlined attribute is the identifier attribute): 
+$$\text{EMPLOYEE1(\underline{EmpID}}, Name, DeptName, Salary)$$
+
+\underline{Tables as Relations}\\
+All relations are tables, but not all tables are relations. The requirements for a table to qualify as a relation are that the table must have a unique name, every attribute must be atomic (not multivalued nor composite), every row must be unique (so there cannot be two rows with the exact same values for all their fields), attributes in tables must have unique names, and the order of the columns and rows must be irrelevant.\\
+\\
+So in correspondence with the entity-relationship model, Entity Types become Relations, Entity Instances become Rows, and Columns become Attributes.
+
+\begin{tcolorbox}
+	\underline{Note:} the word \textbf{relation} in relational database is not the same as the word \textbf{relationship} in the E-R model.
+\end{tcolorbox}
+
+\subsubsection{Key Fields}
+
+\paragraph{Primary Key} Primary keys are an attribute or combination of attributes that uniquely identifies each row in a relation. This (These) Primary key(s) must be the same as the identifier in the E-R model and must also be underlined for notation.
+
+\paragraph{Composite Keys} Composite keys are a primary key that consists of more than one attribute.
+
+\paragraph{Foreign Key} A foreign key is an identifier that enables a dependent relationship (on the many side of a relationship) to refer to its parent relation (on the side of the relationship). This foreign key is also no necessarily unique, is denoted by a dashed underlined, and represents a one to many relationship.
+
+\underline{Example:}\\
+\includegraphics[scale=0.5]{lec4-1}
+
+\subsubsection{Databases}
+
+A Database is a collection of any number of relations, also known as a schema.\\
+\\
+\underline{Example:}\\
+\includegraphics[scale=0.5]{lec4-2}
+
+\subsubsection{Data Integrity}
+
+Data Integrity is another component of a relational data model and more specifically, is the constraints or rules that assures the accuracy and integrity of data in the database. This component includes Domain Constraints, Entity Integrity, and Referential Integrity.
+
+\paragraph{Domain Constraints} A domain constraint is a constraint that states that all values that appear in a column must original from the same domain, including the domain name \slash  data type, size and allowable values or range.
+\\
+\underline{Example:}\\
+\includegraphics[scale=0.5]{lec4-3}
+
+\paragraph{Entity Integrity} Entity Integrity means that each entity must have a primary key and that the primary key must not be null or nothing.
+
+\paragraph{Referential Integrity} In a one to many relationship, any foreign key value (on the relation of the many side) must match a primary key value in the relation of the one side or the foreign key can be null
+\\
+\underline{Examples:}\\
+\\
+A patient may have many prescriptions assigned to them.
+$$\text{Patient(\underline{PatientID}}, Name, Address)$$
+$$\text{Patient(\underline{PerscriptionID}}, Name, \underline{PatientID})$$
+
+\subsection{Transforming EER Diagrams into Relations}
+
+Usually the job of transforming EER Diagrams into relations is usually done by the CASE tool, but it is still important to know the transformation process as the CASE tool cannot model complex data relations, such as Ternary and supertype \slash  subtype relations, there are sometimes legitimate alternatives where you will need to choose a particular solution, you must be able to perform quality check on the results obtained from the CASE tool.\\
+\\
+So for the transformation process, we must do the following:
+\begin{enumerate}
+	\item{Map Regular Entities}
+	\item{Map Weak Entities}
+	\item{Map Binary Relations}
+	\item{Map Associative Relations}
+	\item{Map Unary Relationships}
+	\item{Map Ternary (n-ary) Relationships}
+	\item{Map Supertype \slash  Subtype Relationships}
+\end{enumerate}
+
+\subsubsection{Map Regular Entities}
+
+For Regular Entities, Entity types with simple attributes are made as a basic Relation, with a Relation Name, Relation Attributes and a Relation Primary Key. Entity types with composite attributes have each part of the composite attribute as a Relation attribute, and Entity types with multivalued attributes must create another relation for each multivalued attribute that refers back to the original Relation as the parent.
+
+\subsubsection{Map Weak Entities}
+
+Weak Entities correspond to a normal Relation but with a Surrogate Primary Key and a Foreign Key.
+
+\subsubsection{Mapping Binary Relationships}
+
+\paragraph{one to many} For one to many binary relationships between entities, each element in the many relationship must also have a foreign key corresponding to the ID of the on element.
+
+\paragraph{many to many} For many to many binary relationships between entities, each matching between the two many entity types must have a certificate with two foreign keys in which one refers to one entity type and the other refers to the other entity type. This certificate composite primary key will be the foreign keys.
+
+\paragraph{one to one} For one to one relationships, we let the mandatory relation have a foreign key of the other relation. For mandatory one to one relationships, we can have both relations have foreign keys to the other relation.
+
+\newpage
+
 \end{document}
 
 

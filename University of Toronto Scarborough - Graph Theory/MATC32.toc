@@ -1,14 +1,20 @@
 \select@language {english}
-\contentsline {section}{\numberline {1}Tuesday, September 5, 2017}{2}{section.1}
-\contentsline {subsection}{\numberline {1.1}The Seven Bridges of Konigsberg}{2}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}(Outline) Solution to Konigsberg}{4}{subsection.1.2}
-\contentsline {section}{\numberline {2}Friday, September 8, 2017}{5}{section.2}
-\contentsline {subsection}{\numberline {2.1}Graphs}{5}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Graph Theory Applications}{6}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Uber}{6}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Monge's Theorem (on matching)}{6}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}Marriage (Stable) Problem}{7}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}Scheduling (Graph Colouring)}{7}{subsubsection.2.2.4}
-\contentsline {subsubsection}{\numberline {2.2.5}Network Problems}{8}{subsubsection.2.2.5}
-\contentsline {subsubsection}{\numberline {2.2.6}Uber (Pathfinding)}{8}{subsubsection.2.2.6}
-\contentsline {subsection}{\numberline {2.3}Morphism}{8}{subsection.2.3}
+\contentsline {section}{\numberline {1}Tuesday, September 5, 2017}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}The Seven Bridges of Konigsberg}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}(Outline) Solution to Konigsberg}{5}{subsection.1.2}
+\contentsline {section}{\numberline {2}Friday, September 8, 2017}{6}{section.2}
+\contentsline {subsection}{\numberline {2.1}Graphs}{6}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Graph Theory Applications}{7}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Uber}{7}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Monge's Theorem (on matching)}{7}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Marriage (Stable) Problem}{8}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Scheduling (Graph Colouring)}{8}{subsubsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.5}Network Problems}{9}{subsubsection.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.6}Uber (Pathfinding)}{9}{subsubsection.2.2.6}
+\contentsline {subsection}{\numberline {2.3}Morphism}{9}{subsection.2.3}
+\contentsline {section}{\numberline {3}Tuesday, September 12, 2017}{11}{section.3}
+\contentsline {subsection}{\numberline {3.1}More Morphism}{11}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Decomposing Graphs}{12}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Connectivity of $G$}{12}{subsubsection.3.2.1}
+\contentsline {paragraph}{Path}{12}{section*.2}
+\contentsline {paragraph}{Cycle}{12}{section*.3}

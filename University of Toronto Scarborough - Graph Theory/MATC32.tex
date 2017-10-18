@@ -9,6 +9,8 @@
 
 \usepackage{dsfont}
 
+\usepackage{mathtools}
+
 \usepackage{hyperref}
 
 \usepackage[utf8]{inputenc}
@@ -206,6 +208,74 @@ An isomorphism is a morphism such that $\gamma_1, \gamma_2$ are both bijective.
 \\
 \underline{Example of a morphism:} (Note that $\simeq$ denotes a morphism)\\
 \includegraphics[scale=0.125]{lec2-4}
+
+\newpage
+
+\section{Tuesday, September 12, 2017}
+
+\subsection{More Morphism}
+
+\begin{tcolorbox}[title=Observation 1]
+	if $G'$ is simple, there exists a morphism $G \mapsto G'$ and so $\gamma_1 : V(G) \mapsto V(G')$ such that if $e\in E(G)$ has endpoints $v_1, v_2$, then $\gamma_1 (v_1), \gamma_1 (v_2)$ are adjacent.
+\end{tcolorbox}
+
+A \textbf{subgraph} of $G$ is a subset $V' \subset V$, $E' \subset E$ such that $Id: (V', E') \mapsto G$ is a morphism.\\
+\\
+An \textbf{isomorphism} is when a morphism $G \mapsto G'$ is bijective (That there is a one to one relationship between $E \mapsto E'$ and $V \mapsto V'$)\\
+\\
+\underline{Exercise:} if $(\gamma_1, \gamma_2) : G \mapsto G'$ is an isomorphism, then $(\gamma_1^{-1}, \gamma_2^{-1}) : G' \mapsto G$\\
+\\
+\underline{Recall:} Bijective implies injective and surjective.
+
+\begin{tcolorbox}[title=Definition: Complement of Simple Graphs]
+	The complement of a simple graph $G$ is $\overset{\_\_\_}{G} = (\overset{\_\_\_}{V},\overset{\_\_\_}{E})$ where $V(\overset{\_\_\_}{G}) = V(G)$ and $\overset{\_\_\_}{E}$ does not have any edge in $E$, but if $v_1,v_2 \in V$ are not adjacent, then $v_1,v_2$ are adjacent in $\overset{\_\_\_}{G}$ for all $v_1,v_1 \in V$
+\end{tcolorbox}
+
+\underline{Example:}\\
+INSERT IMAGE HEREEEEEEEEEEEEE\\
+
+We say a graph is \textbf{self-complementary} if a graph is isomorphic to its complement.
+
+\subsection{Decomposing Graphs}
+
+\begin{tcolorbox}[title=Definition: Union of Graphs]
+	if $G_1, G_2$ are two graphs, assume $V(G_1), V(G_2) \subset V$ and $E(G_1), E(G_2) \subset E$. Then for a Graph $G_1 \cup G_2$
+	\begin{itemize}
+		\item{$V(G_1 \cup G_2) = V(G_1) \cup V(G_2)$}
+		\item{$E(G_1 \cup G_2) = E(G_1) \cup E(G_2)$}
+	\end{itemize}
+\end{tcolorbox}
+
+\underline{Example:}\\
+INSERT IMAGE HEREEEEEEEEEEEE\\
+
+We say $G$ \textbf{decomposes} into $G_1$ and $G_2$ if the following:
+\begin{itemize}
+	\item{$G_1 \cup G_2 = G$}
+	\item{if $\forall e \in E(G)$ there exists one $i$ such that $e\in E(G_i)$ (so if the edges between $G_1$ and $G_2$ don't overlap)}
+\end{itemize}
+
+\underline{Example:}\\
+INSERT IMAGE HEREEEEEEE\\
+This is $k_5$, the complete simple graph of 5 vertices (complete meaning all vertices are adjacent)\\
+\\
+\underline{Example:}\\
+INSERT IMAGE HEEERREEEEEEEEE\\
+This is the disjoint union of 2 graphs. $G_1 $ SQUARE UNION $ G_2$ is the union of 2 graphs with $V(G_1) \cap V(G_2) = \emptyset$
+
+\subsubsection{Connectivity of $G$}
+
+\paragraph{Path} A path is a simple subgraph such that we can order vertices $v_1, ... ,v_{n-1}$ in such a way that exactly $v_i, v_{i+1}$ are adjacent $\forall i$
+
+\paragraph{Cycle} A cycle is a subgraph that is simple and that we the vertices $v_1, ... ,v_{n}$, $v_1 = v_n$ such that exactly $v_i, v_{i+1}$ are adjacent $\forall i$ and that all edges are unique.\\
+\\
+
+\underline{Note:} the arrangement of vertices in a path is called a \textbf{walk}, the arrangement of vertices in a cycle is called a \textbf{trail}.\\
+\\
+we refer to an edge by $(u,v)$ where $u,v$ are the start and end vertices.
+
+\newpage
+
 
 \end{document}
 

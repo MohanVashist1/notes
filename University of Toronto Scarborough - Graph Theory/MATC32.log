@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  11 OCT 2017 15:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 OCT 2017 08:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -124,6 +124,39 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2015/05/11 v1.16 mathematical typesetting tools
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count100
+\calc@Bcount=\count101
+\calc@Adimen=\dimen114
+\calc@Bdimen=\dimen115
+\calc@Askip=\skip46
+\calc@Bskip=\skip47
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count102
+\calc@Cskip=\skip48
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count103
+\l_MT_multwidth_dim=\dimen116
+\origjot=\skip49
+\l_MT_shortvdotswithinadjustabove_dim=\dimen117
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen118
+\l_MT_above_intertext_sep=\dimen119
+\l_MT_below_intertext_sep=\dimen120
+\l_MT_above_shortintertext_sep=\dimen121
+\l_MT_below_shortintertext_sep=\dimen122
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
@@ -181,14 +214,14 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen114
-\Hy@linkcounter=\count100
-\Hy@pagecounter=\count101
+\@linkdim=\dimen123
+\Hy@linkcounter=\count104
+\Hy@pagecounter=\count105
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count102
+\Hy@SavedSpaceFactor=\count106
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -200,17 +233,17 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count103
+\c@Hy@tempcnt=\count107
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen115
-\Fld@menulength=\count104
-\Field@Width=\dimen116
-\Fld@charsize=\dimen117
+\XeTeXLinkMargin=\dimen124
+\Fld@menulength=\count108
+\Field@Width=\dimen125
+\Fld@charsize=\dimen126
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -220,24 +253,24 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count105
-\c@Item=\count106
-\c@Hfootnote=\count107
+\Hy@abspage=\count109
+\c@Item=\count110
+\c@Hfootnote=\count111
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count108
-\c@bookmark@seq@number=\count109
+\Fld@listcount=\count112
+\c@bookmark@seq@number=\count113
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip46
+\Hy@SectionHShift=\skip50
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
@@ -458,39 +491,6 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mathtools.sty
-Package: mathtools 2015/05/11 v1.16 mathematical typesetting tools
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count110
-\calc@Bcount=\count111
-\calc@Adimen=\dimen118
-\calc@Bdimen=\dimen119
-\calc@Askip=\skip47
-\calc@Bskip=\skip48
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count112
-\calc@Cskip=\skip49
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mhsetup.sty
-Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
-)
-LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count113
-\l_MT_multwidth_dim=\dimen120
-\origjot=\skip50
-\l_MT_shortvdotswithinadjustabove_dim=\dimen121
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen122
-\l_MT_above_intertext_sep=\dimen123
-\l_MT_below_intertext_sep=\dimen124
-\l_MT_above_shortintertext_sep=\dimen125
-\l_MT_below_shortintertext_sep=\dimen126
-)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
@@ -1017,43 +1017,43 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 36.
-
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 37.
-
-
-Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 38.
 
 
-Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 39.
+
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 40.
+
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 41.
 
 (./MATC32.aux)
 \openout1 = `MATC32.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 44.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    ... okay on input line 44.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1084,7 +1084,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box48
-Package hyperref Info: Link coloring OFF on input line 42.
+Package hyperref Info: Link coloring OFF on input line 44.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1094,21 +1094,21 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count143
 )
-LaTeX Info: Redefining \ref on input line 42.
-LaTeX Info: Redefining \pageref on input line 42.
-LaTeX Info: Redefining \nameref on input line 42.
+LaTeX Info: Redefining \ref on input line 44.
+LaTeX Info: Redefining \pageref on input line 44.
+LaTeX Info: Redefining \nameref on input line 44.
 
 (./MATC32.out) (./MATC32.out)
 \@outlinefile=\write6
 \openout6 = `MATC32.out'.
 
  ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 48.
+LaTeX Font Info:    Try loading font information for U+msa on input line 50.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 48.
+LaTeX Font Info:    Try loading font information for U+msb on input line 50.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1120,79 +1120,57 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<imgs/Konigsberg_bridges.png, id=81, 303.1325pt x 238.8925pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2] <imgs/Konigsberg_bridges.png, id=106, 303.1325pt x 238.8925pt>
 File: imgs/Konigsberg_bridges.png Graphic file (type png)
 
 <use imgs/Konigsberg_bridges.png>
-Package pdftex.def Info: imgs/Konigsberg_bridges.png used on input line 61.
+Package pdftex.def Info: imgs/Konigsberg_bridges.png used on input line 63.
 (pdftex.def)             Requested size: 303.13176pt x 238.8919pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--63
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--63
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--63
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
 
  []
 
-<imgs/Konigsberg_bridges_graph.png, id=82, 301.125pt x 352.31625pt>
+<imgs/Konigsberg_bridges_graph.png, id=107, 301.125pt x 352.31625pt>
 File: imgs/Konigsberg_bridges_graph.png Graphic file (type png)
 
 <use imgs/Konigsberg_bridges_graph.png>
 Package pdftex.def Info: imgs/Konigsberg_bridges_graph.png used on input line 6
-6.
+8.
 (pdftex.def)             Requested size: 301.12425pt x 352.31538pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--77
+Underfull \hbox (badness 10000) in paragraph at lines 66--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--77
+Underfull \hbox (badness 10000) in paragraph at lines 66--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--77
+Underfull \hbox (badness 10000) in paragraph at lines 66--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--77
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[2 <./imgs/Konigsberg_bridges.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[3 <./imgs/Konigsberg_bridges_graph.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 85--92
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--92
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--92
+Underfull \hbox (badness 10000) in paragraph at lines 66--79
 
  []
 
@@ -1202,25 +1180,53 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 109--116
+[3 <./imgs/Konigsberg_bridges.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4 <./imgs/Konigsberg_bridges_graph.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 87--94
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--116
+Underfull \hbox (badness 10000) in paragraph at lines 87--94
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--116
+Underfull \hbox (badness 10000) in paragraph at lines 87--94
 
  []
 
-<imgs/lec2-1.jpg, id=104, 2346.7675pt x 1617.04124pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 111--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--118
+
+ []
+
+<imgs/lec2-1.jpg, id=128, 2346.7675pt x 1617.04124pt>
 File: imgs/lec2-1.jpg Graphic file (type jpg)
  <use imgs/lec2-1.jpg>
-Package pdftex.def Info: imgs/lec2-1.jpg used on input line 117.
+Package pdftex.def Info: imgs/lec2-1.jpg used on input line 119.
 (pdftex.def)             Requested size: 293.34521pt x 202.12965pt.
 
 
@@ -1229,19 +1235,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./imgs/lec2-1.jpg>] <imgs/lec2-2.jpg, id=110, 1998.46625pt x 798.985pt>
+[6 <./imgs/lec2-1.jpg>] <imgs/lec2-2.jpg, id=134, 1998.46625pt x 798.985pt>
 File: imgs/lec2-2.jpg Graphic file (type jpg)
 
 <use imgs/lec2-2.jpg>
-Package pdftex.def Info: imgs/lec2-2.jpg used on input line 134.
+Package pdftex.def Info: imgs/lec2-2.jpg used on input line 136.
 (pdftex.def)             Requested size: 249.80766pt x 99.87288pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--145
+Underfull \hbox (badness 10000) in paragraph at lines 142--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--145
+Underfull \hbox (badness 10000) in paragraph at lines 142--147
 
  []
 
@@ -1251,64 +1257,48 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6 <./imgs/lec2-2.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 156--166
+[7 <./imgs/lec2-2.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 158--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--166
+Underfull \hbox (badness 10000) in paragraph at lines 158--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--166
+Underfull \hbox (badness 10000) in paragraph at lines 158--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--166
+Underfull \hbox (badness 10000) in paragraph at lines 158--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--166
+Underfull \hbox (badness 10000) in paragraph at lines 158--168
 
  []
 
-<imgs/lec2-3.jpg, id=115, 2849.64626pt x 1048.91875pt>
+<imgs/lec2-3.jpg, id=140, 2849.64626pt x 1048.91875pt>
 File: imgs/lec2-3.jpg Graphic file (type jpg)
  <use imgs/lec2-3.jpg>
-Package pdftex.def Info: imgs/lec2-3.jpg used on input line 184.
+Package pdftex.def Info: imgs/lec2-3.jpg used on input line 186.
 (pdftex.def)             Requested size: 356.20491pt x 131.11452pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--185
+Underfull \hbox (badness 10000) in paragraph at lines 178--187
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--185
+Underfull \hbox (badness 10000) in paragraph at lines 178--187
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--185
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 198--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--202
+Underfull \hbox (badness 10000) in paragraph at lines 178--187
 
  []
 
@@ -1318,14 +1308,30 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8 <./imgs/lec2-3.jpg>] <imgs/lec2-4.jpg, id=126, 1551.7975pt x 653.44125pt>
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 200--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--204
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9 <./imgs/lec2-3.jpg>] <imgs/lec2-4.jpg, id=150, 1551.7975pt x 653.44125pt>
 File: imgs/lec2-4.jpg Graphic file (type jpg)
 
 <use imgs/lec2-4.jpg>
-Package pdftex.def Info: imgs/lec2-4.jpg used on input line 208.
+Package pdftex.def Info: imgs/lec2-4.jpg used on input line 210.
 (pdftex.def)             Requested size: 193.97421pt x 81.67995pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--209
+Underfull \hbox (badness 10000) in paragraph at lines 206--211
 
  []
 
@@ -1335,21 +1341,107 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9 <./imgs/lec2-4.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 210.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 210.
+[10 <./imgs/lec2-4.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 222--229
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--229
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--229
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--236
+
+ []
+
+
+Underfull \hbox (badness 3503) in paragraph at lines 242--243
+[]\OT1/cmr/m/n/12 if $\OML/cmm/m/it/12 G[]; G[]$ \OT1/cmr/m/n/12 are two graphs
+, as-sume $\OML/cmm/m/it/12 V\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G[]\OT1/cmr/m/n/
+12 )\OML/cmm/m/it/12 ; V\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G[]\OT1/cmr/m/n/12 ) 
+\OMS/cmsy/m/n/12 ^^Z \OML/cmm/m/it/12 V$ \OT1/cmr/m/n/12 and
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 249--251
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--265
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 266.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 266.
+
+
+Overfull \hbox (0.5167pt too wide) in paragraph at lines 268--269
+ []\OT1/cmr/bx/n/12 Path[] \OT1/cmr/m/n/12 A path is a sim-ple sub-graph such t
+hat we can or-der ver-tices $\OML/cmm/m/it/12 v[]; :::; v[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--276
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 280.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 280.
  (./MATC32.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 210.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 210.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 280.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 280.
 Package rerunfilecheck Info: File `MATC32.out' has not changed.
-(rerunfilecheck)             Checksum: 1A695D598358A0869648634EDCC68750;956.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 210.
+(rerunfilecheck)             Checksum: 3BD64A1AC9B596D25E2409F8563450EA;1227.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 280.
  ) 
 Here is how much of TeX's memory you used:
- 19396 strings out of 493089
- 363624 string characters out of 6134842
- 428064 words of memory out of 5000000
- 22502 multiletter control sequences out of 15000+600000
+ 19414 strings out of 493089
+ 363881 string characters out of 6134842
+ 429115 words of memory out of 5000000
+ 22510 multiletter control sequences out of 15000+600000
  14438 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,73p,925b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1363,10 +1455,10 @@ ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on MATC32.pdf (9 pages, 1321335 bytes).
+Output written on MATC32.pdf (13 pages, 1330229 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 141 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 147 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 211 PDF objects out of 1000 (max. 8388607)
+ 177 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 179 words of extra memory for PDF output out of 10000 (max. 10000000)
 

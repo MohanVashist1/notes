@@ -39,3 +39,12 @@
 \BOOKMARK [3][-]{subsubsection.4.3.1}{Map Regular Entities}{subsection.4.3}% 39
 \BOOKMARK [3][-]{subsubsection.4.3.2}{Map Weak Entities}{subsection.4.3}% 40
 \BOOKMARK [3][-]{subsubsection.4.3.3}{Mapping Binary Relationships}{subsection.4.3}% 41
+\BOOKMARK [1][-]{section.5}{Thursday, October 5, 2017}{}% 42
+\BOOKMARK [2][-]{subsection.5.1}{Mapping EER into Relations}{section.5}% 43
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Mapping Associate Entities}{subsection.5.1}% 44
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Mapping Unary Relationships}{subsection.5.1}% 45
+\BOOKMARK [3][-]{subsubsection.5.1.3}{Mapping Ternary \(and n-ary\) Relationships}{subsection.5.1}% 46
+\BOOKMARK [3][-]{subsubsection.5.1.4}{Mapping Supertype /Subtype Relationship}{subsection.5.1}% 47
+\BOOKMARK [2][-]{subsection.5.2}{Normalization}{section.5}% 48
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Properties of Well-Structured Relations}{subsection.5.2}% 49
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Steps in Normalization}{subsection.5.2}% 50

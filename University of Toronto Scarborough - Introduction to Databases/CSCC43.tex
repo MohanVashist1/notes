@@ -486,7 +486,78 @@ Weak Entities correspond to a normal Relation but with a Surrogate Primary Key a
 
 \newpage
 
+\section{Thursday, October 5, 2017}
+
+\subsection{Mapping EER into Relations}
+
+\subsubsection{Mapping Associate Entities}
+
+If the identifier is not assigned, associate entities become a relation with foreign keys to its respective parent relations as well as a composite primary key formed from the two foreign keys previously mentioned.\\
+\\
+If the identifier is assigned, do as before, but the Primary key differs from the foreign keys.
+
+\subsubsection{Mapping Unary Relationships}
+
+For one to one or one to many relationships, the entity is turned into a relation that has a recursive foreign key (the foreign key refers to the primary key of the relation of the same type).\\
+\\
+For many to many relationships, attributes that come with these relationships are put in a separate component relation with those attributes as well as the two foreign keys for the two sides of the relationship as its composite keys.
+
+\subsubsection{Mapping Ternary (and n-ary) Relationships}
+
+When mapping ternary (and n-ary) relationships, it is simply adding a foreign key in the relation that corresponds to the entity with an optional existence.\\
+\\
+\underline{Example:}\\
+\includegraphics[scale=0.5]{lec5-1}
+
+\subsubsection{Mapping Supertype \slash  Subtype Relationship}
+
+To map these types of relationships, we implement one to one relationships between the subtype and the supertype. So the relations of the subtype must include supertype attributes, a subtype primary key, and a subtype discriminator. The supertype must essentially be a primary table.\\
+\\
+\underline{Example:}\\
+\includegraphics[scale=0.7]{lec5-2}\\
+\includegraphics[scale=0.6]{lec5-3}
+
+If the constraint in supertype \slash  subtype followed the overlap rule, we can let the discriminator take on multiple values (for each subtype to have attributes for each discriminator type taking on a boolean stating if that relation is that type of discriminator or not). This can also accommodate the completeness constraint, if it was partial rather than total.
+
+\subsection{Normalization}
+
+There is no guarantee that transforming EER diagrams to relations will remove all the anomalies. \textbf{Normalization} is the process of decomposing relations with anomalies to produce smaller well-structured relations.
+\subsubsection{Properties of Well-Structured Relations}
+\begin{itemize}
+	\item{\textbf{No Data Redundancy}}
+	\item{\textbf{No Insertion Anomalies}, which refers to adding new rows to a Table, adding new rows should not force the user to insert some irrelevant data}
+	\item{\textbf{No Deletion Anomalies}, which refers to deleting rows and that deleting rows should not cause a loss of data that could be needed for other future rows}
+	\item{\textbf{No Modification Anomaly}, which refers to changing data in a row should not force changes to other rows because of duplications}
+\end{itemize}
+
+\subsubsection{Steps in Normalization}
+
+\paragraph{First Normal Form (1NF)} The First Normal Form is not allowed to have multivalued attributes, and every attribute value must be atomic. All relations are in the 1st Normal Form, but this does not prevent anomalies from existing.
+
+\paragraph{Functional Dependency} Functional Dependency is when the value of one attribute (the \textbf{determinant}) determines the value of another attribute. Examples include: \textit{CustomerID} being a determinant because it determines the value of the \textit{CustomerName}. Functional Dependency is represented by an arrow, i.e. $A \rightarrow B$
+
+\paragraph{Candidate Keys} A candidate key is a unique identifier, could be an attribute or a combination of attributes that uniquely identifies a row in a relation. One of the candidate keys will become the primary key. Candidate keys are also non-redundant, no attribute in the key can be deleted without destroying the property of unique identification. Note that each non-key field is functionally dependent on every candidate key.\\
+\\
+Examples include:\\
+\includegraphics[scale=0.8]{lec5-4}\\
+\includegraphics[scale=0.5]{lec5-5}
+
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

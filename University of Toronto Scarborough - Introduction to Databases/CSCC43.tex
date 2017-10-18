@@ -453,6 +453,12 @@ A patient may have many prescriptions assigned to them.
 $$\text{Patient(\underline{PatientID}}, Name, Address)$$
 $$\text{Patient(\underline{PerscriptionID}}, Name, \underline{PatientID})$$
 
+\paragraph{Restrict Delete} When deleting an entity, entities that have other entities referring to them cannot be deleted. Only entities that are not referred to by other entities can be deleted.
+
+\paragraph{Cascade Delete Rule} When deleting an entity, if an entity is referred to by other entities, those other entities will be deleted as well.
+
+\paragraph{Set-to-Null Delete Rule} When deleting an entity, entities that referred to that entity before will now be referring to None.
+
 \subsection{Transforming EER Diagrams into Relations}
 
 Usually the job of transforming EER Diagrams into relations is usually done by the CASE tool, but it is still important to know the transformation process as the CASE tool cannot model complex data relations, such as Ternary and supertype \slash  subtype relations, there are sometimes legitimate alternatives where you will need to choose a particular solution, you must be able to perform quality check on the results obtained from the CASE tool.\\

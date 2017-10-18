@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 OCT 2017 15:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 OCT 2017 17:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1605,7 +1605,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [25 <./imgs/lec4-2.png> <./imgs/lec4-3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 458--461
+Underfull \hbox (badness 10000) in paragraph at lines 464--467
 
  []
 
@@ -1623,22 +1623,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 495--498
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 501--504
 
  []
 
-<imgs/lec5-1.png, id=477, 724.7075pt x 415.5525pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 507--510
+
+ []
+
+<imgs/lec5-1.png, id=480, 724.7075pt x 415.5525pt>
 File: imgs/lec5-1.png Graphic file (type png)
  <use imgs/lec5-1.png>
-Package pdftex.def Info: imgs/lec5-1.png used on input line 510.
+Package pdftex.def Info: imgs/lec5-1.png used on input line 516.
 (pdftex.def)             Requested size: 362.35286pt x 207.77574pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--511
+Underfull \hbox (badness 10000) in paragraph at lines 513--517
 
  []
 
@@ -1648,30 +1648,30 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28] <imgs/lec5-2.png, id=482, 563.10374pt x 364.36125pt>
+[28] <imgs/lec5-2.png, id=485, 563.10374pt x 364.36125pt>
 File: imgs/lec5-2.png Graphic file (type png)
 
 <use imgs/lec5-2.png>
-Package pdftex.def Info: imgs/lec5-2.png used on input line 517.
+Package pdftex.def Info: imgs/lec5-2.png used on input line 523.
 (pdftex.def)             Requested size: 394.16994pt x 255.05113pt.
- <imgs/lec5-3.png, id=483, 656.4525pt x 255.95625pt>
+ <imgs/lec5-3.png, id=486, 656.4525pt x 255.95625pt>
 File: imgs/lec5-3.png Graphic file (type png)
 
 <use imgs/lec5-3.png>
-Package pdftex.def Info: imgs/lec5-3.png used on input line 518.
+Package pdftex.def Info: imgs/lec5-3.png used on input line 524.
 (pdftex.def)             Requested size: 393.87454pt x 153.57492pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 514--519
+Underfull \hbox (badness 10000) in paragraph at lines 520--525
 
  []
 
 
-Overfull \hbox (4.16994pt too wide) in paragraph at lines 514--519
+Overfull \hbox (4.16994pt too wide) in paragraph at lines 520--525
 [] 
  []
 
 
-Overfull \hbox (3.87454pt too wide) in paragraph at lines 514--519
+Overfull \hbox (3.87454pt too wide) in paragraph at lines 520--525
 [] 
  []
 
@@ -1689,29 +1689,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [30 <./imgs/lec5-2.png> <./imgs/lec5-3.png>]
-<imgs/lec5-4.png, id=495, 489.83pt x 169.63374pt>
+<imgs/lec5-4.png, id=498, 489.83pt x 169.63374pt>
 File: imgs/lec5-4.png Graphic file (type png)
  <use imgs/lec5-4.png>
-Package pdftex.def Info: imgs/lec5-4.png used on input line 542.
+Package pdftex.def Info: imgs/lec5-4.png used on input line 548.
 (pdftex.def)             Requested size: 391.86452pt x 135.70717pt.
 
-<imgs/lec5-5.png, id=496, 685.56125pt x 165.61874pt>
+<imgs/lec5-5.png, id=499, 685.56125pt x 165.61874pt>
 File: imgs/lec5-5.png Graphic file (type png)
  <use imgs/lec5-5.png>
-Package pdftex.def Info: imgs/lec5-5.png used on input line 543.
-(pdftex.def)             Requested size: 411.33992pt x 99.37201pt.
+Package pdftex.def Info: imgs/lec5-5.png used on input line 549.
+(pdftex.def)             Requested size: 342.77979pt x 82.80916pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 539--544
+Underfull \hbox (badness 10000) in paragraph at lines 545--550
 
  []
 
 
-Overfull \hbox (1.86452pt too wide) in paragraph at lines 539--544
-[] 
- []
-
-
-Overfull \hbox (21.33992pt too wide) in paragraph at lines 539--544
+Overfull \hbox (1.86452pt too wide) in paragraph at lines 545--550
 [] 
  []
 
@@ -1729,18 +1724,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [32 <./imgs/lec5-4.png> <./imgs/lec5-5.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 545.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 545.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 551.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 551.
  (./CSCC43.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 545.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 545.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 551.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 551.
 Package rerunfilecheck Info: File `CSCC43.out' has not changed.
 (rerunfilecheck)             Checksum: 12D22BED916EFADD87BB272823F656EE;3766.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 545.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 551.
  ) 
 Here is how much of TeX's memory you used:
- 19644 strings out of 493089
- 367050 string characters out of 6134842
+ 19647 strings out of 493089
+ 367083 string characters out of 6134842
  430124 words of memory out of 5000000
  22610 multiletter control sequences out of 15000+600000
  15713 words of font info for 60 fonts, out of 8000000 for 9000
@@ -1754,10 +1749,10 @@ sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on CSCC43.pdf (32 pages, 2780932 bytes).
+Output written on CSCC43.pdf (32 pages, 2781329 bytes).
 PDF statistics:
- 571 PDF objects out of 1000 (max. 8388607)
- 477 compressed objects within 5 object streams
- 145 named destinations out of 1000 (max. 500000)
+ 574 PDF objects out of 1000 (max. 8388607)
+ 480 compressed objects within 5 object streams
+ 148 named destinations out of 1000 (max. 500000)
  533 words of extra memory for PDF output out of 10000 (max. 10000000)
 

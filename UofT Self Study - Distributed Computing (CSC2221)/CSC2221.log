@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 OCT 2017 19:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 OCT 2017 20:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**CSCC43.tex
-(./CSCC43.tex
+**CSC2221.tex
+(./CSC2221.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
@@ -23,11 +23,6 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyphenat/hyphenat.sty
-Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
-\langwohyphens=\language80
-LaTeX Info: Redefining \_ on input line 43.
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/was/upgreek.sty
 Package: upgreek 2003/02/12 v2.0 (WaS)
@@ -126,6 +121,80 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip46
+\enit@outerparindent=\dimen114
+\enit@toks=\toks20
+\enit@inbox=\box28
+\enitdp@description=\count100
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count101
+\lst@gtempboxa=\box29
+\lst@token=\toks21
+\lst@length=\count102
+\lst@currlwidth=\dimen115
+\lst@column=\count103
+\lst@pos=\count104
+\lst@lostspace=\dimen116
+\lst@width=\dimen117
+\lst@newlines=\count105
+\lst@lineno=\count106
+\lst@maxwidth=\dimen118
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+\c@lstnumber=\count107
+\lst@skipnumbers=\count108
+\lst@framebox=\box30
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/09/06 1.5e listings configuration
+))
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2015/05/11 v1.16 mathematical typesetting tools
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count109
+\calc@Bcount=\count110
+\calc@Adimen=\dimen119
+\calc@Bdimen=\dimen120
+\calc@Askip=\skip47
+\calc@Bskip=\skip48
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count111
+\calc@Cskip=\skip49
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count112
+\l_MT_multwidth_dim=\dimen121
+\origjot=\skip50
+\l_MT_shortvdotswithinadjustabove_dim=\dimen122
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen123
+\l_MT_above_intertext_sep=\dimen124
+\l_MT_below_intertext_sep=\dimen125
+\l_MT_above_shortintertext_sep=\dimen126
+\l_MT_below_shortintertext_sep=\dimen127
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
@@ -186,14 +255,14 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen114
-\Hy@linkcounter=\count100
-\Hy@pagecounter=\count101
+\@linkdim=\dimen128
+\Hy@linkcounter=\count113
+\Hy@pagecounter=\count114
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count102
+\Hy@SavedSpaceFactor=\count115
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -205,17 +274,17 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count103
+\c@Hy@tempcnt=\count116
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen115
-\Fld@menulength=\count104
-\Field@Width=\dimen116
-\Fld@charsize=\dimen117
+\XeTeXLinkMargin=\dimen129
+\Fld@menulength=\count117
+\Field@Width=\dimen130
+\Fld@charsize=\dimen131
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -225,29 +294,29 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count105
-\c@Item=\count106
-\c@Hfootnote=\count107
+\Hy@abspage=\count118
+\c@Item=\count119
+\c@Hfootnote=\count120
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count108
-\c@bookmark@seq@number=\count109
+\Fld@listcount=\count121
+\c@bookmark@seq@number=\count122
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip46
+\Hy@SectionHShift=\skip51
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks20
-\inpenc@posthook=\toks21
+\inpenc@prehook=\toks22
+\inpenc@posthook=\toks23
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
@@ -463,39 +532,6 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mathtools.sty
-Package: mathtools 2015/05/11 v1.16 mathematical typesetting tools
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count110
-\calc@Bcount=\count111
-\calc@Adimen=\dimen118
-\calc@Bdimen=\dimen119
-\calc@Askip=\skip47
-\calc@Bskip=\skip48
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count112
-\calc@Cskip=\skip49
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mhsetup.sty
-Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
-)
-LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count113
-\l_MT_multwidth_dim=\dimen120
-\origjot=\skip50
-\l_MT_shortvdotswithinadjustabove_dim=\dimen121
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen122
-\l_MT_above_intertext_sep=\dimen123
-\l_MT_below_intertext_sep=\dimen124
-\l_MT_above_shortintertext_sep=\dimen125
-\l_MT_below_shortintertext_sep=\dimen126
-)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
@@ -660,8 +696,8 @@ Language: english 2012/08/20 v3.3p English support from the babel system
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2014/09/25 3.9l Babel common definitions
-\babel@savecnt=\count114
-\U@D=\dimen127
+\babel@savecnt=\count123
+\U@D=\dimen132
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -672,14 +708,14 @@ File: babel.def 2014/09/25 3.9l Babel common definitions
 (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
-\pgfutil@everybye=\toks22
-\pgfutil@tempdima=\dimen128
-\pgfutil@tempdimb=\dimen129
+\pgfutil@everybye=\toks24
+\pgfutil@tempdima=\dimen133
+\pgfutil@tempdimb=\dimen134
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
 sts.tex))
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box28
+\pgfutil@abb=\box31
 (/usr/local/texlive/2015/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -692,30 +728,30 @@ Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks23
-\pgfkeys@temptoks=\toks24
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
 ode.tex
-\pgfkeys@tmptoks=\toks25
+\pgfkeys@tmptoks=\toks27
 ))
-\pgf@x=\dimen130
-\pgf@y=\dimen131
-\pgf@xa=\dimen132
-\pgf@ya=\dimen133
-\pgf@xb=\dimen134
-\pgf@yb=\dimen135
-\pgf@xc=\dimen136
-\pgf@yc=\dimen137
+\pgf@x=\dimen135
+\pgf@y=\dimen136
+\pgf@xa=\dimen137
+\pgf@ya=\dimen138
+\pgf@xb=\dimen139
+\pgf@yb=\dimen140
+\pgf@xc=\dimen141
+\pgf@yc=\dimen142
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count115
-\c@pgf@countb=\count116
-\c@pgf@countc=\count117
-\c@pgf@countd=\count118
-\t@pgf@toka=\toks26
-\t@pgf@tokb=\toks27
-\t@pgf@tokc=\toks28
+\c@pgf@counta=\count124
+\c@pgf@countb=\count125
+\c@pgf@countc=\count126
+\c@pgf@countd=\count127
+\t@pgf@toka=\toks28
+\t@pgf@tokb=\toks29
+\t@pgf@tokc=\toks30
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
@@ -733,8 +769,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count119
-\pgfsyssoftpath@bigbuffer@items=\count120
+\pgfsyssoftpath@smallbuffer@items=\count128
+\pgfsyssoftpath@bigbuffer@items=\count129
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -746,6 +782,7 @@ Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
@@ -762,12 +799,12 @@ Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen138
-\pgfmath@count=\count121
-\pgfmath@box=\box29
-\pgfmath@toks=\toks29
-\pgfmath@stack@operand=\toks30
-\pgfmath@stack@operation=\toks31
+\pgfmath@dimen=\dimen143
+\pgfmath@count=\count130
+\pgfmath@box=\box32
+\pgfmath@toks=\toks31
+\pgfmath@stack@operand=\toks32
+\pgfmath@stack@operation=\toks33
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
 tex
@@ -788,57 +825,57 @@ code.tex)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
 erarithmetics.code.tex)))
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count122
+\c@pgfmathroundto@lastzeros=\count131
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen139
-\pgf@picmaxx=\dimen140
-\pgf@picminy=\dimen141
-\pgf@picmaxy=\dimen142
-\pgf@pathminx=\dimen143
-\pgf@pathmaxx=\dimen144
-\pgf@pathminy=\dimen145
-\pgf@pathmaxy=\dimen146
-\pgf@xx=\dimen147
-\pgf@xy=\dimen148
-\pgf@yx=\dimen149
-\pgf@yy=\dimen150
-\pgf@zx=\dimen151
-\pgf@zy=\dimen152
+\pgf@picminx=\dimen144
+\pgf@picmaxx=\dimen145
+\pgf@picminy=\dimen146
+\pgf@picmaxy=\dimen147
+\pgf@pathminx=\dimen148
+\pgf@pathmaxx=\dimen149
+\pgf@pathminy=\dimen150
+\pgf@pathmaxy=\dimen151
+\pgf@xx=\dimen152
+\pgf@xy=\dimen153
+\pgf@yx=\dimen154
+\pgf@yy=\dimen155
+\pgf@zx=\dimen156
+\pgf@zy=\dimen157
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
 ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen153
-\pgf@path@lasty=\dimen154
+\pgf@path@lastx=\dimen158
+\pgf@path@lasty=\dimen159
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
 .code.tex
 File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
-\pgf@shorten@end@additional=\dimen155
-\pgf@shorten@start@additional=\dimen156
+\pgf@shorten@end@additional=\dimen160
+\pgf@shorten@start@additional=\dimen161
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
 File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
-\pgfpic=\box30
-\pgf@hbox=\box31
-\pgf@layerbox@main=\box32
-\pgf@picture@serial@count=\count123
+\pgfpic=\box33
+\pgf@hbox=\box34
+\pgf@layerbox@main=\box35
+\pgf@picture@serial@count=\count132
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
 File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
-\pgflinewidth=\dimen157
+\pgflinewidth=\dimen162
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
 ations.code.tex
 File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
-\pgf@pt@x=\dimen158
-\pgf@pt@y=\dimen159
-\pgf@pt@temp=\dimen160
+\pgf@pt@x=\dimen163
+\pgf@pt@y=\dimen164
+\pgf@pt@temp=\dimen165
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
 e.tex
@@ -855,13 +892,13 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
 de.tex
 File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
-\pgfarrowsep=\dimen161
+\pgfarrowsep=\dimen166
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
 e.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen162
-\pgf@sys@shading@range@num=\count124
+\pgf@max=\dimen167
+\pgf@sys@shading@range@num=\count133
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -870,7 +907,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
 code.tex
 File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
-\pgfexternal@startupbox=\box33
+\pgfexternal@startupbox=\box36
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
 de.tex
@@ -887,7 +924,7 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
 e.tex
 File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
-\pgfnodeparttextbox=\box34
+\pgfnodeparttextbox=\box37
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
 tex
@@ -896,8 +933,8 @@ File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen163
-\pgf@nodesepend=\dimen164
+\pgf@nodesepstart=\dimen168
+\pgf@nodesepend=\dimen169
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
@@ -912,10 +949,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen165
-\pgffor@skip=\dimen166
-\pgffor@stack=\toks32
-\pgffor@toks=\toks33
+\pgffor@iter=\dimen170
+\pgffor@skip=\dimen171
+\pgffor@stack=\toks34
+\pgffor@toks=\toks35
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
@@ -924,32 +961,32 @@ Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
-\pgf@plot@mark@count=\count125
-\pgfplotmarksize=\dimen167
+\pgf@plot@mark@count=\count134
+\pgfplotmarksize=\dimen172
 )
-\tikz@lastx=\dimen168
-\tikz@lasty=\dimen169
-\tikz@lastxsaved=\dimen170
-\tikz@lastysaved=\dimen171
-\tikzleveldistance=\dimen172
-\tikzsiblingdistance=\dimen173
-\tikz@figbox=\box35
-\tikz@figbox@bg=\box36
-\tikz@tempbox=\box37
-\tikz@tempbox@bg=\box38
-\tikztreelevel=\count126
-\tikznumberofchildren=\count127
-\tikznumberofcurrentchild=\count128
-\tikz@fig@count=\count129
+\tikz@lastx=\dimen173
+\tikz@lasty=\dimen174
+\tikz@lastxsaved=\dimen175
+\tikz@lastysaved=\dimen176
+\tikzleveldistance=\dimen177
+\tikzsiblingdistance=\dimen178
+\tikz@figbox=\box38
+\tikz@figbox@bg=\box39
+\tikz@tempbox=\box40
+\tikz@tempbox@bg=\box41
+\tikztreelevel=\count135
+\tikznumberofchildren=\count136
+\tikznumberofcurrentchild=\count137
+\tikz@fig@count=\count138
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count130
-\pgfmatrixcurrentcolumn=\count131
-\pgf@matrix@numberofcolumns=\count132
+\pgfmatrixcurrentrow=\count139
+\pgfmatrixcurrentcolumn=\count140
+\pgf@matrix@numberofcolumns=\count141
 )
-\tikz@expandcount=\count133
+\tikz@expandcount=\count142
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
@@ -960,8 +997,8 @@ Package: tcolorbox 2015/05/07 version 3.60 text color boxes
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks34
-\verbatim@line=\toks35
+\every@verbatim=\toks36
+\verbatim@line=\toks37
 \verbatim@in@stream=\read2
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/environ/environ.sty
@@ -972,32 +1009,32 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count134
+\etb@tempcnta=\count143
 )
-\tcb@titlebox=\box39
-\tcb@upperbox=\box40
-\tcb@lowerbox=\box41
-\tcb@phantombox=\box42
-\c@tcbbreakpart=\count135
-\c@tcblayer=\count136
-\tcb@temp=\box43
-\tcb@temp=\box44
-\tcb@temp=\box45
+\tcb@titlebox=\box42
+\tcb@upperbox=\box43
+\tcb@lowerbox=\box44
+\tcb@phantombox=\box45
+\c@tcbbreakpart=\count144
+\c@tcblayer=\count145
 \tcb@temp=\box46
+\tcb@temp=\box47
+\tcb@temp=\box48
+\tcb@temp=\box49
 \tcb@out=\write4
 \tcb@record@out=\write5
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2015/03/04 v2.20.2
-\thm@style=\toks36
-\thm@bodyfont=\toks37
-\thm@headfont=\toks38
-\thm@notefont=\toks39
-\thm@headpunct=\toks40
-\thm@preskip=\skip51
-\thm@postskip=\skip52
-\thm@headsep=\skip53
-\dth@everypar=\toks41
+\thm@style=\toks38
+\thm@bodyfont=\toks39
+\thm@headfont=\toks40
+\thm@notefont=\toks41
+\thm@headpunct=\toks42
+\thm@preskip=\skip52
+\thm@postskip=\skip53
+\thm@headsep=\skip54
+\dth@everypar=\toks43
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -1010,69 +1047,69 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip54
-\f@ncyO@elh=\skip55
-\f@ncyO@erh=\skip56
-\f@ncyO@olh=\skip57
-\f@ncyO@orh=\skip58
-\f@ncyO@elf=\skip59
-\f@ncyO@erf=\skip60
-\f@ncyO@olf=\skip61
-\f@ncyO@orf=\skip62
+\fancy@headwidth=\skip55
+\f@ncyO@elh=\skip56
+\f@ncyO@erh=\skip57
+\f@ncyO@olh=\skip58
+\f@ncyO@orh=\skip59
+\f@ncyO@elf=\skip60
+\f@ncyO@erf=\skip61
+\f@ncyO@olf=\skip62
+\f@ncyO@orf=\skip63
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 40.
+less on input line 72.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 41.
+less on input line 73.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 42.
+less on input line 74.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 43.
+less on input line 75.
 
-(./CSCC43.aux)
-\openout1 = `CSCC43.aux'.
+(./CSC2221.aux)
+\openout1 = `CSC2221.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 78.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    ... okay on input line 78.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count137
-\scratchdimen=\dimen174
-\scratchbox=\box47
-\nofMPsegments=\count138
-\nofMParguments=\count139
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count140
-\MPscratchDim=\dimen175
-\MPnumerator=\count141
-\makeMPintoPDFobject=\count142
-\everyMPtoPDFconversion=\toks43
+\scratchcounter=\count146
+\scratchdimen=\dimen179
+\scratchbox=\box50
+\nofMPsegments=\count147
+\nofMParguments=\count148
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count149
+\MPscratchDim=\dimen180
+\MPnumerator=\count150
+\makeMPintoPDFobject=\count151
+\everyMPtoPDFconversion=\toks45
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1088,8 +1125,9 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box48
-Package hyperref Info: Link coloring OFF on input line 46.
+\c@lstlisting=\count152
+\AtBeginShipoutBox=\box51
+Package hyperref Info: Link coloring OFF on input line 78.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1097,33 +1135,51 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count143
+\c@section@level=\count153
 )
-LaTeX Info: Redefining \ref on input line 46.
-LaTeX Info: Redefining \pageref on input line 46.
-LaTeX Info: Redefining \nameref on input line 46.
+LaTeX Info: Redefining \ref on input line 78.
+LaTeX Info: Redefining \pageref on input line 78.
+LaTeX Info: Redefining \nameref on input line 78.
 
-(./CSCC43.out) (./CSCC43.out)
+(./CSC2221.out) (./CSC2221.out)
 \@outlinefile=\write6
-\openout6 = `CSCC43.out'.
+\openout6 = `CSC2221.out'.
 
  ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 52.
+LaTeX Font Info:    Try loading font information for U+msa on input line 84.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 52.
+LaTeX Font Info:    Try loading font information for U+msb on input line 84.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./CSCC43.toc
+) (./CSC2221.toc)
+\tf@toc=\write7
+\openout7 = `CSC2221.toc'.
+
 [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
-\tf@toc=\write7
-\openout7 = `CSCC43.toc'.
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 93--96
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--106
+
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1132,51 +1188,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 113--118
 
  []
 
 
-Overfull \hbox (20.28416pt too wide) in paragraph at lines 69--70
-\OT1/cmr/m/n/12 from, does not al-ready show in-for-ma-tion. In-cludes mul-ti-m
-e-dia, maps, doc-u-ments,
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[3] <imgs/lec1-1.png, id=281, 776.9025pt x 349.305pt>
-File: imgs/lec1-1.png Graphic file (type png)
- <use imgs/lec1-1.png>
-Package pdftex.def Info: imgs/lec1-1.png used on input line 113.
-(pdftex.def)             Requested size: 388.45029pt x 174.65207pt.
-
-Overfull \hbox (10.1585pt too wide) in paragraph at lines 110--114
- []\OT1/cmr/bx/n/12 Metadata[] \OT1/cmr/m/n/12 "Data about data". Data that de-
-scribes the prop-er-ties of end-user
- []
-
-<imgs/lec1-2.png, id=283, 684.5575pt x 357.335pt>
-File: imgs/lec1-2.png Graphic file (type png)
- <use imgs/lec1-2.png>
-Package pdftex.def Info: imgs/lec1-2.png used on input line 124.
-(pdftex.def)             Requested size: 342.27791pt x 178.66705pt.
-
-Overfull \hbox (14.7833pt too wide) in paragraph at lines 121--125
-\OT1/cmr/m/n/12 data, was used prior to the in-ven-tion of databases, but has i
-ts own dis-ad-van-tages. 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 121--125
+Underfull \hbox (badness 10000) in paragraph at lines 113--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--125
+Underfull \hbox (badness 10000) in paragraph at lines 124--127
 
  []
 
@@ -1186,728 +1208,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4 <./imgs/lec1-1.png>]
+[3]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./imgs/lec1-2.png>]
-Overfull \hbox (0.87927pt too wide) in paragraph at lines 135--136
-\OT1/cmr/m/n/12 pro-gram main-te-nance, so to avoid these dis-ad-van-tages, the
- database ap-proach
- []
-
-<imgs/lec1-3.png, id=299, 660.4675pt x 254.9525pt>
-File: imgs/lec1-3.png Graphic file (type png)
- <use imgs/lec1-3.png>
-Package pdftex.def Info: imgs/lec1-3.png used on input line 142.
-(pdftex.def)             Requested size: 330.23294pt x 127.47592pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--143
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--143
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 144--147
-
- []
-
-
-Overfull \hbox (10.67084pt too wide) in paragraph at lines 144--147
-\OT1/cmr/m/n/12 Some ex-am-ples of data mod-els in-clude a re-la-tional data mo
-del, a semistruc-tured
- []
-
-<imgs/lec1-4.png, id=300, 784.9325pt x 215.80624pt>
-File: imgs/lec1-4.png Graphic file (type png)
- <use imgs/lec1-4.png>
-Package pdftex.def Info: imgs/lec1-4.png used on input line 153.
-(pdftex.def)             Requested size: 392.46529pt x 107.90285pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--154
-
- []
-
-
-Overfull \hbox (2.46529pt too wide) in paragraph at lines 150--154
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--154
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[6 <./imgs/lec1-3.png>]
-Overfull \hbox (17.71268pt too wide) in paragraph at lines 163--164
- []\OT1/cmr/bx/n/12 Increased pro-duc-tiv-ity of ap-pli-ca-tion de-vel-op-ment[
-] \OT1/cmr/m/n/12 Since the ap-pli-ca-tion
- []
-
-
-Overfull \hbox (20.1737pt too wide) in paragraph at lines 165--166
- []\OT1/cmr/bx/n/12 Enforcement of stan-dards[] \OT1/cmr/m/n/12 Stan-dards are 
-en-forced by the uni-form pro-ce-dures
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[7 <./imgs/lec1-4.png>]
-Overfull \hbox (2.5992pt too wide) in paragraph at lines 171--172
- []\OT1/cmr/bx/n/12 Reduced pro-gram main-te-nance[] \OT1/cmr/m/n/12 Be-cause o
-f data-program in-de-pen-dence,
- []
-
-
-Overfull \hbox (13.93073pt too wide) in paragraph at lines 177--178
- []\OT1/cmr/bx/n/12 New spe-cial-ized per-son-nel[] \OT1/cmr/m/n/12 Com-pa-nies
- need to hire new peo-ple for database
- []
-
-
-Overfull \hbox (12.90184pt too wide) in paragraph at lines 179--180
- []\OT1/cmr/bx/n/12 Installation and Man-age-ment of Cost and Com-plex-ity[] \O
-T1/cmr/m/n/12 Im-ple-men-ta-tion
- []
-
-
-Overfull \hbox (5.82614pt too wide) in paragraph at lines 181--182
- []\OT1/cmr/bx/n/12 Conversion Costs[] \OT1/cmr/m/n/12 Costs for con-vert-ing l
-egacy sys-tem to a mod-ern database 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[8]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
-
- []
-
-<imgs/lec2-1.png, id=342, 700.6175pt x 358.33875pt>
-File: imgs/lec2-1.png Graphic file (type png)
- <use imgs/lec2-1.png>
-Package pdftex.def Info: imgs/lec2-1.png used on input line 209.
-(pdftex.def)             Requested size: 350.30789pt x 179.16893pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 207--210
-
- []
-
-<imgs/lec2-2.png, id=343, 634.37pt x 381.425pt>
-File: imgs/lec2-2.png Graphic file (type png)
- <use imgs/lec2-2.png>
-Package pdftex.def Info: imgs/lec2-2.png used on input line 216.
-(pdftex.def)             Requested size: 317.18422pt x 190.71202pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 212--217
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 212--217
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[10 <./imgs/lec2-1.png>]
-Overfull \hbox (29.63098pt too wide) in paragraph at lines 218--219
-[]\OT1/cmr/m/n/12 The last of the 3 com-po-nents are \OT1/cmr/bx/n/12 at-tribut
-es\OT1/cmr/m/n/12 , which are prop-er-ties or char-ac-ter-is-tics
- []
-
-
-Overfull \hbox (1.79315pt too wide) in paragraph at lines 222--225
-\OT1/cmr/m/n/12 for the data, what ex-actly we need this data to do and what ki
-nd of con-straints
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 222--225
-
- []
-
-
-Overfull \hbox (7.01532pt too wide) in paragraph at lines 228--231
-\OT1/cmr/m/n/12 each semester." These state-ments are usu-ally de-rived from po
-li-cies, pro-ce-dures,
- []
-
-
-Overfull \hbox (2.44592pt too wide) in paragraph at lines 228--231
-\OT1/cmr/m/n/12 the pre-req-ui-sites to be able to take a course." These con-st
-raints and def-i-ni-tions
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--231
-
- []
-
-
-Overfull \hbox (7.73337pt too wide) in paragraph at lines 228--231
-\OT1/cmr/m/n/12 that this database is be-ing cre-ated for and by in-ves-ti-gat-
-ing busi-ness doc-u-ments. 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[11 <./imgs/lec2-2.png>] <imgs/lec2-3.png, id=354, 710.655pt x 351.3125pt>
-File: imgs/lec2-3.png Graphic file (type png)
-
-<use imgs/lec2-3.png>
-Package pdftex.def Info: imgs/lec2-3.png used on input line 247.
-(pdftex.def)             Requested size: 355.32663pt x 175.6558pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--248
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--248
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--248
-
- []
-
-
-Overfull \hbox (7.92503pt too wide) in paragraph at lines 251--252
-\OT1/cmr/m/n/12 After busi-ness rules have been col-lected, from these rules, r
-e-la-tion-ships be-tween
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[12 <./imgs/lec2-3.png>]
-Overfull \hbox (6.74173pt too wide) in paragraph at lines 255--256
-\OT1/cmr/m/n/12 An en-tity is the build-ing block of the En-tity Re-la-tion-shi
-p Model, such ex-am-ples
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 262--267
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 262--267
-
- []
-
-<imgs/lec2-4.png, id=360, 697.60625pt x 347.2975pt>
-File: imgs/lec2-4.png Graphic file (type png)
- <use imgs/lec2-4.png>
-Package pdftex.def Info: imgs/lec2-4.png used on input line 278.
-(pdftex.def)             Requested size: 348.80226pt x 173.64832pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--279
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--279
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--279
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--279
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 282--285
-
- []
-
-
-Overfull \hbox (18.63048pt too wide) in paragraph at lines 282--285
-\OT1/cmr/m/n/12 An at-tribute has dif-fer-ent types, in-clud-ing: re-quired, op
--tional, sim-ple, com-pos-ite,
- []
-
-
-Overfull \hbox (1.00223pt too wide) in paragraph at lines 287--288
- []\OT1/cmr/bx/n/12 Optional At-tributes[] \OT1/cmr/m/n/12 Op-tional At-tribute
-s can be null. May be rep-re-sented
- []
-
-
-Overfull \hbox (6.24583pt too wide) in paragraph at lines 289--290
- []\OT1/cmr/bx/n/12 Composite At-tributes[] \OT1/cmr/m/n/12 An at-tribute that 
-has mean-ing-ful com-po-nent parts.
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[14 <./imgs/lec2-4.png>]
-Overfull \hbox (16.39555pt too wide) in paragraph at lines 297--298
- []\OT1/cmr/bx/n/12 Derived At-tributes[] \OT1/cmr/m/n/12 An at-tribute that is
- de-rived from other stored at-tributes.
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[15]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[16] <imgs/lec3-1.png, id=391, 624.3325pt x 187.70125pt>
-File: imgs/lec3-1.png Graphic file (type png)
- <use imgs/lec3-1.png>
-Package pdftex.def Info: imgs/lec3-1.png used on input line 326.
-(pdftex.def)             Requested size: 312.16548pt x 93.85039pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--327
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--332
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--332
-
- []
-
-<imgs/lec3-2.png, id=392, 672.5125pt x 230.8625pt>
-File: imgs/lec3-2.png Graphic file (type png)
- <use imgs/lec3-2.png>
-Package pdftex.def Info: imgs/lec3-2.png used on input line 342.
-(pdftex.def)             Requested size: 336.25542pt x 115.43095pt.
-
-Overfull \hbox (1.39732pt too wide) in paragraph at lines 336--343
-\OT1/cmr/m/n/12 The re-la-tion-ship could be in any de-gree or car-di-nal-ity (
-Manda-tory or op-tional,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 336--343
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 336--343
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[17 <./imgs/lec3-1.png>]
-Overfull \hbox (10.9265pt too wide) in paragraph at lines 354--357
-\OT1/cmr/m/n/12 The ER model has been suit-able for mod-elling most com-mon bus
-i-ness prob-lems,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 354--357
-
- []
-
-<imgs/lec3-3.png, id=399, 609.27625pt x 399.4925pt>
-File: imgs/lec3-3.png Graphic file (type png)
- <use imgs/lec3-3.png>
-Package pdftex.def Info: imgs/lec3-3.png used on input line 363.
-(pdftex.def)             Requested size: 304.63737pt x 199.74576pt.
-
-<imgs/lec3-4.png, id=400, 704.6325pt x 430.60875pt>
-File: imgs/lec3-4.png Graphic file (type png)
- <use imgs/lec3-4.png>
-Package pdftex.def Info: imgs/lec3-4.png used on input line 366.
-(pdftex.def)             Requested size: 352.3154pt x 215.30383pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 360--367
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 360--367
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[18 <./imgs/lec3-2.png>] <imgs/lec3-5.png, id=406, 546.04pt x 420.57124pt>
-File: imgs/lec3-5.png Graphic file (type png)
-
-<use imgs/lec3-5.png>
-Package pdftex.def Info: imgs/lec3-5.png used on input line 373.
-(pdftex.def)             Requested size: 273.01933pt x 210.28511pt.
-
-Overfull \hbox (8.08151pt too wide) in paragraph at lines 370--374
-\OT1/cmr/m/n/12 in the re-la-tion-ship. The in-stances of a sub-type may par-ti
-c-i-pate in a re-la-tion-ship
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 370--374
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[19 <./imgs/lec3-3.png> <./imgs/lec3-4.png>]
-<imgs/lec3-6.png, id=414, 584.1825pt x 356.33125pt>
-File: imgs/lec3-6.png Graphic file (type png)
- <use imgs/lec3-6.png>
-Package pdftex.def Info: imgs/lec3-6.png used on input line 382.
-(pdftex.def)             Requested size: 292.09053pt x 178.16518pt.
-
-<imgs/lec3-7.png, id=415, 617.30624pt x 311.1625pt>
-File: imgs/lec3-7.png Graphic file (type png)
- <use imgs/lec3-7.png>
-Package pdftex.def Info: imgs/lec3-7.png used on input line 384.
-(pdftex.def)             Requested size: 308.65236pt x 155.58087pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
-
- []
-
-
-Overfull \hbox (41.66373pt too wide) in paragraph at lines 377--385
-\OT1/cmr/bx/n/12 Disjointness Con-straints \OT1/cmr/m/n/12 is whether an in-sta
-nce of a su-per-type may si-mul-ta-ne-ously
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[20 <./imgs/lec3-5.png>] <imgs/lec3-8.png, id=421, 346.29375pt x 224.84pt>
-File: imgs/lec3-8.png Graphic file (type png)
-
-<use imgs/lec3-8.png>
-Package pdftex.def Info: imgs/lec3-8.png used on input line 391.
-(pdftex.def)             Requested size: 173.14644pt x 112.41972pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 388--392
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 388--392
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[21 <./imgs/lec3-6.png> <./imgs/lec3-7.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[22 <./imgs/lec3-8.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 412--416
-
- []
-
-
-Overfull \hbox (2.93343pt too wide) in paragraph at lines 412--416
-\OT1/cmr/m/n/12 So in cor-re-spon-dence with the entity-relationship model, En-
-tity Types be-come
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[23]
-Overfull \hbox (22.88126pt too wide) in paragraph at lines 427--428
- []\OT1/cmr/bx/n/12 Foreign Key[] \OT1/cmr/m/n/12 A for-eign key is an iden-ti-
-fier that en-ables a de-pen-dent re-la-tion-ship
- []
-
-<imgs/lec4-1.png, id=437, 654.445pt x 225.84375pt>
-File: imgs/lec4-1.png Graphic file (type png)
- <use imgs/lec4-1.png>
-Package pdftex.def Info: imgs/lec4-1.png used on input line 430.
-(pdftex.def)             Requested size: 327.2217pt x 112.92159pt.
-
-<imgs/lec4-2.png, id=438, 598.235pt x 311.1625pt>
-File: imgs/lec4-2.png Graphic file (type png)
- <use imgs/lec4-2.png>
-Package pdftex.def Info: imgs/lec4-2.png used on input line 437.
-(pdftex.def)             Requested size: 299.11676pt x 155.58087pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 434--438
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[24 <./imgs/lec4-1.png>] <imgs/lec4-3.png, id=448, 629.35126pt x 323.2075pt>
-File: imgs/lec4-3.png Graphic file (type png)
-
-<use imgs/lec4-3.png>
-Package pdftex.def Info: imgs/lec4-3.png used on input line 446.
-(pdftex.def)             Requested size: 314.67485pt x 161.60335pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 450--455
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[25 <./imgs/lec4-2.png> <./imgs/lec4-3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 466--469
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[26]
-Overfull \hbox (2.44177pt too wide) in paragraph at lines 481--482
-\OT1/cmr/m/n/12 at-tribute as a Re-la-tion at-tribute, and En-tity types with m
-ul-ti-val-ued at-tributes
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 503--506
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 509--512
-
- []
-
-<imgs/lec5-1.png, id=480, 724.7075pt x 415.5525pt>
-File: imgs/lec5-1.png Graphic file (type png)
- <use imgs/lec5-1.png>
-Package pdftex.def Info: imgs/lec5-1.png used on input line 518.
-(pdftex.def)             Requested size: 362.35286pt x 207.77574pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 515--519
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[28] <imgs/lec5-2.png, id=485, 563.10374pt x 364.36125pt>
-File: imgs/lec5-2.png Graphic file (type png)
-
-<use imgs/lec5-2.png>
-Package pdftex.def Info: imgs/lec5-2.png used on input line 525.
-(pdftex.def)             Requested size: 394.16994pt x 255.05113pt.
- <imgs/lec5-3.png, id=486, 656.4525pt x 255.95625pt>
-File: imgs/lec5-3.png Graphic file (type png)
-
-<use imgs/lec5-3.png>
-Package pdftex.def Info: imgs/lec5-3.png used on input line 526.
-(pdftex.def)             Requested size: 393.87454pt x 153.57492pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 522--527
-
- []
-
-
-Overfull \hbox (4.16994pt too wide) in paragraph at lines 522--527
-[] 
- []
-
-
-Overfull \hbox (3.87454pt too wide) in paragraph at lines 522--527
-[] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[29 <./imgs/lec5-1.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[30 <./imgs/lec5-2.png> <./imgs/lec5-3.png>]
-<imgs/lec5-4.png, id=498, 489.83pt x 169.63374pt>
-File: imgs/lec5-4.png Graphic file (type png)
- <use imgs/lec5-4.png>
-Package pdftex.def Info: imgs/lec5-4.png used on input line 550.
-(pdftex.def)             Requested size: 391.86452pt x 135.70717pt.
-
-<imgs/lec5-5.png, id=499, 685.56125pt x 165.61874pt>
-File: imgs/lec5-5.png Graphic file (type png)
- <use imgs/lec5-5.png>
-Package pdftex.def Info: imgs/lec5-5.png used on input line 551.
-(pdftex.def)             Requested size: 342.77979pt x 82.80916pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 547--552
-
- []
-
-
-Overfull \hbox (1.86452pt too wide) in paragraph at lines 547--552
-[] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[31]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[32 <./imgs/lec5-4.png> <./imgs/lec5-5.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 553.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 553.
- (./CSCC43.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 553.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 553.
-Package rerunfilecheck Info: File `CSCC43.out' has not changed.
-(rerunfilecheck)             Checksum: 12D22BED916EFADD87BB272823F656EE;3766.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 553.
+[4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
+ (./CSC2221.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
+Package rerunfilecheck Info: File `CSC2221.out' has not changed.
+(rerunfilecheck)             Checksum: DDF01DB6148B42A495BCDE866FECC7F4;222.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 128.
  ) 
 Here is how much of TeX's memory you used:
- 19681 strings out of 493089
- 367592 string characters out of 6134842
- 430906 words of memory out of 5000000
- 22640 multiletter control sequences out of 15000+600000
- 15713 words of font info for 60 fonts, out of 8000000 for 9000
+ 20959 strings out of 493089
+ 386650 string characters out of 6134842
+ 455412 words of memory out of 5000000
+ 24068 multiletter control sequences out of 15000+600000
+ 14448 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,73p,925b,434s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on CSCC43.pdf (32 pages, 2781176 bytes).
+ 55i,11n,73p,926b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on CSC2221.pdf (4 pages, 63510 bytes).
 PDF statistics:
- 574 PDF objects out of 1000 (max. 8388607)
- 480 compressed objects within 5 object streams
- 148 named destinations out of 1000 (max. 500000)
- 533 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
+ 37 words of extra memory for PDF output out of 10000 (max. 10000000)
 

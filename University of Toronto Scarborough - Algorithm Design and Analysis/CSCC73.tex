@@ -163,7 +163,7 @@ We will make edits to this schema as we learn more about what sort order provide
 \end{enumerate}
 
 \underline{Greedy "Schema" Revised:}\\
-\begin{lstlisting}
+\begin{lstlisting}[language=Python]
 sort jobs in increasing finish time
 A := null
 F := -infinity
@@ -349,7 +349,7 @@ We must maintain a set of nodes $R$, and $\forall u\in V, d(u)$
 	\\
 	\underline{Visualization:}\\
 	\\
-	(insert pic here)
+	\includegraphics[scale=0.125]{visual}
 	\\
 	\\
 	or $d(u) = \infty$, if no such path exists}
@@ -642,8 +642,8 @@ $aT(\frac{n}{b})$ refers to the time spent on recursive calls and $cn^d$ refers 
 
 \begin{enumerate}[label=\alph*]
 	\item{if $a < b^d$ then $T(n) = \Theta (n^d)$}
-	\item{if $a = b^d$ then $T(n) = \Theta (n^d)$}
-	\item{if $a > b^d$ then $T(n) = \Theta (n^d)$}
+	\item{if $a = b^d$ then $T(n) = \Theta (n^d log(n))$}
+	\item{if $a > b^d$ then $T(n) = \Theta (n^{log_b a})$}
 \end{enumerate}
 
 \begin{proof}(Proof for the entire Master Theorem)\\
@@ -724,7 +724,7 @@ Because of this we know that multiplication can be considered by $2(\frac{n}{2})
 \subsubsection{Algorithm for Divide and Conquer Idea \# 2}
 
 \begin{lstlisting}[language=Python]
-MULT(x,y): #x,y must both be boolean arraw of length of at least 1
+MULT(x,y): #x,y must both be boolean array of length of at least 1
 	n := max(length(x), length(y))
 	if n=1 then do
 		return (x[1] or y[1])
@@ -744,7 +744,7 @@ MULT(x,y): #x,y must both be boolean arraw of length of at least 1
 		b := MULT(x0,y0) # b = (x0)(y0)
 		c := MULT(s,t) # c = (x1 + x0)(y1 + y0)
 		
-		u : SUB(c,ADD(a,b)) # u = c - a - b
+		u := SUB(c,ADD(a,b)) # u = c - a - b
 		
 		put n 0s to the right of a
 		put n/2 0s to the right of u
@@ -758,7 +758,7 @@ I honestly have no idea why this is here, but I guess this is just an example of
 
 \paragraph{Merge Sort} $a=2, b=2, d=1$ and since $2 = 2^1$ then Merge Sort has a time complexity of $\Theta (nlogn)$
 
-\paragraph{Binary Search} $a=1, b=2,d=0$ and since $1 = 2^0$ then Binary Search has a time complexity of $\Theta (logn)$
+\paragraph{Binary Search} $a=1, b=2, d=0$ and since $1 = 2^0$ then Binary Search has a time complexity of $\Theta (logn)$
 
 \subsection{Celebrity Problem}
 
@@ -771,6 +771,81 @@ Can you find the celebrity with the least number of questions given $n$ people i
 \end{tcolorbox}
 
 \newpage
+
+\section{Wednesday, September 25, 2017}
+
+\subsection{Fast Fourier Transform (KT 5.6)(DPV 2.6)}
+
+Fast Fourier Transform is basically the the multiplication of two polynomials.
+$$A(x) = a_0 + a_1 x + ... + a_m x^m$$
+$$B(x) = b_0 + b_1 x + ... + b_m x^m$$
+And we are trying to calculate their product.
+$$C(x) = A(x) \cdot B(x) = c_0 + c_1 x + ... + c_{2m} x^m$$
+
+where the $c_k$ is defined as
+
+$$c_k = \sum_{\begin{subarray}{l}
+0 \leq i,j \leq m\\
+i+j = k
+\end{subarray}} a_i b_j$$
+
+so $c_0 = a_0 b_0$, $c_1 = a_1 b_0 + a_0 b_1$ and $c_{2m} = a_m b_m$\\
+So this must take $\Theta (1 + 2 + ... + m + m+1 + m + ... 1) = \Theta (m^2)$ multiplications to compute.\\
+\\
+But can we do better than this? Apparently yes.\\
+\\
+We are essentially taking two vectors and trying to create a 3rd vector, we doing this:
+
+$$(a_0, ... , a_m), (b_0, ... , b_m) \mapsto (c_0, ... , c_{2m})$$
+We call this "convolution".\\
+
+\subsubsection{Value Representation of Polynomials}
+
+\begin{tcolorbox}[title=Interpolation Theorem]
+	A polynomial of degree $m$ is uniquely determined by its value at $m+1$ points.
+\end{tcolorbox}
+
+This is because if you draw two points, for lines, that identifies a unique line, but also a family of different quadratic functions or for any polynomial with a degree 2 or bigger. The same thing works for 3 points on a graph, it uniquely identifies a quadratic, but also represents a family of polynomials with degree 3 or bigger.\\
+\\
+So we have two representations, the coefficient representation for a polynomial $A(x) = a_0 + a_1 x + ... + a_m x^m$\\
+\\
+\underline{The coefficient representation:} $a_0, a_1, ... , a_m$\\
+\\
+\underline{The value representation:} $A(x_0), A(x_1), ... , A(x_m)$ where all $x_i$'s are just numbers that make all $A(x_i)$'s unique.\\
+\\
+We are gonna call going from the coefficient representation to the value representation \textbf{evaluation} and vice versa we'll call \textbf{interpolation}
+
+\begin{tcolorbox}
+	\underline{Note:} $C(x)$ has degree $2m$ which means that it requires $2m+1$ points $C(x_0), ..., C(x_m)$ for the value representation.
+\end{tcolorbox}
+
+Given values of $A,B$ in $2m+1$ points, we can compute the value representation of $C$ in $\Theta (m)$ time.\\
+\\
+
+After we get the value representations of $A,B$, we find the value representation of $C$ as follows:
+$$C(x_0) = A(x_0) \cdot B(x_0), C(x_1) = A(x_1) \cdot B(x_1), ..., C(x_{2m}) = A(x_{2m}) \cdot B(x_{2m})$$
+
+So our algorithm intuition or steps are as follows:
+\paragraph{Select:} $n \geq 2m+1$ points where $n$ is a power of 2
+\paragraph{Evaluate:} $A(x_0), A(x_1), ... , A(x_{n-1})$
+\paragraph{Compute:} $C(x_0) = A(x_0) \cdot B(x_0), C(x_1) = A(x_1) \cdot B(x_1), ..., C(x_{n-1}) = A(x_{n-1}) \cdot B(x_{n-1})$
+\paragraph{Interpolate:} $c_0, c_1, ..., c_{2n-1}$ from the above value representation
+\\
+Now consider...
+
+\begin{align*}
+	A(x) &= a_0 + a_1 x + a_2 +x^2 + ... + a_{n-1} x^{n-1}\\
+	A(x) &= a_0 + a_2 x^2 + ... + a_{n-2} x^{n-2} +\\
+		& \:\:\:x(a_1 + a_3 x^2 + ... + a_{n-1} x^{n-2})\\
+	A(x) &= a_0 + a_2 (x^2)^1 + ... + a_{n-2} (x^2)^{\frac{n}{2}-1} +\\
+		& \:\:\:x(a_1 + a_3 (x^2)^2 + ... + a_{n-1} (x^2)^{\frac{n}{2}-1})
+\end{align*}
+
+Lets call $a_0 + a_2 (x^2)^1 + ... + a_{n-2} (x^2)^{\frac{n}{2}-1} = A_e (x^2)$ and\\
+lets call $a_1 + a_3 (x^2)^2 + ... + a_{n-1} (x^2)^{\frac{n}{2}-1} = A_o (x^2)$\\
+\\
+So know we can say that $A(x) = A_e (x^2) + x A_0 (x^2)$ where $A(x)$ has a degree of $n-1$ with $n$ coefficients and $A_e (x^2), A_o (x^2)$ both have degree $\frac{n}{2}-1$ and with $\frac{n}{2}$ coefficients.
+
 
 
 \end{document}

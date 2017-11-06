@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 OCT 2017 19:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 NOV 2017 11:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1120,7 +1120,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./CSCC43.toc
 [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2])
 \tf@toc=\write7
 \openout7 = `CSCC43.toc'.
 
@@ -1131,7 +1138,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2]
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
@@ -1148,7 +1155,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3] <imgs/lec1-1.png, id=281, 776.9025pt x 349.305pt>
+[4] <imgs/lec1-1.png, id=315, 776.9025pt x 349.305pt>
 File: imgs/lec1-1.png Graphic file (type png)
  <use imgs/lec1-1.png>
 Package pdftex.def Info: imgs/lec1-1.png used on input line 113.
@@ -1159,7 +1166,7 @@ Overfull \hbox (10.1585pt too wide) in paragraph at lines 110--114
 scribes the prop-er-ties of end-user
  []
 
-<imgs/lec1-2.png, id=283, 684.5575pt x 357.335pt>
+<imgs/lec1-2.png, id=317, 684.5575pt x 357.335pt>
 File: imgs/lec1-2.png Graphic file (type png)
  <use imgs/lec1-2.png>
 Package pdftex.def Info: imgs/lec1-2.png used on input line 124.
@@ -1186,20 +1193,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4 <./imgs/lec1-1.png>]
+[5 <./imgs/lec1-1.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./imgs/lec1-2.png>]
+[6 <./imgs/lec1-2.png>]
 Overfull \hbox (0.87927pt too wide) in paragraph at lines 135--136
 \OT1/cmr/m/n/12 pro-gram main-te-nance, so to avoid these dis-ad-van-tages, the
  database ap-proach
  []
 
-<imgs/lec1-3.png, id=299, 660.4675pt x 254.9525pt>
+<imgs/lec1-3.png, id=334, 660.4675pt x 254.9525pt>
 File: imgs/lec1-3.png Graphic file (type png)
  <use imgs/lec1-3.png>
 Package pdftex.def Info: imgs/lec1-3.png used on input line 142.
@@ -1225,7 +1232,7 @@ Overfull \hbox (10.67084pt too wide) in paragraph at lines 144--147
 del, a semistruc-tured
  []
 
-<imgs/lec1-4.png, id=300, 784.9325pt x 215.80624pt>
+<imgs/lec1-4.png, id=335, 784.9325pt x 215.80624pt>
 File: imgs/lec1-4.png Graphic file (type png)
  <use imgs/lec1-4.png>
 Package pdftex.def Info: imgs/lec1-4.png used on input line 153.
@@ -1251,7 +1258,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6 <./imgs/lec1-3.png>]
+[7 <./imgs/lec1-3.png>]
 Overfull \hbox (17.71268pt too wide) in paragraph at lines 163--164
  []\OT1/cmr/bx/n/12 Increased pro-duc-tiv-ity of ap-pli-ca-tion de-vel-op-ment[
 ] \OT1/cmr/m/n/12 Since the ap-pli-ca-tion
@@ -1269,7 +1276,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7 <./imgs/lec1-4.png>]
+[8 <./imgs/lec1-4.png>]
 Overfull \hbox (2.5992pt too wide) in paragraph at lines 171--172
  []\OT1/cmr/bx/n/12 Reduced pro-gram main-te-nance[] \OT1/cmr/m/n/12 Be-cause o
 f data-program in-de-pen-dence,
@@ -1299,19 +1306,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8]
+[9]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9]
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
-<imgs/lec2-1.png, id=342, 700.6175pt x 358.33875pt>
+<imgs/lec2-1.png, id=376, 700.6175pt x 358.33875pt>
 File: imgs/lec2-1.png Graphic file (type png)
  <use imgs/lec2-1.png>
 Package pdftex.def Info: imgs/lec2-1.png used on input line 209.
@@ -1321,7 +1328,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 207--210
 
  []
 
-<imgs/lec2-2.png, id=343, 634.37pt x 381.425pt>
+<imgs/lec2-2.png, id=377, 634.37pt x 381.425pt>
 File: imgs/lec2-2.png Graphic file (type png)
  <use imgs/lec2-2.png>
 Package pdftex.def Info: imgs/lec2-2.png used on input line 216.
@@ -1342,7 +1349,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10 <./imgs/lec2-1.png>]
+[11 <./imgs/lec2-1.png>]
 Overfull \hbox (29.63098pt too wide) in paragraph at lines 218--219
 []\OT1/cmr/m/n/12 The last of the 3 com-po-nents are \OT1/cmr/bx/n/12 at-tribut
 es\OT1/cmr/m/n/12 , which are prop-er-ties or char-ac-ter-is-tics
@@ -1388,7 +1395,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11 <./imgs/lec2-2.png>] <imgs/lec2-3.png, id=354, 710.655pt x 351.3125pt>
+[12 <./imgs/lec2-2.png>] <imgs/lec2-3.png, id=388, 710.655pt x 351.3125pt>
 File: imgs/lec2-3.png Graphic file (type png)
 
 <use imgs/lec2-3.png>
@@ -1421,7 +1428,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12 <./imgs/lec2-3.png>]
+[13 <./imgs/lec2-3.png>]
 Overfull \hbox (6.74173pt too wide) in paragraph at lines 255--256
 \OT1/cmr/m/n/12 An en-tity is the build-ing block of the En-tity Re-la-tion-shi
 p Model, such ex-am-ples
@@ -1437,7 +1444,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--267
 
  []
 
-<imgs/lec2-4.png, id=360, 697.60625pt x 347.2975pt>
+<imgs/lec2-4.png, id=395, 697.60625pt x 347.2975pt>
 File: imgs/lec2-4.png Graphic file (type png)
  <use imgs/lec2-4.png>
 Package pdftex.def Info: imgs/lec2-4.png used on input line 278.
@@ -1468,7 +1475,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13]
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 282--285
 
  []
@@ -1497,7 +1504,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14 <./imgs/lec2-4.png>]
+[15 <./imgs/lec2-4.png>]
 Overfull \hbox (16.39555pt too wide) in paragraph at lines 297--298
  []\OT1/cmr/bx/n/12 Derived At-tributes[] \OT1/cmr/m/n/12 An at-tribute that is
  de-rived from other stored at-tributes.
@@ -1509,14 +1516,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15]
+[16]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16] <imgs/lec3-1.png, id=391, 624.3325pt x 187.70125pt>
+[17] <imgs/lec3-1.png, id=425, 624.3325pt x 187.70125pt>
 File: imgs/lec3-1.png Graphic file (type png)
  <use imgs/lec3-1.png>
 Package pdftex.def Info: imgs/lec3-1.png used on input line 326.
@@ -1536,7 +1543,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 328--332
 
  []
 
-<imgs/lec3-2.png, id=392, 672.5125pt x 230.8625pt>
+<imgs/lec3-2.png, id=426, 672.5125pt x 230.8625pt>
 File: imgs/lec3-2.png Graphic file (type png)
  <use imgs/lec3-2.png>
 Package pdftex.def Info: imgs/lec3-2.png used on input line 342.
@@ -1563,7 +1570,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17 <./imgs/lec3-1.png>]
+[18 <./imgs/lec3-1.png>]
 Overfull \hbox (10.9265pt too wide) in paragraph at lines 354--357
 \OT1/cmr/m/n/12 The ER model has been suit-able for mod-elling most com-mon bus
 i-ness prob-lems,
@@ -1574,13 +1581,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 354--357
 
  []
 
-<imgs/lec3-3.png, id=399, 609.27625pt x 399.4925pt>
+<imgs/lec3-3.png, id=433, 609.27625pt x 399.4925pt>
 File: imgs/lec3-3.png Graphic file (type png)
  <use imgs/lec3-3.png>
 Package pdftex.def Info: imgs/lec3-3.png used on input line 363.
 (pdftex.def)             Requested size: 304.63737pt x 199.74576pt.
 
-<imgs/lec3-4.png, id=400, 704.6325pt x 430.60875pt>
+<imgs/lec3-4.png, id=434, 704.6325pt x 430.60875pt>
 File: imgs/lec3-4.png Graphic file (type png)
  <use imgs/lec3-4.png>
 Package pdftex.def Info: imgs/lec3-4.png used on input line 366.
@@ -1601,7 +1608,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18 <./imgs/lec3-2.png>] <imgs/lec3-5.png, id=406, 546.04pt x 420.57124pt>
+[19 <./imgs/lec3-2.png>] <imgs/lec3-5.png, id=441, 546.04pt x 420.57124pt>
 File: imgs/lec3-5.png Graphic file (type png)
 
 <use imgs/lec3-5.png>
@@ -1624,14 +1631,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19 <./imgs/lec3-3.png> <./imgs/lec3-4.png>]
-<imgs/lec3-6.png, id=414, 584.1825pt x 356.33125pt>
+[20 <./imgs/lec3-3.png> <./imgs/lec3-4.png>]
+<imgs/lec3-6.png, id=449, 584.1825pt x 356.33125pt>
 File: imgs/lec3-6.png Graphic file (type png)
  <use imgs/lec3-6.png>
 Package pdftex.def Info: imgs/lec3-6.png used on input line 382.
 (pdftex.def)             Requested size: 292.09053pt x 178.16518pt.
 
-<imgs/lec3-7.png, id=415, 617.30624pt x 311.1625pt>
+<imgs/lec3-7.png, id=450, 617.30624pt x 311.1625pt>
 File: imgs/lec3-7.png Graphic file (type png)
  <use imgs/lec3-7.png>
 Package pdftex.def Info: imgs/lec3-7.png used on input line 384.
@@ -1663,7 +1670,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20 <./imgs/lec3-5.png>] <imgs/lec3-8.png, id=421, 346.29375pt x 224.84pt>
+[21 <./imgs/lec3-5.png>] <imgs/lec3-8.png, id=456, 346.29375pt x 224.84pt>
 File: imgs/lec3-8.png Graphic file (type png)
 
 <use imgs/lec3-8.png>
@@ -1685,14 +1692,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21 <./imgs/lec3-6.png> <./imgs/lec3-7.png>]
+[22 <./imgs/lec3-6.png> <./imgs/lec3-7.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22 <./imgs/lec3-8.png>]
+[23 <./imgs/lec3-8.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 412--416
 
  []
@@ -1709,19 +1716,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23]
+[24]
 Overfull \hbox (22.88126pt too wide) in paragraph at lines 427--428
  []\OT1/cmr/bx/n/12 Foreign Key[] \OT1/cmr/m/n/12 A for-eign key is an iden-ti-
 fier that en-ables a de-pen-dent re-la-tion-ship
  []
 
-<imgs/lec4-1.png, id=437, 654.445pt x 225.84375pt>
+<imgs/lec4-1.png, id=472, 654.445pt x 225.84375pt>
 File: imgs/lec4-1.png Graphic file (type png)
  <use imgs/lec4-1.png>
 Package pdftex.def Info: imgs/lec4-1.png used on input line 430.
 (pdftex.def)             Requested size: 327.2217pt x 112.92159pt.
 
-<imgs/lec4-2.png, id=438, 598.235pt x 311.1625pt>
+<imgs/lec4-2.png, id=473, 598.235pt x 311.1625pt>
 File: imgs/lec4-2.png Graphic file (type png)
  <use imgs/lec4-2.png>
 Package pdftex.def Info: imgs/lec4-2.png used on input line 437.
@@ -1737,7 +1744,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24 <./imgs/lec4-1.png>] <imgs/lec4-3.png, id=448, 629.35126pt x 323.2075pt>
+[25 <./imgs/lec4-1.png>] <imgs/lec4-3.png, id=483, 629.35126pt x 323.2075pt>
 File: imgs/lec4-3.png Graphic file (type png)
 
 <use imgs/lec4-3.png>
@@ -1754,7 +1761,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25 <./imgs/lec4-2.png> <./imgs/lec4-3.png>]
+[26 <./imgs/lec4-2.png> <./imgs/lec4-3.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 466--469
 
  []
@@ -1765,7 +1772,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26]
+[27]
 Overfull \hbox (2.44177pt too wide) in paragraph at lines 481--482
 \OT1/cmr/m/n/12 at-tribute as a Re-la-tion at-tribute, and En-tity types with m
 ul-ti-val-ued at-tributes
@@ -1777,7 +1784,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 503--506
 
  []
@@ -1787,7 +1794,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 509--512
 
  []
 
-<imgs/lec5-1.png, id=480, 724.7075pt x 415.5525pt>
+<imgs/lec5-1.png, id=514, 724.7075pt x 415.5525pt>
 File: imgs/lec5-1.png Graphic file (type png)
  <use imgs/lec5-1.png>
 Package pdftex.def Info: imgs/lec5-1.png used on input line 518.
@@ -1803,13 +1810,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28] <imgs/lec5-2.png, id=485, 563.10374pt x 364.36125pt>
+[29] <imgs/lec5-2.png, id=519, 563.10374pt x 364.36125pt>
 File: imgs/lec5-2.png Graphic file (type png)
 
 <use imgs/lec5-2.png>
 Package pdftex.def Info: imgs/lec5-2.png used on input line 525.
 (pdftex.def)             Requested size: 394.16994pt x 255.05113pt.
- <imgs/lec5-3.png, id=486, 656.4525pt x 255.95625pt>
+ <imgs/lec5-3.png, id=520, 656.4525pt x 255.95625pt>
 File: imgs/lec5-3.png Graphic file (type png)
 
 <use imgs/lec5-3.png>
@@ -1836,21 +1843,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29 <./imgs/lec5-1.png>]
+[30 <./imgs/lec5-1.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30 <./imgs/lec5-2.png> <./imgs/lec5-3.png>]
-<imgs/lec5-4.png, id=498, 489.83pt x 169.63374pt>
+[31 <./imgs/lec5-2.png> <./imgs/lec5-3.png>]
+<imgs/lec5-4.png, id=533, 489.83pt x 169.63374pt>
 File: imgs/lec5-4.png Graphic file (type png)
  <use imgs/lec5-4.png>
 Package pdftex.def Info: imgs/lec5-4.png used on input line 550.
 (pdftex.def)             Requested size: 391.86452pt x 135.70717pt.
 
-<imgs/lec5-5.png, id=499, 685.56125pt x 165.61874pt>
+<imgs/lec5-5.png, id=534, 685.56125pt x 165.61874pt>
 File: imgs/lec5-5.png Graphic file (type png)
  <use imgs/lec5-5.png>
 Package pdftex.def Info: imgs/lec5-5.png used on input line 551.
@@ -1871,28 +1878,145 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31]
+[32]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32 <./imgs/lec5-4.png> <./imgs/lec5-5.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 553.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 553.
+[33 <./imgs/lec5-4.png> <./imgs/lec5-5.png>]
+<imgs/lec6-1.png, id=549, 641.39626pt x 154.5775pt>
+File: imgs/lec6-1.png Graphic file (type png)
+ <use imgs/lec6-1.png>
+Package pdftex.def Info: imgs/lec6-1.png used on input line 566.
+(pdftex.def)             Requested size: 384.84071pt x 92.7472pt.
+
+<imgs/lec6-2.png, id=550, 450.68375pt x 162.6075pt>
+File: imgs/lec6-2.png Graphic file (type png)
+ <use imgs/lec6-2.png>
+Package pdftex.def Info: imgs/lec6-2.png used on input line 568.
+(pdftex.def)             Requested size: 383.08298pt x 138.21703pt.
+
+<imgs/lec6-3.png, id=551, 661.47125pt x 306.14375pt>
+File: imgs/lec6-3.png Graphic file (type png)
+ <use imgs/lec6-3.png>
+Package pdftex.def Info: imgs/lec6-3.png used on input line 571.
+(pdftex.def)             Requested size: 396.8858pt x 183.68765pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 561--572
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 561--572
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 561--572
+
+ []
+
+
+Overfull \hbox (102.04213pt too wide) in paragraph at lines 561--572
+[]$ 
+ []
+
+
+Overfull \hbox (6.8858pt too wide) in paragraph at lines 561--572
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[34 <./imgs/lec6-1.png> <./imgs/lec6-2.png>]
+<imgs/lec6-4.png, id=558, 642.4pt x 265.99374pt>
+File: imgs/lec6-4.png Graphic file (type png)
+ <use imgs/lec6-4.png>
+Package pdftex.def Info: imgs/lec6-4.png used on input line 578.
+(pdftex.def)             Requested size: 449.67694pt x 186.19434pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--579
+
+ []
+
+
+Overfull \hbox (70.45218pt too wide) in paragraph at lines 575--579
+[]$ 
+ []
+
+
+Overfull \hbox (59.67694pt too wide) in paragraph at lines 575--579
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[35 <./imgs/lec6-3.png> <./imgs/lec6-4.png>]
+<imgs/lec6-5.png, id=565, 560.0925pt x 211.79124pt>
+File: imgs/lec6-5.png Graphic file (type png)
+ <use imgs/lec6-5.png>
+Package pdftex.def Info: imgs/lec6-5.png used on input line 590.
+(pdftex.def)             Requested size: 392.06207pt x 148.25285pt.
+
+<imgs/lec6-6.png, id=566, 546.04pt x 216.81pt>
+File: imgs/lec6-6.png Graphic file (type png)
+ <use imgs/lec6-6.png>
+Package pdftex.def Info: imgs/lec6-6.png used on input line 591.
+(pdftex.def)             Requested size: 382.22539pt x 151.76596pt.
+
+<imgs/lec6-7.png, id=567, 529.98pt x 121.45375pt>
+File: imgs/lec6-7.png Graphic file (type png)
+ <use imgs/lec6-7.png>
+Package pdftex.def Info: imgs/lec6-7.png used on input line 592.
+(pdftex.def)             Requested size: 370.98346pt x 85.01703pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 587--593
+
+ []
+
+
+Overfull \hbox (2.06207pt too wide) in paragraph at lines 587--593
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[36 <./imgs/lec6-5.png> <./imgs/lec6-6.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37 <./imgs/lec6-7.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 594.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 594.
  (./CSCC43.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 553.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 553.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 594.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 594.
 Package rerunfilecheck Info: File `CSCC43.out' has not changed.
-(rerunfilecheck)             Checksum: 12D22BED916EFADD87BB272823F656EE;3766.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 553.
+(rerunfilecheck)             Checksum: 0286BCBC6E958538614C53533051C5E3;4222.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 594.
  ) 
 Here is how much of TeX's memory you used:
- 19681 strings out of 493089
- 367592 string characters out of 6134842
- 430906 words of memory out of 5000000
- 22640 multiletter control sequences out of 15000+600000
+ 19733 strings out of 493089
+ 368460 string characters out of 6134842
+ 430912 words of memory out of 5000000
+ 22674 multiletter control sequences out of 15000+600000
  15713 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,73p,925b,434s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1904,10 +2028,10 @@ sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on CSCC43.pdf (32 pages, 2781176 bytes).
+Output written on CSCC43.pdf (37 pages, 3090888 bytes).
 PDF statistics:
- 574 PDF objects out of 1000 (max. 8388607)
- 480 compressed objects within 5 object streams
- 148 named destinations out of 1000 (max. 500000)
- 533 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 644 PDF objects out of 1000 (max. 8388607)
+ 530 compressed objects within 6 object streams
+ 159 named destinations out of 1000 (max. 500000)
+ 616 words of extra memory for PDF output out of 10000 (max. 10000000)
 

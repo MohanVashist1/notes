@@ -550,6 +550,47 @@ Examples include:\\
 \includegraphics[scale=0.8]{lec5-4}\\
 \includegraphics[scale=0.5]{lec5-5}
 
+\newpage
+
+\section{Thursday, October 26, 2017}
+
+\subsection{Normalization (continued)}
+
+\subsubsection{Second Normal Form}
+
+A relation is in Second Normal Form (1Nf) if it is in First Normal Form and there is no partial functional dependency. No partial functional dependency is meant that every non-key attribute is fully functionally dependent of the entire primary key.\\
+\\
+\underline{Note:} Partial functional dependency is only possible if you have a composite key.\\
+\\
+\underline{Example of a relation with partial dependencies:}\\
+\includegraphics[scale=0.6]{lec6-1}\\
+\underline{Example of the same relation, now in 2NF:}\\
+\includegraphics[scale=0.85]{lec6-2}\\
+\\
+\underline{Another Example of a relation in 1Nf with partial dependencies and the same relations in 2NF:}\\
+\includegraphics[scale=0.6]{lec6-3}
+
+\subsubsection{Third Normal Form}
+
+A relation is in Third Normal Form (3NF) if the relation is in 2NF and there are no transitive dependencies.\\
+\\
+\underline{Example of a relation in 2Nf with transitive dependencies and the same relations in 3NF:}\\
+\includegraphics[scale=0.7]{lec6-4}
+
+\subsubsection{Transitive Relations}
+
+Why is a transitive dependency even called that? The formal definition of a transitive relation is $$\forall a,b,c \in X : aRb, bRc \longrightarrow aRc$$
+where $X$ is a set and $R$ is a relation
+
+\subsubsection{Boyce-Codd Normal Form}
+
+A relation is in Boyce-Codd Normal Form (NF) if it is both in Third Normal Form and every determinant is a candidate key.\\
+\\
+\underline{Example of converting a 3NF relation to a Boyce-Codd NF relation:}\\
+\includegraphics[scale=0.7]{lec6-5}\\
+\includegraphics[scale=0.7]{lec6-6}\\
+\includegraphics[scale=0.7]{lec6-7}
+
 \end{document}
 
 

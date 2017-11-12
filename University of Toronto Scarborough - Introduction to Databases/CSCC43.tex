@@ -591,6 +591,23 @@ A relation is in Boyce-Codd Normal Form (NF) if it is both in Third Normal Form 
 \includegraphics[scale=0.7]{lec6-6}\\
 \includegraphics[scale=0.7]{lec6-7}
 
+\subsubsection{Merging Relations}
+
+So there are two ways of creating the structure for your relational databases
+
+\paragraph{Top-Down Analysis} This is when you convert all your business rules into Entity-Relation models which you convert again into Relations. This method requires no merging of relations.
+
+\paragraph{Bottom-Up Analysis} This is when you start out with relations first, and you end up merging relations that are too similar. This happens anyways in large projects where a bunch of sub-teams come together with different relation structures, so they have to be merged together for their work to be merged together.\\
+\\
+\underline{Example:}\\
+\textbf{UnMerged:}\\
+EMPLOYEE1(EMPLOYEEID, NAME, ADDRESS, PHONE)\\
+EMPLOYEE2(EMPLOYEEID, NAME, ADDRESS, JobCode, NoYears)\\
+\\
+\textbf{Merged}
+
+
+
 \end{document}
 
 

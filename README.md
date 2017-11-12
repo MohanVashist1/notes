@@ -5,10 +5,10 @@ The notes will be typed out in a rough plain text file or written by hand and th
 
 ### COURSES IN PROGRESS:
 
-- STANFORD: Machine Learning [(Coursera)](https://www.coursera.org/learn/machine-learning) [(pdf)](https://github.com/JoshuaConcon/notes/raw/master/Stanford%20-%20Machine%20Learning/Machine%20Learning.pdf)
 - UNIVERSITY OF TORONTO SCARBOROUGH: Algorithm Design and Analysis
 - UNIVERSITY OF TORONTO SCARBOROUGH: Introduction to Databases
 - UNIVERSITY OF TORONTO SCARBOROUGH: Graph Theory
+- Udacity - Intro
 
 ### COMPLETED COURSES:
 

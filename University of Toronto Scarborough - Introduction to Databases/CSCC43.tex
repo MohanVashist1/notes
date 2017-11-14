@@ -605,7 +605,76 @@ EMPLOYEE1(EMPLOYEEID, NAME, ADDRESS, PHONE)\\
 EMPLOYEE2(EMPLOYEEID, NAME, ADDRESS, JobCode, NoYears)\\
 \\
 \textbf{Merged}
+EMPLOYEE(EmployeeID, Name, Address, Phone, JobCode, NoYears)
+\\
+\\
+You can also merge relations that differ by a synonym or a homonym:\\
+\\
+\underline{Example:}\\
+\textbf{UnMerged:}\\
+STUDENT1 (StudentID, Name, Address)\\STUDENT2 (MarticulationNo, Name, Address)\\
+\\
+Assume that STUDENT1's Address refers to their Residing Address while STUDENT2's address refers to their Home Address\\
+\\
+\textbf{Merged}
+STUDENT(StudentID, Name, ResAddress, HomeAddress)
+\\
+\\
+Note how MarticulationNo and StudentID were just two different names for the same attribute and thus, one was removed.\\
+\\
+You can even merge two relations with transitive dependencies, you just will have to perform normalization to get the relations in 3NF.
 
+\subsubsection{Enterprise Key}
+
+A Primary key is better to be unique across all relations. This key is called an \textit{Enterprise key}
+
+\subsection{Physical Database Design}
+
+The purpose of this is to translate the logical description of data into the technical specifications for storing and retrieving data. This will include more attention on reducing processing time rather than minimizing the space.\\
+\\
+The Technical Specifications that will be included are designing the fields of and values in our database, this includes data type, coding of values, encryption, and integrity control. Technical Specifics also includes how the database will be indexed, and query optimization.
+
+\subsubsection{Data Types}
+Types that are included are specific to the Database Management System, but some common examples include: \textit{Integers, Strings, etc.}
+
+\subsubsection{Coding Technique}
+
+This means that instead of storing the values of each entry in the database, you provide a hash that refers to a lookup table, this may save space but this causes extra lookup time to search this table.
+
+\subsubsection{Controlling Data Integrity}
+
+Database Management Systems support Default values, Range Control, Null Value Control, and Referential Integrity when it comes to managing and maintaining data integrity.
+
+\subsubsection{File Organization}
+
+There are 3 techniques for physically arranging records of a file on secondary storage: \textit{Sequential, Indexed, Hashed}. These techniques are done by the Database Management System itself.
+
+\paragraph{Sequential} Records of the file are stored in sequence by the primary key field values. This is not effective usage and may be only used for database backups only.
+
+\paragraph{Hashed} Records of the file have a key that when put through a hashing algorithm, refers to their relative record number.
+
+\paragraph{Indexed} Records of the file are store either sequentially or nonsequentially and the \textbf{index} is used to locate these records, which can be a table or another data structure that is used to determine the location of requested records in the actual file. This index can either point to a unique record, or another set of records, in which it points to a secondary key index. This technique automatically indexes primary keys.
+
+\subsubsection{Unique and Nonunique Indexes}
+
+\paragraph{Unique (primary) Index} These are typically done for primary keys, but can apply to other unique fields.
+
+\paragraph{NonUnique (secondary) Index} These are done for fields that are often used to group individual entities. (e.g. By zipcode, product category)
+\\
+\\
+\underline{Example of a Index Data Structure:}\\
+\includegraphics[scale=0.6]{lec6-8}\\
+
+\subsubsection{Rules for Using Indexes}
+\begin{enumerate}
+	\item{You should use indexing on large tables, preferably when there are more than 100 values but not less than 30 values}
+	\item{The indexes should be convenient for frequent searches}
+	\item{Avoid use of indexes for fields with long values, it is best to compress the values first}
+	\item{Database Management Systems may have a limit on the number of indexes per table and number of bytes per indexed field(s)}
+	\item{Be careful of indexing attributes with null values}
+\end{enumerate}
+
+\newpage
 
 
 \end{document}

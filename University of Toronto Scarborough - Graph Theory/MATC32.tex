@@ -277,6 +277,108 @@ we refer to an edge by $(u,v)$ where $u,v$ are the start and end vertices.
 
 \newpage
 
+\section{Friday, September 15, 2017}
+
+\subsection{Equivalence Relations on a set}
+
+\underline{i.e.} Let $X$ be the set of people in a room and the pair $(p_1, p_2) \in R$ if $p_1 \in X$ and $p_2 \in X$ are the same age.\\
+\\
+An equivalence relation can be thought of as a certain property that is equal between 2+ elements.\\
+\\
+\begin{tcolorbox}
+	\underline{Note:} For $R$ which is the set of people in $X$ that have the same age, you can subdivide $X$ into disjoint subsets of $R$. We can rename $R$ as $x_i$ where $i$ is the age of the people in the set (a partitioned $x$)
+	$$\bigcup x_i = X$$
+	$$x_i \cap x_j = \emptyset, i \neq j$$
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: Equivalence Relation]
+	A set of pairs $R$ is an equivalence relation if it has the following properties:
+	\begin{itemize}
+		\item{\textbf{Reflexive} : $\forall x \in X, (x,x) \in R$}
+		\item{\textbf{Symmetric} : $\forall x,y \in X, (y,x) \in R$ implies $(y,x) \in R$}
+		\item{\textbf{Transitive} : $\forall x,y,z \in X, (x,y),(y,z) \in R$ implies $(x,z) \in R$}
+	\end{itemize}
+
+\end{tcolorbox}
+
+Some examples include people who like the same colour, have the same age, have the same major,....\\
+\\
+\underline{Claim:} If $R$ is an equivalence relation, then $X = \{ y : (x,y) \in R \}$ forms a partition.
+
+\begin{proof}
+	For notation, we will write $x \sim y$\\
+	We need to prove 2 things.\\
+	\begin{enumerate}
+		\item{$\bigcup_{x\in X} \overset{\_\_\_}{x} = X$}, so we pick $x \in X$ and since $x \sim x$ then that implies that $x \in \overset{\_\_\_}{x}$
+		\item{
+			Union is disjoint. So we must prove that
+			$$(a) \overset{\_\_\_}{x} \cap \overset{\_\_\_}{y} = \emptyset \text{ if } \overset{\_\_\_}{x} \neq \overset{\_\_\_}{y} \text{ iff } (b) \exists z : z\in \overset{\_\_\_}{x} \cup \overset{\_\_\_}{y} \rightarrow \overset{\_\_\_}{x} = \overset{\_\_\_}{y}$$
+			
+			If we assume $(b)$ is true then:
+			\begin{align*}
+				&\rightarrow x\sim z, y\sim z\\
+				&\rightarrow x\sim z, z\sim y \text{ by symmetry}\\
+				&\rightarrow x\sim y \text{ by transitivity}\\
+				&\rightarrow y \in x
+			\end{align*}
+			next we assume $a\in\overset{\_\_\_}{x} \rightarrow x\sim a$, but $y\sim x \rightarrow y\sim a \rightarrow a \in y$
+			Therefore we have that $\overset{\_\_\_}{x} \subset \overset{\_\_\_}{y}$ and $\overset{\_\_\_}{y} \subset \overset{\_\_\_}{x}$
+		}
+	\end{enumerate}
+\end{proof}
+
+\begin{tcolorbox}
+	\textit{SideNote:} if we start with a partition of $X$ into subsets $(x)\in l $ then the relation $x\sim
+y \leftrightarrow x,y$ lie in the same $X$ is an equivalence relation with partition $(x_i)_{i\in l}$
+\end{tcolorbox}
+
+\underline{Example:} Take the set of all graphs, say $G,G'$ and $\exists \text{ an isomorphism } G \mapsto G' $ and $G' \mapsto G''$ then $\exists \text{ an ismorphism }  g \circ f : G \mapsto G''$
+
+\begin{tcolorbox}
+	\textbf{Reminder:} graph $G$ with vertices $u,v$\\
+	$(u,v) = $ path in a simple graph where we can order vertices $u,...,v$ such that only adjacent edges have consecutive endpoints (ordering is a walk)
+\end{tcolorbox}
+
+For any graph $G$, say $x,y \in V(G)$
+
+$$x\sim y \leftrightarrow \begin{cases}
+	y=x\\
+	y \text{ is connected to } x
+\end{cases}
+$$
+is an equivalence relation.\\
+\\
+For a vertex $v$, the set $\overset{\_\_\_}{v} = \{ y : y \text{ connected is the connected component of } x \text{ to } v \} $\\
+\\
+\begin{tcolorbox}
+	\underline{Note:} The subgraph $\overset{\_\_\_}{x}$ is connected
+\end{tcolorbox}
+
+If $u_1, u_2 \in \overset{\_\_\_}{v}$ which imples that $u_1 \sim v, u_2 \sim v$ which implies that $u_1 \sim v, v \sim u_2$ which implies that $u_1 \sim u_2$
+
+\begin{tcolorbox}
+	\underline{Result:} Every graph is the disjoint union of common subgraphs, this result characterizes edge cuts and characterizes bipartite graphs
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: Edge Cuts]
+	In a graph $G$, an edge creates a cut if the number of connected components of $G \setminus \{ e \}$ increases
+\end{tcolorbox}
+
+If an edge lies in a cycle, it is not a cut edge or, a cut edge does not lie in a cycle.\\
+\\
+\begin{tcolorbox}[title=Thereom]
+	An edge is a cut edge iff that edge does not lie on the cycle.
+\end{tcolorbox}
+
+\begin{proof}
+	Take an edge $e$, we need to show that $G\setminus \{ e \}$ remains connected (which implies that e lies in a cycle).\\
+	Assume $G \setminus \{ e \}$ is connected, let $x,y$ be the endpoints of $e$, since $G \setminus \{ e \}$ is connected, there is a path between $x,y \in G \setminus \{ e \}$.\\
+	Now assume $e$ lies in a cycle in $G$, we need to show that $G \setminus \{ e \}$, or that there exists a path between nodes $u,v$ where $u$ is an adjacent node to $x$ but is not equal to $y$ and $v$ is an adjacent node to $y$ but is not equal to $x$.\\
+	\\
+	Now since $G \setminus \{ e \}$ is connected, there is a path between nodes $u$ and $v$ that does not go through edge $e$ and a path that goes through edge $e$ (namely, the path $u,x,y,v$). Therefore $e$ is not an edge cut iff it lies on a cycle. This implies that the negation of this is true, that an edge is an edge cut iff it doesn't lie on a cycle.
+\end{proof}
+
+
 
 \end{document}
 

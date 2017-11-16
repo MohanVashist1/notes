@@ -18,3 +18,5 @@
 \contentsline {subsubsection}{\numberline {3.2.1}Connectivity of $G$}{14}{subsubsection.3.2.1}
 \contentsline {paragraph}{Path}{14}{section*.2}
 \contentsline {paragraph}{Cycle}{14}{section*.3}
+\contentsline {section}{\numberline {4}Friday, September 15, 2017}{15}{section.4}
+\contentsline {subsection}{\numberline {4.1}Equivalence Relations on a set}{15}{subsection.4.1}

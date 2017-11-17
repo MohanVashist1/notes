@@ -128,3 +128,17 @@
 \contentsline {paragraph}{Unique (primary) Index}{39}{section*.64}
 \contentsline {paragraph}{NonUnique (secondary) Index}{39}{section*.65}
 \contentsline {subsubsection}{\numberline {6.2.6}Rules for Using Indexes}{40}{subsubsection.6.2.6}
+\contentsline {section}{\numberline {7}Thursday, November 2, 2017}{41}{section.7}
+\contentsline {subsection}{\numberline {7.1}SQL}{41}{subsection.7.1}
+\contentsline {paragraph}{Relational Database Management System}{41}{section*.66}
+\contentsline {subsubsection}{\numberline {7.1.1}SQL Environment}{41}{subsubsection.7.1.1}
+\contentsline {paragraph}{Schema}{41}{section*.67}
+\contentsline {paragraph}{Catalog}{41}{section*.68}
+\contentsline {paragraph}{Data Definition Language (DDL)}{41}{section*.69}
+\contentsline {paragraph}{Data Manipulation Language (DML)}{41}{section*.70}
+\contentsline {paragraph}{Data Control Language (DCL)}{41}{section*.71}
+\contentsline {subsubsection}{\numberline {7.1.2}SQL Database Definition}{41}{subsubsection.7.1.2}
+\contentsline {subsubsection}{\numberline {7.1.3}Table Creation}{42}{subsubsection.7.1.3}
+\contentsline {subsubsection}{\numberline {7.1.4}SQL Example}{42}{subsubsection.7.1.4}
+\contentsline {subsubsection}{\numberline {7.1.5}Data Integrity in SQL}{43}{subsubsection.7.1.5}
+\contentsline {subsubsection}{\numberline {7.1.6}DROP and ALTER}{44}{subsubsection.7.1.6}

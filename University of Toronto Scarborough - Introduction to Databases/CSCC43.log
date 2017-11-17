@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  14 NOV 2017 14:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 NOV 2017 20:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -126,6 +126,39 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
+(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count100
+\lst@gtempboxa=\box28
+\lst@token=\toks20
+\lst@length=\count101
+\lst@currlwidth=\dimen114
+\lst@column=\count102
+\lst@pos=\count103
+\lst@lostspace=\dimen115
+\lst@width=\dimen116
+\lst@newlines=\count104
+\lst@lineno=\count105
+\lst@maxwidth=\dimen117
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count106
+\lst@skipnumbers=\count107
+\lst@framebox=\box29
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
@@ -185,14 +218,14 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen114
-\Hy@linkcounter=\count100
-\Hy@pagecounter=\count101
+\@linkdim=\dimen118
+\Hy@linkcounter=\count108
+\Hy@pagecounter=\count109
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count102
+\Hy@SavedSpaceFactor=\count110
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -204,17 +237,17 @@ Package hyperref Info: Plain pages OFF on input line 4513.
 Package hyperref Info: Backreferencing OFF on input line 4518.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4751.
-\c@Hy@tempcnt=\count103
+\c@Hy@tempcnt=\count111
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5104.
-\XeTeXLinkMargin=\dimen115
-\Fld@menulength=\count104
-\Field@Width=\dimen116
-\Fld@charsize=\dimen117
+\XeTeXLinkMargin=\dimen119
+\Fld@menulength=\count112
+\Field@Width=\dimen120
+\Fld@charsize=\dimen121
 Package hyperref Info: Hyper figures OFF on input line 6358.
 Package hyperref Info: Link nesting OFF on input line 6363.
 Package hyperref Info: Hyper index ON on input line 6366.
@@ -224,17 +257,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6383.
 Package hyperref Info: PDF/A mode OFF on input line 6388.
 LaTeX Info: Redefining \ref on input line 6428.
 LaTeX Info: Redefining \pageref on input line 6432.
-\Hy@abspage=\count105
-\c@Item=\count106
-\c@Hfootnote=\count107
+\Hy@abspage=\count113
+\c@Item=\count114
+\c@Hfootnote=\count115
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
-\Fld@listcount=\count108
-\c@bookmark@seq@number=\count109
+\Fld@listcount=\count116
+\c@bookmark@seq@number=\count117
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -245,8 +278,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks20
-\inpenc@posthook=\toks21
+\inpenc@prehook=\toks21
+\inpenc@posthook=\toks22
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
@@ -568,15 +601,15 @@ Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count110
-\calc@Bcount=\count111
-\calc@Adimen=\dimen118
-\calc@Bdimen=\dimen119
+\calc@Acount=\count118
+\calc@Bcount=\count119
+\calc@Adimen=\dimen122
+\calc@Bdimen=\dimen123
 \calc@Askip=\skip47
 \calc@Bskip=\skip48
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count112
+\calc@Ccount=\count120
 \calc@Cskip=\skip49
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/mhsetup.sty
@@ -586,15 +619,15 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count113
-\l_MT_multwidth_dim=\dimen120
+\g_MT_multlinerow_int=\count121
+\l_MT_multwidth_dim=\dimen124
 \origjot=\skip50
-\l_MT_shortvdotswithinadjustabove_dim=\dimen121
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen122
-\l_MT_above_intertext_sep=\dimen123
-\l_MT_below_intertext_sep=\dimen124
-\l_MT_above_shortintertext_sep=\dimen125
-\l_MT_below_shortintertext_sep=\dimen126
+\l_MT_shortvdotswithinadjustabove_dim=\dimen125
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen126
+\l_MT_above_intertext_sep=\dimen127
+\l_MT_below_intertext_sep=\dimen128
+\l_MT_above_shortintertext_sep=\dimen129
+\l_MT_below_shortintertext_sep=\dimen130
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
@@ -760,8 +793,8 @@ Language: english 2017/01/24 v3.3q English support from the babel system
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2017/05/19 3.10 Babel common definitions
-\babel@savecnt=\count114
-\U@D=\dimen127
+\babel@savecnt=\count122
+\U@D=\dimen131
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -772,14 +805,14 @@ File: babel.def 2017/05/19 3.10 Babel common definitions
 (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
-\pgfutil@everybye=\toks22
-\pgfutil@tempdima=\dimen128
-\pgfutil@tempdimb=\dimen129
+\pgfutil@everybye=\toks23
+\pgfutil@tempdima=\dimen132
+\pgfutil@tempdimb=\dimen133
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
 sts.tex))
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box28
+\pgfutil@abb=\box30
 (/usr/local/texlive/2017/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -792,30 +825,30 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks23
-\pgfkeys@temptoks=\toks24
+\pgfkeys@pathtoks=\toks24
+\pgfkeys@temptoks=\toks25
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
 ode.tex
-\pgfkeys@tmptoks=\toks25
+\pgfkeys@tmptoks=\toks26
 ))
-\pgf@x=\dimen130
-\pgf@y=\dimen131
-\pgf@xa=\dimen132
-\pgf@ya=\dimen133
-\pgf@xb=\dimen134
-\pgf@yb=\dimen135
-\pgf@xc=\dimen136
-\pgf@yc=\dimen137
+\pgf@x=\dimen134
+\pgf@y=\dimen135
+\pgf@xa=\dimen136
+\pgf@ya=\dimen137
+\pgf@xb=\dimen138
+\pgf@yb=\dimen139
+\pgf@xc=\dimen140
+\pgf@yc=\dimen141
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count115
-\c@pgf@countb=\count116
-\c@pgf@countc=\count117
-\c@pgf@countd=\count118
-\t@pgf@toka=\toks26
-\t@pgf@tokb=\toks27
-\t@pgf@tokc=\toks28
+\c@pgf@counta=\count123
+\c@pgf@countb=\count124
+\c@pgf@countc=\count125
+\c@pgf@countd=\count126
+\t@pgf@toka=\toks27
+\t@pgf@tokb=\toks28
+\t@pgf@tokc=\toks29
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
@@ -833,8 +866,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count119
-\pgfsyssoftpath@bigbuffer@items=\count120
+\pgfsyssoftpath@smallbuffer@items=\count127
+\pgfsyssoftpath@bigbuffer@items=\count128
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -846,6 +879,7 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -862,12 +896,12 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen138
-\pgfmath@count=\count121
-\pgfmath@box=\box29
-\pgfmath@toks=\toks29
-\pgfmath@stack@operand=\toks30
-\pgfmath@stack@operation=\toks31
+\pgfmath@dimen=\dimen142
+\pgfmath@count=\count129
+\pgfmath@box=\box31
+\pgfmath@toks=\toks30
+\pgfmath@stack@operand=\toks31
+\pgfmath@stack@operation=\toks32
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
 tex
@@ -888,57 +922,57 @@ code.tex)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
 erarithmetics.code.tex)))
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count122
+\c@pgfmathroundto@lastzeros=\count130
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen139
-\pgf@picmaxx=\dimen140
-\pgf@picminy=\dimen141
-\pgf@picmaxy=\dimen142
-\pgf@pathminx=\dimen143
-\pgf@pathmaxx=\dimen144
-\pgf@pathminy=\dimen145
-\pgf@pathmaxy=\dimen146
-\pgf@xx=\dimen147
-\pgf@xy=\dimen148
-\pgf@yx=\dimen149
-\pgf@yy=\dimen150
-\pgf@zx=\dimen151
-\pgf@zy=\dimen152
+\pgf@picminx=\dimen143
+\pgf@picmaxx=\dimen144
+\pgf@picminy=\dimen145
+\pgf@picmaxy=\dimen146
+\pgf@pathminx=\dimen147
+\pgf@pathmaxx=\dimen148
+\pgf@pathminy=\dimen149
+\pgf@pathmaxy=\dimen150
+\pgf@xx=\dimen151
+\pgf@xy=\dimen152
+\pgf@yx=\dimen153
+\pgf@yy=\dimen154
+\pgf@zx=\dimen155
+\pgf@zy=\dimen156
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
 ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen153
-\pgf@path@lasty=\dimen154
+\pgf@path@lastx=\dimen157
+\pgf@path@lasty=\dimen158
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
 .code.tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen155
-\pgf@shorten@start@additional=\dimen156
+\pgf@shorten@end@additional=\dimen159
+\pgf@shorten@start@additional=\dimen160
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box30
-\pgf@hbox=\box31
-\pgf@layerbox@main=\box32
-\pgf@picture@serial@count=\count123
+\pgfpic=\box32
+\pgf@hbox=\box33
+\pgf@layerbox@main=\box34
+\pgf@picture@serial@count=\count131
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen157
+\pgflinewidth=\dimen161
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
 ations.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen158
-\pgf@pt@y=\dimen159
-\pgf@pt@temp=\dimen160
+\pgf@pt@x=\dimen162
+\pgf@pt@y=\dimen163
+\pgf@pt@temp=\dimen164
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
 e.tex
@@ -955,13 +989,13 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
 de.tex
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen161
+\pgfarrowsep=\dimen165
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
 e.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen162
-\pgf@sys@shading@range@num=\count124
+\pgf@max=\dimen166
+\pgf@sys@shading@range@num=\count132
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -970,7 +1004,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
 code.tex
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box33
+\pgfexternal@startupbox=\box35
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
 de.tex
@@ -987,7 +1021,7 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
 e.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box34
+\pgfnodeparttextbox=\box36
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
 tex
@@ -996,8 +1030,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen163
-\pgf@nodesepend=\dimen164
+\pgf@nodesepstart=\dimen167
+\pgf@nodesepend=\dimen168
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
@@ -1012,10 +1046,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen165
-\pgffor@skip=\dimen166
-\pgffor@stack=\toks32
-\pgffor@toks=\toks33
+\pgffor@iter=\dimen169
+\pgffor@skip=\dimen170
+\pgffor@stack=\toks33
+\pgffor@toks=\toks34
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
@@ -1024,32 +1058,32 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count125
-\pgfplotmarksize=\dimen167
+\pgf@plot@mark@count=\count133
+\pgfplotmarksize=\dimen171
 )
-\tikz@lastx=\dimen168
-\tikz@lasty=\dimen169
-\tikz@lastxsaved=\dimen170
-\tikz@lastysaved=\dimen171
-\tikzleveldistance=\dimen172
-\tikzsiblingdistance=\dimen173
-\tikz@figbox=\box35
-\tikz@figbox@bg=\box36
-\tikz@tempbox=\box37
-\tikz@tempbox@bg=\box38
-\tikztreelevel=\count126
-\tikznumberofchildren=\count127
-\tikznumberofcurrentchild=\count128
-\tikz@fig@count=\count129
+\tikz@lastx=\dimen172
+\tikz@lasty=\dimen173
+\tikz@lastxsaved=\dimen174
+\tikz@lastysaved=\dimen175
+\tikzleveldistance=\dimen176
+\tikzsiblingdistance=\dimen177
+\tikz@figbox=\box37
+\tikz@figbox@bg=\box38
+\tikz@tempbox=\box39
+\tikz@tempbox@bg=\box40
+\tikztreelevel=\count134
+\tikznumberofchildren=\count135
+\tikznumberofcurrentchild=\count136
+\tikz@fig@count=\count137
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count130
-\pgfmatrixcurrentcolumn=\count131
-\pgf@matrix@numberofcolumns=\count132
+\pgfmatrixcurrentrow=\count138
+\pgfmatrixcurrentcolumn=\count139
+\pgf@matrix@numberofcolumns=\count140
 )
-\tikz@expandcount=\count133
+\tikz@expandcount=\count141
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
@@ -1060,8 +1094,8 @@ Package: tcolorbox 2017/04/25 version 4.03 text color boxes
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks34
-\verbatim@line=\toks35
+\every@verbatim=\toks35
+\verbatim@line=\toks36
 \verbatim@in@stream=\read2
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/environ/environ.sty
@@ -1072,33 +1106,33 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count134
+\etb@tempcnta=\count142
 )
-\tcb@titlebox=\box39
-\tcb@upperbox=\box40
-\tcb@lowerbox=\box41
-\tcb@phantombox=\box42
-\c@tcbbreakpart=\count135
-\c@tcblayer=\count136
-\tcolorbox@number=\count137
-\tcb@temp=\box43
-\tcb@temp=\box44
+\tcb@titlebox=\box41
+\tcb@upperbox=\box42
+\tcb@lowerbox=\box43
+\tcb@phantombox=\box44
+\c@tcbbreakpart=\count143
+\c@tcblayer=\count144
+\tcolorbox@number=\count145
 \tcb@temp=\box45
 \tcb@temp=\box46
+\tcb@temp=\box47
+\tcb@temp=\box48
 \tcb@out=\write4
 \tcb@record@out=\write5
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2015/03/04 v2.20.2
-\thm@style=\toks36
-\thm@bodyfont=\toks37
-\thm@headfont=\toks38
-\thm@notefont=\toks39
-\thm@headpunct=\toks40
+\thm@style=\toks37
+\thm@bodyfont=\toks38
+\thm@headfont=\toks39
+\thm@notefont=\toks40
+\thm@headpunct=\toks41
 \thm@preskip=\skip51
 \thm@postskip=\skip52
 \thm@headsep=\skip53
-\dth@everypar=\toks41
+\dth@everypar=\toks42
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -1124,57 +1158,57 @@ Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 40.
+less on input line 69.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 41.
+less on input line 70.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 42.
+less on input line 71.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 43.
+less on input line 72.
 
 (./CSCC43.aux)
 \openout1 = `CSCC43.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 75.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    ... okay on input line 75.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count138
-\scratchdimen=\dimen174
-\scratchbox=\box47
-\nofMPsegments=\count139
-\nofMParguments=\count140
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count141
-\MPscratchDim=\dimen175
-\MPnumerator=\count142
-\makeMPintoPDFobject=\count143
-\everyMPtoPDFconversion=\toks43
+\scratchcounter=\count146
+\scratchdimen=\dimen178
+\scratchbox=\box49
+\nofMPsegments=\count147
+\nofMParguments=\count148
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count149
+\MPscratchDim=\dimen179
+\MPnumerator=\count150
+\makeMPintoPDFobject=\count151
+\everyMPtoPDFconversion=\toks44
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1192,8 +1226,9 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box48
-Package hyperref Info: Link coloring OFF on input line 46.
+\c@lstlisting=\count152
+\AtBeginShipoutBox=\box50
+Package hyperref Info: Link coloring OFF on input line 75.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1201,23 +1236,23 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count144
+\c@section@level=\count153
 )
-LaTeX Info: Redefining \ref on input line 46.
-LaTeX Info: Redefining \pageref on input line 46.
-LaTeX Info: Redefining \nameref on input line 46.
+LaTeX Info: Redefining \ref on input line 75.
+LaTeX Info: Redefining \pageref on input line 75.
+LaTeX Info: Redefining \nameref on input line 75.
 
 (./CSCC43.out) (./CSCC43.out)
 \@outlinefile=\write6
 \openout6 = `CSCC43.out'.
 
  ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 52.
+LaTeX Font Info:    Try loading font information for U+msa on input line 81.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 52.
+LaTeX Font Info:    Try loading font information for U+msb on input line 81.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1243,12 +1278,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
 
-Overfull \hbox (20.28416pt too wide) in paragraph at lines 69--70
+Overfull \hbox (20.28416pt too wide) in paragraph at lines 98--99
 \OT1/cmr/m/n/12 from, does not al-ready show in-for-ma-tion. In-cludes mul-ti-m
 e-dia, maps, doc-u-ments,
  []
@@ -1259,35 +1294,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4] <imgs/lec1-1.png, id=356, 776.9025pt x 349.305pt>
+[4] <imgs/lec1-1.png, id=391, 776.9025pt x 349.305pt>
 File: imgs/lec1-1.png Graphic file (type png)
  <use imgs/lec1-1.png>
-Package pdftex.def Info: imgs/lec1-1.png used on input line 113.
+Package pdftex.def Info: imgs/lec1-1.png used on input line 142.
 (pdftex.def)             Requested size: 388.45029pt x 174.65207pt.
 
-Overfull \hbox (10.1585pt too wide) in paragraph at lines 110--114
+Overfull \hbox (10.1585pt too wide) in paragraph at lines 139--143
  []\OT1/cmr/bx/n/12 Metadata[] \OT1/cmr/m/n/12 "Data about data". Data that de-
 scribes the prop-er-ties of end-user
  []
 
-<imgs/lec1-2.png, id=358, 684.5575pt x 357.335pt>
+<imgs/lec1-2.png, id=393, 684.5575pt x 357.335pt>
 File: imgs/lec1-2.png Graphic file (type png)
  <use imgs/lec1-2.png>
-Package pdftex.def Info: imgs/lec1-2.png used on input line 124.
+Package pdftex.def Info: imgs/lec1-2.png used on input line 153.
 (pdftex.def)             Requested size: 342.27791pt x 178.66705pt.
 
-Overfull \hbox (14.7833pt too wide) in paragraph at lines 121--125
+Overfull \hbox (14.7833pt too wide) in paragraph at lines 150--154
 \OT1/cmr/m/n/12 data, was used prior to the in-ven-tion of databases, but has i
 ts own dis-ad-van-tages. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--125
+Underfull \hbox (badness 10000) in paragraph at lines 150--154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--125
+Underfull \hbox (badness 10000) in paragraph at lines 150--154
 
  []
 
@@ -1305,54 +1340,54 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [6 <./imgs/lec1-2.png>]
-Overfull \hbox (0.87927pt too wide) in paragraph at lines 135--136
+Overfull \hbox (0.87927pt too wide) in paragraph at lines 164--165
 \OT1/cmr/m/n/12 pro-gram main-te-nance, so to avoid these dis-ad-van-tages, the
  database ap-proach
  []
 
-<imgs/lec1-3.png, id=374, 660.4675pt x 254.9525pt>
+<imgs/lec1-3.png, id=409, 660.4675pt x 254.9525pt>
 File: imgs/lec1-3.png Graphic file (type png)
  <use imgs/lec1-3.png>
-Package pdftex.def Info: imgs/lec1-3.png used on input line 142.
+Package pdftex.def Info: imgs/lec1-3.png used on input line 171.
 (pdftex.def)             Requested size: 330.23294pt x 127.47592pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--143
+Underfull \hbox (badness 10000) in paragraph at lines 168--172
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--143
+Underfull \hbox (badness 10000) in paragraph at lines 168--172
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--147
+Underfull \hbox (badness 10000) in paragraph at lines 173--176
 
  []
 
 
-Overfull \hbox (10.67084pt too wide) in paragraph at lines 144--147
+Overfull \hbox (10.67084pt too wide) in paragraph at lines 173--176
 \OT1/cmr/m/n/12 Some ex-am-ples of data mod-els in-clude a re-la-tional data mo
 del, a semistruc-tured
  []
 
-<imgs/lec1-4.png, id=375, 784.9325pt x 215.80624pt>
+<imgs/lec1-4.png, id=410, 784.9325pt x 215.80624pt>
 File: imgs/lec1-4.png Graphic file (type png)
  <use imgs/lec1-4.png>
-Package pdftex.def Info: imgs/lec1-4.png used on input line 153.
+Package pdftex.def Info: imgs/lec1-4.png used on input line 182.
 (pdftex.def)             Requested size: 392.46529pt x 107.90285pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--154
+Underfull \hbox (badness 10000) in paragraph at lines 179--183
 
  []
 
 
-Overfull \hbox (2.46529pt too wide) in paragraph at lines 150--154
+Overfull \hbox (2.46529pt too wide) in paragraph at lines 179--183
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--154
+Underfull \hbox (badness 10000) in paragraph at lines 179--183
 
  []
 
@@ -1363,13 +1398,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [7 <./imgs/lec1-3.png>]
-Overfull \hbox (17.71268pt too wide) in paragraph at lines 163--164
+Overfull \hbox (17.71268pt too wide) in paragraph at lines 192--193
  []\OT1/cmr/bx/n/12 Increased pro-duc-tiv-ity of ap-pli-ca-tion de-vel-op-ment[
 ] \OT1/cmr/m/n/12 Since the ap-pli-ca-tion
  []
 
 
-Overfull \hbox (20.1737pt too wide) in paragraph at lines 165--166
+Overfull \hbox (20.1737pt too wide) in paragraph at lines 194--195
  []\OT1/cmr/bx/n/12 Enforcement of stan-dards[] \OT1/cmr/m/n/12 Stan-dards are 
 en-forced by the uni-form pro-ce-dures
  []
@@ -1381,25 +1416,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8 <./imgs/lec1-4.png>]
-Overfull \hbox (2.5992pt too wide) in paragraph at lines 171--172
+Overfull \hbox (2.5992pt too wide) in paragraph at lines 200--201
  []\OT1/cmr/bx/n/12 Reduced pro-gram main-te-nance[] \OT1/cmr/m/n/12 Be-cause o
 f data-program in-de-pen-dence,
  []
 
 
-Overfull \hbox (13.93073pt too wide) in paragraph at lines 177--178
+Overfull \hbox (13.93073pt too wide) in paragraph at lines 206--207
  []\OT1/cmr/bx/n/12 New spe-cial-ized per-son-nel[] \OT1/cmr/m/n/12 Com-pa-nies
  need to hire new peo-ple for database
  []
 
 
-Overfull \hbox (12.90184pt too wide) in paragraph at lines 179--180
+Overfull \hbox (12.90184pt too wide) in paragraph at lines 208--209
  []\OT1/cmr/bx/n/12 Installation and Man-age-ment of Cost and Com-plex-ity[] \O
 T1/cmr/m/n/12 Im-ple-men-ta-tion
  []
 
 
-Overfull \hbox (5.82614pt too wide) in paragraph at lines 181--182
+Overfull \hbox (5.82614pt too wide) in paragraph at lines 210--211
  []\OT1/cmr/bx/n/12 Conversion Costs[] \OT1/cmr/m/n/12 Costs for con-vert-ing l
 egacy sys-tem to a mod-ern database 
  []
@@ -1418,32 +1453,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
-<imgs/lec2-1.png, id=416, 700.6175pt x 358.33875pt>
+<imgs/lec2-1.png, id=451, 700.6175pt x 358.33875pt>
 File: imgs/lec2-1.png Graphic file (type png)
  <use imgs/lec2-1.png>
-Package pdftex.def Info: imgs/lec2-1.png used on input line 209.
+Package pdftex.def Info: imgs/lec2-1.png used on input line 238.
 (pdftex.def)             Requested size: 350.30789pt x 179.16893pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--210
+Underfull \hbox (badness 10000) in paragraph at lines 236--239
 
  []
 
-<imgs/lec2-2.png, id=417, 634.37pt x 381.425pt>
+<imgs/lec2-2.png, id=452, 634.37pt x 381.425pt>
 File: imgs/lec2-2.png Graphic file (type png)
  <use imgs/lec2-2.png>
-Package pdftex.def Info: imgs/lec2-2.png used on input line 216.
+Package pdftex.def Info: imgs/lec2-2.png used on input line 245.
 (pdftex.def)             Requested size: 317.18422pt x 190.71202pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--217
+Underfull \hbox (badness 10000) in paragraph at lines 241--246
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--217
+Underfull \hbox (badness 10000) in paragraph at lines 241--246
 
  []
 
@@ -1454,41 +1489,41 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11 <./imgs/lec2-1.png>]
-Overfull \hbox (29.63098pt too wide) in paragraph at lines 218--219
+Overfull \hbox (29.63098pt too wide) in paragraph at lines 247--248
 []\OT1/cmr/m/n/12 The last of the 3 com-po-nents are \OT1/cmr/bx/n/12 at-tribut
 es\OT1/cmr/m/n/12 , which are prop-er-ties or char-ac-ter-is-tics
  []
 
 
-Overfull \hbox (1.79315pt too wide) in paragraph at lines 222--225
+Overfull \hbox (1.79315pt too wide) in paragraph at lines 251--254
 \OT1/cmr/m/n/12 for the data, what ex-actly we need this data to do and what ki
 nd of con-straints
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--225
+Underfull \hbox (badness 10000) in paragraph at lines 251--254
 
  []
 
 
-Overfull \hbox (7.01532pt too wide) in paragraph at lines 228--231
+Overfull \hbox (7.01532pt too wide) in paragraph at lines 257--260
 \OT1/cmr/m/n/12 each semester." These state-ments are usu-ally de-rived from po
 li-cies, pro-ce-dures,
  []
 
 
-Overfull \hbox (2.44592pt too wide) in paragraph at lines 228--231
+Overfull \hbox (2.44592pt too wide) in paragraph at lines 257--260
 \OT1/cmr/m/n/12 the pre-req-ui-sites to be able to take a course." These con-st
 raints and def-i-ni-tions
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--231
+Underfull \hbox (badness 10000) in paragraph at lines 257--260
 
  []
 
 
-Overfull \hbox (7.73337pt too wide) in paragraph at lines 228--231
+Overfull \hbox (7.73337pt too wide) in paragraph at lines 257--260
 \OT1/cmr/m/n/12 that this database is be-ing cre-ated for and by in-ves-ti-gat-
 ing busi-ness doc-u-ments. 
  []
@@ -1499,29 +1534,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12 <./imgs/lec2-2.png>] <imgs/lec2-3.png, id=428, 710.655pt x 351.3125pt>
+[12 <./imgs/lec2-2.png>] <imgs/lec2-3.png, id=463, 710.655pt x 351.3125pt>
 File: imgs/lec2-3.png Graphic file (type png)
 
 <use imgs/lec2-3.png>
-Package pdftex.def Info: imgs/lec2-3.png used on input line 247.
+Package pdftex.def Info: imgs/lec2-3.png used on input line 276.
 (pdftex.def)             Requested size: 355.32663pt x 175.6558pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--248
+Underfull \hbox (badness 10000) in paragraph at lines 270--277
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--248
+Underfull \hbox (badness 10000) in paragraph at lines 270--277
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--248
+Underfull \hbox (badness 10000) in paragraph at lines 270--277
 
  []
 
 
-Overfull \hbox (7.92503pt too wide) in paragraph at lines 251--252
+Overfull \hbox (7.92503pt too wide) in paragraph at lines 280--281
 \OT1/cmr/m/n/12 After busi-ness rules have been col-lected, from these rules, r
 e-la-tion-ships be-tween
  []
@@ -1533,43 +1568,43 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [13 <./imgs/lec2-3.png>]
-Overfull \hbox (6.74173pt too wide) in paragraph at lines 255--256
+Overfull \hbox (6.74173pt too wide) in paragraph at lines 284--285
 \OT1/cmr/m/n/12 An en-tity is the build-ing block of the En-tity Re-la-tion-shi
 p Model, such ex-am-ples
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--267
+Underfull \hbox (badness 10000) in paragraph at lines 291--296
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--267
+Underfull \hbox (badness 10000) in paragraph at lines 291--296
 
  []
 
-<imgs/lec2-4.png, id=435, 697.60625pt x 347.2975pt>
+<imgs/lec2-4.png, id=471, 697.60625pt x 347.2975pt>
 File: imgs/lec2-4.png Graphic file (type png)
  <use imgs/lec2-4.png>
-Package pdftex.def Info: imgs/lec2-4.png used on input line 278.
+Package pdftex.def Info: imgs/lec2-4.png used on input line 307.
 (pdftex.def)             Requested size: 348.80226pt x 173.64832pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--279
+Underfull \hbox (badness 10000) in paragraph at lines 299--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--279
+Underfull \hbox (badness 10000) in paragraph at lines 299--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--279
+Underfull \hbox (badness 10000) in paragraph at lines 299--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--279
+Underfull \hbox (badness 10000) in paragraph at lines 299--308
 
  []
 
@@ -1580,24 +1615,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 282--285
+Underfull \hbox (badness 10000) in paragraph at lines 311--314
 
  []
 
 
-Overfull \hbox (18.63048pt too wide) in paragraph at lines 282--285
+Overfull \hbox (18.63048pt too wide) in paragraph at lines 311--314
 \OT1/cmr/m/n/12 An at-tribute has dif-fer-ent types, in-clud-ing: re-quired, op
 -tional, sim-ple, com-pos-ite,
  []
 
 
-Overfull \hbox (1.00223pt too wide) in paragraph at lines 287--288
+Overfull \hbox (1.00223pt too wide) in paragraph at lines 316--317
  []\OT1/cmr/bx/n/12 Optional At-tributes[] \OT1/cmr/m/n/12 Op-tional At-tribute
 s can be null. May be rep-re-sented
  []
 
 
-Overfull \hbox (6.24583pt too wide) in paragraph at lines 289--290
+Overfull \hbox (6.24583pt too wide) in paragraph at lines 318--319
  []\OT1/cmr/bx/n/12 Composite At-tributes[] \OT1/cmr/m/n/12 An at-tribute that 
 has mean-ing-ful com-po-nent parts.
  []
@@ -1609,7 +1644,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [15 <./imgs/lec2-4.png>]
-Overfull \hbox (16.39555pt too wide) in paragraph at lines 297--298
+Overfull \hbox (16.39555pt too wide) in paragraph at lines 326--327
  []\OT1/cmr/bx/n/12 Derived At-tributes[] \OT1/cmr/m/n/12 An at-tribute that is
  de-rived from other stored at-tributes.
  []
@@ -1627,44 +1662,44 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17] <imgs/lec3-1.png, id=466, 624.3325pt x 187.70125pt>
+[17] <imgs/lec3-1.png, id=501, 624.3325pt x 187.70125pt>
 File: imgs/lec3-1.png Graphic file (type png)
  <use imgs/lec3-1.png>
-Package pdftex.def Info: imgs/lec3-1.png used on input line 326.
+Package pdftex.def Info: imgs/lec3-1.png used on input line 355.
 (pdftex.def)             Requested size: 312.16548pt x 93.85039pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--327
+Underfull \hbox (badness 10000) in paragraph at lines 352--356
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--332
+Underfull \hbox (badness 10000) in paragraph at lines 357--361
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--332
+Underfull \hbox (badness 10000) in paragraph at lines 357--361
 
  []
 
-<imgs/lec3-2.png, id=467, 672.5125pt x 230.8625pt>
+<imgs/lec3-2.png, id=502, 672.5125pt x 230.8625pt>
 File: imgs/lec3-2.png Graphic file (type png)
  <use imgs/lec3-2.png>
-Package pdftex.def Info: imgs/lec3-2.png used on input line 342.
+Package pdftex.def Info: imgs/lec3-2.png used on input line 371.
 (pdftex.def)             Requested size: 336.25542pt x 115.43095pt.
 
-Overfull \hbox (1.39732pt too wide) in paragraph at lines 336--343
+Overfull \hbox (1.39732pt too wide) in paragraph at lines 365--372
 \OT1/cmr/m/n/12 The re-la-tion-ship could be in any de-gree or car-di-nal-ity (
 Manda-tory or op-tional,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--343
+Underfull \hbox (badness 10000) in paragraph at lines 365--372
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--343
+Underfull \hbox (badness 10000) in paragraph at lines 365--372
 
  []
 
@@ -1675,34 +1710,34 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [18 <./imgs/lec3-1.png>]
-Overfull \hbox (10.9265pt too wide) in paragraph at lines 354--357
+Overfull \hbox (10.9265pt too wide) in paragraph at lines 383--386
 \OT1/cmr/m/n/12 The ER model has been suit-able for mod-elling most com-mon bus
 i-ness prob-lems,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--357
+Underfull \hbox (badness 10000) in paragraph at lines 383--386
 
  []
 
-<imgs/lec3-3.png, id=474, 609.27625pt x 399.4925pt>
+<imgs/lec3-3.png, id=509, 609.27625pt x 399.4925pt>
 File: imgs/lec3-3.png Graphic file (type png)
  <use imgs/lec3-3.png>
-Package pdftex.def Info: imgs/lec3-3.png used on input line 363.
+Package pdftex.def Info: imgs/lec3-3.png used on input line 392.
 (pdftex.def)             Requested size: 304.63737pt x 199.74576pt.
 
-<imgs/lec3-4.png, id=475, 704.6325pt x 430.60875pt>
+<imgs/lec3-4.png, id=510, 704.6325pt x 430.60875pt>
 File: imgs/lec3-4.png Graphic file (type png)
  <use imgs/lec3-4.png>
-Package pdftex.def Info: imgs/lec3-4.png used on input line 366.
+Package pdftex.def Info: imgs/lec3-4.png used on input line 395.
 (pdftex.def)             Requested size: 352.3154pt x 215.30383pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--367
+Underfull \hbox (badness 10000) in paragraph at lines 389--396
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--367
+Underfull \hbox (badness 10000) in paragraph at lines 389--396
 
  []
 
@@ -1712,20 +1747,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19 <./imgs/lec3-2.png>] <imgs/lec3-5.png, id=482, 546.04pt x 420.57124pt>
+[19 <./imgs/lec3-2.png>] <imgs/lec3-5.png, id=517, 546.04pt x 420.57124pt>
 File: imgs/lec3-5.png Graphic file (type png)
 
 <use imgs/lec3-5.png>
-Package pdftex.def Info: imgs/lec3-5.png used on input line 373.
+Package pdftex.def Info: imgs/lec3-5.png used on input line 402.
 (pdftex.def)             Requested size: 273.01933pt x 210.28511pt.
 
-Overfull \hbox (8.08151pt too wide) in paragraph at lines 370--374
+Overfull \hbox (8.08151pt too wide) in paragraph at lines 399--403
 \OT1/cmr/m/n/12 in the re-la-tion-ship. The in-stances of a sub-type may par-ti
 c-i-pate in a re-la-tion-ship
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--374
+Underfull \hbox (badness 10000) in paragraph at lines 399--403
 
  []
 
@@ -1736,35 +1771,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [20 <./imgs/lec3-3.png> <./imgs/lec3-4.png>]
-<imgs/lec3-6.png, id=489, 584.1825pt x 356.33125pt>
+<imgs/lec3-6.png, id=524, 584.1825pt x 356.33125pt>
 File: imgs/lec3-6.png Graphic file (type png)
  <use imgs/lec3-6.png>
-Package pdftex.def Info: imgs/lec3-6.png used on input line 382.
+Package pdftex.def Info: imgs/lec3-6.png used on input line 411.
 (pdftex.def)             Requested size: 292.09053pt x 178.16518pt.
 
-<imgs/lec3-7.png, id=490, 617.30624pt x 311.1625pt>
+<imgs/lec3-7.png, id=525, 617.30624pt x 311.1625pt>
 File: imgs/lec3-7.png Graphic file (type png)
  <use imgs/lec3-7.png>
-Package pdftex.def Info: imgs/lec3-7.png used on input line 384.
+Package pdftex.def Info: imgs/lec3-7.png used on input line 413.
 (pdftex.def)             Requested size: 308.65236pt x 155.58087pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
+Underfull \hbox (badness 10000) in paragraph at lines 406--414
 
  []
 
 
-Overfull \hbox (41.66373pt too wide) in paragraph at lines 377--385
+Overfull \hbox (41.66373pt too wide) in paragraph at lines 406--414
 \OT1/cmr/bx/n/12 Disjointness Con-straints \OT1/cmr/m/n/12 is whether an in-sta
 nce of a su-per-type may si-mul-ta-ne-ously
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
+Underfull \hbox (badness 10000) in paragraph at lines 406--414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
+Underfull \hbox (badness 10000) in paragraph at lines 406--414
 
  []
 
@@ -1774,19 +1809,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21 <./imgs/lec3-5.png>] <imgs/lec3-8.png, id=496, 346.29375pt x 224.84pt>
+[21 <./imgs/lec3-5.png>] <imgs/lec3-8.png, id=531, 346.29375pt x 224.84pt>
 File: imgs/lec3-8.png Graphic file (type png)
 
 <use imgs/lec3-8.png>
-Package pdftex.def Info: imgs/lec3-8.png used on input line 391.
+Package pdftex.def Info: imgs/lec3-8.png used on input line 420.
 (pdftex.def)             Requested size: 173.14644pt x 112.41972pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 388--392
+Underfull \hbox (badness 10000) in paragraph at lines 417--421
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 388--392
+Underfull \hbox (badness 10000) in paragraph at lines 417--421
 
  []
 
@@ -1804,12 +1839,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [23 <./imgs/lec3-8.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 412--416
+Underfull \hbox (badness 10000) in paragraph at lines 441--445
 
  []
 
 
-Overfull \hbox (2.93343pt too wide) in paragraph at lines 412--416
+Overfull \hbox (2.93343pt too wide) in paragraph at lines 441--445
 \OT1/cmr/m/n/12 So in cor-re-spon-dence with the entity-relationship model, En-
 tity Types be-come
  []
@@ -1821,24 +1856,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [24]
-Overfull \hbox (22.88126pt too wide) in paragraph at lines 427--428
+Overfull \hbox (22.88126pt too wide) in paragraph at lines 456--457
  []\OT1/cmr/bx/n/12 Foreign Key[] \OT1/cmr/m/n/12 A for-eign key is an iden-ti-
 fier that en-ables a de-pen-dent re-la-tion-ship
  []
 
-<imgs/lec4-1.png, id=512, 654.445pt x 225.84375pt>
+<imgs/lec4-1.png, id=547, 654.445pt x 225.84375pt>
 File: imgs/lec4-1.png Graphic file (type png)
  <use imgs/lec4-1.png>
-Package pdftex.def Info: imgs/lec4-1.png used on input line 430.
+Package pdftex.def Info: imgs/lec4-1.png used on input line 459.
 (pdftex.def)             Requested size: 327.2217pt x 112.92159pt.
 
-<imgs/lec4-2.png, id=513, 598.235pt x 311.1625pt>
+<imgs/lec4-2.png, id=548, 598.235pt x 311.1625pt>
 File: imgs/lec4-2.png Graphic file (type png)
  <use imgs/lec4-2.png>
-Package pdftex.def Info: imgs/lec4-2.png used on input line 437.
+Package pdftex.def Info: imgs/lec4-2.png used on input line 466.
 (pdftex.def)             Requested size: 299.11676pt x 155.58087pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--438
+Underfull \hbox (badness 10000) in paragraph at lines 463--467
 
  []
 
@@ -1848,14 +1883,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25 <./imgs/lec4-1.png>] <imgs/lec4-3.png, id=523, 629.35126pt x 323.2075pt>
+[25 <./imgs/lec4-1.png>] <imgs/lec4-3.png, id=558, 629.35126pt x 323.2075pt>
 File: imgs/lec4-3.png Graphic file (type png)
 
 <use imgs/lec4-3.png>
-Package pdftex.def Info: imgs/lec4-3.png used on input line 446.
+Package pdftex.def Info: imgs/lec4-3.png used on input line 475.
 (pdftex.def)             Requested size: 314.67485pt x 161.60335pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--455
+Underfull \hbox (badness 10000) in paragraph at lines 479--484
 
  []
 
@@ -1866,7 +1901,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [26 <./imgs/lec4-2.png> <./imgs/lec4-3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 466--469
+Underfull \hbox (badness 10000) in paragraph at lines 495--498
 
  []
 
@@ -1877,7 +1912,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [27]
-Overfull \hbox (2.44177pt too wide) in paragraph at lines 481--482
+Overfull \hbox (2.44177pt too wide) in paragraph at lines 510--511
 \OT1/cmr/m/n/12 at-tribute as a Re-la-tion at-tribute, and En-tity types with m
 ul-ti-val-ued at-tributes
  []
@@ -1889,22 +1924,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 503--506
+Underfull \hbox (badness 10000) in paragraph at lines 532--535
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 509--512
+Underfull \hbox (badness 10000) in paragraph at lines 538--541
 
  []
 
-<imgs/lec5-1.png, id=554, 724.7075pt x 415.5525pt>
+<imgs/lec5-1.png, id=590, 724.7075pt x 415.5525pt>
 File: imgs/lec5-1.png Graphic file (type png)
  <use imgs/lec5-1.png>
-Package pdftex.def Info: imgs/lec5-1.png used on input line 518.
+Package pdftex.def Info: imgs/lec5-1.png used on input line 547.
 (pdftex.def)             Requested size: 362.35286pt x 207.77574pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 515--519
+Underfull \hbox (badness 10000) in paragraph at lines 544--548
 
  []
 
@@ -1914,30 +1949,30 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29] <imgs/lec5-2.png, id=559, 563.10374pt x 364.36125pt>
+[29] <imgs/lec5-2.png, id=595, 563.10374pt x 364.36125pt>
 File: imgs/lec5-2.png Graphic file (type png)
 
 <use imgs/lec5-2.png>
-Package pdftex.def Info: imgs/lec5-2.png used on input line 525.
+Package pdftex.def Info: imgs/lec5-2.png used on input line 554.
 (pdftex.def)             Requested size: 394.16994pt x 255.05113pt.
- <imgs/lec5-3.png, id=560, 656.4525pt x 255.95625pt>
+ <imgs/lec5-3.png, id=596, 656.4525pt x 255.95625pt>
 File: imgs/lec5-3.png Graphic file (type png)
 
 <use imgs/lec5-3.png>
-Package pdftex.def Info: imgs/lec5-3.png used on input line 526.
+Package pdftex.def Info: imgs/lec5-3.png used on input line 555.
 (pdftex.def)             Requested size: 393.87454pt x 153.57492pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 522--527
+Underfull \hbox (badness 10000) in paragraph at lines 551--556
 
  []
 
 
-Overfull \hbox (4.16994pt too wide) in paragraph at lines 522--527
+Overfull \hbox (4.16994pt too wide) in paragraph at lines 551--556
 [] 
  []
 
 
-Overfull \hbox (3.87454pt too wide) in paragraph at lines 522--527
+Overfull \hbox (3.87454pt too wide) in paragraph at lines 551--556
 [] 
  []
 
@@ -1955,24 +1990,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [31 <./imgs/lec5-2.png> <./imgs/lec5-3.png>]
-<imgs/lec5-4.png, id=573, 489.83pt x 169.63374pt>
+<imgs/lec5-4.png, id=609, 489.83pt x 169.63374pt>
 File: imgs/lec5-4.png Graphic file (type png)
  <use imgs/lec5-4.png>
-Package pdftex.def Info: imgs/lec5-4.png used on input line 550.
+Package pdftex.def Info: imgs/lec5-4.png used on input line 579.
 (pdftex.def)             Requested size: 391.86452pt x 135.70717pt.
 
-<imgs/lec5-5.png, id=574, 685.56125pt x 165.61874pt>
+<imgs/lec5-5.png, id=610, 685.56125pt x 165.61874pt>
 File: imgs/lec5-5.png Graphic file (type png)
  <use imgs/lec5-5.png>
-Package pdftex.def Info: imgs/lec5-5.png used on input line 551.
+Package pdftex.def Info: imgs/lec5-5.png used on input line 580.
 (pdftex.def)             Requested size: 342.77979pt x 82.80916pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--552
+Underfull \hbox (badness 10000) in paragraph at lines 576--581
 
  []
 
 
-Overfull \hbox (1.86452pt too wide) in paragraph at lines 547--552
+Overfull \hbox (1.86452pt too wide) in paragraph at lines 576--581
 [] 
  []
 
@@ -1990,45 +2025,45 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [33 <./imgs/lec5-4.png> <./imgs/lec5-5.png>]
-<imgs/lec6-1.png, id=590, 641.39626pt x 154.5775pt>
+<imgs/lec6-1.png, id=625, 641.39626pt x 154.5775pt>
 File: imgs/lec6-1.png Graphic file (type png)
  <use imgs/lec6-1.png>
-Package pdftex.def Info: imgs/lec6-1.png used on input line 566.
+Package pdftex.def Info: imgs/lec6-1.png used on input line 595.
 (pdftex.def)             Requested size: 384.84071pt x 92.7472pt.
 
-<imgs/lec6-2.png, id=591, 450.68375pt x 162.6075pt>
+<imgs/lec6-2.png, id=626, 450.68375pt x 162.6075pt>
 File: imgs/lec6-2.png Graphic file (type png)
  <use imgs/lec6-2.png>
-Package pdftex.def Info: imgs/lec6-2.png used on input line 568.
+Package pdftex.def Info: imgs/lec6-2.png used on input line 597.
 (pdftex.def)             Requested size: 383.08298pt x 138.21703pt.
 
-<imgs/lec6-3.png, id=592, 661.47125pt x 306.14375pt>
+<imgs/lec6-3.png, id=627, 661.47125pt x 306.14375pt>
 File: imgs/lec6-3.png Graphic file (type png)
  <use imgs/lec6-3.png>
-Package pdftex.def Info: imgs/lec6-3.png used on input line 571.
+Package pdftex.def Info: imgs/lec6-3.png used on input line 600.
 (pdftex.def)             Requested size: 396.8858pt x 183.68765pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 561--572
+Underfull \hbox (badness 10000) in paragraph at lines 590--601
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 561--572
+Underfull \hbox (badness 10000) in paragraph at lines 590--601
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 561--572
+Underfull \hbox (badness 10000) in paragraph at lines 590--601
 
  []
 
 
-Overfull \hbox (102.04213pt too wide) in paragraph at lines 561--572
+Overfull \hbox (102.04213pt too wide) in paragraph at lines 590--601
 []$ 
  []
 
 
-Overfull \hbox (6.8858pt too wide) in paragraph at lines 561--572
+Overfull \hbox (6.8858pt too wide) in paragraph at lines 590--601
 [] 
  []
 
@@ -2039,23 +2074,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [34 <./imgs/lec6-1.png> <./imgs/lec6-2.png>]
-<imgs/lec6-4.png, id=599, 642.4pt x 265.99374pt>
+<imgs/lec6-4.png, id=634, 642.4pt x 265.99374pt>
 File: imgs/lec6-4.png Graphic file (type png)
  <use imgs/lec6-4.png>
-Package pdftex.def Info: imgs/lec6-4.png used on input line 578.
+Package pdftex.def Info: imgs/lec6-4.png used on input line 607.
 (pdftex.def)             Requested size: 449.67694pt x 186.19434pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 575--579
+Underfull \hbox (badness 10000) in paragraph at lines 604--608
 
  []
 
 
-Overfull \hbox (70.45218pt too wide) in paragraph at lines 575--579
+Overfull \hbox (70.45218pt too wide) in paragraph at lines 604--608
 []$ 
  []
 
 
-Overfull \hbox (59.67694pt too wide) in paragraph at lines 575--579
+Overfull \hbox (59.67694pt too wide) in paragraph at lines 604--608
 [] 
  []
 
@@ -2066,30 +2101,30 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [35 <./imgs/lec6-3.png> <./imgs/lec6-4.png>]
-<imgs/lec6-5.png, id=606, 560.0925pt x 211.79124pt>
+<imgs/lec6-5.png, id=641, 560.0925pt x 211.79124pt>
 File: imgs/lec6-5.png Graphic file (type png)
  <use imgs/lec6-5.png>
-Package pdftex.def Info: imgs/lec6-5.png used on input line 590.
+Package pdftex.def Info: imgs/lec6-5.png used on input line 619.
 (pdftex.def)             Requested size: 392.06207pt x 148.25285pt.
 
-<imgs/lec6-6.png, id=607, 546.04pt x 216.81pt>
+<imgs/lec6-6.png, id=642, 546.04pt x 216.81pt>
 File: imgs/lec6-6.png Graphic file (type png)
  <use imgs/lec6-6.png>
-Package pdftex.def Info: imgs/lec6-6.png used on input line 591.
+Package pdftex.def Info: imgs/lec6-6.png used on input line 620.
 (pdftex.def)             Requested size: 382.22539pt x 151.76596pt.
 
-<imgs/lec6-7.png, id=608, 529.98pt x 121.45375pt>
+<imgs/lec6-7.png, id=643, 529.98pt x 121.45375pt>
 File: imgs/lec6-7.png Graphic file (type png)
  <use imgs/lec6-7.png>
-Package pdftex.def Info: imgs/lec6-7.png used on input line 592.
+Package pdftex.def Info: imgs/lec6-7.png used on input line 621.
 (pdftex.def)             Requested size: 370.98346pt x 85.01703pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 587--593
+Underfull \hbox (badness 10000) in paragraph at lines 616--622
 
  []
 
 
-Overfull \hbox (2.06207pt too wide) in paragraph at lines 587--593
+Overfull \hbox (2.06207pt too wide) in paragraph at lines 616--622
 [] 
  []
 
@@ -2100,48 +2135,48 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [36 <./imgs/lec6-5.png> <./imgs/lec6-6.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 600--627
+Underfull \hbox (badness 10000) in paragraph at lines 629--656
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--627
+Underfull \hbox (badness 10000) in paragraph at lines 629--656
 
  []
 
 
-Overfull \hbox (17.87965pt too wide) in paragraph at lines 600--627
+Overfull \hbox (17.87965pt too wide) in paragraph at lines 629--656
 \OT1/cmr/bx/n/12 Merged \OT1/cmr/m/n/12 EM-PLOYEE(EmployeeID, Name, Ad-dress, P
 hone, Job-Code, NoYears) 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--627
+Underfull \hbox (badness 10000) in paragraph at lines 629--656
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--627
+Underfull \hbox (badness 10000) in paragraph at lines 629--656
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--627
+Underfull \hbox (badness 10000) in paragraph at lines 629--656
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--627
+Underfull \hbox (badness 10000) in paragraph at lines 629--656
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--627
+Underfull \hbox (badness 10000) in paragraph at lines 629--656
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--627
+Underfull \hbox (badness 10000) in paragraph at lines 629--656
 
  []
 
@@ -2152,7 +2187,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [37 <./imgs/lec6-7.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 634--637
+Underfull \hbox (badness 10000) in paragraph at lines 663--666
 
  []
 
@@ -2162,19 +2197,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38] <imgs/lec6-8.png, id=627, 595.22375pt x 406.51875pt>
+[38] <imgs/lec6-8.png, id=662, 595.22375pt x 406.51875pt>
 File: imgs/lec6-8.png Graphic file (type png)
 
 <use imgs/lec6-8.png>
-Package pdftex.def Info: imgs/lec6-8.png used on input line 667.
+Package pdftex.def Info: imgs/lec6-8.png used on input line 696.
 (pdftex.def)             Requested size: 357.13701pt x 243.91312pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 663--668
+Underfull \hbox (badness 10000) in paragraph at lines 692--697
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 663--668
+Underfull \hbox (badness 10000) in paragraph at lines 692--697
 
  []
 
@@ -2192,11 +2227,318 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [40 <./imgs/lec6-8.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 681.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 681.
+Underfull \hbox (badness 10000) in paragraph at lines 713--715
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 713--715
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 720--723
+
+ []
+
+
+Overfull \hbox (0.74544pt too wide) in paragraph at lines 724--725
+ []\OT1/cmr/bx/n/12 Data Ma-nip-u-la-tion Lan-guage (DML)[] \OT1/cmr/m/n/12 The
+se com-mands are re-spon-si-ble
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[41] <imgs/lec7-1.png, id=692, 708.6475pt x 363.3575pt>
+File: imgs/lec7-1.png Graphic file (type png)
+ <use imgs/lec7-1.png>
+Package pdftex.def Info: imgs/lec7-1.png used on input line 747.
+(pdftex.def)             Requested size: 389.75734pt x 199.84723pt.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+
+Package xcolor Warning: Incompatible color definition on input line 749.
+
+
+Package xcolor Warning: Incompatible color definition on input line 749.
+
+
+Package xcolor Warning: Incompatible color definition on input line 749.
+
+
+Package xcolor Warning: Incompatible color definition on input line 751.
+
+
+Package xcolor Warning: Incompatible color definition on input line 751.
+
+
+Package xcolor Warning: Incompatible color definition on input line 752.
+
+
+Package xcolor Warning: Incompatible color definition on input line 753.
+
+
+Package xcolor Warning: Incompatible color definition on input line 754.
+
+
+Package xcolor Warning: Incompatible color definition on input line 755.
+
+
+Package xcolor Warning: Incompatible color definition on input line 755.
+
+
+Package xcolor Warning: Incompatible color definition on input line 755.
+
+
+Package xcolor Warning: Incompatible color definition on input line 755.
+
+
+Package xcolor Warning: Incompatible color definition on input line 755.
+
+
+Package xcolor Warning: Incompatible color definition on input line 755.
+
+
+Package xcolor Warning: Incompatible color definition on input line 755.
+
+
+Package xcolor Warning: Incompatible color definition on input line 755.
+
+
+Package xcolor Warning: Incompatible color definition on input line 755.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 756.
+
+
+Package xcolor Warning: Incompatible color definition on input line 757.
+
+
+Package xcolor Warning: Incompatible color definition on input line 758.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[42 <./imgs/lec7-1.png>]
+
+Package xcolor Warning: Incompatible color definition on input line 759.
+
+
+Package xcolor Warning: Incompatible color definition on input line 761.
+
+
+Package xcolor Warning: Incompatible color definition on input line 761.
+
+
+Package xcolor Warning: Incompatible color definition on input line 762.
+
+
+Package xcolor Warning: Incompatible color definition on input line 763.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 765.
+
+
+Package xcolor Warning: Incompatible color definition on input line 766.
+
+
+Package xcolor Warning: Incompatible color definition on input line 767.
+
+
+Package xcolor Warning: Incompatible color definition on input line 768.
+
+
+Package xcolor Warning: Incompatible color definition on input line 769.
+
+
+Package xcolor Warning: Incompatible color definition on input line 770.
+
+
+Package xcolor Warning: Incompatible color definition on input line 771.
+
+
+Package xcolor Warning: Incompatible color definition on input line 772.
+
+
+Package xcolor Warning: Incompatible color definition on input line 774.
+
+
+Package xcolor Warning: Incompatible color definition on input line 774.
+
+
+Package xcolor Warning: Incompatible color definition on input line 775.
+
+
+Package xcolor Warning: Incompatible color definition on input line 776.
+
+
+Package xcolor Warning: Incompatible color definition on input line 777.
+
+
+Package xcolor Warning: Incompatible color definition on input line 778.
+
+
+Package xcolor Warning: Incompatible color definition on input line 779.
+
+
+Package xcolor Warning: Incompatible color definition on input line 780.
+
+
+Package xcolor Warning: Incompatible color definition on input line 781.
+
+
+Package xcolor Warning: Incompatible color definition on input line 783.
+
+
+Package xcolor Warning: Incompatible color definition on input line 783.
+
+
+Package xcolor Warning: Incompatible color definition on input line 784.
+
+
+Package xcolor Warning: Incompatible color definition on input line 785.
+
+
+Package xcolor Warning: Incompatible color definition on input line 786.
+
+
+Package xcolor Warning: Incompatible color definition on input line 787.
+
+
+Package xcolor Warning: Incompatible color definition on input line 788.
+
+
+Package xcolor Warning: Incompatible color definition on input line 789.
+
+
+Package xcolor Warning: Incompatible color definition on input line 790.
+
+
+Package xcolor Warning: Incompatible color definition on input line 791.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 796--797
+
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 798.
+
+
+Package xcolor Warning: Incompatible color definition on input line 798.
+
+
+Package xcolor Warning: Incompatible color definition on input line 798.
+
+
+Package xcolor Warning: Incompatible color definition on input line 799.
+
+
+Package xcolor Warning: Incompatible color definition on input line 800.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43]
+
+Package xcolor Warning: Incompatible color definition on input line 801.
+
+
+Package xcolor Warning: Incompatible color definition on input line 802.
+
+
+Package xcolor Warning: Incompatible color definition on input line 803.
+
+
+Package xcolor Warning: Incompatible color definition on input line 804.
+
+
+Package xcolor Warning: Incompatible color definition on input line 805.
+
+
+Package xcolor Warning: Incompatible color definition on input line 806.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[44]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 813.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 813.
  (./CSCC43.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 681.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 681.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 813.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 813.
 
 
 Package rerunfilecheck Warning: File `CSCC43.out' has changed.
@@ -2204,30 +2546,32 @@ Package rerunfilecheck Warning: File `CSCC43.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `CSCC43.out':
-(rerunfilecheck)             Before: B35D27EFFDAF5F28F6105CCA74AE1730;4844
-(rerunfilecheck)             After:  70A1C7986D4C53B90013D6EEBE9A78F3;4927.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 681.
+(rerunfilecheck)             Before: 2BFF1E9458EC341C277DD24B45DD5ADA;5345
+(rerunfilecheck)             After:  233C20A6217A6052ABA97E9C4F3F2BF7;5500.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 813.
  ) 
 Here is how much of TeX's memory you used:
- 20154 strings out of 492995
- 376252 string characters out of 6132704
- 442164 words of memory out of 5000000
- 23137 multiletter control sequences out of 15000+600000
+ 22130 strings out of 492995
+ 402351 string characters out of 6132704
+ 557782 words of memory out of 5000000
+ 25015 multiletter control sequences out of 15000+600000
  15713 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,73p,925b,434s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,73p,925b,2103s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on CSCC43.pdf (40 pages, 3145814 bytes).
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on CSCC43.pdf (44 pages, 3344220 bytes).
 PDF statistics:
- 716 PDF objects out of 1000 (max. 8388607)
- 597 compressed objects within 6 object streams
- 183 named destinations out of 1000 (max. 500000)
- 685 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 863 PDF objects out of 1000 (max. 8388607)
+ 734 compressed objects within 8 object streams
+ 260 named destinations out of 1000 (max. 500000)
+ 746 words of extra memory for PDF output out of 10000 (max. 10000000)
 

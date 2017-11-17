@@ -7,6 +7,35 @@
 \usepackage{amsmath}
 
 \usepackage{graphicx}
+ 
+\usepackage{listings}
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
 
 \usepackage{dsfont}
 
@@ -612,7 +641,8 @@ You can also merge relations that differ by a synonym or a homonym:\\
 \\
 \underline{Example:}\\
 \textbf{UnMerged:}\\
-STUDENT1 (StudentID, Name, Address)\\STUDENT2 (MarticulationNo, Name, Address)\\
+STUDENT1 (StudentID, Name, Address)\\
+STUDENT2 (MarticulationNo, Name, Address)\\
 \\
 Assume that STUDENT1's Address refers to their Residing Address while STUDENT2's address refers to their Home Address\\
 \\
@@ -676,6 +706,94 @@ There are 3 techniques for physically arranging records of a file on secondary s
 
 \newpage
 
+\section{Thursday, November 2, 2017}
+
+\subsection{SQL}
+
+SQL stands for Structured Query Language, and is the standard for creating and querying relational databases.\\
+\\
+\paragraph{Relational Database Management System} A database management system that manages data as a collection of tables in which all relationships are represented by common values in related tables
+
+\subsubsection{SQL Environment}
+
+\paragraph{Schema} The structure that contains descriptions of objects created by a user (base tables, views, constraints, domains, character sets, triggers, etc.)
+\paragraph{Catalog} A set of schemas that constitute the description of a database
+\\
+SQL also has 3 types of commands:\\
+\paragraph{Data Definition Language (DDL)} These commands are responsible for establishing constraints and creating, altering, and dropping things such as tables, views, and indexes.
+\paragraph{Data Manipulation Language (DML)} These commands are responsible for updating, inserting, modifying, and querying a database
+\paragraph{Data Control Language (DCL)} These commands are responsible for granting and revoking privilege
+
+\subsubsection{SQL Database Definition}
+
+The following commands fall under DDL. The major CREATE statements that you'll use often are CREATE TABLE, CREATE VIEW, CREATE SCHEMA.
+
+\subsubsection{Table Creation}
+
+\textbf{Steps in Table Creation:}
+\begin{enumerate}
+	\item{Identify data types for attributes}
+	\item{Identify columns that can and cannot be null}
+	\item{Identify columns that must be unique (candidate keys)}
+	\item{Identify primary key -- foreign key mates}
+	\item{Determine the default values for the indexes}
+	\item{Identify the constraints on the columns (domain specifications)}
+	\item{Create the table associated indexes}
+\end{enumerate}
+
+\subsubsection{SQL Example}
+
+The code below is for the following diagram\\
+\includegraphics[scale=0.55]{lec7-1}
+
+\begin{lstlisting}[language=SQL]
+
+CREATE TABLE Product_T (	ProductID Decimal(11,0)NOT NULL, 
+	ProductDescription VARCHAR(50), 
+	ProductFinish VARCHAR(20)		CHECK (ProductFinish IN ('Cherry', 'Natural Ash',
+		'White Ash', 'Red Oak', 'Natural Oak', 'Walnut')),
+	ProductStandardPrice DECIMAL(6,2), 
+	ProductLineID INTEGER,
+	CONSTRAINT Product_PK PRIMARY KEY (ProductID));
+
+CREATE TABLE OrderLine_T (	OrderID Decimal(11,0)NOT NULL, 
+	ProductID Decimal(11,0)NOT NULL, 
+	OrderedQuantity Decimal(11,0), 	CONSTRAINT OrderLine_PK 
+	PRIMARY KEY (OrderID, ProductID),
+	CONSTRAINT OrderLine_FK1 
+	FOREIGN KEY (OrderID) 
+	REFERENCES Order_T(OrderID),	CONSTRAINT OrderLine_FK2 
+	FOREIGN KEY (ProductID) 
+	REFERENCES Product_T(ProductID));
+
+CREATE TABLE Customer_T (
+	CustomerID Decimal(11,0) not null,	CustomerName VARCHAR(25) not null, 
+	CustomerAddress VARCHAR(25), 
+	CustomerCity VARCHAR(20), 
+	CustomerState CHAR(2), 
+	CustomerPostalCode VARCHAR(9),
+	CONSTRAINT Customer_PK PRIMARY KEY (CustomerID));
+CREATE TABLE Order_T (	OrderID Decimal (11,0) not null, 
+	OrderDate date,	CustomerID Decimal(11,0),	CONSTRAINT Order_PK 
+	PRIMARY KEY (OrderID),  	CONSTRAINT Order_FK 
+	FOREIGN KEY (CustomerID) 
+	REFERENCES Customer_T(CustomerID));
+\end{lstlisting}
+
+\subsubsection{Data Integrity in SQL}
+
+Referential integrity is enforced in SQL as deletes and updates of primary records as well as inserts of dependent records with a null foreign key are null. Delete and Update actions can be specified in SQL, such as:\\
+
+\begin{lstlisting}[language=SQL]
+CREATE TABLE Order_T (	OrderID Decimal (11,0) not null,	OrderDate date ,	CustomerID Decimal(11,0),	CONSTRAINT Order_PK PRIMARY KEY (OrderID), 
+	CONSTRAINT Order_FK FOREIGN KEY (CustomerID)	REFERENCES Customer_T(CustomerID)	on delete restrict on update cascade);
+\end{lstlisting}
+
+\subsubsection{DROP and ALTER}
+
+The DROP command is used to remove Tables, Databases, Schema, and Views from the working session. Altering a table is essentially changing the indexes and data within the table.
+
+\newpage
 
 \end{document}
 

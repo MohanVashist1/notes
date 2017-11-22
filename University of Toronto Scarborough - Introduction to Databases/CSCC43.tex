@@ -748,34 +748,45 @@ The code below is for the following diagram\\
 
 \begin{lstlisting}[language=SQL]
 
-CREATE TABLE Product_T (	ProductID Decimal(11,0)NOT NULL, 
+CREATE TABLE Product_T (
+	ProductID Decimal(11,0)NOT NULL, 
 	ProductDescription VARCHAR(50), 
-	ProductFinish VARCHAR(20)		CHECK (ProductFinish IN ('Cherry', 'Natural Ash',
+	ProductFinish VARCHAR(20)
+		CHECK (ProductFinish IN ('Cherry', 'Natural Ash',
 		'White Ash', 'Red Oak', 'Natural Oak', 'Walnut')),
 	ProductStandardPrice DECIMAL(6,2), 
 	ProductLineID INTEGER,
 	CONSTRAINT Product_PK PRIMARY KEY (ProductID));
 
-CREATE TABLE OrderLine_T (	OrderID Decimal(11,0)NOT NULL, 
+CREATE TABLE OrderLine_T (
+	OrderID Decimal(11,0)NOT NULL, 
 	ProductID Decimal(11,0)NOT NULL, 
-	OrderedQuantity Decimal(11,0), 	CONSTRAINT OrderLine_PK 
+	OrderedQuantity Decimal(11,0),
+ 	CONSTRAINT OrderLine_PK 
 	PRIMARY KEY (OrderID, ProductID),
 	CONSTRAINT OrderLine_FK1 
 	FOREIGN KEY (OrderID) 
-	REFERENCES Order_T(OrderID),	CONSTRAINT OrderLine_FK2 
+	REFERENCES Order_T(OrderID),
+	CONSTRAINT OrderLine_FK2 
 	FOREIGN KEY (ProductID) 
 	REFERENCES Product_T(ProductID));
 
 CREATE TABLE Customer_T (
-	CustomerID Decimal(11,0) not null,	CustomerName VARCHAR(25) not null, 
+	CustomerID Decimal(11,0) not null,
+	CustomerName VARCHAR(25) not null, 
 	CustomerAddress VARCHAR(25), 
 	CustomerCity VARCHAR(20), 
 	CustomerState CHAR(2), 
 	CustomerPostalCode VARCHAR(9),
 	CONSTRAINT Customer_PK PRIMARY KEY (CustomerID));
-CREATE TABLE Order_T (	OrderID Decimal (11,0) not null, 
-	OrderDate date,	CustomerID Decimal(11,0),	CONSTRAINT Order_PK 
-	PRIMARY KEY (OrderID),  	CONSTRAINT Order_FK 
+
+CREATE TABLE Order_T (
+	OrderID Decimal (11,0) not null, 
+	OrderDate date,
+	CustomerID Decimal(11,0),
+	CONSTRAINT Order_PK 
+	PRIMARY KEY (OrderID),
+  	CONSTRAINT Order_FK 
 	FOREIGN KEY (CustomerID) 
 	REFERENCES Customer_T(CustomerID));
 \end{lstlisting}
@@ -785,8 +796,14 @@ CREATE TABLE Customer_T (
 Referential integrity is enforced in SQL as deletes and updates of primary records as well as inserts of dependent records with a null foreign key are null. Delete and Update actions can be specified in SQL, such as:\\
 
 \begin{lstlisting}[language=SQL]
-CREATE TABLE Order_T (	OrderID Decimal (11,0) not null,	OrderDate date ,	CustomerID Decimal(11,0),	CONSTRAINT Order_PK PRIMARY KEY (OrderID), 
-	CONSTRAINT Order_FK FOREIGN KEY (CustomerID)	REFERENCES Customer_T(CustomerID)	on delete restrict on update cascade);
+CREATE TABLE Order_T (
+	OrderID Decimal (11,0) not null,
+	OrderDate date ,
+	CustomerID Decimal(11,0),
+	CONSTRAINT Order_PK PRIMARY KEY (OrderID), 
+	CONSTRAINT Order_FK FOREIGN KEY (CustomerID)
+	REFERENCES Customer_T(CustomerID)
+	on delete restrict on update cascade);
 \end{lstlisting}
 
 \subsubsection{DROP and ALTER}
@@ -795,8 +812,148 @@ The DROP command is used to remove Tables, Databases, Schema, and Views from the
 
 \newpage
 
-\end{document}
+\section{Thursday, November 9, 2017}
 
+\subsection{SQL (continued)}
+
+\paragraph{Insert Statements} Insert statements adds data to a table
+
+\paragraph{Delete Statements} Delete statements removes rows from a table, it can also be changed to delete certain rows or to just delete all of the rows
+
+\paragraph{Update Statements} Update statements modify data in existing rows
+
+\paragraph{Index} To control processing time and storage efficiency, we need to define indexes on tables. We can create and drop indexes on tables.
+
+\subsubsection{Select Statements}
+
+Select statements are used for queries on single or multiple tables. Here are the clauses of the Select statement:
+\begin{itemize}
+	\item{\textbf{SELECT}, This is where the list of columns (and expressions) in which the query will return}
+	\item{\textbf{FROM}, This is where the table(s) or view(s) are indicated from which the data will be obtained}
+	\item{\textbf{WHERE}, Indicate the constraints under which a row must validate in order to be included in the result}
+	\item{\textbf{GROUP BY}, This indicates the categorization of the results}
+	\item{\textbf{HAVING}, Indicate the conditions under which a category (group) will be included in the result}
+	\item{\textbf{ORDER BY}, This is where the specifications on how the result is ordered}
+\end{itemize}
+
+Select Statements are processed in the following order:\\
+\includegraphics[scale=1]{lec8-1}
+
+\subsubsection{Alias}
+
+An Alias is an alternative column or table name, for example:\\
+
+\begin{lstlisting}[language=SQL]
+SELECT P.ProductID AS PROD,  P.ProductDescription AS DESCR  FROM Product_T AS P  WHERE ProductID > 100  GROUP BY DESCR  HAVING DESCR = "CHAIR"  ORDER BY PROD
+
+\end{lstlisting}
+
+In this example, PROD is an alias for P.ProductID and DESCR is an alias for 
+P.ProductDescription.
+
+\begin{tcolorbox}
+	\underline{Note:} In MySQL, Column Aliases cannot be used in the WHERE clause.
+\end{tcolorbox}
+
+\subsubsection{Comparison Operations in SQL}
+
+The following operators are only to be used under the WHERE and HAVING clauses.
+
+\begin{itemize}
+	\item{= meaning Equal to}
+	\item{>  meaning Greater than}
+	\item{>= meaning Greater than or equal to}
+	\item{<  meaning Less than}
+	\item{<= meaning Less than or equal to}
+	\item{<> or != both mean Not Equal to}
+\end{itemize}
+
+\subsubsection{Wildcards, Null, Booleans}
+
+There are 3 wildcards. * which refers to all possibilities. \% which refers to any collection of characters. $\_$ which refers to exactly one character.\\
+\\
+\underline{Examples:} in the WHERE clause, \% Desk refers to any value with the word "Desk" at the end, "$\_-$drawer" could result in "3-drawer, 4-drawer, etc."\\
+\\
+For NULL, it is used to refer to values that do not contain anything.
+
+\paragraph{Boolean Operations} Boolean Operators AND, OR, and NOT work as normal.
+
+\subsubsection{ORDER BY Clause and use of IN}
+
+Consider the following example
+
+\begin{lstlisting}[language=SQL]
+SELECT CUSTOMER_NAME, CITY, STATE
+FROM CUSTOMER_T  WHERE STATE IN ('FL','TX','CA','HI')ORDER BY STATE, CUSTOMER_NAME;
+
+\end{lstlisting}
+
+\begin{tcolorbox}
+	\underline{Note:} the IN operator is more efficient than separate OR conditions and the default for the ORDER BY clause is ascending.
+\end{tcolorbox}
+
+\subsubsection{Aggregate Functions}
+
+Aggregate Functions change what exactly is returned by a SELECT statement, such as
+
+\begin{lstlisting}[language=SQL]
+SELECT COUNT(*) FROM ORDER_LINE_VWHERE ORDER_ID = 1004;
+
+\end{lstlisting}
+
+This is returning the number of data (rows) that satisfy the WHERE clause from "$ORDER\_LINE\_V$".
+
+\begin{tcolorbox}
+	\underline{Note:} With aggregate functions, you can't have single-valued columns included in the SELECT clause.
+\end{tcolorbox}
+
+\subsubsection{GROUP BY Clause}
+
+For usage with aggregate functions, \textbf{Scalar Aggregate} is a single value returned from a SQL query with an aggregate function and \textbf{Vector Aggregate} is multiple values returned from a SQL query with an aggregate function.
+
+\subsubsection{HAVING}
+
+For use with GROUP BY\\
+\\
+Example:\\
+
+\begin{lstlisting}[language=SQL]
+SELECT CUSTOMER_STATE, COUNT(CUSTOMER_STATE) 
+	FROM CUSTOMER_T	GROUP BY CUSTOMER_STATE	HAVING COUNT(CUSTOMER_STATE) > 10;
+
+\end{lstlisting}
+
+\subsubsection{Views}
+Views provide controlled access to tables. There are also two types of views:
+\paragraph{Dynamic View} A "virtual table" created upon request by a user, this table is virtual in the sense that no data is actually sorted, but data from a base table is made available to the user.
+
+\paragraph{Materialized View} A copy or replication of data that is actually stored. This must be refreshed periodically to match the corresponding base tables.
+
+\subsubsection{Check Option}
+
+Check option creates views that are updatable, but trying to update data that is not in the original SELECT statement or that does not satisfy the original SELECT statement will raise an error.
+
+\subsubsection{Advantages and Disadvantages of Views}
+
+Advantages
+\begin{itemize}
+	\item{You can simplify your query commands with them}
+	\item{They assist with data security}
+	\item{They enhance programming productivity}
+	\item{They maintain concurrency with base table}
+	\item{They use little storage space}
+	\item{They provide a customized view for the user}
+	\item{They establish physical data independence}
+\end{itemize}
+
+Disadvantages
+\begin{itemize}
+	\item{More processing time is used when using a view}
+	\item{May not be directly updateable}
+\end{itemize}
+
+
+\end{document}
 
 
 

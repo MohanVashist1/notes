@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  21 NOV 2017 22:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  24 NOV 2017 13:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -162,6 +162,16 @@ Package color Info: Driver file: pdftex.def on input line 147.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
 
@@ -1134,16 +1144,6 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headsep=\skip53
 \dth@everypar=\toks42
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup5
-\symAMSb=\mathgroup6
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
 \fancy@headwidth=\skip54
@@ -1158,43 +1158,43 @@ Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 69.
+less on input line 77.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 70.
+less on input line 78.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 71.
+less on input line 79.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 72.
+less on input line 80.
 
 (./CSCC43.aux)
 \openout1 = `CSCC43.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 83.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    ... okay on input line 83.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1228,7 +1228,7 @@ e
 ))
 \c@lstlisting=\count152
 \AtBeginShipoutBox=\box50
-Package hyperref Info: Link coloring OFF on input line 75.
+Package hyperref Info: Link coloring OFF on input line 83.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1238,21 +1238,21 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count153
 )
-LaTeX Info: Redefining \ref on input line 75.
-LaTeX Info: Redefining \pageref on input line 75.
-LaTeX Info: Redefining \nameref on input line 75.
+LaTeX Info: Redefining \ref on input line 83.
+LaTeX Info: Redefining \pageref on input line 83.
+LaTeX Info: Redefining \nameref on input line 83.
 
 (./CSCC43.out) (./CSCC43.out)
 \@outlinefile=\write6
 \openout6 = `CSCC43.out'.
 
  ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 81.
+LaTeX Font Info:    Try loading font information for U+msa on input line 89.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 81.
+LaTeX Font Info:    Try loading font information for U+msb on input line 89.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1266,7 +1266,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2])
+[2]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3])
 \tf@toc=\write7
 \openout7 = `CSCC43.toc'.
 
@@ -1277,13 +1284,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
 
-Overfull \hbox (20.28416pt too wide) in paragraph at lines 98--99
+Overfull \hbox (20.28416pt too wide) in paragraph at lines 106--107
 \OT1/cmr/m/n/12 from, does not al-ready show in-for-ma-tion. In-cludes mul-ti-m
 e-dia, maps, doc-u-ments,
  []
@@ -1294,35 +1301,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4] <imgs/lec1-1.png, id=451, 776.9025pt x 349.305pt>
+[5] <imgs/lec1-1.png, id=526, 776.9025pt x 349.305pt>
 File: imgs/lec1-1.png Graphic file (type png)
  <use imgs/lec1-1.png>
-Package pdftex.def Info: imgs/lec1-1.png used on input line 142.
+Package pdftex.def Info: imgs/lec1-1.png used on input line 150.
 (pdftex.def)             Requested size: 388.45029pt x 174.65207pt.
 
-Overfull \hbox (10.1585pt too wide) in paragraph at lines 139--143
+Overfull \hbox (10.1585pt too wide) in paragraph at lines 147--151
  []\OT1/cmr/bx/n/12 Metadata[] \OT1/cmr/m/n/12 "Data about data". Data that de-
 scribes the prop-er-ties of end-user
  []
 
-<imgs/lec1-2.png, id=453, 684.5575pt x 357.335pt>
+<imgs/lec1-2.png, id=528, 684.5575pt x 357.335pt>
 File: imgs/lec1-2.png Graphic file (type png)
  <use imgs/lec1-2.png>
-Package pdftex.def Info: imgs/lec1-2.png used on input line 153.
+Package pdftex.def Info: imgs/lec1-2.png used on input line 161.
 (pdftex.def)             Requested size: 342.27791pt x 178.66705pt.
 
-Overfull \hbox (14.7833pt too wide) in paragraph at lines 150--154
+Overfull \hbox (14.7833pt too wide) in paragraph at lines 158--162
 \OT1/cmr/m/n/12 data, was used prior to the in-ven-tion of databases, but has i
 ts own dis-ad-van-tages. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--154
+Underfull \hbox (badness 10000) in paragraph at lines 158--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--154
+Underfull \hbox (badness 10000) in paragraph at lines 158--162
 
  []
 
@@ -1332,62 +1339,62 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./imgs/lec1-1.png>]
+[6 <./imgs/lec1-1.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6 <./imgs/lec1-2.png>]
-Overfull \hbox (0.87927pt too wide) in paragraph at lines 164--165
+[7 <./imgs/lec1-2.png>]
+Overfull \hbox (0.87927pt too wide) in paragraph at lines 172--173
 \OT1/cmr/m/n/12 pro-gram main-te-nance, so to avoid these dis-ad-van-tages, the
  database ap-proach
  []
 
-<imgs/lec1-3.png, id=469, 660.4675pt x 254.9525pt>
+<imgs/lec1-3.png, id=545, 660.4675pt x 254.9525pt>
 File: imgs/lec1-3.png Graphic file (type png)
  <use imgs/lec1-3.png>
-Package pdftex.def Info: imgs/lec1-3.png used on input line 171.
+Package pdftex.def Info: imgs/lec1-3.png used on input line 179.
 (pdftex.def)             Requested size: 330.23294pt x 127.47592pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--172
+Underfull \hbox (badness 10000) in paragraph at lines 176--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--172
+Underfull \hbox (badness 10000) in paragraph at lines 176--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--176
+Underfull \hbox (badness 10000) in paragraph at lines 181--184
 
  []
 
 
-Overfull \hbox (10.67084pt too wide) in paragraph at lines 173--176
+Overfull \hbox (10.67084pt too wide) in paragraph at lines 181--184
 \OT1/cmr/m/n/12 Some ex-am-ples of data mod-els in-clude a re-la-tional data mo
 del, a semistruc-tured
  []
 
-<imgs/lec1-4.png, id=470, 784.9325pt x 215.80624pt>
+<imgs/lec1-4.png, id=546, 784.9325pt x 215.80624pt>
 File: imgs/lec1-4.png Graphic file (type png)
  <use imgs/lec1-4.png>
-Package pdftex.def Info: imgs/lec1-4.png used on input line 182.
+Package pdftex.def Info: imgs/lec1-4.png used on input line 190.
 (pdftex.def)             Requested size: 392.46529pt x 107.90285pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--183
+Underfull \hbox (badness 10000) in paragraph at lines 187--191
 
  []
 
 
-Overfull \hbox (2.46529pt too wide) in paragraph at lines 179--183
+Overfull \hbox (2.46529pt too wide) in paragraph at lines 187--191
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--183
+Underfull \hbox (badness 10000) in paragraph at lines 187--191
 
  []
 
@@ -1397,14 +1404,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7 <./imgs/lec1-3.png>]
-Overfull \hbox (17.71268pt too wide) in paragraph at lines 192--193
+[8 <./imgs/lec1-3.png>]
+Overfull \hbox (17.71268pt too wide) in paragraph at lines 200--201
  []\OT1/cmr/bx/n/12 Increased pro-duc-tiv-ity of ap-pli-ca-tion de-vel-op-ment[
 ] \OT1/cmr/m/n/12 Since the ap-pli-ca-tion
  []
 
 
-Overfull \hbox (20.1737pt too wide) in paragraph at lines 194--195
+Overfull \hbox (20.1737pt too wide) in paragraph at lines 202--203
  []\OT1/cmr/bx/n/12 Enforcement of stan-dards[] \OT1/cmr/m/n/12 Stan-dards are 
 en-forced by the uni-form pro-ce-dures
  []
@@ -1415,26 +1422,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8 <./imgs/lec1-4.png>]
-Overfull \hbox (2.5992pt too wide) in paragraph at lines 200--201
+[9 <./imgs/lec1-4.png>]
+Overfull \hbox (2.5992pt too wide) in paragraph at lines 208--209
  []\OT1/cmr/bx/n/12 Reduced pro-gram main-te-nance[] \OT1/cmr/m/n/12 Be-cause o
 f data-program in-de-pen-dence,
  []
 
 
-Overfull \hbox (13.93073pt too wide) in paragraph at lines 206--207
+Overfull \hbox (13.93073pt too wide) in paragraph at lines 214--215
  []\OT1/cmr/bx/n/12 New spe-cial-ized per-son-nel[] \OT1/cmr/m/n/12 Com-pa-nies
  need to hire new peo-ple for database
  []
 
 
-Overfull \hbox (12.90184pt too wide) in paragraph at lines 208--209
+Overfull \hbox (12.90184pt too wide) in paragraph at lines 216--217
  []\OT1/cmr/bx/n/12 Installation and Man-age-ment of Cost and Com-plex-ity[] \O
 T1/cmr/m/n/12 Im-ple-men-ta-tion
  []
 
 
-Overfull \hbox (5.82614pt too wide) in paragraph at lines 210--211
+Overfull \hbox (5.82614pt too wide) in paragraph at lines 218--219
  []\OT1/cmr/bx/n/12 Conversion Costs[] \OT1/cmr/m/n/12 Costs for con-vert-ing l
 egacy sys-tem to a mod-ern database 
  []
@@ -1445,40 +1452,40 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9]
+[10]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
-<imgs/lec2-1.png, id=512, 700.6175pt x 358.33875pt>
+<imgs/lec2-1.png, id=586, 700.6175pt x 358.33875pt>
 File: imgs/lec2-1.png Graphic file (type png)
  <use imgs/lec2-1.png>
-Package pdftex.def Info: imgs/lec2-1.png used on input line 238.
+Package pdftex.def Info: imgs/lec2-1.png used on input line 246.
 (pdftex.def)             Requested size: 350.30789pt x 179.16893pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--239
+Underfull \hbox (badness 10000) in paragraph at lines 244--247
 
  []
 
-<imgs/lec2-2.png, id=513, 634.37pt x 381.425pt>
+<imgs/lec2-2.png, id=587, 634.37pt x 381.425pt>
 File: imgs/lec2-2.png Graphic file (type png)
  <use imgs/lec2-2.png>
-Package pdftex.def Info: imgs/lec2-2.png used on input line 245.
+Package pdftex.def Info: imgs/lec2-2.png used on input line 253.
 (pdftex.def)             Requested size: 317.18422pt x 190.71202pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--246
+Underfull \hbox (badness 10000) in paragraph at lines 249--254
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--246
+Underfull \hbox (badness 10000) in paragraph at lines 249--254
 
  []
 
@@ -1488,42 +1495,42 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11 <./imgs/lec2-1.png>]
-Overfull \hbox (29.63098pt too wide) in paragraph at lines 247--248
+[12 <./imgs/lec2-1.png>]
+Overfull \hbox (29.63098pt too wide) in paragraph at lines 255--256
 []\OT1/cmr/m/n/12 The last of the 3 com-po-nents are \OT1/cmr/bx/n/12 at-tribut
 es\OT1/cmr/m/n/12 , which are prop-er-ties or char-ac-ter-is-tics
  []
 
 
-Overfull \hbox (1.79315pt too wide) in paragraph at lines 251--254
+Overfull \hbox (1.79315pt too wide) in paragraph at lines 259--262
 \OT1/cmr/m/n/12 for the data, what ex-actly we need this data to do and what ki
 nd of con-straints
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--254
+Underfull \hbox (badness 10000) in paragraph at lines 259--262
 
  []
 
 
-Overfull \hbox (7.01532pt too wide) in paragraph at lines 257--260
+Overfull \hbox (7.01532pt too wide) in paragraph at lines 265--268
 \OT1/cmr/m/n/12 each semester." These state-ments are usu-ally de-rived from po
 li-cies, pro-ce-dures,
  []
 
 
-Overfull \hbox (2.44592pt too wide) in paragraph at lines 257--260
+Overfull \hbox (2.44592pt too wide) in paragraph at lines 265--268
 \OT1/cmr/m/n/12 the pre-req-ui-sites to be able to take a course." These con-st
 raints and def-i-ni-tions
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--260
+Underfull \hbox (badness 10000) in paragraph at lines 265--268
 
  []
 
 
-Overfull \hbox (7.73337pt too wide) in paragraph at lines 257--260
+Overfull \hbox (7.73337pt too wide) in paragraph at lines 265--268
 \OT1/cmr/m/n/12 that this database is be-ing cre-ated for and by in-ves-ti-gat-
 ing busi-ness doc-u-ments. 
  []
@@ -1534,29 +1541,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12 <./imgs/lec2-2.png>] <imgs/lec2-3.png, id=524, 710.655pt x 351.3125pt>
+[13 <./imgs/lec2-2.png>] <imgs/lec2-3.png, id=599, 710.655pt x 351.3125pt>
 File: imgs/lec2-3.png Graphic file (type png)
 
 <use imgs/lec2-3.png>
-Package pdftex.def Info: imgs/lec2-3.png used on input line 276.
+Package pdftex.def Info: imgs/lec2-3.png used on input line 284.
 (pdftex.def)             Requested size: 355.32663pt x 175.6558pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--277
+Underfull \hbox (badness 10000) in paragraph at lines 278--285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--277
+Underfull \hbox (badness 10000) in paragraph at lines 278--285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--277
+Underfull \hbox (badness 10000) in paragraph at lines 278--285
 
  []
 
 
-Overfull \hbox (7.92503pt too wide) in paragraph at lines 280--281
+Overfull \hbox (7.92503pt too wide) in paragraph at lines 288--289
 \OT1/cmr/m/n/12 After busi-ness rules have been col-lected, from these rules, r
 e-la-tion-ships be-tween
  []
@@ -1567,44 +1574,44 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13 <./imgs/lec2-3.png>]
-Overfull \hbox (6.74173pt too wide) in paragraph at lines 284--285
+[14 <./imgs/lec2-3.png>]
+Overfull \hbox (6.74173pt too wide) in paragraph at lines 292--293
 \OT1/cmr/m/n/12 An en-tity is the build-ing block of the En-tity Re-la-tion-shi
 p Model, such ex-am-ples
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--296
+Underfull \hbox (badness 10000) in paragraph at lines 299--304
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--296
+Underfull \hbox (badness 10000) in paragraph at lines 299--304
 
  []
 
-<imgs/lec2-4.png, id=531, 697.60625pt x 347.2975pt>
+<imgs/lec2-4.png, id=605, 697.60625pt x 347.2975pt>
 File: imgs/lec2-4.png Graphic file (type png)
  <use imgs/lec2-4.png>
-Package pdftex.def Info: imgs/lec2-4.png used on input line 307.
+Package pdftex.def Info: imgs/lec2-4.png used on input line 315.
 (pdftex.def)             Requested size: 348.80226pt x 173.64832pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--308
+Underfull \hbox (badness 10000) in paragraph at lines 307--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--308
+Underfull \hbox (badness 10000) in paragraph at lines 307--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--308
+Underfull \hbox (badness 10000) in paragraph at lines 307--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--308
+Underfull \hbox (badness 10000) in paragraph at lines 307--316
 
  []
 
@@ -1614,25 +1621,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 311--314
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 319--322
 
  []
 
 
-Overfull \hbox (18.63048pt too wide) in paragraph at lines 311--314
+Overfull \hbox (18.63048pt too wide) in paragraph at lines 319--322
 \OT1/cmr/m/n/12 An at-tribute has dif-fer-ent types, in-clud-ing: re-quired, op
 -tional, sim-ple, com-pos-ite,
  []
 
 
-Overfull \hbox (1.00223pt too wide) in paragraph at lines 316--317
+Overfull \hbox (1.00223pt too wide) in paragraph at lines 324--325
  []\OT1/cmr/bx/n/12 Optional At-tributes[] \OT1/cmr/m/n/12 Op-tional At-tribute
 s can be null. May be rep-re-sented
  []
 
 
-Overfull \hbox (6.24583pt too wide) in paragraph at lines 318--319
+Overfull \hbox (6.24583pt too wide) in paragraph at lines 326--327
  []\OT1/cmr/bx/n/12 Composite At-tributes[] \OT1/cmr/m/n/12 An at-tribute that 
 has mean-ing-ful com-po-nent parts.
  []
@@ -1643,8 +1650,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15 <./imgs/lec2-4.png>]
-Overfull \hbox (16.39555pt too wide) in paragraph at lines 326--327
+[16 <./imgs/lec2-4.png>]
+Overfull \hbox (16.39555pt too wide) in paragraph at lines 334--335
  []\OT1/cmr/bx/n/12 Derived At-tributes[] \OT1/cmr/m/n/12 An at-tribute that is
  de-rived from other stored at-tributes.
  []
@@ -1655,51 +1662,51 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16]
+[17]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17] <imgs/lec3-1.png, id=561, 624.3325pt x 187.70125pt>
+[18] <imgs/lec3-1.png, id=636, 624.3325pt x 187.70125pt>
 File: imgs/lec3-1.png Graphic file (type png)
  <use imgs/lec3-1.png>
-Package pdftex.def Info: imgs/lec3-1.png used on input line 355.
+Package pdftex.def Info: imgs/lec3-1.png used on input line 363.
 (pdftex.def)             Requested size: 312.16548pt x 93.85039pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--356
+Underfull \hbox (badness 10000) in paragraph at lines 360--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--361
+Underfull \hbox (badness 10000) in paragraph at lines 365--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--361
+Underfull \hbox (badness 10000) in paragraph at lines 365--369
 
  []
 
-<imgs/lec3-2.png, id=562, 672.5125pt x 230.8625pt>
+<imgs/lec3-2.png, id=637, 672.5125pt x 230.8625pt>
 File: imgs/lec3-2.png Graphic file (type png)
  <use imgs/lec3-2.png>
-Package pdftex.def Info: imgs/lec3-2.png used on input line 371.
+Package pdftex.def Info: imgs/lec3-2.png used on input line 379.
 (pdftex.def)             Requested size: 336.25542pt x 115.43095pt.
 
-Overfull \hbox (1.39732pt too wide) in paragraph at lines 365--372
+Overfull \hbox (1.39732pt too wide) in paragraph at lines 373--380
 \OT1/cmr/m/n/12 The re-la-tion-ship could be in any de-gree or car-di-nal-ity (
 Manda-tory or op-tional,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--372
+Underfull \hbox (badness 10000) in paragraph at lines 373--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--372
+Underfull \hbox (badness 10000) in paragraph at lines 373--380
 
  []
 
@@ -1709,35 +1716,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18 <./imgs/lec3-1.png>]
-Overfull \hbox (10.9265pt too wide) in paragraph at lines 383--386
+[19 <./imgs/lec3-1.png>]
+Overfull \hbox (10.9265pt too wide) in paragraph at lines 391--394
 \OT1/cmr/m/n/12 The ER model has been suit-able for mod-elling most com-mon bus
 i-ness prob-lems,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--386
+Underfull \hbox (badness 10000) in paragraph at lines 391--394
 
  []
 
-<imgs/lec3-3.png, id=569, 609.27625pt x 399.4925pt>
+<imgs/lec3-3.png, id=645, 609.27625pt x 399.4925pt>
 File: imgs/lec3-3.png Graphic file (type png)
  <use imgs/lec3-3.png>
-Package pdftex.def Info: imgs/lec3-3.png used on input line 392.
+Package pdftex.def Info: imgs/lec3-3.png used on input line 400.
 (pdftex.def)             Requested size: 304.63737pt x 199.74576pt.
 
-<imgs/lec3-4.png, id=570, 704.6325pt x 430.60875pt>
+<imgs/lec3-4.png, id=646, 704.6325pt x 430.60875pt>
 File: imgs/lec3-4.png Graphic file (type png)
  <use imgs/lec3-4.png>
-Package pdftex.def Info: imgs/lec3-4.png used on input line 395.
+Package pdftex.def Info: imgs/lec3-4.png used on input line 403.
 (pdftex.def)             Requested size: 352.3154pt x 215.30383pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--396
+Underfull \hbox (badness 10000) in paragraph at lines 397--404
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--396
+Underfull \hbox (badness 10000) in paragraph at lines 397--404
 
  []
 
@@ -1747,20 +1754,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19 <./imgs/lec3-2.png>] <imgs/lec3-5.png, id=577, 546.04pt x 420.57124pt>
+[20 <./imgs/lec3-2.png>] <imgs/lec3-5.png, id=652, 546.04pt x 420.57124pt>
 File: imgs/lec3-5.png Graphic file (type png)
 
 <use imgs/lec3-5.png>
-Package pdftex.def Info: imgs/lec3-5.png used on input line 402.
+Package pdftex.def Info: imgs/lec3-5.png used on input line 410.
 (pdftex.def)             Requested size: 273.01933pt x 210.28511pt.
 
-Overfull \hbox (8.08151pt too wide) in paragraph at lines 399--403
+Overfull \hbox (8.08151pt too wide) in paragraph at lines 407--411
 \OT1/cmr/m/n/12 in the re-la-tion-ship. The in-stances of a sub-type may par-ti
 c-i-pate in a re-la-tion-ship
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--403
+Underfull \hbox (badness 10000) in paragraph at lines 407--411
 
  []
 
@@ -1770,36 +1777,36 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20 <./imgs/lec3-3.png> <./imgs/lec3-4.png>]
-<imgs/lec3-6.png, id=584, 584.1825pt x 356.33125pt>
+[21 <./imgs/lec3-3.png> <./imgs/lec3-4.png>]
+<imgs/lec3-6.png, id=659, 584.1825pt x 356.33125pt>
 File: imgs/lec3-6.png Graphic file (type png)
  <use imgs/lec3-6.png>
-Package pdftex.def Info: imgs/lec3-6.png used on input line 411.
+Package pdftex.def Info: imgs/lec3-6.png used on input line 419.
 (pdftex.def)             Requested size: 292.09053pt x 178.16518pt.
 
-<imgs/lec3-7.png, id=585, 617.30624pt x 311.1625pt>
+<imgs/lec3-7.png, id=660, 617.30624pt x 311.1625pt>
 File: imgs/lec3-7.png Graphic file (type png)
  <use imgs/lec3-7.png>
-Package pdftex.def Info: imgs/lec3-7.png used on input line 413.
+Package pdftex.def Info: imgs/lec3-7.png used on input line 421.
 (pdftex.def)             Requested size: 308.65236pt x 155.58087pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--414
+Underfull \hbox (badness 10000) in paragraph at lines 414--422
 
  []
 
 
-Overfull \hbox (41.66373pt too wide) in paragraph at lines 406--414
+Overfull \hbox (41.66373pt too wide) in paragraph at lines 414--422
 \OT1/cmr/bx/n/12 Disjointness Con-straints \OT1/cmr/m/n/12 is whether an in-sta
 nce of a su-per-type may si-mul-ta-ne-ously
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--414
+Underfull \hbox (badness 10000) in paragraph at lines 414--422
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--414
+Underfull \hbox (badness 10000) in paragraph at lines 414--422
 
  []
 
@@ -1809,19 +1816,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21 <./imgs/lec3-5.png>] <imgs/lec3-8.png, id=591, 346.29375pt x 224.84pt>
+[22 <./imgs/lec3-5.png>] <imgs/lec3-8.png, id=666, 346.29375pt x 224.84pt>
 File: imgs/lec3-8.png Graphic file (type png)
 
 <use imgs/lec3-8.png>
-Package pdftex.def Info: imgs/lec3-8.png used on input line 420.
+Package pdftex.def Info: imgs/lec3-8.png used on input line 428.
 (pdftex.def)             Requested size: 173.14644pt x 112.41972pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--421
+Underfull \hbox (badness 10000) in paragraph at lines 425--429
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--421
+Underfull \hbox (badness 10000) in paragraph at lines 425--429
 
  []
 
@@ -1831,20 +1838,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22 <./imgs/lec3-6.png> <./imgs/lec3-7.png>]
+[23 <./imgs/lec3-6.png> <./imgs/lec3-7.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23 <./imgs/lec3-8.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 441--445
+[24 <./imgs/lec3-8.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 449--453
 
  []
 
 
-Overfull \hbox (2.93343pt too wide) in paragraph at lines 441--445
+Overfull \hbox (2.93343pt too wide) in paragraph at lines 449--453
 \OT1/cmr/m/n/12 So in cor-re-spon-dence with the entity-relationship model, En-
 tity Types be-come
  []
@@ -1855,25 +1862,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24]
-Overfull \hbox (22.88126pt too wide) in paragraph at lines 456--457
+[25]
+Overfull \hbox (22.88126pt too wide) in paragraph at lines 464--465
  []\OT1/cmr/bx/n/12 Foreign Key[] \OT1/cmr/m/n/12 A for-eign key is an iden-ti-
 fier that en-ables a de-pen-dent re-la-tion-ship
  []
 
-<imgs/lec4-1.png, id=608, 654.445pt x 225.84375pt>
+<imgs/lec4-1.png, id=683, 654.445pt x 225.84375pt>
 File: imgs/lec4-1.png Graphic file (type png)
  <use imgs/lec4-1.png>
-Package pdftex.def Info: imgs/lec4-1.png used on input line 459.
+Package pdftex.def Info: imgs/lec4-1.png used on input line 467.
 (pdftex.def)             Requested size: 327.2217pt x 112.92159pt.
 
-<imgs/lec4-2.png, id=609, 598.235pt x 311.1625pt>
+<imgs/lec4-2.png, id=684, 598.235pt x 311.1625pt>
 File: imgs/lec4-2.png Graphic file (type png)
  <use imgs/lec4-2.png>
-Package pdftex.def Info: imgs/lec4-2.png used on input line 466.
+Package pdftex.def Info: imgs/lec4-2.png used on input line 474.
 (pdftex.def)             Requested size: 299.11676pt x 155.58087pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 463--467
+Underfull \hbox (badness 10000) in paragraph at lines 471--475
 
  []
 
@@ -1883,14 +1890,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25 <./imgs/lec4-1.png>] <imgs/lec4-3.png, id=619, 629.35126pt x 323.2075pt>
+[26 <./imgs/lec4-1.png>] <imgs/lec4-3.png, id=693, 629.35126pt x 323.2075pt>
 File: imgs/lec4-3.png Graphic file (type png)
 
 <use imgs/lec4-3.png>
-Package pdftex.def Info: imgs/lec4-3.png used on input line 475.
+Package pdftex.def Info: imgs/lec4-3.png used on input line 483.
 (pdftex.def)             Requested size: 314.67485pt x 161.60335pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 479--484
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
 
  []
 
@@ -1900,8 +1907,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26 <./imgs/lec4-2.png> <./imgs/lec4-3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 495--498
+[27 <./imgs/lec4-2.png> <./imgs/lec4-3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 503--506
 
  []
 
@@ -1911,8 +1918,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27]
-Overfull \hbox (2.44177pt too wide) in paragraph at lines 510--511
+[28]
+Overfull \hbox (2.44177pt too wide) in paragraph at lines 518--519
 \OT1/cmr/m/n/12 at-tribute as a Re-la-tion at-tribute, and En-tity types with m
 ul-ti-val-ued at-tributes
  []
@@ -1923,23 +1930,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28]
-Underfull \hbox (badness 10000) in paragraph at lines 532--535
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 540--543
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 538--541
+Underfull \hbox (badness 10000) in paragraph at lines 546--549
 
  []
 
-<imgs/lec5-1.png, id=650, 724.7075pt x 415.5525pt>
+<imgs/lec5-1.png, id=724, 724.7075pt x 415.5525pt>
 File: imgs/lec5-1.png Graphic file (type png)
  <use imgs/lec5-1.png>
-Package pdftex.def Info: imgs/lec5-1.png used on input line 547.
+Package pdftex.def Info: imgs/lec5-1.png used on input line 555.
 (pdftex.def)             Requested size: 362.35286pt x 207.77574pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 544--548
+Underfull \hbox (badness 10000) in paragraph at lines 552--556
 
  []
 
@@ -1949,30 +1956,30 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29] <imgs/lec5-2.png, id=655, 563.10374pt x 364.36125pt>
+[30] <imgs/lec5-2.png, id=729, 563.10374pt x 364.36125pt>
 File: imgs/lec5-2.png Graphic file (type png)
 
 <use imgs/lec5-2.png>
-Package pdftex.def Info: imgs/lec5-2.png used on input line 554.
+Package pdftex.def Info: imgs/lec5-2.png used on input line 562.
 (pdftex.def)             Requested size: 394.16994pt x 255.05113pt.
- <imgs/lec5-3.png, id=656, 656.4525pt x 255.95625pt>
+ <imgs/lec5-3.png, id=730, 656.4525pt x 255.95625pt>
 File: imgs/lec5-3.png Graphic file (type png)
 
 <use imgs/lec5-3.png>
-Package pdftex.def Info: imgs/lec5-3.png used on input line 555.
+Package pdftex.def Info: imgs/lec5-3.png used on input line 563.
 (pdftex.def)             Requested size: 393.87454pt x 153.57492pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--556
+Underfull \hbox (badness 10000) in paragraph at lines 559--564
 
  []
 
 
-Overfull \hbox (4.16994pt too wide) in paragraph at lines 551--556
+Overfull \hbox (4.16994pt too wide) in paragraph at lines 559--564
 [] 
  []
 
 
-Overfull \hbox (3.87454pt too wide) in paragraph at lines 551--556
+Overfull \hbox (3.87454pt too wide) in paragraph at lines 559--564
 [] 
  []
 
@@ -1982,32 +1989,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30 <./imgs/lec5-1.png>]
+[31 <./imgs/lec5-1.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31 <./imgs/lec5-2.png> <./imgs/lec5-3.png>]
-<imgs/lec5-4.png, id=669, 489.83pt x 169.63374pt>
+[32 <./imgs/lec5-2.png> <./imgs/lec5-3.png>]
+<imgs/lec5-4.png, id=743, 489.83pt x 169.63374pt>
 File: imgs/lec5-4.png Graphic file (type png)
  <use imgs/lec5-4.png>
-Package pdftex.def Info: imgs/lec5-4.png used on input line 579.
+Package pdftex.def Info: imgs/lec5-4.png used on input line 587.
 (pdftex.def)             Requested size: 391.86452pt x 135.70717pt.
 
-<imgs/lec5-5.png, id=670, 685.56125pt x 165.61874pt>
+<imgs/lec5-5.png, id=744, 685.56125pt x 165.61874pt>
 File: imgs/lec5-5.png Graphic file (type png)
  <use imgs/lec5-5.png>
-Package pdftex.def Info: imgs/lec5-5.png used on input line 580.
+Package pdftex.def Info: imgs/lec5-5.png used on input line 588.
 (pdftex.def)             Requested size: 342.77979pt x 82.80916pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 576--581
+Underfull \hbox (badness 10000) in paragraph at lines 584--589
 
  []
 
 
-Overfull \hbox (1.86452pt too wide) in paragraph at lines 576--581
+Overfull \hbox (1.86452pt too wide) in paragraph at lines 584--589
 [] 
  []
 
@@ -2017,53 +2024,53 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32]
+[33]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[33 <./imgs/lec5-4.png> <./imgs/lec5-5.png>]
-<imgs/lec6-1.png, id=685, 641.39626pt x 154.5775pt>
+[34 <./imgs/lec5-4.png> <./imgs/lec5-5.png>]
+<imgs/lec6-1.png, id=760, 641.39626pt x 154.5775pt>
 File: imgs/lec6-1.png Graphic file (type png)
  <use imgs/lec6-1.png>
-Package pdftex.def Info: imgs/lec6-1.png used on input line 595.
+Package pdftex.def Info: imgs/lec6-1.png used on input line 603.
 (pdftex.def)             Requested size: 384.84071pt x 92.7472pt.
 
-<imgs/lec6-2.png, id=686, 450.68375pt x 162.6075pt>
+<imgs/lec6-2.png, id=761, 450.68375pt x 162.6075pt>
 File: imgs/lec6-2.png Graphic file (type png)
  <use imgs/lec6-2.png>
-Package pdftex.def Info: imgs/lec6-2.png used on input line 597.
+Package pdftex.def Info: imgs/lec6-2.png used on input line 605.
 (pdftex.def)             Requested size: 383.08298pt x 138.21703pt.
 
-<imgs/lec6-3.png, id=687, 661.47125pt x 306.14375pt>
+<imgs/lec6-3.png, id=762, 661.47125pt x 306.14375pt>
 File: imgs/lec6-3.png Graphic file (type png)
  <use imgs/lec6-3.png>
-Package pdftex.def Info: imgs/lec6-3.png used on input line 600.
+Package pdftex.def Info: imgs/lec6-3.png used on input line 608.
 (pdftex.def)             Requested size: 396.8858pt x 183.68765pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 590--601
+Underfull \hbox (badness 10000) in paragraph at lines 598--609
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 590--601
+Underfull \hbox (badness 10000) in paragraph at lines 598--609
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 590--601
+Underfull \hbox (badness 10000) in paragraph at lines 598--609
 
  []
 
 
-Overfull \hbox (102.04213pt too wide) in paragraph at lines 590--601
+Overfull \hbox (102.04213pt too wide) in paragraph at lines 598--609
 []$ 
  []
 
 
-Overfull \hbox (6.8858pt too wide) in paragraph at lines 590--601
+Overfull \hbox (6.8858pt too wide) in paragraph at lines 598--609
 [] 
  []
 
@@ -2073,24 +2080,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[34 <./imgs/lec6-1.png> <./imgs/lec6-2.png>]
-<imgs/lec6-4.png, id=694, 642.4pt x 265.99374pt>
+[35 <./imgs/lec6-1.png> <./imgs/lec6-2.png>]
+<imgs/lec6-4.png, id=769, 642.4pt x 265.99374pt>
 File: imgs/lec6-4.png Graphic file (type png)
  <use imgs/lec6-4.png>
-Package pdftex.def Info: imgs/lec6-4.png used on input line 607.
+Package pdftex.def Info: imgs/lec6-4.png used on input line 615.
 (pdftex.def)             Requested size: 449.67694pt x 186.19434pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 604--608
+Underfull \hbox (badness 10000) in paragraph at lines 612--616
 
  []
 
 
-Overfull \hbox (70.45218pt too wide) in paragraph at lines 604--608
+Overfull \hbox (70.45218pt too wide) in paragraph at lines 612--616
 []$ 
  []
 
 
-Overfull \hbox (59.67694pt too wide) in paragraph at lines 604--608
+Overfull \hbox (59.67694pt too wide) in paragraph at lines 612--616
 [] 
  []
 
@@ -2100,31 +2107,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[35 <./imgs/lec6-3.png> <./imgs/lec6-4.png>]
-<imgs/lec6-5.png, id=701, 560.0925pt x 211.79124pt>
+[36 <./imgs/lec6-3.png> <./imgs/lec6-4.png>]
+<imgs/lec6-5.png, id=776, 560.0925pt x 211.79124pt>
 File: imgs/lec6-5.png Graphic file (type png)
  <use imgs/lec6-5.png>
-Package pdftex.def Info: imgs/lec6-5.png used on input line 619.
+Package pdftex.def Info: imgs/lec6-5.png used on input line 627.
 (pdftex.def)             Requested size: 392.06207pt x 148.25285pt.
 
-<imgs/lec6-6.png, id=702, 546.04pt x 216.81pt>
+<imgs/lec6-6.png, id=777, 546.04pt x 216.81pt>
 File: imgs/lec6-6.png Graphic file (type png)
  <use imgs/lec6-6.png>
-Package pdftex.def Info: imgs/lec6-6.png used on input line 620.
+Package pdftex.def Info: imgs/lec6-6.png used on input line 628.
 (pdftex.def)             Requested size: 382.22539pt x 151.76596pt.
 
-<imgs/lec6-7.png, id=703, 529.98pt x 121.45375pt>
+<imgs/lec6-7.png, id=778, 529.98pt x 121.45375pt>
 File: imgs/lec6-7.png Graphic file (type png)
  <use imgs/lec6-7.png>
-Package pdftex.def Info: imgs/lec6-7.png used on input line 621.
+Package pdftex.def Info: imgs/lec6-7.png used on input line 629.
 (pdftex.def)             Requested size: 370.98346pt x 85.01703pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 616--622
+Underfull \hbox (badness 10000) in paragraph at lines 624--630
 
  []
 
 
-Overfull \hbox (2.06207pt too wide) in paragraph at lines 616--622
+Overfull \hbox (2.06207pt too wide) in paragraph at lines 624--630
 [] 
  []
 
@@ -2134,60 +2141,49 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[36 <./imgs/lec6-5.png> <./imgs/lec6-6.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 629--656
+[37 <./imgs/lec6-5.png> <./imgs/lec6-6.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 637--664
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--656
+Underfull \hbox (badness 10000) in paragraph at lines 637--664
 
  []
 
 
-Overfull \hbox (17.87965pt too wide) in paragraph at lines 629--656
+Overfull \hbox (17.87965pt too wide) in paragraph at lines 637--664
 \OT1/cmr/bx/n/12 Merged \OT1/cmr/m/n/12 EM-PLOYEE(EmployeeID, Name, Ad-dress, P
 hone, Job-Code, NoYears) 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--656
+Underfull \hbox (badness 10000) in paragraph at lines 637--664
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--656
+Underfull \hbox (badness 10000) in paragraph at lines 637--664
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--656
+Underfull \hbox (badness 10000) in paragraph at lines 637--664
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--656
+Underfull \hbox (badness 10000) in paragraph at lines 637--664
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--656
+Underfull \hbox (badness 10000) in paragraph at lines 637--664
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--656
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[37 <./imgs/lec6-7.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 663--666
+Underfull \hbox (badness 10000) in paragraph at lines 637--664
 
  []
 
@@ -2197,19 +2193,30 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38] <imgs/lec6-8.png, id=722, 595.22375pt x 406.51875pt>
+[38 <./imgs/lec6-7.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 671--674
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[39] <imgs/lec6-8.png, id=797, 595.22375pt x 406.51875pt>
 File: imgs/lec6-8.png Graphic file (type png)
 
 <use imgs/lec6-8.png>
-Package pdftex.def Info: imgs/lec6-8.png used on input line 696.
+Package pdftex.def Info: imgs/lec6-8.png used on input line 704.
 (pdftex.def)             Requested size: 357.13701pt x 243.91312pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 692--697
+Underfull \hbox (badness 10000) in paragraph at lines 700--705
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 692--697
+Underfull \hbox (badness 10000) in paragraph at lines 700--705
 
  []
 
@@ -2219,30 +2226,30 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39]
+[40]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40 <./imgs/lec6-8.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 713--715
+[41 <./imgs/lec6-8.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 721--723
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 713--715
+Underfull \hbox (badness 10000) in paragraph at lines 721--723
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 720--723
+Underfull \hbox (badness 10000) in paragraph at lines 728--731
 
  []
 
 
-Overfull \hbox (0.74544pt too wide) in paragraph at lines 724--725
+Overfull \hbox (0.74544pt too wide) in paragraph at lines 732--733
  []\OT1/cmr/bx/n/12 Data Ma-nip-u-la-tion Lan-guage (DML)[] \OT1/cmr/m/n/12 The
 se com-mands are re-spon-si-ble
  []
@@ -2253,141 +2260,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[41] <imgs/lec7-1.png, id=753, 708.6475pt x 363.3575pt>
+[42] <imgs/lec7-1.png, id=827, 708.6475pt x 363.3575pt>
 File: imgs/lec7-1.png Graphic file (type png)
  <use imgs/lec7-1.png>
-Package pdftex.def Info: imgs/lec7-1.png used on input line 747.
+Package pdftex.def Info: imgs/lec7-1.png used on input line 755.
 (pdftex.def)             Requested size: 389.75734pt x 199.84723pt.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 
-Package xcolor Warning: Incompatible color definition on input line 749.
-
-
-Package xcolor Warning: Incompatible color definition on input line 749.
-
-
-Package xcolor Warning: Incompatible color definition on input line 749.
-
-
-Package xcolor Warning: Incompatible color definition on input line 751.
-
-
-Package xcolor Warning: Incompatible color definition on input line 751.
-
-
-Package xcolor Warning: Incompatible color definition on input line 752.
-
-
-Package xcolor Warning: Incompatible color definition on input line 753.
-
-
-Package xcolor Warning: Incompatible color definition on input line 754.
-
-
-Package xcolor Warning: Incompatible color definition on input line 755.
-
-
-Package xcolor Warning: Incompatible color definition on input line 755.
-
-
-Package xcolor Warning: Incompatible color definition on input line 755.
-
-
-Package xcolor Warning: Incompatible color definition on input line 755.
-
-
-Package xcolor Warning: Incompatible color definition on input line 755.
-
-
-Package xcolor Warning: Incompatible color definition on input line 755.
-
-
-Package xcolor Warning: Incompatible color definition on input line 755.
-
-
-Package xcolor Warning: Incompatible color definition on input line 755.
-
-
-Package xcolor Warning: Incompatible color definition on input line 755.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 756.
+Package xcolor Warning: Incompatible color definition on input line 757.
 
 
 Package xcolor Warning: Incompatible color definition on input line 757.
 
 
-Package xcolor Warning: Incompatible color definition on input line 758.
+Package xcolor Warning: Incompatible color definition on input line 757.
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[42 <./imgs/lec7-1.png>]
 
 Package xcolor Warning: Incompatible color definition on input line 759.
 
 
-Package xcolor Warning: Incompatible color definition on input line 761.
+Package xcolor Warning: Incompatible color definition on input line 759.
+
+
+Package xcolor Warning: Incompatible color definition on input line 760.
 
 
 Package xcolor Warning: Incompatible color definition on input line 761.
@@ -2399,6 +2297,84 @@ Package xcolor Warning: Incompatible color definition on input line 762.
 Package xcolor Warning: Incompatible color definition on input line 763.
 
 
+Package xcolor Warning: Incompatible color definition on input line 763.
+
+
+Package xcolor Warning: Incompatible color definition on input line 763.
+
+
+Package xcolor Warning: Incompatible color definition on input line 763.
+
+
+Package xcolor Warning: Incompatible color definition on input line 763.
+
+
+Package xcolor Warning: Incompatible color definition on input line 763.
+
+
+Package xcolor Warning: Incompatible color definition on input line 763.
+
+
+Package xcolor Warning: Incompatible color definition on input line 763.
+
+
+Package xcolor Warning: Incompatible color definition on input line 763.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
+Package xcolor Warning: Incompatible color definition on input line 764.
+
+
 Package xcolor Warning: Incompatible color definition on input line 764.
 
 
@@ -2408,10 +2384,17 @@ Package xcolor Warning: Incompatible color definition on input line 765.
 Package xcolor Warning: Incompatible color definition on input line 766.
 
 
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43 <./imgs/lec7-1.png>]
+
 Package xcolor Warning: Incompatible color definition on input line 767.
 
 
-Package xcolor Warning: Incompatible color definition on input line 768.
+Package xcolor Warning: Incompatible color definition on input line 769.
 
 
 Package xcolor Warning: Incompatible color definition on input line 769.
@@ -2426,7 +2409,7 @@ Package xcolor Warning: Incompatible color definition on input line 771.
 Package xcolor Warning: Incompatible color definition on input line 772.
 
 
-Package xcolor Warning: Incompatible color definition on input line 774.
+Package xcolor Warning: Incompatible color definition on input line 773.
 
 
 Package xcolor Warning: Incompatible color definition on input line 774.
@@ -2450,10 +2433,10 @@ Package xcolor Warning: Incompatible color definition on input line 779.
 Package xcolor Warning: Incompatible color definition on input line 780.
 
 
-Package xcolor Warning: Incompatible color definition on input line 781.
+Package xcolor Warning: Incompatible color definition on input line 782.
 
 
-Package xcolor Warning: Incompatible color definition on input line 783.
+Package xcolor Warning: Incompatible color definition on input line 782.
 
 
 Package xcolor Warning: Incompatible color definition on input line 783.
@@ -2477,21 +2460,28 @@ Package xcolor Warning: Incompatible color definition on input line 788.
 Package xcolor Warning: Incompatible color definition on input line 789.
 
 
-Package xcolor Warning: Incompatible color definition on input line 790.
+Package xcolor Warning: Incompatible color definition on input line 791.
 
 
 Package xcolor Warning: Incompatible color definition on input line 791.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 796--797
-
- []
+Package xcolor Warning: Incompatible color definition on input line 792.
 
 
-Package xcolor Warning: Incompatible color definition on input line 798.
+Package xcolor Warning: Incompatible color definition on input line 793.
 
 
-Package xcolor Warning: Incompatible color definition on input line 798.
+Package xcolor Warning: Incompatible color definition on input line 794.
+
+
+Package xcolor Warning: Incompatible color definition on input line 795.
+
+
+Package xcolor Warning: Incompatible color definition on input line 796.
+
+
+Package xcolor Warning: Incompatible color definition on input line 797.
 
 
 Package xcolor Warning: Incompatible color definition on input line 798.
@@ -2500,43 +2490,60 @@ Package xcolor Warning: Incompatible color definition on input line 798.
 Package xcolor Warning: Incompatible color definition on input line 799.
 
 
-Package xcolor Warning: Incompatible color definition on input line 800.
+Underfull \hbox (badness 10000) in paragraph at lines 804--805
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[43]
-
-Package xcolor Warning: Incompatible color definition on input line 801.
-
-
-Package xcolor Warning: Incompatible color definition on input line 802.
-
-
-Package xcolor Warning: Incompatible color definition on input line 803.
-
-
-Package xcolor Warning: Incompatible color definition on input line 804.
-
-
-Package xcolor Warning: Incompatible color definition on input line 805.
+ []
 
 
 Package xcolor Warning: Incompatible color definition on input line 806.
 
 
+Package xcolor Warning: Incompatible color definition on input line 806.
+
+
+Package xcolor Warning: Incompatible color definition on input line 806.
+
+
+Package xcolor Warning: Incompatible color definition on input line 807.
+
+
+Package xcolor Warning: Incompatible color definition on input line 808.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[44] <imgs/lec8-1.png, id=829, 303.1325pt x 353.32pt>
+[44]
+
+Package xcolor Warning: Incompatible color definition on input line 809.
+
+
+Package xcolor Warning: Incompatible color definition on input line 810.
+
+
+Package xcolor Warning: Incompatible color definition on input line 811.
+
+
+Package xcolor Warning: Incompatible color definition on input line 812.
+
+
+Package xcolor Warning: Incompatible color definition on input line 813.
+
+
+Package xcolor Warning: Incompatible color definition on input line 814.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45] <imgs/lec8-1.png, id=904, 303.1325pt x 353.32pt>
 File: imgs/lec8-1.png Graphic file (type png)
  <use imgs/lec8-1.png>
-Package pdftex.def Info: imgs/lec8-1.png used on input line 840.
+Package pdftex.def Info: imgs/lec8-1.png used on input line 848.
 (pdftex.def)             Requested size: 303.13176pt x 353.31914pt.
 
 
@@ -2545,130 +2552,60 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45]
-Underfull \hbox (badness 10000) in paragraph at lines 844--845
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 852--853
 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 846.
+Package xcolor Warning: Incompatible color definition on input line 854.
 
 
-Package xcolor Warning: Incompatible color definition on input line 846.
+Package xcolor Warning: Incompatible color definition on input line 854.
 
 
-Package xcolor Warning: Incompatible color definition on input line 846.
-
-
-Package xcolor Warning: Incompatible color definition on input line 847.
-
-
-Package xcolor Warning: Incompatible color definition on input line 848.
-
-
-Package xcolor Warning: Incompatible color definition on input line 849.
-
-
-Package xcolor Warning: Incompatible color definition on input line 850.
-
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 850.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 850.
-
-
-Package xcolor Warning: Incompatible color definition on input line 851.
-
-
-Package xcolor Warning: Incompatible color definition on input line 852.
-
-
-Package xcolor Warning: Incompatible color definition on input line 852.
-
-
-Package xcolor Warning: Incompatible color definition on input line 852.
-
-
-Package xcolor Warning: Incompatible color definition on input line 852.
-
-
-Package xcolor Warning: Incompatible color definition on input line 853.
+Package xcolor Warning: Incompatible color definition on input line 854.
 
 
 Package xcolor Warning: Incompatible color definition on input line 855.
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[46 <./imgs/lec8-1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 879--884
-
- []
+Package xcolor Warning: Incompatible color definition on input line 856.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 879--884
-
- []
+Package xcolor Warning: Incompatible color definition on input line 857.
 
 
-Package xcolor Warning: Incompatible color definition on input line 891.
+Package xcolor Warning: Incompatible color definition on input line 858.
+
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 858.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 858.
 
 
-Package xcolor Warning: Incompatible color definition on input line 891.
+Package xcolor Warning: Incompatible color definition on input line 859.
 
 
-Package xcolor Warning: Incompatible color definition on input line 891.
+Package xcolor Warning: Incompatible color definition on input line 860.
 
 
-Package xcolor Warning: Incompatible color definition on input line 892.
+Package xcolor Warning: Incompatible color definition on input line 860.
 
 
-Package xcolor Warning: Incompatible color definition on input line 893.
+Package xcolor Warning: Incompatible color definition on input line 860.
 
 
-Package xcolor Warning: Incompatible color definition on input line 894.
+Package xcolor Warning: Incompatible color definition on input line 860.
 
 
-Package xcolor Warning: Incompatible color definition on input line 894.
+Package xcolor Warning: Incompatible color definition on input line 861.
 
 
-Package xcolor Warning: Incompatible color definition on input line 894.
-
-
-Package xcolor Warning: Incompatible color definition on input line 894.
-
-
-Package xcolor Warning: Incompatible color definition on input line 894.
-
-
-Package xcolor Warning: Incompatible color definition on input line 894.
-
-
-Package xcolor Warning: Incompatible color definition on input line 894.
-
-
-Package xcolor Warning: Incompatible color definition on input line 894.
-
-
-Package xcolor Warning: Incompatible color definition on input line 894.
-
-
-Package xcolor Warning: Incompatible color definition on input line 894.
-
-
-Package xcolor Warning: Incompatible color definition on input line 894.
-
-
-Package xcolor Warning: Incompatible color definition on input line 894.
-
-
-Package xcolor Warning: Incompatible color definition on input line 894.
+Package xcolor Warning: Incompatible color definition on input line 863.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2676,76 +2613,69 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47]
-
-Package xcolor Warning: Incompatible color definition on input line 895.
-
-
-Package xcolor Warning: Incompatible color definition on input line 897.
-
-
-Overfull \hbox (5.4349pt too wide) in paragraph at lines 905--906
-\OT1/cmr/m/n/12 Aggregate Func-tions change what ex-actly is re-turned by a SE-
-LECT state-ment,
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 907.
-
-
-Package xcolor Warning: Incompatible color definition on input line 907.
-
-
-Package xcolor Warning: Incompatible color definition on input line 907.
-
-
-Package xcolor Warning: Incompatible color definition on input line 908.
-
-
-Package xcolor Warning: Incompatible color definition on input line 909.
-
-
-Package xcolor Warning: Incompatible color definition on input line 911.
-
-
-Overfull \hbox (8.35118pt too wide) in paragraph at lines 921--922
-\OT1/cmr/m/n/12 re-turned from a SQL query with an ag-gre-gate func-tion and \O
-T1/cmr/bx/n/12 Vec-tor Ag-gre-gate
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 925--928
+[47 <./imgs/lec8-1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 887--892
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 925--928
+Underfull \hbox (badness 10000) in paragraph at lines 887--892
 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 929.
+Package xcolor Warning: Incompatible color definition on input line 899.
 
 
-Package xcolor Warning: Incompatible color definition on input line 929.
+Package xcolor Warning: Incompatible color definition on input line 899.
 
 
-Package xcolor Warning: Incompatible color definition on input line 929.
+Package xcolor Warning: Incompatible color definition on input line 899.
 
 
-Package xcolor Warning: Incompatible color definition on input line 930.
+Package xcolor Warning: Incompatible color definition on input line 900.
 
 
-Package xcolor Warning: Incompatible color definition on input line 931.
+Package xcolor Warning: Incompatible color definition on input line 901.
 
 
-Package xcolor Warning: Incompatible color definition on input line 932.
+Package xcolor Warning: Incompatible color definition on input line 902.
 
 
-Package xcolor Warning: Incompatible color definition on input line 933.
+Package xcolor Warning: Incompatible color definition on input line 902.
 
 
-Package xcolor Warning: Incompatible color definition on input line 935.
+Package xcolor Warning: Incompatible color definition on input line 902.
+
+
+Package xcolor Warning: Incompatible color definition on input line 902.
+
+
+Package xcolor Warning: Incompatible color definition on input line 902.
+
+
+Package xcolor Warning: Incompatible color definition on input line 902.
+
+
+Package xcolor Warning: Incompatible color definition on input line 902.
+
+
+Package xcolor Warning: Incompatible color definition on input line 902.
+
+
+Package xcolor Warning: Incompatible color definition on input line 902.
+
+
+Package xcolor Warning: Incompatible color definition on input line 902.
+
+
+Package xcolor Warning: Incompatible color definition on input line 902.
+
+
+Package xcolor Warning: Incompatible color definition on input line 902.
+
+
+Package xcolor Warning: Incompatible color definition on input line 902.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2754,7 +2684,159 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [48]
-Underfull \hbox (badness 10000) in paragraph at lines 938--939
+
+Package xcolor Warning: Incompatible color definition on input line 903.
+
+
+Package xcolor Warning: Incompatible color definition on input line 905.
+
+
+Overfull \hbox (5.4349pt too wide) in paragraph at lines 913--914
+\OT1/cmr/m/n/12 Aggregate Func-tions change what ex-actly is re-turned by a SE-
+LECT state-ment,
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 915.
+
+
+Package xcolor Warning: Incompatible color definition on input line 915.
+
+
+Package xcolor Warning: Incompatible color definition on input line 915.
+
+
+Package xcolor Warning: Incompatible color definition on input line 916.
+
+
+Package xcolor Warning: Incompatible color definition on input line 917.
+
+
+Package xcolor Warning: Incompatible color definition on input line 919.
+
+
+Overfull \hbox (8.35118pt too wide) in paragraph at lines 929--930
+\OT1/cmr/m/n/12 re-turned from a SQL query with an ag-gre-gate func-tion and \O
+T1/cmr/bx/n/12 Vec-tor Ag-gre-gate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 933--936
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 933--936
+
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 937.
+
+
+Package xcolor Warning: Incompatible color definition on input line 937.
+
+
+Package xcolor Warning: Incompatible color definition on input line 937.
+
+
+Package xcolor Warning: Incompatible color definition on input line 938.
+
+
+Package xcolor Warning: Incompatible color definition on input line 939.
+
+
+Package xcolor Warning: Incompatible color definition on input line 940.
+
+
+Package xcolor Warning: Incompatible color definition on input line 941.
+
+
+Package xcolor Warning: Incompatible color definition on input line 943.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[49]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[50]
+Underfull \hbox (badness 10000) in paragraph at lines 984--987
+
+ []
+
+
+Overfull \hbox (24.10457pt too wide) detected at line 1003
+\OML/cmm/m/it/12 ^^Y[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Country\OT1/cmr/m/n/12 
+)[]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[51]
+Overfull \hbox (6.05585pt too wide) in paragraph at lines 1010--1014
+\OT1/cmr/m/n/12 Left outer join: $\OML/cmm/m/it/12 R [] S \OT1/cmr/m/n/12 = (\O
+ML/cmm/m/it/12 R .[]/ S\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 [ \OT1/cmr/m/n/12 (\O
+ML/cmm/m/it/12 R \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^Y[]\OT1/cmr/m/n/12 (\O
+ML/cmm/m/it/12 R .[]/ S\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^B f\OML/cmm/m/it/12
+ null; :::; null\OMS/cmsy/m/n/12 g\OT1/cmr/m/n/12 )$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1022--1027
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1022--1027
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1022--1027
+
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1027.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1027.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1027.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1028.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1029.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1030.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1031.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1032.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1034.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1040--1043
 
  []
 
@@ -2764,28 +2846,618 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[49]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 946.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 946.
+[52]
+
+Package xcolor Warning: Incompatible color definition on input line 1043.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1043.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1043.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1044.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1045.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1046.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1047.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1049.
+
+
+Overfull \hbox (30.00427pt too wide) in paragraph at lines 1047--1049
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][]  
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1052.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1052.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1052.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1053.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1054.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1055.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1056.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1057.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1058.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1059.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1065.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1065.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1065.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1066.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1067.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1068.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1069.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1070.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1071.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1072.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1072.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1072.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1072.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1072.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1072.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1077.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1077.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1077.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1078.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1085.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1085.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1085.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1086.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1087.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[53]
+
+Package xcolor Warning: Incompatible color definition on input line 1088.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1089.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1090.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1103.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1103.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1103.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1104.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1105.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1105.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1105.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1105.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1105.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1105.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1106.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1107.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1108.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1109.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1110.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1111.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1112.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1113.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1114.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1114.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1114.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1114.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1114.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1114.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1115.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1116.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1117.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1118.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1120.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1121.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1126--1129
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[54]
+
+Package xcolor Warning: Incompatible color definition on input line 1129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1130.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1131.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1138--1139
+
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1140.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1141.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1142.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1142.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1142.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1142.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1143.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1144.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1148
+
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1148.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1148.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1148.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1149.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1150.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1151.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1151.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1151.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1151.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1151.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1151.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1151.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1152.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1152.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1152.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1152.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1152.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1152.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1152.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1153.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1153.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1153.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1153.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1153.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1153.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1153.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1154.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1154.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1154.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1154.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1154.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1154.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1154.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1154.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1154.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1154.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1154.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1155.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1155.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1155.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1155.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1155.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1155.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1155.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1155.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1156.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1157.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1158.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1159.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1162--1163
+
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1163.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1163.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1163.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1164.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1165.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1166.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1167.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1170--1173
+
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1173.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1173.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1173.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1174.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1175.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1175.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1175.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1175.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1175.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1175.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1175.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1175.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[55]
+
+Package xcolor Warning: Incompatible color definition on input line 1176.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1177.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1181.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1181.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1181.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1182.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1183.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1183.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1183.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1183.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1183.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1183.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1183.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1183.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1184.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1185.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1186.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1188.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[56]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1193.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1193.
  (./CSCC43.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 946.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 946.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1193.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1193.
 
-
-Package rerunfilecheck Warning: File `CSCC43.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `CSCC43.out':
-(rerunfilecheck)             Before: 7AEAD8D62979FEE6998B96CDAFFF2416;6253
-(rerunfilecheck)             After:  60E55C205D92CEAFD71DC5681499D9A6;6391.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 946.
+Package rerunfilecheck Info: File `CSCC43.out' has not changed.
+(rerunfilecheck)             Checksum: C3CDD345D41788C0AE6F126E1D64B08C;7378.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1193.
  ) 
 Here is how much of TeX's memory you used:
- 22223 strings out of 492995
- 403782 string characters out of 6132704
- 557788 words of memory out of 5000000
- 25058 multiletter control sequences out of 15000+600000
+ 22383 strings out of 492995
+ 406098 string characters out of 6132704
+ 557899 words of memory out of 5000000
+ 25098 multiletter control sequences out of 15000+600000
  16048 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,73p,925b,2103s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2793,18 +3465,21 @@ Here is how much of TeX's memory you used:
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
-/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on CSCC43.pdf (49 pages, 3428678 bytes).
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on CSCC43.pdf (56 pages, 3479566 bytes).
 PDF statistics:
- 991 PDF objects out of 1000 (max. 8388607)
- 852 compressed objects within 9 object streams
- 305 named destinations out of 1000 (max. 500000)
- 847 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1226 PDF objects out of 1440 (max. 8388607)
+ 1075 compressed objects within 11 object streams
+ 425 named destinations out of 1000 (max. 500000)
+ 959 words of extra memory for PDF output out of 10000 (max. 10000000)
 

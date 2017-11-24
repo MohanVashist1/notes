@@ -39,6 +39,14 @@
 
 \usepackage{dsfont}
 
+\usepackage{amssymb}
+
+\def\ojoin{\setbox0=\hbox{$\bowtie$}%
+  \rule[-.02ex]{.25em}{.4pt}\llap{\rule[\ht0]{.25em}{.4pt}}}
+\def\leftouterjoin{\mathbin{\ojoin\mkern-5.8mu\bowtie}}
+\def\rightouterjoin{\mathbin{\bowtie\mkern-5.8mu\ojoin}}
+\def\fullouterjoin{\mathbin{\ojoin\mkern-5.8mu\bowtie\mkern-5.8mu\ojoin}}
+
 \usepackage{hyperref}
 
 \usepackage[utf8]{inputenc}
@@ -56,7 +64,7 @@
 
 \usepackage{tcolorbox}
 
-\usepackage{amsthm,amssymb}
+\usepackage{amsthm}
 
 \setlength{\parindent}{0cm}
 
@@ -844,7 +852,13 @@ Select Statements are processed in the following order:\\
 An Alias is an alternative column or table name, for example:\\
 
 \begin{lstlisting}[language=SQL]
-SELECT P.ProductID AS PROD,  P.ProductDescription AS DESCR  FROM Product_T AS P  WHERE ProductID > 100  GROUP BY DESCR  HAVING DESCR = "CHAIR"  ORDER BY PROD
+SELECT P.ProductID AS PROD,
+  P.ProductDescription AS DESCR
+  FROM Product_T AS P
+  WHERE ProductID > 100
+  GROUP BY DESCR
+  HAVING DESCR = "CHAIR"
+  ORDER BY PROD
 
 \end{lstlisting}
 
@@ -861,11 +875,11 @@ The following operators are only to be used under the WHERE and HAVING clauses.
 
 \begin{itemize}
 	\item{= meaning Equal to}
-	\item{>  meaning Greater than}
-	\item{>= meaning Greater than or equal to}
-	\item{<  meaning Less than}
-	\item{<= meaning Less than or equal to}
-	\item{<> or != both mean Not Equal to}
+	\item{$>$  meaning Greater than}
+	\item{$>=$ meaning Greater than or equal to}
+	\item{$<$  meaning Less than}
+	\item{$<=$ meaning Less than or equal to}
+	\item{$<>$ or != both mean Not Equal to}
 \end{itemize}
 
 \subsubsection{Wildcards, Null, Booleans}
@@ -884,7 +898,9 @@ Consider the following example
 
 \begin{lstlisting}[language=SQL]
 SELECT CUSTOMER_NAME, CITY, STATE
-FROM CUSTOMER_T  WHERE STATE IN ('FL','TX','CA','HI')ORDER BY STATE, CUSTOMER_NAME;
+FROM CUSTOMER_T
+  WHERE STATE IN ('FL','TX','CA','HI')
+ORDER BY STATE, CUSTOMER_NAME;
 
 \end{lstlisting}
 
@@ -897,7 +913,8 @@ FROM CUSTOMER_T  WHERE STATE IN ('FL','TX','CA','HI')ORDER BY STATE, CUSTOMER_
 Aggregate Functions change what exactly is returned by a SELECT statement, such as
 
 \begin{lstlisting}[language=SQL]
-SELECT COUNT(*) FROM ORDER_LINE_VWHERE ORDER_ID = 1004;
+SELECT COUNT(*) FROM ORDER_LINE_V
+WHERE ORDER_ID = 1004;
 
 \end{lstlisting}
 
@@ -919,7 +936,9 @@ Example:\\
 
 \begin{lstlisting}[language=SQL]
 SELECT CUSTOMER_STATE, COUNT(CUSTOMER_STATE) 
-	FROM CUSTOMER_T	GROUP BY CUSTOMER_STATE	HAVING COUNT(CUSTOMER_STATE) > 10;
+	FROM CUSTOMER_T
+	GROUP BY CUSTOMER_STATE
+	HAVING COUNT(CUSTOMER_STATE) > 10;
 
 \end{lstlisting}
 
@@ -952,6 +971,224 @@ Disadvantages
 	\item{May not be directly updateable}
 \end{itemize}
 
+\newpage
+ 
+\section{Wednesday, November 15, 2017}
+
+I don't remember what was happening exactly, but Marzieh decided to have lecture on Wednesday this week.
+
+\subsection{Relational Algebra}
+
+\subsubsection{Algebra}
+
+An algebra consists of operators and operands, in Arithmetic Algebra, these operations are division, multiplication, addition, etc. and the operands are variables and constants. In Relational Algebra, the operands are different relations and the operations are union, intersection, difference, selection, etc.\\
+\\
+Queries are our way of referring to relational algebra.
+
+\subsubsection{Relational Algebra Operations}
+
+Assume that $R$ and $S$ are relations and $t$ stands for a tuple:
+\begin{enumerate}
+	\item{$R \cup S = \{ t : t \in R \vee t \in S  \}$}
+	\item{$R \cap S = \{ t : t \in R \wedge t \in S  \}$}
+	\item{$R - S = \{ t : t \in R \wedge t \not\in S  \}$}
+	\item{
+	$\sigma_p (R) = \{ t : t \in R \wedge p \text{ is true}  \}$\\
+	Here p is a predicate and the selection operator selects some rows based on the given predicate. For example:
+	$$\sigma_{Code =  can} (country) \text{ returns Canadian rows}$$
+	}
+	\item{
+	$\pi_{a_1, ..., a_n} (R) = \{ t[a_1, ... , a_n] : t\in R \}$\\
+	Here $a_1, ..., a_n$ are attributes and the projection operator selects the given columns of all rows. For example:
+	$$\pi_{name,population} (Country) \text{ returns the name \& populations of the given rows}$$
+	}
+	\item{$R \times S = \{ (a,b) : a\in R \wedge b \in S \}$\\
+	This is just the cartesian product where every row in $R$ is paired with every row in $S$}
+	\item{$R \bowtie_c S$\\
+	This operation is that the tuples are joined if common attributes are equal (for example, if $R.id = S.id$). $c$ is a condition. There are 2 joins, natural-join and equi-join. Equi-join includes the 2 equal attributes and and natural-join excludes 1 of the 2 equal attributes. }
+	\item{
+	Outer join: a join that includes all the tuples even the one that does not have a matching value.\\
+	Left outer join: $R \leftouterjoin S = (R \bowtie S ) \cup (R - \pi_{a_1,...,a_n} (R \bowtie S) \times \{ null, ... ,null \})$ 
+	Right outer join: $R \rightouterjoin S = (R \bowtie S ) \cup (\{ null, ... ,null \} \times (S - \pi_{a_1,...,a_n} (R \bowtie S))$ 
+	}
+\end{enumerate}
+
+\subsubsection{Self-Join}
+
+For unary relationships. For example, for employees who have supervisors is $$WHERE E.EmployeeSupervisor = M.EmployeeID$$
+
+\subsubsection{Processing Multiple Tables Using Subqueries}
+
+A subquery is placing an inner query (i.e. a SELECT statement) inside an outer query. This can be placed in a condition of the WHERE clause, as a table of the FROM clause or within the HAVING clause.\\
+\\
+The subqueries can be \textbf{noncorrelated}, which is executed once for the entire outer query, or \textbf{correlated}, which is executed once for each row returned by the other query, this is activated by use the keyword Exist.\\
+\\
+As an example, the following shows the names of all customers who have placed an order.\\
+\begin{lstlisting}[language=SQL]
+SELECT CustomerName
+	FROM Customer_T
+	WHERE CustomerID IN
+	(SELECT DISTINCT CustomerID 
+	FROM Order_T);
+
+\end{lstlisting}
+
+For processing a noncorrelated subquery, using our example, the subquery (in parentheses) is processed first and an intermediate results table is created. Then the outer query returns the requested customer information for each customer included in the intermediate results table.
+
+\subsubsection{Join vs. Subquery}
+
+Some queries could be accomplished by either a join or a subquery, for example:\\
+\\
+Join version:
+\begin{lstlisting}[language=SQL]
+SELECT CustomerName, CustomerAddress, CustomerCity, 
+CustomerState, CustomerPostalCode
+	FROM Customer_T, Order_T
+	WHERE Customer_T.CustomerID = Order_T.CustomerID AND OrderID = 1008;
+
+\end{lstlisting}
+
+Subquery version:
+\begin{lstlisting}[language=SQL]
+SELECT CustomerName, CustomerAddress, CustomerCity, 
+CustomerState, CustomerPostalCode
+	FROM Customer_T
+	WHERE Customer_T.CustomerID = 
+	(SELECT Order_T.CustomerID
+		FROM Order_T
+		WHERE OrderID = 1008);
+\end{lstlisting}
+
+\subsubsection{Correlated Subquery Example}
+
+The following code is for showing all orders that include furniture finished in natural ash.
+\begin{lstlisting}[language=SQL]
+SELECT DISTINCT OrderID
+FROM OrderLine_T
+WHERE EXISTS
+	(SELECT *
+	FROM Product_T
+	WHERE ProductID = OrderLine_T.ProductID
+	AND Productfinish = 'Natural Ash');
+\end{lstlisting}
+
+The EXISTS operator returns either TRUE or FALSE. A correlated subquery always refers to an attribute from a table referenced in the outer query. In this example, it is the line:
+
+\begin{lstlisting}[language=SQL]
+	WHERE ProductID = OrderLine_T.ProductID
+\end{lstlisting}
+
+\subsubsection{Derived Table Subquery Example}
+
+The following query shows all products whose standard price is higher than the average price:
+
+\begin{lstlisting}[language=SQL]
+SELECT ProductDescription, ProductStandardPrice, AvgPrice
+	FROM 
+	(SELECT AVG(ProductStandardPrice) AvgPrice FROM Product_T),
+	Product_T
+	WHERE ProductStandardPrice > AvgPrice;
+\end{lstlisting}
+
+The WHERE clause normal cannot include aggregate functions but because the aggregate is performed in the subquery, its results can be used in the outer query's WHERE clause.
+
+\subsubsection{Union Queries}
+
+Union queries is essentially combining the output (union of multiple queries) together into a single result table.
+
+\begin{tcolorbox}
+	\underline{Note:} With UNION queries, the quantity and data types of the attributes in the select clauses of both queries must be identical.
+\end{tcolorbox}
+
+\begin{lstlisting}[language=SQL]
+SELECT C1.CustomerID, CustomerName, OrderedQuality, 
+'Largest Quantity' AS QUANTITY
+FROM Customer_T C1, Order_T O1, OrderLine_T Q1
+	WHERE C1.CustomerID = O1.CustomerID
+	AND O1.OrderID = Q1.OrderID
+	AND OrderedQuantity =
+	(SELECT MAX(Ordered Quantity)
+	FROM OrderLine_T)
+UNION
+SELECT C1.CustomerID, CustomerName, OrderedQuality, 
+'Smallest Quantity' AS QUANTITY
+FROM Customer_T C1, Order_T O1, OrderLine_T Q1
+	WHERE C1.CustomerID = O1.CustomerID
+	AND O1.OrderID = Q1.OrderID
+	AND OrderedQuantity =
+	(SELECT MIN(Ordered Quantity)
+	FROM OrderLine_T)
+ORDER BY 3;
+\end{lstlisting}
+
+\subsubsection{Conditional Expressions Using Case Keyword}
+
+This is a feature that is available with newer versions of SQL. Keyword COALESCE returns the first non-null expression among its arguments, and keyword NULLIF returns null if the two specified expressions are equal and returns the first expression if they aren't.\\
+\\
+Usage for NULLIF and COALESCE:
+\begin{lstlisting}[language=SQL]
+NULLIF(expression, expression)
+COALESCE(expression, ... , expression)
+\end{lstlisting}
+
+\begin{tcolorbox}
+	\underline{Note:} COALESCE can take one or multiple expressions.
+\end{tcolorbox}
+
+Example of the CASE usage:\\
+\begin{lstlisting}[language=SQL]
+SELECT CASE
+	WHEN ProductLine = 1 THEN ProductDescription
+	ELSE '####'
+END AS ProductDescription
+FROM Product_T;
+\end{lstlisting}
+
+Another CASE example:\\
+\begin{lstlisting}[language=SQL]
+SELECT ProductNumber, Category =
+	CASE ProductLine
+		WHEN 'R' THEN 'Road'
+		WHEN 'M' THEN 'Mountain'
+		WHEN 'T' THEN 'Touring'
+		WHEN 'S' THEN 'Other sale items'
+		ELSE 'Not for sale'
+	END,
+	Name
+FROM Production.Product
+ORDER BY ProductNumber;
+\end{lstlisting}
+
+A Coalesce example:\\
+\begin{lstlisting}[language=SQL]
+SELECT Name, Class, Color, ProductNumber,
+	COALESCE(Class, Color, ProductNumber) AS
+	FirstNotNull
+FROM Production.Product;
+\end{lstlisting}
+
+Here are two SELECT statements of NULLIF and CASE usage that do the same thing:\\
+\\
+NULLIF:
+\begin{lstlisting}[language=SQL]
+SELECT ProductID, MakeFlag, FinishedGoodsFlag,
+	NULLIF(MakeFlag, FinishedGoodsFlag) AS 'Null if Equal'
+FROM Production.Product
+WHERE ProductID < 10;
+\end{lstlisting}
+
+CASE:
+\begin{lstlisting}[language=SQL]
+SELECT ProductID, MakeFlag, FinishedGoodsFlag,
+	'Null if Equal' = CASE
+	WHEN MakeFlag =. FinishedGoodsFlag THEN NULL
+	ELSE MakeFlag
+	END
+FROM Production.Product
+WHERE ProductID < 10;
+\end{lstlisting}
+
+\newpage
 
 \end{document}
 

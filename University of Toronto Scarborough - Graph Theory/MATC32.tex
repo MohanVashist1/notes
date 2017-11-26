@@ -262,7 +262,7 @@ This is $k_5$, the complete simple graph of 5 vertices (complete meaning all ver
 \\
 \underline{Example:}\\
 \includegraphics[scale=0.22]{lec3-4}\\
-This is the disjoint union of 2 graphs. $G_1 $ SQUARE UNION $ G_2$ is the union of 2 graphs with $V(G_1) \cap V(G_2) = \emptyset$
+This is the disjoint union of 2 graphs. $G_1 \sqcup G_2$ is the union of 2 graphs with $V(G_1) \cap V(G_2) = \emptyset$
 
 \subsubsection{Connectivity of $G$}
 
@@ -377,6 +377,82 @@ If an edge lies in a cycle, it is not a cut edge or, a cut edge does not lie in 
 	\\
 	Now since $G \setminus \{ e \}$ is connected, there is a path between nodes $u$ and $v$ that does not go through edge $e$ and a path that goes through edge $e$ (namely, the path $u,x,y,v$). Therefore $e$ is not an edge cut iff it lies on a cycle. This implies that the negation of this is true, that an edge is an edge cut iff it doesn't lie on a cycle.
 \end{proof}
+
+\newpage
+
+\section{Tuesday, September 19, 2017}
+
+\subsection{Konig's Theorem (continued)}
+
+\begin{tcolorbox}
+	\underline{Recall:} Can we see when a given graph is bipartite? (A graph $G$ is bipartite if $V(G) = X \sqcup Y$ and $X,Y$ are independent sets)
+\end{tcolorbox}
+
+Konig's Theorem states that $G$ is bipartite iff there are no off length cycles.\\
+\\
+\textbf{Lemma:} In a graph $G$, any odd length walk that is also closed contains a cycle.\\
+\\
+From this we observe that we can assume that $G$ is connected.\\
+\\
+\underline{TONCAS (The Obvious Necessary Conditions Are Also Sufficient):} A bipartite graph cannot have odd length cycles.\\
+\\
+Observe that a cycle must travel through an even number of edges to return to the original vertex.\\
+\\
+\textit{Now consider the converse of this statement:} If the cycle travels odd edges, the cycle will be on the other side of the partition (so if $V(G) = X \sqcup Y$ and the cycle started at $X$, travelling odd edges will mean the cycle will finish in partition $Y$.)\\
+\\
+Let $v \in V(G)$\\
+$X = \{ u \in V(G) : \text{ the path of minimal length between $v,u$ is even for all $v\in V(G)$ } \}$\\
+$Y = \{ u \in V(G) : \text{ the path of minimal length between $v,u$ is odd for all $v\in V(G)$ } \}$
+\\
+\\
+So we know from this that.
+\begin{enumerate}
+	\item{$G = X \sqcup Y $}
+	\item{$X,Y$ are independent}
+\end{enumerate}
+
+Assume $X$ is not independent, so let $c$ be an edge between $u, u' \in X$, so take a path $$p: v \rightarrow u \text{ of minimal even length}$$ and a path $$p': u' \rightarrow v \text{ of minimal even length}$$
+now consider the path $$v\overset{p}{\rightarrow} u \overset{c}{\rightarrow} u' \overset{p'}{\rightarrow} v$$
+This is a closed walk of odd length, therefore there exists a closed cycle of odd length.\\
+Therefore there exists a closed walk of odd length iff $X,Y$ are not independent (i.e. a Bipartite graph).
+
+\subsection{Networks}
+
+From this we will look at the Max Flow and Min Cut problem. This involves looking at directed graphs where all the edges in the graph are assigned a flow, which can represent the carrying capacity of trains along a route. This may be important as we may need to know what would be the best way to disrupt the network.
+
+\begin{tcolorbox}[title=Definition: Directed Graph]
+	A graph $G$ consists a set of vertices ($V(G)$) and a set of edges ($E(G)$) and
+	$$E(G) \mapsto V(G) \times V(G) : e \mapsto (h(e), t(e))$$ where $h(e), t(e)$ refer to the head and tail of edge $e$ respectively.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: Network]
+	A type of directed graph with a source node $s$ that no edge goes into and a sink node $t$ that no edge goes out of. There is also a capacity function $$c : E(G) \mapsto \mathbb{R} \geq 0$$ that assigns a capacity of flow for each edge in $E(G)$
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\underline{Remark:} For this week, assume $G$ is simple directed graph, i.e. between any choice of $v_1,v_2 \in V(G)$, there exists at most 1 edge with a head of $v_1$ and a tail of $v_2$. We will also introduce some notation that if there exists an edge from $v_1$ to $v_2$ we denote it as $$v_1 \rightarrow v_2$$
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: Capacity function]
+	a capacity function $c: V \times V \mapsto \mathbb{R}\geq 0$ (takes in 2 vertices and returns a positive real number) and is defined by:
+	$$c(v_1, v_2) = \begin{cases}
+		c(v_1 \rightarrow v_2) &\text{ if }  (v_1 \rightarrow v_2)\in E\\
+		0 &\text{ if }  (v_1 \rightarrow v_2)\not\in E\\
+	\end{cases}
+$$
+\end{tcolorbox}
+\begin{tcolorbox}[title=Definition: Flow $f$]
+	a flow function is defined as $f: E(G) \mapsto \mathbb{R} \geq 0$ with the following properties:
+	\begin{itemize}
+		\item{$\forall e, f(e) \leq c(e)$}
+		\item{for all vertexes v, $f^-(v) = \sum_{u \in V} f(u \rightarrow v)$}
+		\item{for all vertexes v, $f^+(v) = \sum_{u \in V} f(v \rightarrow u)$}
+		\item{$f^+(v) = f^-(v)$ for all vertices $v$ except for the sink and source nodes $s,t$}
+	\end{itemize}
+We also define $|f| = f^+(s)=f^-(t)$ as the value of the flow $f$
+\end{tcolorbox}
+
+\newpage
 
 
 

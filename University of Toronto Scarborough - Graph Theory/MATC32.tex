@@ -454,6 +454,59 @@ We also define $|f| = f^+(s)=f^-(t)$ as the value of the flow $f$
 
 \newpage
 
+\section{Tuesday, September 26, 2017}
+
+\subsection{Flow on a network}
+
+So for some reason, Louis also denotes the value of the flow $f$ as $\partial f$.\\
+\\
+There are 2 main questions about network flows, and right now we will discuss the one in the form of the min-cut max-flow theorem.\\
+\\
+Starting from any flow, if it is not the maximal flow, we can construct one, but we must define a few terms first
+
+\begin{tcolorbox}[title=Definition: Cut in a Network]
+	Let $G$ be a network, a cut $(S,T)$ is a partition $V(G) = S \sqcup T$, where $s\in S, t \in T$. The \textit{capacity of the cut} is defined as
+	$$\sum_{u\in S, v\in T} c(u,v) = c(S,T)$$
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: Minimal Cut]
+	Let $G$ be a network, a cut $(S,T)$ is a \textit{minimal cut} if $\forall (S', T')$ cuts of $G$, $$c(S,T) \leq c(S',T')$$
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\underline{Recall:} for any flow $f$ and any cut $(S,T)$ on a graph $G$, $\partial f \leq c(S,T)$.\\
+	We can also increase any flow until we get a maximum one from the Ford-Fulkerson algorithm.\\
+	And for a maximum flow $f'$ and a minimal cut $(S',T')$, we get that $$\partial f' = c(S',T')$$
+	Which is the min-cut, max-flow equation
+\end{tcolorbox}
+
+The Idea of the Ford Fulkerson Algorithm is that we use the appropriate paths from $s\rightarrow t$ to increase the flow of the network to the maximum flow accordingly.\\
+\\
+For a network $G$, a capacity function $c$ and a flow $f$.
+\begin{itemize}
+	\item{for any edge $(u,v)$ where $u,v \in V(G)$, the residual capacity of this edge is defined as $$c_f (u,v) = c(u,v) - f(u,v)$$}
+	\item{An augmented path is an (undirected) path in the underlying graph $G$.}
+	\item{For any edge, the residual capacity of that edge is strictly positive.}
+\end{itemize}
+
+Intuition for the Ford Fulkerson Algorithm:
+\begin{enumerate}
+	\item{if a flow has an augmented path, the flow cannot be maximal if the path goes from $s$ to $t$.}
+	\item{If an augmented path $p$ between $s$ and $t$ exists, then we can adapt $p$ such that $\partial f$ increases and $p$ is no longer augmented.}
+	\item{If there exists no augmented path $p$, this means that the path is maximal}
+	\item{We use this construction to argue that there exists an obvious min-cut equal to the resulting value of the flow.}
+\end{enumerate}
+
+\underline{Example}, consider any path $p: s \rightarrow t$ on graph $G$, let $u,v$ be any 2 nodes in this path where $(u,v)$ is on the path.\\
+
+let $m = \{ c_f (u,v) : (u,v) \in p \} = \{ c(u,v) - f(u,v) : (u,v) \in p \} > 0$ at each edge of the path $p$, replace $f(u,v)$ by $f(u,v) + m$\\
+\\
+Note that $\partial f$ has increased and that $p$ is no longer augmented.\\
+\\
+As if $m = c_f (u,v)$, the new flow has the weight of $$f(u,v) + m = f(u,v) + c(u,v) - f(u,v) = c(u,v)$$
+\begin{tcolorbox}
+	\underline{note:} Adding $m$ to all edges in p yields an increased flow.
+\end{tcolorbox}
 
 
 \end{document}

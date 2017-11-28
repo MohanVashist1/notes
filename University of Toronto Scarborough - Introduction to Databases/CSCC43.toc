@@ -173,3 +173,17 @@
 \contentsline {subsubsection}{\numberline {9.1.7}Derived Table Subquery Example}{53}{subsubsection.9.1.7}
 \contentsline {subsubsection}{\numberline {9.1.8}Union Queries}{54}{subsubsection.9.1.8}
 \contentsline {subsubsection}{\numberline {9.1.9}Conditional Expressions Using Case Keyword}{54}{subsubsection.9.1.9}
+\contentsline {section}{\numberline {10}Thursday, November 23, 2017}{57}{section.10}
+\contentsline {subsection}{\numberline {10.1}Transaction}{57}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Routines and Triggers}{57}{subsection.10.2}
+\contentsline {paragraph}{Routines}{57}{section*.79}
+\contentsline {subsubsection}{\numberline {10.2.1}Trigger Syntax in MySQL}{57}{subsubsection.10.2.1}
+\contentsline {subsubsection}{\numberline {10.2.2}Routines Syntax in MySQL}{57}{subsubsection.10.2.2}
+\contentsline {subsubsection}{\numberline {10.2.3}More Complicated SQL Queries}{58}{subsubsection.10.2.3}
+\contentsline {subsubsection}{\numberline {10.2.4}Example of a Query using a View}{58}{subsubsection.10.2.4}
+\contentsline {subsubsection}{\numberline {10.2.5}Tips For Developing Efficient Queries}{58}{subsubsection.10.2.5}
+\contentsline {subsection}{\numberline {10.3}SQL}{59}{subsection.10.3}
+\contentsline {paragraph}{Interactive SQL:}{59}{section*.80}
+\contentsline {paragraph}{Embedded SQL:}{59}{section*.81}
+\contentsline {paragraph}{Dynamic SQL:}{60}{section*.82}
+\contentsline {subsubsection}{\numberline {10.3.1}Reasons to Embed SQL}{60}{subsubsection.10.3.1}

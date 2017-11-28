@@ -95,3 +95,13 @@
 \BOOKMARK [3][-]{subsubsection.9.1.7}{Derived Table Subquery Example}{subsection.9.1}% 95
 \BOOKMARK [3][-]{subsubsection.9.1.8}{Union Queries}{subsection.9.1}% 96
 \BOOKMARK [3][-]{subsubsection.9.1.9}{Conditional Expressions Using Case Keyword}{subsection.9.1}% 97
+\BOOKMARK [1][-]{section.10}{Thursday, November 23, 2017}{}% 98
+\BOOKMARK [2][-]{subsection.10.1}{Transaction}{section.10}% 99
+\BOOKMARK [2][-]{subsection.10.2}{Routines and Triggers}{section.10}% 100
+\BOOKMARK [3][-]{subsubsection.10.2.1}{Trigger Syntax in MySQL}{subsection.10.2}% 101
+\BOOKMARK [3][-]{subsubsection.10.2.2}{Routines Syntax in MySQL}{subsection.10.2}% 102
+\BOOKMARK [3][-]{subsubsection.10.2.3}{More Complicated SQL Queries}{subsection.10.2}% 103
+\BOOKMARK [3][-]{subsubsection.10.2.4}{Example of a Query using a View}{subsection.10.2}% 104
+\BOOKMARK [3][-]{subsubsection.10.2.5}{Tips For Developing Efficient Queries}{subsection.10.2}% 105
+\BOOKMARK [2][-]{subsection.10.3}{SQL}{section.10}% 106
+\BOOKMARK [3][-]{subsubsection.10.3.1}{Reasons to Embed SQL}{subsection.10.3}% 107

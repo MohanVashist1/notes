@@ -1190,6 +1190,112 @@ WHERE ProductID < 10;
 
 \newpage
 
+\section{Thursday, November 23, 2017}
+
+\subsection{Transaction}
+
+A transaction is a set of commands that is atomic, discrete in a sense where it is either done or not. To ensure transaction integrity, BEGIN TRANSACTION marks the beginning of a transaction, COMMIT makes all updates permanent and ROLLBACK cancels updates since the last commit.\\
+\\
+So when \textit{valid} information is inserted, the work is committed and all the chances to the data will be made permanent. However, when \textit{invalid} information is inserted, the transaction will be cancelled and all changes made will be rolled back to before the transaction began.
+
+\subsection{Routines and Triggers}
+
+\paragraph{Routines} are program modules that execute when called. They can be \textbf{Functions}, \textbf{Procedures}, and \textbf{Triggers}. Triggers being routines that execute in a response to a database event (when the database management system inserts, updates or deletes). These routines are stored in the database and are controlled by the Database Management System. They are good for preserving data integrity, data auditing and security.\\
+\\
+The differences between routines and triggers are that routines are called directly and perform a routine or return a value, and triggers are implicitly called in the event of a database event and performs a trigger action.
+
+\subsubsection{Trigger Syntax in MySQL}
+
+\begin{lstlisting}[language=SQL]
+CREATE TRIGGER trigger_name
+	{BEFORE | AFTER}
+	{INSERT | UPDATE | DELETE}
+	ON table_name
+	FOR EACH ROW trigger_body
+\end{lstlisting}
+
+\subsubsection{Routines Syntax in MySQL}
+
+\begin{lstlisting}[language=SQL]
+CREATE PROCEDURE sp_name([procedure_parameter[,...]])
+	routine_body
+CREATE FUNCTION sp_name ([function_parameter[,...]]) RETURNS type
+	routine_body
+\end{lstlisting}
+
+Looking at the syntax here:\\
+The \textbf{procedure parameter} can either be IN, OUT, or INOUT, also has a parameter name and a type.\\
+\\
+The \textbf{function parameter} has a name and a type\\
+\\
+The different \textbf{types} are any valid MySQL data type.\\
+\\
+The \textbf{routine body} is just a valid SQL routine statement.
+
+\subsubsection{More Complicated SQL Queries}
+
+As Production Databases could contain thousands of tables and tables contain hundreds of columns, writing single queries may not be feasible, so we sometimes combine queries, by using subqueries and creating views.
+
+\subsubsection{Example of a Query using a View}
+
+\begin{lstlisting}[language=SQL]
+CREATE View TSales AS
+SELECT SalespersonName,
+	ProductDescription,
+	SUM(OrderedQuantity) AS Totorders
+FROM Salesperson_T, OrderLine_T, Product_T, Order_T
+	WHERE Salesperson_T.SalespersonID=Order_T.SalespersonID
+	AND Order_T.OrderID = OrderLine_T.OrderID
+	AND OrderLine_T.ProductID=Product_T.ProductID
+	GROUP BY SalespersonName, ProductDescription;
+	
+SELECT SalespersonName, ProductDescription
+	FROM TSales AS A
+	WHERE Totorders = (SELECT MAX(Totorders) FROM TSales B
+	WHERE B.SalespersonName=A.SalespersonName);
+\end{lstlisting}
+
+\subsubsection{Tips For Developing Efficient Queries}
+
+\begin{itemize}
+	\item{Be familiar with the data model}
+	\item{Understand the desired results of the query}
+	\item{Know the attributes desired in the query}
+	\item{Identify the entities that contain desired attributes}
+	\item{Construct a WHERE equality for each link}
+	\item{Fine tune with GROUP BY, HAVING, DISTINCT, NOT IN clauses if needed}
+	\item{Consider the effect on unusual data, such as null values when computing AVG and SUM.}
+	\item{Avoid using SELECT $*$ for tables with many columns}
+	\item{Avoid subqueries if possible, instead write a single query. More specifically, correlated subqueries}
+	\item{If data is used many times, consider making a separate query and storing it as a view.}
+	\item{Understand how indexes are used in query processing. For example, equality operations in the WHERE clause use indexes, while using inequality operations (NOT IN) in the WHERE clause does not}
+	\item{Break complex queries into multiple simple parts}
+	\item{Do not combine a query with itself (if possible, avoid self-joins)}
+	\item{Create temporary tables (materialized views) for groups of queries}
+	\item{Combine update operations}
+	\item{Retrieve only the data you need}
+	\item{Don't have the Database Management System sort without an index}
+	\item{Learn how to track query processing time}
+	\item{Learn to review query plans with the EXPLAIN command}
+	\item{Consider the total query processing time for ad hoc queries}
+\end{itemize}
+
+\subsection{SQL}
+
+\paragraph{Interactive SQL:} What we have done up to know
+
+\paragraph{Embedded SQL:} Including hard-coded SQL statements in a program written in another language such as C or Java.
+
+\paragraph{Dynamic SQL:} Ability for an application program to generate SQL code on the fly, as the application is running
+
+\subsubsection{Reasons to Embed SQL}
+
+\begin{itemize}
+	\item{Can create a more flexible, accessible interface for the user}
+	\item{Possible performance improvement}
+	\item{Database security improvement; Grants access only to the application instead of the user.}
+\end{itemize}
+
 \end{document}
 
 

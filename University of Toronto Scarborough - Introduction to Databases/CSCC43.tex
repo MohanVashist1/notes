@@ -86,7 +86,7 @@
 \date{University of Toronto Scarborough -- Fall 2017}
 \author{Joshua Concon}
 \maketitle
-Pre-reqs are CSCB63 and STAB52.
+
 Instructor is Dr. Marzieh Ahmadzadeh. Check RateMyProf. If you find any problems in these notes, feel free to contact me at conconjoshua@gmail.com. I own nothing, all copyrighted works belong to their respective owners (University of Toronto and Pearson Education).
 
 \tableofcontents
@@ -1295,6 +1295,24 @@ SELECT SalespersonName, ProductDescription
 	\item{Possible performance improvement}
 	\item{Database security improvement; Grants access only to the application instead of the user.}
 \end{itemize}
+
+\newpage
+
+\section{Thursday, November 30, 2017}
+
+\subsection{SQL Injection Attacks (SQLi)}
+
+SQL Injections are one of the most dangerous and common network-based security threats. It's essentially sending malicious code to a database server directly, where the Database runs the malicious code as legitimate code, so the data that was supposed to be safe and secure is accessible publicly.\\
+\\
+So SQL Injections works on the dynamic component of an application, and allows an intruder to Delete and modify data, Run OS commands, and create a DOS (Denial of Service) attack.
+
+\subsubsection{How it works}
+
+The attack is essentially about taking advantage of a text field that translates into a WHERE clause of a database, you would have to write a tautology (which is a condition that always evaluates to true) to access all the information from the tables that the WHERE clause relates to. It also involves black box testing to check how the text in the text field is parsed, and from there, we can find out how a database is stored.
+
+\subsubsection{SQL Injection Attack Countermeasure}
+
+Ways to defend against a SQL Injection is to sanitize the input to remove malicious input or render it useless, white list input validation, use of parameterized queries, and use of stored procedures.
 
 \end{document}
 

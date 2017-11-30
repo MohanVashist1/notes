@@ -105,3 +105,7 @@
 \BOOKMARK [3][-]{subsubsection.10.2.5}{Tips For Developing Efficient Queries}{subsection.10.2}% 105
 \BOOKMARK [2][-]{subsection.10.3}{SQL}{section.10}% 106
 \BOOKMARK [3][-]{subsubsection.10.3.1}{Reasons to Embed SQL}{subsection.10.3}% 107
+\BOOKMARK [1][-]{section.11}{Thursday, November 30, 2017}{}% 108
+\BOOKMARK [2][-]{subsection.11.1}{SQL Injection Attacks \(SQLi\)}{section.11}% 109
+\BOOKMARK [3][-]{subsubsection.11.1.1}{How it works}{subsection.11.1}% 110
+\BOOKMARK [3][-]{subsubsection.11.1.2}{SQL Injection Attack Countermeasure}{subsection.11.1}% 111

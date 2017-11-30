@@ -508,6 +508,46 @@ As if $m = c_f (u,v)$, the new flow has the weight of $$f(u,v) + m = f(u,v) + c(
 	\underline{note:} Adding $m$ to all edges in p yields an increased flow.
 \end{tcolorbox}
 
+\newpage
+
+\section{Friday, September 29, 2017}
+
+\subsection{Max-flow Min-Cut Theorem (continued)}
+
+The minimal amount needed of edges to remove is the maximum amount of flow of the network.\\
+\\
+Consider the capacity function: $$c: V \times V \mapsto \mathbb{R}$$
+$$(u,v) \mapsto \begin{cases}
+	c(u\rightarrow v) &\text{ if } u\rightarrow v \in E\\
+	0 & \text{ otherwise}
+\end{cases}$$
+
+\begin{tcolorbox}[title=Theorem: Conservation]
+	$$\partial f(v) = \sum f^+ (v) = \sum f^- (v)$$
+	$$\partial f(v) = 0, \forall v \neq s,t$$
+\end{tcolorbox}
+
+In particular, the value of $f$ is $|f|=\partial f(s)$.
+
+\begin{tcolorbox}[title=Min cut Max flow]
+	\begin{itemize}
+		\item{
+		For any flow and any cut, $|f| \leq ||(S,T)||$ (this is the flow capacity inequality)\\
+		$$|f| \text{ is max} \longleftrightarrow ||(S,T)|| \longleftrightarrow f \text{ is saturated for edges from $s$ to $t$}$$
+		}
+		\item{$G_f$, is the residual graph according to flow $f$}
+		\item{If $G_f$ has no path from $s$ to $t$, then the flow is maximal}
+		\item{(Ford-Fulkerson Algorithm) If there is a path in $G_f$ from $s$ to $t$, we can strictly increase the value of $|f|$ on $G$}
+	\end{itemize}
+\end{tcolorbox}
+
+Start with the flow capacity inequality:
+\textbf{Lemma} $|f| \leq ||(S,T)||$ for any flow $f$, cut $(S,T)$
+
+$$|f| = \partial f(s) = f^+ (s) - f^- (s) = \sum_{u\in V} f(s \rightarrow u) - \sum_{u\in V} f(u\rightarrow s)$$
+
+\textbf{Observation 1:} $\partial f(v) = 0 : \forall v \neq s,t \longrightarrow |f| = \sum_{u\in V} f(s\rightarrow u)$
+
 
 \end{document}
 

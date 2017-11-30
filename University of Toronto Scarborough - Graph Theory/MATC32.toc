@@ -1,27 +1,29 @@
 \select@language {english}
-\contentsline {section}{\numberline {1}Tuesday, September 5, 2017}{3}{section.1}
-\contentsline {subsection}{\numberline {1.1}The Seven Bridges of Konigsberg}{3}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}(Outline) Solution to Konigsberg}{5}{subsection.1.2}
-\contentsline {section}{\numberline {2}Friday, September 8, 2017}{6}{section.2}
-\contentsline {subsection}{\numberline {2.1}Graphs}{6}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Graph Theory Applications}{7}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Uber}{7}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Monge's Theorem (on matching)}{7}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}Marriage (Stable) Problem}{8}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}Scheduling (Graph Colouring)}{8}{subsubsection.2.2.4}
-\contentsline {subsubsection}{\numberline {2.2.5}Network Problems}{9}{subsubsection.2.2.5}
-\contentsline {subsubsection}{\numberline {2.2.6}Uber (Pathfinding)}{9}{subsubsection.2.2.6}
-\contentsline {subsection}{\numberline {2.3}Morphism}{9}{subsection.2.3}
-\contentsline {section}{\numberline {3}Tuesday, September 12, 2017}{11}{section.3}
-\contentsline {subsection}{\numberline {3.1}More Morphism}{11}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Decomposing Graphs}{12}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Connectivity of $G$}{14}{subsubsection.3.2.1}
-\contentsline {paragraph}{Path}{14}{section*.2}
-\contentsline {paragraph}{Cycle}{14}{section*.3}
-\contentsline {section}{\numberline {4}Friday, September 15, 2017}{15}{section.4}
-\contentsline {subsection}{\numberline {4.1}Equivalence Relations on a set}{15}{subsection.4.1}
-\contentsline {section}{\numberline {5}Tuesday, September 19, 2017}{18}{section.5}
-\contentsline {subsection}{\numberline {5.1}Konig's Theorem (continued)}{18}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Networks}{19}{subsection.5.2}
-\contentsline {section}{\numberline {6}Tuesday, September 26, 2017}{21}{section.6}
-\contentsline {subsection}{\numberline {6.1}Flow on a network}{21}{subsection.6.1}
+\contentsline {section}{\numberline {1}Tuesday, September 5, 2017}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}The Seven Bridges of Konigsberg}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}(Outline) Solution to Konigsberg}{4}{subsection.1.2}
+\contentsline {section}{\numberline {2}Friday, September 8, 2017}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Graphs}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Graph Theory Applications}{6}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Uber}{6}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Monge's Theorem (on matching)}{6}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Marriage (Stable) Problem}{7}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Scheduling (Graph Colouring)}{7}{subsubsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.5}Network Problems}{8}{subsubsection.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.6}Uber (Pathfinding)}{8}{subsubsection.2.2.6}
+\contentsline {subsection}{\numberline {2.3}Morphism}{8}{subsection.2.3}
+\contentsline {section}{\numberline {3}Tuesday, September 12, 2017}{10}{section.3}
+\contentsline {subsection}{\numberline {3.1}More Morphism}{10}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Decomposing Graphs}{11}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Connectivity of $G$}{13}{subsubsection.3.2.1}
+\contentsline {paragraph}{Path}{13}{section*.2}
+\contentsline {paragraph}{Cycle}{13}{section*.3}
+\contentsline {section}{\numberline {4}Friday, September 15, 2017}{14}{section.4}
+\contentsline {subsection}{\numberline {4.1}Equivalence Relations on a set}{14}{subsection.4.1}
+\contentsline {section}{\numberline {5}Tuesday, September 19, 2017}{17}{section.5}
+\contentsline {subsection}{\numberline {5.1}Konig's Theorem (continued)}{17}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Networks}{18}{subsection.5.2}
+\contentsline {section}{\numberline {6}Tuesday, September 26, 2017}{20}{section.6}
+\contentsline {subsection}{\numberline {6.1}Flow on a network}{20}{subsection.6.1}
+\contentsline {section}{\numberline {7}Friday, September 29, 2017}{22}{section.7}
+\contentsline {subsection}{\numberline {7.1}Max-flow Min-Cut Theorem (continued)}{22}{subsection.7.1}

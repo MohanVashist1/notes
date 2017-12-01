@@ -646,6 +646,79 @@ $$
 	\item{increase the flow using this path, and repeat step 2 with new flow}
 \end{enumerate}
 
+\newpage
+
+\section{Tuesday, October 3, 2017}
+
+\subsection{Applying Min-cut Max-flow}
+
+Say we want to prove a statement, that Graph $G$ has a set of edges with property $p$ or size $k$, as long as any set of vertices with property $q$ has size at least $k4$.\\
+\\
+\underline{Idea} To prove such a statement, we have to use the min-cut, max-flow theorem.
+\begin{itemize}
+	\item{Turn $G$ into a network, and let the flow value of the graph be $k$}
+	\item{The graph should correspond to the set of edges with property $p$}
+	\item{The set of $k$ vertices with property $Q$ corresponds to cut of capacity $k$}
+	\item{There is a matching in $V(G)$, such that no 2 edges in the set share the same endpoint.}
+\end{itemize}
+
+\begin{tcolorbox}[title=Definition: Vertex Cover]
+	Set of vertices $C$ such that any edge in $G$ has an endpoint of at least one vertex in $C$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Theorem: (Konig)]
+	In a bipartite graph, There exists a matching of size $k$ as long as any vertex cover has at least size $k$.
+	\tcblower
+	Note that this variation of the definition of capacity includes $\infty$. i.e.
+	$$c: V \times V \mapsto \mathbb{R}^+ \cup \{ \infty \}$$
+	Even in this case, any finite flow has a max flow and a min cut. The point is to go from a bipartite graph to a network as such:
+	\begin{center}
+ \begin{tabular}{||c c||} 
+ \hline
+ Network & Bipartite Graph \\ [0.5ex] 
+ \hline\hline
+ flow & matching \\ 
+ \hline
+ value & size  \\
+ \hline
+ cut & vertex cover   \\
+ \hline
+ capacity & size \\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\end{tcolorbox}
+\underline{i.e.}
+\begin{enumerate}
+	\item{Given a bipartite graph with $V(G) = X \sqcup Y$}
+	\item{add an $s$ and $t$ node as the source and sink nodes respectively.}
+	\item{connect every element of $s$ to $x$ and every element of $t$ to $y$ with an edge.}
+	\item{Give a value of 1 to the capacity of the newly added edges, and a value of $\infty$ to the capacity of the original edges of the bipartite graph. }
+\end{enumerate}
+
+\underline{Conclusion 1:} any flow has a flow of $f(u,v)=\begin{cases}
+1\\
+0
+\end{cases}$ for any edge $u\rightarrow v$
+
+\underline{Conclusion 2:} if we look at a flow, and the subset of edges from $x$ to $y$ with $f(e)=1$. This is a matching. Note that any flow yields a matching.\\
+\\
+\underline{Conclusion 3:} Value of that flow is the number of edges in the matching.\\
+\\
+Understand cut capacities, Take a cut $(S,T)$, assume finite capacity $$c(S,T) = \sum_{u\in S, v\in T} c(u\rightarrow v)$$
+Now, looking at $(X\cap T)\cup(Y\cap S)$, this is a vertex cover for $G$ edges between $X,Y$ such that the endpoints of the edges are not in the vertex cover set $C$.\\
+\\
+The first endpoint lies in $X \cap S$ and the second endpoint lies in $Y \cap T$. Because the edges now goes from $S$ to $T$ contributes to the capacity and $c(e)=\infty$.\\
+\\
+so a $(S,T)$ cut implies a vertex cover where the capacity of the cut is equal to the size of the vertex cover.
+$$\sum_{u\in T} c(s,u) = \sum_{v\in S} c(v,t) = |C|$$
+
+\underline{Conclusion:} A cut implies a vertex cover, the capacity of the cut is the size of the cover.\\
+\\
+And this finishes the proof by Max-Flow, Min-Cut.
+
+\newpage
+
 \end{document}
 
 

@@ -25,3 +25,5 @@
 \BOOKMARK [1][-]{section.7}{Friday, September 29, 2017}{}% 25
 \BOOKMARK [2][-]{subsection.7.1}{Max-flow Min-Cut Theorem \(continued\)}{section.7}% 26
 \BOOKMARK [2][-]{subsection.7.2}{\(Ford-Fulkerson\) Algorithm for finding a maximal flow for a network}{section.7}% 27
+\BOOKMARK [1][-]{section.8}{Tuesday, October 3, 2017}{}% 28
+\BOOKMARK [2][-]{subsection.8.1}{Applying Min-cut Max-flow}{section.8}% 29

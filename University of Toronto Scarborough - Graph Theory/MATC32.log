@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 DEC 2017 14:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 DEC 2017 15:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1230,7 +1230,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2] <imgs/Konigsberg_bridges.png, id=157, 303.1325pt x 238.8925pt>
+[2] <imgs/Konigsberg_bridges.png, id=167, 303.1325pt x 238.8925pt>
 File: imgs/Konigsberg_bridges.png Graphic file (type png)
 
 <use imgs/Konigsberg_bridges.png>
@@ -1251,7 +1251,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--65
 
  []
 
-<imgs/Konigsberg_bridges_graph.png, id=158, 301.125pt x 352.31625pt>
+<imgs/Konigsberg_bridges_graph.png, id=168, 301.125pt x 352.31625pt>
 File: imgs/Konigsberg_bridges_graph.png Graphic file (type png)
 
 <use imgs/Konigsberg_bridges_graph.png>
@@ -1327,7 +1327,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--118
 
  []
 
-<imgs/lec2-1.jpg, id=180, 2346.7675pt x 1617.04124pt>
+<imgs/lec2-1.jpg, id=190, 2346.7675pt x 1617.04124pt>
 File: imgs/lec2-1.jpg Graphic file (type jpg)
  <use imgs/lec2-1.jpg>
 Package pdftex.def Info: imgs/lec2-1.jpg used on input line 119.
@@ -1339,7 +1339,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6 <./imgs/lec2-1.jpg>] <imgs/lec2-2.jpg, id=186, 1998.46625pt x 798.985pt>
+[6 <./imgs/lec2-1.jpg>] <imgs/lec2-2.jpg, id=196, 1998.46625pt x 798.985pt>
 File: imgs/lec2-2.jpg Graphic file (type jpg)
 
 <use imgs/lec2-2.jpg>
@@ -1386,7 +1386,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--168
 
  []
 
-<imgs/lec2-3.jpg, id=192, 2849.64626pt x 1048.91875pt>
+<imgs/lec2-3.jpg, id=202, 2849.64626pt x 1048.91875pt>
 File: imgs/lec2-3.jpg Graphic file (type jpg)
  <use imgs/lec2-3.jpg>
 Package pdftex.def Info: imgs/lec2-3.jpg used on input line 186.
@@ -1428,7 +1428,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9 <./imgs/lec2-3.jpg>] <imgs/lec2-4.jpg, id=202, 1551.7975pt x 653.44125pt>
+[9 <./imgs/lec2-3.jpg>] <imgs/lec2-4.jpg, id=212, 1551.7975pt x 653.44125pt>
 File: imgs/lec2-4.jpg Graphic file (type jpg)
 
 <use imgs/lec2-4.jpg>
@@ -1460,7 +1460,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 222--229
 
  []
 
-<imgs/lec3-1.jpg, id=207, 2289.55376pt x 1382.16376pt>
+<imgs/lec3-1.jpg, id=217, 2289.55376pt x 1382.16376pt>
 File: imgs/lec3-1.jpg Graphic file (type jpg)
  <use imgs/lec3-1.jpg>
 Package pdftex.def Info: imgs/lec3-1.jpg used on input line 235.
@@ -1480,7 +1480,7 @@ Underfull \hbox (badness 3503) in paragraph at lines 243--244
 \OMS/cmsy/m/n/12 ^^Z \OML/cmm/m/it/12 V$ \OT1/cmr/m/n/12 and
  []
 
-<imgs/lec3-2.jpg, id=212, 1989.4325pt x 718.685pt>
+<imgs/lec3-2.jpg, id=222, 1989.4325pt x 718.685pt>
 File: imgs/lec3-2.jpg Graphic file (type jpg)
  <use imgs/lec3-2.jpg>
 Package pdftex.def Info: imgs/lec3-2.jpg used on input line 251.
@@ -1495,13 +1495,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 250--252
 
  []
 
-<imgs/lec3-3.jpg, id=213, 1087.06125pt x 806.01125pt>
+<imgs/lec3-3.jpg, id=223, 1087.06125pt x 806.01125pt>
 File: imgs/lec3-3.jpg Graphic file (type jpg)
  <use imgs/lec3-3.jpg>
 Package pdftex.def Info: imgs/lec3-3.jpg used on input line 260.
 (pdftex.def)             Requested size: 326.1209pt x 241.80524pt.
 
-<imgs/lec3-4.jpg, id=214, 1782.66pt x 814.04124pt>
+<imgs/lec3-4.jpg, id=224, 1782.66pt x 814.04124pt>
 File: imgs/lec3-4.jpg Graphic file (type jpg)
  <use imgs/lec3-4.jpg>
 Package pdftex.def Info: imgs/lec3-4.jpg used on input line 264.
@@ -1832,20 +1832,68 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [26]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 649.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 649.
+Underfull \hbox (badness 10000) in paragraph at lines 655--658
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 704--708
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 704--708
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--714
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--714
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 716--719
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[29]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 722.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 722.
  (./MATC32.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 649.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 649.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 722.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 722.
 Package rerunfilecheck Info: File `MATC32.out' has not changed.
-(rerunfilecheck)             Checksum: B8CD0C21B39C59C9D980EF517F411E2E;1968.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 649.
+(rerunfilecheck)             Checksum: 4C99DFAE45FC9C6A118CDEECB9489FF8;2103.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 722.
  ) 
 Here is how much of TeX's memory you used:
- 19911 strings out of 492995
- 372622 string characters out of 6132704
- 443377 words of memory out of 5000000
- 23029 multiletter control sequences out of 15000+600000
+ 19926 strings out of 492995
+ 372794 string characters out of 6132704
+ 443380 words of memory out of 5000000
+ 23035 multiletter control sequences out of 15000+600000
  15713 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,73p,925b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1865,10 +1913,10 @@ exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loca
 l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/
 local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on MATC32.pdf (26 pages, 2305779 bytes).
+Output written on MATC32.pdf (29 pages, 2312565 bytes).
 PDF statistics:
- 370 PDF objects out of 1000 (max. 8388607)
- 311 compressed objects within 4 object streams
- 73 named destinations out of 1000 (max. 500000)
- 279 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 397 PDF objects out of 1000 (max. 8388607)
+ 335 compressed objects within 4 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 295 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -546,10 +546,108 @@ Start with the flow capacity inequality:
 
 $$|f| = \partial f(s) = f^+ (s) - f^- (s) = \sum_{u\in V} f(s \rightarrow u) - \sum_{u\in V} f(u\rightarrow s)$$
 
-\textbf{Observation 1:} $\partial f(v) = 0 : \forall v \neq s,t \longrightarrow |f| = \sum_{u\in V} f(s\rightarrow u)$
+\textbf{Observation 1:} 
 
+\begin{align*}
+	\partial f(v) = 0 : \forall v \neq s,t \longrightarrow |f| &= \sum_{u\in V} f(s\rightarrow u)\\ 
+	&= \sum_w f(w\rightarrow o) + \sum_{v \neq s} \partial f(v)\\
+	&= \sum_{v \in S} (\sum_u f(v \rightarrow u) - \sum_w f(w\rightarrow v))
+\end{align*}
+
+\textbf{Observation 2:}
+
+$$\sum_{v \in S} (\sum_u f(v\rightarrow u) - \sum_w f(w\rightarrow v)$$
+
+Assume $u\in S$. For a choice of $v,u$ have the flow $f(v\rightarrow u)$ terminate.\\
+\\
+\begin{align*}
+	&= \sum_{v\in S} (\sum_{u \in T} f(v\rightarrow u) - \sum_{w\int T} f(w\rightarrow v))\\
+	&\leq \sum_{v\in S, u\in T} f(v\rightarrow u)\\
+	&= ||(S,T)||
+\end{align*}
+
+Therefore, $|f|$ is maximal iff $||(S,T)||$ is minimal.
+
+\begin{tcolorbox}
+	\underline{Note:} \begin{itemize}
+		\item{We say that $f$ saturates an edge if $f(u\rightarrow v) = c(u\rightarrow v)$}
+		\item{We say that $f$ avoids an edge if $f(u\rightarrow v) = 0$}
+	\end{itemize}
+
+\end{tcolorbox}
+
+So then $|f| = ||(S,T)||$ iff $f$ saturates any edge from $s$ to $t$ and avoids any edge from $t$ to $s$ (so all flows from $T$ to $S$ are 0). In this case, the flow is maximal.\\
+\\
+So we can say that the flow is maximal if every edge from $S$ to $T$ are saturated and every edge from $T$ to $S$ is avoided.
+
+\begin{tcolorbox}[title=Definition: Residual Graph]
+	\underline{residual capacity:} $$c_f : V \times V \mapsto \mathbb{R} \geq 0$$
+	$$\begin{cases}
+		c(u,v)-f(u,v) &\text{ if } (u,v) \in E\\
+		f(u,v) &\text{ if } (v,u) \in E\\
+		0 &\text{ otherwise}
+	\end{cases}$$
+	\underline{$G_f$, the residual graph:} Is a directed graph with
+	$$\begin{cases}
+		V(G_f) = V(G)\\
+		(u,v) \in E(G_f) \text{ if } c_f(u,v) \neq 0
+	\end{cases}$$
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\underline{note:} If there is no path from $s$ to $t$ in $G_f$ then Let $S$ be the vertices reachable from $s$ (which also includes $s$) and let $T$ be the nodes $V(G_f) \setminus S$ (which also includes $t$). Then $(S,T)$ is a cut on $G$ or $G_f$
+\end{tcolorbox}
+
+Consider $u,v$ where $u\in S, v\in T$\\
+we know that $c_f(u\rightarrow v) = 0$, since if it did, $v\in S$ which would be a contradiction of a cut.
+
+$$c_f(u\rightarrow u) = c(u\rightarrow v) - f(u\rightarrow v) + f(u\rightarrow v) = 0 + 0 = 0$$
+
+\underline{Conclusion:} There are no paths in $G_f$ from $s$ to $t$, this implies that the flow is maximal. i.e., $|f|=||(S,T)||$\\
+\\
+But what happens if $G_f$ has a path? We used that path $s\rightarrow t$ to increase the value of $f$ on $G$ (which is the Ford-Fulkerson Algorithm).\\
+\\
+As $s=u_1, u_2, ... , u_n = t$ is an "augmented" path $p$ on $G_f$ where $$\forall i : c_f(u_i, u_{i+1}) \neq 0$$
+Let $F = min(c_f (u_i, u_{i+1}))$ on $G$, define a new flow $f'$ as follows.
+
+$$f'(u\rightarrow v) =\begin{cases}
+	f(u\rightarrow v) + F &\text{ if } u\rightarrow v \in p\\
+	f(u\rightarrow v) - F &\text{ if } v\rightarrow u \in p\\
+	f(u\rightarrow v) &\text{ otherwise}
+\end{cases}
+$$
+
+\underline{Claim:} $f'$ is a flow on $G$ and $|f'|=|f|+F$
+\begin{enumerate}
+	\item{
+	$\forall (u\rightarrow v) : f'(u\leftrightarrow v) \geq 0$ The only problem case where $u\rightarrow v$ in the path $p$ is $v\rightarrow u$ edge is in $G$ as subtracting $F$ made result in a flow smaller than 0.\\
+	\\
+	But calculating this out, we know that if $u\rightarrow v$ lies in the path $p$ and $F \leq f(u\rightarrow v) \forall u \rightarrow v$ in the path, so $f(u\rightarrow v) - F \geq 0$. So we know there is no problem as the flow always remains equal to or greater than 0.
+	}
+	\item{
+	$\forall (u\rightarrow v) \in E(G) $ such that $f'(u\rightarrow v) \leq c(u\rightarrow v)$ but if $u\rightarrow v$ in the path, edge in $G$ 
+	\begin{align*}
+	f'(u\rightarrow v) &= f(u\rightarrow v) + F\\ 
+	&= f(u\rightarrow v) + c(u\rightarrow v)\\
+	&= c(u\rightarrow v) - (c_f(u\rightarrow v))\\
+	&\leq c(u\rightarrow v)
+	\end{align*}
+	}
+\end{enumerate}
+
+\underline{Observation:} $|f'|=|f|+F$ since if the orientation changes, there is another adding edge that cancels out the subtracting edge, and otherwise, you add both adding edges.
+
+\subsection{(Ford-Fulkerson) Algorithm for finding a maximal flow for a network}
+
+\begin{enumerate}
+	\item{start with original flow of f=0}
+	\item{write down $G_f$}
+	\item{choose a path on $G_f$ from $s\rightarrow t$ (if no path exists, the flow is maximal)}
+	\item{increase the flow using this path, and repeat step 2 with new flow}
+\end{enumerate}
 
 \end{document}
+
 
 
 

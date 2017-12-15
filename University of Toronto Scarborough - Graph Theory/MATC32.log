@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 DEC 2017 15:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  14 DEC 2017 19:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1230,7 +1230,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2] <imgs/Konigsberg_bridges.png, id=167, 303.1325pt x 238.8925pt>
+[2] <imgs/Konigsberg_bridges.png, id=239, 303.1325pt x 238.8925pt>
 File: imgs/Konigsberg_bridges.png Graphic file (type png)
 
 <use imgs/Konigsberg_bridges.png>
@@ -1251,7 +1251,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--65
 
  []
 
-<imgs/Konigsberg_bridges_graph.png, id=168, 301.125pt x 352.31625pt>
+<imgs/Konigsberg_bridges_graph.png, id=240, 301.125pt x 352.31625pt>
 File: imgs/Konigsberg_bridges_graph.png Graphic file (type png)
 
 <use imgs/Konigsberg_bridges_graph.png>
@@ -1327,7 +1327,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--118
 
  []
 
-<imgs/lec2-1.jpg, id=190, 2346.7675pt x 1617.04124pt>
+<imgs/lec2-1.jpg, id=261, 2346.7675pt x 1617.04124pt>
 File: imgs/lec2-1.jpg Graphic file (type jpg)
  <use imgs/lec2-1.jpg>
 Package pdftex.def Info: imgs/lec2-1.jpg used on input line 119.
@@ -1339,7 +1339,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6 <./imgs/lec2-1.jpg>] <imgs/lec2-2.jpg, id=196, 1998.46625pt x 798.985pt>
+[6 <./imgs/lec2-1.jpg>] <imgs/lec2-2.jpg, id=267, 1998.46625pt x 798.985pt>
 File: imgs/lec2-2.jpg Graphic file (type jpg)
 
 <use imgs/lec2-2.jpg>
@@ -1386,7 +1386,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--168
 
  []
 
-<imgs/lec2-3.jpg, id=202, 2849.64626pt x 1048.91875pt>
+<imgs/lec2-3.jpg, id=273, 2849.64626pt x 1048.91875pt>
 File: imgs/lec2-3.jpg Graphic file (type jpg)
  <use imgs/lec2-3.jpg>
 Package pdftex.def Info: imgs/lec2-3.jpg used on input line 186.
@@ -1428,7 +1428,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9 <./imgs/lec2-3.jpg>] <imgs/lec2-4.jpg, id=212, 1551.7975pt x 653.44125pt>
+[9 <./imgs/lec2-3.jpg>] <imgs/lec2-4.jpg, id=283, 1551.7975pt x 653.44125pt>
 File: imgs/lec2-4.jpg Graphic file (type jpg)
 
 <use imgs/lec2-4.jpg>
@@ -1460,7 +1460,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 222--229
 
  []
 
-<imgs/lec3-1.jpg, id=217, 2289.55376pt x 1382.16376pt>
+<imgs/lec3-1.jpg, id=288, 2289.55376pt x 1382.16376pt>
 File: imgs/lec3-1.jpg Graphic file (type jpg)
  <use imgs/lec3-1.jpg>
 Package pdftex.def Info: imgs/lec3-1.jpg used on input line 235.
@@ -1480,7 +1480,7 @@ Underfull \hbox (badness 3503) in paragraph at lines 243--244
 \OMS/cmsy/m/n/12 ^^Z \OML/cmm/m/it/12 V$ \OT1/cmr/m/n/12 and
  []
 
-<imgs/lec3-2.jpg, id=222, 1989.4325pt x 718.685pt>
+<imgs/lec3-2.jpg, id=293, 1989.4325pt x 718.685pt>
 File: imgs/lec3-2.jpg Graphic file (type jpg)
  <use imgs/lec3-2.jpg>
 Package pdftex.def Info: imgs/lec3-2.jpg used on input line 251.
@@ -1495,13 +1495,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 250--252
 
  []
 
-<imgs/lec3-3.jpg, id=223, 1087.06125pt x 806.01125pt>
+<imgs/lec3-3.jpg, id=294, 1087.06125pt x 806.01125pt>
 File: imgs/lec3-3.jpg Graphic file (type jpg)
  <use imgs/lec3-3.jpg>
 Package pdftex.def Info: imgs/lec3-3.jpg used on input line 260.
 (pdftex.def)             Requested size: 326.1209pt x 241.80524pt.
 
-<imgs/lec3-4.jpg, id=224, 1782.66pt x 814.04124pt>
+<imgs/lec3-4.jpg, id=295, 1782.66pt x 814.04124pt>
 File: imgs/lec3-4.jpg Graphic file (type jpg)
  <use imgs/lec3-4.jpg>
 Package pdftex.def Info: imgs/lec3-4.jpg used on input line 264.
@@ -1880,23 +1880,221 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [29]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 722.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 722.
+Underfull \hbox (badness 10000) in paragraph at lines 726--736
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 726--736
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 726--736
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 726--736
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 726--736
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 745--750
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 752--763
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 752--763
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 752--763
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 752--763
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 774--777
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 782--786
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 803--806
+
+ []
+
+<imgs/lec10.png, id=411, 419.5675pt x 103.38625pt>
+File: imgs/lec10.png Graphic file (type png)
+ <use imgs/lec10.png>
+Package pdftex.def Info: imgs/lec10.png used on input line 809.
+(pdftex.def)             Requested size: 314.67485pt x 77.53949pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 811--814
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[33 <./imgs/lec10.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 828--833
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 828--833
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[34] <imgs/lec12.jpg, id=421, 401.5pt x 401.5pt>
+File: imgs/lec12.jpg Graphic file (type jpg)
+ <use imgs/lec12.jpg>
+Package pdftex.def Info: imgs/lec12.jpg used on input line 865.
+(pdftex.def)             Requested size: 100.37474pt x 100.37474pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 862--866
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[35 <./imgs/lec12.jpg>] <imgs/lec12-1.png, id=426, 471.7625pt x 410.53375pt>
+File: imgs/lec12-1.png Graphic file (type png)
+
+<use imgs/lec12-1.png>
+Package pdftex.def Info: imgs/lec12-1.png used on input line 893.
+(pdftex.def)             Requested size: 117.94032pt x 102.63318pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[36 <./imgs/lec12-1.png>]
+Overfull \hbox (0.11673pt too wide) in paragraph at lines 912--912
+[]\OT1/cmr/bx/n/12 Application of Eu-ler's for-mula for con-nected, pla-nar gra
+phs 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 945--947
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 971--975
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 982--985
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[39]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[40]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 993.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 993.
  (./MATC32.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 722.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 722.
-Package rerunfilecheck Info: File `MATC32.out' has not changed.
-(rerunfilecheck)             Checksum: 4C99DFAE45FC9C6A118CDEECB9489FF8;2103.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 722.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 993.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 993.
+
+
+Package rerunfilecheck Warning: File `MATC32.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `MATC32.out':
+(rerunfilecheck)             Before: 81D66E3374B89FADCCFC7050C56DA585;3100
+(rerunfilecheck)             After:  153CDA9887DF83E3948610ADBA7CAB3E;3167.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 993.
  ) 
 Here is how much of TeX's memory you used:
- 19926 strings out of 492995
- 372794 string characters out of 6132704
- 443380 words of memory out of 5000000
- 23035 multiletter control sequences out of 15000+600000
+ 20015 strings out of 492995
+ 374072 string characters out of 6132704
+ 443399 words of memory out of 5000000
+ 23090 multiletter control sequences out of 15000+600000
  15713 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,73p,925b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,73p,925b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -1913,10 +2111,10 @@ exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loca
 l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/
 local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on MATC32.pdf (29 pages, 2312565 bytes).
+Output written on MATC32.pdf (40 pages, 2512046 bytes).
 PDF statistics:
- 397 PDF objects out of 1000 (max. 8388607)
- 335 compressed objects within 4 object streams
- 82 named destinations out of 1000 (max. 500000)
- 295 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 534 PDF objects out of 1000 (max. 8388607)
+ 455 compressed objects within 5 object streams
+ 113 named destinations out of 1000 (max. 500000)
+ 422 words of extra memory for PDF output out of 10000 (max. 10000000)
 

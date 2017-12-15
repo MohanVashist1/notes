@@ -719,6 +719,277 @@ And this finishes the proof by Max-Flow, Min-Cut.
 
 \newpage
 
+\section{Friday, October 6, 2017}
+
+\subsection{Hall's Theorem on Perfect Matching}
+
+Assume $|X| = |Y|$, does there exist a perfect match?\\
+\\
+Consider the marriage problem where nodes in $X$ represent women and nodes in $Y$ represent men.\\
+\\
+We require that for any $k$ women, they need to be interested (connected by an edge to) at least $k$ men (this is the sufficient condition).\\
+\\
+Let $G$ be a bipartite graph, $V(G) = X \sqcup Y$. $|X|=|Y|$.\\
+\\
+\begin{tcolorbox}[title=Marriage Condition]
+	$W\subset X, \Gamma (W) = \{ y | (x,y)\in E, \text{ for some } x\in W \}$
+\end{tcolorbox}
+\begin{tcolorbox}[title=Theorem]
+	The following are equivalent:
+	\begin{itemize}
+		\item{$G$ has a perfect matching}
+		\item{$G$ satisfies the marriage condition.}
+	\end{itemize}
+\end{tcolorbox}
+
+For a flow $f$, the value of $|f|$ is the size of the matching, if there exists a flow of value n. If there does not exist a flow of $|f|=n$. Produce a set $W \subset X$ such that $|W| > |\Gamma (W)|$ which implies that the max flow has a value of $k < n$.\\
+\\
+There exists a cut $(S,T)$ of capacity $||(S,T)||=k$
+\begin{tcolorbox}
+	\underline{note:} $(X\cap T) \cup (Y \cap S)$ is an edge cover of size k
+\end{tcolorbox}
+$$|X \cap T| + |Y \cap S| = k$$
+$$|X \cap T| + |Y \cap S| = k < |X \cap T| + |X \cap S| = n$$
+This is because $ |X \cap T| + |X \cap S| = |X|$ as max flow is $n$.\\
+\\
+This implies that $|Y\cap S| < |X \cap S|$.\\
+\\
+Take any $W = X \cap S$.\\
+\\
+For $W=X \cap S, \Gamma (W) \subset Y \cap S \longrightarrow |\Gamma (W)| < |W|$\\
+\\
+Any edge $(x,y)$ with $x \in (X \cap S)$ must have $y\in (X \cap S)$. If however $y \in (Y \cap T)$, edge $(x,y)$ contributes to the capacity of the cut, which in this case is of infinite capacity.\\
+The Theorem is constructive: assume marriage condition is true, a max-flow implies a perfect matching (look at all edges between $X$ anad $Y$ with flow 1).
+
+\subsection{Connectivity: Menger's Theorem}
+
+\begin{tcolorbox}[title=Definition: edge-cut]
+	Considering a connected graph $G$, we define an edge-cut as a set of edges $\{ e_1, ..., e_n \}$, such that removing these edges from the graph $G$ disconnects the graph.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: $k$-connected]
+	We say $G$ is $k$-connected if the minimal size of the edge cut of $G$ is of size $k$.
+\end{tcolorbox}
+
+\underline{Example:} a $1$-connected graph means there exists at least one edge that is not lying on a cycle.\\
+\\
+\underline{Idea:} Menger's Theorem uses the Min-Cut Max-Flow theorem to extend this example.
+
+\begin{tcolorbox}[title=Menger's Theorem]
+	$G$ is $k$-connected iff any 2 points are connected by $k$ disjoint paths. The max size of a set of paths that are disjoint is $k$.
+\end{tcolorbox}
+
+This follows from the statement:\\
+If $s,t$ are 2 vertices, what are the minimum amount of edges that need to be removed so that $s,t$ are disconnected from each other? This is the maximal cardinality of the set of $s\rightarrow t$ paths.\\
+\\
+This will follow from the version of the max-flow min-cut for directed graphs, but now given a directed graph, we create a network with a source node $s$ and a sink node $t$ with a capacity of 1 on all directed edges.
+
+\newpage
+
+\section{Tuesday, October 17, 2017}
+
+\subsection{Planar Graphs}
+
+To define planar and other concepts (i.e. 'faces'), we need a few definitions.
+
+\begin{tcolorbox}[title=Definition: Open Ball]
+	An open ball around point $x$ with radius $\epsilon$ is the set $$B(x,\epsilon ) = \{ y \in\mathbb{R}^n : ||y-x||<\epsilon \}$$
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: Open set]
+	An open set in $\mathbb{R}^n$ is a set $U$ such that $\forall x \in U$, there exists some ball $B(x,\epsilon ) \subset U$ for some $\epsilon > 0$
+\end{tcolorbox}
+
+\underline{counter-example:} the closed interval $[a,b]$ because for $b$, there does not exist an $\epsilon > 0$ such that $]b-\epsilon, b+\epsilon[ \subset [a,b]$, so $[a,b]$ is not an open set.\\
+\\
+More generally, a set that is not open is a closed disk.
+
+\underline{Remark:} A contraction does not change a planar drawing. For example:
+	
+\includegraphics[scale=0.75]{lec10}
+
+Here we just took edge $e$ and shrank it down. Thus, the planar graph $G$ retains the drawing.\\
+\\
+Using these 2 ingredients will help us prove Euler's Theorem.
+
+\newpage
+
+\section{Tuesday, October 24, 2017}
+
+\subsection{Closed sets}
+
+\begin{tcolorbox}[title=Definition: Closed Sets]
+	For any set $x \in \mathbb{R}^n$, we define the closure of $x$ as follows.
+	$$\overset{\_\_\_}{x} = \{ x \in \mathbb{R}^n : \text{ there exists a sequence in $x$, converging to } x \}$$
+	In particular: $x\subset \overset{\_\_\_}{x}$, the set is closed if $\overset{\_\_\_}{x} = x$
+\end{tcolorbox}
+
+\underline{Example:} $[a,b]$ is closed, which converges as
+$$a \leq \lim x_i \leq b$$ for any sequence $(x_i) \in [a,b]$\\
+\\
+\underline{Remark:} Closed means any sequence of elements in $X$ that converges has a limit in $X$\\
+\\
+\underline{Counter-Example:} $]a,b[$, Because we can find a sequence $(x_i)_{i\in l} \in ]a,b[$ converging to $b \not\in ]a,b[$. Take $x_i = b - \frac{1}{i}$
+
+\begin{tcolorbox}[title=Relation between open and closed sets]
+	The relation between open and closed sets is that
+	$$\text{$X$ is open iff $X^c$ is closed}$$
+\end{tcolorbox}
+
+\underline{Remark:} Sets can be open, closed, or neither.\\
+\underline{Example:} $]a,b[$ is an example of a set that is neither.
+
+\newpage
+
+\section{Friday, October 27, 2017}
+
+\subsection{More Definitions for Planar Graphs}
+
+\begin{tcolorbox}[title=Curve in $\mathbb{R}^n$]
+	A curve in $\mathbb{R}^n$ is defined as a continuous function $$\gamma : [a,b] \mapsto \mathbb{R}^n$$
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Polygonal Curve]
+	A polygonal curve is defined as a function
+	$$\gamma : [a,b] \mapsto \mathbb{R}^n$$
+	where $\exists a=a_0, a_1,..., a_n = b$ such that $\gamma [a_i,..., a_{i+1}]$ is a curve. 
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Drawing of a Graph]
+	For a graph $G(V,E)$, the drawing of a graph is $f : V \mapsto \mathbb{R}^n$ and $f' : E\mapsto\text{ a polygonal curve in $\mathbb{R}^n$}$ such that if $e\in E$ is an edge with endpoints $a,b$, then this implies that $f'(e)$ is a curve from $f(a)$ to $f(b)$.
+\end{tcolorbox}
+
+This, for a planar graph with $n=2$ and for spherical drawing curves in a sphere, take values in $S^2 = \{ x : d(x,0)=1 \} \subset \mathbb{R}^3$.\\
+\\
+\underline{Example:} this is planar if you look at it directly, also one can see it as a cube with a cube section removed from it.\\
+\includegraphics[scale=0.25]{lec12}
+
+\begin{tcolorbox}
+	\underline{Note:} Drawings of a graph are not invariant. There are multiple ways to draw a cube.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: Crossing of a graph]
+	A crossing of a graph is defined as a point in $f(e) \cap f(e')$, where the point is not an endpoint of either $f(e)$ or $f(e')$
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: Region in $\mathbb{R}^n$]
+	An open set $\forall x,y$ in the region, there exists a polygonal curve with endpoints $x,y$ in the region.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: Face]
+	\begin{enumerate}
+		\item{Region of a graph drawing}
+		\item{Does not interfere with intersect drawing}
+		\item{maximal, i.e. another set $F'$ satisfies above properties and $F \subset F$ implies that $F = F'$}
+	\end{enumerate}
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Euler's Formula]
+	$$V-E+F=2$$
+	For all planar graphs C that has a planar graph drawing, no crossing and must be connected. $F$ refers to the faces of the planar graph drawing.
+\end{tcolorbox}
+
+\underline{Example:} $V=4, E=6, F=4, 4-6+4=2$\\
+\includegraphics[scale=0.25]{lec12-1}
+
+\begin{tcolorbox}[title=Definition: Jordan Curve Theorem]
+	A curve that divides an area into two distinct regions (one on one side of the curve, and another on the other side of the curve.)
+	Let $[a,b] \in \mathbb{R}^2$ (2 because there is no left or right in space) be a curve.
+	A Jordan Curve is:
+	\begin{enumerate}
+		\item{A closed curve, i.e. $\gamma (a) = \gamma (b)$}
+		\item{The curve $\gamma$ is simple (injective) (no point repeated).}
+	\end{enumerate}
+	$\gamma$ divides a region $R$ into 2 maximal regions with the boundary of $\gamma[a,b]$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: Contraction of an edge]
+	Consider an edge $e$, the contraction of an edge $e$ of a graph $G$ is the graph $G \setminus \{ e \}$ such that for the endpoint nodes $a,b$ of $e$, $a=b$
+\end{tcolorbox}
+
+\subsection{Planar Graphs}
+
+\subsubsection{Application of Euler's formula for connected, planar graphs}
+
+\begin{tcolorbox}
+	\underline{Inequality 1:} For a planar graph with $V \geq 3$, $E \leq V-6$
+\end{tcolorbox}
+
+\begin{proof}
+	Consider an arbitrary planar graph with $V \geq 3$.\\
+	For each face, count the number of edges in the face. And since there as at least 3 edges in each face. Plugging this into Euler's formula we get
+	\begin{align*}
+		2E &\geq 3F\\
+		F &\leq \frac{2}{3} E\\
+		2 &= V-E+F \leq V-E+\frac{2}{3} E\\
+		2 &\leq V - \frac{1}{3} E\\
+		E &\leq 3V - 6
+	\end{align*}
+\end{proof}
+
+\underline{Example:} Consider $K_5$ (graph with 5 nodes where there is an edge between any 2 vertices).\\
+Note that this graph is not planar as $V=5, E=10$ and $10 \leq 3\cdot 5 - 6$ is not true.
+
+\begin{tcolorbox}
+	\underline{Inequality 2:} Assume $G$ has no triangles, then
+	\begin{align*}
+		2E &\geq 4F\\
+		E &\geq 2F\\
+		2 &= V-E+F \leq V-E+\frac{E}{2}\\
+		4+E &\leq 2V\\
+		E &\leq 2V - 4
+	\end{align*}
+\end{tcolorbox}
+
+\underline{Example:} $K_{3,3}$, which is the bipartite graph where 
+$$V = \{ x_1, ..., x_n \} \cup \{ y_1, ..., y_m \}$$
+where any $x_i$ is connected to any $y_i$ by a single edge.\\
+
+the result is $9 \not\leq 2\cdot 6 - 4$.
+
+\section{Tuesday, October 31, 2017}
+
+\subsection{Subdivisions}
+
+\begin{tcolorbox}
+	\underline{Recall:} For a planar connected graph
+	\begin{itemize}
+		\item{$V-E+F = 2$}
+		\item{$E \leq 3V - 6$ (i.e., $K_5$ is not planar)}
+		\item{$E \leq 2V - 4$ (i.e., $K_{3,3}$ is not planar)}
+	\end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: Elementary Subdivision of a graph $G$]
+	An Elementary subdivision of graph $G$ is a new graph $G \sqcup \{ u \}$ where $u$ is placed onto an edge $e=(v,w)$ in the graph, so that the new edges are $(v,u), (u,w)$
+\end{tcolorbox}
+\begin{tcolorbox}[title=Definition: Subdivision of a graph $G$]
+	A subdivision of graph $G$ is a graph obtained by 0 or more elementary subdivisions of $G$.
+\end{tcolorbox}
+
+
+Because of this definition, we can say that:\\
+\textbf{If a graph is planar, then all of its subdivisions are planar}.\\
+\\
+A graph containing a subdivision of $K_5$ or $K_{3,3}$ then implies that the graph is not planar. This implication points both ways as well.
+
+\begin{tcolorbox}[title=Kuratowski's Theorem]
+	A graph is planar iff it does not contain a subgraph that is a subdivision of $K_5$ or of $K_{3,3}$
+\end{tcolorbox}
+
+\subsection{Dual Graphs}
+
+Assume $G$ is planar, now consider a drawing of $G$ in a plane, the vertices of Dual Graph $G^*$ is equal to the faces of $G$ and there is an edge between $v_1, v_2 \in G^*$ if the face $v_1$ and the face $v_2$ have a common edge. The dual graph of a graph $G$ depends on the drawing of a graph $G$, so 2 different isomorphic graphs may have the same dual graph.\\
+\\
+We also know that: 
+$$2|E| = \sum_{v \in V(G)} d(v)$$
+Counting all the edges coming out of all vertices means that we double count every edge. But what happens when we apply this to $G^*$ instead.
+$$G^*(V^*, E^*) \longrightarrow 2E^* = \sum_{v \in V*} d(v)$$
+So now this equation means that all the edges that make up every face is being summed up.
+
+\subsection{Platonic Solids}
+A platonic solid is a solid where each face is a regular $k$-gon and there is the same amount of faces at any vertex.
+
 \end{document}
 
 

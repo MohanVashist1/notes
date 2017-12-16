@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  14 DEC 2017 19:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  15 DEC 2017 21:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1219,7 +1219,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./MATC32.toc
 [1
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2])
 \tf@toc=\write7
 \openout7 = `MATC32.toc'.
 
@@ -1230,7 +1237,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2] <imgs/Konigsberg_bridges.png, id=239, 303.1325pt x 238.8925pt>
+[3] <imgs/Konigsberg_bridges.png, id=293, 303.1325pt x 238.8925pt>
 File: imgs/Konigsberg_bridges.png Graphic file (type png)
 
 <use imgs/Konigsberg_bridges.png>
@@ -1251,7 +1258,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--65
 
  []
 
-<imgs/Konigsberg_bridges_graph.png, id=240, 301.125pt x 352.31625pt>
+<imgs/Konigsberg_bridges_graph.png, id=294, 301.125pt x 352.31625pt>
 File: imgs/Konigsberg_bridges_graph.png Graphic file (type png)
 
 <use imgs/Konigsberg_bridges_graph.png>
@@ -1284,14 +1291,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3 <./imgs/Konigsberg_bridges.png>]
+[4 <./imgs/Konigsberg_bridges.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4 <./imgs/Konigsberg_bridges_graph.png>]
+[5 <./imgs/Konigsberg_bridges_graph.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 87--94
 
  []
@@ -1312,7 +1319,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5]
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 111--118
 
  []
@@ -1327,7 +1334,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--118
 
  []
 
-<imgs/lec2-1.jpg, id=261, 2346.7675pt x 1617.04124pt>
+<imgs/lec2-1.jpg, id=315, 2346.7675pt x 1617.04124pt>
 File: imgs/lec2-1.jpg Graphic file (type jpg)
  <use imgs/lec2-1.jpg>
 Package pdftex.def Info: imgs/lec2-1.jpg used on input line 119.
@@ -1339,7 +1346,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6 <./imgs/lec2-1.jpg>] <imgs/lec2-2.jpg, id=267, 1998.46625pt x 798.985pt>
+[7 <./imgs/lec2-1.jpg>] <imgs/lec2-2.jpg, id=322, 1998.46625pt x 798.985pt>
 File: imgs/lec2-2.jpg Graphic file (type jpg)
 
 <use imgs/lec2-2.jpg>
@@ -1361,7 +1368,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7 <./imgs/lec2-2.jpg>]
+[8 <./imgs/lec2-2.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 158--168
 
  []
@@ -1386,7 +1393,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--168
 
  []
 
-<imgs/lec2-3.jpg, id=273, 2849.64626pt x 1048.91875pt>
+<imgs/lec2-3.jpg, id=327, 2849.64626pt x 1048.91875pt>
 File: imgs/lec2-3.jpg Graphic file (type jpg)
  <use imgs/lec2-3.jpg>
 Package pdftex.def Info: imgs/lec2-3.jpg used on input line 186.
@@ -1412,7 +1419,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8]
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 200--204
 
  []
@@ -1428,7 +1435,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9 <./imgs/lec2-3.jpg>] <imgs/lec2-4.jpg, id=283, 1551.7975pt x 653.44125pt>
+[10 <./imgs/lec2-3.jpg>] <imgs/lec2-4.jpg, id=338, 1551.7975pt x 653.44125pt>
 File: imgs/lec2-4.jpg Graphic file (type jpg)
 
 <use imgs/lec2-4.jpg>
@@ -1445,7 +1452,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10 <./imgs/lec2-4.jpg>]
+[11 <./imgs/lec2-4.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 222--229
 
  []
@@ -1460,7 +1467,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 222--229
 
  []
 
-<imgs/lec3-1.jpg, id=288, 2289.55376pt x 1382.16376pt>
+<imgs/lec3-1.jpg, id=343, 2289.55376pt x 1382.16376pt>
 File: imgs/lec3-1.jpg Graphic file (type jpg)
  <use imgs/lec3-1.jpg>
 Package pdftex.def Info: imgs/lec3-1.jpg used on input line 235.
@@ -1472,7 +1479,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11 <./imgs/lec3-1.jpg>]
+[12 <./imgs/lec3-1.jpg>]
 Underfull \hbox (badness 3503) in paragraph at lines 243--244
 []\OT1/cmr/m/n/12 if $\OML/cmm/m/it/12 G[]; G[]$ \OT1/cmr/m/n/12 are two graphs
 , as-sume $\OML/cmm/m/it/12 V\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G[]\OT1/cmr/m/n/
@@ -1480,7 +1487,7 @@ Underfull \hbox (badness 3503) in paragraph at lines 243--244
 \OMS/cmsy/m/n/12 ^^Z \OML/cmm/m/it/12 V$ \OT1/cmr/m/n/12 and
  []
 
-<imgs/lec3-2.jpg, id=293, 1989.4325pt x 718.685pt>
+<imgs/lec3-2.jpg, id=348, 1989.4325pt x 718.685pt>
 File: imgs/lec3-2.jpg Graphic file (type jpg)
  <use imgs/lec3-2.jpg>
 Package pdftex.def Info: imgs/lec3-2.jpg used on input line 251.
@@ -1495,13 +1502,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 250--252
 
  []
 
-<imgs/lec3-3.jpg, id=294, 1087.06125pt x 806.01125pt>
+<imgs/lec3-3.jpg, id=349, 1087.06125pt x 806.01125pt>
 File: imgs/lec3-3.jpg Graphic file (type jpg)
  <use imgs/lec3-3.jpg>
 Package pdftex.def Info: imgs/lec3-3.jpg used on input line 260.
 (pdftex.def)             Requested size: 326.1209pt x 241.80524pt.
 
-<imgs/lec3-4.jpg, id=295, 1782.66pt x 814.04124pt>
+<imgs/lec3-4.jpg, id=350, 1782.66pt x 814.04124pt>
 File: imgs/lec3-4.jpg Graphic file (type jpg)
  <use imgs/lec3-4.jpg>
 Package pdftex.def Info: imgs/lec3-4.jpg used on input line 264.
@@ -1522,7 +1529,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12 <./imgs/lec3-2.jpg>]
+[13 <./imgs/lec3-2.jpg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 267.
@@ -1543,7 +1550,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13 <./imgs/lec3-3.jpg> <./imgs/lec3-4.jpg>]
+[14 <./imgs/lec3-3.jpg> <./imgs/lec3-4.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 271--273
 
  []
@@ -1564,7 +1571,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14]
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 284--292
 
  []
@@ -1595,7 +1602,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15]
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 348--355
 
  []
@@ -1623,7 +1630,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 367--371
 
  []
@@ -1644,7 +1651,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17]
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 391--409
 
  []
@@ -1704,13 +1711,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [19]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1719,6 +1719,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [20]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 461--466
 
  []
@@ -1739,7 +1746,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21]
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 500--501
 
  []
@@ -1760,7 +1767,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22]
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 517--519
 
  []
@@ -1783,7 +1790,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23]
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 561--563
 
  []
@@ -1804,24 +1811,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 606--610
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 606--610
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 623--627
+Underfull \hbox (badness 10000) in paragraph at lines 606--610
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 606--610
 
  []
 
@@ -1832,7 +1828,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 655--658
+Underfull \hbox (badness 10000) in paragraph at lines 623--627
 
  []
 
@@ -1843,22 +1839,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 704--708
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 704--708
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 708--714
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 708--714
+Underfull \hbox (badness 10000) in paragraph at lines 655--658
 
  []
 
@@ -1869,7 +1850,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 716--719
+Underfull \hbox (badness 10000) in paragraph at lines 704--708
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 704--708
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--714
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--714
 
  []
 
@@ -1880,6 +1876,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [29]
+Underfull \hbox (badness 10000) in paragraph at lines 716--719
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 726--736
 
  []
@@ -1935,7 +1942,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30]
+[31]
 Underfull \hbox (badness 10000) in paragraph at lines 774--777
 
  []
@@ -1951,19 +1958,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31]
+[32]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 803--806
 
  []
 
-<imgs/lec10.png, id=411, 419.5675pt x 103.38625pt>
+<imgs/lec10.png, id=466, 419.5675pt x 103.38625pt>
 File: imgs/lec10.png Graphic file (type png)
  <use imgs/lec10.png>
 Package pdftex.def Info: imgs/lec10.png used on input line 809.
@@ -1979,7 +1986,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[33 <./imgs/lec10.png>]
+[34 <./imgs/lec10.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 828--833
 
  []
@@ -1995,7 +2002,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[34] <imgs/lec12.jpg, id=421, 401.5pt x 401.5pt>
+[35] <imgs/lec12.jpg, id=476, 401.5pt x 401.5pt>
 File: imgs/lec12.jpg Graphic file (type jpg)
  <use imgs/lec12.jpg>
 Package pdftex.def Info: imgs/lec12.jpg used on input line 865.
@@ -2011,7 +2018,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[35 <./imgs/lec12.jpg>] <imgs/lec12-1.png, id=426, 471.7625pt x 410.53375pt>
+[36 <./imgs/lec12.jpg>] <imgs/lec12-1.png, id=481, 471.7625pt x 410.53375pt>
 File: imgs/lec12-1.png Graphic file (type png)
 
 <use imgs/lec12-1.png>
@@ -2024,7 +2031,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[36 <./imgs/lec12-1.png>]
+[37 <./imgs/lec12-1.png>]
 Overfull \hbox (0.11673pt too wide) in paragraph at lines 912--912
 []\OT1/cmr/bx/n/12 Application of Eu-ler's for-mula for con-nected, pla-nar gra
 phs 
@@ -2036,7 +2043,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[37]
+[38]
 Underfull \hbox (badness 10000) in paragraph at lines 945--947
 
  []
@@ -2047,7 +2054,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 971--975
 
  []
@@ -2063,58 +2070,151 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39]
+[40]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 993.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 993.
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 1009--1023
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1009--1023
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1009--1023
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1009--1023
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1009--1023
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 1044--1050
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1044--1050
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1044--1050
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 1064--1068
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[44]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1122--1123
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[46]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[47]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1147.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1147.
  (./MATC32.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 993.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 993.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1147.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1147.
 
-
-Package rerunfilecheck Warning: File `MATC32.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `MATC32.out':
-(rerunfilecheck)             Before: 81D66E3374B89FADCCFC7050C56DA585;3100
-(rerunfilecheck)             After:  153CDA9887DF83E3948610ADBA7CAB3E;3167.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 993.
+Package rerunfilecheck Info: File `MATC32.out' has not changed.
+(rerunfilecheck)             Checksum: A0E77C206F7F8E4995E839EB2F1BA50B;3790.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1147.
  ) 
 Here is how much of TeX's memory you used:
- 20015 strings out of 492995
- 374072 string characters out of 6132704
- 443399 words of memory out of 5000000
- 23090 multiletter control sequences out of 15000+600000
+ 20055 strings out of 492995
+ 374606 string characters out of 6132704
+ 443411 words of memory out of 5000000
+ 23108 multiletter control sequences out of 15000+600000
  15713 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,73p,925b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,13n,73p,925b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pf
 b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
-/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on MATC32.pdf (40 pages, 2512046 bytes).
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on MATC32.pdf (47 pages, 2537557 bytes).
 PDF statistics:
- 534 PDF objects out of 1000 (max. 8388607)
- 455 compressed objects within 5 object streams
- 113 named destinations out of 1000 (max. 500000)
- 422 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 627 PDF objects out of 1000 (max. 8388607)
+ 539 compressed objects within 6 object streams
+ 135 named destinations out of 1000 (max. 500000)
+ 502 words of extra memory for PDF output out of 10000 (max. 10000000)
 

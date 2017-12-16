@@ -1,47 +1,56 @@
 \select@language {english}
-\contentsline {section}{\numberline {1}Tuesday, September 5, 2017}{3}{section.1}
-\contentsline {subsection}{\numberline {1.1}The Seven Bridges of Konigsberg}{3}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}(Outline) Solution to Konigsberg}{5}{subsection.1.2}
-\contentsline {section}{\numberline {2}Friday, September 8, 2017}{6}{section.2}
-\contentsline {subsection}{\numberline {2.1}Graphs}{6}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Graph Theory Applications}{7}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Uber}{7}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Monge's Theorem (on matching)}{7}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}Marriage (Stable) Problem}{8}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}Scheduling (Graph Colouring)}{8}{subsubsection.2.2.4}
-\contentsline {subsubsection}{\numberline {2.2.5}Network Problems}{9}{subsubsection.2.2.5}
-\contentsline {subsubsection}{\numberline {2.2.6}Uber (Pathfinding)}{9}{subsubsection.2.2.6}
-\contentsline {subsection}{\numberline {2.3}Morphism}{9}{subsection.2.3}
-\contentsline {section}{\numberline {3}Tuesday, September 12, 2017}{11}{section.3}
-\contentsline {subsection}{\numberline {3.1}More Morphism}{11}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Decomposing Graphs}{12}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Connectivity of $G$}{14}{subsubsection.3.2.1}
-\contentsline {paragraph}{Path}{14}{section*.2}
-\contentsline {paragraph}{Cycle}{14}{section*.3}
-\contentsline {section}{\numberline {4}Friday, September 15, 2017}{15}{section.4}
-\contentsline {subsection}{\numberline {4.1}Equivalence Relations on a set}{15}{subsection.4.1}
-\contentsline {section}{\numberline {5}Tuesday, September 19, 2017}{18}{section.5}
-\contentsline {subsection}{\numberline {5.1}Konig's Theorem (continued)}{18}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Networks}{19}{subsection.5.2}
-\contentsline {section}{\numberline {6}Tuesday, September 26, 2017}{21}{section.6}
-\contentsline {subsection}{\numberline {6.1}Flow on a network}{21}{subsection.6.1}
-\contentsline {section}{\numberline {7}Friday, September 29, 2017}{23}{section.7}
-\contentsline {subsection}{\numberline {7.1}Max-flow Min-Cut Theorem (continued)}{23}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}(Ford-Fulkerson) Algorithm for finding a maximal flow for a network}{26}{subsection.7.2}
-\contentsline {section}{\numberline {8}Tuesday, October 3, 2017}{27}{section.8}
-\contentsline {subsection}{\numberline {8.1}Applying Min-cut Max-flow}{27}{subsection.8.1}
-\contentsline {section}{\numberline {9}Friday, October 6, 2017}{30}{section.9}
-\contentsline {subsection}{\numberline {9.1}Hall's Theorem on Perfect Matching}{30}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Connectivity: Menger's Theorem}{31}{subsection.9.2}
-\contentsline {section}{\numberline {10}Tuesday, October 17, 2017}{33}{section.10}
-\contentsline {subsection}{\numberline {10.1}Planar Graphs}{33}{subsection.10.1}
-\contentsline {section}{\numberline {11}Tuesday, October 24, 2017}{34}{section.11}
-\contentsline {subsection}{\numberline {11.1}Closed sets}{34}{subsection.11.1}
-\contentsline {section}{\numberline {12}Friday, October 27, 2017}{35}{section.12}
-\contentsline {subsection}{\numberline {12.1}More Definitions for Planar Graphs}{35}{subsection.12.1}
-\contentsline {subsection}{\numberline {12.2}Planar Graphs}{37}{subsection.12.2}
-\contentsline {subsubsection}{\numberline {12.2.1}Application of Euler's formula for connected, planar graphs}{37}{subsubsection.12.2.1}
-\contentsline {section}{\numberline {13}Tuesday, October 31, 2017}{38}{section.13}
-\contentsline {subsection}{\numberline {13.1}Subdivisions}{38}{subsection.13.1}
-\contentsline {subsection}{\numberline {13.2}Dual Graphs}{39}{subsection.13.2}
-\contentsline {subsection}{\numberline {13.3}Platonic Solids}{40}{subsection.13.3}
+\contentsline {section}{\numberline {1}Tuesday, September 5, 2017}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}The Seven Bridges of Konigsberg}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}(Outline) Solution to Konigsberg}{6}{subsection.1.2}
+\contentsline {section}{\numberline {2}Friday, September 8, 2017}{7}{section.2}
+\contentsline {subsection}{\numberline {2.1}Graphs}{7}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Graph Theory Applications}{8}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Uber}{8}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Monge's Theorem (on matching)}{8}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Marriage (Stable) Problem}{9}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Scheduling (Graph Colouring)}{9}{subsubsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.5}Network Problems}{10}{subsubsection.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.6}Uber (Pathfinding)}{10}{subsubsection.2.2.6}
+\contentsline {subsection}{\numberline {2.3}Morphism}{10}{subsection.2.3}
+\contentsline {section}{\numberline {3}Tuesday, September 12, 2017}{12}{section.3}
+\contentsline {subsection}{\numberline {3.1}More Morphism}{12}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Decomposing Graphs}{13}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Connectivity of $G$}{15}{subsubsection.3.2.1}
+\contentsline {paragraph}{Path}{15}{section*.2}
+\contentsline {paragraph}{Cycle}{15}{section*.3}
+\contentsline {section}{\numberline {4}Friday, September 15, 2017}{16}{section.4}
+\contentsline {subsection}{\numberline {4.1}Equivalence Relations on a set}{16}{subsection.4.1}
+\contentsline {section}{\numberline {5}Tuesday, September 19, 2017}{19}{section.5}
+\contentsline {subsection}{\numberline {5.1}Konig's Theorem (continued)}{19}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Networks}{20}{subsection.5.2}
+\contentsline {section}{\numberline {6}Tuesday, September 26, 2017}{22}{section.6}
+\contentsline {subsection}{\numberline {6.1}Flow on a network}{22}{subsection.6.1}
+\contentsline {section}{\numberline {7}Friday, September 29, 2017}{24}{section.7}
+\contentsline {subsection}{\numberline {7.1}Max-flow Min-Cut Theorem (continued)}{24}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}(Ford-Fulkerson) Algorithm for finding a maximal flow for a network}{27}{subsection.7.2}
+\contentsline {section}{\numberline {8}Tuesday, October 3, 2017}{28}{section.8}
+\contentsline {subsection}{\numberline {8.1}Applying Min-cut Max-flow}{28}{subsection.8.1}
+\contentsline {section}{\numberline {9}Friday, October 6, 2017}{31}{section.9}
+\contentsline {subsection}{\numberline {9.1}Hall's Theorem on Perfect Matching}{31}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Connectivity: Menger's Theorem}{32}{subsection.9.2}
+\contentsline {section}{\numberline {10}Tuesday, October 17, 2017}{34}{section.10}
+\contentsline {subsection}{\numberline {10.1}Planar Graphs}{34}{subsection.10.1}
+\contentsline {section}{\numberline {11}Tuesday, October 24, 2017}{35}{section.11}
+\contentsline {subsection}{\numberline {11.1}Closed sets}{35}{subsection.11.1}
+\contentsline {section}{\numberline {12}Friday, October 27, 2017}{36}{section.12}
+\contentsline {subsection}{\numberline {12.1}More Definitions for Planar Graphs}{36}{subsection.12.1}
+\contentsline {subsection}{\numberline {12.2}Planar Graphs}{38}{subsection.12.2}
+\contentsline {subsubsection}{\numberline {12.2.1}Application of Euler's formula for connected, planar graphs}{38}{subsubsection.12.2.1}
+\contentsline {section}{\numberline {13}Tuesday, October 31, 2017}{39}{section.13}
+\contentsline {subsection}{\numberline {13.1}Subdivisions}{39}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Dual Graphs}{40}{subsection.13.2}
+\contentsline {subsection}{\numberline {13.3}Platonic Solids}{41}{subsection.13.3}
+\contentsline {section}{\numberline {14}Friday, November 3, 2017}{42}{section.14}
+\contentsline {subsection}{\numberline {14.1}Classifying Platonic Solids}{42}{subsection.14.1}
+\contentsline {subsection}{\numberline {14.2}Coloring}{43}{subsection.14.2}
+\contentsline {subsection}{\numberline {14.3}Bounds for colouring}{44}{subsection.14.3}
+\contentsline {subsubsection}{\numberline {14.3.1}Lower Bound}{44}{subsubsection.14.3.1}
+\contentsline {subsubsection}{\numberline {14.3.2}Upper Bound}{44}{subsubsection.14.3.2}
+\contentsline {section}{\numberline {15}Tuesday, November 7, 2017}{46}{section.15}
+\contentsline {subsection}{\numberline {15.1}Colouring Problems}{46}{subsection.15.1}
+\contentsline {subsubsection}{\numberline {15.1.1}Lower Bound}{46}{subsubsection.15.1.1}

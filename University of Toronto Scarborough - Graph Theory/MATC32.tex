@@ -990,6 +990,160 @@ So now this equation means that all the edges that make up every face is being s
 \subsection{Platonic Solids}
 A platonic solid is a solid where each face is a regular $k$-gon and there is the same amount of faces at any vertex.
 
+\newpage
+
+\section{Friday, November 3, 2017}
+
+\subsection{Classifying Platonic Solids}
+
+\textbf{Platonic Solid:} A solid such that each face is a regular $k$-gon and each vertex is adjacent to $l$-faces. \underline{ex.} a tetrahedron or a cube.
+
+\underline{Does any platonic solid has a planar graph?}
+
+Let us look at the spherical embedding instead, since it does not make sense for the 3D representation to be a planar graph.
+
+\begin{tcolorbox}[title=Definition: Spherical Embedding]
+	Drawing of the graph $S^2 \subset \mathbb{R}^3$
+\end{tcolorbox}
+
+\underline{Geometric Fact:} The vertices of a platonic solid lie on a sphere, this means that any platonic solid has a spherical embedding without crossings.\\
+\\
+And the graph is spherical without crossing iff the graph is planar.\\
+\\
+This can be shown by drawing the stereographic projection, taking a point $P$ at the top of the sphere and a plane tangent to the bottom of the sphere, and the point $P$ will draw a stereographic projection by first intersecting with the edges and vertices of the sphere graph and onto the plane and that is where it is being projected. This produces a planar graph.\\
+\\
+This means that the image of a curve is a curve and if 2 curves cross in the plane, this implies that they must also cross on the sphere, and since the graph on the sphere is planar, the projection is also planar.\\
+\\
+\begin{tcolorbox}
+	\underline{Recall:} For connected and planar graphs
+	\begin{enumerate}
+		\item{$2E = \sum_{F \text{ is a face}} e(F) = kF = lV$}
+		\item{V-E+F=2}
+	\end{enumerate}
+\end{tcolorbox}
+
+This implies that $$V = \frac{2}{l} E, F = \frac{2}{k} E$$ which implies that $$\frac{2}{l} E + \frac{2}{k} E - E = 2$$ which implies that $$E(\frac{2}{l} + \frac{2}{k} - 1) = 2$$ which implies that
+\begin{align*}
+	\longrightarrow& \frac{2}{l} + \frac{2}{k} - 1 > 0\\
+	\longrightarrow& 2k +2l - kl > 0\\
+	\longrightarrow& -2k -2l  + kl + 4 < 4\\
+	\longrightarrow& (k-2)(l-2) < 4
+\end{align*}
+
+So this means that $k,l \geq 3$ and that only one platonic solid corresponds to each choice of $k,l$. So we get the result $3 \leq k, l \leq 5$ which only corresponds to the following pairs: $(3,3), (3,4), (4,3), (3,5), (5,3)$.
+
+\subsection{Coloring}
+
+Going forward, we will always consider the graph $G=(E,V)$ with gaps.
+\begin{itemize}
+	\item{A \textbf{colouring} by a set $C$ is defined as $c:V\mapsto C$}
+	\item{This colouring is considered \textbf{proper} if no 2 adjecent vertices have the same colour}
+	\item{Define a \textbf{Chromatic Number} $X^{(G)}$, for example: $$X^{(Petersen)}=3$$ And $X^{(G)} \leq n, n=|V|$ and $X^{(K_n)} = n$}
+\end{itemize}
+
+If $G$ has a colouring $c$, there is an equivalence relation such that $$v_1 \sim v_2 \text{ iff } c(v_1) = c(v_2) \text{ where } c \text{ is a colouring}$$ So we have the equivalence class $\overset{\_\_\_}{V}$ is the set of all vertices with the same colour.\\
+\\
+And if the colouring is proper, then the equivalence classes are independent as subgraphs.\\
+\\
+But what is the minimal size of a set $c$ with a proper colouring?\\
+\\
+\underline{conversely:} say $V$ is partitioned into subsets $C_1, C_2, ..., C_k$ where $$V=\sqcup^k_{i=1} C_i$$ Where each $C_i$ is the independent subgraph such that $$c:C \mapsto \{ 1,2,...,k \} \text{ where } v\mapsto i \text{ if } v \in C_i$$
+
+\subsection{Bounds for colouring}
+
+\underline{Recall} that a clique is a set of vertices whose induced subgraph is complete.
+
+\subsubsection{Lower Bound}
+
+Define $W(G)$ as the \textbf{size of the largest clique in $G$}.
+
+\begin{tcolorbox}
+	\underline{note:} $X(G) \geq W(G)$ because of $G$ is complete, then that implies that $X(G) = W(G)$.
+\end{tcolorbox}
+
+\underline{Argument:} Assume $G$ has a clique of size $l : v_1, ..., v_l$ then the subgraph induced by $v_1, ... ,v_l$ has the chromatic number $l$ where $l = W(G)$\\
+Now note that $l = W(G)$.\\
+Since $X(G) \geq X(G')$ for any subgraph $G'$.\\
+Define $\alpha (G)$ as the size of the longest independent set of vertices.\\
+$$X(G) \leq \frac{n}{\alpha (G)}, n=|V|$$
+say $X(G) = l \longrightarrow$ $V$ can be paritioned into $l$ different independent sets, i.e. $l$ different sets of size $\leq \alpha (G)$\\
+$\longrightarrow n \leq l, \alpha (G) = X(G)$.
+
+\subsubsection{Upper Bound}
+
+Start with greedy colouring (following is the steps for a greedy colouring algorithm).\\
+$V = \{ v_1, ..., v_n \}$
+\begin{itemize}
+	\item{Assign colour $1$ to $v_1$}
+	\item{If $v_2$ is not adjacent with $v_1$, colour it 1, otherwise, colour it 2}
+	\item{If $v_3$ is not adjacent to $v_1$, then colour it 1, otherwise if not adjacent to $v_2$, colour it 2, otherwise, colour it 3.}
+	\item{This goes on for every $v_i, \forall i : 1\leq i \leq n$}
+\end{itemize}
+
+\begin{tcolorbox}[title=Definition: Largest degree of a vertex in the graph $G$]
+	$\Delta (G)$ is the largest degree of a vertex in the graph $G$, note that $X(G) \leq \Delta (G) + 1$
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Brook's Theorem]
+	$X(G) \leq \Delta (G)$, unless $G$ is an odd cycle or $K_n$
+\end{tcolorbox}
+
+\newpage
+
+\section{Tuesday, November 7, 2017}
+
+\subsection{Colouring Problems}
+
+Consider the function $c: V(G) \mapsto C$
+
+\subsubsection{Lower Bound}
+
+Recall that $\Delta (G)$ is the largest degree of a vertex in the graph $G$.\\
+It is obvious to use that $\Delta (G) \leq X(G)$\\
+So what is the role of $\Delta (G)$?\\
+\\
+We know for the upper bound that the greedy algorithm gives us a colouring with the smallest amount of colours. From that algorithm we concluded that $G$ has a colouring of $u+1$ colours as long as no $u$ predecessors are adjacent to $v_i$ for any $i$.\\
+\\
+In particular, $G$ always has a colouring of $\Delta (G) + 1$.
+\begin{tcolorbox}[title=Brooke's Theorem]
+	$X(G) \leq \Delta (G) + 1$ and $X(G) \leq \Delta (G)$ iff $G\neq \begin{cases}
+		K_n\\
+		\text{an odd cycle}
+	\end{cases}
+$
+\end{tcolorbox}
+
+We are only going to look at 2 cases when $\Delta (G) = k$:
+\begin{enumerate}
+	\item{Not all vertices have degree k}
+	\item{the graph has a cut-vertex}
+\end{enumerate}
+
+(For 1), the idea is that we will used the greedy colouring algorithm with a clever ordering of the nodes. We will order the vertices $v_1, ... , v_n = V$ such that $d(v) < k$, so there are at most $k-1$ predecessors who are adjacent for each vertex.\\
+
+\begin{tcolorbox}[title=Definition:Trees]
+	Trees are a connected acyclic graph where any 2 vertices are connected by a single path.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Definition: Spanning Tree]
+	A spanning tree is a choice of edges such that the underlying graph is a tree for all nodes.
+\end{tcolorbox}
+
+\underline{Note:} Any connected graph $G$ has a spanning tree.
+
+\begin{proof}
+	(Proof any connected graph $G$ has a spanning tree)\\
+	Use induction on the number of edges, which we will denote by $l$.
+	\begin{enumerate}
+		\item{$l=1$}
+		\item{Assume any connected graph of  $|E|\leq l$  has a spanning tree, Now consider the graph with $l+1$ edges. We can pick any $e\in E(G)$. Now consider the case when $e$ does not lie on a cycle, that would mean that $G \setminus e$ is not connected, which implies that $G \setminus e$ has 2 connected conponents $G_1 \sqcup G_2$, which implies that each graph has their own spanning trees ($T_1, T_2$ respectively) since they both have  $\leq l$ edges. And to finish this proof, we need to show that $T_1 \cup T_2 \cup e $ is a spanning tree.}
+	\end{enumerate}
+\end{proof}
+
+
+
+
+
 \end{document}
 
 

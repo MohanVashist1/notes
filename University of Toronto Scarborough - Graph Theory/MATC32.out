@@ -57,3 +57,17 @@
 \BOOKMARK [2][-]{subsection.17.1}{Graph Colouring}{section.17}% 57
 \BOOKMARK [2][-]{subsection.17.2}{Spanning Trees}{section.17}% 58
 \BOOKMARK [3][-]{subsubsection.17.2.1}{Finding a Minimum Spanning Tree}{subsection.17.2}% 59
+\BOOKMARK [1][-]{section.18}{Tuesday, November 21, 2017}{}% 60
+\BOOKMARK [2][-]{subsection.18.1}{Kruskal's Algorithm}{section.18}% 61
+\BOOKMARK [2][-]{subsection.18.2}{Prim's Algorithm}{section.18}% 62
+\BOOKMARK [2][-]{subsection.18.3}{Dijkstra's Algorithm}{section.18}% 63
+\BOOKMARK [1][-]{section.19}{Friday, November 24, 2017}{}% 64
+\BOOKMARK [2][-]{subsection.19.1}{Spanning Cycles \205 Eulerian Cycles}{section.19}% 65
+\BOOKMARK [1][-]{section.20}{Tuesday, November 28, 2017}{}% 66
+\BOOKMARK [2][-]{subsection.20.1}{Hamiltonian Paths /Cycles}{section.20}% 67
+\BOOKMARK [3][-]{subsubsection.20.1.1}{Necessary Conditions}{subsection.20.1}% 68
+\BOOKMARK [3][-]{subsubsection.20.1.2}{Sufficient Conditions}{subsection.20.1}% 69
+\BOOKMARK [1][-]{section.21}{Friday, December 1, 2017}{}% 70
+\BOOKMARK [2][-]{subsection.21.1}{Hamiltonian Graphs}{section.21}% 71
+\BOOKMARK [3][-]{subsubsection.21.1.1}{Necessary Condition}{subsection.21.1}% 72
+\BOOKMARK [3][-]{subsubsection.21.1.2}{Sufficient Condition}{subsection.21.1}% 73

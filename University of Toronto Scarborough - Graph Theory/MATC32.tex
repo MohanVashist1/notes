@@ -1312,6 +1312,157 @@ So lets look at these observations. We know the result is acyclic because the al
 
 \newpage
 
+\section{Tuesday, November 21, 2017}
+
+This lecture was simply looking at different algorithms for looking for minimum spanning trees and an example of them running on a graph.
+
+\subsection{Kruskal's Algorithm}
+
+This algorithm is essentially ordering all the edges by edge weight, and then adding the edge one by one if they did not create a cycle. We continue adding edges until we get a Minimum Spanning Tree 
+
+\subsection{Prim's Algorithm}
+
+We start by picking a node and we choose the smallest connected edge until we get a Minimum Spanning Tree
+
+\subsection{Dijkstra's Algorithm}
+
+We find the minimum weight of a $u\rightarrow v$ path for a graph $G$ with nodes $u,v \in V(G)$.
+
+\newpage
+
+\section{Friday, November 24, 2017}
+
+\subsection{Spanning Cycles -- Eulerian Cycles}
+
+Let a graph $G$ have a cycle $C$ where $E(G) = C$ and $V(G) = C$.
+
+\begin{tcolorbox}[title=Definition: Eulerian Path \slash  Cycle]
+	An eulerian path is a path that goes through each edge once. An eulerian cycle is an eulerian path that is a cycle.
+\end{tcolorbox}
+
+\underline{Examples of eulerian cycles:}
+\begin{itemize}
+	\item{Joint cycles}
+	\item{A single cycle}
+\end{itemize}
+
+Supposed $G$ is a connected graph, if an eulerian $C$ is plausible on $G$, then $G$ can be decomposed into cycles.
+
+\begin{tcolorbox}[title=Definition: $G$ can be decomposed into cycles]
+	if $E(G) = E(C_1) \sqcup ... \sqcup E(C_n)$ where each $C_i$ is a simple cycle.
+\end{tcolorbox}
+
+(For now) Assume:\\ 
+\paragraph{Theorem} $G$ is Eulerian iff $G$ can be decomposed into cycles.
+\paragraph{Theorem} $G$ is Eulerian iff all vertices have an even degree.
+
+\underline{Proof Checklist:}
+\begin{enumerate}
+	\item{$G$ Eulerian implies all vertices have an even degree}
+	\item{All vertices have an even degree implies $G$ is eulerian}
+	\item{$G$ Eulerian iff  $G$ can be decomposed into cycles.}
+\end{enumerate}
+
+\begin{tcolorbox}
+	\underline{Note:} An even graph is a graph with nodes all of an even degree.
+\end{tcolorbox}
+
+\paragraph{Lemma} If the degree of all vertices is $\geq 2$ then $v$ contains a cycle.
+\begin{proof}
+	Take a maximal path between 2 vertices $u,v$ so that $p: u=v_1,...,v_n=v$ and maximal in the sense that there is no edge between $v_n$ and some $v_{n+1}$, such that $v_1,...,v_n, v_{n+1}$ is a path.
+\end{proof}
+
+\underline{Going down proof checklist:}
+\begin{enumerate}
+	\item{$G$ is Eulerian implies that evert vertex degree is even goes back to the 7 bridges problem.}
+	\item{
+	if all vertices have an even degree, this implies that $G$ is eulerian.
+	\begin{proof}
+		Induction on $n$ simple cycles in $G$ where $n\geq 1$.\\
+		\textbf{Base Case: $n=1$}, is trivial\\
+		\textbf{Induction Step:} Assume this works for $k$ simple cycles.\\
+		$G$ is eulerian implies that $G$ is an even graph containing $k$ simple cycles, take a graph $G$ without even degree vertices, which contain $k+1$ simple cycles. If we remove simple cycle $C$, then $G \setminus C$ has $k$ simple cycles and even degree vertices.
+	\end{proof}
+	}
+\end{enumerate}
+
+\newpage
+
+\section{Tuesday, November 28, 2017}
+
+\subsection{Hamiltonian Paths \slash  Cycles}
+
+\begin{tcolorbox}[title=Definition: Hamiltonian Path \slash  Cycle]
+	An hamiltonian path is a path that goes through each node once. An hamiltonian cycle is an hamiltonian path that is a cycle.
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\underline{Note:} A Hamiltonian cycle implies a hamiltonian path since a hamiltonian cycle is a path.
+\end{tcolorbox}
+
+\underline{Example:} A cycle is an example of a Hamiltonian Cycle
+\begin{itemize}
+	\item{$G$ is hamiltonian implies $G'$ is hamiltonian if $V(G') = V(G)$ and $E(G') \supseteq E(G)$}
+	\item{A non example would be a cycle that can be decomposed into 2 simple cycles.}
+	\item{Another example would be $K_n$}
+\end{itemize}
+
+If $G$ is bipartite, $G$ may be Hamiltonian.\\
+If $G$ is bipartite and hamiltonian, that implies that $|X|=|Y|$ where $V(G) = X \sqcup Y$
+
+\subsubsection{Necessary Conditions}
+
+Assume $G$ has a hamiltonian cycle. This means that $G$ is at least 2-connected.
+
+\subsubsection{Sufficient Conditions}
+
+\paragraph{Theorem} if $d(v) \geq \frac{|V|}{2}$ for all vertices $v\in V$ then this implies that $G$ has a Hamiltonian Cycle (for $|V| \geq 3$).
+
+\begin{tcolorbox}
+	\underline{note:} This bound is tight, there exists graphs where $d(v) = \frac{|V|}{2} -1$ that are not Hamiltonian.
+\end{tcolorbox}
+
+Consider a hamiltonian graph $G$ with adjacent vertices $u,v$ implies that $G + uv$ is Hamiltonian. The converse is only sometimes true.
+
+\newpage
+
+\section{Friday, December 1, 2017}
+
+\subsection{Hamiltonian Graphs}
+
+\begin{tcolorbox}[title=Definition: Hamiltonian Graphs]
+	A graph $G = (V,E)$ contains a a Hamiltonian cycle (cycle with the vertex set $V$).
+\end{tcolorbox}
+
+This is different when compared to an Eulerian graph.\\ 
+\\
+Let's say $G$ is Hamiltonian, add an edge $e$ anywhere, $G \cup \{ e \}$ is Hamiltonian.\\
+\\
+Let's say $G$ is Hamiltonian, add an edge $e$ between non-adjacent nodes, $G \cup \{ e \}$ is never Eulerian.\\
+\\
+Consider $G$ as an even graph ($d(v)$ is even for all $v\in V$)
+
+\subsubsection{Necessary Condition} 
+
+The graph $G$ is bipartite and $|X| = |Y|$ as well as 2-connected.
+
+\subsubsection{Sufficient Condition} 
+
+\paragraph{Dirac's Theorem} That $\forall v \in V, d(v) \geq \frac{|V|}{2}$ implies that the graph $G$ is hamiltonian
+
+\begin{tcolorbox}
+	\underline{remark:} For 2 adjacent vertices $u,v$, $d(v) + d(u) \geq |V|$, this implies that $G \setminus \{ e=(u,v) \}$ remains Hamiltonian
+\end{tcolorbox}
+
+\paragraph{Ore's Theorem} For 2 adjacent vertices $u,v$, $d(v) + d(u) \geq |V|$, this implies that $G \setminus \{ e=(u,v) \}$ remains Hamiltonian (rephrase of Dirac)
+
+Now consider the graph $G$, $\forall u,v \in V$ that are non-adjacent, if $d(u) + d(v) \geq |V|$, Consider $G \cup \{ e=(u,v) \}$. Repeat until no such edges remain, this is the \textbf{closure} of $G$
+
+\begin{tcolorbox}[title=Bondy-Chvatal Theorem]
+	$G$ is hamiltonian iff $\overset{\_\_\_}{G}$ is hamiltonian
+\end{tcolorbox}
+
+
 \end{document}
 
 

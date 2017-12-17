@@ -1140,9 +1140,177 @@ We are only going to look at 2 cases when $\Delta (G) = k$:
 	\end{enumerate}
 \end{proof}
 
+\newpage
 
+\section{Tuesday, November 14, 2017}
 
+\subsection{5-Colour Theorem}
 
+\begin{tcolorbox}
+	\underline{Recall:} that the \textbf{6-colour theorem} stating that every planar graph has a 6-colouring is easy because by Euler's formula, there exists a vertex with degree $\leq 5$, so this implies the result.
+\end{tcolorbox}
+
+So what about the 5-colour theorem?\\
+\\
+Consider the graph with the node $u$ connected to 5 nodes, labelled $a,b,c,d,e$ clockwise. Assume that all nodes connected to $u$ all have a distinct colour (Lets say $c(a)=1, c(b)=2, c(c)=3, c(d)=4, c(e)=5$). Now consider the subgraph of all vertices, coloured $1,3$ connected to the node $c$ (we will call this subgraph $G_1$), and consider the subgraph of all vertices, coloured $1,3$ connected to the node $a$ (we will call this subgraph $G_2$).\\
+\\
+\textbf{Scenario 1:} vertices $a,c$ are not connected, because if so, then $G_1, G_2$ are not disjoint in $G$, but we can make it work by simply alternating the colouring of the nodes of one of the trees from $3 \leftrightarrow 1$.\\
+\\
+If we remain with a proper colouring by colouring the node $u$ with the colour 3. This is only not proper if there exists a node $v$ connected to $G_1$ that is the same colour as the node it is connected to. This is impossible as $v$ would be in $V(G_1)$ and would not be the same colour as it would have its colour changed.\\
+\\
+\textbf{Scenario 2:} vertices $a,c$ are connected, so we cannot change the colours. Now we will look at:
+\begin{itemize}
+	\item{$G_2 : $ subgraph of $\forall u \in V(G_2)$ connected to node $b$}
+	\item{$G_4 : $ subgraph of $\forall u \in V(G_4)$ connected to node $d$}
+\end{itemize}
+
+but now these graphs must cross an edge but cannot connect, so \textit{scenario 1} must apply to $G_2, G_4$.\\
+\\
+\underline{Question 1:} What is the smallest proper colouring we can find?\\
+\underline{Question 2:} How many colourings are there?\\
+\\
+Consider the birthday problem. On a graph, its assigning colours $\{ 1,...,365 \}$ to nodes to represent $n$ people. ($K_n$).\\
+\\
+For $n$ people, it's colouring of $K_n$ is the possible combinations, where there is an edge between 2 nodes if they have a unique bday.\\
+\\
+For a room of 23 people, the probability of 2 people sharing the same birthday is $52\%$, and 70 people results in a probability of $99\%$.\\
+\\
+This is why we may be interested in how many colourings there are.\\
+\\
+\begin{tcolorbox}[title=Definition: Chromatic Polynomial]
+	For a graph $G$ and an positive integer $t$, $$P(G, t) = \text{ The number of proper $t$-colourings on $G$}$$
+\end{tcolorbox}
+
+\underline{Example 1:} For $n$ vertices without any edges, $$P(G,t) = t^n$$
+\underline{Example 2:} For $K_n$, $$P(K_n, t) = \frac{t!}{(t-n)!}$$
+
+\underline{Why is $P(G,t)$ a polynomial and how to compute it?}\\
+\\
+Recall that contracting an edge $e=(u,v)$ is removal of the edge $e$ and $u=v$. Where the graph with the edge $e$ is contracted is graph $G_e$.
+
+$$P(G,t) = P(G \setminus e,t) - P(G_e, t)$$
+
+The differences between $G \setminus e$ and $G_e$ is that $u,v$ can be the same colour in $G \setminus e$ but not in $G$. But in $G_e$, $u,v$ are the same node and therefore the same colour, so the equation holds.\\
+\\
+\underline{$P(G,T)$ is a polynomial}
+
+\begin{proof}
+	(Induction on the number of edges)\\
+	\textbf{Base Case:} If there are no edges, we know that $P(G,T) = t^n$\\
+	\\
+	\textbf{Induction Step:} $G_e$ and $G \setminus e$ are polynomials, and a polynomial subtract a polynomial is still a polynomial.
+\end{proof}
+
+\newpage
+
+\section{Friday, November 17, 2017}
+
+\subsection{Graph Colouring}
+
+\underline{Recall:} Chromatic Polynimals are $P(G,t)$.\\
+\\
+There are 2 applications:
+\begin{enumerate}
+	\item{Supposed we want the Chromatic number of the cycle $P(C_3, t) = t(t-1)(t-2)$}
+	\item{
+	$C_4 : P(C_4, t) = t(t-1)^2 (t-2) + t(t-1)^2$\\
+	For $C_4$, there are 2 ways to colour it. Treat pairs in a bipartite split with different colours (2 colours) and setting all of the vertices as different colours.
+	}
+\end{enumerate}
+
+\underline{General Result for Cycles:} $$P(C_n, t) = (t-1)^n + (-1)^n (t-1)$$
+Proof that result agrees with above:\\
+$$e \in C_n, C_n \setminus \{ e \} = \Pi_n \rightarrow (C_n)_e = C_{n-1}$$
+\begin{proof}
+	(Proof by Induction)\\
+	\textbf{Base Case:} $n=3$, $P(C_3, t) = t(t-1)(t-2) = (t-1)^3 - (t-1)$
+	\textbf{Induction Step:} By induction, assume the format is true for any $n$-cycle.\\
+	Then:
+	\begin{align*}
+		P(C_{n+1},t) &= P(\Pi_{n+1}, t) - P(C_n, t)\\
+		&= t(t-1)^n - ((t-1)^n + (-1)^n (t-1))\\
+		&= (t-1)^n (t-1) - (-1)^{n+1} (t-1)\\
+		&= (t-1)^{n+1} - (-1)^{n+1} (t-1)
+	\end{align*}
+\end{proof}
+
+This also applies for any tree (which are all connected and acyclical).
+
+\begin{tcolorbox}
+	\underline{Remark:} Any tree has a vertex with degree $> 1$ (if $|E| > 1$)
+\end{tcolorbox}
+\begin{proof}
+	(Proof by induction on the number of edges)\\
+	\textbf{Base Case:} For a connected tree with only 2 edges, one vertex must have a degree of 2.\\
+	\textbf{Induction Step:} Assume this holds for all trees with $|E|=n$, Consider a tree with $|E|=n+1$. Just remove any edge $e$, so $G\setminus e$ is a union of trees with less than $n$ edges, and therefore must have the statement be true.\\
+	Therefore by induction, every tree has a vertex of at least degree 2.
+\end{proof}
+
+Let $e$ be an edge with endpoint node $v$ ($deg(v)=1$). Then 
+$$T_n \setminus \{ e \} = T_{n-1} \sqcup \{ v \}, (T_n)' = T''_n$$
+\begin{proof}
+	(Proof by induction on edges)\\
+	\textbf{Base Case:} $E=1$, $P(T_2, t) = t(t-1)^{2-1}$\\
+	\textbf{Induction Step:} Assume formula holds for any tree with $n$ vertices.\\
+	Then 
+	\begin{align*}
+		P(T_{n+1}, t) &= P(T_n \sqcup \{ v \}, t) - P(T_n'', t)\\
+		&= t P(T_n', t) - P(T_n'',t)\\
+		&= t(t(t-1)^{n-1}) - t(t-1)^{n-1}\\
+		&= t(t-1)^n
+	\end{align*}
+\end{proof}
+
+\subsection{Spanning Trees}
+
+\underline{motivating question:} How should Toronto plow snow as efficiently as possible?\\
+\\
+i.e. For a graph $G$, highlight edges such that:
+\begin{itemize}
+	\item{Each vertex in the graph is some endpoint for some edge}
+	\item{There does not exist a path between 2 vertices}
+\end{itemize}
+
+\begin{tcolorbox}[title=Definition: Spanning Tree]
+	For a connected graph $G$, a spanning tree is a subgraph $T$ which is a tree, $V(T)=V(G)$
+\end{tcolorbox}
+\begin{tcolorbox}[title=Definition: Weighted graph]
+	A weighted graph is a graph $G$ with a weight function $$w : E(G) \mapsto \mathbb{N}$$
+\end{tcolorbox}
+\begin{tcolorbox}[title=Definition: Minimum Spanning Tree]
+	A minimum spanning tree is a spanning tree where the sum of weights on edges is minimal among all possible spanning trees.
+\end{tcolorbox}
+
+\subsubsection{Finding a Minimum Spanning Tree}
+
+\begin{enumerate}
+	\item{Prim's Algorithm}
+	\item{Kruskal's Algorithm}
+\end{enumerate}
+
+\begin{tcolorbox}[title=Kruskal's Algorithm]
+	Kruskal's Algorithm is a greedy algorithm, meaning that it takes the most optimal decision at each step individually to get the most desired result once the algorithm concludes.
+	\begin{enumerate}
+		\item{Order edges by increasing edge weight}
+		\item{Highlight lowest value edges such that no cycle is created}
+		\item{Will end up with a minimum spanning tree once all nodes are covered}
+	\end{enumerate}
+\end{tcolorbox}
+
+Assume $T \subset G$ is a spanning tree.\\
+$e \in E(G \setminus T) \longrightarrow T \cup \{ e \}$ is no longer a tree (we have introduced a cycle), so $T \cup \{ e \}$ has a unique cycle (since $T$ initially did not have a cycle).
+
+\begin{proof}
+	(Proof of result)\\
+	We first observe that:\\
+	\begin{enumerate}
+		\item{The algorithm results in a spanning tree}
+		\item{Any choice of edges in the algorithm is part of a minimum spanning tree}
+	\end{enumerate}
+So lets look at these observations. We know the result is acyclic because the algorithm does not choose edges that create cycles. We also know that the result is connected because if no, pick 2 connected components in $G$, the components are connected at some point an edge with minimum weight will connect components in $T$.
+\end{proof}
+
+\newpage
 
 \end{document}
 

@@ -1,0 +1,350 @@
+\documentclass[12pt]{article}
+
+\usepackage{upgreek}
+
+\usepackage{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{graphicx}
+\graphicspath{ {imgs/} }
+
+\usepackage{dsfont}
+
+\usepackage{mathtools}
+
+\usepackage{hyperref}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{mathtools}
+
+\usepackage{textcomp}
+
+\usepackage[english]{babel}
+
+\usepackage{tikz}
+
+\usepackage{tcolorbox}
+
+\usepackage{amsthm,amssymb}
+
+\setlength{\parindent}{0cm}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Introduction to Analysis -- Winter 2018}
+\fancyhead[RE,LO]{Joshua Concon}
+\fancyfoot[CE,CO]{\leftmark}
+\fancyfoot[LE,RO]{\thepage}
+
+\theoremstyle{plain}
+
+\newtheorem*{remark}{Remark}
+\newtheorem*{note}{Note}
+\newtheorem{theorem}{Theorem}[section]
+
+\theoremstyle{definition}
+
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{property}[theorem]{Property}
+
+\begin{document}
+
+\title{MATB43: Introduction to Analysis\\ Lecture Notes}
+\date{University of Toronto Scarborough -- Winter 2018}
+\author{Joshua Concon}
+\maketitle
+Pre-reqs are MATA37. Instructor is John Scherk. If you find any problems in these notes, feel free to contact me at conconjoshua@gmail.com.
+
+\tableofcontents
+
+\pagebreak
+
+\section{Friday, January 5, 2017}
+
+\subsection{Countability}
+
+Countability is all about the cardinality of sets
+
+\begin{definition}
+	For sets $X,Y$, they have the same cardinality if there exists a bijection between them ($f:X\mapsto Y$ has an inverse as well). Equality of cardinality of 2 sets is written as $card(X) = card(Y)$
+\end{definition}
+
+\begin{example}
+	$card(\{ 1,2,3,4,5 \}) = card(\{ a,b,c,d,e \}) $
+\end{example}
+\begin{example}
+	$card(\mathbb{N}) = card(2\mathbb{N})$
+\end{example}
+
+This example is correct because $f:\mathbb{N} \mapsto 2\mathbb{N}, f(n)=2n$ is a bijection.
+
+\begin{example}
+	$card(\{\text{set of odd numbers}\}) = card(\mathbb{N})$
+\end{example}
+
+This example is correct because $g:\mathbb{N} \mapsto \{\text{set of odd numbers}\}\\ g(n)=2n+1, n\in\mathbb{N}$
+
+\begin{definition}
+	$X$ is \textbf{finite} if for some $n\in\mathbb{N}$ there exists a bijection where $A=\{ 1,2,...,n \}$ $f:A\mapsto X$. So essentially $card(A) = card(X)$
+\end{definition}
+
+Intuitively, we can label the elements of $X$ as $X = \{ x_1, x_2, ..., x_n \}$
+
+\begin{definition}
+	X is \textbf{inifinite} if $X$ is not finite.
+\end{definition}
+
+Examples of this include: $\mathbb{N}, 2\mathbb{N}, \mathbb{Q}, \mathbb{R}$
+
+However, not all infinite sets have the same cardinality.
+
+\begin{definition}
+	$X$ is \textbf{countable} if $card(X) = card(A)$ where $A \subseteq \mathbb{N}$
+\end{definition}
+
+Again intuitively, we can label the elements of $X$ as $X = \{ x_1, x_2, ..., x_n, ... \}$ (using elements of $\mathbb{N}$)
+
+\begin{example}
+	$2\mathbb{N}$
+\end{example}
+
+\begin{example}
+	The set of odd numbers
+\end{example}
+
+\begin{example}
+	$\mathbb{Z}$
+\end{example}
+
+\begin{theorem}
+	In general, if $Z=X \cup Y$ and $Y,X$ are both countable then $Z$ is countable as well
+\end{theorem}
+
+\begin{proof}
+	label elements of $X = \{ x_1, x_2, ..., x_n, ... \}$\\
+	label elements of $Y = \{ y_1, y_2, ..., y_n, ... \}$\\
+	define $h:\mathbb{N}\mapsto \mathbb{Z}$ as, for $n\in\mathbb{N}$:\\
+	$$h(2n-1)=x_n$$
+	$$h(2n)=y_n$$
+	Then $h$ is a bijection, therefore $Z$ is also countable
+\end{proof}
+
+\begin{example}
+	$\mathbb{N} \times  \mathbb{N}$
+\end{example}
+
+This example is countable as we can label its elements in the following pattern.
+
+$$(1,1) \mapsto 1$$
+$$(2,1) \mapsto 2$$
+$$(1,2) \mapsto 3$$
+$$(1,3) \mapsto 4$$
+$$(2,2) \mapsto 5$$
+$$(3,1) \mapsto 6$$
+$$(4,1) \mapsto 7$$
+
+And so on, in this pattern. Intuitively, if you list out all the pairs of $\mathbb{N} \times  \mathbb{N}$ like a matrix, this would create a sort of zig zag pattern.
+
+\begin{proposition}
+	Suppose $X$ is countable and $Y \subset X$, then $Y$ is either finite (which also means that it is countable) or just countable
+\end{proposition}
+
+\begin{proof}
+	write $X = \{ x_1, x_2, ..., x_n, ... \}$\\
+	let $j_1$ be the smallest index such that $x_{j_1} \in Y$\\
+	let $j_2$ be the smallest index such that $x_{j_2} \in Y, j_2 > j_1$\\
+	let $j_3$ be the smallest index such that $x_{j_3} \in Y, j_3 > j_2$\\
+	...\\
+	and so on.\\
+	\\
+	Now either:\\
+	\textbf{This process terminates}, which means that $Y = \{ x_{j_1} , ..., x_{j_n} \}$ for some $j_1, ..., j_n$ which $Y$ is finite.\\
+	\\
+	or:\\
+	\textbf{Y is countable}, since $Y = \{ x_{j_1}, x_{j_2} ,..., x_{j_n}, ... \}$
+\end{proof}
+
+\begin{proposition}
+	$\mathbb{Q}$ is countable
+\end{proposition}
+
+\begin{proof}
+	Note that $\mathbb{Q} = \mathbb{Q}^- \cup \{ 0 \} \cup \mathbb{Q}^+$\\
+	so we must check that $\mathbb{Q}^+$ is countable, note that
+	$$\mathbb{Q}^+ = \{ \frac{m}{n} | m,n \in \mathbb{N}, n \neq 0 \}$$
+	
+	Since it is a pairing of two natural numbers $(m,n)$, this is a subset of $\mathbb{N} \times \mathbb{N}$, which means that $\mathbb{Q}^+$ is countable, we can say that same thing for $\mathbb{Q}^-$ as well, note that it is
+	$$\mathbb{Q}^+ = \{ \frac{-m}{n} | m,n \in \mathbb{N}, n \neq 0 \}$$
+	and since $\mathbb{Q}^+$ and $\mathbb{Q}^-$ are both countable and $\{ 0 \}$ is a set of cardinality 1, therefore $\mathbb{Q}$ is countable
+\end{proof}
+
+\begin{theorem}
+	Let $S = \{ s=(s_1, s_2, ...) | s_j = 0 \text{ or } 1 \forall j \}$ (note here that $s$ is a sequence). Then $S$ is not countable
+\end{theorem}
+
+\begin{proof}
+	For proof by contradiction, suppose $S$ is countable.\\
+	We can then label the elements of $S$ as $S^1, S^2, ... , S^n, ... \in S$.\\
+	\textbf{So an example of this would be:}\\
+	$$S^1 = (s^1_1, s^1_2, s^1_3, ..., s^1_n, ...)$$
+	$$S^2 = (s^2_1, s^2_2, s^2_3, ..., s^2_n, ...)$$
+	$$...$$
+	$$S^m = (s^m_1, s^m_2, s^m_3, ..., s^m_n, ...)$$
+	$$...$$
+	And we will define a $t\in S$ as follows, let $t= (t_1, t_2,..., t_m, ...)$\\
+	$$t_1 = \begin{cases}0, &\text{if $S^1_1=1$}\\
+				1, &\text{if $S^1_1=0$}
+				\end{cases}$$
+	$$t_2 = \begin{cases}0, &\text{if $S^2_2=1$}\\
+				1, &\text{if $S^2_2=0$}
+				\end{cases}$$
+	$$...$$
+	$$t_m = \begin{cases}0, &\text{if $S^m_m=1$}\\
+				1, &\text{if $S^m_m=0$}
+				\end{cases}$$
+	$$...$$
+	Therefore $t \neq S^m, \forall m$. Therefore this is a contradiction as $t$ was not in the listed elements of $S$, therefore $S$ is not countable.
+\end{proof}
+
+\begin{corollary}
+	$\mathbb{R}$ is not countable
+\end{corollary}
+
+\begin{proof}
+	Regard $\mathbb{R}$ as a set of infinite decimal fractions.\\
+	Identify $s\in S$ with the decimal number $0.s_1 s_2 ...s_n ...$ so $S$ can be regarded as a subset of $\mathbb{R}$. If $\mathbb{R}$ were countable, then $S$ would be countable, therefore $\mathbb{R}$ must not be countable.
+\end{proof}
+
+\subsection{Real Numbers}
+
+Examples of real numbers that are not rational include: $\pi, e$ (which are algebraic numbers), $\sqrt{2}, \sqrt{3}, \frac{\sqrt{5}+1}{2}$ (which are roots of polynomial equations with integer coefficients.)
+
+\subsection{Algebraic Numbers}
+
+The set of Algebraic Numbers is a set $\overline{\mathbb{Q}}$ such that
+$$\overline{\mathbb{Q}} = \{ x\in \mathbb{R} | x^n+ a_{n-1} x^{n-1} + ... + a_0 = 0 \text{ for some } a_0,...,a_{n-1} \in \mathbb{Z} \}$$
+
+Note that $\mathbb{Q} \subset \overline{\mathbb{Q}}$, and in fact, $\overline{\mathbb{Q}}$ is countable.\\
+\\
+if $x \in (\mathbb{R} \setminus \overline{\mathbb{Q}})$ then. $x$ is transcendental.
+
+\subsection{Bounds}
+
+\begin{definition}
+	$X \subset \mathbb{R}, X$ is \textbf{bounded above} if $\exists a \in \mathbb{R}$ such that $a \geq x, \forall x \in X$
+\end{definition}
+
+\begin{definition}
+	$X \subset \mathbb{R}, X$ is \textbf{bounded below} if $\exists a \in \mathbb{R}$ such that $a \leq x, \forall x \in X$
+\end{definition}
+
+\begin{example}
+	$X = \{ x\in\mathbb{R} | x^2 \leq 2 \}$ is bounded above by $\frac{3}{2}$ since $(\frac{3}{2})^2 \geq 2$
+\end{example}
+
+\begin{definition}
+$a$ is the \textbf{least upper bound} of $X$ if $a$ is an upper bound of $X$ and if $b<a$, then there exists $x\in X$ such that $x > b$.
+\end{definition}
+
+We write $a = lub(X)$ or $a=sup(X)$ if $a$ is the least upper bound of $X$
+
+\begin{definition}
+$a$ is the \textbf{greatest lower bound} of $X$ if $a$ is an lower bound of $X$ and if $b>a$, then there exists $x\in X$ such that $x < b$.
+\end{definition}
+
+\begin{example}
+	if $X= \{ x | x^2 \leq 2 \}$, then $sup(X)=\sqrt{2} \not\in \mathbb{Q}$
+\end{example}
+
+\begin{property}
+	if $X \subset \mathbb{R}$ is bounded above then there exists $a\in\mathbb{R}$, a least upper bound of X
+\end{property}
+
+\begin{theorem}
+	given $a,b\in\mathbb{R}$ $a,b>0$ $\exists n \in \mathbb{N}$ such that $na > b$ (This is known as the \textbf{archemedian property})
+\end{theorem}
+
+\begin{proof}
+	Suppose that $\forall n \in \mathbb{N}$, $na \leq b$ implies that $b$ is an upper bound for $X = \{ na | n\in\mathbb{N} \}$.\\
+	\\
+	Since $X$ is bounded above, let $c=sup(X)$, this implies that $c-a$ is not an upper bound for $X$, which further implies that there exists an $a\in\mathbb{N}$ such that $na > c-a$, and that
+	\begin{align*}
+		na &> c-a\\
+		na+a &> c\\
+		(n+1)a &> c\\
+		c < (n+1)a \in X
+	\end{align*}
+	
+	This is impossible since we've previously stated that $c$ is the upper bound. Therefore $X$ is not bounded above.
+\end{proof}
+
+\begin{theorem}
+	given $c,d\in\mathbb{R}$, there exists $q = \frac{m}{n} \in\mathbb{Q}$ such that $c< q <d$
+\end{theorem}
+
+\begin{proof}
+	We want $c < \frac{m}{n} < d $ iff $nc < m < nd$.\\
+	let $\epsilon = d-c > 0$\\
+	pick $n\in\mathbb{N}$ such that $\frac{1}{n} < \epsilon$\\
+	pick $m$, such that $m > nc$\\
+	(since we also need $m<nd$, choose $m$ to be as small as possible such that $m-1 \leq nc < m$)
+	
+	\begin{align*}
+		m-1 &\leq nc \leq m\\
+		\frac{m}{n} - \frac{1}{n} = \frac{m-1}{n} &\leq c \leq \frac{m}{n}
+	\end{align*}
+	 or
+	 $$\frac{m}{n} \leq c+\frac{1}{n} < c + \epsilon =d$$
+	 So now we have $c < \frac{m}{n} < d$ as desired.
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

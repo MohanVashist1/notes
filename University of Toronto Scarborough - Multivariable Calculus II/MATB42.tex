@@ -1,0 +1,184 @@
+\documentclass[12pt]{article}
+
+\usepackage{upgreek}
+
+\usepackage{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{graphicx}
+\graphicspath{ {imgs/} }
+
+\usepackage{dsfont}
+
+\usepackage{mathtools}
+
+\usepackage{hyperref}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{mathtools}
+
+\usepackage{textcomp}
+
+\usepackage[english]{babel}
+
+\usepackage{tikz}
+
+\usepackage{tcolorbox}
+
+\usepackage{amsthm,amssymb}
+
+\setlength{\parindent}{0cm}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Multivariable Calculus II -- Winter 2018}
+\fancyhead[RE,LO]{Joshua Concon}
+\fancyfoot[CE,CO]{\leftmark}
+\fancyfoot[LE,RO]{\thepage}
+
+\theoremstyle{plain}
+
+\newtheorem*{remark}{Remark}
+\newtheorem*{note}{Note}
+\newtheorem{theorem}{Theorem}[section]
+
+\theoremstyle{definition}
+
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{property}[theorem]{Property}
+
+\begin{document}
+
+\title{MATB42: Multivariable Calculus II\\ Lecture Notes}
+\date{University of Toronto Scarborough -- Winter 2018}
+\author{Joshua Concon}
+\maketitle
+Pre-reqs are MATB41. Instructor is Eric Moore. If you find any problems in these notes, feel free to contact me at conconjoshua@gmail.com.
+
+\tableofcontents
+
+\pagebreak
+
+\section{Friday, January 5, 2018}
+
+\subsection{Fourier Expansions}
+
+In this section, we will focus on single variable calculus, (so where $f:\mathbb{R} \mapsto \mathbb{R}$)\\
+\\
+Let us say that we have a function $f(x)$ and we want to approximate it. We can use an $n$th degree Taylor Polynomial, but this requires that $f(x)$ has at least $n$ derivatives at some point $x_0$ and the $k$th derivative of $f$ ($f^{(k)} (x)$) is determined by properties of $f$ in some neighbourhood of $x_0$, but what about outside this neighbourhood? How can we be certain of the approximation outside of this neighbour.\\
+\\
+Our problem here is that Taylor Polynomial may only approximate "near" $x_0$\\
+\\
+Now, consider the following function:
+
+$$\Delta (x) = \begin{cases}
+1, &\lfloor x \rfloor < x, \lfloor x \rfloor\text{ is odd} \\
+0, &\lfloor x \rfloor < x, \lfloor x \rfloor\text{ is even}\\
+\end{cases}
+$$
+
+In this function, Tayler returns either 0 or 1 depending on your choice of $x_0$ and cannot work for an $x_0 = p \in \mathbb{Z}$. Therefore Taylor polynomials cannot reflect the true nature of this function. Taylor provides a "local" approximation, but we want a "global" approximation. We need an approximation that is more precise over an interval at the cost of being not as precise as precise at any particular $x_0$.\\
+\\
+Note that the example function is \textbf{periodic}.\\
+\\
+
+\begin{definition}
+	A function $y=f(x)$ such that $f(x)=f(x+p), p \neq 0, \forall x$ is said to be \textbf{periodic} of period $p$
+\end{definition}
+
+\begin{example}
+	The periodic function $\Delta (x)$ is of period 2.
+\end{example}
+
+What we want is a global approximation of a periodic function, and the Fourier Approximation will be periodic, so we can use it for exactly that.
+
+\begin{definition}
+	A \textbf{trigonometric polynomial of degree $N$} is an expression of the form
+	$$\frac{a_0}{2}+ \sum^N_{k-1} a_k cos(kx) + b_k sin(kx)$$ where the $a_i, b_i$ are constants.
+\end{definition}
+
+We know that $sin(x)$ and $cos(x)$ are the simplest periodic functions and repeat in intervals of $2\pi$, so $cos(kx)$ and $sin(kx)$ have period $\frac{2\pi}{k}$, but the smallest shared period is $2\pi$. If a trigonometric polynomial has period $2\pi$ and $f(x)$ has period $p$, then we must set $x=\frac{pt}{2\pi}$ to fix the period (where $t$ is a variable).\\
+\\
+So to approximate $y=f(x)$ by $F_N (x)$ for some $N$, we use the following equation:
+
+$$F_N (x) = \frac{a_0}{2}+ \sum^N_{k-1} a_k cos(kx) + b_k sin(kx)$$
+
+Now we need to choose the $a_k, b_k$. We can define it in the following way:
+
+$$a_0 = \frac{1}{\pi} \int^{\pi}_{-\pi} f(x) dx$$
+$$a_k = \frac{1}{\pi} \int^{\pi}_{-\pi} f(x) cos(kx) dx, k=1,2,3,...$$
+$$b_k = \frac{1}{\pi} \int^{\pi}_{-\pi} f(x) sin(kx) dx, k=1,2,3,...$$
+
+When defined in this way, $a_i, b_i$ are called the \textbf{Fourier Coefficients} of $f$ over the interval $[-\pi, \pi]$ and we call $F_N (x)$ the \textbf{Fourier Polynomial of degree $N$}.\\
+\\
+So why do we add the $\frac{a_0}{2}$? It is the average value of $f$ over $[-\pi, \pi]$.
+
+\begin{note}
+	sometimes you will see $a_0$ used instead of $\frac{a_0}{2}$ in the Fourier polynomial where $$a_0 = \frac{1}{2\pi} \int^{\pi}_{-\pi} f(x) dx$$
+\end{note}
+
+\begin{example}
+	Consider $f(x)=\frac{-x}{2}$ over $[-\pi, \pi]$. Use Fourier Approximation.\\
+	\\
+	$$a_k = \frac{1}{\pi} \int^{\pi}_{-\pi} f(x) cos(kx) dx = \frac{1}{\pi} \int^{\pi}_{-\pi} (-\frac{x}{2}) cos(kx) dx \overset{odd}{=} 0$$
+	$$a_0 = \frac{1}{\pi} \int^{\pi}_{-\pi} f(x) dx = \frac{1}{\pi} \int^{\pi}_{-\pi} (-\frac{x}{2}) dx \overset{odd}{=} 0$$
+	\begin{align*}
+		b_k &= \frac{1}{\pi} \int^{\pi}_{-\pi} f(x) sin(kx) dx\\
+		&= \frac{1}{\pi} \int^{\pi}_{-\pi} (-\frac{x}{2}) sin(kx) dx\\
+		&\overset{even}{=} - \frac{1}{\pi} \int^{\pi}_{-\pi}  x sin(kx) dx\\
+		&\underset{u=x, dv=sin(kx)dx}{\overset{even}{=}} - \frac{1}{\pi} [-\frac{1}{k} x cos(kx) + \frac{1}{k^2} sin(kx)]^\pi_0\\
+		&= \frac{1}{\pi k} [\pi cos(k\pi)]\\
+		&= \frac{1}{k} cos(k\pi)\\
+		&= \frac{(-1)^k}{k}
+	\end{align*}
+	
+	Thus we have:
+	$$F_N (x) = -sin(x) + \frac{1}{2}sin(2x) - \frac{1}{3}sin(3x) + \frac{1}{4}sin(4x) + ...$$
+	$$F_1 (x) = -sin(x)$$
+	$$F_2 (x) = -sin(x) + \frac{1}{2}sin(2x)$$
+	$$F_3 (x) = -sin(x) + \frac{1}{2}sin(2x) - \frac{1}{3}sin(3x)$$
+	$$...$$
+	And so on.
+
+\end{example}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

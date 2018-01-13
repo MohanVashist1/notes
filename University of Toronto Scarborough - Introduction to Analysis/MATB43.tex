@@ -309,15 +309,80 @@ $a$ is the \textbf{greatest lower bound} of $X$ if $a$ is an lower bound of $X$ 
 
 \end{proof}
 
+\newpage
 
+\section{Monday, January 8, 2017}
 
+\subsection{Sequences - Review}
 
+This section will be just review of MATA37 and will be concerning sequences of the real numbers $\{ a_n \}$.
 
+\begin{example}
+    $\{ \frac{1}{n} \} = 1,\frac{1}{2}, \frac{1}{3}, ..., $
+\end{example}
 
+\begin{example}
+    $\{ \frac{(-1)^n}{n} \} = -1,\frac{1}{2}, \frac{-1}{3}, ..., $ This sequence oscillates back and forth.
+\end{example}
 
+\begin{example}
+    $\{ (-1)^n \} = -1,1,-1,1, ..., $ This sequence oscillates back and forth aswell.
+\end{example}
 
+\begin{example}
+    $\{ x_1, x_2, ...  \}$ where this sequence enumerates $\mathbb{Q}$. This sequence 'bounces around wildy'.
+\end{example}
 
+\begin{definition}
+    $x\in\mathbb{R}$ is the \textbf{limit of a sequence $\{x_n \}$} (so that in converges to this number)\\
+    $\lim_{n\to\infty} x_n = a$, if given some tolerance $\epsilon > 0$.\\
+    There exists $N$, such that $n \geq N$ will lie in the interval $a-\epsilon, a+\epsilon$, aka $|x_n - a| < \epsilon$.
+\end{definition}
 
+\begin{example}
+    $\lim_{n\to\infty} \frac{1}{n} = 0$
+\end{example}
+
+\begin{example}
+    $\lim_{n\to\infty} \frac{(-1)^n}{n} = 0$
+\end{example}
+
+\begin{example}
+    example 2.4 and 2.3 both have no limit
+\end{example}
+
+\begin{proposition}
+    If a sequence $\{x_n \}$ has a limit, then this limit is unique, and the sequence is bounded.
+\end{proposition}
+
+\begin{proposition}
+    Supposed that $\{x_n \} , \{y_n \} \subset \mathbb{R} $ are convergent sequences, so that $\lim_{n\to\infty} x_n = a$, $\lim_{n\to\infty} y_n = b$ then:
+    \begin{enumerate}
+        \item $\{x_n + y_n \}$ converges and $\lim_{n\to\infty} (x_n + y_n) = a+b$
+        \item $\{x_n y_n \}$ converges and $\lim_{n\to\infty} (x_n y_n) = ab$
+        \item if $y_n \neq 0, \forall n$, and $b\neq 0$ then $\{\frac{x_n}{y_n} \}$ converges and $\lim_{n\to\infty} ( \frac{x_n}{y_n}) = \frac{a}{b}$
+    \end{enumerate}
+\end{proposition}
+
+\begin{definition}
+    A sequence is \textbf{monotone} if it is either increasing, or decreasing.
+\end{definition}
+
+\begin{proposition}
+    A bounded monotone sequence converges.
+\end{proposition}
+
+\begin{proof}
+    Suppose that $\{x_n \}$ is a bounded increasing (monotone) sequence, such that
+    $$x_1 \leq x_2 \leq x_3 \leq ...$$
+    And there exists $A\in\mathbb{R}$ such that $x_n \leq A, \forall n$\\
+    Therefore, there exists a least upper bound $a \leq A$.\\
+    \\
+    \underline{claim:} $x_n \to a$ as $n \to \infty$\\
+    \\
+    take $\epsilon > 0$, since $a$ is the least upper bound of $\{ x_n \}$, there exists $N$ such that $a-\epsilon < x_N \leq a$. But $\{ x_n \}$ is increasing. Therefore $\forall n \geq N, a-\epsilon < x_N \leq x_n \leq a$. This implies that $\lim_{n\to\infty} x_n = a$
+\end{proof}
+\
 
 
 \end{document}

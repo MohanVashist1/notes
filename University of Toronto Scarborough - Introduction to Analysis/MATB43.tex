@@ -101,7 +101,7 @@ This example is correct because $g:\mathbb{N} \mapsto \{\text{set of odd numbers
 Intuitively, we can label the elements of $X$ as $X = \{ x_1, x_2, ..., x_n \}$
 
 \begin{definition}
-	X is \textbf{inifinite} if $X$ is not finite.
+	$X$ is \textbf{inifinite} if $X$ is not finite.
 \end{definition}
 
 Examples of this include: $\mathbb{N}, 2\mathbb{N}, \mathbb{Q}, \mathbb{R}$
@@ -382,8 +382,180 @@ This section will be just review of MATA37 and will be concerning sequences of t
     \\
     take $\epsilon > 0$, since $a$ is the least upper bound of $\{ x_n \}$, there exists $N$ such that $a-\epsilon < x_N \leq a$. But $\{ x_n \}$ is increasing. Therefore $\forall n \geq N, a-\epsilon < x_N \leq x_n \leq a$. This implies that $\lim_{n\to\infty} x_n = a$
 \end{proof}
-\
 
+\newpage
+
+\section{Friday, January 12, 2017}
+
+\subsection{Monotone Sequences}
+
+\underline{i.e.} Sequences which are increasing or decreasing
+
+\begin{proposition}
+    A bounded monotone sequence converges.
+\end{proposition}
+
+\begin{proof}
+    For an increasing sequence $\{ x_n \}, \lim_{n\to\infty} x_n = sup(\{ x_n \})$, suppose $\{ x_n \}$ is decreasing and bounded below, then $\{ -x_n \}$ is increasing and bounded above. This implies that $\lim_{n\to\infty} -x_n$ and $\lim_{n\to\infty} x_n$ both exist, and $$\lim_{n\to\infty} x_n = \lim_{n\to\infty} -x_n$$
+\end{proof}
+
+So now we're going to prove that Every sequence has a monotone subsequence along with other propositions on bounded monotone sequences. This will allow us to prove the Bolzano-Weierstrass Theorem, which states that every bounded sequence has a convergent subsequence, and this will help us prove the Cauchy property for sequences.
+
+\begin{example}
+    Lets look at the following sequence:
+    $$x_n = 1 + \frac{1}{2} + ... + \frac{1}{n} - logn, n\geq 1$$
+    So we want to show that this converges, we'll show that if we show that $\{ x_n \}$ is decreasing and is bounded below by 0.\\
+    \\
+    The limit ($\lim_{n\to\infty} x_n$) is actually a mysterious number that we don't know too much about.
+    
+    \begin{tcolorbox}
+    \underline{Recall:} that $logn = \int^n_1 \frac{dt}{t}$\\
+    So if we consider the space under the graph of $\frac{1}{t}$ from $n$ to $n+1$, we get the following inequality
+    
+    $$\frac{1}{n+1} < log(n+1) - logn < \frac{1}{n}$$
+    Which implies that
+    $$\frac{1}{n+1} - log(n+1) + logn < 0$$
+    
+    \end{tcolorbox}
+    Now consider the following for an arbitrary $n$
+    $$x_{n+1} = x_n + (\frac{1}{n+1} + logn - log(n+1))$$
+    but since $\frac{1}{n+1} - log(n+1) + logn < 0$, this would mean that $x_{n+1} < x_n$, so this sequence is decreasing.\\
+    \\
+    Now consider the following inequality derived from the recall block:
+    $$\sum^m_{n=1}(log(n+1) - logn) < \sum^m_{n=1}\frac{1}{n}$$
+    The left side of this inequality telescopes, giving us
+    $$log(m) < log(m+1) < 1 + \frac{1}{2} + ... + \frac{1}{m}$$
+    And since the left most side is greater than the right most side, that means that $x_m > 0, \forall m$.
+    
+\end{example}
+
+\subsection{Subsequences}
+
+\begin{definition}
+    Let $\{ x_i \}$ be a sequence of the real numbers, pick a finite set of indices $j_1 < j_2 < ... < j_n < ....$.\\
+    A \textbf{Subsequence} of $\{ x_i \}$ is $\{ x_{j_1}, x_{j_2}, ..., x_{j_n},... \}$
+\end{definition}
+
+\begin{example}
+    Considering the sequence $\{ x_n \} = \{ 1,\frac{1}{2}, \frac{1}{3}, ..., \frac{1}{n}, ... \}$
+    
+    \begin{enumerate}
+        \item $\{ \frac{1}{2n} \}$ is a subsequence of $\{ x_n \}$.
+        \item $\{ \frac{1}{2^n} \}$ is a subsequence of $\{ x_n \}$.
+        \item $\{ (-1)^n \}$ is also a subsequence of $\{ x_n \}$, note that it does not converge, but has convergent subsequences of $\{ (-1)^{2n} \}$ and $\{ (-1)^{2n+1} \}$
+    \end{enumerate}
+\end{example}
+
+\begin{definition}
+    Call a term $x_m$ \textbf{dominant} if $x_n \leq x_m, \forall n \geq m$
+\end{definition}
+
+\begin{proposition}
+    Every real number sequence has a monotone subsequence
+\end{proposition}
+
+\begin{proof}
+    There are 2 cases:\\
+    \underline{Case 1: infinitely many dominant terms}\\
+    let $\{ x_{j_1}, x_{j_2}, ..., x_{j_n},... \}$ be the sequence of dominant terms. By definition, $x_{j_1} \geq x_{j_2} \geq ... \geq x_{j_n} \geq...$\\
+    so $\{ x_{j_n} \}$ is a decreasing sequence, which is monotone.
+    \\
+    \\
+    \underline{Case 2: only finitely many dominant terms}\\
+    Pick an index $j$, so that $x_{j_1}$ is the first term beyond all dominant terms in the sequence $(\exists i, i<j_1, x_i \text{ is the last dominant term})$.\\
+    Since $x_{j_1}$ is not dominant, then $\exists j_2 > j_1$ where $x_{j_2} > x_{j_1}$\\
+    Since $x_{j_2}$ is not dominant, then $\exists j_3 > j_2$ where $x_{j_3} > x_{j_2}$\\
+    ...\\
+    and so on\\
+    By induction, we construct an increasing subsequence $\{ x_{j_m} \}$ of $\{ x_n \}$.\\
+    \\
+    By these 2 cases, every real number has a monotone sequence.
+    
+\end{proof}
+
+\begin{theorem}
+    (Bolzano-Weierstrass Theorem) every bounded sequence has a convergent subsequence
+\end{theorem}
+
+\begin{proof}
+    Given a bounded sequence $\{ x_n \}$ of the real numbers, there exists a monotone subsequence $\{ x_{j_n} \}$.\\
+    The monotone subsequence $\{ x_{j_n} \}$ is also bounded since $\{ x_n \}$ is bounded.\\
+    This implies that $\lim_{n\to\infty} x_{j_n} $ exists.
+\end{proof}
+
+\begin{definition}
+    \textbf{Cauchy Property:} intuitively, in a convergent sequence, the terms get closer and closer as $n\to\infty$. More precisely:\\
+    $\{ x_n \}$ is a real number sequence, given $\epsilon > 0, \exists N$ such that for $m,n > N, |x_m - x_n|<\epsilon$.
+\end{definition}
+
+\begin{proposition}
+    Suppose that $\{ x_n \}$ converges to $a$, then $\{ x_n \}$ satisfies the Cauchy property.
+\end{proposition}
+
+\begin{proof}
+    given $\epsilon > 0$, then $\exists N$ such that $\forall n > N, |x_n - a| < \frac{\epsilon}{2}$, so if $m > N$ then $|x_m - a| < \frac{\epsilon}{2}$ as well.\\
+    This implies that
+    $$|x_m - x_n| = |x_m -a + a - x_n| \leq |x_m -a| + |x_n-a| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$$
+\end{proof}
+
+So now we want to show that if a sequence satisfies the Cauchy property, then it converges. We'll do this by first showing that a bounded sequence with the Cauchy property implies that sequence has a convergent subsequence. The second and final step is to show that the limit of a convergent subsequence is the limit of the original sequence.\\
+\\
+\begin{proposition}
+    If $\{ x_n \}$ satisfies the Cauchy property, then it's bounded.
+\end{proposition}
+
+\begin{proof}
+    By definition, there exists $N$ so that for $m,n > N, |x_m - x_n| <1$ in particular, $\forall n > N, |x_n - x_{N+1}| < 1$, which gives us:
+    \begin{align*}
+        -1 <& x_n - x_{N+1} < 1\\
+        x_{N+1}-1 <& x_n < x_{N+1}+1
+    \end{align*}
+    
+    \underline{Note:} $x_{N+1}$ is fixed (a constant)\\
+    \\
+    Let $A = min\{ x_1, .... ,x_N, x_{N+1}-1 \}$\\
+    Let $B = max\{ x_1, .... ,x_N, x_{N+1}-1 \}$\\
+    This implies that for all $n$, $A \leq x_n \leq B$, therefore Bounded.
+    
+\end{proof}
+
+\begin{proposition}
+    A sequence with the Cauchy property is convergent.
+\end{proposition}
+
+\begin{proof}
+    Let $\{ x_n \}$ be a sequence with the Cauchy property.\\
+    Since $\{ x_n \}$ is bounded, by the Bolzano--Weiestrass Theorem, there exists a convergent subsequence $\{ x_{j_m} \}$. Now let:
+    $$a = \lim_{m\to\infty} x_{j_m}$$
+    given $\epsilon, \exists M$ so that for all $m > M, |x_{j_m} - a| < \frac{\epsilon}{2}$.\\
+    \\
+    \underline{Note that $j_m \geq m$}\\
+    \\
+    The Cauchy propert implies that $\exists N$ so that for all $m,n > N, |x_m - x_n| < \epsilon$.\\
+    \\
+    We'll pick $P = max(N,M)$, then for $m,n > P$ we have:
+    
+    \begin{align*}
+        |x_n - a| &= |x_n + x_{j_m} - x_{j_m} - a|\\
+        &= |x_n - x_{j_m}| + |x_{j_m} - a|\\
+        &< \frac{\epsilon}{2} + \frac{\epsilon}{2}\\
+        &= \epsilon
+    \end{align*}
+\end{proof}
+
+\begin{example}
+    $$x_n = \sum^n_{k=1} \frac{1}{k^2}$$
+    Verify the Cauchy property.\\
+    \\
+    Take $m>n, x_m - x_n = \sum^m_{k-n+1} \frac{1}{k^2}$. Now $\frac{1}{k} < \frac{1}{k(k-1)} = \frac{1}{k-1} - \frac{1}{k}$. This implies that
+    \begin{align*}
+        &\implies \sum^m_{k-n+1} \frac{1}{k^2} < \sum^m_{k-n+1} (\frac{1}{k-1} - \frac{1}{k})\\
+        &\overset{\text{telescoping}}{\implies} \sum^m_{k-n+1} \frac{1}{k^2} < \frac{1}{m} - \frac{1}{n} < \frac{1}{m}\\
+        &\implies (x_m - x_n) < \frac{1}{m}\\
+    \end{align*}
+    This implies that $x_n$ is convergent, in fact
+    $$\lim_{n\to\infty} x_n = \sum^\infty_{k=1} \frac{1}{k^2} = \frac{\pi^2}{6}$$
+\end{example}
 
 \end{document}
 

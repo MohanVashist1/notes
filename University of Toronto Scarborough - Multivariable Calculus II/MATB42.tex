@@ -242,6 +242,164 @@ Multiply by $cos(mx)$ and integrate to get
 
 \newpage
 
+\section{Friday, January 12, 2018}
+
+Continuing from where we left off.
+
+\begin{align*}
+    \int^\pi_{-\pi} f(x)cos(mx) dx &= \frac{a_0^2}{2} \int^\pi_{-\pi} cos(mx) dx + \int^\pi_{-\pi} [\sum^\infty_{k=1} (a_k cos(kx) + b_k sin(kx))]dx\\
+    &= \frac{a_0^2}{2} \int^\pi_{-\pi} cos(mx) dx +  \sum^\infty_{k=1} (a_k \int^\pi_{-\pi}cos(kx)dx + b_k \int^\pi_{-\pi}sin(kx)dx)
+\end{align*}
+
+We know the following from trigonometric identities
+$$\int^\pi_{-\pi} cos(kx)cos(mx) dx = \begin{cases}
+    0, &k\neq m\\
+    \pi, &k=m
+\end{cases}$$
+As well as the following from odd function properties
+$$\int^\pi_{-\pi} cos(kx) dx = 0$$
+$$\int^\pi_{-\pi} sin(kx)cos(mx) dx = 0$$
+So now we get
+\begin{align*}
+    \int^\pi_{-\pi} f(x)cos(mx) dx
+    &=  \frac{a_0^2}{2} \int^\pi_{-\pi} cos(mx) dx +  \sum^\infty_{k=1} (a_k \int^\pi_{-\pi}cos(kx)dx + b_k \int^\pi_{-\pi}sin(kx)dx)\\
+    &= a_m \pi\\
+    &\implies a_m = \frac{1}{\pi} \int^\pi_{-\pi} f(x)cos(mx) dx
+\end{align*}
+
+\begin{example}
+    Lets take
+    $$f(x) = \begin{cases}
+    1, &0\leq x < \pi\\
+    -1, &-\pi \leq x < 0
+    \end{cases}$$
+    
+    Note that this is an odd function, therefore $a_k = 0, \forall k \geq 0$. So now lets calculate $b_k$.
+    
+    \begin{align*}
+        b_k &= \frac{1}{\pi} \int^\pi_{-\pi} f(x)sin(kx) dx\\
+        &\overset{even}{=} \frac{2}{\pi} \int^\pi_{0} f(x)sin(kx) dx\\
+        &= \frac{2}{\pi} \int^\pi_{0} sin(kx) dx\\
+        &= \frac{2}{k\pi} [ -cos(kx) ]^\pi_0\\
+        &= \begin{cases}
+            \frac{4}{k\pi}, &\text{$k$ is odd}\\
+            0, &\text{$k$ is even}
+        \end{cases}
+    \end{align*}
+    
+    And now lets right out the Fourier Polynomial $(F_N (x))$\\
+    \underline{if $N$ is odd:}
+    $$F_N (x) = \frac{4}{\pi}sin(x) + \frac{4}{3\pi}sin(3x) + \frac{4}{5\pi}sin(5x) + ...$$
+    \underline{if $N$ is even:}
+    $$F_N (x) = F_{N-1} (x)$$
+    We can also write it as a Fourier Series
+    $$F(x) = \frac{4}{\pi} \sum^\infty_{l=0} \frac{sin((2l+1)x)}{2l+1}$$
+    
+    The energy of the function is
+    $$E = \frac{1}{\pi} \int^\pi_{-\pi} [f(x)]^2 dx = \frac{2}{\pi} \int^\pi_0 dx = 2$$
+    
+    The amplitutde of the $k$th harmonic is
+    $$A_k = \sqrt{a_k^2 + b_k^2} = \sqrt{0 + \frac{16}{k^2\pi^2}} = \frac{4}{k\pi}$$
+    
+    The energy of the $k$th harmonic is
+    $$A_k^2 = \frac{16}{k^2 \pi^2}$$
+    
+    Note that for this example, both the energy and the amplitude are 0 at an even $k$.\\
+    \\
+    Lets now evaluate the energy spectrum:
+    $$k=1, E= \frac{16}{\pi^2} \approx 1.62, \frac{1.62}{2}=0.81=81\%$$
+    $$k=3, E= \frac{16}{9\pi^2} \approx 0.18, \frac{0.18}{2}=0.09=9\%$$
+    $$k=5, E= \frac{16}{25\pi^2} \approx 0.06, \frac{0.06}{2}=0.03=3\%$$
+    $$k=7, E= \frac{16}{49\pi^2} \approx 0.03, \frac{0.03}{2}=0.015=1.5\%$$
+    
+\end{example}
+
+However, we do not need to exclusively work with the interval $[-\pi, \pi]$ we can even work over any interval of length $2\pi$.
+
+\subsection{General Fourier Series (interval of length $2\pi$)}
+
+$$a_k = \frac{1}{\pi} \int^{c+2\pi}_{c} f(x) cos(kx) dx, k=1,2,3,...$$
+$$b_k = \frac{1}{\pi} \int^{c+2\pi}_{c} f(x) sin(kx) dx, k=1,2,3,...$$
+
+What about for $f$ if $f$ has period $p$?
+
+$$f(x+p) = f(x), \forall x, \exists p \neq 0$$
+
+We then substitute $x = \frac{pt}{2\pi}$ which gives a new function $f_p (t) = f(\frac{pt}{2\pi})$ with period $2\pi$. So
+
+$$f_p (t+2\pi) = f(\frac{p}{2\pi} (t+2\pi)) = f(\frac{pt}{2\pi} + p) = f(\frac{pt}{2\pi}) = f_p (t)$$
+
+So how about the Fourier Expansion for $f_p (t)$? To find this, we must replace $t$ by $\frac{2\pi x}{p}$ giving for $f(x)$.
+
+$$F(x) = \frac{a_0}{2}+ \sum^\infty_{k-1} a_k cos(\frac{2nx\pi}{p}) + b_k sin(\frac{2nx\pi}{p})$$
+$$a_k = \frac{2}{p} \int^{c+p}_{c} f(x) cos(\frac{2nx\pi}{p}x) dx, k=1,2,3,...$$
+$$b_k = \frac{2}{p} \int^{c+p}_{c} f(x) sin(\frac{2nx\pi}{p}x) dx, k=1,2,3,...$$
+
+For any function defined on $[a,b]$, we can extend $f$ to all of $\mathbb{R}$ as a periodic function. Given a periodic function $f_E$ from $f$ of period $p=b-a$, we now have:
+
+$$a_k = \frac{2}{b-a} \int^{b}_{a} f(x) cos(\frac{2nx\pi}{b-a}x) dx, k=1,2,3,...$$
+$$b_k = \frac{2}{b-a} \int^{b}_{a} f(x) sin(\frac{2nx\pi}{b-a}x) dx, k=1,2,3,...$$
+
+\begin{example}
+    Take the function $f(x) = x, 0\leq x < 1$ and extend it with period 1. For $k\neq 0$:
+    \begin{align*}
+        a_k &= 2 \int^{1}_{0} xcos(2k\pi x) dx\\
+        &\overset{parts}{\underset{u=v, dv=cos(2\pi kx)dx}{=}} 2[\frac{xsin(2k\pi x)}{2\pi k}]^1_0 - \frac{2}{2k \pi} \int^1_0 sin(2k\pi x) dx\\
+        &=0
+    \end{align*}
+    $$a_0 = 2 \int^1_0 x dx = [x^2 ]^1_0$$
+    \begin{align*}
+        b_k &= 2\int^1_0 x sin(2k\pi x)dx\\
+        &\underset{u=x, dv=sin(2k\pi x)dx}{\overset{parts}{=}} 2[\frac{-xcos(2k\pi x)}{2\pi k}]^1_0 + \frac{1}{k\pi} \int^1_0 cos(2k\pi x)dx\\
+        &= \frac{-cos(2k\pi)}{k\pi}\\
+        &= \frac{-1}{k\pi}
+    \end{align*}
+    So the Fourier Series will be
+    $$F(x) = \frac{1}{2} - \frac{1}{\pi} [sin(2\pi x) + \frac{sin(4\pi x)}{2} + \frac{sin(6\pi x)}{3} + ...]$$
+\end{example}
+
+\begin{example}
+    $f(x) = |x|, -\pi < x \leq \pi$. Since $f(x)$ is even, $b_k=0, \forall k\in\mathbb{N}$.
+    
+    $$a_0 = \frac{1}{\pi} \int^\pi_{-\pi} |x|dx \overset{even}{=} \frac{2}{\pi} \int^\pi_0 x dx= \pi$$
+    
+   \begin{align*}
+   	a_k &= \frac{1}{\pi} \int^\pi_{-\pi} |x| cos(kx) dx\\
+	&\overset{even}{=} \frac{2}{pi} \int^\pi_0 x cos(kx) dx\\
+	&\underset{u=x, dv=cos(kx)dx}{\overset{parts}{=}} \frac{2}{\pi} [\frac{x sin(kx)}{k} + \frac{cos(kx)}{k^2}]^\pi_0\\
+	&= \frac{2}{\pi k^2} (cos(k\pi) - 1)\\
+	&=\begin{cases}
+		0, &\text{$k$ is even}\\
+		\frac{-4}{\pi k^2}, &\text{$k$ is odd}
+	\end{cases}
+   \end{align*}
+   
+   So we end up with the Fourier Series
+   
+   $$F(x) = \frac{\pi}{2} - \frac{4}{\pi} \sum^\infty_{l=0} \frac{cos((2l+1)x)}{(2l+1)^2}$$
+
+\end{example}
+
+\begin{example}
+	$f(x) = x, -\pi < x \leq \pi$. Note that since $f(x)$ is odd, $a_k = 0, \forall k \geq 0$
+	\begin{align*}
+		b_k &= \frac{1}{\pi} \int^\pi_{-\pi} x sin(kx) dx\\
+		&\underset{u=x, dv=sin(kx)dx}{\overset{parts}{=}} \frac{1}{\pi} [\frac{-xcos(kx)}{k}]^\pi_{-\pi} + \frac{1}{\pi} \int^\pi_{-\pi} cos(kx) dx\\
+		&= \frac{1}{\pi} [\frac{-\pi cos(k\pi)}{k} + \frac{-\pi cos(-k\pi)}{k}]\\
+		&= \frac{-2}{k} cos(k\pi)\\
+		&= \frac{(-1)^{k+1} 2}{k}
+	\end{align*}
+	And the Fourier Series of this is
+	$$F(x) = \sum^\infty_{k=1} (-1)^{k+1} \frac{2}{k} sin(kx)$$
+\end{example}
+
+To get a Fourier cosine series or a Fourier sine series, we need
+\begin{itemize}
+	\item{an $f$ defined on the interval $[0,a]$, and we must extend this interval to also include $[-a,0)$ to give an even or odd function on $[-a,a]$}
+	\item{$f(-t)=f(t), -a\leq t < 0$ for the even extension}
+	item{$f(-t)=-f(t), -a\leq t < 0$ for the odd extension}
+\end{itemize}
+
 \end{document}
 
 

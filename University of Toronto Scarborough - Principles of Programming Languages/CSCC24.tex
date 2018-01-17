@@ -1,0 +1,340 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{listings}
+\usepackage{color}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+
+\usepackage{upgreek}
+
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+\graphicspath{ {imgs/} }
+
+\usepackage{enumitem}
+
+\usepackage{listings}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+
+\usepackage{dsfont}
+
+\usepackage{hyperref}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{mathtools}
+
+\usepackage{textcomp}
+
+\usepackage[english]{babel}
+
+\usepackage{tikz}
+
+\usepackage{tcolorbox}
+
+\usepackage{amsthm,amssymb}
+
+\setlength{\parindent}{0cm}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Principles of Programming Languages -- Winter 2018}
+\fancyhead[RE,LO]{Joshua Concon}
+\fancyfoot[CE,CO]{\leftmark}
+\fancyfoot[LE,RO]{\thepage}
+
+
+\begin{document}
+
+\title{CSCC24: Principles of Programming Languages\\ Notes}
+\date{University of Toronto Scarborough -- Winter 2018}
+\author{Joshua Concon}
+\maketitle
+This course is taught by Dr. Albert Yu Cheong Lai. If you find any problems in these notes, feel free to contact me at conconjoshua@gmail.com.
+
+\tableofcontents
+
+\pagebreak
+
+\section{Thursday, January 11, 2017}
+
+The purpose of this course is to see the trade-offs between various features in programming languages. This course exists because different programming languages have different features, for example, Java has both class-based OOP and auto-garbage collection while C has neither, but C has union types that Java doesn't have. This means rewriting code into a different language isn't necessarily easy. There may be large semantic differences
+
+\subsection{The Root Cause of this Course}
+
+A guy named "John Backus" gave a lecture for the acceptance for the Turing Award in 1977. He addressed the question, "Can programming be liberated from the von Neumann style?"\\
+\\
+Languages then had been only superficial enhancements to the CPU writing 1 word onto memory at a time i.e:
+
+\begin{lstlisting}
+	s := s + a[i]
+\end{lstlisting}
+
+Backus proposed a new direction for programming languages:
+\begin{itemize}
+    \item Higher order functions that work on aggregates (a whole list, an array, a dictionary, etc...)
+    \item Combining forms, for example, function composition ($g \circ f$)
+    \item Reasoning by algebra, for example, the associative law for a function
+    \item If you need a state, use coarse-grained state transitions rather than changing only one word at a time. (So passing an old state into a stateless function that does a lot and returns an answer and a new state.)
+\end{itemize}
+
+\subsubsection{Higher-order Functions on Aggregates}
+
+Note that the notation to apply a function to several parameters is:
+\\(Haskell)
+\begin{lstlisting}[language=Haskell]
+    f x y z
+\end{lstlisting}
+(Scheme:)
+\begin{lstlisting}
+    (f x y z)
+\end{lstlisting}
+
+So in Haskell:
+\begin{lstlisting}[language=Haskell]
+    fmap f [x0, x1, ...]
+\end{lstlisting}
+
+will compute
+
+\begin{lstlisting}[language=Haskell]
+    [f x0, f x1, ...]
+\end{lstlisting}
+
+And
+
+\begin{lstlisting}[language=Haskell]
+    fmap abs [3,-1,4]
+\end{lstlisting}
+
+Computes
+
+\begin{lstlisting}[language=Haskell]
+    [3,-1,4]
+\end{lstlisting}
+
+And 
+
+\begin{lstlisting}[language=Haskell]
+    folder (+) 0 [3,1,4]
+\end{lstlisting}
+
+Computes
+
+\begin{lstlisting}[language=Haskell]
+    3+(1+(4+0))
+\end{lstlisting}
+
+Note 2 points:
+\begin{itemize}
+    \item "on aggregates" means to work on a whole list at once (such as an array or some "container")
+    \item "Higher-order functions" means that some parameters are functions, so different combinations makes the language more customizable.
+\end{itemize}
+
+Java and MATLAB have the former but lack the latter.
+
+\subsubsection{Combining Forms}
+
+An obvious example is function composition $(g \circ f)$.
+
+In Haskell, this is:
+\begin{lstlisting}[language=Haskell]
+    g . f
+\end{lstlisting}
+
+And in Racket (Scheme) this is:
+\begin{lstlisting}
+    compose g f
+\end{lstlisting}
+
+For example, the following code computes the 1-norm of your vector.
+
+\begin{lstlisting}[language=Haskell]
+    foldr (+) 0 . fmap abs
+\end{lstlisting}
+
+There are other combining forms. There is another example in Haskell.
+
+\begin{lstlisting}[language=Haskell]
+    (f &&& g) x = (f x, g x)
+\end{lstlisting}
+
+The point is that you can combine functions to perform compound tasks, and this type of language is not about shorter code (although it has that side effect), but about working with building blocks.
+
+\subsubsection{Example Topic: Evaluation Order}
+
+You can define your own logical "and" in Scheme
+
+\begin{lstlisting}
+    (define (my-and b c) (if b c #f))
+    (my-and #f (list-ref '(#t #f #t) 10))
+\end{lstlisting}
+
+The second line fails in Scheme, but if typed in the Haskell version, succeeds.\\
+\\
+In most languages, parameters are evaluated before passed into the bodies of functions. In Haskell however, parameters are passed as is. Because of this, in Haskell, many short circuiting operators and control constructs are user-definable, and therefore, very customizable.
+
+\subsubsection{Example Topic: Scheme Macros}
+
+Scheme offers a macro system for user-defined constructs:
+
+\begin{lstlisting}
+    (define-syntax-rule (my-and b c) (if b c #f))
+\end{lstlisting}
+
+Now if we run the following code, it succeeds.
+
+\begin{lstlisting}
+    (my-and #f (list-ref '(#t #f #t) 10))
+\end{lstlisting}
+
+The explanation for this is that this is a macro expansion in Scheme, so the parameters are copy-pasted into the macros. This means that there is a downside, for example:
+
+\begin{lstlisting}
+    (define-syntax-rule (double x) (+ x x))
+    (double (* 3 4))
+\end{lstlisting}
+
+The second line spawns two copies of (* 3 4) and performs redundant work, while Haskell's version does not. The Upside is that Scheme's macro system offers other flexibilities not shown in this lecture.
+
+\subsubsection{Dynamic and Static Typing}
+
+In Scheme:
+\begin{lstlisting}
+    (if #f 0 (+ 0 "hello"))
+    (if #t 0 (+ 0 "hello"))
+\end{lstlisting}
+
+The first line fails but the second line succeeds. This is because Types are checked dynamically. When running the program, only the code that is actually run is checked.
+
+In Haskell, the following line fails:
+\begin{lstlisting}
+    if True then 0 else 0 + "hello"
+\end{lstlisting}
+
+The reason for this is because types are checked statically, without runnig, over all the code. (If this code is compiled, then at compile time, if interpreted, then at load time, etc.) So the error of adding 0 to "hello".\\
+\\
+Food for though, Java is both compiled and interpreted.
+
+\subsubsection{Parametric Polymorphism}
+
+In Haskell, we define:
+
+\begin{lstlisting}
+    trio x = [x, x, x]
+\end{lstlisting}
+The inferred type is:
+\begin{lstlisting}
+    a -> [a]
+\end{lstlisting}
+This is analogous to Java's 
+\begin{lstlisting}
+    <T> LinkedList<T> trio(<T> x)
+\end{lstlisting}
+
+\underline{Note:} That the following 2 lines are both legal if we have trio defined
+\begin{lstlisting}
+    trio 0
+    trio "hello"
+\end{lstlisting}
+
+"Parametric" means:
+Supposed you have defined $d$ of type $a \mapsto [a]$, Then you would need one test to know what it does. Say we test $d True$ and the answer has length 2. Then we can deduce that $d x$ returns $[x,x]$ for all $x$.\\
+\\
+The basic explanation for this is that $d$ cannot vary behaviour by types. Haskell allows type-determined behaviour, but the function type will look like:
+\begin{lstlisting}
+    Foo a => a -> [a]
+\end{lstlisting}
+
+\subsubsection{What is "Powerful"? -- The Tradeoff}
+
+"Macro systems, dynamic typing, ... are powerful." This refers to the flexibility for the implementer or the original author.\\
+\\
+"Static typing, parametric polymorphism... are powerful." This refers to the predictability for the user or the maintainer.\\
+\\
+Programming is a dialectic class struggle between the user and the implementer. Or between the maintainer and the original author.
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

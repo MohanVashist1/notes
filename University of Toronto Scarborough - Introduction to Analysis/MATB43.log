@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  15 JAN 2018 09:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  17 JAN 2018 20:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1405,20 +1405,47 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 560.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 560.
+Overfull \hbox (25.72867pt too wide) in paragraph at lines 591--592
+[][]\OT1/cmr/bx/n/12 Definition 4.3. []\OT1/cmr/m/n/12 The se-ries $[][] \OML/c
+mm/m/it/12 a[]$ \OT1/cmr/m/n/12 con-verges if $[][] \OML/cmm/m/it/12 S[]$ \OT1/
+cmr/m/n/12 ex-ists. If $[][] \OML/cmm/m/it/12 S[] \OT1/cmr/m/n/12 =
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 669.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 669.
  (./MATB43.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 560.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 560.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 669.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 669.
 Package rerunfilecheck Info: File `MATB43.out' has not changed.
-(rerunfilecheck)             Checksum: 016AC62083314FA79A8EBC4F0C9D3CA5;614.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 560.
+(rerunfilecheck)             Checksum: 49A9B174512BE54EAD7E777BF6504548;863.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 669.
  ) 
 Here is how much of TeX's memory you used:
- 19831 strings out of 492995
- 370845 string characters out of 6132704
- 441700 words of memory out of 5000000
- 22952 multiletter control sequences out of 15000+600000
+ 19858 strings out of 492995
+ 371151 string characters out of 6132704
+ 441706 words of memory out of 5000000
+ 22956 multiletter control sequences out of 15000+600000
  16436 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,73p,925b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1437,10 +1464,10 @@ live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
 ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MATB43.pdf (14 pages, 195751 bytes).
+Output written on MATB43.pdf (17 pages, 204790 bytes).
 PDF statistics:
- 257 PDF objects out of 1000 (max. 8388607)
- 223 compressed objects within 3 object streams
- 81 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 309 PDF objects out of 1000 (max. 8388607)
+ 272 compressed objects within 3 object streams
+ 104 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

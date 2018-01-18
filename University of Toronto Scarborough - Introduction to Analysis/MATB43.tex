@@ -557,6 +557,115 @@ So now we want to show that if a sequence satisfies the Cauchy property, then it
     $$\lim_{n\to\infty} x_n = \sum^\infty_{k=1} \frac{1}{k^2} = \frac{\pi^2}{6}$$
 \end{example}
 
+\newpage
+
+\section{Monday, January 15, 2017}
+
+\subsection{Cauchy}
+
+\begin{remark}
+	Let $\{ x_n \}$ be a sequence of real numbers. Given $\epsilon > 0$, there exists $N$ such that for $m,n > N, |x_m- x_n|<\epsilon$. If $\{ x_n \}$ converges then $\{ x_n \}$ satisfies the cauchy property.
+
+\end{remark}
+
+The converse also holds. So if $\{ x_n \}$ satisfies the cauchy property, then it converges. But why? It holds because:
+\begin{enumerate}
+	\item $\{ x_n \}$ must be bounded
+	\item Therefore it has a convergent subsequence $\{ x_{j_m} \}$, assume  $\{ x_{j_m} \}$ converges to $a$.
+	\item Then $\{ x_n \}$ converges to $a$ as $n\to\infty$
+\end{enumerate}
+
+\subsection{Series}
+
+This section will be focused on 
+\begin{definition}
+$$\sum^\infty_{n=0} a_n$$ which is an \textbf{infinite sum} of real numbers
+\end{definition}
+
+\begin{definition}
+	The following is a \textbf{partial sum}:
+	$$S_n = \sum^n_{k=0} a_k$$
+\end{definition}
+
+\begin{definition}
+	The series $\sum^\infty_{n=0} a_n$ converges if $\lim_{n\to\infty} S_n$ exists. If $\lim_{n\to\infty} S_n = a$, then we write $a = \sum^\infty_{n=0} a_n$  as the \textbf{Sum of the series}. However, if $\lim_{n\to\infty} S_n$ does not exist, then the series diverges.
+\end{definition}
+
+\begin{example}
+	The geometric series $\sum^\infty_{n=0} a^n$ converges if $|a|<1$ and diverges otherwise. If the series does converge, it converges to:
+	$$\sum^\infty_{n=0} a^n = \frac{1}{1-n}$$
+\end{example}
+
+\begin{property}
+	If $\sum^\infty_{n=0} a_n$, $\sum^\infty_{n=0} b_n$ both converge, then
+	$$\sum^\infty_{n=0} a_n + \sum^\infty_{n=0} b_n = \sum^\infty_{n=0} (a_n + b_n)$$
+	converges as well.
+\end{property}
+
+\begin{property}
+	$\forall c$, if $\sum^\infty_{n=0} a_n$ converges, then
+	$$c\sum^\infty_{n=0} a_n = \sum^\infty_{n=0} c(a_n)$$
+	Also converges
+\end{property}
+
+\begin{definition}
+	The \textbf{Cauchy Criterion} states that $\sum^\infty_{n=0} a_n$ converges iff $\forall \epsilon > 0, \exists N$ such that $m>n > N$
+	$$|S_m - S_n|=|\sum^m_{k=n+1} a_k|<\epsilon$$
+\end{definition}
+
+\begin{example}
+	Apply Cauchy Criterion to $\sum^\infty_{n=0} \frac{1}{n^2}$ and $\sum^\infty_{n=0} \frac{1}{n(n+1)}$
+\end{example}
+
+To prove they converge, we first need the following proposition:
+
+\begin{proposition}
+	Suppose $\sum^\infty_{n=0} a_n$ converges, then $a_n \to 0$ as $n\to\infty$
+\end{proposition}
+
+\begin{proof} (Using the Cauchy Criterion)\\
+Given $\epsilon > 0$, there exists $N$ such that for $m > n > N, |\sum^m_{k=n+1} a_k|<\epsilon$, take $m=n+1$, this implies that $|a_{n+1}|<\epsilon$ for all $n > N$, this then implies that $a_n \to 0$
+\end{proof}
+
+\begin{proposition}
+	Suppose $a_n \geq 0$ then $\sum^\infty_{n=0} a_n$ converges iff $\{ S_n \}$ is bounded above.
+\end{proposition}
+
+\begin{proof}
+	Since $a_n \geq 0, \forall n$, then $\{ S_n \}$ is increasing. Therefore $\lim_{N\to\infty} S_N$ exists iff $\{ S_n \}$ is bounded above.
+\end{proof}
+
+\begin{example}
+	$$\sum^\infty_{n=0} \frac{1}{n}, S_N = 1 +... + \frac{1}{N} > log(N), log(N)\to\infty \text{ as } n\to\infty$$
+\end{example}
+
+\subsubsection{Convergence Tests}
+
+\begin{definition}
+	\underline{The Integral Test:} let $f$ be a function defined for $x \geq 1$ and is integrable. Let $a_n = f(n), \forall n \in\mathbb{N}$ then $sum^\infty_{n=0} a_n$ converges iff
+$$\int^\infty_1 f(x) dx = \lim_{y\to\infty} \int^y_1 f(x) dx$$ exists
+\end{definition}
+
+\begin{example}
+	Consider $f(x)=x^a, a\in\mathbb{R}, a\neq -1$
+	$$\int^y_1 x^a dx = \left.\frac{x^{a+1}}{a+1}\right|^y_1 = \frac{x^{y+1}}{y+1} - \frac{1}{a+1}$$
+	So now we know that $\int^y_1 x^a dx$ exists iff $a < -1$, so equivalently:
+	$$\sum^\infty_{a=1} \frac{1}{n^a} \text{ converges iff } a > 1$$
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{document}
 
 

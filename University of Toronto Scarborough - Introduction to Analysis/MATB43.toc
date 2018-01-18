@@ -9,3 +9,7 @@
 \contentsline {section}{\numberline {3}Friday, January 12, 2017}{10}{section.3}
 \contentsline {subsection}{\numberline {3.1}Monotone Sequences}{10}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Subsequences}{11}{subsection.3.2}
+\contentsline {section}{\numberline {4}Monday, January 15, 2017}{15}{section.4}
+\contentsline {subsection}{\numberline {4.1}Cauchy}{15}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Series}{15}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Convergence Tests}{17}{subsubsection.4.2.1}

@@ -400,6 +400,121 @@ To get a Fourier cosine series or a Fourier sine series, we need
 	item{$f(-t)=-f(t), -a\leq t < 0$ for the odd extension}
 \end{itemize}
 
+\newpage
+
+\section{Monday, January 15, 2017}
+
+\begin{example}
+	We want to express $f(x)=x, 0\leq x < \pi$ as both a cosine series and a sine series.\\
+	\\
+	\underline{cosine series}
+	For this, we need to extend the function as an even function, so we extend the function to $f(x)=|x|, -\pi < x \leq x$. This is a previous example that we computated before and gives us a cosine series\\
+	\\
+	\underline{sine series}
+	For this, we must extend $f(x)$ as an odd function $f(x)=x, -\pi \geq x < \pi$. We've already seen from previous examples that is a sine series.\\
+	\\
+	So for $f(x)=x, 0 \leq x < pi$, the cosine series looks like this:
+	$$F(x) = \frac{\pi}{2} - \frac{4}{\pi} \sum^\infty_{l=0} \frac{cos((2l+1)x)}{(2l+1)^2}$$
+	And the sine series looks like this:
+	$$F(x) = \sum^\infty_{k=0} (-1)^{k+1} \frac{2}{k} sin(kx)$$
+	Both of these series on the interval $[0,\pi)$ represent $f(x)=x$
+\end{example}
+
+\begin{definition}
+	A function $f(x)$ defined for $x\in[a,b]$ is \textbf{piece-wise continuous} if there exists a finite partition $P: a=t_0< .... < t_n =b$ such that $f$ is continuous on $x\in(t_{i=1}, t_i), \forall i$ and both $\lim_{x\to t^+_{i-1}} f(x)$ and $\lim_{x\to t^-_{i-1}} f(x)$ both exist and are both finite.
+\end{definition}
+
+\begin{note}
+	On the $i$th subinterval, $f(x)$ coincides with some $f_i (x)$ that is continuous on that subinterval.
+\end{note}
+
+\begin{definition}
+	If $f_i (x) \forall i$ has continuous 1st derivatives, $f(x)$ is called \textbf{piecewise smooth}
+\end{definition}
+
+\begin{definition}
+	If $f_i (x) \forall i$ has continuous 2nd derivatives, $f(x)$ is called \textbf{piecewise very smooth}
+\end{definition}
+
+\begin{definition}
+	The Fourier Series obtained from $f(x)$ converges to $f(x)$ if $f(x) = \lim_{N\to\infty} F_N (x)$
+	
+	\underline{i.e.} $$f(x) = \lim_{N\to\infty} F_N (x) = \frac{a_0}{2}+ \sum^N_{k-1} a_k cos(kx) + b_k sin(kx)$$
+	
+	assuming a period of $2\pi$ (and can be adjusted for other periods). The $a_k$ and $b_k$ are the Fourier coefficients.
+\end{definition}
+
+\begin{theorem}
+	Let $f(x)$ be continuous and piece-wise very smooth for all $x$ and let $f(x)$ have period $2\pi$. Then the Fourier Series of $f(x)$ converges uniformly to $f(x), \forall x$
+\end{theorem}
+
+This helps with examples that have jump discontinuities.
+
+\begin{theorem}
+	Let $f(x)$ be defined and piece-wise very smooth for $x\in[-\pi,\pi]$ and let $f(x)$ be defined outside this interval to have period $2\pi$. Then the Fourier Series of $f(x)$ converges uniformly to $f(x)$ in each interval containing no discontinuity of $f(x)$. At each discontinuity, $x_0$, the series converges to
+	$$\frac{1}{2} [\lim_{x\to x_0^+} f(x) + \lim_{x\to x_0^-} f(x)]$$
+	This is the \textbf{Fundamental Theorem (for Fourier Series)}. The Theorem can be reinstated for $f$ defined on any interval of length $p\neq 0$
+\end{theorem}
+
+\begin{example}
+	\begin{enumerate}
+		\item $f(x) = \frac{-x}{2}$ on the interval $[-\pi, \pi]$
+		\item $f(x) = \begin{cases}
+			1, &0\leq x < \pi\\
+			-1, &-\pi\leq x < 0
+		\end{cases}
+$
+	\end{enumerate}
+	Note that they both are piece-wise continuous and both satisfy the previous theorem.\\
+	\\
+	so (1.) converges to
+	$$\sum^\infty_{k=1} \frac{(-1)}{k} sin(kx) = \begin{cases}
+		-1, x\in (-\pi, \pi)\\
+		0, x = \pm \pi
+	\end{cases}
+$$
+
+And (2.) converges to
+
+$$\sum^\infty_{k=1} \frac{sin((2k+1)x)}{2k+1} = \begin{cases}
+		-1, -\pi < x < 0\\
+		0, x = -\pi, 0,\pi
+	\end{cases}
+$$
+
+In (2.) set $x = \frac{\pi}{2}$ and we'll get
+\begin{align*}
+	1 &= \frac{4}{\pi}\sum^\infty_{k=1} \frac{sin((2k+1)\frac{\pi}{2})}{2k+1}\\
+	1 &=\frac{4}{\pi}\sum^\infty_{k=1} \frac{(-1)^k}{2k+1}\\
+	\frac{\pi}{4}&= \sum^\infty_{k=1} \frac{(-1)^k}{2k+1}\\
+	\frac{\pi}{4}&=1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}+...
+\end{align*}
+
+So now we have $\frac{\pi}{4}$ represented by a series of numbers.
+
+\end{example}
+
+However, the domain of the function also play a role in the series.
+
+\begin{example}
+	For $f(x), x\in[0,1)$, we get
+	$$F(x) = \frac{1}{2} - \frac{1}{\pi}\sum^\infty_{k=1} \frac{sin((2k+1)x)}{2k+1}$$
+	The theorem still applies and we get $F(x) = x$ on the interval $[0,1)$, and converge to $\frac{1}{2}$ at $0$. 
+\end{example}
+
+\begin{example}
+	For $f(x)=|x|, x\in [-\pi,\pi]$ we get.
+	$$F(x) = \frac{\pi}{2} - \frac{1}{\pi}\sum^\infty_{k=1} \frac{cos((2k+1)x)}{(2k+1)^2}$$
+	on $(0,1), |x|=x$, and since $f$ is piece-wise very smooth, we can write:
+	$$x=\frac{\pi}{2} - \frac{1}{\pi}\sum^\infty_{k=1} \frac{cos((2k+1)x)}{(2k+1)^2}$$
+\end{example}
+
+
+
+
+
+
+
 \end{document}
 
 

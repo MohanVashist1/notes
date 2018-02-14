@@ -311,7 +311,7 @@ $a$ is the \textbf{greatest lower bound} of $X$ if $a$ is an lower bound of $X$ 
 
 \newpage
 
-\section{Monday, January 8, 2017}
+\section{Monday, January 8, 2018}
 
 \subsection{Sequences - Review}
 
@@ -385,7 +385,7 @@ This section will be just review of MATA37 and will be concerning sequences of t
 
 \newpage
 
-\section{Friday, January 12, 2017}
+\section{Friday, January 12, 2018}
 
 \subsection{Monotone Sequences}
 
@@ -559,7 +559,7 @@ So now we want to show that if a sequence satisfies the Cauchy property, then it
 
 \newpage
 
-\section{Monday, January 15, 2017}
+\section{Monday, January 15, 2018}
 
 \subsection{Cauchy}
 
@@ -653,14 +653,405 @@ $$\int^\infty_1 f(x) dx = \lim_{y\to\infty} \int^y_1 f(x) dx$$ exists
 	$$\sum^\infty_{a=1} \frac{1}{n^a} \text{ converges iff } a > 1$$
 \end{example}
 
+\newpage
+
+\section{Friday, January 19, 2018}
+
+\subsection{Series (continued)}
+
+\subsubsection{Convergence Tests}
+
+\begin{definition}
+	The \textbf{Comparison Test} is: Given a series $\sum^\infty_{k=1} a_k$ converges and $a_k \geq 0$. A series $\sum^\infty_{k=1} b_k$ converges if $|b_k| \leq a_k, \forall k$ 
+\end{definition}
+
+\begin{definition}
+	The \textbf{Ratio Test} is given a series $\sum^\infty_{k=1} a_k$, consider
+	$$\lim_{k\to\infty} |\frac{a_{k+1}}{a_k}| = r$$
+	if $r=1$, the test is inconclusive, if $r > 1$ the series diverges, if $if r < 1 $ the series converges.
+\end{definition}
+
+\begin{example}
+	Consider $\sum^\infty_{k=1} \frac{c^k}{k!}, c\in\mathbb{R}$\\
+	So we will apply to the ratio test to this:
+	\begin{align*}
+		\lim_{k\to\infty} |\frac{(c^{k+1}/(k+1)!)}{(c^k/k!)}| &= \lim_{k\to\infty} |\frac{c^{k+1}k!}{c^k (k+1)!}|\\
+		&= \lim_{k\to\infty} \frac{c}{k+1}\\
+		&=
+	\end{align*}
+	Therefore this series converges
+\end{example}
+
+\begin{note}
+	$$\sum^\infty_{k=1} \frac{c^k}{k!} = e^c$$
+\end{note}
+
+Series that contain both positive and negative terms can behave strangely
+
+\begin{example}
+	$$\sum^\infty_{k=1} \frac{(-1)^n}{n} = log(2)$$
+\end{example}
+
+\begin{definition}
+	$\sum^\infty_{k=1} a_k$ \textbf{converges absolutely} if $\sum^\infty_{k=1} |a_k|$ converges
+\end{definition}
+
+\begin{definition}
+	$\sum^\infty_{k=1} a_k$ \textbf{converges conditionally} if it converges but does not converge absolutely
+\end{definition}
+
+\begin{example}
+	$\sum^\infty_{k=1} \frac{c^k}{k!}$ converges absolutely
+\end{example}
+
+\begin{example}
+	$\sum^\infty_{k=1} \frac{(-1)^k}{k}$ converges conditionally since $\sum^\infty_{k=1} \frac{1}{k}$
+\end{example}
+
+Series that converge absolutely act like finite sums, you can rearrange the order of their terms and get the same sum, but this is not the case for conditional convergent series.
+
+\begin{proposition}
+	If a series converges absolutely, then it converges.
+\end{proposition}
+
+\begin{proof}
+	Use the Cauchy Criterion. Given $\sum^\infty_{k=1} a_k$ converges absolutely, suppose $\epsilon > 0$, we have the following inequality because of the triangle inequality
+	$$|\sum^m_{k=n+1} a_k| \leq |\sum^m_{k=n+1} (|a_k|) |$$
+	now $\sum^\infty_{k=1} |a_k|$ converges, therefore, this satisfies the Cauchy Criterion, and so 
+	$$\exists N | \forall m,n > N, \sum^m_{k=n+1} |a_k| < \epsilon \implies |\sum^m_{k=n+1} a_k|<\epsilon$$
+	Therefore $\sum^\infty_{k=1} a_k$ satisfies Cauchy Criterion and converges
+\end{proof}
+
+\begin{definition}
+	Given $\sum^\infty_{k=1} a_k$ as a series of positive and negative terms, let:
+	
+	$$a_k^+ = \begin{cases}
+		a_k, &\text{ if } a_k \geq 0\\
+		0, &\text{ if } a_k < 0
+	\end{cases}
+$$
+$$a_k^- = \begin{cases}
+		a_k, &\text{ if } a_k \leq 0\\
+		0, &\text{ if } a_k > 0
+	\end{cases}
+$$
+\end{definition}
+
+\begin{note}
+	$a_k = a_k^+ + a_k^-$, $|a_k| = a_k^+ - a_k^-, \forall k$
+\end{note}
+
+\begin{proposition}
+	$\sum^\infty_{k=1} a_k$ converges absolutely iff $\sum^\infty_{k=1} a_k^+$ and $\sum^\infty_{k=1} a_k^-$ both converge
+\end{proposition}
+
+\begin{proof}
+	So if we know that
+	$$\sum^\infty_{k=1} a_k = \sum^\infty_{k=1} a_k^+ + \sum^\infty_{k=1} a_k^-$$
+	$$\sum^\infty_{k=1} |a_k| = \sum^\infty_{k=1} a_k^+ - \sum^\infty_{k=1} a_k^-$$
+	This implies the following 2 equations:
+	$$\sum^\infty_{k=1} |a_k| + \sum^\infty_{k=1} a_k = 2\sum^\infty_{k=1} a_k^+$$
+	$$-\sum^\infty_{k=1} |a_k| + \sum^\infty_{k=1} a_k = 2\sum^\infty_{k=1} a_k^-$$
+	And we know that these statements only hold true of they all converge.
+\end{proof}
+
+
+\begin{proposition}
+	if $\sum^\infty_{k=1} a_k$ converges conditionally then $\sum^\infty_{k=1} a_k^+$, $\sum^\infty_{k=1} a_k^-$ both diverge.
+\end{proposition}
+
+\begin{proof}
+	Suppose only one of $\sum^\infty_{k=1} a_k^+, \sum^\infty_{k=1} a_k^-$ diverges, this implies that $\sum^\infty_{k=1} |a_k|, \sum^\infty_{k=1} a_k$ diverge.
+	
+	So conditional convergence must imply that both $\sum^\infty_{k=1} a_k^+, \sum^\infty_{k=1} a_k^-$ diverge since we need $\sum^\infty_{k=1} |a_k|$ to diverge, but $\sum^\infty_{k=1} a_k$ to converge. We get this from looking at the following equations from the previous proof:
+	$$\sum^\infty_{k=1} a_k = \sum^\infty_{k=1} a_k^+ + \sum^\infty_{k=1} a_k^-$$
+	$$\sum^\infty_{k=1} |a_k| = \sum^\infty_{k=1} a_k^+ - \sum^\infty_{k=1} a_k^-$$
+\end{proof}
+
+\begin{remark}
+	Suppose $a_k \geq 0, \forall k$ and $\sum^\infty_{k=1} a_k$ converges, then since $a_k \geq 0, |a_k| = a_k$ so the series converges absolutely.\\
+	\\
+	Now if we change the signs of the terms arbitrarily, the new series still converges.
+\end{remark}
+
+\subsection{Alternating Series}
+
+\begin{definition}
+	Suppose $a_k \geq a_{k+1} \geq 0, \forall k \geq 1$ then
+	$$\sum^\infty_{k=1} (-1)^{k+1} a_k$$ converges, this is an example of an \textbf{Alternating Series}
+\end{definition}
+
+\begin{example}
+	$\sum^\infty_{k=1} \frac{(-1)^{k+1}}{k}$
+\end{example}
+
+\begin{definition}
+	$$S_n = \sum^\infty_{k=1} (-1)^{k+1} a_k$$
+	Is the \textbf{Partial Sum of an Alternating Series}
+\end{definition}
+
+Partial Sums of alternating series also have the following properties:
+
+\begin{property}
+	$S_2 \leq S_4 \leq ... \leq S_{2k}$
+\end{property}
+
+\begin{proof}
+	We know that $S_{2k+2} = S_{2k} + (a_{2k+1} - a_{2k+2})$ and that $a_{2k+1} \geq a_{2k+2}$, this implies that $a_{2k+1} - a_{2k+2} \geq 0$, therefore $S_{2k+2} \geq S_{2k}$
+\end{proof}
+
+\begin{property}
+	$S_1 \geq S_3 \geq ... \geq S_{2k+1}$
+\end{property}
+
+\begin{proof}
+	We know that $S_{2k+1} = S_{2k-1} + (-a_{2k} + a_{2k+1})$ and that $a_{2k} \geq a_{2k+1}$, this implies that $-a_{2k} + a_{2k+1} \leq 0$, therefore $S_{2k+1} \geq S_{2k-1}$
+\end{proof}
+
+\begin{property}
+	for an even $l$ and an odd $m$, $S_l \leq S_m$
+\end{property}
+
+\begin{proof}
+	if $l=2k, m=2j+1, k,j \in \mathbb{N}$. Pick $i$ such that $i \geq j,k$ so that $2i \geq 2k = l$ and $2i+1 \geq 2j+1 = m$. This implies that $S_{2i} \geq S_{l}, S_{2i+1} \leq S_m$.
+	So now $$S_{2i+1} = S_{2i} + a_{2i+1}$$
+	But since $a_{2i+1} \geq 0$, this implies that $S_{2i+1 \geq S_{2i}}$
+\end{proof}
+
+And now, we'll prove that alternating series where $a_k$ decreases converges:
+
+\begin{proof}
+	Now $S_2, S_4, ... , S_{2k},...$ forms an increasing sequence, bounded above by all $S_{2k+1}$.\\
+	\\
+	Let $a = \underset{k}{sup}(\{ S_{2k} \})$, which implies that $a \leq S_{2k+1}$\\
+	\\
+	Similarly, $S_1, S_3, ... , S_{2k+1}$ forms a decreasing sequence, bounded below by all $S_{2k}$, $a$ is also a lower bound of $\{ S_{2k+1} \}$. Let $b= \underset{k}{inf} (\{ S_{2k+1} \})$
+\end{proof}
+
+\newpage
+
+\section{Monday, January 22, 2018}
+
+\subsection{Alternating continued}
+
+$$\sum^\infty_{k=1} a_k \text{ converges absolutely if } \sum^\infty_{k=1} |a_k| \text{ converges}$$
+
+$$\sum^\infty_{k=1} a_k \text{ converges conditionally if it converges but not absolutely }$$
+
+\begin{example}
+The alternating harmonic series converges, but not absolutely.
+\end{example}
+
+Because of this, we can rearrange the terms in the series to get it to converge to any number we want.
+
+\begin{example}
+	For the alternating harmonic series, we separate all the terms into 2 groups, those that are positive and those that are negative, and we can add them in a way that makes the series converge to, let's say, 2.
+	\\
+	\\
+	For example, we can add up all the positive terms until we get to $\frac{1}{15}$, where adding $\frac{1}{15}$ brings the sum over 2 and not adding $\frac{1}{15}$ keeps the sum below 2, so we set
+	$S_1$ to be all the decreasing positive terms until $\frac{1}{15}$, and then we will add increasing negative terms until the sum is below 2 to get $T_1$, and we add decreasing terms until the sum is above 2 and so on and so forth. This makes $S_{k+1} < S_k, \forall k$, $T_{k+1} > T_k, \forall k$.
+	
+\end{example}
+
+\begin{theorem}
+	If $sum^\infty_{k=1} a_k$ converges conditionally, then for any $b\in\mathbb{R}$, there exists an rearrangement for the series where its sum is $b$.
+\end{theorem}
+
+\underline{Recall:} Series of positive and negative terms of $\sum a_k$
+
+$$a_k^+ = \begin{cases}
+		a_k, &\text{ if } a_k \geq 0\\
+		0, &\text{ if } a_k < 0
+	\end{cases}
+$$
+$$a_k^- = \begin{cases}
+		a_k, &\text{ if } a_k \leq 0\\
+		0, &\text{ if } a_k > 0
+	\end{cases}
+$$
+
+and $a_k = a_k^+ + a_k^-$, and if $\sum a_k$ is convergent, the both $\sum a_k^+$ and $\sum a_k^-$ diverge. So either the positive sum approaches infinity or the negative sum approaches negative infinity as more of their terms are added together, and at the same time, $a_k$ approaches 0.
+
+\begin{proof}
+	Choose an $N$ such that 
+	$$\sum^{N_1}_{k=1} a^+_k > b > \sum^{N_1 - 1}_{k=1} a^+_k$$
+	Set $S_1 = \sum^{N_1}_{k=1} a^+_k, S_1 - b < a^+_{N_1}$\\
+	Choose $M_1$ so that
+	
+	$$T_1 = S_1 + \sum^{M_1}_{k=1} a^-_k < b \leq S_1 + \sum^{M_1 - 1}_{k=1} a^-_k$$
+	And continue this pattern to get the rearranged series:
+	
+	$$a^+_1,...,a^+_{N_1}, a^-_1, ... a^-_{M_1}, a^+_{N_1 + 1}, ... a^+_{N_2},...$$
+	With $|S_k - b| < a^+_{N_k}, |T_k - b| < -a^-_{M_k}$\\
+	$$a^+_{N_k}, a^-_{M_k} \text{ as } k \to \infty$$
+	So $S_k \to b$ from above and $T_k \to b$ from below.
+\end{proof}
+
+\begin{theorem}
+	Suppose that 
+	$\sum^\infty_{k=1} a_k$ is absolutely convergent and $b = \sum^\infty_{k=1} a_k$ then any rearrangement of this series will also have the sum of $b$.
+\end{theorem}
 
 
 
 
 
+\newpage
 
+\section{Friday, February 2, 2018}
 
+\subsection{Pointwise and Uniform Convergence}
 
+Consider a sequence of functions $f_1, ... ,f_k, ...$ defined on $S \subset \mathbb{R}$\\
+
+\begin{definition}
+$\{ f_k \}$ converges \textbf{pointwise} to a function $f$ on $S$ if for any $x_0 \in S, \{ f_k (x_0) \} \to f(x_0)$
+
+\end{definition}
+
+\begin{example}
+	$f_n (x) = \frac{sin(nx)}{x}, x\in\mathbb{R}$\\
+	
+	We know that $\lim_{n\to\infty} \frac{sin(n x_0)}{n} = 0, x_0 \in\mathbb{R}$ as
+	$\frac{|sin(n x_0)|}{n} \leq \frac{1}{n} \to 0$ as $n$ approaches infinity.\\
+	\\
+	if $f(x) = 0$ for all $x\in\mathbb{R}$, then $f_n$ converges pointwise to $f$.
+\end{example}
+
+\begin{example}
+	$f_n (x) = \frac{nx}{1 + n^2 x^2}, x \geq 0$, $f(x) = 0$, for $x \geq 0$
+	\\
+	$f_n$ converges pointwise to $f$.\\
+	\\
+	This is because $f_n (x) < \frac{nx}{n^2 x^2} = \frac{1}{nx}, x > 0$ so for $x_0 > 0, 0 < f_n (x_0) < \frac{1}{n x_0} \to 0$, as $n$ approaches infinity.\\
+	\\
+	For $x_0 = 0, f_n (x_0) \to f(x_0) = 0$
+\end{example}
+
+\begin{note}
+	For $x_0 = \frac{1}{n}, f_n (\frac{1}{n}) = \frac{1}{2}$
+\end{note}
+
+\begin{definition}
+	A sequence of functions $\{ f_n \}$ converges to a function $f$ \textbf{uniformly} on $S$ if given $\epsilon > 0$, there exists $N$ such that for $n \geq N$
+	$$|f_n (x_0) = f(x_0)| < \epsilon, \forall x_0 \in S$$
+\end{definition}
+
+\begin{example}
+	Consider $f_n (x) = 1+ x + ... + x^n$,$ f(x)=\frac{1}{1-x}$ if $|x| < 1$.\\
+	\\
+	We know that $f_n (x_0) \to f(x_0)$ for any $x_0 \in (-1, 1)$
+\end{example}
+
+\begin{note}
+	$f_n \to f$ uniformly, means that sequences $f_n (x_0) \to f(x_0)$ "at the same rate", for all $x_0$
+\end{note}
+
+\begin{example}
+	$f_n (x) =  \frac{nx}{1 + n^2 x^2} < \frac{1}{nx}, x \geq 0$, take $\epsilon = \frac{1}{4}$
+	(we're looking for how big $n$ has to be for the function $f_n$ to be less than $\frac{1}{4}$)\\
+	\\
+	if $x_0 = \frac{1}{10}$, then $\frac{1}{n 10^{-1}} = \frac{10}{n} < \frac{1}{4}$, for $n > 40$\\
+	\\
+	if $x_0 = \frac{1}{100}$, then $\frac{1}{n 10^{-2}} = \frac{100}{n} < \frac{1}{4}$, for $n > 400$\\
+	\\
+	if $x_0 = 10^{-6}$, then $\frac{1}{n 10^{-6}} = \frac{10^6}{n} < \frac{1}{4}$, for $n > 4 \times 10^6$\\
+	The differences in the rate of convergence is exponential the bigger the $n$. So $f_n (\frac{1}{10})$, $f_n (\frac{1}{100})$, $f_n (10^{-6})$, do not converge at the same rate.
+\end{example}
+
+\begin{example}
+	$S = [1,0]$, $f_n (x) = x^n$,
+	$$f(x) = \begin{cases}
+		0, &0 \leq x < 1\\
+		1, &x = 1
+	\end{cases}
+$$
+if we take different values of $n$ for $f_n$, they seem to drop down steeper as they go close to $1$, but also rise up steeper as they approach closer to $1$, there is a bit of a dip.\\
+\\
+$\{ x_0^n \} \to 0, 0 \leq x_0 < 1$. $f_n$ converges pointwise to $f$.\\
+Note that $f_n$ is continuous for all of $n$, but $f$ is not continuous.
+\end{example}
+
+\begin{example}
+	verify that $f_n \to f$ uniformly in example 1.\\
+	$f_n (x) = \frac{sin(nx)}{n}, f(x) = 0, \forall x \in \mathbb{R}$\\
+	\\
+	given $\epsilon > 0$,
+	$$|\frac{sin(nx)}{n}| < \frac{1}{n}$$
+	So choose $N$, with $\frac{1}{N} < \epsilon$, this implies that for all $n \geq N, |\frac{sin(nx)}{n}| < \frac{1}{n} < \epsilon, \forall x \in \mathbb{R}$
+\end{example}
+
+\begin{theorem}
+	Suppose $f_n \to f$ uniformly on $S \subset \mathbb{R}$, If $f_n$ is continuous for all $n$, then $f$ is continuous
+\end{theorem}
+
+\begin{proof}
+	Need to show $f$ is continuous at any $x_0 \in S$, take $\epsilon > 0$, we need to find $\delta > 0$ so that for $|x - x_0| < \delta$, that $|f(x) - f(x_0)| < \epsilon$\\
+	\\
+	Since $f_n \to f$ uniformly, there exists $N$ so that for $n \geq N$, $|f_n (x) - f(x)| < \frac{\epsilon}{3}$ for all $x\in S$\\
+	\\
+	$f_N$ is continuous at $x_0$, therefore there exists a $\delta > 0$ such that for $|x-x_0| < \delta$ then $|f_N (x) - f_N (x_0)| < \frac{\epsilon}{3}$\\
+	\\
+	now
+	\begin{align*}
+		|f(x) - f(x_0)| & \leq |f(x) - f_N (x)| + |f_N (x) - f_N (x_0)| + |f_N (x_0) - f(x_0)|\\
+		&< \frac{\epsilon}{3} + \frac{\epsilon}{3} + \frac{\epsilon}{3} = \epsilon
+	\end{align*}
+	This is because of the uniform convergence for $|f(x) - f_N (x)|, |f_N (x_0) - f(x_0)|$ and continuity of $F_N$ for $|f_N (x) - f_N (x_0)|$\\
+	\\
+	this implies that for $|x - x_0| < \delta$, that $|f(x) - f(x_0)| < \epsilon$.
+\end{proof}
+
+\begin{example}
+	$S = [1,0]$, $f_n (x) = x^n$,
+	$$f(x) = \begin{cases}
+		0, &0 \leq x < 1\\
+		1, &x = 1
+	\end{cases}
+$$
+$f_n$ does not converge uniformly in this example since $f$ is not continuous at 1
+\end{example}
+
+\begin{note}
+	When he have shown that the partial sums of a power series converge uniformly, then this theorem will show that the power series is continuous
+\end{note}
+
+\subsection{Integrals}
+
+Suppose $f_n \to f$ uniformly on an interval $[a,b]\subset\mathbb{R}$ and suppose $f_n$ is integrable for all $n$, we want to show that $f$ is integrable
+
+$$\int^b_a f(x) dx = \lim_{n\to\infty} \int^b_a f_n (x) dx$$
+we're gonna assume $f_n$ are continuous on $[a,b]$ for all $n$ which implies that $f_n$ is integrable on $[a,b]$, but then $f$ continuous on $[a,b]$, this implies that $f$ is integrable.
+\\
+\\
+Recall: if $f,g$ on $[a,b]$, they are integrable if $f \leq g$\\
+\\
+This implies that
+$$\int^b_a f(x) dx \leq \int^b_a g(x) dx$$
+which implies that for any $f$ integrable on $[a,b]$
+
+$$|\int^b_a f(x) dx| \leq \int^b_a |f(x)| dx$$
+By triangle inequality.
+
+\begin{theorem}
+	$f_n \to f$ uniformly on $[a,b]$, $f_n$ is continuous for all $n$, this implies that
+	$$\int^b_a f(x) dx = \lim_{n\to\infty} \int^b_a f_n (x) dx$$
+\end{theorem}
+
+\begin{proof}
+	Given $\epsilon > 0$, since $f_n \to f$ uniformly, there exists $N$ such that for $n \geq N$\\
+	\\
+	$$|f_n (x) - f(x)| < \frac{\epsilon}{b-a}$$
+	for all $x\in [a,b]$, then
+	\begin{align*}
+		|\int^b_a f(x) dx - \int^b_a f_n(x) dx| &= |\int^b_a (f(x)-f_n (x)) dx|\\
+		 &\leq \int^b_a f_n (x) - f(x)|dx\\
+		 &\leq \int^b_a \frac{\epsilon}{b-a} dx = \epsilon
+	\end{align*}
+	And this implies that
+	$$\int^b_a f(x) dx = \lim_{n\to\infty} \int^b_a f_n (x) dx$$
+
+\end{proof}
 
 
 

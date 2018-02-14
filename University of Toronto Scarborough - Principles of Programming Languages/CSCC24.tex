@@ -311,6 +311,178 @@ The basic explanation for this is that $d$ cannot vary behaviour by types. Haske
 \\
 Programming is a dialectic class struggle between the user and the implementer. Or between the maintainer and the original author.
 
+\section{Thursday, February 1, 2017}
+
+\subsection{Scheme (cont'd)}
+
+\subsubsection{foldl}
+
+Consider the problem of summing an entire list and multiplying an entire list. Summing requires us to add up all the elements of the list plus 0 for the first item. Multiplying requires us to multiply up all the elements of the list times 1 for the first item. This is the motivation.\\
+\\
+So we define foldl as
+
+\begin{lstlisting}
+    (define (foldl binop a lst)
+	(match lst
+	[?() a]
+	[( cons hd tl) (foldl binop (binop a hd) tl )]))
+\end{lstlisting}
+
+So Intuitively, 
+
+\begin{lstlisting}
+	(foldl binop a (list x y z))
+\end{lstlisting}
+
+Looks like
+
+$$(((a + x) + y) + z)$$
+
+where $+$ is where binop is being performed
+
+\subsubsection{foldr}
+
+Basically in the opposite direction of foldl, so if
+
+\begin{lstlisting}
+	(foldl binop a (list x y z))
+\end{lstlisting}
+
+Looks like
+
+$$(z + (y + (x+a)))$$
+
+where $+$ is where binop is being performed, then
+
+\begin{lstlisting}
+	(foldr binop a (list x y z))
+\end{lstlisting}
+
+Looks like
+
+$$(((a + x) + y) + z)$$
+
+where $+$ is where binop is being performed, then
+
+\subsubsection{Procedure-Call Stack}
+
+Consider the following:
+
+\begin{lstlisting}
+	(define (f n) (... (f (- n 1)) ...)
+	(displayln (+ (f 4) (f 1) (f 6)))
+\end{lstlisting}
+
+The Control-flow jumps to into $f$ when it's called and later knows where to return to after the recursive calls. This is done because a stack is used to remember where to return to in recursion, called a \textbf{Call Stack}. The Benefit of this is that it supports recursion, but it comes at a price of occupying $\theta (1)$ space while the stack is being used.
+
+\subsubsection{Non-Tail Calls and Tail Calls}
+
+\textbf{Non-Tail Calls}, are if you still have to do your own processing or computation after getting the results from another function, so basically the results are not returned right away.
+\\
+\\
+For example, for the following function:
+
+\begin{lstlisting}
+	(define (my -sum lst)
+		(match lst [?() 0]
+				[( cons hd tl) (+ hd (my -sum tl ))]))
+\end{lstlisting}
+
+Takes $\theta (n)$ space if the list length is $n$.\\
+\\
+A Tail call is the exact opposite, there is no computation after getting the results back from a called function and the function returns the value right away. The complexity of this is $O(1)$ under Tail-Calling optimization in Scheme.\\
+\\
+Tail-Calling optimization isn't in every language, Java and Python don't have this.
+
+\subsection{Haskell}
+
+\subsubsection{Expressions and Types}
+
+\paragraph{Characters} chars are denoted with single quotes
+
+\paragraph{Tuples} Not the same as cons
+
+\paragraph{()} is a special time, called the unit type, used as a return value for functions that don't return anything
+
+\paragraph{Lists} Lists are implemented as such:
+
+\begin{lstlisting}
+	3 : ( 1 : (4 : [])) = [3,1,4]
+\end{lstlisting}
+
+So a list of length one is an item with an empty list and the colon inbetween separates the items
+\begin{lstlisting}
+	[1] = 1 : []
+\end{lstlisting}
+
+Note that the following list has a type $[[integer]]$
+
+\begin{lstlisting}
+	[[3,1,4], [10,20], []]
+\end{lstlisting}
+
+So as for now, arbitrary list nesting is not supported, so basically
+
+\begin{lstlisting}
+	[1, [3]]
+\end{lstlisting}
+
+is not supported (yet).
+
+Note that because of static typing, every item must be the same type, we can't mix integers with floats in the same list.
+
+\paragraph{Strings} are a list of chars. The downside of this is that it uses a huge amount of memory, as it's stored as a linked list, and each node and pointer takes up a linear amount of space.
+
+\paragraph{Keyword: Just} If you type
+
+\begin{lstlisting}
+	Just 'C'
+\end{lstlisting}
+
+The variable is either Nothing or Char
+
+\paragraph{Nothing} Is the empty type, can be any type
+
+\paragraph{"Left 'C'"} Can either be of type Char Bool, Char Int,  ... all we know that the left variable is a character.
+
+\paragraph{"Right False"} Can either be of type Char bool, Int bool, ... all we know that the right variable is a boolean
+
+\paragraph{anonymous functions} Ex.
+
+\begin{lstlisting}
+	 \x -> x >= 'C'
+\end{lstlisting}
+
+Has the type Char -$>$ Bool with char as the domain and bool as the codomain
+
+\subsubsection{Definitions}
+
+We can define expressions to variables and vice versa, for example, in the following, we are defining "ten" to be "$1+2+3+4$" and binding "$1+2+3+4$" to "ten":
+\begin{lstlisting}
+	ten = 1 + 2 + 3 + 4
+\end{lstlisting}
+
+There is also pattern binding, with tuples, but that will be shown later\\
+\\
+Functions can also be defined:
+
+\begin{lstlisting}
+	square x = x * x
+	nand a b =  not (a && b)
+\end{lstlisting}
+
+We can also define type signatures for the definitions as such
+
+\begin{lstlisting}
+	ten, four :: Integer
+\end{lstlisting}
+
+But Haskell is written such that the type signature can be separated from the definition, so you don't have to put them in the same few lines, they just have to be in the same file.
+
+\subsubsection{Function Applications}
+
+If you insert one parameter to a function that takes 2 parameters, that function will return a function of 1 parameter. This is how Haskell does multiple parameters
+
 \end{document}
 
 

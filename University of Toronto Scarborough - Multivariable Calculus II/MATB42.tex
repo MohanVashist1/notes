@@ -7,6 +7,7 @@
 \usepackage{amsthm}
 
 \usepackage{graphicx}
+
 \graphicspath{ {imgs/} }
 
 \usepackage{dsfont}
@@ -111,7 +112,7 @@ We know that $sin(x)$ and $cos(x)$ are the simplest periodic functions and repea
 \\
 So to approximate $y=f(x)$ by $F_N (x)$ for some $N$, we use the following equation:
 
-$$F_N (x) = \frac{a_0}{2}+ \sum^N_{k-1} a_k cos(kx) + b_k sin(kx)$$
+$$F_N (x) = \frac{a_0}{2}+ \sum^N_{k=1} a_k cos(kx) + b_k sin(kx)$$
 
 Now we need to choose the $a_k, b_k$. We can define it in the following way:
 
@@ -469,16 +470,17 @@ $
 	\\
 	so (1.) converges to
 	$$\sum^\infty_{k=1} \frac{(-1)}{k} sin(kx) = \begin{cases}
-		-1, x\in (-\pi, \pi)\\
-		0, x = \pm \pi
+		-\frac{x}{2}, &x\in (-\pi, \pi)\\
+		0, &x = \pm \pi
 	\end{cases}
 $$
 
 And (2.) converges to
 
 $$\sum^\infty_{k=1} \frac{sin((2k+1)x)}{2k+1} = \begin{cases}
-		-1, -\pi < x < 0\\
-		0, x = -\pi, 0,\pi
+		-1, &-\pi < x < 0\\
+		1, &0 < x < \pi\\
+		0, &x = -\pi, 0,\pi
 	\end{cases}
 $$
 
@@ -508,6 +510,165 @@ However, the domain of the function also play a role in the series.
 	on $(0,1), |x|=x$, and since $f$ is piece-wise very smooth, we can write:
 	$$x=\frac{\pi}{2} - \frac{1}{\pi}\sum^\infty_{k=1} \frac{cos((2k+1)x)}{(2k+1)^2}$$
 \end{example}
+
+\section{Friday, January 19, 2017}
+
+\begin{definition}
+	The \textbf{orthonormal bases for $\mathbb{R}^n$}
+	$$\{ e_1, ..., e_n \}$$
+	are all orthogonal to each other and are all unit vectors.\\
+	\\
+	Each $v\in \mathbb{R}^n$ has a unique representation of
+	$v = \lambda_1 e_1 + ... + \lambda_n e_n$ where $\lambda_k = v \cdot e_k$
+\end{definition}
+
+Given continuous functions $f,g$ that map from $[-\pi, \pi] \mapsto \mathbb{R}$ we can define an inner product by
+$$<f,g> = frac{1}{\pi} \int^{\pi}_{-\pi} f(x) g(x) dx$$ defined on all continues real-valued functions defined on the interval $[-\pi, \pi] $
+
+\begin{example}
+	The set of functions $\{ cos(kx), sin(nx) \}_{n,k\in\mathbb{Z}}$ act like an orthonormal basis. since
+	
+	$$<cos(mx), cos(nx)> = \begin{cases}1, &\text{ if } m=n\\ 0, &\text{ otherwise} \end{cases}$$
+	$$<sin(mx), sin(nx)> = \begin{cases}1, &\text{ if } m=n\\ 0, &\text{ otherwise} \end{cases}$$
+	$$<sin(mx), cos(nx)> = 0$$
+	
+	for positive integers $m,n$
+\end{example}
+
+We can regard the Fourier Coefficients as the components of $f$ under this basis. This explains why you dont need to recalculate the coefficients for each $N$ for $F_N (x)$
+
+\begin{corollary}
+	If a function $f$ can be represented as a trigonometric polynomial, then that trigonometric polynomial is a Fourier Expansion of $f$, if the Fourier Series converges.
+\end{corollary}
+
+\begin{example}
+	What is the fourier series of $f(x)=cos^2(x) - sin^2(x)$\\
+	\\
+	We have trigonometric identities to solve this:
+	$$F(x)=cos^2(x) - sin^2(x)=cos(2x)$$
+\end{example}
+
+\begin{example}
+	\begin{align*}
+	f(x) &=cos^4(x)\\
+	&=(cos^2(x))^2\\
+	&=(cos^2(x))^2\\
+	&= \frac{1}{4}(1+2cos(2x) + cos^2 (2x))\\
+	&= \frac{1}{4}(1 + 2cos(2x) + \frac{1}{2} + \frac{1}{2}cos(4x))
+	&= \frac{3}{8} + \frac{cos(2x)}{2} + \frac{1}{8}cos(4x) = F(x)
+	\end{align*}
+\end{example}
+
+\begin{definition}
+	The \textbf{Total Square Error} of $g(x)$ relative to $f(x)$ is:
+	$$E = \int^\pi_{-\pi} [f(x) - g(x)]^2 dx$$
+\end{definition}
+
+\begin{note}
+	if $f=g, E=0$
+\end{note}
+
+We want a constant function $y=g_0$ so the square error is as small as possible
+
+\begin{align*}
+	E(g_0) &= \int^\pi_{-\pi} [f(x) - g_0]^2 dx\\
+	&= \int^\pi_{-\pi} f(x)^2 dx - 2 g_0 \int^\pi_{-\pi} f(x) dx + g_0^2 (2\pi)
+\end{align*}
+
+And if we let $A,B$ be constants such that $$A = \int^\pi_{-\pi} f(x)^2 dx, B = \int^\pi_{-\pi} f(x) dx$$
+
+Then
+$$E(g_0) = A - 2 B g_0 + 2 \pi g_0^2$$
+
+With implies that $E(g_0)$ is a quad function in $g$ having a minimum value when its derivative is equal to 0.
+
+$$-2B + 4\pi g_0 = 0$$
+
+$$g_0 = \frac{B}{2\pi} = \frac{1}{2\pi} \int^\pi_{-\pi} f(x) dx = \frac{1}{2} a_0$$
+
+Therefore $\frac{1}{2} a_0$ is the best constant approximation in the sense of the square error. We can show that the best approximation by a trigonometric polynomial is the Fourier Polynomial.
+
+\begin{definition}
+	If $f$ is piece-wise continuous on $[-\pi, \pi]$ we see that
+	
+	$$\frac{a_0}{2}+ \sum^N_{k=1} a_k^2 + b_k^2 \leq \frac{1}{\pi} \int_{-\pi}^\pi [f(x)]^2 dx = <f,f>$$
+	This is called \textbf{Bessel's Inequality} and it shows that $\sum^\infty_{k=1} a_k^2 + b_k^2$ converges
+\end{definition}
+
+\begin{theorem}
+(Uniqueness Theorem) Let $f(x), g(x)$ be piecewise continuous functions on the interval $[-\pi,\pi]$ and have all the same same Fourier coefficients. Then $f(x)=g(x)$ except, perhaps, at discontinuities.
+\end{theorem}
+
+\subsection{Vector-Valued Functions}
+
+We will now spend time with vector-valued functions ($f:\mathbb{R}^n \mapsto A$)
+
+\begin{definition}
+	A \textbf{curve (or path)} in $\mathbb{R}^n$ is a function
+	$$\gamma : [a,b] \subset \mathbb{R} \mapsto \mathbb{R}^n$$
+	We usually call the image of $\gamma$ the curve and the function $\gamma$ as the parameterization of the curve
+\end{definition}
+
+\begin{note}
+	This curve has a direction given by $\gamma$ and runs from $\gamma (a)$ to $\gamma (b)$, which are the endpoints. $\gamma (a)$ being the beginning and $\gamma (b)$ being the end
+\end{note}
+
+Think of $t, t\in [a,b]$ as a variable and $\gamma (t)$ as "tracing out" the curve in $\mathbb{R}$ as $t$ goes from $a$ to $b$.
+
+This interval be adapted to any $(a,b)$ and even to $\mathbb{R}$ itself.
+
+$$\gamma (t) = (\gamma_1 (t), \gamma_2 (t), ..., \gamma_n (t)), t\in[a,b]$$
+
+\begin{example}
+	where $t \in \mathbb{R}$
+	\begin{align*}
+		\gamma (t) &= (x_0, y_0, z_0) + t(v_1,v_2,v_3)\\
+		&= x + tv
+	\end{align*}
+	This is a parametric representation of a line. Where $x$ is a point and $v$ is a direction vector
+
+\end{example}
+
+\begin{definition}
+	$\gamma$ is \textbf{continuous} at $c\in (a,b)$ if $\lim_{t\to c} \gamma (t) = \gamma (c)$ iff the components $\gamma_i (t)$ for $i=1,...,n$ are continuous at $c$
+\end{definition}
+
+\begin{definition}
+	If $\gamma$ is continuous at all points, $\gamma$ is called a \textbf{Continuous Path}
+\end{definition}
+
+\begin{example}
+	Consider a circle of radius $3$ in $\mathbb{R}^2$ centred around the origin. A path of this circle is 
+	$$\gamma (t) = (3cost, 3sint), t \in [0,2\pi]$$
+	We say this curve is oriented in the counter clockwise direction
+\end{example}
+
+\begin{example}
+	The curve for $y=x^3 +1$ is
+	$$\gamma (t) = (t, t^3 +1), t\in\mathbb{R}$$
+\end{example}
+
+\begin{example}
+	In $\mathbb{R}^3, \gamma (t) = (3cost, 3sint, t) , t \in [0,2\pi]$.\\
+	\\
+	Since $x^2 + y^2 = 9$, this curve must live in the cylinder $x^2 + y^2 = 9$ and since $z=t$, the curve spirals upwards, this is called a helix
+\end{example}
+
+\begin{example}
+	$\gamma (t)= (t, t^2, t^3), t\in [-2,2]$. This is a twisted cubic.
+\end{example}
+
+\begin{example}
+	Find the parameterization of the curve $C$ of the intersection of the cylinder $x^2 + y^2 = 1$ and the plane $y+z = 2$. The projection into the $x-y$ plane is the circle $x^2 + y^2 = 1, z=0$, so
+	
+	$$x=cost, y=sint$$
+	
+	From the equation of the plane
+	$$z = 2-y = 2-sint$$
+	We now parameterize the curve $C$ by
+	$$\gamma (t) = (cost, sint, 2-sint), t\in [0,2\pi]$$
+\end{example}
+
 
 
 

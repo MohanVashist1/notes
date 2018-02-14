@@ -1,15 +1,24 @@
 \select@language {english}
-\contentsline {section}{\numberline {1}Friday, January 5, 2018}{2}{section.1}
-\contentsline {subsection}{\numberline {1.1}Countability}{2}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Real Numbers}{5}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}Algebraic Numbers}{5}{subsection.1.3}
-\contentsline {subsection}{\numberline {1.4}Bounds}{5}{subsection.1.4}
-\contentsline {section}{\numberline {2}Monday, January 8, 2017}{8}{section.2}
-\contentsline {subsection}{\numberline {2.1}Sequences - Review}{8}{subsection.2.1}
-\contentsline {section}{\numberline {3}Friday, January 12, 2017}{10}{section.3}
-\contentsline {subsection}{\numberline {3.1}Monotone Sequences}{10}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Subsequences}{11}{subsection.3.2}
-\contentsline {section}{\numberline {4}Monday, January 15, 2017}{15}{section.4}
-\contentsline {subsection}{\numberline {4.1}Cauchy}{15}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Series}{15}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Convergence Tests}{17}{subsubsection.4.2.1}
+\contentsline {section}{\numberline {1}Friday, January 5, 2018}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Countability}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Real Numbers}{6}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Algebraic Numbers}{6}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Bounds}{6}{subsection.1.4}
+\contentsline {section}{\numberline {2}Monday, January 8, 2018}{9}{section.2}
+\contentsline {subsection}{\numberline {2.1}Sequences - Review}{9}{subsection.2.1}
+\contentsline {section}{\numberline {3}Friday, January 12, 2018}{11}{section.3}
+\contentsline {subsection}{\numberline {3.1}Monotone Sequences}{11}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Subsequences}{12}{subsection.3.2}
+\contentsline {section}{\numberline {4}Monday, January 15, 2018}{16}{section.4}
+\contentsline {subsection}{\numberline {4.1}Cauchy}{16}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Series}{16}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Convergence Tests}{18}{subsubsection.4.2.1}
+\contentsline {section}{\numberline {5}Friday, January 19, 2018}{19}{section.5}
+\contentsline {subsection}{\numberline {5.1}Series (continued)}{19}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Convergence Tests}{19}{subsubsection.5.1.1}
+\contentsline {subsection}{\numberline {5.2}Alternating Series}{22}{subsection.5.2}
+\contentsline {section}{\numberline {6}Monday, January 22, 2018}{23}{section.6}
+\contentsline {subsection}{\numberline {6.1}Alternating continued}{23}{subsection.6.1}
+\contentsline {section}{\numberline {7}Friday, February 2, 2018}{25}{section.7}
+\contentsline {subsection}{\numberline {7.1}Pointwise and Uniform Convergence}{25}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Integrals}{27}{subsection.7.2}

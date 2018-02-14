@@ -1,10 +1,29 @@
 \select@language {english}
-\contentsline {section}{\numberline {1}Thursday, January 11, 2017}{2}{section.1}
-\contentsline {subsection}{\numberline {1.1}The Root Cause of this Course}{2}{subsection.1.1}
-\contentsline {subsubsection}{\numberline {1.1.1}Higher-order Functions on Aggregates}{2}{subsubsection.1.1.1}
-\contentsline {subsubsection}{\numberline {1.1.2}Combining Forms}{3}{subsubsection.1.1.2}
-\contentsline {subsubsection}{\numberline {1.1.3}Example Topic: Evaluation Order}{4}{subsubsection.1.1.3}
-\contentsline {subsubsection}{\numberline {1.1.4}Example Topic: Scheme Macros}{4}{subsubsection.1.1.4}
-\contentsline {subsubsection}{\numberline {1.1.5}Dynamic and Static Typing}{4}{subsubsection.1.1.5}
-\contentsline {subsubsection}{\numberline {1.1.6}Parametric Polymorphism}{5}{subsubsection.1.1.6}
-\contentsline {subsubsection}{\numberline {1.1.7}What is "Powerful"? -- The Tradeoff}{6}{subsubsection.1.1.7}
+\contentsline {section}{\numberline {1}Thursday, January 11, 2017}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}The Root Cause of this Course}{3}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Higher-order Functions on Aggregates}{3}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}Combining Forms}{4}{subsubsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.3}Example Topic: Evaluation Order}{5}{subsubsection.1.1.3}
+\contentsline {subsubsection}{\numberline {1.1.4}Example Topic: Scheme Macros}{5}{subsubsection.1.1.4}
+\contentsline {subsubsection}{\numberline {1.1.5}Dynamic and Static Typing}{5}{subsubsection.1.1.5}
+\contentsline {subsubsection}{\numberline {1.1.6}Parametric Polymorphism}{6}{subsubsection.1.1.6}
+\contentsline {subsubsection}{\numberline {1.1.7}What is "Powerful"? -- The Tradeoff}{7}{subsubsection.1.1.7}
+\contentsline {section}{\numberline {2}Thursday, February 1, 2017}{7}{section.2}
+\contentsline {subsection}{\numberline {2.1}Scheme (cont'd)}{7}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}foldl}{7}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}foldr}{7}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Procedure-Call Stack}{8}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Non-Tail Calls and Tail Calls}{8}{subsubsection.2.1.4}
+\contentsline {subsection}{\numberline {2.2}Haskell}{9}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Expressions and Types}{9}{subsubsection.2.2.1}
+\contentsline {paragraph}{Characters}{9}{section*.2}
+\contentsline {paragraph}{Tuples}{9}{section*.3}
+\contentsline {paragraph}{()}{9}{section*.4}
+\contentsline {paragraph}{Lists}{9}{section*.5}
+\contentsline {paragraph}{Strings}{9}{section*.6}
+\contentsline {paragraph}{Keyword: Just}{10}{section*.7}
+\contentsline {paragraph}{Nothing}{10}{section*.8}
+\contentsline {paragraph}{"Left 'C'"}{10}{section*.9}
+\contentsline {paragraph}{"Right False"}{10}{section*.10}
+\contentsline {paragraph}{anonymous functions}{10}{section*.11}
+\contentsline {subsubsection}{\numberline {2.2.2}Definitions}{10}{subsubsection.2.2.2}

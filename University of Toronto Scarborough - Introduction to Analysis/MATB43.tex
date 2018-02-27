@@ -842,6 +842,8 @@ $$\sum^\infty_{k=1} a_k \text{ converges conditionally if it converges but not a
 The alternating harmonic series converges, but not absolutely.
 \end{example}
 
+\subsection{Rearrangement}
+
 Because of this, we can rearrange the terms in the series to get it to converge to any number we want.
 
 \begin{example}
@@ -892,7 +894,44 @@ and $a_k = a_k^+ + a_k^-$, and if $\sum a_k$ is convergent, the both $\sum a_k^+
 	$\sum^\infty_{k=1} a_k$ is absolutely convergent and $b = \sum^\infty_{k=1} a_k$ then any rearrangement of this series will also have the sum of $b$.
 \end{theorem}
 
+\newpage
 
+\section{Monday, January 29, 2018}
+
+\subsection{Rearrangement (continued)}
+
+\begin{theorem}
+	Suppose $\sum^\infty_{k=1} a_k$ is absolutely convergent, let $\sum^\infty_{k=1} b_k$ be a rearrangement, then it has the same sum as the original series
+\end{theorem}
+
+\begin{proof}
+	Let $a = \sum^\infty_{k=1} a_k$\\
+	Pick $\epsilon > 0$\\
+	Since $\sum^\infty_{k=1} |a_k|$ converges, then there exists an $M$ such that $\sum^\infty_{k=M+1} |a_k| = \sum^\infty_{k=1} |a_k| - \sum^M_{k=1} |a_k| < \frac{\epsilon}{2}$
+	Now let
+	$$\{ a_1, a_2, ... a_M \} \subset \{ b_1, b_2, ... b_N \} \text{ for some } N \geq M $$
+	Be true for some sequence $\{b_k \}$. This implies that
+	$$(\{ b_1, b_2, ... b_N \} \setminus \{ a_1, a_2, ... a_M \})  \subset \{ a_{M+1}, a_{M+2}, .... \}$$
+	Let us set $s_M = \sum^M_{k=1} a_k, t_N =  \sum^N_{k=1} b_k$
+	
+	$$|t_N - s_M| \leq  \sum^M_{k=M+1} a_k < \frac{\epsilon}{2}$$
+	Now
+	\begin{align*}
+		|a - t_N| &\leq |s_N - a| + |s_M - t_N|\\
+		&\leq  \frac{\epsilon}{2} +  \frac{\epsilon}{2}\\
+		&= \epsilon
+	\end{align*}
+	Therefore $\sum^\infty_{k=1} b_k = a = \sum^\infty_{k=1} a_k$
+\end{proof}
+
+\begin{theorem}
+	$e$ is irrational
+\end{theorem}
+
+\begin{proof}
+	We know that $e = \sum^\infty_{k=0} \frac{1}{k!}$. Suppose that e is rational, then $e = \frac{a}{b}, a,b\in\mathbb{Z}, b \neq 0$. Then.
+	$$
+\end{proof}
 
 
 

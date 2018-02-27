@@ -155,7 +155,7 @@ So why do we add the $\frac{a_0}{2}$? It is the average value of $f$ over $[-\pi
 
 \newpage
 
-\section{Monday, January 8, 2017}
+\section{Monday, January 8, 2018}
 
 continuing from the last lecture...
 
@@ -403,7 +403,7 @@ To get a Fourier cosine series or a Fourier sine series, we need
 
 \newpage
 
-\section{Monday, January 15, 2017}
+\section{Monday, January 15, 2018}
 
 \begin{example}
 	We want to express $f(x)=x, 0\leq x < \pi$ as both a cosine series and a sine series.\\
@@ -511,7 +511,7 @@ However, the domain of the function also play a role in the series.
 	$$x=\frac{\pi}{2} - \frac{1}{\pi}\sum^\infty_{k=1} \frac{cos((2k+1)x)}{(2k+1)^2}$$
 \end{example}
 
-\section{Friday, January 19, 2017}
+\section{Friday, January 19, 2018}
 
 \begin{definition}
 	The \textbf{orthonormal bases for $\mathbb{R}^n$}
@@ -669,11 +669,95 @@ $$\gamma (t) = (\gamma_1 (t), \gamma_2 (t), ..., \gamma_n (t)), t\in[a,b]$$
 	$$\gamma (t) = (cost, sint, 2-sint), t\in [0,2\pi]$$
 \end{example}
 
+\section{Monday, January 22, 2018}
 
+\begin{note}
+	For any given curve, there may be several possible parameterizations of that curve
+\end{note}
 
+\begin{example}
+	
+\end{example} The $1$st quadrant piece of the unit circle in a counter clock-wise direction, from $(1,0)$ to $(0,1)$
 
+$$\gamma_1 (t) = (cost, sint), t\in [0, \frac{\pi}{2}]$$
+$$\gamma_2 (t) = (cos(\frac{t}{2}), sin(\frac{t}{2})), t\in [0, \pi]$$
+$$\gamma_3 (t) = (\sqrt{1-t^2}, t), t\in [0, 1]$$
+All parameterize the same curve.
 
+\begin{definition}
+	The \textbf{Derivative of a path} is
+	$$D(\gamma(t)) = (\gamma_1'(t), \gamma_2'(t), ... , \gamma_n'(t))$$
+	provided each $\gamma_i'(t)$ exists for $t=1,...,n$\\
+	\\
+	We usually write $\gamma' (t) = (\gamma_1'(t),...,\gamma_n'(t))$ 
+\end{definition}
 
+\begin{definition}
+	If $\gamma'(t)$ exists, $\gamma$ is called a \textbf{differentiable path}
+\end{definition}
+
+\begin{definition}
+	If $\gamma$ is a differentiable path with a continuous derivative, except at finitely many places, the image of $\gamma$ is called a \textbf{piece-wise smooth curve}
+\end{definition}
+
+\begin{definition}
+	$\gamma'(t)$ is the tanget $v$ to the curve at the point $\gamma (t)$. Hence, the tanget line at $\gamma (t_0)$ is given by
+	$$\gamma (t_0) + \lambda \gamma ' (t_0), \lambda \in \mathbb{R}$$
+\end{definition}
+
+Note that $\gamma (t)$ must be smooth (class $C^1$) for $t$ near $t_0$, be careful if $\gamma (t_0) = 0$
+
+\begin{remark}
+	If we think of $\gamma (t)$ representing the position of a particle at time $t$, we can regard $\gamma ' (t)$ as its velocity and $\gamma '' (t)$ as its acceleration.\\
+	\\
+	If $\gamma ' (t)$ is the velocity, then $||\gamma ' (t)||$ is the speed (magnitude of the velocity)
+\end{remark}
+
+\begin{example}
+	Computing the period of a satellite when the radius of its orbit is known. The particle has constant speed $s$, and when $t=0$, assume that $\gamma (t)$ is at the point $(r,0)$.\\
+	\\
+	So....
+	$$\gamma(t) = (rcos(kt), rsin(kt))$$
+	We need to find $k$.
+	$$\gamma ' (t) = (-rksin(kt), rkcos(kt))$$
+	$$s = ||\gamma ' (t)|| = \sqrt{r^2 k^2 (sin^2 (kt) + cos^2 (kt))} = rk$$
+	And this implies that $k = \frac{s}{r}$.\\
+	\\
+	Note that $r,k \in \mathbb{R}^+ > 0$
+	
+	$$\gamma '' (t) = (-rk^2 cos(kt), -rk^2 sin(kt)) = -k^2 \gamma (t)$$
+	
+	Assuming particle is a satellite of mass $m$ orbiting the earth of mass $M$.
+	
+	\begin{note}
+		$$F = ma = m(\gamma '' (t)) = -mk^2 \gamma (t)$$
+		$$F(\vec{v}) = \frac{-G m M \vec{v}}{||\vec{v}||^3}$$
+		where $G$ is the gravitational constant and $\vec{v} = \gamma (t)$
+	\end{note}
+	
+	$$-mk^2 \gamma (t) = \frac{-G m M \gamma (t)}{r^3}$$
+	
+	And this implies that $k^2 = \frac{GM}{r^3}$.\\
+	\\
+	What is the period? $p = \frac{2\pi}{k}$ this implies that $k = \frac{2\pi}{p}$.
+	
+	$$k^2 = (\frac{2\pi}{p})^2 = \frac{GM}{r^3}$$
+	This implies that
+	$$p^2 = \frac{4 \pi^2}{GM} r^3$$
+	
+	The period of a satellite squared is proportional to the radius of its orbit cubed (One of Kepler's Laws)
+
+\end{example}
+
+\begin{definition}
+	The \textbf{path integral of $f$} or the \textbf{integral of $f$ along the path $\gamma$} denoted
+	$$\int_\gamma f ds$$
+	is defined by
+	$$\int_\gamma f ds = \int^b_a f(\gamma(t)) ||\gamma ' (t) || dt$$
+	Whenever $\gamma: [a,b]\mapsto \mathbb{R}^n$ is a smooth curve and the composite function $t \mapsto f(\gamma(t))$ is continuous on $[a,b]$
+\end{definition}
+
+If $\gamma (t)$ is only piece-wise smooth or $f(\gamma (t))$ is only piece-wise continuous, we break $\gamma (t)$ into finitely many smooth pieces, and sum the integrals over the various pieces.
 
 
 \end{document}

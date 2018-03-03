@@ -671,6 +671,8 @@ $$\gamma (t) = (\gamma_1 (t), \gamma_2 (t), ..., \gamma_n (t)), t\in[a,b]$$
 
 \section{Monday, January 22, 2018}
 
+\subsection{parameterization (continued)}
+
 \begin{note}
 	For any given curve, there may be several possible parameterizations of that curve
 \end{note}
@@ -683,6 +685,8 @@ $$\gamma_1 (t) = (cost, sint), t\in [0, \frac{\pi}{2}]$$
 $$\gamma_2 (t) = (cos(\frac{t}{2}), sin(\frac{t}{2})), t\in [0, \pi]$$
 $$\gamma_3 (t) = (\sqrt{1-t^2}, t), t\in [0, 1]$$
 All parameterize the same curve.
+
+\subsection{Derivatives}
 
 \begin{definition}
 	The \textbf{Derivative of a path} is
@@ -749,6 +753,8 @@ Note that $\gamma (t)$ must be smooth (class $C^1$) for $t$ near $t_0$, be caref
 
 \end{example}
 
+\subsection{Path Integrals}
+
 \begin{definition}
 	The \textbf{path integral of $f$} or the \textbf{integral of $f$ along the path $\gamma$} denoted
 	$$\int_\gamma f ds$$
@@ -758,6 +764,235 @@ Note that $\gamma (t)$ must be smooth (class $C^1$) for $t$ near $t_0$, be caref
 \end{definition}
 
 If $\gamma (t)$ is only piece-wise smooth or $f(\gamma (t))$ is only piece-wise continuous, we break $\gamma (t)$ into finitely many smooth pieces, and sum the integrals over the various pieces.
+
+\section{Friday, January 26, 2018}
+
+\subsection{Path Integral (continued)}
+
+Why is this definition of a path integral a good definition?\\
+\\
+We can think of speed $s=||\gamma ' (t)||$ as a rate of change in position relative to change in time $t$. Often we denote $ds=||\gamma ' (t)||dt$\\
+\\
+If $f=1$ then
+$$\int_\gamma ds = \int_a^b ||\gamma ' (t)|| ds$$
+Which is just the length of the curve.
+
+\begin{definition}
+	\textbf{The length of the curve} is $$\int_\gamma ds = \int_a^b ||\gamma ' (t)|| ds$$
+\end{definition}
+
+The length of the path is the "total distance travelled."
+
+\begin{example}
+	Find the length of a circle of radius 1 from 0 to $2\pi$.\\
+	\\
+	$$\gamma (t) = (cos(t), sin(t)), t\in [0, 2\pi]$$
+	$$\gamma ' (t) = (-sin(t), cos(t))$$
+	$$||\gamma ' (t)|| = \sqrt{sin^2(t) + cos^2(t)} = 1$$
+
+
+	$$s = \int_\gamma ds = \int_0^{2\pi} 1 ds = 2\pi$$
+\end{example}
+
+\begin{example}
+	Find the arclength of $\gamma (t) = (sin(5t), cos(5t), \frac{10}{3} t^{1.5})$ from $t=0$ to $t=3$.\\
+	\\
+	$$\gamma ' (t) = (5cost, -5sint, 5 \sqrt{t})$$
+	
+	$$||\gamma ' (t)|| = \sqrt{25cos^2 (t) + 25sin^2 (t), 25 t} = 5\sqrt{1+t}$$
+	
+	$$s = \int_\gamma ds = 5 \int_0^3 \sqrt{1+t} dt = \frac{70}{3}$$
+\end{example}
+
+\begin{example}
+	$f(x,y,z) = xy-z^2$ along $\gamma (t) = (3t, -2t, \sqrt{3}t), t\in [0,1]$\\
+	\\
+	$$\gamma ' (t) = (3, -2, \sqrt{3})$$
+	$$||\gamma ' (t)|| = 4$$
+	\begin{align*}
+		f(\gamma (t)) &= f(3t, -2t, \sqrt{3}t)\\
+		&=(3t)(-2t) - (\sqrt{3}t)^2\\
+		&= -6t^2 - 3t^2 = -9t^2
+	\end{align*}
+	
+	$$\int_\gamma f ds = \int_0^1 f(\gamma (t))||\gamma ' (t)||dt = \int_0^1 (-9t^2)4dt = -36 \int_0^1 t^2 dt = -12$$
+
+\end{example}
+
+\begin{remark}
+	mass of a wire $(m)$ $=$ density $D$ $\times$ length
+	$$m = \int_\gamma dm = \int_\gamma D ds$$
+\end{remark}
+
+\begin{note}
+	$\int_\gamma f ds$ is independent of the choice of parameterization
+\end{note}
+
+\begin{note}
+	If a curve in $\mathbb{R}^2$ is given by $y=f(x)$ and $x$ is in the domain of $[a,b]$, then the arclength is $$\int_a^b \sqrt{1+f'(x)^2} dx$$
+\end{note}
+
+\subsection{Vector Fields}
+
+\begin{definition}
+	A function $F:A \subset \mathbb{R}^n \mapsto \mathbb{R}^n$ is called a \textbf{vector field} where
+	$$F(x) = (F_1(x), ..., F_n(x))$$
+\end{definition}
+
+\begin{definition}
+	a function $f: \mathbb{R}^n \mapsto \mathbb{R}$ is called a \textbf{scalar field}, the components of a vector field are scalar fields.
+\end{definition}
+
+We think of a vector field $F$ as attaching to each point $x$ a vector $f(x)$
+
+\begin{example}
+	Newtons Gravitational Law\\
+	\\
+	$$F(x) =  -\frac{mMG}{||x||^3} x$$
+	"pull of a satellite towards the earth"\\
+	\\
+	The strength of the force depends on $d$, the distance away. Force is in the opposite direction to the position vector.
+	
+	$$F(x) = F(x,y,z) = (- \frac{mMG}{||(x,y,z)||^3}x, - \frac{mMG}{||(x,y,z)||^3}y, - \frac{mMG}{||(x,y,z)||^3}z)$$
+	 
+\end{example}
+
+\begin{example}
+	Put a toy boat into a stream, a velocity field is the velocity at each point of the stream.\\
+	\\
+	Let the path be $\gamma (t)$, then $\gamma ' (t) = F(\gamma (t)), \forall t$
+\end{example}
+
+\begin{definition}
+	If $F$ is a vector field, a \textbf{flowline} for $F$ is a path $\gamma (t)$ such that $\gamma ' (t) = F(\gamma (t))$
+\end{definition}
+
+\begin{definition}
+	The \textbf{flow of a vector field} is the family of all flow lines
+\end{definition}
+
+\begin{example}
+	$F(x,y) = (3,4)$, vector $(3,4)$ at every point will be straight lines. Want to know flow line at $(1,2)$
+	
+	$$\gamma (t) = (x(t), y(t))$$
+	$$\gamma ' (t) = F(\gamma (t)) = (3,4)$$
+	$$\gamma (t) = (3t + 1, 4t+2)$$
+	as it passes through $(1,2)$.
+\end{example}
+
+\section{Monday, January 29, 2018}
+
+\subsection{Line Integrals}
+
+\begin{example}
+	For time $t$, force $F = F(\gamma(t)) \cdot \frac{\gamma ' (t)}{||\gamma ' (t)||} = F(\gamma (t)) \cdot T (\gamma (t))$
+	
+	$$\Delta w = F(\gamma(t)) \cdot T (\gamma (t)) \Delta s$$
+	
+	$$w= \int_\gamma F \cdot T ds$$
+	
+\end{example}
+
+\begin{definition}
+	Let $F$ be a vector field in $\mathbb{R}^n$ and let $\gamma : [a,b] \mapsto \mathbb{R}^n$ be a smooth curve in $\mathbb{R}^n$. The \textbf{line integral} of $F$ over $\gamma$, denoted $\int_\gamma F ds$ is defined by
+	$$\int_\gamma F \cdot ds = \int_\gamma ( F \cdot T) ds$$
+\end{definition}
+
+\begin{remark}
+	$(F \cdot T)$ is a scalar field, and as produced before:
+	$$\int_\gamma ( F \cdot T) ds = \int_a^b F(\gamma(t)) \cdot \gamma ' (t) dt$$
+\end{remark}
+
+\begin{remark}
+	Within signs, the line integral is independent of the parameterization. ie.
+	$$\int_\gamma F \cdot ds = - \int_{-\gamma} F \cdot ds$$
+\end{remark}
+
+\begin{remark}
+	We can work over piecewise smooth curves by dividing it into smooth sub intervals and summing them up.
+\end{remark}
+
+\begin{example}
+	$F(x,y) = (y,x^2), \gamma (t) = (t^2, t^3), t\in[0,1]$
+	$$F(\gamma (t)) = (t^3, t^4)$$
+	$$\gamma ' (t) = (2t, 3t^2)$$
+	
+	\begin{align*}
+		\int_\gamma F \cdot ds &= \int_0^1 (2t^4 + 3t^6) dt\\
+		&= [\frac{2}{5} t^5 + \frac{3}{7} t^7]^1_0\\
+		&= \frac{2}{5}+ \frac{3}{7} = \frac{29}{35}
+	\end{align*}
+
+\end{example}
+
+\begin{example}
+	$$F(x,y) = (2y-x, -y)$$
+	$$\gamma (t) = (-cost, sint), t\in[0,\pi]$$
+	$$\gamma_0 (t) = (cost, sint), t\in[0,\pi]$$
+	
+	\begin{align*}
+		\int_\gamma F ds &= \int_0^\pi F(\gamma(t)) \cdot \gamma ' (t) dt\\
+		&= \int_0^\pi (2sin^2 t + costsint - sint cost) dt\\
+		&= 2\int_0^\pi (\frac{1}{2}-\frac{1}{2}cos(2t))dt = \pi
+	\end{align*}
+
+	\begin{align*}
+		\int_{\gamma_0} F ds &= \int_0^\pi F(\gamma_0 (t)) \cdot \gamma_0 ' (t) dt\\
+		&= \int_0^\pi (-2sin^2 t + costsint - sint cost) dt\\
+		&= -2\int_0^\pi (\frac{1}{2}-\frac{1}{2}cos(2t))dt = -\pi
+	\end{align*}
+	
+\end{example}
+
+\begin{note}
+	Notice from the previous example that
+	$$\int_\gamma F ds = \int_0^\pi (2sint + cost)(sint)-(sint)(cost)$$
+	we notice this is in the form
+	$$A = \int_a^b F_1(\gamma(t)) \gamma_1 '(t) + ... + F_n(\gamma(t)) \gamma_n '(t) dt $$
+	We introduce a new notation that can take advantage of this form and rewrite $A$ as
+	$$\int_a^b F_1 dx_1 + ... + F_n dx_n $$
+	where $dx_i = \gamma ' (t)dt, i=1,...,n$
+\end{note}
+
+\begin{definition}
+	A (first-order) \textbf{differential form} (1-form) in $\mathbb{R}^n$ is an expression of the form
+	$$f_1 dx_1 + ... + f_n dx_n$$
+\end{definition}
+
+\begin{definition}
+	Let $\omega = f_1 dx_1 + ... + f_n dx_n$ be a differential form in $\mathbb{R}^n$ and let $\gamma : [a,b] \mapsto \mathbb{R}^n$ be a smooth curve in $\mathbb{R}^n$. The integral of $\omega$ over $\gamma$, denoted $$\int_\gamma \omega$$ is defined by
+	$$\int_\gamma \omega = \int_\gamma F \cdot ds$$
+	where $F = (f_1, ..., f_n)$
+\end{definition}
+
+So
+
+\begin{align*}
+	\int_\gamma \omega &= \int_a^b [f_1 (\gamma(t)) \gamma_1 ' (t) + ... + f_n (\gamma(t)) \gamma_n ' (t)]dt\\
+	&= \int_a^b F(\gamma(t)) \gamma ' (t) dt = \int_\gamma F \cdot ds
+\end{align*}
+where $F = (f_1, ... , f_n)$\\
+\\
+We can think of $F = (f_1, ... , f_n)$ and $ds = (dx_1, ... , dx_n)$ where $dx_i = \frac{d(x_i (t))}{dt} dt, i=1,...,n$ which means the dot product notation makes sense.
+
+\begin{example}
+	$$\int_\gamma zx^2 dx + yzdy + arcsin(x)dz$$
+	where $\gamma (t) = (t, t^2, 1), t\in [0,1]$
+	
+	\begin{align*}
+		\int_\gamma \omega &= \int_0^1 [(t^2)(1) + (t^2)(2t) + (0)(arcsint) ]dt\\
+		&= \int_0^1 (t^2+ 2t^3)dt\\
+		&= [\frac{1}{3} t^3 + \frac{1}{2} t^4]_0^1\\
+		&=\frac{5}{6}
+	\end{align*}
+
+\end{example}
+
+Given a vector field $F=(f_1, ...,f_n)$ we have the (1-form) $\omega = f_1 dx_1 + ... + f_n dx_n$ and vice versa
+
+\begin{definition}
+	Let $f:\mathbb{R}^n \mapsto \mathbb{R}$. The differential form corresponding to the vector field $\nabla f$, denoted $df$, is called the \textbf{total differential of $f$}
+\end{definition}
 
 
 \end{document}

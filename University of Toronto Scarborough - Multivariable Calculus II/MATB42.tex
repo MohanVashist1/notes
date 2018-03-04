@@ -4,6 +4,8 @@
 
 \usepackage{amsmath}
 
+\usepackage{ esint }
+
 \usepackage{amsthm}
 
 \usepackage{graphicx}
@@ -993,6 +995,174 @@ Given a vector field $F=(f_1, ...,f_n)$ we have the (1-form) $\omega = f_1 dx_1 
 \begin{definition}
 	Let $f:\mathbb{R}^n \mapsto \mathbb{R}$. The differential form corresponding to the vector field $\nabla f$, denoted $df$, is called the \textbf{total differential of $f$}
 \end{definition}
+
+\newpage
+
+\section{Friday, March 2, 2018}
+
+We'll determine the orientation by choosing a unit normal vector.
+\begin{itemize}
+	\item{we know that for most surfaces, there are 2 normals, $u_1, u_2$, with\\ $u_2 = -u_1$}
+	\item{We'll choose one of the normals}
+	\begin{itemize}
+		\item{It could be one that points up}
+		\item{It could be one that points out (which is arbitrary)}
+		\item{etc.}
+	\end{itemize}
+\end{itemize}
+
+Let the unit sphere be oriented by the outward pointing unit normal. This means it is outside to the positive side and the inside is the negative side.\\
+\\
+There are surfaces where much choices are not possible.
+
+\begin{definition}
+	An \textbf{Oriented Surface} is a 2-sided regular (smooth) surface to which we have attached, at each point, a unit normal vector (which varies continuously from point to point)
+\end{definition}
+
+\begin{definition}
+	An \textbf{Orientable surface is a 2-sided regular (smooth) surface to which we can attach, at each point, a unit normal vector}
+\end{definition}
+
+If $S$ is the boundary of a 3-dimension region. Then it is oriented by the outward pointing unit normal.
+
+\begin{definition}
+	Let $F$ be a vector field defined on a surface $S$ which is oriented by a unit normal $n$. The \textbf{(vector) surface integral of $F$} over $S$, denoted
+	$$\int_S F \cdot dS$$
+	is defined by
+	$$\int_S F \cdot dS = \int_S F \cdot n dS$$
+\end{definition}
+
+\begin{note}
+	\begin{enumerate}
+		\item{$F \cdot n$ is a scalar field}
+		\item{From physics, $\int_S F \cdot n dS$ is called a flux of the vector field $F$ across $S$. When the surface is closed, we sometimes use the notation
+		$$\oiint_S F \cdot n dS $$
+		In this case, refer to the \textbf{flux out of $S$} if $n$ is the unit outer normal and \textbf{flux into $S$} if $n$ is the unit inner normal.
+		}
+		\item{There are other forms of (vector) surface integrals, but this is the only one we'll consider in this course}
+		\item{I'll (Dr. Eric Moore) will use both notations}
+	\end{enumerate}
+\end{note}
+
+Why is this a reasonable definition?\\
+\\
+It can be written as components. One in the normal direction and the other in the tangential direction.
+
+$F = (F \cdot n) n + G$ where $G \cdot n = 0$. $G$ is tangent to the surface and $F \cdot n$ is the normal component. It is the normal piece that we need to consider to see what passes through the surface.
+
+$$\int_S (F \cdot n) dS = \text{(area of S)(average normal )}$$
+
+Take $S$ to be a porous surface. What flows through in time $t$?\\
+\\
+Say $\delta s$ is a small piece of the surface. The amount that flows through $\delta s$ will fill a parallelepiped with length $t\cdot || F ||$ in direction $F$. What's the volume?\\
+\\
+$$\Delta s (||\text{projection of $t\cdot F$ onto the normal $(t\cdot \Delta S)$}||) = (\Delta s)(tF \cdot n) = (F \cdot n \Delta s)$$
+
+How do we calculate? (Vector surface integrals)
+\begin{itemize}
+	\item{restrict to $\mathbb{R}^3$}
+	\item{assume $S$ is a 2-dimension surface in $\mathbb{R}^3$ oriented by $u$ and assume $\Phi (u,v)$ is a regular parameterization of $S$.}
+\end{itemize}
+We find $\phi_u, \phi_v$ and $\phi_u \times \phi_v$ (a normal)
+
+$$\frac{\phi_u \times \phi_v}{||\phi_u \times \phi_v||} \text{ is a unit normal}$$
+
+This implies that 
+$$\frac{\phi_u \times \phi_v}{||\phi_u \times \phi_v||} = \pm n$$
+which implies that
+$$\phi_u \times \phi_v = \pm || \phi_u \times \phi_v|| n$$
+
+The plus and minus determines if it is in the same direction as $n$ or in the opposite direction.
+
+\begin{note}
+	it is an adequate to check at a single point the orientation of the surface 
+\end{note}
+
+
+\begin{align*}
+	\int_\Phi F \cdot dS &= \int_\Phi F \cdot n dS\\
+	&= \int_D F (\Phi (u,v)) \cdot n (\Phi(u,v)) || \phi_u \times \phi_v|| dA\\
+	&= \pm \int_D F (\Phi (u,v)) \cdot \frac{\phi_u \times \phi_v}{||\phi_u \times \phi_v||} ||\phi_u \times \phi_v|| dA\\
+	&= \pm \int_D (F(\Phi (u,v)) \cdot \phi_u \times \phi_v) dA
+\end{align*}
+
+\begin{example}
+	Evaluate $\int_S F \cdot dS$
+	
+	$F(x,y,z) = (x,y,z), S$ is the part of the place $x+y+z=1$ which lies in the first octant and $n$ points upward.\\
+	\\
+	We parameterize $S$ by $\Phi (u,v) = (u,v, 1-u-v)$ where $(u,v)\in D$\\
+	\\
+	$D$ is the projection in the $xy$-plane.
+	$$0 \leq v \leq 1-u$$
+	$$0 \leq u \leq 1$$
+	$$\phi_u \times \phi_v = (1,1,1)$$
+	
+	Since the $z$-component is positive, it points relatively upward. So its in the correct direction.
+	
+	\begin{align*}
+		\int_\Phi F \cdot dS &= \int_D (F(\Phi (u,v)) \cdot \phi_u \times \phi_v) dA\\
+		&= \int_0^1 \int_0^{1-u} (u,v,1-u-v) \cdot (1,1,1) dv du\\
+		&= \int_0^1 \int_0^{1-u} (u+v+1-u-v) dv du\\
+		&=\int_0^1 \int_0^{1-u} dv du\\
+		&= \int_0^1 (1-u) du\\
+		&= [u=\frac{1}{2}u^2]_0^1 = 1 - \frac{1}{2} = \frac{1}{2}
+	\end{align*}
+
+	
+	
+\end{example}
+
+\begin{example}
+	$F(x,y,z) = (x,y,z), S$ is that part of the paraboloid $z=4-x^2-y^2$ with $0 \leq x \leq 1$ and $0 \leq y \leq 1$ with $n$ pointing outward\\
+	\\
+	Parameterize $S$ by $\Phi (u,v) = (u,v, 4-u^2-v^2)$ where $0 \leq u \leq 1$ and $0 \leq v \leq 1$ and $\phi_u \times \phi_v = (2u, 2v, 1)$\\
+	\\
+	Since $z=1 > 0$, this is the correct direction.
+	
+	\begin{align*}
+		\int_\Phi F \cdot dS &= \int_0^1 \int_0^1 F(\Phi (u,v)) \cdot \phi_u \times \phi_v dudv\\
+		&= \int_0^1 \int_0^1 (u,v,4-u^2-v^2) \cdot (2u, 2v, 1) dudv\\
+		&= \int_0^1 \int_0^1 (2u^2 + 2v^2 + 4-u^2-v^2)dudv\\
+		&= \int_0^1 \int_0^1 (4+u^2+v^2) dudv\\
+		&= \int_0^1 [4u+ \frac{u^3}{3} + v^2 u]^1_0 dv\\
+		&= \int_0^1 (4+\frac{1}{3} + v^2)dv\\
+		&=[4v + \frac{v}{3} + \frac{v^3}{3}]_0^1\\
+		&= 4 + \frac{2}{3} = \frac{14}{3}
+	\end{align*}
+
+\end{example}
+
+\begin{example}
+	Integrate $F(x,y,z) = (x,y,z)$ on the covered bowl:
+	\underline{bowl:} $S_1 : z = x^2 + y^2$, $0 \leq z \leq 1$\\
+	\underline{cover:} $S_2 : (z-1)^2 + x^2 + y^2 =1$, $1 \leq z \leq 2$\\
+	Where both $S_1, S_2$ are oriented by the outward unit normal.\\
+	\\
+	\underline{bowl ($S_1$):} $\Phi (u,v) = (ucos(v), usin(v), u^2)$ where $0 \leq u \leq 1$, $0 \leq v \leq 2 \pi$
+	$$\phi_u = (cosv, sinv, 2u)$$
+	$$\phi_v = (-usinv, ucosv, 0)$$
+	$$\phi_u \times \phi_v = u(-2ucosv, -2usinv, 1)$$
+	
+	For the unit outer normal, the $z$-component would have to be negative. However, the $z$ component of $\phi_u \times \phi_v$ is $1 > u > 0$ so the unit normal vector
+	
+	\begin{align*}
+		-\int_{S_1} F \cdot n ds &= - \int_{u,v} (ucosv, u^2, usinv) \cdot (-2u^2 cosv, -2u^2 sinv, u) dA\\
+		&= -\int_0^1 \int_0^{2\pi} (-2u^3cos^2 v - 2u^4 sinv + u^2 sinv) dv du = \frac{\pi}{2}
+	\end{align*}
+	
+	\underline{cover ($S_2$):} $\Phi (u,v) = (cos(v)sin(u), sin(v)sin(u), 1+cos(u))$ where $0\leq v \leq$, $0 \leq u \leq \frac{\pi}{2}$\\
+	\\
+	$$\phi_u = (cos(v)cos(u),sin(v)cos(u), -sin(u))$$
+	$$\phi_v = (-sin(v)sin(u), cos(v)sin(u), 0)$$
+	$$\phi_u \times \phi_v =sin(u)(cos(v)sin(u), sin(v)sin(u), cos(u))$$
+	The $z$-component of both $u$ and $\phi_u \times \phi_v$ are positive, so they are the correct direction.
+
+\end{example}
+
+
+
+
 
 
 \end{document}

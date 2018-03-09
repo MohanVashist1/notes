@@ -24,27 +24,36 @@
 \contentsline {subsubsection}{\numberline {2.10.1}Recursive local bindings}{11}{subsubsection.2.10.1}
 \contentsline {subsection}{\numberline {2.11}Recommended Code Layout}{11}{subsection.2.11}
 \contentsline {section}{\numberline {3}Thursday, January 25, 2018}{13}{section.3}
-\contentsline {section}{\numberline {4}Thursday, February 1, 2018}{14}{section.4}
-\contentsline {subsection}{\numberline {4.1}Scheme (cont'd)}{14}{subsection.4.1}
-\contentsline {subsubsection}{\numberline {4.1.1}foldl}{14}{subsubsection.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.2}foldr}{14}{subsubsection.4.1.2}
-\contentsline {subsubsection}{\numberline {4.1.3}Procedure-Call Stack}{15}{subsubsection.4.1.3}
-\contentsline {subsubsection}{\numberline {4.1.4}Non-Tail Calls and Tail Calls}{15}{subsubsection.4.1.4}
-\contentsline {subsection}{\numberline {4.2}Haskell}{15}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Expressions and Types}{15}{subsubsection.4.2.1}
-\contentsline {paragraph}{Characters}{15}{section*.3}
-\contentsline {paragraph}{Tuples}{15}{section*.4}
-\contentsline {paragraph}{()}{16}{section*.5}
-\contentsline {paragraph}{Lists}{16}{section*.6}
-\contentsline {paragraph}{Strings}{16}{section*.7}
-\contentsline {paragraph}{Keyword: Just}{16}{section*.8}
-\contentsline {paragraph}{Nothing}{16}{section*.9}
-\contentsline {paragraph}{"Left 'C'"}{16}{section*.10}
-\contentsline {paragraph}{"Right False"}{16}{section*.11}
-\contentsline {paragraph}{anonymous functions}{17}{section*.12}
-\contentsline {subsubsection}{\numberline {4.2.2}Definitions}{17}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.3}Function Applications}{17}{subsubsection.4.2.3}
-\contentsline {section}{\numberline {5}Thursday, February 8, 2018}{18}{section.5}
-\contentsline {subsection}{\numberline {5.1}Haskell (cont'd)}{18}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}Local Definitions For Expressions}{18}{subsubsection.5.1.1}
-\contentsline {subsubsection}{\numberline {5.1.2}Local Definitions For Definitions}{18}{subsubsection.5.1.2}
+\contentsline {subsection}{\numberline {3.1}Pairs and Lists}{13}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}User-Defined Records}{13}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Pattern Matching}{13}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Input and Output}{14}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}ports}{14}{subsubsection.3.4.1}
+\contentsline {subsection}{\numberline {3.5}Sequencing}{14}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Mutable Varibles}{14}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}map}{15}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.8}filter}{15}{subsection.3.8}
+\contentsline {section}{\numberline {4}Thursday, February 1, 2018}{16}{section.4}
+\contentsline {subsection}{\numberline {4.1}Scheme (cont'd)}{16}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}foldl}{16}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}foldr}{16}{subsubsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.3}Procedure-Call Stack}{17}{subsubsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.4}Non-Tail Calls and Tail Calls}{17}{subsubsection.4.1.4}
+\contentsline {subsection}{\numberline {4.2}Haskell}{17}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Expressions and Types}{17}{subsubsection.4.2.1}
+\contentsline {paragraph}{Characters}{17}{section*.3}
+\contentsline {paragraph}{Tuples}{17}{section*.4}
+\contentsline {paragraph}{()}{18}{section*.5}
+\contentsline {paragraph}{Lists}{18}{section*.6}
+\contentsline {paragraph}{Strings}{18}{section*.7}
+\contentsline {paragraph}{Keyword: Just}{18}{section*.8}
+\contentsline {paragraph}{Nothing}{18}{section*.9}
+\contentsline {paragraph}{"Left 'C'"}{18}{section*.10}
+\contentsline {paragraph}{"Right False"}{18}{section*.11}
+\contentsline {paragraph}{anonymous functions}{19}{section*.12}
+\contentsline {subsubsection}{\numberline {4.2.2}Definitions}{19}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Function Applications}{19}{subsubsection.4.2.3}
+\contentsline {section}{\numberline {5}Thursday, February 8, 2018}{20}{section.5}
+\contentsline {subsection}{\numberline {5.1}Haskell (cont'd)}{20}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Local Definitions For Expressions}{20}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Local Definitions For Definitions}{20}{subsubsection.5.1.2}

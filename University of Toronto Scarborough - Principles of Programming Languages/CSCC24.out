@@ -22,17 +22,26 @@
 \BOOKMARK [3][-]{subsubsection.2.10.1}{Recursive local bindings}{subsection.2.10}% 22
 \BOOKMARK [2][-]{subsection.2.11}{Recommended Code Layout}{section.2}% 23
 \BOOKMARK [1][-]{section.3}{Thursday, January 25, 2018}{}% 24
-\BOOKMARK [1][-]{section.4}{Thursday, February 1, 2018}{}% 25
-\BOOKMARK [2][-]{subsection.4.1}{Scheme \(cont'd\)}{section.4}% 26
-\BOOKMARK [3][-]{subsubsection.4.1.1}{foldl}{subsection.4.1}% 27
-\BOOKMARK [3][-]{subsubsection.4.1.2}{foldr}{subsection.4.1}% 28
-\BOOKMARK [3][-]{subsubsection.4.1.3}{Procedure-Call Stack}{subsection.4.1}% 29
-\BOOKMARK [3][-]{subsubsection.4.1.4}{Non-Tail Calls and Tail Calls}{subsection.4.1}% 30
-\BOOKMARK [2][-]{subsection.4.2}{Haskell}{section.4}% 31
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Expressions and Types}{subsection.4.2}% 32
-\BOOKMARK [3][-]{subsubsection.4.2.2}{Definitions}{subsection.4.2}% 33
-\BOOKMARK [3][-]{subsubsection.4.2.3}{Function Applications}{subsection.4.2}% 34
-\BOOKMARK [1][-]{section.5}{Thursday, February 8, 2018}{}% 35
-\BOOKMARK [2][-]{subsection.5.1}{Haskell \(cont'd\)}{section.5}% 36
-\BOOKMARK [3][-]{subsubsection.5.1.1}{Local Definitions For Expressions}{subsection.5.1}% 37
-\BOOKMARK [3][-]{subsubsection.5.1.2}{Local Definitions For Definitions}{subsection.5.1}% 38
+\BOOKMARK [2][-]{subsection.3.1}{Pairs and Lists}{section.3}% 25
+\BOOKMARK [2][-]{subsection.3.2}{User-Defined Records}{section.3}% 26
+\BOOKMARK [2][-]{subsection.3.3}{Pattern Matching}{section.3}% 27
+\BOOKMARK [2][-]{subsection.3.4}{Input and Output}{section.3}% 28
+\BOOKMARK [3][-]{subsubsection.3.4.1}{ports}{subsection.3.4}% 29
+\BOOKMARK [2][-]{subsection.3.5}{Sequencing}{section.3}% 30
+\BOOKMARK [2][-]{subsection.3.6}{Mutable Varibles}{section.3}% 31
+\BOOKMARK [2][-]{subsection.3.7}{map}{section.3}% 32
+\BOOKMARK [2][-]{subsection.3.8}{filter}{section.3}% 33
+\BOOKMARK [1][-]{section.4}{Thursday, February 1, 2018}{}% 34
+\BOOKMARK [2][-]{subsection.4.1}{Scheme \(cont'd\)}{section.4}% 35
+\BOOKMARK [3][-]{subsubsection.4.1.1}{foldl}{subsection.4.1}% 36
+\BOOKMARK [3][-]{subsubsection.4.1.2}{foldr}{subsection.4.1}% 37
+\BOOKMARK [3][-]{subsubsection.4.1.3}{Procedure-Call Stack}{subsection.4.1}% 38
+\BOOKMARK [3][-]{subsubsection.4.1.4}{Non-Tail Calls and Tail Calls}{subsection.4.1}% 39
+\BOOKMARK [2][-]{subsection.4.2}{Haskell}{section.4}% 40
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Expressions and Types}{subsection.4.2}% 41
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Definitions}{subsection.4.2}% 42
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Function Applications}{subsection.4.2}% 43
+\BOOKMARK [1][-]{section.5}{Thursday, February 8, 2018}{}% 44
+\BOOKMARK [2][-]{subsection.5.1}{Haskell \(cont'd\)}{section.5}% 45
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Local Definitions For Expressions}{subsection.5.1}% 46
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Local Definitions For Definitions}{subsection.5.1}% 47

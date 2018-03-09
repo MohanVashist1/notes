@@ -501,6 +501,124 @@ This returns whether or not factorial 5 is even. So true.
 
 \section{Thursday, January 25, 2018}
 
+\subsection{Pairs and Lists}
+
+A cons cell is a 2-tuple pair and has the following syntax:
+\begin{lstlisting}
+	cons(x y)
+\end{lstlisting}
+Essentially a pair of pointers. Has special support for lists.
+\begin{lstlisting}
+	'() ; an empty list
+	(list x y z) = (cons x (cons y (cons z '())))
+	'(42 "hi" Chrome)
+	; Chrome here will be the symbol 'Chrome
+\end{lstlisting}
+
+For a cons cell, you can use car to access the first field and cdr to access the second field.
+
+\subsection{User-Defined Records}
+
+\begin{lstlisting}
+	(struct dim (width height))
+\end{lstlisting}
+This creates a new record type with 2 fields
+\begin{lstlisting}
+	(dim 4 7) ; this constructs a vlue of this type
+	dim? ; this tests for this type
+	dim-width
+	dim-height
+	; these are the field accessors
+\end{lstlisting}
+
+We can also use struct-copy to clone a record while replacing some values:
+\begin{lstlisting}
+	(define d1 (dim 4 7))
+	(define d2 (struct-copy dim d1 [width 5]))
+	; d2 is (dim 5 7)
+\end{lstlisting}
+
+\subsection{Pattern Matching}
+
+You can test for a literal, cons cell, or a record type, can get their content as well.
+
+\begin{lstlisting}
+	(struct dim (width height))
+	
+	(define (foo x)
+		(match x
+			['() 'nada]
+			[(cons b _) b]
+			[(dim w h) (* w h)]))
+	(foo '()) ; returns 'nada
+	(foo '(1 2 3)) ; returns 1
+	(foo (dim 4 7)) ; returns 28
+\end{lstlisting}
+
+\subsection{Input and Output}
+
+We can print with display, printf and displayln
+
+\begin{lstlisting}
+	(display 5)
+	(newline)
+	(displayln 5)
+	(printf "yes" "price" 5)
+\end{lstlisting}
+
+\begin{lstlisting}
+	(read-line) ; this reads a lien
+	(read-string 10) ; this reads up to the upper bound.
+	;if it reaches the end of the file, it returns eof, which you can use eq? or eof-object? to test
+	; for stderr, eprintf is like printf but goes to stderr
+\end{lstlisting}
+
+\subsubsection{ports}
+
+Racket has ports, analogous to Java Reader/Writer -- behind it can be file, string, network connection, message queue, user-defined, etc.
+
+\subsection{Sequencing}
+
+If we want to evaluate multiple expressions in the order we specify
+
+\begin{lstlisting}
+	(begin
+		(display ln "Please enter your name")
+		(read-line)) ; this returns the last expression
+		
+	(begin0 expr1 expr2) ; this returns the first expression, but the others are still evaluated.
+	
+	(when (> x 0) expr1 expr2 ...)
+	; if true, evaluates the exoressions, returns what the last one returns, if false, returns #<void>
+\end{lstlisting}
+
+\subsection{Mutable Varibles}
+
+\begin{lstlisting}
+	(define v 5)
+	(define (f x) (+ x v))
+	(f 0) ; this gives 5
+	(set! v 6)
+	(f 0) ; this gives 6
+\end{lstlisting}
+
+Mutable paris, list, strings, arrays, etc. are also available. Use mutation judiciously, is not that necessary.
+
+\subsection{map}
+
+Takes in a function and a list and applies the function to every element in that list
+
+\begin{lstlisting}
+	(map f (list x y z)) = (list (f x) (f y) (f z))
+\end{lstlisting}
+
+\subsection{filter}
+
+filter takes in a boolean function and a list (A) and returns a list of the items in the list A that satisfy the boolean function
+
+\begin{lstlisting}
+	(filter number? '(9 "4" 0 "1" "6" 5)) = '(9 0 5)
+\end{lstlisting}
 
 
 \newpage

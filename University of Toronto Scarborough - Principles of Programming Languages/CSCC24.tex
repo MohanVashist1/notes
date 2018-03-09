@@ -311,7 +311,201 @@ The basic explanation for this is that $d$ cannot vary behaviour by types. Haske
 \\
 Programming is a dialectic class struggle between the user and the implementer. Or between the maintainer and the original author.
 
-\section{Thursday, February 1, 2017}
+\newpage
+
+\section{Thursday, January 18, 2018}
+
+\subsection{Racket}
+
+We won't be using just Scheme, we'll be using Racket which is a version of Scheme. Racket is a platform for implementing and using many languages, and Scheme is on of those that come out of the box.\\
+\\
+Racket's version of scheme is somewhat different from the standards with regards to function names, and some features. We will cover Racket, but note that these examples and features may fail for standard Scheme.
+
+\subsection{Basic Data Types}
+
+\begin{lstlisting}
+    #t, #f ;booleans
+    42 ;numbers, can be ints, rational, floats, complex
+    "hello" ; strings
+    #\h ; this is a char of just the letter h
+    'Chrome ;this is a symbol
+\end{lstlisting}
+
+\paragraph{Symbols} Symbols are user-defined atomic values. You think of a name, put a single quote in front. Symbols are not strings, you can't perform string operations onto them.
+
+\subsection{Procedures and Functions}
+For example:
+\begin{lstlisting}
+    (sin (/ 0.2 2)) ; sine of 1 over 10
+\end{lstlisting}
+
+\subsection{Boolean Operations}
+
+\begin{lstlisting}
+    (not expr)
+    (and expr expr)
+    (or expr expr)
+    (or) ; gives #f
+    (and) ; gives #t
+    (boolean? expr) ; tests if you have a boolean
+\end{lstlisting}
+
+\subsection{Number operations}
+
+\begin{lstlisting}
+    +
+    -
+    *
+    /
+    max
+    min
+    -
+    <
+    >
+    <=
+    >=
+    ; these operations can all take multiple operands
+\end{lstlisting}
+
+\begin{lstlisting}
+    number?
+    complex?
+    real?
+    rational?
+    ; these functions test if a number is a certain type
+\end{lstlisting}
+
+\subsection{Equality}
+
+There are 3 types of equalities.
+
+\begin{lstlisting}
+    eq?
+\end{lstlisting}
+	This one is Good for booleans and symbols, uses pointer inequality for aggregates like strings and lists, but has complicated rules for numbers.
+	
+\begin{lstlisting}
+    eqv?
+\end{lstlisting}
+	This one has complicated rules for numbers as well, and different from eq? as it treats the floating-points NaN and signed zero differently.
+	
+	\begin{lstlisting}
+    equal?
+\end{lstlisting}
+This one is for structural equality for most aggregates. So comparing contents of an aggregate.
+
+\subsection{Definitions}
+
+You can define functions and constants, recursion is allowed.
+
+\begin{lstlisting}
+; A constant
+(define my-width/height (/ 4 3))
+; a function with 2 parameters
+(define (my-log base x)
+	(/ (log x) (log base)))
+    
+\end{lstlisting}
+
+\subsection{Anonymous Functions}
+
+Basically a function without a name, you can either right lambda or use $\lambda$ in your code.\\
+\\
+Example of a function:
+\begin{lstlisting}
+    (lambda (base x) (/ (log x) (log base)))
+\end{lstlisting}
+Example of the same function being used
+\begin{lstlisting}
+    ((lambda (base x) (/ (log x) (log base))) 128 2)
+\end{lstlisting}
+So in this case, base passed in as 128 and x as 2
+
+\subsection{Conditionals}
+
+If-then-else conditions look like the following
+\begin{lstlisting}
+	(if test then-expr else-expr)
+\end{lstlisting}
+Test can be non-boolean, and this will be treated as true.
+
+Multiple conditions are as such:
+\begin{lstlisting}
+	(cond
+		[(> x y) (sin x)]
+		[(< x y) (cos y)]
+		[else 0])
+\end{lstlisting}
+This is if $x>y$ then $sinx$ else if $x < y$ then $cosy$ else 0. Test results can be non-boolean, which are treated as true. You can obtain the result of a test to return it.
+\begin{lstlisting}
+	(cond
+		[(+ 4 2) => (lambda (x) (* x x))]
+		[else 0])
+\end{lstlisting}
+This gives 36.
+
+\subsubsection{and,or as conditionals}
+\textbf{and} evaluates all of its operands from left to right and stops as soon as \#f operand is read, otherwise the last expression is the answer.\\
+\\
+\textbf{or} evaluates all of its operands from left to right and stops as soon as a non \#f operand is read, and that becomes the answer, otherwise the answer is \# f
+
+\subsection{Local bindings}
+
+Local definitions for use in just one expression
+
+\begin{lstlisting}
+	(let ([x expr1]
+		[y expr2])
+		(+ x y (* 2 x y)))
+\end{lstlisting}
+This means to compute $x+y+2xy$ where $x=expr1$ and $y=expr2$. These 2 expressions cannot see the others variables, only the global ones outside of their scope.
+\begin{lstlisting}
+	(let ([x 3])
+		(let ([x (* 3 3)]) ; (* 3 3)
+		x))
+\end{lstlisting}
+This results in 9 and is not recursive. Let* allows later bindings to see earlier bindings
+\begin{lstlisting}
+	(let* ([x 5]
+		[y (+ x 1)]) ; (+ 5 1)
+		(+ x y (* 2 x y)))
+\end{lstlisting}
+\subsubsection{Recursive local bindings}
+
+letrec allows more recursive bindings
+
+\begin{lstlisting}
+	(letrec ([fac
+		(lambda (n)
+			(if (= n 0) 1 (* n (fac (- n 1)))))]
+		[even
+			(lambda (n)
+				(or (= n 0) (not (odd (- n 1)))))]
+		[odd
+			(lambda (n)
+				(not (even (- n 1))))])
+	(even (fac 5))) 
+\end{lstlisting}
+This returns whether or not factorial 5 is even. So true.
+
+\subsection{Recommended Code Layout}
+
+\begin{itemize}
+	\item{Open parentheses then immediately first word}
+	\item{Procedure definition: Body starts on new line, indented}
+	\item{Long expression: Parts start on new lines, indented}
+	\item{Closing parentheses not on new lines}
+\end{itemize}
+
+\newpage
+
+\section{Thursday, January 25, 2018}
+
+
+
+\newpage
+
+\section{Thursday, February 1, 2018}
 
 \subsection{Scheme (cont'd)}
 
@@ -482,6 +676,31 @@ But Haskell is written such that the type signature can be separated from the de
 \subsubsection{Function Applications}
 
 If you insert one parameter to a function that takes 2 parameters, that function will return a function of 1 parameter. This is how Haskell does multiple parameters
+
+\newpage
+
+\section{Thursday, February 8, 2018}
+
+\subsection{Haskell (cont'd)}
+
+\subsubsection{Local Definitions For Expressions}
+
+\begin{lstlisting}
+	let x = 4 + 5
+	     y = 4 - 5
+	 in x+y+2*x*y
+\end{lstlisting}
+
+Layout Version above. Braced Version below
+
+\subsubsection{Local Definitions For Definitions}
+
+\begin{lstlisting}
+	for u v = x + y + 2*x*y
+		where
+			x = u + v
+			y= u - v
+\end{lstlisting}
 
 \end{document}
 

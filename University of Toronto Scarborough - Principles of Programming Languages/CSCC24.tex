@@ -1,5 +1,8 @@
 \documentclass[12pt]{article}
 
+\usepackage{graphicx}
+\graphicspath{ {imgs/} }
+
 \usepackage[utf8]{inputenc}
 
 \usepackage{listings}
@@ -1156,7 +1159,273 @@ fmap f xs = pure f <*> xs
 
 \newpage
 
-\subsection{Test}
+\section{Thursday, March 1, 2018}
+
+\subsection{Haskell (cont'd)}
+
+\subsubsection{Monads}
+
+So far we have been thinking of List, Maybe, Either,... as data structures (ex. containers). Now we must think of them as programs:
+
+\begin{itemize}
+	\item{foo :: Maybe Int means: a program that may return a number successfully, or may abort}
+	\item{foo :: [Int] means: a non-deterministic program that returns different numbers in different parallel universes.}
+	\item{foo:: Either String Int means: like Maybe, but if it aborts, it uses Left to tell you an error message}
+\end{itemize}
+
+Now we re-read Functor and Applicative from this angle
+
+\begin{lstlisting}
+fmap abs foo
+-- this now means to return the absolute value
+-- of what foo returns
+
+(+) <$> foo <*> bar
+-- this now means to return the sum of what
+-- foo and bar returns
+\end{lstlisting}
+
+But bar does not know what foo returns, or vice versa.\\
+\\
+You now become ambitious. Can you combine two programs such that the return value(s) of the 1st is fed to the 2nd so the 2nd can behave independently? Like such:
+
+\begin{lstlisting}
+bind:: F a -> (a -> Fb) -> F b
+-- so we can have
+-- prog1st 'bind' prog2nd?
+\end{lstlisting}
+
+We can think of prog2nd as a callback to prog1st.\\
+\\
+Other examples would look like the following:
+
+\begin{lstlisting}
+-- bind for Maybe
+
+bind_Maybe :: Maybe a -> (a -> Maybe b) -> Maybe b
+bind_Maybe Nothing _ = Nothing
+bind_Maybe (Just a) k = k a
+
+-- bind for List
+
+bind_List :: [a] -> (a -> [b]) -> [b]
+bind_List [] _ = []
+bind_List (a:as) k = k a ++ bind_List as k
+\end{lstlisting}
+
+There is a class for that too.
+\begin{lstlisting}
+class Applicative f => Monad f where
+	return ::  a -> f a
+	(>>=) :: f a -> (a -> f b) -> f b
+	
+-- example instance
+
+instance Monad [] where
+	return a = [a]
+	as >>= k = concat (map k as)
+\end{lstlisting}
+
+Remark: return and pure should be the same thing. Historically, Monad came first, Applicative came later, thus the redundancy. There is a proposed change to make return an alias of pure.\\
+\\
+Monad subsumes Applicative: Can implement ($<$*$>$) as
+
+\begin{lstlisting}
+fs <*> as = fs >>=
+			\f -> as >>=
+					\a -> return (f a)
+\end{lstlisting}
+
+There are equations for Monad too, such as:
+\begin{lstlisting}
+return a >>= k = k a
+\end{lstlisting}
+
+There is "do-notation" so code looks nicer and the computer emits
+\begin{lstlisting}
+>>= \v ->
+\end{lstlisting}
+for you:
+\begin{lstlisting}
+fs <*> as = do
+	f <- fs
+	a <- as
+	return (f a)
+\end{lstlisting}
+
+\subsubsection{Haskell I\slash O System}
+
+Parametrized type "IO" for all "I\slash O" commands. Instance of Monad, Applicative, Functor.\\
+\\
+\begin{lstlisting}
+foo : : IO Char
+-- this means a program that interacts with the outside world, then returns a character (or gets stuck forever, or throws an exception).
+
+putStrLn :: String IO ()
+getLine :: IO String
+-- NOT: getLine :: String
+
+\end{lstlisting}
+
+Do not think about how to extract the string. Use ($>>=$) to feed it to the next program (callback).
+
+\begin{lstlisting}
+main = getLine >>= \s -> putStrLn("It's " ++ s)
+-- OR
+main = do
+	s <- getLine
+	putStrLn ("It's " ++ s)
+\end{lstlisting}
+
+\subsection{Syntax}
+
+\subsubsection{Context-Free Grammar (CFG)}
+
+A context-free grammar looks like this bunch of rules:
+
+$$E \rightarrow E+E$$
+$$M \rightarrow M\times M$$
+$$A \rightarrow 0$$
+$$A \rightarrow (E)$$
+$$E \rightarrow M$$
+$$M \rightarrow A$$
+$$A \rightarrow 1$$
+
+Main idea:
+\begin{itemize}
+	\item{E, M, A are non-terminal symbols aka variables. When you see them, you apply rules to expand}
+	\item{$+, \times, 1, 0, (, )$ are terminal symbols. They are the characters you want in your language}
+\end{itemize}
+
+\subsubsection{Derivation (aka Generation)}
+
+Derivation is a finite sequence of applying the rules until all non-terminal symbols are gone. Often aim for a specific final string.
+
+\begin{align*}
+	E&\rightarrow M\\
+	&\rightarrow M\times M\\
+	&\rightarrow A\times M\\
+	&\rightarrow 1\times M\\
+	&\rightarrow 1\times A\\
+	&\rightarrow 1\times (E)\\
+	&\rightarrow 1\times (E+E)\\
+	&\rightarrow 1\times (M+E)\\
+	&\rightarrow 1\times (A+E)\\
+	&\rightarrow 1\times (0+E)\\
+	&\rightarrow 1\times (0+M)\\
+	&\rightarrow 1\times (0+M\times M)\\
+	&\rightarrow 1\times (0+A\times M)\\
+	&\rightarrow 1\times (0+1\times M)\\
+	&\rightarrow 1\times (0+1\times A)\\
+	&\rightarrow 1\times (0+1\times 1)\\
+\end{align*}
+
+Context-free grammars can support: matching parentheses, unlimited nesting.
+
+\subsubsection{Backus-Naur Form (BNF)}
+
+Backus-Naur Form is a computerized, practical notation for CFG
+
+\begin{itemize}
+	\item{Surround non-terminal symbols by $<>$; allow multi-letter names}
+	\item{Merge rules with the same LHS}
+	\item{(Some versions.) Surround terminal strings by single or double quotes.}
+	\item{use ::= for $\rightarrow$}
+\end{itemize}
+
+Our example grammar in BNF:
+
+\begin{lstlisting}
+<expr> ::= <expr> "+" <expr> | <mul>
+<mul> ::= <mul> "*" <mul> | <atom>
+<atom> ::= "0" | "1" | "(" <expr> ")"
+\end{lstlisting}
+
+\subsubsection{Parse Tree (aka Derivation Tree)}
+
+A parse tree aka derivation tree presents a derivation with more structure (tree), less repetition.
+
+\includegraphics{syntax1}
+
+This example generates $0+0+0$
+
+\subsubsection{Ambiguous Grammar}
+
+Two different trees generate the same $0+0+0$
+
+\includegraphics[scale=0.7]{syntax2}
+
+If this happens, the grammar is ambiguous.\\
+\\
+We try to design unabiguous grammars.\\
+\\
+(Bad news: CFG ambiguity is undecidable)
+
+\subsubsection{Ubambiguous Grammar Example}
+
+An unambiguous grammar that generates the same language as our ambiguous grammar example:
+
+\begin{lstlisting}
+<expr> ::= <expr> "+" <expr> | <mul>
+<mul> ::= <mul> "*" <mul> | <atom>
+<atom> ::= "0" | "1" | "(" <expr> ")"
+\end{lstlisting}
+
+(Bad news: Equivalence of two CFGs is also undecidable)
+
+\subsubsection{Left Recursive vs Right Recursive}
+
+\begin{lstlisting}
+<expr> ::= <expr> "+" <mul>
+\end{lstlisting}
+This is an example of a left recursive rule. The recursion is at the beginning (left).
+
+\begin{lstlisting}
+<expr> ::=  <mul> "+" <expr>
+\end{lstlisting}
+This is an example of a right recursive rule. The recursion is at the end (right).\\
+\\
+They affect whether infix operators associate to the left or right.\\
+\\
+They also affect some parsing algorithms.
+
+\subsubsection{Recursive Descent Parsing}
+
+Recursive descent parsing is a simple strategy for writing a parser.
+
+\begin{itemize}
+	\item{Write a procedure for each rule}
+	\item{Non-terminals on Right Hand Side become procedure calls, possible recursive calls. (Thus "recursive descent". Also "top-down".) (Left-recursive grammars need special treatment.)}
+	\item{Terminal symbols: Consume input and check}
+	\item{Alternatives require lookahead and\slash or backtracking}
+\end{itemize}
+
+\subsubsection{Recursive Descent Parser Example}
+
+Example grammar suitable for recursive descent parsing:
+
+\begin{lstlisting}
+<sub> ::= <atom> "-" <sub> | <atom>
+<atom> ::= "0" | "1" | "(" <sub> ")"
+\end{lstlisting}
+
+Pseudo-code of recursive descent parser:
+
+\begin{lstlisting}
+sub:
+	try (atom
+		read; if not "-" then fail
+		sub)
+	if that failed: atom
+	
+atom:
+	read;
+	if "1" or "0": return
+	if "(" : sub
+		read; if not ")" then fail
+	else: fail
+\end{lstlisting}
+
 
 
 \end{document}

@@ -60,4 +60,17 @@
 \BOOKMARK [3][-]{subsubsection.6.1.4}{Haskell's Number System}{subsection.6.1}% 60
 \BOOKMARK [3][-]{subsubsection.6.1.5}{Functor}{subsection.6.1}% 61
 \BOOKMARK [3][-]{subsubsection.6.1.6}{Applicatives}{subsection.6.1}% 62
-\BOOKMARK [2][-]{subsection.6.2}{Test}{section.6}% 63
+\BOOKMARK [1][-]{section.7}{Thursday, March 1, 2018}{}% 63
+\BOOKMARK [2][-]{subsection.7.1}{Haskell \(cont'd\)}{section.7}% 64
+\BOOKMARK [3][-]{subsubsection.7.1.1}{Monads}{subsection.7.1}% 65
+\BOOKMARK [3][-]{subsubsection.7.1.2}{Haskell I/O System}{subsection.7.1}% 66
+\BOOKMARK [2][-]{subsection.7.2}{Syntax}{section.7}% 67
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Context-Free Grammar \(CFG\)}{subsection.7.2}% 68
+\BOOKMARK [3][-]{subsubsection.7.2.2}{Derivation \(aka Generation\)}{subsection.7.2}% 69
+\BOOKMARK [3][-]{subsubsection.7.2.3}{Backus-Naur Form \(BNF\)}{subsection.7.2}% 70
+\BOOKMARK [3][-]{subsubsection.7.2.4}{Parse Tree \(aka Derivation Tree\)}{subsection.7.2}% 71
+\BOOKMARK [3][-]{subsubsection.7.2.5}{Ambiguous Grammar}{subsection.7.2}% 72
+\BOOKMARK [3][-]{subsubsection.7.2.6}{Ubambiguous Grammar Example}{subsection.7.2}% 73
+\BOOKMARK [3][-]{subsubsection.7.2.7}{Left Recursive vs Right Recursive}{subsection.7.2}% 74
+\BOOKMARK [3][-]{subsubsection.7.2.8}{Recursive Descent Parsing}{subsection.7.2}% 75
+\BOOKMARK [3][-]{subsubsection.7.2.9}{Recursive Descent Parser Example}{subsection.7.2}% 76

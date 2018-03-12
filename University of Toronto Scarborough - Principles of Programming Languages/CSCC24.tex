@@ -991,6 +991,171 @@ Note that constraints propagate down the dependency chain:
 	eq3 x y z = x==y && y==z
 \end{lstlisting}
 
+\newpage
+
+\section{Thursday, February 15, 2018}
+
+\subsection{Haskell (cont'd)}
+
+\subsubsection{Constraint Instances}
+
+What if you are comparing instances inside of a data structure (let's say, a list for example)?\\
+\\
+Well we can do this:
+
+\begin{lstlisting}
+	instance Eq a => Eq [a] where
+		[] == []		= True
+		(x:xs) == (y:ys) = x==y && xs == ys
+		_ == _		= False
+\end{lstlisting}
+
+Constraints propagate down the dependency chain, including other instance implementations
+
+\subsubsection{User-Defined Class}
+
+\begin{lstlisting}
+class ADT a where
+	tag :: a -> String
+	
+instance ADT (Either a b) where
+	tag (Left _) = "Left"
+	tag (Right _) = "Right"
+	
+instance ADT MyType where
+	tag Nada = "Nada"
+	tag (Duplet _ _) = "Duplet"
+	tag (Uno _) = "Uno"
+\end{lstlisting}
+
+Classes in Haskell are similar to Java's Interfaces in the sense that you implement the classes' functions for each instance as well.
+
+\begin{lstlisting}
+class Eq a => Ord a where
+	(<), (<=), (>), (>=) :: a -> a -> Bool
+	compare :: a -> a -> Ordering
+data Ordering = LT | EQ | GT
+
+-- The "Eq a =>" here means that
+-- Every Ord instance is also an EQ instance
+-- (Superclass, subclass)
+\end{lstlisting}
+
+For implementers of type and instances, these superclasses must be specified, but for users, they can use Ord without mentioning Eq.
+
+\subsubsection{Auto-Generating Instance Implementations}
+
+The compiler is willing to write some instance code for you, for select standard classes: (Eq, Ord, Enum (but no fields allowed), Show, and a few others.
+
+\begin{lstlisting}
+data MyType = Nada | Duplet Double String | Uno Integer
+	deriving (Eq, Ord, Show)
+data Browser = FireFox | Chrome | Edge | Safari
+	deriving (Eq, Ord, Show)
+\end{lstlisting}
+
+\subsubsection{Haskell's Number System}
+
+You can't use doubles and integers together for number operators, you have to convert one so that they are the same (Can use fromIntegral to convert an integer into a double).
+
+\subsubsection{Functor}
+
+\begin{lstlisting}
+fmap_List :: (a -> b) - > [a] -> [b]
+fmap_List = map
+
+fmap_Maybe :: (a -> b) -> Maybe a -> Maybe b
+fmap_Maybe f Nothing = Nothing
+fmap_Maybe f (Just a) = Just (f a)
+
+fmap_Either :: (a->b) -> Either e a -> Either e b
+fmap_Either f (Left e) = Left e
+fmap_Either f (Right a) = Right (f a)
+\end{lstlisting}
+
+The pattern here is that there is a $f:a \mapsto b$ induces a corresponding $F a \mapsto F b$ where $F$ is a parameterized type. There is a class for that.
+
+\begin{lstlisting}
+class Functor f where
+	fmap :: (a->b) -> f a -> f b
+\end{lstlisting}
+
+So this function generalizes the previous examples above.\\
+\\
+Every instance of Functor should satisfy:
+
+\begin{lstlisting}
+fmap id xs = xs
+fmap g (fmap f xs) = fmap (g . f) xs
+\end{lstlisting}
+
+fmap also has an infix alias of $<\$>$, for example:
+
+\begin{lstlisting}
+sin <$> [1,2,3]
+\end{lstlisting}
+
+\subsubsection{Applicatives}
+
+You now become ambitious. You ask: What if you have a binary operator, and two lists, ...
+
+\begin{lstlisting}
+listCross :: (a -> b -> c) -> [a] -> [b] -> [c]
+
+maybeBoth :: (a -> b -> c) -> Maybe a -> Maybe b -> Maybe c
+maybeBoth op (Just a) (Just b) = Just (op a b)
+maybeBoth op _ _ = Nothing
+\end{lstlisting}
+
+And what if you have a ternary operator and three lists?\\
+\\
+Can you implement
+\begin{lstlisting}
+ap_List :: [a -> b] -> [a] -> [b]
+\end{lstlisting}
+
+such that, for example:
+
+\begin{lstlisting}
+ap_List [f,g] [1,2,3] = [f 1, f 2, f 3, g 1, g 2, g 3]
+\end{lstlisting}
+
+Answer:
+\begin{lstlisting}
+ap_List = ListCross (\f -> \x -> f x)
+\end{lstlisting}
+Equivalently listCross (\$)\\
+\\
+Now can implement tenary too:
+
+\begin{lstlisting}
+listTenary :: (a->b->c->d)->[a]->[b]->[c]->[d]
+listTenary tenary as bs cs = 
+	((tenary <$> as) 'ap_List' bs) 'ap_List' cs
+\end{lstlisting}
+
+There is a class for this too.
+
+\begin{lstlisting}
+class Functor f => Applicative f where
+	pure :: a -> f a
+	(<*>) :: f (a -> b) - > f a - > f b
+	
+-- example instance
+instance Applicative Maybe where
+	pure a = Just a
+	Just f <*> Just a = Just (f a)
+	_ <*> _ Nothing
+\end{lstlisting}
+
+Applicative subsumes Functor, so we can implement fmpa as
+
+\begin{lstlisting}
+fmap f xs = pure f <*> xs
+\end{lstlisting}
+
+\newpage
+
 
 \end{document}
 

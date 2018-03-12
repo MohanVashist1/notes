@@ -814,11 +814,183 @@ Layout Version above. Braced Version below
 \subsubsection{Local Definitions For Definitions}
 
 \begin{lstlisting}
-	for u v = x + y + 2*x*y
-		where
+	foo u v = x + y + 2*x*y
+		where -- this where refers to the statement in line 1
 			x = u + v
 			y= u - v
 \end{lstlisting}
+
+\subsubsection{Pattern Matching}
+
+Can be done for expressions or function definitions as well as pattern binding.
+
+\begin{lstlisting}
+-- expression case
+case expr of
+	[] -> 0
+	42 : xs -> foo xs
+	x : xs -> x + foo xs
+\end{lstlisting}
+
+In this example, the expression $expr$ would evaluate to 0 if it was an empty list, have foo applied to its tail if it started with 42 as its first index and x plus foo applied to its tail for any other list.
+
+\begin{lstlisting}
+-- function definition case examples
+
+mySum [] = 0
+mySum (x : xs) = x + mySum xs
+
+nand False _ = True
+nand True False = True
+nand True True = False
+\end{lstlisting}
+
+\begin{lstlisting}
+-- pattern binding case
+[a, b, c] = take 3 someList
+-- a = take
+-- b = 3
+-- c = someList
+\end{lstlisting}
+
+\subsubsection{Guards}
+
+Guards are extra conditions imposed on patterns.
+
+\begin{lstlisting}
+-- expression case
+case expr of
+	[] -> 0
+	x : xs | x < 0 -> x + foo xs
+		  | x > 2 -> x - foo xs
+		  | True -> x * foo xs
+		  
+-- definition case
+foo [] = 0
+foo (x : xs) | x < 0 -> x + foo xs
+		  | x > 2 -> x - foo xs
+		  | True -> x * foo xs
+\end{lstlisting}
+
+Instead of True for the edge case, can also use "otherwise".
+
+\subsubsection{Local Definitions under Patterns and Guards}
+
+\begin{lstlisting}
+foo :: Either String Integer -> Integer
+foo (Left str) | suffix > "albert" = 42
+		    | otherwise = 24
+		    where
+		    	suffix = drop 10 str
+
+foo (Right x) | x > 0 = 2*y
+		     | x < 0 = y
+		     | otherwise = 0
+		     where
+		     	y = div 1000 x
+\end{lstlisting}
+Note that the first where belongs to the foo where the input is a Left str, the second where belongs to the foo where the input is a Right integer and if $x=0$, then $y$ will not be calculated.
+
+\subsubsection{List Comprehension}
+
+\begin{lstlisting}
+	[x + y | x <- [10,20,30], x > 10, y <- [4,5] ]
+	-- this results in
+	--[20+4, 20+5, 30+4, 30+5]
+\end{lstlisting}
+
+We can use pattern matching as well
+
+\begin{lstlisting}
+	[x+3 | Just x <= [Just 10, Nothing, Just 30]]
+	-- this results in
+	-- [10+3, 30+3]
+\end{lstlisting}
+
+There is also a range notation we can use:
+
+\begin{lstlisting}
+	[1...5] -- this is the same as [1,2,3,4,5]
+\end{lstlisting}
+
+\subsubsection{Algebraic Data Types}
+
+\begin{lstlisting}
+	data MyType = Nada | Duplet Double String | Uno Integer
+\end{lstlisting}
+
+Nada, Duplet, Uno are data constructors. They must start with uppercase letters. They form expressions and patterns.\\
+\\
+The following is an example function that takes in "MyType":
+
+\begin{lstlisting}
+plus1 :: MyType -> MyType
+plus1 Nada = Nada
+plus1 (Duplet r s) = Duplet (r+1) s
+plus1 (Uno i) = Uno (i+1)
+\end{lstlisting}
+
+List, unit, tuple, Maybe, and either are algebraic data types from the standard library.\\
+\\
+Recursive definitions are ok too, like the following:
+
+\begin{lstlisting}
+data Stack = Button | Push Int Stack
+\end{lstlisting}
+
+\subsubsection{Parametric Polymorphism}
+
+consider the following function type contract
+
+\begin{lstlisting}
+map :: (a -> b) -> [a] -> [b]
+\end{lstlisting}
+
+Here both a and b are type variables. They start with lowercase letters (actual data types are capitalized, like Bool). The user chooses what types to use for a and b, and the implementer cannot choose what type of a and b, and must let their function work for all types of a and b.\\
+\\
+Algebraic data types can be parameterized by type variables too, for example:
+
+\begin{lstlisting}
+data Either a b = Left a | Right b
+-- We can generalize the previous stack example to
+data Stack a = Bottom | Push a (Stack a)
+\end{lstlisting}
+
+\subsubsection{Type-Class Polymorphism}
+
+We notice that comparison functions like
+\begin{lstlisting}
+	(==)
+	(<)
+\end{lstlisting}
+cannot use completely general it its polymorphism, they must take in items as input that are two of the same type of class that can be compared.\\
+\\
+So how does Haskell pull these off?\\
+\\
+Haskell uses a \textbf{type class} that declares overloaded operations. So the example from before:
+\begin{lstlisting}
+	(==)
+	(<)
+\end{lstlisting}
+must take in two inputs,lets call them $a->a$, where they are both of type $Eq\: a$, which is a class that lets the two inputs be compared.\\
+\\
+However, note that classes are not the same as types. $Eq$ is not a type, $Bool$ is not a subclass.\\
+\\
+So if we were to type this out:
+\begin{lstlisting}
+	(==) :: Eq a => a -> a -> Bool
+	- "Eq a" is a "class constraint"
+\end{lstlisting}
+In this example, the user chooses what type to use for $a$, but that chosen type must be an instance of $Eq$.\\
+\\
+Note that constraints propagate down the dependency chain:
+\begin{lstlisting}
+	(==) :: Eq a => a -> a -> Bool
+	
+	eq3 :: Eq a => a -> a -> a -> Bool
+	eq3 x y z = x==y && y==z
+\end{lstlisting}
+
 
 \end{document}
 

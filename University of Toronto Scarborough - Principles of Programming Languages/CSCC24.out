@@ -45,3 +45,10 @@
 \BOOKMARK [2][-]{subsection.5.1}{Haskell \(cont'd\)}{section.5}% 45
 \BOOKMARK [3][-]{subsubsection.5.1.1}{Local Definitions For Expressions}{subsection.5.1}% 46
 \BOOKMARK [3][-]{subsubsection.5.1.2}{Local Definitions For Definitions}{subsection.5.1}% 47
+\BOOKMARK [3][-]{subsubsection.5.1.3}{Pattern Matching}{subsection.5.1}% 48
+\BOOKMARK [3][-]{subsubsection.5.1.4}{Guards}{subsection.5.1}% 49
+\BOOKMARK [3][-]{subsubsection.5.1.5}{Local Definitions under Patterns and Guards}{subsection.5.1}% 50
+\BOOKMARK [3][-]{subsubsection.5.1.6}{List Comprehension}{subsection.5.1}% 51
+\BOOKMARK [3][-]{subsubsection.5.1.7}{Algebraic Data Types}{subsection.5.1}% 52
+\BOOKMARK [3][-]{subsubsection.5.1.8}{Parametric Polymorphism}{subsection.5.1}% 53
+\BOOKMARK [3][-]{subsubsection.5.1.9}{Type-Class Polymorphism}{subsection.5.1}% 54

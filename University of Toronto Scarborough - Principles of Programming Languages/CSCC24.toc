@@ -72,3 +72,4 @@
 \contentsline {subsubsection}{\numberline {6.1.4}Haskell's Number System}{26}{subsubsection.6.1.4}
 \contentsline {subsubsection}{\numberline {6.1.5}Functor}{26}{subsubsection.6.1.5}
 \contentsline {subsubsection}{\numberline {6.1.6}Applicatives}{27}{subsubsection.6.1.6}
+\contentsline {subsection}{\numberline {6.2}Test}{28}{subsection.6.2}

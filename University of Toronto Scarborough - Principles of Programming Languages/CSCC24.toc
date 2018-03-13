@@ -86,3 +86,5 @@
 \contentsline {subsubsection}{\numberline {7.2.7}Left Recursive vs Right Recursive}{33}{subsubsection.7.2.7}
 \contentsline {subsubsection}{\numberline {7.2.8}Recursive Descent Parsing}{34}{subsubsection.7.2.8}
 \contentsline {subsubsection}{\numberline {7.2.9}Recursive Descent Parser Example}{34}{subsubsection.7.2.9}
+\contentsline {section}{\numberline {8}Thursday, March 8, 2018}{35}{section.8}
+\contentsline {subsection}{\numberline {8.1}Parser Library}{35}{subsection.8.1}

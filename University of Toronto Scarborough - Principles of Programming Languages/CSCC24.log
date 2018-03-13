@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  12 MAR 2018 19:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  13 MAR 2018 16:23
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **CSCC24.tex
@@ -3744,7 +3744,7 @@ Package xcolor Warning: Incompatible color definition on input line 1340.
 
 Package xcolor Warning: Incompatible color definition on input line 1341.
 
-<imgs/syntax1.png, id=1006, 367.3725pt x 314.17375pt>
+<imgs/syntax1.png, id=1021, 367.3725pt x 314.17375pt>
 File: imgs/syntax1.png Graphic file (type png)
  <use imgs/syntax1.png>
 Package pdftex.def Info: imgs/syntax1.png used on input line 1348.
@@ -3756,7 +3756,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32 <./imgs/syntax1.png>] <imgs/syntax2.png, id=1017, 583.17876pt x 309.155pt>
+[32 <./imgs/syntax1.png>] <imgs/syntax2.png, id=1032, 583.17876pt x 309.155pt>
 File: imgs/syntax2.png Graphic file (type png)
 
 <use imgs/syntax2.png>
@@ -3902,31 +3902,454 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [34]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1431.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1431.
+
+Package xcolor Warning: Incompatible color definition on input line 1434.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1434.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1434.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1435.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1436.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1438.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1438.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1439.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1440.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1441.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1443.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1443.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1444.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1445.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1446.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1447.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1448.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1450.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1450.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1451.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1453.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1453.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1454.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1455.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1456.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1457.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1458.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1460.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1460.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1461.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1462.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1463.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1464.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1465.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1467.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1467.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1468.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1469.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1470.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1471.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1472.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1473.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1475.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1475.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[35]
+
+Package xcolor Warning: Incompatible color definition on input line 1476.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1477.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1478.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1479.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1480.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1482.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1482.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1483.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1484.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1485.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1486.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1487.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1490.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1490.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1490.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1491.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1492.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1493.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1494.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1495.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1496.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1497.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1499.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1499.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1500.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1501.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1502.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1504.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1504.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1505.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1506.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1507.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1508.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1509.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1510.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1511.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1512.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1514.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1514.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1515.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1516.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1517.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[36]
+
+Package xcolor Warning: Incompatible color definition on input line 1518.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1519.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1520.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1521.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1522.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1523.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1524.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1525.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1526.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1527.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1529.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1529.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1530.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1531.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1532.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1533.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1534.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1535.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1536.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1537.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1538.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1539.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1540.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1541.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1543.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1543.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1544.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1547.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1547.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1547.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1550.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1550.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1550.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1551.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1552.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1553.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1554.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1555.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1557.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1557.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1558.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37]
+
+Package xcolor Warning: Incompatible color definition on input line 1559.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1560.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1561.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1563.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1563.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1564.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1565.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[38]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1568.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1568.
  (./CSCC24.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1431.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1431.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1568.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1568.
 
-
-
-Package rerunfilecheck Warning: File `CSCC24.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `CSCC24.out':
-(rerunfilecheck)             Before: 5786308F228AE0866B914C21AB006DD2;5564
-(rerunfilecheck)             After:  F7BF078B55BF98E9DBD1281E168EFAEA;5656.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1431.
+Package rerunfilecheck Info: File `CSCC24.out' has not changed.
+(rerunfilecheck)             Checksum: 8CB07470969014F83525996809954A08;5779.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1568.
  ) 
 Here is how much of TeX's memory you used:
- 23131 strings out of 492995
- 415951 string characters out of 6132704
- 592599 words of memory out of 5000000
- 25683 multiletter control sequences out of 15000+600000
+ 23365 strings out of 492995
+ 419336 string characters out of 6132704
+ 705601 words of memory out of 5000000
+ 25779 multiletter control sequences out of 15000+600000
  15701 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,73p,925b,1821s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,73p,925b,1825s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -3938,10 +4361,10 @@ cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
 /texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
 texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on CSCC24.pdf (34 pages, 244539 bytes).
+Output written on CSCC24.pdf (38 pages, 260458 bytes).
 PDF statistics:
- 1216 PDF objects out of 1440 (max. 8388607)
- 1154 compressed objects within 12 object streams
- 615 named destinations out of 1000 (max. 500000)
- 623 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1410 PDF objects out of 1440 (max. 8388607)
+ 1342 compressed objects within 14 object streams
+ 753 named destinations out of 1000 (max. 500000)
+ 647 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -930,10 +930,71 @@ and $a_k = a_k^+ + a_k^-$, and if $\sum a_k$ is convergent, the both $\sum a_k^+
 
 \begin{proof}
 	We know that $e = \sum^\infty_{k=0} \frac{1}{k!}$. Suppose that e is rational, then $e = \frac{a}{b}, a,b\in\mathbb{Z}, b \neq 0$. Then.
-	$$
+	$$(b+1)! \sum^{b+1}_{k=0} \frac{1}{k!} \in \mathbb{N}, (b+1)!e \in \mathbb{N}$$
+	This implies that
+	\begin{align*}
+	&\Longrightarrow (b+1)! \sum^\infty_{k=b+2} \frac{1}{k!} \in \mathbb{N}\\
+	&= (b+1)! (\frac{1}{(b+2)!} + \frac{1}{(b+3)!} + ...)\\
+	&= (\frac{1}{(b+2)} + \frac{1}{(b+2)(b+3)} + ...)\\
+	&<  (\frac{1}{(b+2)} + \frac{1}{(b+2)^2} + ...)\\
+	&=  \sum^\infty_{k=1} \frac{1}{(b+2)^k}\\
+	&= \frac{1}{(b+2)}(\frac{1}{1 - \frac{1}{b+2}})\\
+	&= \frac{1}{(b+2)}(\frac{b+2}{(b+1)}) = \frac{1}{(b+1)} < 1
+	\end{align*}
+	This is a contradiction, therefore $e$ must be irrational
+
 \end{proof}
 
+\subsection{Power Series}
 
+Another convergence test: The root test
+
+\begin{definition}
+	(The root test) given $\sum^\infty_{k=1} a_k$, consider $\lim_{k\to\infty} |a_k|^{\frac{1}{k}}$, if $\lim_{k\to\infty} |a_k|^{\frac{1}{k}}$ exists and it's less than 1, then it converges, if it's greater than 1, then it diverges.
+\end{definition}
+
+We can apply this test to power series.
+
+\begin{theorem}
+	Given $\sum^\infty_{k=1} a_k x^k$, let $c=\lim_{k\to\infty} |a_k|^{\frac{1}{k}}$, $R = \frac{1}{c}, c\neq 0$ then $\sum^\infty_{k=1} a_k x^k$ converges for $|x| <R$ if $R<1$ and $\sum^\infty_{k=1} a_k x^k$ diverges if $|x| > R$
+\end{theorem}
+
+So basically, for $x \in (-R, R)$ the series converges, and for $x \not\in [-R, R]$ the series diverges. $x = \pm R$ is still unknown
+
+\begin{proof}
+	apply the root test
+	\begin{align*}
+		\lim_{k\to\infty} (| a_k x^k |)^{\frac{1}{k}} &= \lim_{k\to\infty} | a_k |^{\frac{1}{k}} |x|\\
+		&= |x| \lim_{k\to\infty} | a_k |^{\frac{1}{k}}\\
+		&= |x| \cdot c
+	\end{align*}
+	The root test implies that the series converges if $|x|\cdot c < 1$ and this implies that $|x| < \frac{1}{c} = R, c \neq 0$ And the series diverges if $|x| c > 1$ which happens iff $|x| > R$
+	
+\end{proof}
+
+\begin{remark}
+	if $c=0$ $(R = \infty)$ then $\sum^\infty_{k=0} a_k x^k$ converges for all $x \in \mathbb{R}$.\\
+	\\
+	if $\lim_k |a_k|^{\frac{1}{k}}$ then series only converges for $x=0$
+\end{remark}
+
+\begin{example}
+	$sum^\infty_{k=0} \frac{x^k}{k!}, R = \infty$
+\end{example}
+
+\begin{example}
+	$sum^\infty_{k=0} x^k, R=1$, if $x=\pm 1$ then the series diverges
+\end{example}
+
+\begin{example}
+	$sum^\infty_{k=1} \frac{x^k}{k}$ apply the ratio test, $R =1$, $|(\frac{x^{k+1}}{k+1}) (\frac{k}{x^k})| = |x| \frac{k}{k+1}$
+	so when $x=1$, $sum^\infty_{k=1} \frac{x^k}{k}$ diverges
+	and when $x=-1$, $sum^\infty_{k=1} \frac{x^k}{k}$ converges
+\end{example}
+
+\begin{example}
+	$sum^\infty_{k=1} \frac{x^k}{k^2}, R=1$ and this converges for $x=\pm 1$  
+\end{example}
 
 \newpage
 
@@ -1092,6 +1153,15 @@ By triangle inequality.
 
 \end{proof}
 
+\newpage
+
+\section{Monday, February 5, 2018}
+
+\subsection{Convergence}
+
+\begin{definition}
+	Sequence at functions $\{ f_n (x) \}, x\in S \subset \mathbb{R}$ converges pointwise to $f(x)$ on $S$ if for any $x_0 \in S$, the sequence $\{ f_n (x_0) \} \to f (x_0)$ as $n \to \infty$
+\end{definition}
 
 
 

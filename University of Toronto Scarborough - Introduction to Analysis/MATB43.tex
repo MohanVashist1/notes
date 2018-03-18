@@ -1160,8 +1160,65 @@ By triangle inequality.
 \subsection{Convergence}
 
 \begin{definition}
-	Sequence at functions $\{ f_n (x) \}, x\in S \subset \mathbb{R}$ converges pointwise to $f(x)$ on $S$ if for any $x_0 \in S$, the sequence $\{ f_n (x_0) \} \to f (x_0)$ as $n \to \infty$
+	Sequence of functions $\{ f_n (x) \}, x\in S \subset \mathbb{R}$ converges pointwise to $f(x)$ on $S$ if for any $x_0 \in S$, the sequence $\{ f_n (x_0) \} \to f (x_0)$ as $n \to \infty$
 \end{definition}
+
+$f_n (x_0)$ uniformly converges if $\epsilon > 0$, there exists $N$ such that $\forall x \in S$, $|f_n (x) - f(x)| < \epsilon$ if $n > N$
+
+\begin{example}
+	on $[0,1], f_n (x) = \frac{x}{n} \leq \frac{1}{n}$. For all $x$, pick $N$ given $\epsilon$, $\frac{1}{N} < \epsilon$, then for all $n \geq N$, $f_n (x) \leq \frac{1}{n} \leq \frac{1}{N} < \epsilon$ for all $x$, this implies that on $[0,1]$, $f_n \to f$ uniformly
+\end{example}
+
+\begin{example}
+	Does $f_n (x)$ from the above example converge uniformly for $x\in[0,\infty)$? No.\\
+	\\
+	Given $\epsilon > 0$, for any $N$, we can find $x_0$ with $\frac{x_0}{N} \geq \epsilon$, $f_n (x_0) \geq \epsilon$
+\end{example}
+
+\begin{theorem}
+	Suppose $f_n \to f$ uniformly on $S$, $f_n$ continuous for all $n$, then $f$ continuous on $S$
+\end{theorem}
+
+\begin{example}
+	$f_n (x) = \frac{1}{1+x^n}$
+	$$\lim_{n\to\infty} = \begin{cases}
+		\frac{1}{2}, &x=1\\
+		1, &x \in [0,1)
+	\end{cases}
+$$
+Since $f$ is not continuous at $1$, convergence not uniform by the theorem.
+\end{example}
+
+\begin{theorem}
+	$f_n$ continuous on $[a,b] \in \mathbb{R}$, $f_n \to f$ uniformly on $[a,b]$ then that implies that
+	$$\lim_{n\to\infty} \int_a^b f_n (x) dx = \int_a^b f (x) dx$$
+\end{theorem}
+
+\begin{example}
+	$f(x) = \sum^\infty_{k=0} x^k, |x| < 1$ set $S_n (x) = \sum^n_{k=0} x^k$ then $S_n \to f$ pointwise, pick $a\in (0,1)$
+	
+	$$|S_m - S_n| = \sum^m_{k=n+1} x^k \leq \sum^m_{k=n+1} |x|^k \leq \sum^m_{k=n+1} a^k$$ if $|x| \leq a$, since $\sum^\infty_{k=0} a^k$ converges it satisfies the cauchy criterion. So, given $\epsilon > 0$, there exists $N$, such that for $m > n > N$ that
+	$$\sum^m_{k=n+1} a^k < \epsilon$$
+	$$\Longrightarrow |S_m (x) - S_n (x) | < \epsilon$$ for $m,n > N$ and for all $x$.
+	
+\end{example}
+
+So a uniform definition version of the Cauchy Criterion is needed. A Uniform Cauchy Criterion perhaps.\\
+
+\begin{theorem}
+$\{ f_n \}$ defined on $S$, satisfies the Uniform Cauchy Criterion if given $\epsilon > 0$, there exists $N$ such that for $m,n > N$, we have $|f_n (x) - f_m (x)|< \epsilon$ for all $x\in S$.
+\end{theorem}
+
+\begin{theorem}
+	Suppose $\{ f_n (x) \}$ satisfies the uniform Cauchy Criterion on $S$ then for $x_0 \in S$, $\{ f_n (x) \}$ satisfies the the cauchy property and therefore $\lim_{n\to\infty} f_n (x_0)$ exists, if $f(x_0) = \lim_{n\to\infty} f_n (x_0)$ then $f_n \to f$ uniformly on S
+\end{theorem}
+
+\begin{example}
+	partial sums $S_n (x)$ of a geometric series satisfies Uniform Cauchy Criterion on $[-a, a]$ where $a \in [0,1]$, $S_n \to f$ uniformly on $[-a, a]$.
+\end{example}
+
+
+
 
 
 

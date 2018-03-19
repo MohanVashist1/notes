@@ -1217,6 +1217,88 @@ $\{ f_n \}$ defined on $S$, satisfies the Uniform Cauchy Criterion if given $\ep
 	partial sums $S_n (x)$ of a geometric series satisfies Uniform Cauchy Criterion on $[-a, a]$ where $a \in [0,1]$, $S_n \to f$ uniformly on $[-a, a]$.
 \end{example}
 
+\newpage
+
+\section{Friday, February 9, 2018}
+
+\newpage
+
+\section{Monday, February 12, 2018}
+
+\subsection{Power Series}
+
+\begin{definition}
+	A \textbf{Power Series} is a series of the form $$f(x) = \sum^\infty_{k=0} a_k x^k$$ and if it has a radius of convergence of $R > 0$ then $f$ is continuous and differentiable on $(-R, R)$  with $$f(x) = \sum^\infty_{k=0} kx^{k-1}$$ and $$\int^x_0 f(t) dt = sum^\infty_{k=0} a_k \frac{x^{k+1}}{k+1}, x \in (-R, R)$$
+\end{definition}
+
+\begin{example}
+	$\frac{1}{1-x} = sum^\infty_{k=0} x^k, |x| < 1$
+	\begin{align*}
+		\int^x_0 \frac{dt}{1-t} &= -log(1-x)\\
+		&= sum^\infty_{k=0} \frac{x^{k+1}}{k+1} \\
+		&\Longrightarrow log(1-x) = - \sum^\infty_{k=0} \frac{x^{k+1}}{k+1}, |x| <1\\
+		&\Longrightarrow log(1+x) = \sum^\infty_{k=1} \frac{(-1)^{k+1} x^k}{k}
+	\end{align*}
+	What happens at $x=1$? Both sides define functions which are continuous at 1.
+\end{example}
+
+\begin{theorem}
+	\textbf{Abel's Theorem:} Suppose $f(x) = \sum^\infty_{k=0} a_k x^k$, radius of convergence is $R > 0$, if the series converges at $R$ or $-R$ then $f$ is continuous at $R$ or $-R$.
+\end{theorem}
+
+\begin{definition}
+	\textbf{Exponential Function:} $exp(x) = \sum^\infty_{k=0} \frac{x^k}{k!} = e^k$ converges for all real values of $x$\\
+	\underline{properties:}
+	\begin{enumerate}
+		\item{$$exp ' (x) = exp(x)$$\\
+		Suppose $f(x)=\sum^\infty_{k=0} a_k x^k$ converges for $|x| < R$, and $f'(x) = f(x)$, this implies that $f^n (x) = f(x)$ and that $f^n (0) = a_n$, which also implies that $a_n = \frac{a_0}{n!}$ which implies that $f(x) = a_0 exp(x)$\\
+		(note: the solutions for $\frac{dy}{dx} = y$ are $c \cdot exp(x), c \in \mathbb{R}$) 
+		}
+		\item{
+		$$exp(a+b) = exp(a)exp(b)\:\:\: a,b \in\mathbb{R}$$
+		let $f(x)=exp(a+x)$
+		$$\Longrightarrow f'(x) = cf(x), c \in\mathbb{R}$$
+		$$exp(a+x) = c \cdot exp(x)$$ in particular for $x=0$,
+		$$exp(a) = c\cdot exp(0) \Longrightarrow exp(a) = c \cdot 1 = c$$
+		$$\Longrightarrow exp(a+x) = exp(a) exp(x), \forall x \in\mathbb{R}$$
+		define $e = exp(1)=\sum^\infty_{k=0} \frac{1}{k!}$
+		$$e^m=exp(m),m\in\mathbb{N}$$
+		$l\in\mathbb{N}$ then, $exp(\frac{m}{l})^l = exp(m) = e^m$
+		$$\Longrightarrow exp(\frac{m}{l}) = e^{\frac{m}{l}}$$
+		$$\Longrightarrow e^q = exp(q), q \in \mathbb{Q}$$
+		since $exp'(x) = exp(x) > 0$ $\Longrightarrow exp$ is increasing.\\
+		For $r\in\mathbb{R}$, define $e^r = sup \{ e^q | q\in\mathbb{Q}, q < r \} = exp(r)$
+		}
+	\end{enumerate}
+
+\end{definition}
+
+$$e^x = exp(x) = \sum^\infty_{k=0} \frac{x^k}{k!}$$
+
+\underline{Properties:}
+\begin{enumerate}
+	\item{
+	$e^x$ is strictly increasing
+	\begin{proof}
+		The mean value theorem states that:
+		$$e^b - e^a = (b-a) e^c$$
+		for some $c\in (a,b)$, and since $ (b-a) e^c$ is always above 0, then $e^b > e^a$
+	\end{proof}
+
+	}
+	\item{$\lim_{x\to-\infty} e^x = 0$
+	\begin{proof}
+		$$e^x > 1+x$$
+		so $x\to\infty \Longrightarrow e^x\to\infty$
+		$\Longrightarrow e^{-x} = \frac{1}{e^x} \to 0$ as $x\to\infty$
+	\end{proof}
+
+	}
+\end{enumerate}
+
+\newpage
+
+
 
 
 

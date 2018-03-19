@@ -28,3 +28,6 @@
 \contentsline {subsection}{\numberline {8.2}Integrals}{30}{subsection.8.2}
 \contentsline {section}{\numberline {9}Monday, February 5, 2018}{32}{section.9}
 \contentsline {subsection}{\numberline {9.1}Convergence}{32}{subsection.9.1}
+\contentsline {section}{\numberline {10}Friday, February 9, 2018}{34}{section.10}
+\contentsline {section}{\numberline {11}Monday, February 12, 2018}{35}{section.11}
+\contentsline {subsection}{\numberline {11.1}Power Series}{35}{subsection.11.1}

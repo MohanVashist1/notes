@@ -1405,11 +1405,68 @@ $$e^x = exp(x) = \sum^\infty_{k=0} \frac{x^k}{k!}$$
 
 \newpage
 
-\section{Monday, February 19, 2018}
+\section{Monday, February 26, 2018}
 
+\newpage
 
+\section{Monday, March 19, 2018}
 
+\subsection{Topology of real numbers}
 
+\begin{example}
+	Open sets $U_1 \supseteq U_2 \supseteq ... \supseteq U_n \supseteq ....$ such that $\bigcap U_n \neq \varnothing$, is it closed?\\
+	\\
+	Take $U_n = (-\frac{1}{n}, \frac{1}{n})$. $\bigcap^\infty_{n} U_n = \{ 0 \}$, this is nonempty and closed.\\
+\end{example}
+
+\begin{example}
+	Let $U_1 \subseteq U_2 \subseteq ... \subseteq U_n \subseteq ...$ be open sets and suppose $S_n = \mathbb{R}\setminus U_n$ bounded, $S_n \neq \varnothing$\\
+	\underline{Claim:} $U = \bigcup^\infty_{n=1} U_n \neq \mathbb{R}$.\\
+	We're looking for an example of an open set $U$ such that $S=\mathbb{R} \setminus U$ is bounded and nonempty.\\
+	\\
+	$U = (-\infty, 0) \cup (1, \infty)$\\
+	$S = [0,1]$
+\end{example}
+
+(Equivalent claim:) $\mathbb{R} \setminus U = \cap^\infty_{n=1} S_n$ where $S_1 \supseteq S_2 \supseteq ... \supseteq S_n \supseteq ...$ and $S_n$ is bounded and closed $\Longrightarrow S_n$ compact
+
+\subsection{More on the exponential function}
+
+\begin{example}
+	$$\int^\infty_{-\infty} e^{-x^2} dx = \sqrt{\pi}$$
+
+	\begin{enumerate}
+		\item{
+		\underline{convergence of the integral}
+		if $\int^\infty_{0} e^{-x^2} dx$ converges then
+		$$\int^\infty_{-\infty} e^{-x^2} dx = 2 \int^\infty_{0} e^{-x^2} dx = \int^\infty_{0} e^{-x^2} dx + \int^0_{-\infty} e^{-x^2} dx$$
+		$$e^{-x^2} \to 0 \text{ as } x \to \infty$$
+		$$e^t = 1 + t+  \frac{t^2}{2} + ... \Longrightarrow e^t > t, \forall t \geq 0$$
+		$$e^{x^2} > x^2 \Longrightarrow e^{-x^2} < x^{-2}$$
+		
+		$$\int^a_1e^{-x^2} dx < \int^a_1x^{-2} dx = -[\frac{1}{x}]^a_1 = 1 - \frac{1}{a} \to 1, a > 1$$
+		So therefore
+		$$\lim_{a\to\infty} \int_1^a e^{-x^2} dx \text{ exists}$$
+		}
+	\end{enumerate}
+	\underline{i.e.} $\int^\infty_{1} e^{-x^2} dx$ converges $\Longrightarrow \int^\infty_{0} e^{-x^2} dx$ converges
+
+\end{example}
+
+\begin{example}
+	Compute 
+	\begin{align*}
+		(\int^\infty_{-\infty} e^{-x^2} dx) &= \int^\infty_{-\infty} \int^\infty_{-\infty} e^{-x^2} \cdot e^{-y^2} dx dy\\
+		&= \int^\infty_{-\infty} \int^\infty_{-\infty} e^{-(x^2 + y^2)}
+	\end{align*}
+	Here we use polar coordinates:
+	$$r^2 = x^2 + y^2, dxdy=rdrd\theta$$
+	$$\int^{2\pi}_0 \int^\infty_0 e^{-r^2} rdrd\theta$$
+	And since
+	$$\frac{d}{dr} e^{-r^2} = -2re^{-r^2} \Longrightarrow$$
+	$$\int^{2\pi}_0 \int^\infty_0 e^{-r^2} rdrd\theta = 2\pi (\int^\infty_0 e^{-r^2} rdr) = \pi$$
+
+\end{example}
 
 
 

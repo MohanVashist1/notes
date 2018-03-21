@@ -1221,14 +1221,121 @@ $\{ f_n \}$ defined on $S$, satisfies the Uniform Cauchy Criterion if given $\ep
 
 \section{Friday, February 9, 2018}
 
+\subsection{Power Series}
+
+Suppose $\sum^\infty_{k=0} a_k x^k$ with a radius of convergence $R$, then the partial sums $S_n (x) = \sum^n_{k=0} a_k x^k$ converge uniformly to $f$ on $[-a,a]$ for $a \in [0,R]$. Such an example is a geometric series.\\
+\\
+So our plan is to define the Uniform Cauchy Criterion and prove that the sequence converges uniformly, then we will introduce the Weierstrass M-Test and the prove the theorem.
+
+\begin{definition}
+	\textbf{Uniform Cauchy Criterion} given a sequence of functions $\{ f_k \}$ defined on $S \subset \mathbb{R}$, $\{ f_k \}$ is uniformly cauchy, if given $\epsilon > 0$, there exists $N$ such that for $m,n > N$, $|f_m - f_n| < \epsilon$ for all $x \in S$
+\end{definition}
+
+Remark: So for each $x_0 \in S$, iff follows that the sequence $\{ f_k \}$ is a cauchy sequence $\Longrightarrow$ $\{ f_k (x_0)\}$ converges
+
+\begin{proof}
+	given $\epsilon > 0$ there exists $N$ such that for $m,n > N$ then 
+	$|f_m (x) - f_n (x) | < \frac{\epsilon}{2}$
+	equivalently, $f_n (x) \in (f_m (x) - \frac{\epsilon}{2}, f_m (x) + \frac{\epsilon}{2}) $
+	$$a_n \in (c,d) \Longrightarrow \lim_{n\to\infty} a_n \in [c,d]$$
+	but $$[f_m (x) - \frac{\epsilon}{2}, f_m (x) + \frac{\epsilon}{2}] \subset (f_m (x) - \epsilon, f_m (x) + \epsilon)$$
+	$$\Longrightarrow |f_m (x) - f(x)| < \epsilon \text{ therefore cauchy convergent}$$
+\end{proof}
+
+\begin{definition}
+	\textbf{Weierstrass M-Test} $\{ f_k \}$, $k \geq 0$ defined on $S \subset \mathbb{R}$, such that $|f_k (x)| \leq M_k$ for some $M_k \geq 0$ where $\sum_k M_k < \infty$ then $\sum^\infty_{k=0} f_k (x)^k$ converges uniformly on $S$.
+\end{definition}
+
+\begin{example}
+	$f_k (x) = a_k x^k$
+\end{example}
+
+\begin{proof}
+	Show that $S_n (x) = \sum^n_{k=0} f_k (x)$ satisfy uniform cauchy criterion, now 
+	$$|S_n (x) - S_m (x)| = |\sum^m_{k=n+1} f_k (x)| \leq  \sum^m_{k=n+1} |f (x)| \leq \sum^m_{k=n+1} M_k, \forall x \in S$$
+	since $\sum^\infty_{k=0} M_k$ converges it satisfies the cauchy criterion so given $\epsilon > 0$, there exists $N$ such that for $m>n>N$ $\Longrightarrow$ $|S_n (x) - S_m (x)| < \epsilon$ for $x\in S$ therefore $\{ S_n (x) \}$ satisfies the Uniform Cauchy Criterion $\Longrightarrow$ $S_n \to \sum^\infty_{k=0} f_k (x)$ uniformly
+\end{proof}
+
+\begin{theorem}
+	Suppose $f(x)=\sum^\infty_{k=0} a_k x^k$ has radius of convergence $R > 0$, let $S_n (x) = \sum^n_{k=0} a_k x^k$ then $S_n \to f$ uniformly on $[-a,a]$, $0 < a < R$
+\end{theorem}
+
+\begin{proof}
+	$|a_k x^k| < |a_k| x^k$ for $|x^k| < a$, let $M_k = |a_k| x^k$\\
+	Since $\sum^\infty_{k=0} a_k a^k$ converges, $\sum^\infty_{k=0} < \infty$, Weierstrass converges uniformly on $[-a,a]$\\
+	\\
+	Remark: We need to use $a<R$ because if $a=R$, then $\sum^\infty_{k=0} a_k R^k$ might not converge\\
+	\\
+	to see that $f$ is continuous at $x_0 \in (-R, R)$, pick $a > 0$ such that $x_0 \in [-a,a]$ then uniform convergence $\Longrightarrow$ $f$ is continuous at $x_0$
+\end{proof}
+
+\begin{proposition}
+	Suppose that the series $\sum^\infty_{k=0} a_k x^k$ has a radius of convergence $R$, then
+	$$\sum^\infty_{n=0} na_n x^{n-1}, \sum^\infty_{n=0} \frac{a_n}{n+1} x^{n+1}$$ also have radius of convergence $R$
+\end{proposition}
+
+\begin{proof}
+	$\sum^\infty_{n=0} na_n x^{n-1}$ has some radius of convergence as $$x\sum^\infty_{n=0} na_n x^{n-1} = \sum^\infty_{n=0} na_n x^n$$
+	So the radius of convergence is
+	\begin{align*}
+		&= \lim_{n\to\infty} |na_n|^{\frac{1}{n}} = \lim_{n\to\infty} n^\frac{1}{n} |a_n|^{\frac{1}{n}}\\
+		&= \lim_{n\to\infty} n^\frac{1}{n} \cdot  \lim_{n\to\infty}  |a_n|^{\frac{1}{n}}\\
+		&= 1 \cdot c = \frac{1}{R}
+	\end{align*}
+	The Radius of Convergence of $\sum^\infty_{n=0} \frac{a_n}{n+1} x^{n+1}$ is
+	\begin{align*}
+		&= |\frac{a_n}{n+1}|^{\frac{1}{n+1}}\\
+		&= |a_n|^{\frac{1}{n+1}} (\frac{1}{(n+1)^{n+1}})_{n\to\infty}\\
+		&\to \frac{1}{R} 
+	\end{align*}
+\end{proof}
+
+\begin{theorem}
+	$\int^x_0 f(t) dt = \sum^\infty_{n=0} \frac{a_n}{n+1} x^{n+1}, |x| < R$
+\end{theorem}
+
+\begin{proof}
+	Since $S_n \to f$ uniformly
+	$$\int^x_0 f(t) dt = \lim_{n\to\infty} \int^x_0 S_n dt$$
+	now
+	$$\int^x_0 S_n dt = \sum^n_{k=0} \frac{a_k x^{k+1}}{k+1} \overset{\text{uniformly}}{\to} \sum^\infty_{k=0} \frac{a_k x^{k+1}}{k+1}$$
+	$$\Longrightarrow \int^x_0 f(t) dt = \sum^\infty_{k=0} \frac{a_k x^{k+1}}{k+1}$$
+\end{proof}
+
+\begin{theorem}
+	let $f(x)=\sum^\infty_{k=0} a_k x^k$ has radius of convergence $R>0$ then $f$ is differentiable and $$f'(x) = \sum^\infty_{k=1} k a_k x^{k-1}, x\in (-R,R)$$
+	The previous theorem implies that
+	$$\int^x_0 g(t)dt = \sum^\infty_{k=1} a_k x^k = f(x) - a_0 $$
+	want to apply fundamental theorem.
+	So take $R_1$ where $0 < R_1 < R$ and then
+	$$f(x) = \int^x_0 g(t)dt - \int^c_{-R_1} g(t) dt + a_0 = \int^x_{-R_1} g(t) dt$$
+	So the fundamental theorem implies that
+	$f'(x) = g(x)$ for $|x| < R_1$
+\end{theorem}
+
+\begin{example}
+	$$\frac{1}{1-x} = 1 + x. + x^s + ... = \sum^\infty_{k=0} x^k$$
+	$$\int^x_0 \frac{dt}{1-t} = -log(1-x)$$
+	but
+	$$\int^x_0 \sum^\infty_{k=0} t^k dt = \sum^\infty_{k=0} \frac{x^{k+1}}{k+1}$$
+	so $\sum^\infty_{k=0} \frac{x^k}{k}$ must be $-log(1-x), |x|<1$\\
+	here we replace $x$ by $-x$ and then
+	$$-log(1-x) = \sum^\infty_{k=0} \frac{(-1)^k x^k}{k}$$
+	$$log(1-x) = \sum^\infty_{k=0} \frac{(-1)^{k+1} x^k}{k}$$
+\end{example}
+
+
+
+
+
 \newpage
 
 \section{Monday, February 12, 2018}
 
-\subsection{Power Series}
+\subsection{Power Series (cont'd)}
 
 \begin{definition}
-	A \textbf{Power Series} is a series of the form $$f(x) = \sum^\infty_{k=0} a_k x^k$$ and if it has a radius of convergence of $R > 0$ then $f$ is continuous and differentiable on $(-R, R)$  with $$f(x) = \sum^\infty_{k=0} kx^{k-1}$$ and $$\int^x_0 f(t) dt = sum^\infty_{k=0} a_k \frac{x^{k+1}}{k+1}, x \in (-R, R)$$
+	A \textbf{Power Series} is a series of the form $$f(x) = \sum^\infty_{k=0} a_k x^k$$ and if it has a radius of convergence of $R > 0$ then $f$ is continuous and differentiable on $(-R, R)$  with $$f(x) = \sum^\infty_{k=0} kx^{k-1}$$ and $$\int^x_0 f(t) dt = \sum^\infty_{k=0} a_k \frac{x^{k+1}}{k+1}, x \in (-R, R)$$
 \end{definition}
 
 \begin{example}
@@ -1297,6 +1404,8 @@ $$e^x = exp(x) = \sum^\infty_{k=0} \frac{x^k}{k!}$$
 \end{enumerate}
 
 \newpage
+
+\section{Monday, February 19, 2018}
 
 
 

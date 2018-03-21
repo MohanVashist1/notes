@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  19 MAR 2018 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  21 MAR 2018 14:13
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1682,6 +1682,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [33]
+Underfull \hbox (badness 10000) in paragraph at lines 1226--1229
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1689,6 +1693,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [34]
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1270
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1710,21 +1723,49 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [37]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1308.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1308.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[38]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[39]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[40]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[41]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1417.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1417.
  (./MATB43.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1308.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1308.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1417.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1417.
 
 Package rerunfilecheck Info: File `MATB43.out' has not changed.
-(rerunfilecheck)             Checksum: EA5CBBE4B23960101B31988860318915;2041.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1308.
+(rerunfilecheck)             Checksum: 99E31D6BBC4CBE0E78F5F6611F1080F6;2178.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1417.
  ) 
 Here is how much of TeX's memory you used:
- 19973 strings out of 492995
- 372426 string characters out of 6132704
- 442728 words of memory out of 5000000
- 22974 multiletter control sequences out of 15000+600000
+ 19989 strings out of 492995
+ 372604 string characters out of 6132704
+ 442731 words of memory out of 5000000
+ 22976 multiletter control sequences out of 15000+600000
  16436 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,73p,925b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1744,10 +1785,10 @@ ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
 /2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
 2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MATB43.pdf (37 pages, 268456 bytes).
+Output written on MATB43.pdf (41 pages, 280203 bytes).
 PDF statistics:
- 570 PDF objects out of 1000 (max. 8388607)
- 509 compressed objects within 6 object streams
- 201 named destinations out of 1000 (max. 500000)
- 269 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 606 PDF objects out of 1000 (max. 8388607)
+ 541 compressed objects within 6 object streams
+ 215 named destinations out of 1000 (max. 500000)
+ 285 words of extra memory for PDF output out of 10000 (max. 10000000)
 

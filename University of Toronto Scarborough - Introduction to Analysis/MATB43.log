@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  22 MAR 2018 12:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  22 MAR 2018 16:49
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1744,6 +1744,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [40]
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1477
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1751,22 +1755,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 1415--1424
+Underfull \hbox (badness 10000) in paragraph at lines 1515--1521
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1415--1424
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1431--1439
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1431--1439
+Underfull \hbox (badness 10000) in paragraph at lines 1515--1521
 
  []
 
@@ -1777,35 +1771,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1456--1461
+Underfull \hbox (badness 10000) in paragraph at lines 1533--1542
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1470--1473
+Underfull \hbox (badness 10000) in paragraph at lines 1533--1542
 
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1474.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1474.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1476--1498
+Underfull \hbox (badness 10000) in paragraph at lines 1549--1557
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1476--1498
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1476--1498
+Underfull \hbox (badness 10000) in paragraph at lines 1549--1557
 
  []
 
@@ -1816,6 +1797,38 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [43]
+Underfull \hbox (badness 10000) in paragraph at lines 1574--1579
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1588--1591
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1592.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1592.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1594--1616
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1594--1616
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1594--1616
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1823,17 +1836,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1507--1510
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1507--1510
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1513--1519
+Underfull \hbox (badness 10000) in paragraph at lines 1616--1620
 
  []
 
@@ -1844,6 +1847,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [45]
+Underfull \hbox (badness 10000) in paragraph at lines 1628--1631
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1628--1631
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1634--1640
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1851,21 +1868,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [46]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1564.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1564.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[47]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1685.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1685.
  (./MATB43.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1564.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1564.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1685.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1685.
 
 Package rerunfilecheck Info: File `MATB43.out' has not changed.
-(rerunfilecheck)             Checksum: 1D30B0149BB5D1CC9AF5A9F7E5869A41;2670.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1564.
+(rerunfilecheck)             Checksum: B79BAAEF9C0DBBE7AD72F4945486D0F7;2747.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1685.
  ) 
 Here is how much of TeX's memory you used:
- 20017 strings out of 492995
- 372956 string characters out of 6132704
- 442740 words of memory out of 5000000
- 22983 multiletter control sequences out of 15000+600000
+ 20040 strings out of 492995
+ 373246 string characters out of 6132704
+ 442743 words of memory out of 5000000
+ 22984 multiletter control sequences out of 15000+600000
  16436 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,13n,73p,925b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1885,10 +1909,10 @@ ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
 /2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
 2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MATB43.pdf (46 pages, 294498 bytes).
+Output written on MATB43.pdf (47 pages, 300639 bytes).
 PDF statistics:
- 679 PDF objects out of 1000 (max. 8388607)
- 608 compressed objects within 7 object streams
- 236 named destinations out of 1000 (max. 500000)
- 341 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 712 PDF objects out of 1000 (max. 8388607)
+ 640 compressed objects within 7 object streams
+ 258 named destinations out of 1000 (max. 500000)
+ 349 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -32,11 +32,12 @@
 \contentsline {subsection}{\numberline {10.1}Power Series}{34}{subsection.10.1}
 \contentsline {section}{\numberline {11}Monday, February 12, 2018}{38}{section.11}
 \contentsline {subsection}{\numberline {11.1}Power Series (cont'd)}{38}{subsection.11.1}
-\contentsline {section}{\numberline {12}Monday, February 26, 2018}{41}{section.12}
-\contentsline {section}{\numberline {13}Friday, March 16, 2018}{42}{section.13}
-\contentsline {subsection}{\numberline {13.1}Compact Sets}{42}{subsection.13.1}
-\contentsline {subsection}{\numberline {13.2}Cantor Set}{43}{subsection.13.2}
-\contentsline {subsubsection}{\numberline {13.2.1}Description of Points in $S$}{43}{subsubsection.13.2.1}
-\contentsline {section}{\numberline {14}Monday, March 19, 2018}{45}{section.14}
-\contentsline {subsection}{\numberline {14.1}Topology of real numbers}{45}{subsection.14.1}
-\contentsline {subsection}{\numberline {14.2}More on the exponential function}{45}{subsection.14.2}
+\contentsline {section}{\numberline {12}Monday, March 12, 2018}{41}{section.12}
+\contentsline {subsection}{\numberline {12.1}Topology of the real numbers}{41}{subsection.12.1}
+\contentsline {section}{\numberline {13}Friday, March 16, 2018}{43}{section.13}
+\contentsline {subsection}{\numberline {13.1}Compact Sets}{43}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Cantor Set}{44}{subsection.13.2}
+\contentsline {subsubsection}{\numberline {13.2.1}Description of Points in $S$}{44}{subsubsection.13.2.1}
+\contentsline {section}{\numberline {14}Monday, March 19, 2018}{46}{section.14}
+\contentsline {subsection}{\numberline {14.1}Topology of real numbers}{46}{subsection.14.1}
+\contentsline {subsection}{\numberline {14.2}More on the exponential function}{46}{subsection.14.2}

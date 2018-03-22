@@ -1405,7 +1405,125 @@ $$e^x = exp(x) = \sum^\infty_{k=0} \frac{x^k}{k!}$$
 
 \newpage
 
-\section{Monday, February 26, 2018}
+\section{Monday, March 12, 2018}
+
+\subsection{Topology of the real numbers}
+
+\begin{definition}
+	\textbf{Open sets:} Every $a\in S$ has a neighbourhood that is a subset of $S$.
+\end{definition}
+
+\begin{definition}
+	\textbf{Closed sets:} The limit of a cauchy sequence in $S$ lies in $S$.
+\end{definition}
+
+\begin{definition}
+	\textbf{Boundary of $S (\partial S)$:} $a\in \partial S$ if every neighbourhood of $A$ meets $S$ and $\mathbb{R}\setminus S$.\\
+	$a\in \partial S$ is either an isolated point of $S$ or an accumulation point of $S$.\\
+	$a\in \partial S$ is an isolated point of $S$ if there is a neighbourhood of $a$, which only meets $S$ at $a$\\
+	$a\in \partial S$ is an accumulation point of $S$ if every neighbourhood of $a$ contains infinitely many points of $S$.
+\end{definition}
+
+\begin{example}
+	on the interval $[0,1] \cup \{2 \}, 2$ is an isolated point
+\end{example}
+
+\begin{proposition}
+	If $S \subset \mathbb{R}$ is a bounded infinite set, then $S$ has a accumulation point.
+\end{proposition}
+
+\begin{proof}
+	Let $\{ a_k \} \subset S$ be an infinite sequence. Since $\{ a_k \} $ is bounded, it has a convergent subsequence: $\{ a_{k_j} \} \to a \in \mathbb{R}$
+	\\
+	then $a$ is an accumulation point, since every neighbourhood of $a$ has infinitely many points in the subsequence
+\end{proof}
+
+\begin{example}
+	$S = \{ \frac{1}{n} \}^\infty_{n=1}$. Here, 0 is an accumulation point.
+\end{example}
+
+\begin{definition}
+	\textbf{Alternative definition for an Open Set:} $U$ is open iff $U$ is disjoint $\Longrightarrow U \cap (\partial U )= \varnothing$
+\end{definition}
+
+\begin{definition}
+	\textbf{Alternative definition for a Closed Set:} $S$ is closed iff $S \supset \partial S$
+\end{definition}
+
+\begin{definition}
+	\textbf{Closure of $S$:} $\overline{S} = S \cup \partial S$, if $S$ is closed, then $\overline{S} = S$
+\end{definition}
+
+\begin{example}
+	Let $S = (0,1)$, then $\overline{S} = [0,1]$
+\end{example}
+
+\begin{proposition}
+	$\overline{S}$ is closed
+\end{proposition}
+
+\begin{proof}
+	We want to show that $\overline{S} = S$, and $S$ is an open set.\\
+	$U = \mathbb{R} \setminus S$ we want to show that $U$ is open.\\
+	If $a\in U$, then $a \not\in S, a \not\in \partial S$ then there exists a neighbourhood $(a-\epsilon, a+\epsilon) \subset \mathbb{R} \setminus \overline{S} = U $
+	 This implies that $U$ is open and $\overline{S}$ is closed.
+\end{proof}
+
+This implies that there exists an $a$ such that the neighbourhood around $a$
+\\
+	 \\
+	 So $(a-\epsilon, a+\epsilon) \to \forall a$ then given $S \subset \mathbb{R}$, suppose $a \in S$ and $a \not\in \partial S$\\
+	  $\Longrightarrow$ There exists a neighbourhood of $a \subset S$
+
+\begin{definition}
+	If $a \in S$ and there exists a neighbourhood of $a$, $(a-\epsilon, a+\epsilon) \subset S$, then $a$ is an \textbf{interior point} of $S$.
+\end{definition}
+
+\begin{example}
+	For the interval $[0,1]$, only 0 and 1 are not interior points
+\end{example}
+
+\begin{example}
+	$S$ is open $\Longrightarrow$ every point in $S$ is an interior point
+\end{example}
+
+\begin{example}
+	$S = \{ \frac{1}{n} \}^\infty_{n=1}$ has no interior points
+\end{example}
+
+\begin{definition}
+	A set $S \subset \mathbb{R}$ is compact if every sequence $\{ a_n \} \subset S $ has a convergent subsequence who's limit lies in $S$
+\end{definition}
+
+\begin{example}
+	$[0,2]$ is compact, as every sequence is bounded, therefore there exists a convergent subsequence since $[0,2]$ is closed, the limit lies in $[0,2]$
+\end{example}
+
+\begin{example}
+	$S=[0,\infty)$, take $a_n = n, n\geq 1$, since $a_n \to \infty$, there is no convergent subsequence, therefore $S$ is not compact.
+\end{example}
+
+\begin{example}
+	$S=(0,3)$. Take $a_n = 3 - \frac{1}{n}, n\geq 1$, then $a_n \to 3$. This means than $S$ is not compact
+\end{example}
+
+\begin{proposition}
+	$S$ is compact iff $S$ is closed and bounded
+\end{proposition}
+
+\begin{proof}
+	Suppose $S$ is closed and bounded, then if $\{ a_n \} \subset S, \{ a_n \}$ is bounded. $\Longrightarrow$ There exists a convergent subsequence $\{ a_{n_k} \}_k \to a$. Since $S$ is closed, $a \in S \Longrightarrow S$ is compact.\\
+	\\
+	Conversely, assuming $S$ is compact.\\
+	\\
+	$S$ is not bounded, then there exists a sequence $\{ a_n \}$, such that $a_n \to \infty$ or $a_n \to -\infty$ as $n \to \infty$\\
+	$\Longrightarrow$ no subsequence converges either
+\end{proof}
+
+
+
+
+
 
 \newpage
 \section{Friday, March 16, 2018}

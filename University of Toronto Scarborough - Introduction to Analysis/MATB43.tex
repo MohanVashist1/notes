@@ -1405,6 +1405,55 @@ $$e^x = exp(x) = \sum^\infty_{k=0} \frac{x^k}{k!}$$
 
 \newpage
 
+\section{Friday, March 9, 2018}
+
+\subsection{Boundary Points}
+
+\begin{example}
+	$$S_n = [-1 + \frac{1}{n}, 1- \frac{1}{n}]$$
+	$$S = \bigcup^\infty_{n=1} S_n = (-1,1)$$ given $a\in(-1,1)$, for $n$ large enough, $a\in [-1 + \frac{1}{n}, 1- \frac{1}{n}]$. $-1 \not\in S, 1 \not\in S$
+\end{example}
+
+\begin{proposition}
+	$U \subset \mathbb{R}$ is open iff $U \cap \partial U = \varnothing$
+\end{proposition}
+
+\begin{proof}
+	Suppose $U$ is open, $a \in U$\\
+	$\Longrightarrow$ there exists a neighbourhood $(a-\epsilon, a+\epsilon) \subset U$, if $a\in \partial U$ as well, then this neighbourhood would also contain points in $\mathbb{R} \setminus U, U\cap \partial U = \varnothing $\\
+	\\
+	Conversely, Suppose $U \in \mathbb{R}, U\cap \partial U = \varnothing$, take $a \in U$, then $a \not\in \partial U$\\
+	$\Longrightarrow$ There exists a neighbourhood $(a-\epsilon, a+\epsilon)$ of $a$ which lies in $U$.\\
+	$\Longrightarrow$ $U$ is open
+\end{proof}
+
+\begin{remark}
+	For $S \subset \mathbb{R}, T=\mathbb{R} \setminus S$, then $\partial S = \partial T$.
+\end{remark}
+
+\begin{theorem}
+	If $a\in \partial S$, then every neighbourhood of $a$ includes points in $S$ and in $T$, where $a\in\partial T$
+\end{theorem}
+
+\begin{proof}
+	Let $U = \mathbb{R} \setminus S$, $S$ is closed $\Longleftrightarrow$ $U$ is open. So know we know that $U \cap \partial U = \varnothing \Longleftrightarrow S \supset \partial S = \partial U$
+\end{proof}
+
+\begin{definition}
+	$a\in S$ is an \textbf{isolated point} of $S$, if there exists an neighbourhood $(a-\epsilon, a+\epsilon)$ for $a$ such that $$(a-\epsilon, a+\epsilon) \cap S = \{ a \}$$
+\end{definition}
+
+\begin{definition}
+	$a\in\mathbb{R}$ is an accumulation point of $S$ if every neighbourhood of $a$ contains infinitely many points in $S$.
+\end{definition}
+
+\begin{theorem}
+	If $a\in \partial S$ then a is either an accumulation point of $S$ or an isolated point of $S$
+\end{theorem}
+
+
+\newpage
+
 \section{Monday, March 12, 2018}
 
 \subsection{Topology of the real numbers}

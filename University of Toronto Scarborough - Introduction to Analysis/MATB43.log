@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  22 MAR 2018 16:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  22 MAR 2018 17:33
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1232,6 +1232,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 134--137
 
  []
@@ -1242,7 +1249,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3]
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 163--175
 
  []
@@ -1258,7 +1265,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4]
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 196--199
 
  []
@@ -1274,7 +1281,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5]
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 237--240
 
  []
@@ -1285,18 +1292,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6]
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 278--281
 
  []
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[7]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1311,15 +1311,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 377--384
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--384
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1327,7 +1318,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 406--410
+Underfull \hbox (badness 10000) in paragraph at lines 377--384
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--384
 
  []
 
@@ -1338,6 +1334,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11]
+Underfull \hbox (badness 10000) in paragraph at lines 406--410
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 421--425
 
  []
@@ -1358,7 +1365,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12]
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 501--503
 
  []
@@ -1374,7 +1381,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13]
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 514--519
 
  []
@@ -1400,7 +1407,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14]
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 547--551
 
  []
@@ -1411,20 +1418,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15]
+[16]
 Overfull \hbox (25.72867pt too wide) in paragraph at lines 591--592
 [][]\OT1/cmr/bx/n/12 Definition 4.3. []\OT1/cmr/m/n/12 The se-ries $[][] \OML/c
 mm/m/it/12 a[]$ \OT1/cmr/m/n/12 con-verges if $[][] \OML/cmm/m/it/12 S[]$ \OT1/
 cmr/m/n/12 ex-ists. If $[][] \OML/cmm/m/it/12 S[] \OT1/cmr/m/n/12 =
  []
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[16]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1453,6 +1453,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [20]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21]
 Overfull \hbox (6.89763pt too wide) in paragraph at lines 760--761
 [][]\OT1/cmr/bx/n/12 Proposition 5.12. []\OT1/cmr/m/n/12 if $[][] \OML/cmm/m/it
 /12 a[]$ \OT1/cmr/m/n/12 con-verges con-di-tion-ally then $[][] \OML/cmm/m/it/1
@@ -1470,24 +1477,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 824--829
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 824--829
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 850--855
+Underfull \hbox (badness 10000) in paragraph at lines 824--829
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 824--829
 
  []
 
@@ -1498,6 +1494,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [23]
+Underfull \hbox (badness 10000) in paragraph at lines 850--855
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 886--888
 
  []
@@ -1515,13 +1522,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [25]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1530,6 +1530,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [26]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 976--979
 
  []
@@ -1540,7 +1547,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 1005--1006
 
  []
@@ -1591,7 +1598,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28]
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 1068--1073
 
  []
@@ -1622,7 +1629,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29]
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 1099--1103
 
  []
@@ -1643,24 +1650,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 1142--1144
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1142--1144
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 1173--1176
+Underfull \hbox (badness 10000) in paragraph at lines 1142--1144
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1142--1144
 
  []
 
@@ -1671,7 +1667,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
+Underfull \hbox (badness 10000) in paragraph at lines 1173--1176
 
  []
 
@@ -1682,7 +1678,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 1226--1229
+Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
 
  []
 
@@ -1693,12 +1689,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 1264--1270
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1264--1270
+Underfull \hbox (badness 10000) in paragraph at lines 1226--1229
 
  []
 
@@ -1709,6 +1700,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [35]
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1270
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1744,10 +1744,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1472--1477
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1755,12 +1751,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 1515--1521
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1515--1521
+Underfull \hbox (badness 10000) in paragraph at lines 1422--1428
 
  []
 
@@ -1771,22 +1762,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1533--1542
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1533--1542
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1549--1557
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1549--1557
+Underfull \hbox (badness 10000) in paragraph at lines 1521--1526
 
  []
 
@@ -1797,35 +1773,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [43]
-Underfull \hbox (badness 10000) in paragraph at lines 1574--1579
+Underfull \hbox (badness 10000) in paragraph at lines 1564--1570
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1588--1591
-
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1592.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1592.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1594--1616
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1594--1616
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1594--1616
+Underfull \hbox (badness 10000) in paragraph at lines 1564--1570
 
  []
 
@@ -1836,7 +1789,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1616--1620
+Underfull \hbox (badness 10000) in paragraph at lines 1582--1591
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1582--1591
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1598--1606
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1598--1606
 
  []
 
@@ -1847,17 +1815,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 1628--1631
+Underfull \hbox (badness 10000) in paragraph at lines 1623--1628
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1628--1631
+Underfull \hbox (badness 10000) in paragraph at lines 1637--1640
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1634--1640
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1641.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1641.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1643--1665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1643--1665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1643--1665
 
  []
 
@@ -1868,6 +1854,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [46]
+Underfull \hbox (badness 10000) in paragraph at lines 1665--1669
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1875,21 +1865,49 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [47]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1685.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1685.
+Underfull \hbox (badness 10000) in paragraph at lines 1677--1680
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1677--1680
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1683--1689
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[48]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[49]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1734.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1734.
  (./MATB43.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1685.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1685.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1734.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1734.
 
 Package rerunfilecheck Info: File `MATB43.out' has not changed.
-(rerunfilecheck)             Checksum: B79BAAEF9C0DBBE7AD72F4945486D0F7;2747.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1685.
+(rerunfilecheck)             Checksum: E0F5E4D00959522F32DECF414749709F;2872.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1734.
  ) 
 Here is how much of TeX's memory you used:
- 20040 strings out of 492995
- 373246 string characters out of 6132704
- 442743 words of memory out of 5000000
- 22984 multiletter control sequences out of 15000+600000
+ 20052 strings out of 492995
+ 373386 string characters out of 6132704
+ 442746 words of memory out of 5000000
+ 22986 multiletter control sequences out of 15000+600000
  16436 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,13n,73p,925b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1909,10 +1927,10 @@ ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
 /2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
 2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MATB43.pdf (47 pages, 300639 bytes).
+Output written on MATB43.pdf (49 pages, 303931 bytes).
 PDF statistics:
- 712 PDF objects out of 1000 (max. 8388607)
- 640 compressed objects within 7 object streams
- 258 named destinations out of 1000 (max. 500000)
- 349 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 739 PDF objects out of 1000 (max. 8388607)
+ 665 compressed objects within 7 object streams
+ 268 named destinations out of 1000 (max. 500000)
+ 365 words of extra memory for PDF output out of 10000 (max. 10000000)
 

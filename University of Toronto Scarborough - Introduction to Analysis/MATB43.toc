@@ -1,43 +1,45 @@
 \select@language {english}
-\contentsline {section}{\numberline {1}Friday, January 5, 2018}{3}{section.1}
-\contentsline {subsection}{\numberline {1.1}Countability}{3}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Real Numbers}{6}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}Algebraic Numbers}{6}{subsection.1.3}
-\contentsline {subsection}{\numberline {1.4}Bounds}{6}{subsection.1.4}
-\contentsline {section}{\numberline {2}Monday, January 8, 2018}{9}{section.2}
-\contentsline {subsection}{\numberline {2.1}Sequences - Review}{9}{subsection.2.1}
-\contentsline {section}{\numberline {3}Friday, January 12, 2018}{11}{section.3}
-\contentsline {subsection}{\numberline {3.1}Monotone Sequences}{11}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Subsequences}{12}{subsection.3.2}
-\contentsline {section}{\numberline {4}Monday, January 15, 2018}{16}{section.4}
-\contentsline {subsection}{\numberline {4.1}Cauchy}{16}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Series}{16}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Convergence Tests}{18}{subsubsection.4.2.1}
-\contentsline {section}{\numberline {5}Friday, January 19, 2018}{19}{section.5}
-\contentsline {subsection}{\numberline {5.1}Series (continued)}{19}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}Convergence Tests}{19}{subsubsection.5.1.1}
-\contentsline {subsection}{\numberline {5.2}Alternating Series}{22}{subsection.5.2}
-\contentsline {section}{\numberline {6}Monday, January 22, 2018}{23}{section.6}
-\contentsline {subsection}{\numberline {6.1}Alternating continued}{23}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Rearrangement}{23}{subsection.6.2}
-\contentsline {section}{\numberline {7}Monday, January 29, 2018}{25}{section.7}
-\contentsline {subsection}{\numberline {7.1}Rearrangement (continued)}{25}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Power Series}{26}{subsection.7.2}
-\contentsline {section}{\numberline {8}Friday, February 2, 2018}{28}{section.8}
-\contentsline {subsection}{\numberline {8.1}Pointwise and Uniform Convergence}{28}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Integrals}{30}{subsection.8.2}
-\contentsline {section}{\numberline {9}Monday, February 5, 2018}{32}{section.9}
-\contentsline {subsection}{\numberline {9.1}Convergence}{32}{subsection.9.1}
-\contentsline {section}{\numberline {10}Friday, February 9, 2018}{34}{section.10}
-\contentsline {subsection}{\numberline {10.1}Power Series}{34}{subsection.10.1}
-\contentsline {section}{\numberline {11}Monday, February 12, 2018}{38}{section.11}
-\contentsline {subsection}{\numberline {11.1}Power Series (cont'd)}{38}{subsection.11.1}
-\contentsline {section}{\numberline {12}Monday, March 12, 2018}{41}{section.12}
-\contentsline {subsection}{\numberline {12.1}Topology of the real numbers}{41}{subsection.12.1}
-\contentsline {section}{\numberline {13}Friday, March 16, 2018}{43}{section.13}
-\contentsline {subsection}{\numberline {13.1}Compact Sets}{43}{subsection.13.1}
-\contentsline {subsection}{\numberline {13.2}Cantor Set}{44}{subsection.13.2}
-\contentsline {subsubsection}{\numberline {13.2.1}Description of Points in $S$}{44}{subsubsection.13.2.1}
-\contentsline {section}{\numberline {14}Monday, March 19, 2018}{46}{section.14}
-\contentsline {subsection}{\numberline {14.1}Topology of real numbers}{46}{subsection.14.1}
-\contentsline {subsection}{\numberline {14.2}More on the exponential function}{46}{subsection.14.2}
+\contentsline {section}{\numberline {1}Friday, January 5, 2018}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Countability}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Real Numbers}{7}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Algebraic Numbers}{7}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Bounds}{7}{subsection.1.4}
+\contentsline {section}{\numberline {2}Monday, January 8, 2018}{10}{section.2}
+\contentsline {subsection}{\numberline {2.1}Sequences - Review}{10}{subsection.2.1}
+\contentsline {section}{\numberline {3}Friday, January 12, 2018}{12}{section.3}
+\contentsline {subsection}{\numberline {3.1}Monotone Sequences}{12}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Subsequences}{13}{subsection.3.2}
+\contentsline {section}{\numberline {4}Monday, January 15, 2018}{17}{section.4}
+\contentsline {subsection}{\numberline {4.1}Cauchy}{17}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Series}{17}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Convergence Tests}{19}{subsubsection.4.2.1}
+\contentsline {section}{\numberline {5}Friday, January 19, 2018}{20}{section.5}
+\contentsline {subsection}{\numberline {5.1}Series (continued)}{20}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Convergence Tests}{20}{subsubsection.5.1.1}
+\contentsline {subsection}{\numberline {5.2}Alternating Series}{23}{subsection.5.2}
+\contentsline {section}{\numberline {6}Monday, January 22, 2018}{24}{section.6}
+\contentsline {subsection}{\numberline {6.1}Alternating continued}{24}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Rearrangement}{24}{subsection.6.2}
+\contentsline {section}{\numberline {7}Monday, January 29, 2018}{26}{section.7}
+\contentsline {subsection}{\numberline {7.1}Rearrangement (continued)}{26}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Power Series}{27}{subsection.7.2}
+\contentsline {section}{\numberline {8}Friday, February 2, 2018}{29}{section.8}
+\contentsline {subsection}{\numberline {8.1}Pointwise and Uniform Convergence}{29}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Integrals}{31}{subsection.8.2}
+\contentsline {section}{\numberline {9}Monday, February 5, 2018}{33}{section.9}
+\contentsline {subsection}{\numberline {9.1}Convergence}{33}{subsection.9.1}
+\contentsline {section}{\numberline {10}Friday, February 9, 2018}{35}{section.10}
+\contentsline {subsection}{\numberline {10.1}Power Series}{35}{subsection.10.1}
+\contentsline {section}{\numberline {11}Monday, February 12, 2018}{39}{section.11}
+\contentsline {subsection}{\numberline {11.1}Power Series (cont'd)}{39}{subsection.11.1}
+\contentsline {section}{\numberline {12}Friday, March 9, 2018}{42}{section.12}
+\contentsline {subsection}{\numberline {12.1}Boundary Points}{42}{subsection.12.1}
+\contentsline {section}{\numberline {13}Monday, March 12, 2018}{43}{section.13}
+\contentsline {subsection}{\numberline {13.1}Topology of the real numbers}{43}{subsection.13.1}
+\contentsline {section}{\numberline {14}Friday, March 16, 2018}{45}{section.14}
+\contentsline {subsection}{\numberline {14.1}Compact Sets}{45}{subsection.14.1}
+\contentsline {subsection}{\numberline {14.2}Cantor Set}{46}{subsection.14.2}
+\contentsline {subsubsection}{\numberline {14.2.1}Description of Points in $S$}{46}{subsubsection.14.2.1}
+\contentsline {section}{\numberline {15}Monday, March 19, 2018}{48}{section.15}
+\contentsline {subsection}{\numberline {15.1}Topology of real numbers}{48}{subsection.15.1}
+\contentsline {subsection}{\numberline {15.2}More on the exponential function}{48}{subsection.15.2}

@@ -882,6 +882,8 @@ We think of a vector field $F$ as attaching to each point $x$ a vector $f(x)$
 	as it passes through $(1,2)$.
 \end{example}
 
+\newpage
+
 \section{Monday, January 29, 2018}
 
 \subsection{Line Integrals}
@@ -994,7 +996,83 @@ Given a vector field $F=(f_1, ...,f_n)$ we have the (1-form) $\omega = f_1 dx_1 
 
 \begin{definition}
 	Let $f:\mathbb{R}^n \mapsto \mathbb{R}$. The differential form corresponding to the vector field $\nabla f$, denoted $df$, is called the \textbf{total differential of $f$}
+	$$\nabla f = (\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, ..., \frac{\partial f}{\partial x_n}), df = \frac{\partial f}{\partial x_1} d x_1 + \frac{\partial f}{\partial x_2} d x_2 + ... + \frac{\partial f}{\partial x_n} d x_n$$
 \end{definition}
+
+If we differentiate with respect to $f$, we get
+$$\frac{df}{dt} = \frac{\partial f}{\partial x_1} \frac{d x_1}{dt} + \frac{\partial f}{\partial x_2} \frac{d x_2}{dt} + ... + \frac{\partial f}{\partial x_n} \frac{d x_n}{dt}$$
+"the total derivative of $f$ with respect to $t$"
+
+\begin{definition}
+	Let $F:\mathbb{R}^n \mapsto \mathbb{R}^n$ be a vector field. If $F = \nabla g$, for some $g: \mathbb{R}^n \mapsto \mathbb{R}$ then $F$ is said to be \textbf{conservative}.
+\end{definition}
+
+\begin{definition}
+	Let $\omega$ be a first order differential form in $\mathbb{R}^n$. If $\omega = dg$ for some $g: \mathbb{R}^n \mapsto \mathbb{R}$ then $\omega$ is said to be \textbf{exact}.
+\end{definition}
+
+\begin{note}
+	$(F_1, ..., F_n) = F = \nabla g \Longleftrightarrow dg = \omega = F_1 dx_1 + F_2 dx_2 + ... + F_n dx_n$
+	So this implies that $F$ is conservative iff $\omega$ is exact
+\end{note}
+
+\begin{example}
+	$\int_\gamma xy dx + xdy$ where
+	\begin{enumerate}
+		\item{$\gamma$ is a parameterization of the top half of the unit circle}
+		\item{$\gamma$ is a parameterization of the line $(1,0) \to (-1,0)$}
+	\end{enumerate}
+	
+	\begin{enumerate}
+	\item{
+		$$\gamma (t) = (cost t, sin t), t \in [0,\pi]$$
+		\begin{align*}
+			\int_\gamma xy dx + xdy &= \int^\pi_0 ((cost)(sint)(-sint) + (cost)(cost))dt\\
+			&= \int^\pi_0 (sin^2 t + cost + cos^2 t) dt\\
+			&= \int^\pi_0 \frac{1}{2} dt = \frac{\pi}{2}
+		\end{align*}
+
+	}
+	\item{
+	$$\gamma (t) = (1-t,0), t\in [0,2]$$
+		\begin{align*}
+			\int_\gamma xy dx + xdy &= \int^2_0 (0)(-1) + (1-t)(0)dt = 0
+		\end{align*}
+
+	}
+	\end{enumerate}
+\end{example}
+
+\begin{note}
+	The line integral depends on the path chosen, not on how you parameterize that path
+\end{note}
+
+Think of a parameterization as a bijection, except possibly at finitely many of those points.
+
+\begin{theorem}
+	Suppose $F:\mathbb{R}^n \mapsto \mathbb{R}$ is of class $C^1$ and $\gamma: [a,b] \mapsto \mathbb{R}^n$ is a piecewise smooth path in $\mathbb{R}^n$ then
+	$$\int_\gamma \nabla f ds = f(\gamma(b)) - f(\gamma(a))$$
+\end{theorem}
+
+\begin{proof}
+	Apply the chain rule to the composite function $G:\mathbb{R} \mapsto \mathbb{R}$ given by $G(t) = (f \circ \gamma)(t)$
+	$$G'(t) = \nabla f(\gamma(t)) \gamma '(t) \in \mathbb{R}$$
+	Then we apply FTOC to get
+	\begin{align*}
+		\int^b_a G'(t) dt &= G(b) - G(a)\\
+		&= f(\gamma(b)) - f(\gamma(a))
+	\end{align*}
+	
+	$$\int_\gamma \nabla f ds = \int^b_a \nabla f(\gamma(t)) \gamma '(t) = f(\gamma(b)) - f(\gamma(a))$$
+
+\end{proof}
+
+\begin{corollary}
+	If $F = \nabla f$ is a conservative vector field and $\gamma$ is a curve joining $x_0, x_1$ then
+	$$\int_\gamma Fds = f(x_1) - f(x_0)$$
+\end{corollary}
+
+The line integral of a conservative vector field is independent of the choice of path
 
 \newpage
 

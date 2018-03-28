@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  22 MAR 2018 17:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  28 MAR 2018 14:40
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1220,18 +1220,18 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./MATB43.toc
 [1
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
-\tf@toc=\write7
-\openout7 = `MATB43.toc'.
-
-
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2]
+[2])
+\tf@toc=\write7
+\openout7 = `MATB43.toc'.
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1751,7 +1751,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1428
+Underfull \hbox (badness 10000) in paragraph at lines 1445--1449
 
  []
 
@@ -1762,10 +1762,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1521--1526
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1773,12 +1769,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [43]
-Underfull \hbox (badness 10000) in paragraph at lines 1564--1570
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1564--1570
+Underfull \hbox (badness 10000) in paragraph at lines 1497--1503
 
  []
 
@@ -1789,22 +1780,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1582--1591
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1582--1591
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1598--1606
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1598--1606
+Underfull \hbox (badness 10000) in paragraph at lines 1596--1601
 
  []
 
@@ -1815,35 +1791,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 1623--1628
+Underfull \hbox (badness 10000) in paragraph at lines 1639--1645
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1637--1640
-
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1641.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1641.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1643--1665
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1643--1665
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1643--1665
+Underfull \hbox (badness 10000) in paragraph at lines 1639--1645
 
  []
 
@@ -1854,7 +1807,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [46]
-Underfull \hbox (badness 10000) in paragraph at lines 1665--1669
+Underfull \hbox (badness 10000) in paragraph at lines 1657--1666
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1657--1666
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1673--1681
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1673--1681
 
  []
 
@@ -1865,17 +1833,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [47]
-Underfull \hbox (badness 10000) in paragraph at lines 1677--1680
+Underfull \hbox (badness 10000) in paragraph at lines 1698--1703
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1677--1680
+Underfull \hbox (badness 10000) in paragraph at lines 1712--1715
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1683--1689
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1716.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1716.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1718--1740
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1718--1740
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1718--1740
 
  []
 
@@ -1886,6 +1872,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [48]
+Underfull \hbox (badness 10000) in paragraph at lines 1740--1744
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1893,21 +1883,49 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [49]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1734.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1734.
+Underfull \hbox (badness 10000) in paragraph at lines 1752--1755
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1752--1755
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1758--1764
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[50]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[51]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1809.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1809.
  (./MATB43.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1734.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1734.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1809.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1809.
 
 Package rerunfilecheck Info: File `MATB43.out' has not changed.
-(rerunfilecheck)             Checksum: E0F5E4D00959522F32DECF414749709F;2872.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1734.
+(rerunfilecheck)             Checksum: BA17A7AA6E55621E2BD127C031934DCD;3077.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1809.
  ) 
 Here is how much of TeX's memory you used:
- 20052 strings out of 492995
- 373386 string characters out of 6132704
- 442746 words of memory out of 5000000
- 22986 multiletter control sequences out of 15000+600000
+ 20075 strings out of 492995
+ 373636 string characters out of 6132704
+ 442749 words of memory out of 5000000
+ 22989 multiletter control sequences out of 15000+600000
  16436 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,13n,73p,925b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1927,10 +1945,10 @@ ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
 /2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
 2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MATB43.pdf (49 pages, 303931 bytes).
+Output written on MATB43.pdf (51 pages, 310907 bytes).
 PDF statistics:
- 739 PDF objects out of 1000 (max. 8388607)
- 665 compressed objects within 7 object streams
- 268 named destinations out of 1000 (max. 500000)
- 365 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 781 PDF objects out of 1000 (max. 8388607)
+ 704 compressed objects within 8 object streams
+ 288 named destinations out of 1000 (max. 500000)
+ 389 words of extra memory for PDF output out of 10000 (max. 10000000)
 

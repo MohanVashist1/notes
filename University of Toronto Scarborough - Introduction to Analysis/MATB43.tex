@@ -1405,6 +1405,81 @@ $$e^x = exp(x) = \sum^\infty_{k=0} \frac{x^k}{k!}$$
 
 \newpage
 
+\section{Monday, March 5, 2018}
+
+\subsection{Topology of the Real Numbers}
+
+\begin{definition}
+	The \textbf{The neighbourhood of $a\in\mathbb{R}$} is $(a-\epsilon, a+\epsilon)$ for some $\epsilon > 0$
+\end{definition}
+
+\begin{definition}
+	The \textbf{Open Set} is a set $U$ such that, for any $a\in U$, there exists a neighbourhood of $a$ in $U$, i.e. There exists $\epsilon > 0$ with $(a-\epsilon, a+\epsilon) \subset U$.
+\end{definition}
+
+\begin{example}
+	Examples of an open interval include:
+	$$(c,d), (c,\infty), (-\infty, d), \mathbb{R}, \varnothing$$
+\end{example}
+
+\underline{properties of the open set:}
+\begin{enumerate}
+	\item{if $U_\alpha$ is open, $\alpha \in A$, then $U = \bigcup_{\alpha \in A} U_\alpha$ is open}
+	\item{If $U_1, ..., U_n$ is open, then $U = \bigcap_{i=1}^n U_i$ is open (but this is not true for infinite sets.)}
+	\item{If $U \subset \mathbb{R}$ is open, then $U$ is the union of a finite or countable collection of disjoint open intervals.}
+\end{enumerate}
+
+Clearly, we are also interested in a set $S\subset\mathbb{R}$ with the property: if $\{ a_n \}^\infty_{n=1} \subset S$, $\{ a_n \}$ converges to $a \in\mathbb{R}$ then $a \in S$ as well.
+
+\begin{definition}
+	$S\subset\mathbb{R}$ is closed if $U=\mathbb{R}\setminus S$ is open.
+\end{definition}
+
+Recall $\{ a_n \}$ and cauchy sequences
+
+\begin{proposition}
+	$S$ is closed iff the limit of every cauchy sequence in $S$ lies in $S$.
+\end{proposition}
+
+\begin{proof}
+	First, suppose $S$ is closed, therefore $U = \mathbb{R}\setminus S$ is open. Let $\{ a_n \}\subset S$ be a cauchy sequence with it's limit being $a$. Suppose $a\not\in S$, that must mean that $a \in U$ and since $U$ is open, for some $\epsilon > 0$, $(a-\epsilon, a+\epsilon) \subset U$ but since $a_n \to a$, there exists $N$ such that for $n > N$, $a_n \in (a-\epsilon, a+\epsilon) \subset U$, but this is a contradiction as $a_n \in S = \mathbb{R} \setminus U$ for all $n$.\\
+	\\
+	Conversely, suppose that for any cauchy sequence $\{ a_n \} \subset S, \lim_{n\to\infty} a_n \in S.$ We want to show that $S$ is closed, but for the sake of contradiction, we shall assume $S$ is not closed, this means that $U=\mathbb{R} \setminus S$ is not open. i.e. there exists $a \in U$ such that no neighbourhood of $a$ exists in $U$.\\
+	For any $n > 0$, there exists $a \in (a-\frac{1}{n} , a+\frac{1}{n}), a_n \not\in U \to a_n S$. Now $a_n \to a$ as $n \to \infty$ and $\{ a_n \}\subset S$, but since $a\in U = \mathbb{R} \setminus S$, this is a contradiction which implies that $U$ is open, which implies that $S$ is closed.
+\end{proof}
+
+\underline{properties of closed sets}
+\begin{enumerate}
+	\item{if $S_a, a\in A$, is closed, then $S = \bigcap_{a\in A} S_a$ is also closed}
+	\item{if $S_1,...,S_n$ is closed, then $\bigcup^n_{j=1} S_j$ is also closed}
+	\item{$\varnothing, \mathbb{R}$ are both closed}
+\end{enumerate}
+
+\subsection{Boundary Points}
+
+\begin{definition}
+	For $S\in\mathbb{R}, a \in S$, Call $a$ a boundary point if every neighbourhood of $a$ is both in and not in the set $S$. (Notation: $\partial S$)
+\end{definition}
+
+\begin{example}
+	For $S = (0,1]$ then 0,1 are boundary points
+\end{example}
+
+\begin{theorem}
+	if $a \in (0,1)$ then there exists a neighbourhood such that $a\in S \Longrightarrow a \not\in \partial S$
+\end{theorem}
+
+\begin{example}
+	$S = \mathbb{Q} \subset \mathbb{R}$. $\partial S = \mathbb{R}$, because if $a\in \mathbb{Q}$, then it's neighbourhood would include both rational and irrational numbers.
+\end{example}
+
+
+
+
+
+
+\newpage
+
 \section{Friday, March 9, 2018}
 
 \subsection{Boundary Points}
@@ -1448,7 +1523,7 @@ $$e^x = exp(x) = \sum^\infty_{k=0} \frac{x^k}{k!}$$
 \end{definition}
 
 \begin{theorem}
-	If $a\in \partial S$ then a is either an accumulation point of $S$ or an isolated point of $S$
+	If $a\in \partial S$ then a is either an accumulation point of $S$ or an isolated point in $S$
 \end{theorem}
 
 

@@ -34,7 +34,7 @@
 \renewcommand\qedsymbol{$\blacksquare$}
 
 \usepackage{fancyhdr}
- 
+
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{Introduction to Analysis -- Winter 2018}
@@ -182,7 +182,7 @@ And so on, in this pattern. Intuitively, if you list out all the pairs of $\math
 	Note that $\mathbb{Q} = \mathbb{Q}^- \cup \{ 0 \} \cup \mathbb{Q}^+$\\
 	so we must check that $\mathbb{Q}^+$ is countable, note that
 	$$\mathbb{Q}^+ = \{ \frac{m}{n} | m,n \in \mathbb{N}, n \neq 0 \}$$
-	
+
 	Since it is a pairing of two natural numbers $(m,n)$, this is a subset of $\mathbb{N} \times \mathbb{N}$, which means that $\mathbb{Q}^+$ is countable, we can say that same thing for $\mathbb{Q}^-$ as well, note that it is
 	$$\mathbb{Q}^+ = \{ \frac{-m}{n} | m,n \in \mathbb{N}, n \neq 0 \}$$
 	and since $\mathbb{Q}^+$ and $\mathbb{Q}^-$ are both countable and $\{ 0 \}$ is a set of cardinality 1, therefore $\mathbb{Q}$ is countable
@@ -284,7 +284,7 @@ $a$ is the \textbf{greatest lower bound} of $X$ if $a$ is an lower bound of $X$ 
 		(n+1)a &> c\\
 		c < (n+1)a \in X
 	\end{align*}
-	
+
 	This is impossible since we've previously stated that $c$ is the upper bound. Therefore $X$ is not bounded above.
 \end{proof}
 
@@ -298,7 +298,7 @@ $a$ is the \textbf{greatest lower bound} of $X$ if $a$ is an lower bound of $X$ 
 	pick $n\in\mathbb{N}$ such that $\frac{1}{n} < \epsilon$\\
 	pick $m$, such that $m > nc$\\
 	(since we also need $m<nd$, choose $m$ to be as small as possible such that $m-1 \leq nc < m$)
-	
+
 	\begin{align*}
 		m-1 &\leq nc \leq m\\
 		\frac{m}{n} - \frac{1}{n} = \frac{m-1}{n} &\leq c \leq \frac{m}{n}
@@ -407,15 +407,15 @@ So now we're going to prove that Every sequence has a monotone subsequence along
     So we want to show that this converges, we'll show that if we show that $\{ x_n \}$ is decreasing and is bounded below by 0.\\
     \\
     The limit ($\lim_{n\to\infty} x_n$) is actually a mysterious number that we don't know too much about.
-    
+
     \begin{tcolorbox}
     \underline{Recall:} that $logn = \int^n_1 \frac{dt}{t}$\\
     So if we consider the space under the graph of $\frac{1}{t}$ from $n$ to $n+1$, we get the following inequality
-    
+
     $$\frac{1}{n+1} < log(n+1) - logn < \frac{1}{n}$$
     Which implies that
     $$\frac{1}{n+1} - log(n+1) + logn < 0$$
-    
+
     \end{tcolorbox}
     Now consider the following for an arbitrary $n$
     $$x_{n+1} = x_n + (\frac{1}{n+1} + logn - log(n+1))$$
@@ -426,7 +426,7 @@ So now we're going to prove that Every sequence has a monotone subsequence along
     The left side of this inequality telescopes, giving us
     $$log(m) < log(m+1) < 1 + \frac{1}{2} + ... + \frac{1}{m}$$
     And since the left most side is greater than the right most side, that means that $x_m > 0, \forall m$.
-    
+
 \end{example}
 
 \subsection{Subsequences}
@@ -438,7 +438,7 @@ So now we're going to prove that Every sequence has a monotone subsequence along
 
 \begin{example}
     Considering the sequence $\{ x_n \} = \{ 1,\frac{1}{2}, \frac{1}{3}, ..., \frac{1}{n}, ... \}$
-    
+
     \begin{enumerate}
         \item $\{ \frac{1}{2n} \}$ is a subsequence of $\{ x_n \}$.
         \item $\{ \frac{1}{2^n} \}$ is a subsequence of $\{ x_n \}$.
@@ -470,7 +470,7 @@ So now we're going to prove that Every sequence has a monotone subsequence along
     By induction, we construct an increasing subsequence $\{ x_{j_m} \}$ of $\{ x_n \}$.\\
     \\
     By these 2 cases, every real number has a monotone sequence.
-    
+
 \end{proof}
 
 \begin{theorem}
@@ -510,13 +510,13 @@ So now we want to show that if a sequence satisfies the Cauchy property, then it
         -1 <& x_n - x_{N+1} < 1\\
         x_{N+1}-1 <& x_n < x_{N+1}+1
     \end{align*}
-    
+
     \underline{Note:} $x_{N+1}$ is fixed (a constant)\\
     \\
     Let $A = min\{ x_1, .... ,x_N, x_{N+1}-1 \}$\\
     Let $B = max\{ x_1, .... ,x_N, x_{N+1}-1 \}$\\
     This implies that for all $n$, $A \leq x_n \leq B$, therefore Bounded.
-    
+
 \end{proof}
 
 \begin{proposition}
@@ -534,7 +534,7 @@ So now we want to show that if a sequence satisfies the Cauchy property, then it
     The Cauchy propert implies that $\exists N$ so that for all $m,n > N, |x_m - x_n| < \epsilon$.\\
     \\
     We'll pick $P = max(N,M)$, then for $m,n > P$ we have:
-    
+
     \begin{align*}
         |x_n - a| &= |x_n + x_{j_m} - x_{j_m} - a|\\
         &= |x_n - x_{j_m}| + |x_{j_m} - a|\\
@@ -577,7 +577,7 @@ The converse also holds. So if $\{ x_n \}$ satisfies the cauchy property, then i
 
 \subsection{Series}
 
-This section will be focused on 
+This section will be focused on
 \begin{definition}
 $$\sum^\infty_{n=0} a_n$$ which is an \textbf{infinite sum} of real numbers
 \end{definition}
@@ -662,7 +662,7 @@ $$\int^\infty_1 f(x) dx = \lim_{y\to\infty} \int^y_1 f(x) dx$$ exists
 \subsubsection{Convergence Tests}
 
 \begin{definition}
-	The \textbf{Comparison Test} is: Given a series $\sum^\infty_{k=1} a_k$ converges and $a_k \geq 0$. A series $\sum^\infty_{k=1} b_k$ converges if $|b_k| \leq a_k, \forall k$ 
+	The \textbf{Comparison Test} is: Given a series $\sum^\infty_{k=1} a_k$ converges and $a_k \geq 0$. A series $\sum^\infty_{k=1} b_k$ converges if $|b_k| \leq a_k, \forall k$
 \end{definition}
 
 \begin{definition}
@@ -717,14 +717,14 @@ Series that converge absolutely act like finite sums, you can rearrange the orde
 \begin{proof}
 	Use the Cauchy Criterion. Given $\sum^\infty_{k=1} a_k$ converges absolutely, suppose $\epsilon > 0$, we have the following inequality because of the triangle inequality
 	$$|\sum^m_{k=n+1} a_k| \leq |\sum^m_{k=n+1} (|a_k|) |$$
-	now $\sum^\infty_{k=1} |a_k|$ converges, therefore, this satisfies the Cauchy Criterion, and so 
+	now $\sum^\infty_{k=1} |a_k|$ converges, therefore, this satisfies the Cauchy Criterion, and so
 	$$\exists N | \forall m,n > N, \sum^m_{k=n+1} |a_k| < \epsilon \implies |\sum^m_{k=n+1} a_k|<\epsilon$$
 	Therefore $\sum^\infty_{k=1} a_k$ satisfies Cauchy Criterion and converges
 \end{proof}
 
 \begin{definition}
 	Given $\sum^\infty_{k=1} a_k$ as a series of positive and negative terms, let:
-	
+
 	$$a_k^+ = \begin{cases}
 		a_k, &\text{ if } a_k \geq 0\\
 		0, &\text{ if } a_k < 0
@@ -762,7 +762,7 @@ $$
 
 \begin{proof}
 	Suppose only one of $\sum^\infty_{k=1} a_k^+, \sum^\infty_{k=1} a_k^-$ diverges, this implies that $\sum^\infty_{k=1} |a_k|, \sum^\infty_{k=1} a_k$ diverge.
-	
+
 	So conditional convergence must imply that both $\sum^\infty_{k=1} a_k^+, \sum^\infty_{k=1} a_k^-$ diverge since we need $\sum^\infty_{k=1} |a_k|$ to diverge, but $\sum^\infty_{k=1} a_k$ to converge. We get this from looking at the following equations from the previous proof:
 	$$\sum^\infty_{k=1} a_k = \sum^\infty_{k=1} a_k^+ + \sum^\infty_{k=1} a_k^-$$
 	$$\sum^\infty_{k=1} |a_k| = \sum^\infty_{k=1} a_k^+ - \sum^\infty_{k=1} a_k^-$$
@@ -852,7 +852,7 @@ Because of this, we can rearrange the terms in the series to get it to converge 
 	\\
 	For example, we can add up all the positive terms until we get to $\frac{1}{15}$, where adding $\frac{1}{15}$ brings the sum over 2 and not adding $\frac{1}{15}$ keeps the sum below 2, so we set
 	$S_1$ to be all the decreasing positive terms until $\frac{1}{15}$, and then we will add increasing negative terms until the sum is below 2 to get $T_1$, and we add decreasing terms until the sum is above 2 and so on and so forth. This makes $S_{k+1} < S_k, \forall k$, $T_{k+1} > T_k, \forall k$.
-	
+
 \end{example}
 
 \begin{theorem}
@@ -875,14 +875,14 @@ $$
 and $a_k = a_k^+ + a_k^-$, and if $\sum a_k$ is convergent, the both $\sum a_k^+$ and $\sum a_k^-$ diverge. So either the positive sum approaches infinity or the negative sum approaches negative infinity as more of their terms are added together, and at the same time, $a_k$ approaches 0.
 
 \begin{proof}
-	Choose an $N$ such that 
+	Choose an $N$ such that
 	$$\sum^{N_1}_{k=1} a^+_k > b > \sum^{N_1 - 1}_{k=1} a^+_k$$
 	Set $S_1 = \sum^{N_1}_{k=1} a^+_k, S_1 - b < a^+_{N_1}$\\
 	Choose $M_1$ so that
-	
+
 	$$T_1 = S_1 + \sum^{M_1}_{k=1} a^-_k < b \leq S_1 + \sum^{M_1 - 1}_{k=1} a^-_k$$
 	And continue this pattern to get the rearranged series:
-	
+
 	$$a^+_1,...,a^+_{N_1}, a^-_1, ... a^-_{M_1}, a^+_{N_1 + 1}, ... a^+_{N_2},...$$
 	With $|S_k - b| < a^+_{N_k}, |T_k - b| < -a^-_{M_k}$\\
 	$$a^+_{N_k}, a^-_{M_k} \text{ as } k \to \infty$$
@@ -890,7 +890,7 @@ and $a_k = a_k^+ + a_k^-$, and if $\sum a_k$ is convergent, the both $\sum a_k^+
 \end{proof}
 
 \begin{theorem}
-	Suppose that 
+	Suppose that
 	$\sum^\infty_{k=1} a_k$ is absolutely convergent and $b = \sum^\infty_{k=1} a_k$ then any rearrangement of this series will also have the sum of $b$.
 \end{theorem}
 
@@ -913,7 +913,7 @@ and $a_k = a_k^+ + a_k^-$, and if $\sum a_k$ is convergent, the both $\sum a_k^+
 	Be true for some sequence $\{b_k \}$. This implies that
 	$$(\{ b_1, b_2, ... b_N \} \setminus \{ a_1, a_2, ... a_M \})  \subset \{ a_{M+1}, a_{M+2}, .... \}$$
 	Let us set $s_M = \sum^M_{k=1} a_k, t_N =  \sum^N_{k=1} b_k$
-	
+
 	$$|t_N - s_M| \leq  \sum^M_{k=M+1} a_k < \frac{\epsilon}{2}$$
 	Now
 	\begin{align*}
@@ -969,7 +969,7 @@ So basically, for $x \in (-R, R)$ the series converges, and for $x \not\in [-R, 
 		&= |x| \cdot c
 	\end{align*}
 	The root test implies that the series converges if $|x|\cdot c < 1$ and this implies that $|x| < \frac{1}{c} = R, c \neq 0$ And the series diverges if $|x| c > 1$ which happens iff $|x| > R$
-	
+
 \end{proof}
 
 \begin{remark}
@@ -993,7 +993,7 @@ So basically, for $x \in (-R, R)$ the series converges, and for $x \not\in [-R, 
 \end{example}
 
 \begin{example}
-	$sum^\infty_{k=1} \frac{x^k}{k^2}, R=1$ and this converges for $x=\pm 1$  
+	$sum^\infty_{k=1} \frac{x^k}{k^2}, R=1$ and this converges for $x=\pm 1$
 \end{example}
 
 \newpage
@@ -1011,7 +1011,7 @@ $\{ f_k \}$ converges \textbf{pointwise} to a function $f$ on $S$ if for any $x_
 
 \begin{example}
 	$f_n (x) = \frac{sin(nx)}{x}, x\in\mathbb{R}$\\
-	
+
 	We know that $\lim_{n\to\infty} \frac{sin(n x_0)}{n} = 0, x_0 \in\mathbb{R}$ as
 	$\frac{|sin(n x_0)|}{n} \leq \frac{1}{n} \to 0$ as $n$ approaches infinity.\\
 	\\
@@ -1196,11 +1196,11 @@ Since $f$ is not continuous at $1$, convergence not uniform by the theorem.
 
 \begin{example}
 	$f(x) = \sum^\infty_{k=0} x^k, |x| < 1$ set $S_n (x) = \sum^n_{k=0} x^k$ then $S_n \to f$ pointwise, pick $a\in (0,1)$
-	
+
 	$$|S_m - S_n| = \sum^m_{k=n+1} x^k \leq \sum^m_{k=n+1} |x|^k \leq \sum^m_{k=n+1} a^k$$ if $|x| \leq a$, since $\sum^\infty_{k=0} a^k$ converges it satisfies the cauchy criterion. So, given $\epsilon > 0$, there exists $N$, such that for $m > n > N$ that
 	$$\sum^m_{k=n+1} a^k < \epsilon$$
 	$$\Longrightarrow |S_m (x) - S_n (x) | < \epsilon$$ for $m,n > N$ and for all $x$.
-	
+
 \end{example}
 
 So a uniform definition version of the Cauchy Criterion is needed. A Uniform Cauchy Criterion perhaps.\\
@@ -1234,7 +1234,7 @@ So our plan is to define the Uniform Cauchy Criterion and prove that the sequenc
 Remark: So for each $x_0 \in S$, iff follows that the sequence $\{ f_k \}$ is a cauchy sequence $\Longrightarrow$ $\{ f_k (x_0)\}$ converges
 
 \begin{proof}
-	given $\epsilon > 0$ there exists $N$ such that for $m,n > N$ then 
+	given $\epsilon > 0$ there exists $N$ such that for $m,n > N$ then
 	$|f_m (x) - f_n (x) | < \frac{\epsilon}{2}$
 	equivalently, $f_n (x) \in (f_m (x) - \frac{\epsilon}{2}, f_m (x) + \frac{\epsilon}{2}) $
 	$$a_n \in (c,d) \Longrightarrow \lim_{n\to\infty} a_n \in [c,d]$$
@@ -1251,7 +1251,7 @@ Remark: So for each $x_0 \in S$, iff follows that the sequence $\{ f_k \}$ is a 
 \end{example}
 
 \begin{proof}
-	Show that $S_n (x) = \sum^n_{k=0} f_k (x)$ satisfy uniform cauchy criterion, now 
+	Show that $S_n (x) = \sum^n_{k=0} f_k (x)$ satisfy uniform cauchy criterion, now
 	$$|S_n (x) - S_m (x)| = |\sum^m_{k=n+1} f_k (x)| \leq  \sum^m_{k=n+1} |f (x)| \leq \sum^m_{k=n+1} M_k, \forall x \in S$$
 	since $\sum^\infty_{k=0} M_k$ converges it satisfies the cauchy criterion so given $\epsilon > 0$, there exists $N$ such that for $m>n>N$ $\Longrightarrow$ $|S_n (x) - S_m (x)| < \epsilon$ for $x\in S$ therefore $\{ S_n (x) \}$ satisfies the Uniform Cauchy Criterion $\Longrightarrow$ $S_n \to \sum^\infty_{k=0} f_k (x)$ uniformly
 \end{proof}
@@ -1286,7 +1286,7 @@ Remark: So for each $x_0 \in S$, iff follows that the sequence $\{ f_k \}$ is a 
 	\begin{align*}
 		&= |\frac{a_n}{n+1}|^{\frac{1}{n+1}}\\
 		&= |a_n|^{\frac{1}{n+1}} (\frac{1}{(n+1)^{n+1}})_{n\to\infty}\\
-		&\to \frac{1}{R} 
+		&\to \frac{1}{R}
 	\end{align*}
 \end{proof}
 
@@ -1359,7 +1359,7 @@ Remark: So for each $x_0 \in S$, iff follows that the sequence $\{ f_k \}$ is a 
 	\begin{enumerate}
 		\item{$$exp ' (x) = exp(x)$$\\
 		Suppose $f(x)=\sum^\infty_{k=0} a_k x^k$ converges for $|x| < R$, and $f'(x) = f(x)$, this implies that $f^n (x) = f(x)$ and that $f^n (0) = a_n$, which also implies that $a_n = \frac{a_0}{n!}$ which implies that $f(x) = a_0 exp(x)$\\
-		(note: the solutions for $\frac{dy}{dx} = y$ are $c \cdot exp(x), c \in \mathbb{R}$) 
+		(note: the solutions for $\frac{dy}{dx} = y$ are $c \cdot exp(x), c \in \mathbb{R}$)
 		}
 		\item{
 		$$exp(a+b) = exp(a)exp(b)\:\:\: a,b \in\mathbb{R}$$
@@ -1402,6 +1402,105 @@ $$e^x = exp(x) = \sum^\infty_{k=0} \frac{x^k}{k!}$$
 
 	}
 \end{enumerate}
+
+\newpage
+
+\section{Friday, March 2, 2018}
+
+\subsection{Open and closed subsets of the real numbers}
+
+\begin{definition}
+  $U \subset \mathbb{R}$ is an open set if, for any $x\in U$, there exists $\epsilon > 0$ such that $(x-\epsilon, x+\epsilon) \subset U$
+\end{definition}
+
+\begin{example}
+  $\mathbb{R}$ is an open set
+\end{example}
+
+\begin{example}
+  $(0,1)$ is an open set
+\end{example}
+
+\begin{example}
+  $\mathbb{R} \setminus \{ 0 \}$ is an open set
+\end{example}
+
+\begin{example}
+  $[0,1)$ is an open set
+\end{example}
+
+\begin{proposition}
+  Suppose $U_a, a\in A$ is a collection of open sets $\Longrightarrow$
+  $$U = \bigcup_{a\in A} U_a \text{ is open}$$
+\end{proposition}
+
+\begin{proof}
+  Suppose $x\in U$, then $x \in U_a$ for some $a \in A$. Since $U_a$ is open, there exists a neighbourhood $(x-\epsilon, x+\epsilon) \subset U_a$ for some $\epsilon > 0$. Therefore $(x-\epsilon, x+\epsilon) \subset U = \bigcup_{a\in A} U_a$
+\end{proof}
+
+\begin{proposition}
+  Suppose $U_1,..., U_n$ are open sets then $$U = \bigcap_{i=1}^m U_i \text{ is open}$$
+\end{proposition}
+
+\begin{proof}
+  Suppose $x \in U = \bigcap_{i=1}^m U_i$ $\Longrightarrow x\in U_i$ for each i, $U_i$ is open $\Longrightarrow$ there exists a neighbourhood $(x-\epsilon_i, x+\epsilon_i), \epsilon_i > 0$\\
+  \\
+  Take $\epsilon = sup(\epsilon_i), \forall i, (i \in [1,m])$ so $\epsilon > 0$.\\
+  (Since $\forall \epsilon$ sits inside all sets, openness is proven).\\
+  for all $i$,
+  $$(x-\epsilon, x+\epsilon) \subset (x-\epsilon_i x+\epsilon_i) \subset U_i$$
+  $$\Longrightarrow (x-\epsilon, x+\epsilon) \subset \bigcap_{i=1}^m U_i$$
+\end{proof}
+
+\begin{example}
+  let $U_i = (-\frac{1}{i}, \frac{1}{i}), i\in \mathbb{N}$
+  $$\Longrightarrow \bigcap_{i\in\mathbb{N}} U_i = \{ 0 \} \text{ which contains no neighbourhood, therefore not open}$$
+  So infinite examples may not work
+\end{example}
+
+\begin{proposition}
+  Suppose $U\subset\mathbb{R}$ is open, then $U$ is the union of a finite or countablecollection of pairwise disjoint open intervals (take two open intervals, and they cannot intersect).
+\end{proposition}
+
+\begin{proof}
+  Define a relation on $U$, $a,b \in U, a\sim b$ if all points between $a,b$
+ lie in $U$. We must prove $\sim$ is reflexive, symmetric, and transitive to show that it is also an equivalence relation. Assume $a<b<c$, if all the points in $a$ & $b$ lie in $U$, if all the points in $b$ & $c$ lie in $U$, and if all the points in $a$ & $c$ lie in $U$, then $\sim$ is an equivalence relation in $U$.\\
+ Equivalence classes are clearly an open interval and they are pairwise disjoint. Each open interval contains a relational number, list these numbers, there are countably many or finitely many in the list.
+\end{proof}
+
+\begin{definition}
+  A set $S\subset \mathbb{R}$ is \textbf{Closed} if $U = \mathbb{R}\setminus S$ is open
+\end{definition}
+
+\begin{example}
+  $[a,b]$ is closed because it's compliment is open
+\end{example}
+
+\begin{example}
+  $[b,\infty]$ is closed because it's compliment is open
+\end{example}
+
+\begin{example}
+  $(0,1]$ is neither
+\end{example}
+
+\begin{proposition}
+  $S_a, a\in A$ is a collection of closed sets. $$\Longrightarrow \bigcap_{a\in A} S_a \text{ is closed}$$
+\end{proposition}
+
+\begin{proof}
+  let $U_a = \mathbb{R} \setminus S_a$, and since $\mathbb{R} \setminus \bigcap_{a\in A} S_a$ is open, then $S$ must be closed
+\end{proof}
+
+\begin{proposition}
+  $S_1,...,S_m$ is closed $\Longrightarrow S = \bigcup_{i=1}^m S_i$ is also closed
+\end{proposition}
+
+\begin{proof}
+  let $U_i = \mathbb{R} \setminus S_i, i \in \mathbb{N}$.
+  $$\mathbb{R} \setminus \bigcap^m_{i=1} U_i = \bigcup^m_{i=1} S_i$$
+  $$\bigcap^m_{i=1} U_i \text{ is open} \Longrightarrow \bigcup^m_{i=1} S_i \text{ is closed}$$
+\end{proof}
 
 \newpage
 
@@ -1695,7 +1794,7 @@ This implies that there exists an $a$ such that the neighbourhood around $a$
 
 $$S_0 = [0,1]$$
 if we remove the middle third of the set we get:
-$$S_1 = S_0 \setminus (\frac{1}{3}, \frac{2}{3}) = [0,\frac{1}{3}) \cup (\frac{2}{3}, 1]$$ 
+$$S_1 = S_0 \setminus (\frac{1}{3}, \frac{2}{3}) = [0,\frac{1}{3}) \cup (\frac{2}{3}, 1]$$
 and for $S_2$ we will remove the middle thirds of $S_1$. So this results in the pattern where $S_n$ is a union of closed intervals: to obtain $S_{n+1}$, remove middle thirds of each interval $\Longrightarrow$ the number of intervals in $S_n$\\
 \\
 The length of each interval in $S_{n+1} $ is one third the length of each interval in $S_n$, so
@@ -1778,7 +1877,7 @@ this obtains a one to one correspondence between $S$ and the set of sequences.\\
 		$$e^{-x^2} \to 0 \text{ as } x \to \infty$$
 		$$e^t = 1 + t+  \frac{t^2}{2} + ... \Longrightarrow e^t > t, \forall t \geq 0$$
 		$$e^{x^2} > x^2 \Longrightarrow e^{-x^2} < x^{-2}$$
-		
+
 		$$\int^a_1e^{-x^2} dx < \int^a_1x^{-2} dx = -[\frac{1}{x}]^a_1 = 1 - \frac{1}{a} \to 1, a > 1$$
 		So therefore
 		$$\lim_{a\to\infty} \int_1^a e^{-x^2} dx \text{ exists}$$
@@ -1789,7 +1888,7 @@ this obtains a one to one correspondence between $S$ and the set of sequences.\\
 \end{example}
 
 \begin{example}
-	Compute 
+	Compute
 	\begin{align*}
 		(\int^\infty_{-\infty} e^{-x^2} dx) &= \int^\infty_{-\infty} \int^\infty_{-\infty} e^{-x^2} \cdot e^{-y^2} dx dy\\
 		&= \int^\infty_{-\infty} \int^\infty_{-\infty} e^{-(x^2 + y^2)}
@@ -1807,30 +1906,3 @@ this obtains a one to one correspondence between $S$ and the set of sequences.\\
 
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

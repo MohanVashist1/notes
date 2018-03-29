@@ -32,17 +32,19 @@
 \contentsline {subsection}{\numberline {10.1}Power Series}{35}{subsection.10.1}
 \contentsline {section}{\numberline {11}Monday, February 12, 2018}{39}{section.11}
 \contentsline {subsection}{\numberline {11.1}Power Series (cont'd)}{39}{subsection.11.1}
-\contentsline {section}{\numberline {12}Monday, March 5, 2018}{42}{section.12}
-\contentsline {subsection}{\numberline {12.1}Topology of the Real Numbers}{42}{subsection.12.1}
-\contentsline {subsection}{\numberline {12.2}Boundary Points}{43}{subsection.12.2}
-\contentsline {section}{\numberline {13}Friday, March 9, 2018}{44}{section.13}
-\contentsline {subsection}{\numberline {13.1}Boundary Points}{44}{subsection.13.1}
-\contentsline {section}{\numberline {14}Monday, March 12, 2018}{45}{section.14}
-\contentsline {subsection}{\numberline {14.1}Topology of the real numbers}{45}{subsection.14.1}
-\contentsline {section}{\numberline {15}Friday, March 16, 2018}{47}{section.15}
-\contentsline {subsection}{\numberline {15.1}Compact Sets}{47}{subsection.15.1}
-\contentsline {subsection}{\numberline {15.2}Cantor Set}{48}{subsection.15.2}
-\contentsline {subsubsection}{\numberline {15.2.1}Description of Points in $S$}{48}{subsubsection.15.2.1}
-\contentsline {section}{\numberline {16}Monday, March 19, 2018}{50}{section.16}
-\contentsline {subsection}{\numberline {16.1}Topology of real numbers}{50}{subsection.16.1}
-\contentsline {subsection}{\numberline {16.2}More on the exponential function}{50}{subsection.16.2}
+\contentsline {section}{\numberline {12}Friday, March 2, 2018}{42}{section.12}
+\contentsline {subsection}{\numberline {12.1}Open and closed subsets of the real numbers}{42}{subsection.12.1}
+\contentsline {section}{\numberline {13}Monday, March 5, 2018}{44}{section.13}
+\contentsline {subsection}{\numberline {13.1}Topology of the Real Numbers}{44}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Boundary Points}{45}{subsection.13.2}
+\contentsline {section}{\numberline {14}Friday, March 9, 2018}{46}{section.14}
+\contentsline {subsection}{\numberline {14.1}Boundary Points}{46}{subsection.14.1}
+\contentsline {section}{\numberline {15}Monday, March 12, 2018}{47}{section.15}
+\contentsline {subsection}{\numberline {15.1}Topology of the real numbers}{47}{subsection.15.1}
+\contentsline {section}{\numberline {16}Friday, March 16, 2018}{49}{section.16}
+\contentsline {subsection}{\numberline {16.1}Compact Sets}{49}{subsection.16.1}
+\contentsline {subsection}{\numberline {16.2}Cantor Set}{50}{subsection.16.2}
+\contentsline {subsubsection}{\numberline {16.2.1}Description of Points in $S$}{50}{subsubsection.16.2.1}
+\contentsline {section}{\numberline {17}Monday, March 19, 2018}{52}{section.17}
+\contentsline {subsection}{\numberline {17.1}Topology of real numbers}{52}{subsection.17.1}
+\contentsline {subsection}{\numberline {17.2}More on the exponential function}{52}{subsection.17.2}

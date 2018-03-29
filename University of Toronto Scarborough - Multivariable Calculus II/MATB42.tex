@@ -37,7 +37,7 @@
 \renewcommand\qedsymbol{$\blacksquare$}
 
 \usepackage{fancyhdr}
- 
+
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{Multivariable Calculus II -- Winter 2018}
@@ -144,7 +144,7 @@ So why do we add the $\frac{a_0}{2}$? It is the average value of $f$ over $[-\pi
 		&= \frac{1}{k} cos(k\pi)\\
 		&= \frac{(-1)^k}{k}
 	\end{align*}
-	
+
 	Thus we have:
 	$$F_N (x) = -sin(x) + \frac{1}{2}sin(2x) - \frac{1}{3}sin(3x) + \frac{1}{4}sin(4x) + ...$$
 	$$F_1 (x) = -sin(x)$$
@@ -193,7 +193,7 @@ We haven't talked about convergence yet, but for now, we will assume the series 
 (completely rewrite this amplitude section)
 
 \begin{definition}
-    The amplitude of the $k$th harmonic is 
+    The amplitude of the $k$th harmonic is
     $$A_k = \sqrt{(a_k)^2 + (b_k)^2}$$
     And note that
     $$a_k = A_k sin\alpha, b_k = A_k cos\alpha$$
@@ -276,9 +276,9 @@ So now we get
     1, &0\leq x < \pi\\
     -1, &-\pi \leq x < 0
     \end{cases}$$
-    
+
     Note that this is an odd function, therefore $a_k = 0, \forall k \geq 0$. So now lets calculate $b_k$.
-    
+
     \begin{align*}
         b_k &= \frac{1}{\pi} \int^\pi_{-\pi} f(x)sin(kx) dx\\
         &\overset{even}{=} \frac{2}{\pi} \int^\pi_{0} f(x)sin(kx) dx\\
@@ -289,7 +289,7 @@ So now we get
             0, &\text{$k$ is even}
         \end{cases}
     \end{align*}
-    
+
     And now lets right out the Fourier Polynomial $(F_N (x))$\\
     \underline{if $N$ is odd:}
     $$F_N (x) = \frac{4}{\pi}sin(x) + \frac{4}{3\pi}sin(3x) + \frac{4}{5\pi}sin(5x) + ...$$
@@ -297,16 +297,16 @@ So now we get
     $$F_N (x) = F_{N-1} (x)$$
     We can also write it as a Fourier Series
     $$F(x) = \frac{4}{\pi} \sum^\infty_{l=0} \frac{sin((2l+1)x)}{2l+1}$$
-    
+
     The energy of the function is
     $$E = \frac{1}{\pi} \int^\pi_{-\pi} [f(x)]^2 dx = \frac{2}{\pi} \int^\pi_0 dx = 2$$
-    
+
     The amplitutde of the $k$th harmonic is
     $$A_k = \sqrt{a_k^2 + b_k^2} = \sqrt{0 + \frac{16}{k^2\pi^2}} = \frac{4}{k\pi}$$
-    
+
     The energy of the $k$th harmonic is
     $$A_k^2 = \frac{16}{k^2 \pi^2}$$
-    
+
     Note that for this example, both the energy and the amplitude are 0 at an even $k$.\\
     \\
     Lets now evaluate the energy spectrum:
@@ -314,7 +314,7 @@ So now we get
     $$k=3, E= \frac{16}{9\pi^2} \approx 0.18, \frac{0.18}{2}=0.09=9\%$$
     $$k=5, E= \frac{16}{25\pi^2} \approx 0.06, \frac{0.06}{2}=0.03=3\%$$
     $$k=7, E= \frac{16}{49\pi^2} \approx 0.03, \frac{0.03}{2}=0.015=1.5\%$$
-    
+
 \end{example}
 
 However, we do not need to exclusively work with the interval $[-\pi, \pi]$ we can even work over any interval of length $2\pi$.
@@ -363,9 +363,9 @@ $$b_k = \frac{2}{b-a} \int^{b}_{a} f(x) sin(\frac{2nx\pi}{b-a}x) dx, k=1,2,3,...
 
 \begin{example}
     $f(x) = |x|, -\pi < x \leq \pi$. Since $f(x)$ is even, $b_k=0, \forall k\in\mathbb{N}$.
-    
+
     $$a_0 = \frac{1}{\pi} \int^\pi_{-\pi} |x|dx \overset{even}{=} \frac{2}{\pi} \int^\pi_0 x dx= \pi$$
-    
+
    \begin{align*}
    	a_k &= \frac{1}{\pi} \int^\pi_{-\pi} |x| cos(kx) dx\\
 	&\overset{even}{=} \frac{2}{pi} \int^\pi_0 x cos(kx) dx\\
@@ -376,9 +376,9 @@ $$b_k = \frac{2}{b-a} \int^{b}_{a} f(x) sin(\frac{2nx\pi}{b-a}x) dx, k=1,2,3,...
 		\frac{-4}{\pi k^2}, &\text{$k$ is odd}
 	\end{cases}
    \end{align*}
-   
+
    So we end up with the Fourier Series
-   
+
    $$F(x) = \frac{\pi}{2} - \frac{4}{\pi} \sum^\infty_{l=0} \frac{cos((2l+1)x)}{(2l+1)^2}$$
 
 \end{example}
@@ -441,9 +441,9 @@ To get a Fourier cosine series or a Fourier sine series, we need
 
 \begin{definition}
 	The Fourier Series obtained from $f(x)$ converges to $f(x)$ if $f(x) = \lim_{N\to\infty} F_N (x)$
-	
+
 	\underline{i.e.} $$f(x) = \lim_{N\to\infty} F_N (x) = \frac{a_0}{2}+ \sum^N_{k-1} a_k cos(kx) + b_k sin(kx)$$
-	
+
 	assuming a period of $2\pi$ (and can be adjusted for other periods). The $a_k$ and $b_k$ are the Fourier coefficients.
 \end{definition}
 
@@ -503,7 +503,7 @@ However, the domain of the function also play a role in the series.
 \begin{example}
 	For $f(x), x\in[0,1)$, we get
 	$$F(x) = \frac{1}{2} - \frac{1}{\pi}\sum^\infty_{k=1} \frac{sin((2k+1)x)}{2k+1}$$
-	The theorem still applies and we get $F(x) = x$ on the interval $[0,1)$, and converge to $\frac{1}{2}$ at $0$. 
+	The theorem still applies and we get $F(x) = x$ on the interval $[0,1)$, and converge to $\frac{1}{2}$ at $0$.
 \end{example}
 
 \begin{example}
@@ -529,11 +529,11 @@ $$<f,g> = frac{1}{\pi} \int^{\pi}_{-\pi} f(x) g(x) dx$$ defined on all continues
 
 \begin{example}
 	The set of functions $\{ cos(kx), sin(nx) \}_{n,k\in\mathbb{Z}}$ act like an orthonormal basis. since
-	
+
 	$$<cos(mx), cos(nx)> = \begin{cases}1, &\text{ if } m=n\\ 0, &\text{ otherwise} \end{cases}$$
 	$$<sin(mx), sin(nx)> = \begin{cases}1, &\text{ if } m=n\\ 0, &\text{ otherwise} \end{cases}$$
 	$$<sin(mx), cos(nx)> = 0$$
-	
+
 	for positive integers $m,n$
 \end{example}
 
@@ -592,7 +592,7 @@ Therefore $\frac{1}{2} a_0$ is the best constant approximation in the sense of t
 
 \begin{definition}
 	If $f$ is piece-wise continuous on $[-\pi, \pi]$ we see that
-	
+
 	$$\frac{a_0}{2}+ \sum^N_{k=1} a_k^2 + b_k^2 \leq \frac{1}{\pi} \int_{-\pi}^\pi [f(x)]^2 dx = <f,f>$$
 	This is called \textbf{Bessel's Inequality} and it shows that $\sum^\infty_{k=1} a_k^2 + b_k^2$ converges
 \end{definition}
@@ -640,7 +640,7 @@ $$\gamma (t) = (\gamma_1 (t), \gamma_2 (t), ..., \gamma_n (t)), t\in[a,b]$$
 \end{definition}
 
 \begin{example}
-	Consider a circle of radius $3$ in $\mathbb{R}^2$ centred around the origin. A path of this circle is 
+	Consider a circle of radius $3$ in $\mathbb{R}^2$ centred around the origin. A path of this circle is
 	$$\gamma (t) = (3cost, 3sint), t \in [0,2\pi]$$
 	We say this curve is oriented in the counter clockwise direction
 \end{example}
@@ -662,9 +662,9 @@ $$\gamma (t) = (\gamma_1 (t), \gamma_2 (t), ..., \gamma_n (t)), t\in[a,b]$$
 
 \begin{example}
 	Find the parameterization of the curve $C$ of the intersection of the cylinder $x^2 + y^2 = 1$ and the plane $y+z = 2$. The projection into the $x-y$ plane is the circle $x^2 + y^2 = 1, z=0$, so
-	
+
 	$$x=cost, y=sint$$
-	
+
 	From the equation of the plane
 	$$z = 2-y = 2-sint$$
 	We now parameterize the curve $C$ by
@@ -680,7 +680,7 @@ $$\gamma (t) = (\gamma_1 (t), \gamma_2 (t), ..., \gamma_n (t)), t\in[a,b]$$
 \end{note}
 
 \begin{example}
-	
+
 \end{example} The $1$st quadrant piece of the unit circle in a counter clock-wise direction, from $(1,0)$ to $(0,1)$
 
 $$\gamma_1 (t) = (cost, sint), t\in [0, \frac{\pi}{2}]$$
@@ -695,7 +695,7 @@ All parameterize the same curve.
 	$$D(\gamma(t)) = (\gamma_1'(t), \gamma_2'(t), ... , \gamma_n'(t))$$
 	provided each $\gamma_i'(t)$ exists for $t=1,...,n$\\
 	\\
-	We usually write $\gamma' (t) = (\gamma_1'(t),...,\gamma_n'(t))$ 
+	We usually write $\gamma' (t) = (\gamma_1'(t),...,\gamma_n'(t))$
 \end{definition}
 
 \begin{definition}
@@ -730,27 +730,27 @@ Note that $\gamma (t)$ must be smooth (class $C^1$) for $t$ near $t_0$, be caref
 	And this implies that $k = \frac{s}{r}$.\\
 	\\
 	Note that $r,k \in \mathbb{R}^+ > 0$
-	
+
 	$$\gamma '' (t) = (-rk^2 cos(kt), -rk^2 sin(kt)) = -k^2 \gamma (t)$$
-	
+
 	Assuming particle is a satellite of mass $m$ orbiting the earth of mass $M$.
-	
+
 	\begin{note}
 		$$F = ma = m(\gamma '' (t)) = -mk^2 \gamma (t)$$
 		$$F(\vec{v}) = \frac{-G m M \vec{v}}{||\vec{v}||^3}$$
 		where $G$ is the gravitational constant and $\vec{v} = \gamma (t)$
 	\end{note}
-	
+
 	$$-mk^2 \gamma (t) = \frac{-G m M \gamma (t)}{r^3}$$
-	
+
 	And this implies that $k^2 = \frac{GM}{r^3}$.\\
 	\\
 	What is the period? $p = \frac{2\pi}{k}$ this implies that $k = \frac{2\pi}{p}$.
-	
+
 	$$k^2 = (\frac{2\pi}{p})^2 = \frac{GM}{r^3}$$
 	This implies that
 	$$p^2 = \frac{4 \pi^2}{GM} r^3$$
-	
+
 	The period of a satellite squared is proportional to the radius of its orbit cubed (One of Kepler's Laws)
 
 \end{example}
@@ -800,9 +800,9 @@ The length of the path is the "total distance travelled."
 	Find the arclength of $\gamma (t) = (sin(5t), cos(5t), \frac{10}{3} t^{1.5})$ from $t=0$ to $t=3$.\\
 	\\
 	$$\gamma ' (t) = (5cost, -5sint, 5 \sqrt{t})$$
-	
+
 	$$||\gamma ' (t)|| = \sqrt{25cos^2 (t) + 25sin^2 (t), 25 t} = 5\sqrt{1+t}$$
-	
+
 	$$s = \int_\gamma ds = 5 \int_0^3 \sqrt{1+t} dt = \frac{70}{3}$$
 \end{example}
 
@@ -816,7 +816,7 @@ The length of the path is the "total distance travelled."
 		&=(3t)(-2t) - (\sqrt{3}t)^2\\
 		&= -6t^2 - 3t^2 = -9t^2
 	\end{align*}
-	
+
 	$$\int_\gamma f ds = \int_0^1 f(\gamma (t))||\gamma ' (t)||dt = \int_0^1 (-9t^2)4dt = -36 \int_0^1 t^2 dt = -12$$
 
 \end{example}
@@ -854,9 +854,9 @@ We think of a vector field $F$ as attaching to each point $x$ a vector $f(x)$
 	"pull of a satellite towards the earth"\\
 	\\
 	The strength of the force depends on $d$, the distance away. Force is in the opposite direction to the position vector.
-	
+
 	$$F(x) = F(x,y,z) = (- \frac{mMG}{||(x,y,z)||^3}x, - \frac{mMG}{||(x,y,z)||^3}y, - \frac{mMG}{||(x,y,z)||^3}z)$$
-	 
+
 \end{example}
 
 \begin{example}
@@ -875,7 +875,7 @@ We think of a vector field $F$ as attaching to each point $x$ a vector $f(x)$
 
 \begin{example}
 	$F(x,y) = (3,4)$, vector $(3,4)$ at every point will be straight lines. Want to know flow line at $(1,2)$
-	
+
 	$$\gamma (t) = (x(t), y(t))$$
 	$$\gamma ' (t) = F(\gamma (t)) = (3,4)$$
 	$$\gamma (t) = (3t + 1, 4t+2)$$
@@ -890,11 +890,11 @@ We think of a vector field $F$ as attaching to each point $x$ a vector $f(x)$
 
 \begin{example}
 	For time $t$, force $F = F(\gamma(t)) \cdot \frac{\gamma ' (t)}{||\gamma ' (t)||} = F(\gamma (t)) \cdot T (\gamma (t))$
-	
+
 	$$\Delta w = F(\gamma(t)) \cdot T (\gamma (t)) \Delta s$$
-	
+
 	$$w= \int_\gamma F \cdot T ds$$
-	
+
 \end{example}
 
 \begin{definition}
@@ -920,7 +920,7 @@ We think of a vector field $F$ as attaching to each point $x$ a vector $f(x)$
 	$F(x,y) = (y,x^2), \gamma (t) = (t^2, t^3), t\in[0,1]$
 	$$F(\gamma (t)) = (t^3, t^4)$$
 	$$\gamma ' (t) = (2t, 3t^2)$$
-	
+
 	\begin{align*}
 		\int_\gamma F \cdot ds &= \int_0^1 (2t^4 + 3t^6) dt\\
 		&= [\frac{2}{5} t^5 + \frac{3}{7} t^7]^1_0\\
@@ -933,7 +933,7 @@ We think of a vector field $F$ as attaching to each point $x$ a vector $f(x)$
 	$$F(x,y) = (2y-x, -y)$$
 	$$\gamma (t) = (-cost, sint), t\in[0,\pi]$$
 	$$\gamma_0 (t) = (cost, sint), t\in[0,\pi]$$
-	
+
 	\begin{align*}
 		\int_\gamma F ds &= \int_0^\pi F(\gamma(t)) \cdot \gamma ' (t) dt\\
 		&= \int_0^\pi (2sin^2 t + costsint - sint cost) dt\\
@@ -945,7 +945,7 @@ We think of a vector field $F$ as attaching to each point $x$ a vector $f(x)$
 		&= \int_0^\pi (-2sin^2 t + costsint - sint cost) dt\\
 		&= -2\int_0^\pi (\frac{1}{2}-\frac{1}{2}cos(2t))dt = -\pi
 	\end{align*}
-	
+
 \end{example}
 
 \begin{note}
@@ -982,7 +982,7 @@ We can think of $F = (f_1, ... , f_n)$ and $ds = (dx_1, ... , dx_n)$ where $dx_i
 \begin{example}
 	$$\int_\gamma zx^2 dx + yzdy + arcsin(x)dz$$
 	where $\gamma (t) = (t, t^2, 1), t\in [0,1]$
-	
+
 	\begin{align*}
 		\int_\gamma \omega &= \int_0^1 [(t^2)(1) + (t^2)(2t) + (0)(arcsint) ]dt\\
 		&= \int_0^1 (t^2+ 2t^3)dt\\
@@ -1022,7 +1022,7 @@ $$\frac{df}{dt} = \frac{\partial f}{\partial x_1} \frac{d x_1}{dt} + \frac{\part
 		\item{$\gamma$ is a parameterization of the top half of the unit circle}
 		\item{$\gamma$ is a parameterization of the line $(1,0) \to (-1,0)$}
 	\end{enumerate}
-	
+
 	\begin{enumerate}
 	\item{
 		$$\gamma (t) = (cost t, sin t), t \in [0,\pi]$$
@@ -1062,7 +1062,7 @@ Think of a parameterization as a bijection, except possibly at finitely many of 
 		\int^b_a G'(t) dt &= G(b) - G(a)\\
 		&= f(\gamma(b)) - f(\gamma(a))
 	\end{align*}
-	
+
 	$$\int_\gamma \nabla f ds = \int^b_a \nabla f(\gamma(t)) \gamma '(t) = f(\gamma(b)) - f(\gamma(a))$$
 
 \end{proof}
@@ -1073,6 +1073,96 @@ Think of a parameterization as a bijection, except possibly at finitely many of 
 \end{corollary}
 
 The line integral of a conservative vector field is independent of the choice of path
+
+\underline{Remarks:}
+\begin{enumerate}
+	\item{This theorem and corollary can be restated in terms of differential forms. For example, If $\omega = df$ is exact and $\gamma$ is a curve joining $x_0, x_1$ then $$\int_\gamma \omega = f(x_1) - f(x_0)$$}
+	\item{
+	This result (any form) is a generalization of the FTOC and is often called the "General Fundamental Theorem of Calculus" (GFTC) ($\int_\gamma d\omega = \int_{\partial \gamma} \omega$)
+	}
+\end{enumerate}
+
+\newpage
+
+\section{Friday, February 2, 2018}
+
+\begin{definition}
+  A \textbf{closed curve} is a curve which joins a point $x_0$ to itself
+\end{definition}
+
+\begin{definition}
+  A \textbf{simple curve} is a curve which does not intersect itself
+\end{definition}
+
+\begin{definition}
+  A \textbf{Jordan curve} is a non-self-intersecting continuous loop in the plane
+\end{definition}
+
+\begin{corollary}
+  If $F$ is a conservative vector field, and $\gamma$ is a closed curve, then
+  $$\int_\gamma F\cdot ds = 0$$
+\end{corollary}
+
+\begin{definition}
+  If $F=\nabla g$ is a conservative vector field then $g$ is called a potential function for the vector field F
+\end{definition}
+
+\begin{theorem}
+  If $F$ is a vector field and $\int_\gamma F\cdot ds = 0, \forall$ closed curves $\gamma$ then $F$ is convservative. (The idea is that:)
+  $$\int_{\gamma+\sigma} F\cdot ds = \int_\gamma F\cdot ds + \int_\sigma F\cdot ds = 0$$
+\end{theorem}
+
+\begin{example}
+  $$\int_\gamma y^2 dx + 2xydy, \gamma (t) = (arctan(sin(\frac{\pi}{2}t)), e^{cos(\frac{\pi}{2}t)}), t\in [0,1]$$
+  $g(x,y) = xy^2 + c$ is a potential function for $\omega = y^2 dx + 2xydy$.
+  \\
+  \begin{align*}
+    \int_\gamma y^2 dx + 2xydy &= g(\gamma (1)) - g(\gamma (0))
+  \end{align*}
+  $$\gamma (1) = (arctan(1), e^0) = (\frac{\pi}{4}, 1)$$
+  $$\gamma (0) = (arctan(0), e) = (0,e)$$
+  This implies that $\int_\gamma = \frac{\pi}{4} (1) - (0)(e^2) = \frac{\pi}{4}$. Assume that $F_1,...,F_n $ are of class $C^1$, then $F = (F_1, ..., F_n)$ or $\omega = F_1 dx_1 + ... + F_n dx_n$\\
+  \\
+  So if $F = v \cdot g$ or $\omega = dg$ then $F_i = \frac{\partial g}{\partial x_i}$\\
+  \\
+  $F_1,...,F_n$ are $C^1 \Longrightarrow$ g must be $C^2$
+
+  $$\frac{\partial F_i}{\partial x_j} = \frac{\partial^2 g}{\partial x_j \partial x_i} = \frac{\partial^2 g}{\partial x_i\partial x_j} = \frac{\partial F_j}{\partial x_i}$$
+  $\Longrightarrow$ a necessary condition for $F$ to be conservative or $\omega$ to be exact is
+  $$\frac{\partial F_i}{\partial x_j} = \frac{\partial F_j}{\partial x_i}, i,j \in [1,n], i\neq j$$
+\end{example}
+
+\begin{definition}
+  Let $\omega = F_1 dx_1 + ... + F_n dx_n$. If
+  $$\frac{\partial F_i}{\partial x_j} = \frac{\partial F_j}{\partial x_i}, i,j \in [1,n], i\neq j$$
+  Then $\omega$ is said to be closed.
+\end{definition}
+
+\begin{note}
+    exact $\Longrightarrow$ closed
+\end{note}
+
+\begin{definition}
+  A subset $S\subset \mathbb{R}^n$ is said to be \textbf{simply connected} if given two curves with the same endpoints on $S$, one can be continuously deformed in the other within $S$.\\
+  \\
+  In $\mathbb{R}^n$, if $S$ is connected, it is also simply connected if for every closed curve $\gamma$ in $S$, the interior of $\gamma$ is also in $S$.
+\end{definition}
+
+\begin{example}
+  $\mathbb{R}^3 \setminus \{ 0 \}$ is simply connected
+\end{example}
+
+\begin{example}
+  $\mathbb{R}^3 \setminus \{ (x,0,0) | x\in \mathbb{R} \}$ is not simply connected
+\end{example}
+
+\begin{definition}
+  If $\omega = F_1 dx_1 + ... + F_n dx_n$ the domain of $\omega$ is the intersection of the domains of all $F_i, i\in [1,n]$
+\end{definition}
+
+\begin{theorem}
+  If $\omega$ is a differential form whose domain is simply connected then $\omega$ is closed iff $\omega$ is exact. $\mathbb{R}^n$ is simply connected $\Longrightarrow$ If $\omega$ is defined on all $\mathbb{R}^n$, $\omega$ is exact iff $\omega$ is closed
+\end{theorem}
 
 \newpage
 
@@ -1145,7 +1235,7 @@ We find $\phi_u, \phi_v$ and $\phi_u \times \phi_v$ (a normal)
 
 $$\frac{\phi_u \times \phi_v}{||\phi_u \times \phi_v||} \text{ is a unit normal}$$
 
-This implies that 
+This implies that
 $$\frac{\phi_u \times \phi_v}{||\phi_u \times \phi_v||} = \pm n$$
 which implies that
 $$\phi_u \times \phi_v = \pm || \phi_u \times \phi_v|| n$$
@@ -1153,7 +1243,7 @@ $$\phi_u \times \phi_v = \pm || \phi_u \times \phi_v|| n$$
 The plus and minus determines if it is in the same direction as $n$ or in the opposite direction.
 
 \begin{note}
-	it is an adequate to check at a single point the orientation of the surface 
+	it is an adequate to check at a single point the orientation of the surface
 \end{note}
 
 
@@ -1166,7 +1256,7 @@ The plus and minus determines if it is in the same direction as $n$ or in the op
 
 \begin{example}
 	Evaluate $\int_S F \cdot dS$
-	
+
 	$F(x,y,z) = (x,y,z), S$ is the part of the place $x+y+z=1$ which lies in the first octant and $n$ points upward.\\
 	\\
 	We parameterize $S$ by $\Phi (u,v) = (u,v, 1-u-v)$ where $(u,v)\in D$\\
@@ -1175,9 +1265,9 @@ The plus and minus determines if it is in the same direction as $n$ or in the op
 	$$0 \leq v \leq 1-u$$
 	$$0 \leq u \leq 1$$
 	$$\phi_u \times \phi_v = (1,1,1)$$
-	
+
 	Since the $z$-component is positive, it points relatively upward. So its in the correct direction.
-	
+
 	\begin{align*}
 		\int_\Phi F \cdot dS &= \int_D (F(\Phi (u,v)) \cdot \phi_u \times \phi_v) dA\\
 		&= \int_0^1 \int_0^{1-u} (u,v,1-u-v) \cdot (1,1,1) dv du\\
@@ -1187,8 +1277,8 @@ The plus and minus determines if it is in the same direction as $n$ or in the op
 		&= [u=\frac{1}{2}u^2]_0^1 = 1 - \frac{1}{2} = \frac{1}{2}
 	\end{align*}
 
-	
-	
+
+
 \end{example}
 
 \begin{example}
@@ -1197,7 +1287,7 @@ The plus and minus determines if it is in the same direction as $n$ or in the op
 	Parameterize $S$ by $\Phi (u,v) = (u,v, 4-u^2-v^2)$ where $0 \leq u \leq 1$ and $0 \leq v \leq 1$ and $\phi_u \times \phi_v = (2u, 2v, 1)$\\
 	\\
 	Since $z=1 > 0$, this is the correct direction.
-	
+
 	\begin{align*}
 		\int_\Phi F \cdot dS &= \int_0^1 \int_0^1 F(\Phi (u,v)) \cdot \phi_u \times \phi_v dudv\\
 		&= \int_0^1 \int_0^1 (u,v,4-u^2-v^2) \cdot (2u, 2v, 1) dudv\\
@@ -1221,14 +1311,14 @@ The plus and minus determines if it is in the same direction as $n$ or in the op
 	$$\phi_u = (cosv, sinv, 2u)$$
 	$$\phi_v = (-usinv, ucosv, 0)$$
 	$$\phi_u \times \phi_v = u(-2ucosv, -2usinv, 1)$$
-	
+
 	For the unit outer normal, the $z$-component would have to be negative. However, the $z$ component of $\phi_u \times \phi_v$ is $1 > u > 0$ so the unit normal vector
-	
+
 	\begin{align*}
 		-\int_{S_1} F \cdot n ds &= - \int_{u,v} (ucosv, u^2, usinv) \cdot (-2u^2 cosv, -2u^2 sinv, u) dA\\
 		&= -\int_0^1 \int_0^{2\pi} (-2u^3cos^2 v - 2u^4 sinv + u^2 sinv) dv du = \frac{\pi}{2}
 	\end{align*}
-	
+
 	\underline{cover ($S_2$):} $\Phi (u,v) = (cos(v)sin(u), sin(v)sin(u), 1+cos(u))$ where $0\leq v \leq$, $0 \leq u \leq \frac{\pi}{2}$\\
 	\\
 	$$\phi_u = (cos(v)cos(u),sin(v)cos(u), -sin(u))$$
@@ -1244,30 +1334,3 @@ The plus and minus determines if it is in the same direction as $n$ or in the op
 
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

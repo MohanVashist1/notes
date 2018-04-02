@@ -1166,6 +1166,212 @@ The line integral of a conservative vector field is independent of the choice of
 
 \newpage
 
+\section{Monday, February 5, 2018}
+
+\begin{theorem}
+	Let $\omega = F_1 dx_1 + ... + F_n dx_n$ be 1-form defined on all of $\mathbb{R}^n$, then this implies that $\omega$ is exact $\Longleftrightarrow$ it is also closed, since it is defined on all of $\mathbb{R}^n$.
+\end{theorem}
+
+\begin{note}
+	exact means there exists a potential function $$g:\mathbb{R}^n \mapsto \mathbb{R}, \exists \omega = dg$$
+\end{note}
+
+And so we want to find $g$. We have to do the following steps to find $g$
+
+\subsection{Finding the potential function}
+
+(This is the setup for $n=2, \mathbb{R}^2$).
+
+
+	Let $\omega = F_1 dx + F_2 dy$\\
+	(is it closed? We're checking for $\frac{\partial F_1}{\partial y} = \frac{\partial F_2}{\partial x}$).\\
+	$\mathbb{R}^2$ is simply connected, so if closed $\Longrightarrow$ exact then the potential function $g$ exists.\\
+	We know that $\frac{\partial g}{\partial x} = F_1$ and $\frac{\partial g}{\partial y} = F_2$
+	$$g(x,y) = \int F_1 (x,y)dx + \frac{dh(x)}{dy}$$
+	And then we need to find $h$
+	$$\frac{\partial g(x,y)}{\partial y} = \frac{\partial}{\partial y}(\int F_1 (x,y)dx + \frac{dh(x)}{dy})$$
+	$$\frac{dh(x)}{dy} = F_2 (x,y) + \frac{\partial}{\partial y}(\int F_1 (x,y)dx)$$
+	All $x$ should cancel from the right hand side, leaving a function of $y$ a lone, which we can integrate to get $h$.
+	$$\frac{\partial}{\partial x}(F_2 (x,y) + \frac{\partial}{\partial y}(\int F_1 (x,y)dx))$$
+	$$\Longrightarrow \frac{\partial F_2}{\partial x} - \frac{\partial^2}{\partial x\partial y}  (\int F_1 (x,y)dx)$$
+	$$\frac{\partial F_2}{\partial x} - \frac{\partial^2}{\partial x\partial y}  (\int F_1 (x,y)dx) = \frac{\partial F_2}{\partial x} - \frac{\partial F_2}{\partial y} = 0$$
+
+	\begin{example}
+		(This example is in $n=3, \mathbb{R}^3$)\\
+
+		$$\omega = (z^2 + 2xy)dx + (x^2 +2yz)dy + (y^2 + 2xz + cos(z))dz$$
+		$$F_1 = (z^2 + 2xy)$$
+		$$F_2 = (x^2 +2yz)$$
+		$$F_3 = (y^2 + 2xz + cos(z))$$
+
+		So we start out by checking if omega is closed, and since
+		$$\frac{\partial F_2}{\partial x} = 2x = \frac{\partial F_1}{\partial y}$$
+		$$\frac{\partial F_1}{\partial z} = 2z = \frac{\partial F_3}{\partial x}$$
+		$$\frac{\partial F_2}{\partial z} = 2y = \frac{\partial F_3}{\partial y}$$
+		Since the cross partials are equal, it is closed. More formally, the Domain of $\omega$ is $\mathbb{R}^3$ which is simply connected, and closed $\Longrightarrow$ exact.\\
+		\\
+		We know there is a potential function $g:\mathbb{R}^3 \mapsto \mathbb{R}$\\
+		\\
+		Now we must find and construct $g$.
+
+		$$\frac{\partial g}{\partial x} = F_1 = (z^2 + 2xy)$$
+		$$\Longrightarrow g(x,y,z) = \int (z^2 + 2xy) + h(y,z)$$
+		$$\int (z^2 + 2xy) + h(y,z) =  xz^2 + x^2y + h(y,z)$$
+
+		And since we know that
+
+		$$F_2 = x^2 + 2yz = \frac{\partial}{\partial y} (xz^2 + x^2y + h(y,z))$$
+		$$2yz = \frac{\partial h}{\partial y}$$
+		$$\Longrightarrow \int 2yz dy + k(z) = h(x,y)$$
+		$$\Longleftrightarrow h(x,y) = \int 2yz dy + k(z) = y^2 z + k(z)$$
+		Now we have
+		$$g(x,y,z) = xz^2 + x^2y + y^2 z + k(z)$$
+		$$F_3 = y^2 + 2xz + cos(z) = \frac{\partial}{\partial z}(y^2 z + k(z))$$
+		$$2xz + cos(z) = \frac{\partial k(z)}{\partial z}$$
+		$$k(z) = \int (2xz + cos(z)) dz = x^z + sin(z) + C$$
+		Therefore, we have
+		$$g(x,y,z) = 2xz^2 + x^2 y + y^2 z + sin(z) + C$$
+
+	\end{example}
+
+	\subsection{Green's Theorem}
+
+	\begin{Theorem}
+		Let $\gamma$ be a smooth Jordan Curve in $\mathbb{R}^2$ oriented in the counterclockwise direction, and let $R$ be the region enclosed by $\gamma$. Let $\omega = F_1 dx + F_2 dy$ where $F_1, F_2 : \mathbb{R} \mapsto \mathbb{R}$ are of class $C^1$ throughout $\mathbb{R}$. then
+		$$\int_{\gamma = \partial R} F_1 dx + F_2 dy = \int_R (\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y})dA$$
+	\end{Theorem}
+
+	\begin{note}
+		Can restate in terms of a vector field. The conclusion would look like this:
+		$$\int_{\gamma = \partial R} F\cdot ds = \int_R (\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y})dA$$ where $F = (F_1, F_2)$
+	\end{note}
+
+	\begin{note}
+		The theorem can easily be generalized to the case where $\gamma$ is a Plane Simple Jordan Curve
+	\end{note}
+
+	\begin{note}
+		Sometimes the LHS is given as $$\varointctrclockwise_{\gamma = \partial R} F_1 dx + F_2 dy$$ which indicates a closed curve in the counterclockwise direction  ($\varointclockwise$ for the other direction).
+	\end{note}
+
+	\begin{note}
+		Should note that this theorem is of the form $$\int_{\partial R} f = \int_R df$$
+	\end{note}
+
+	\begin{example}
+		Let $R$ be a disc of radius 3 centered at the origin. Verify Green's Theorem by direct calculation when $F_1 (x,y) =  xy$ and $F_2 (x,y) = x$.\\
+		\\
+		So to verify Green's Theorem, we will calculate the left hand side and the right hand side separately and compare our results.\\
+		\underline{Left Hand Sign}\\
+		\\
+		$\partial R$ is a circle of radius 3 centered at the origin\\
+		We can parameterize it by $\gamma (t) = (3cost, 3sint), t\in [0,2\pi]$
+		\begin{align*}
+			\int_\gamma F_1 dx + F_2 dy &= \int_\gamma xydx + xdy\\
+			&= \int^{2\pi}_0 (3cost)(3sint)(-3sint)+ (3cost)(3cost)dt\\
+			&= 9 \int^{2\pi}_0 cos^2 t dt\\
+			&= 9 \int^{2\pi}_0 (\frac{1}{2} + \frac{1}{2}cos(2t)) dt\\
+			&= \frac{9}{2} \int^{2\pi}_0 dt = 9\pi
+		\end{align*}
+
+		\underline{Left Hand Sign}\\
+		\\
+		\begin{align*}
+			\iint_{\text{disk}} (\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y})dA &= \iint_{\text{disk}} (1-x) dA\\
+			&\overset{\text{polars}}{=} \int^{2\pi}_0 \int^3_0 (1-rcos\theta)rdrd\theta\\
+			&=\int^{2\pi}_0 \int^3_0 (r-r^2cos\theta)drd\theta\\
+			&=\int^{2\pi}_0 [\frac{1}{2}r^2 - \frac{1}{3} r^2 cos\theta]^3_0 d\theta\\
+			&=\int^{2\pi}_0 (\frac{9}{2}-0) d\theta = 9\pi
+		\end{align*}
+		Since both sides are the same, Green's theorem holds for this example.
+	\end{example}
+
+	\begin{corollary}
+		(Corollary 1 of Green's Theorem)\\
+		If $\gamma$ is a smooth Jordan Curve in $\mathbb{R}^2$ and $R$ is the region enclosed by $\gamma$ then the area of $R$ is given by
+		$$A(R) = \frac{1}{2} \int_\gamma xdy-ydx$$
+	\end{corollary}
+
+	If we apply Green's theorem to this corollary, we get
+	$$\frac{1}{2} \iint_R (1+1) dA = \iint_R dA = \text{The area of $R$}$$
+
+	\begin{corollary}
+		If the domain of $\omega$ (in $\mathbb{R}^2$) is simply connected, the $\omega$ is closed $\Longrightarrow$ exact.
+	\end{corollary}
+
+	$\omega = F_1 dx + F_2 dy$, so closed would be $(\frac{\partial F_2}{\partial x} = \frac{\partial F_1}{\partial y})$\\
+	If $\gamma$ is any closed curve then
+	\begin{align*}
+		\int_{\partial R = \gamma} \omega &= \iint_R (\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}) dA\\
+		&= \iint_R 0 dA = 0
+	\end{align*}
+
+	\begin{example}
+		Find the area of the ellipse
+		$$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$\\
+		\\
+		$\gamma (t) = (acost, bsint), t\in [0,2\pi]$
+		\begin{align*}
+			\text{Area} &= \frac{1}{2} \int_\gamma xdy-ydx\\
+			&= \frac{1}{2} \int^{2\pi}_0 (acost)(bcost)-(bsint)(-asint)dt\\
+			&= \frac{1}{2} \int^{2\pi}_0 ab (cos^2 t + sin^2 t)dt\\
+			&= \pi ab
+		\end{align*}
+	\end{example}
+
+	\begin{example}
+		Recall the previous examples,\\
+		$\int_\gammma xyd + xdy$ can go from $(1,0)\to (-1,0)$ in 2 differents way\\
+		\begin{enu}
+			\item{Along top half of the unit circle}
+			\item{Along the $x$-axis}
+		\end{enu}
+		This time we'll take $\gamma$ as the top half of the unit cricle followed along the $x$-axis back to $(1,0)$.\\
+		Now since Green's Theorem holds, since it's closed:
+		\begin{align*}
+			\int_\gamma xydx + xdy &\overset{\text{Green's}}{=} \int^1_{-1} \int_0^{\sqrt{1-x^2}} (1-x) dydx\\
+			&\overset{\text{polar}}{=} \int^\pi_0 \int^1_0 (r^2 - r^2 cos\theta) dr d\theta\\
+			&= \int^\pi_0 [\frac{1}{2} - \frac{1}{2} cos\theta]d\theta\\
+			&= \frac{\pi}{2}
+		\end{align*}
+		Does this agree with our previous calculation?\\
+		Yes.
+	\end{example}
+
+	\subsection{Winding Numbers}
+
+	\begin{example}
+		$$\omega = \frac{-y}{x^2+y^2} + \frac{x}{x^2+y^2}$$
+		$$\frac{\partial F_1}{\partial y} = \frac{y^2 - x^2}{(x^2+y^2)^2}$$
+		$$\frac{\partial F_2}{\partial y} = \frac{y^2 - x^2}{(x^2+y^2)^2}$$
+		$\Longrightarrow$ closed, but not exact, since it is not simply connected as the domain is $\mathbb{R}^2 - \{ (0,0) \}$\\
+		\\
+		If it were exact, $\int_\gamma \omega = 0$ for all closed $\gamma$\\
+		\\
+		Let $\gamma$ parameterize the unit circle in the counterclockwise direction.\\
+		$\gamma (t) = (cos t, sin t), t \in [0,2\pi]$\\
+		\begin{align*}
+			\int_\gamma \omega &= \int^{2\pi}_0 (-sint)(-sint) + (cost)(cost) dt\\
+			&= \int^{2\pi}_0 (sin^2 t + cos^2 t) dt\\
+			&= \int^{2\pi}_0 dt\\
+			&= 2\pi \neq 0
+		\end{align*}
+		We have a closed curve that is $\neq 0$\\
+		\\
+		If the radius were $R$.
+		$$(\frac{-R sint}{R^2})(-Rsint) + (\frac{-R cost}{R^2})(Rcost) &= \frac{R^2}{R^2} sin^2 t + \frac{R^2}{R^2} cos^2 t = 1$$
+		$\Longrightarrow$ the integral would still be $2\pi$\\
+		\\
+		Does this contradict Green's Theorem?\\
+		No, Since $F_1, F_2$ are not defined throughout the region $R$ enclosed by $\gamma$ and $F_1, F_2$ is not defined at $(0,0)$\\
+		\\
+		Is this unique to circles?\\
+		No.
+
+	\end{example}
+
+\newpage
+
 \section{Friday, March 2, 2018}
 
 We'll determine the orientation by choosing a unit normal vector.

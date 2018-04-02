@@ -17,4 +17,8 @@
 \contentsline {section}{\numberline {8}Monday, January 29, 2018}{28}{section.8}
 \contentsline {subsection}{\numberline {8.1}Line Integrals}{28}{subsection.8.1}
 \contentsline {section}{\numberline {9}Friday, February 2, 2018}{34}{section.9}
-\contentsline {section}{\numberline {10}Friday, March 2, 2018}{36}{section.10}
+\contentsline {section}{\numberline {10}Monday, February 5, 2018}{36}{section.10}
+\contentsline {subsection}{\numberline {10.1}Finding the potential function}{36}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Green's Theorem}{38}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Winding Numbers}{41}{subsection.10.3}
+\contentsline {section}{\numberline {11}Friday, March 2, 2018}{43}{section.11}

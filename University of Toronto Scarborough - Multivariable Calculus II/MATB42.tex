@@ -1452,6 +1452,176 @@ Continuing from the example from before:
 
 \newpage
 
+\section{Monday, February 12, 2018}
+
+\subsection{Proof of Green's Theorem}
+
+\begin{lemma}
+	If $R$ is a region like $R_x$ then $\int_{\gamma = \partial R} F_1 dx = \int_R \frac{\partial F_1}{\partial y} dA$. ($R_x$ being a region bounded in between two points on the x axis and between two curves that pass through this region as well)
+\end{lemma}
+
+\begin{proof}
+	Think of the boundary as $c_1 + c_2 + c_3 + c_4$\\
+	So
+	\begin{align*}
+		\int_\gamma F_1 dx &= \int_{c_1} F_1 dx + \int_{c_2} F_1 dx + \int_{c_3} F_1 dx + \int_{c_4} F_1 dx\\
+		&= \int_{c_1} F_1 dx + \int_{c_2} F_1 dx -\int_{-c_3} F_1 dx -\int_{-c_4} F_1 dx
+	\end{align*}
+	And now we parameterize:
+	$$c_1 : x=x, y=g_1(x), x\in [a,b]$$
+	$$c_2 : x=b, y=y, y \in [g_1 (b), g_2 (b)]$$
+	$$c_3 : x=x, y=g_2(x), x\in [a,b]$$
+	$$c_4 : x=a, y=y, y \in [g_1 (a), g_2 (a)]$$
+	We noticed that $dx$ is 0 for $c_2, c_4$
+
+	\begin{align*}
+		&\Longrightarrow \int_{c_1} F_1 dx  -\int_{-c_3} F_1 dx\\
+		&=\int^b_a F_1 (x,g_1 (x))dx - \int^b_a F_1 (x,g_2 (x))dx\\
+		&=\int^b_a [F_1 (x,g_1 (x)) - F_1 (x,g_2 (x))]dx
+	\end{align*}
+
+	For a fixed $x, F_1 (x,y)$ and $\frac{\partial F_1}{\partial y} (x,y)$ are continuous functions for $y\in [g_1 (x), g_2 (x)]$.\\
+	\\
+	$\frac{\partial F_1}{\partial y}$ is the derivative of $F_1$ with respect to $y$.\\
+	\\
+	By the Fundamental Theoreom of Calculus,
+	\begin{align*}
+		F_1 (x,g_1 (x)) - F_1 (x,g_2(x)) &= \int^{g_2(x)}_{g_1(x)} - \frac{\partial F_1}{\partial y} dy\\
+		\Longrightarrow \int_{\partial R} F_1 dx &= \int^b_a [F_1 (x,g_1 (x)) - F_1 (x,g_2 (x))]dx\\
+		&= \int^b_a \int^{g_2(x)}_{g_1(x)} - \frac{\partial F_1}{\partial y} dy dx
+	\end{align*}
+	As wanted
+
+\end{proof}
+
+\begin{lemma}
+	If $R$ is a region like $R_y$ then $\int_{\gamma = \partial R} F_1 dx = \int_R \frac{\partial F_2}{\partial x} dA$. ($R_y$ being a region bounded in between two points on the y axis and inbetween two curves that pass through this region as well)
+\end{lemma}
+
+\begin{proof}
+	similar to the previous proof, but with the roles switched.
+\end{proof}
+
+\begin{lemma}
+	If Green's Theorem holds on $R_1, R_2$ then it holds on $R_1 \cup R_2$
+\end{lemma}
+
+\begin{proof}
+	\int_{R_1 \cup R_2} (\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y})dA &= \int_{R_1} (\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y})dA + \int_{R_2} (\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y})dA\\
+	&\overset{\text{Green's}}{&=} \int_{\gamma_1} F_1 dx + F_2 dy + \int_{\sigma} F_1 dx + F_2 dy + \int_{-\sigma} F_1 dx + F_2 dy + \int_{-\gamma_2} F_1 dx + F_2 dy\\
+	&= \int_{\gamma_1} F_1 dx + F_2 dy + \int_{\gamma_2} F_1 dx + F_2 dy\\
+	&= \int_{\partial (R_1 \cup R_2)} F_1 dx + F_2 dy
+
+	Then conclude using Lemma 1 and 2
+\end{proof}
+
+\subsection{Surfaces}
+
+\begin{definition}
+	A \textbf{parameterized surface} is a function $\Phi : D \subset \mathbb{R}^2 \mapsto \mathbb{R}^n$.
+\end{definition}
+
+\begin{definition}
+	The \textbf{surface} corresponding to the function $\Phi$ is its image $\Phi (D)$
+\end{definition}
+
+\begin{definition}
+	$\Phi$ is $diff(C^1)$ if each component is $diff(C^1)$. We then say that $S$ is a $diff(C^1)$ surface.
+\end{definition}
+
+\begin{remark}
+	"surface" is generally a 2-dimensional surface (we'll later define k-dimensional surfaces in $\mathbb{R}^n$)
+\end{remark}
+
+\begin{remark}
+	We will generally restrict to surfaces which are at least piecewise $C^1$
+\end{remark}
+
+\begin{remark}
+	The domain cannot always be described by inequalities with numeric limits
+\end{remark}
+
+\begin{remark}
+	Think of $\Phi$ as "twisting", "bending", "stretching", $D$ onto the surface $\Phi(D)$
+\end{remark}
+
+\begin{remark}
+	There may be many different parameterizations of the same surface, for example, the top half of a unit sphere ($x^2 + y^2 + z^2 = 1, z \geq 0$). One example may be $$\phi (u,v)=(cosu sinv, sinu sinv, cosv), u\in [0,2\pi], v \in [0,\frac{\pi}{2}]$$
+	and another may be
+	$$\phi (s,t) = (s,t \sqrt{1-s^2 - t^2}), (s,t) \in D = \text{ (circle disk of radius 1)}$$
+\end{remark}
+
+\begin{remark}
+	Graph of a function of two variables $z=f(x,y)$ is parameterized by $\phi (u,v) = (u,v,f(u,v)), (u,v) \in Dom(f)$
+\end{remark}
+
+\begin{remark}
+	for $F(x,y,z) = 0$, we could try to sub in $z=g(x,y)$ like the last remark, but if it is not possible, we may need to split the surface into several pieces, generally, $z=g(x,y)$ is not the best approach.
+\end{remark}
+
+\begin{definition}
+	 $\Phi : D \subset \mathbb{R}^2 \mapsto \mathbb{R}^n$ is a surface parameterization and fix $v=v_0$, then $(\phi_1 (u,v_0),..., \phi_n (u,v_0))$ is a path on the surface
+\end{definition}
+
+$$\gamma' (u) = (\frac{\partial \phi_1}{\partial u} (u,v_0),..., \frac{\partial \phi_n}{\partial u} (u,v_0)) = (\gamma_1 ' (u), ..., \gamma_n ' (u) )$$
+
+\begin{note}
+	$\gamma '$ is tanget to the surface, it represents $u$-curves or $u$-lines $(\phi_u (u,v_0) = \gamma' (u))$, similarly, we have $v$-curves and $v$-lines and tangets $\phi_v (u,v)$
+\end{note}
+
+So at the point $\phi (u_0, v_0)$, we have two tangent vectors, $\phi_u (u_0, v_0)$ and $\phi_v (u_0, v_0)$\\
+\\
+In the case of the $k$-dimensional surface, there will be $k$ of these tangets. (\phi_{u_1}, i = 1,...,k)\\
+\\
+Any other tangent vector at $\phi (u_0, v_0)$ can be written as a linear combination of $\phi_u$ and $\phi_v$.
+$$T(u_0, v_0) = \lambda \phi_u (u_0, v_0) + \mu \phi_v (u_0, v_0), \lambda, \mu \in \mathbb{R}$$
+$$T(u_1, ..., u_k) = \sum^k_{i=1} \lambda_i \phi_{u_i} (u_1, ..., u_k))$$
+
+For the moment, restrict to 2-dim surfaces in $\mathbb{R}^2$, since $\phi_u$ and $\phi_v$ are tangent to the surface $\phi (u_0, v_0)$, $\phi_v \times \phi_u (u_0, v_0)$ is perpendicular to the surface (and tangent plane) at $\phi (u_0, v_0)$. Hence the tangent plane at $\phi (u_0, v_0)$ can be given by $x\cdot (\phi_v \times \phi_u (u_0, v_0)) = \phi (u_0, v_0) \cdot (\phi_v \times \phi_u (u_0, v_0))$ where $x=(x_1, x_2, x_3)$, an arbitrary point on the tangent plane.
+
+\begin{example}
+	$x^2 + y^2 + z^2 = 1, \phi (u,v) = (cosu sinv, sinu sinv, cosv), u\in [0,2\pi], v\in [0,\pi], p=1$\\
+	$u$-lines are circles of latitude while $v$-lines are half circles of longitude.\\
+	$$\phi_u = (-sin(u)sin(v), cos(u)sin(v), 0)$$
+	$$\phi_v = (cos(u)cos(u), sin(u)sin(v), -sin(v))$$
+	\begin{align*}
+		\phi_u \times \phi_v &= (-cos(u)sin^2(v), -sin(u)sin^2 (v), -sin(v)cos(v))\\
+		&= (-sinv)(cos(u)sin(v), sin(u)sin(v), cos(v))\\
+		&= (-sinv)\cdot \phi (u,v)
+	\end{align*}
+
+	The tanget plane is:
+	\begin{align*}
+		(x,y,z)\cdot (\phi_u \times \phi_v) &= \phi (u,v) \cdot (\phi_u \times \phi_v)\\
+		&= (-sinv)(xcos(u)sin(v), ysin(u)sin(v), zcos(v))\\
+		&= (-sinv) \cdot  \phi (u,v) \cdot  \phi (u,v)\\
+		&= (-sinv) || \phi (u,v) ||^2\\
+		&= (-sinv)
+	\end{align*}
+	$$\Longrightarrow (cos(u)sin(v))x + (sin(u)sin(v))y + (cos(v))z = 1$$
+	So the tangent plane at the point $(0,1,0)$ is:
+	$u=\frac{\pi}{2}, v=\frac{\pi}{2}$, therefore $0x + y + 0z = 1 \Longrightarrow y=1$
+
+\end{example}
+
+\begin{note}
+	Different parameterizations give different $u$ and $v$ lines.
+\end{note}
+
+\begin{remark}
+	Think of $(u,v)$ as a new coordinate system used to locate a point $\phi (u,v)$ on the surface $\phi (D)$. In the same way as we use $(x,y)$ to locate a point in the $xy$-plane. Usually called a curvilinear-coordinate.
+\end{remark}
+
+\begin{remark}
+	Tangent plane only makes sense if $phi_u \times \phi_v \neq 0$
+\end{remark}
+
+\begin{definition}
+	We say the surface is regular or smooth at $\phi (u_0, v_0)$ if $\phi$ is differentiable at $\phi (u_0, v_0)$ and $(\phi_u \times \phi_v (u_0, v_0)) \neq 0$. The surface is regular (smooth) if it is regular at each point. This depends on both the parameterization and the geometry of the surface. 
+\end{definition}
+
+\newpage
+
 \section{Friday, March 2, 2018}
 
 We'll determine the orientation by choosing a unit normal vector.

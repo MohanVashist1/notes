@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1522765219 "MATB42.tex" "MATB42.pdf" "MATB42" 1522765221
+["pdflatex"] 1522791626 "MATB42.tex" "MATB42.pdf" "MATB42" 1522791628
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1480098666 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1480098696 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -178,13 +178,13 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1495593487 4129592 0e6cfee100d68e6d96b92c0258f2ff73 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "MATB42.aux" 1522765221 3301 42f9ad4115f7c4feb899e459577f35c9 ""
-  "MATB42.out" 1522765221 1572 4ce38076a2b7612e7e150a1d4052d22d ""
-  "MATB42.tex" 1522765218 63678 9fe18be062ab025b297bd76717759a39 ""
-  "MATB42.toc" 1522765221 2039 ac10c23a3fef1587fac45104bd240bd6 ""
+  "MATB42.aux" 1522791628 3606 3f1867a30dcd24c25bbb941befdfad13 ""
+  "MATB42.out" 1522791628 1770 b4704cd2f8c0202247bcdd4959e68c71 ""
+  "MATB42.tex" 1522791625 71396 864025b16630d7be3583414f89fa8ec8 ""
+  "MATB42.toc" 1522791628 2290 64b06b2bbc982a79a6977cbf02e98d13 ""
   (generated)
-  "MATB42.out"
-  "MATB42.pdf"
-  "MATB42.log"
   "MATB42.aux"
+  "MATB42.out"
   "MATB42.toc"
+  "MATB42.log"
+  "MATB42.pdf"

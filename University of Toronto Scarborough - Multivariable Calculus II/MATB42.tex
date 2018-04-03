@@ -1372,6 +1372,86 @@ And so we want to find $g$. We have to do the following steps to find $g$
 
 \newpage
 
+\section{Friday, February 9, 2018}
+
+Continuing from the example from before:
+
+\begin{example}
+	$\omega = \frac{-y}{x^2+y^2} + \frac{x}{x^2+y^2}$ is closed but not exact. $\int_\gamma \omega = 2\pi$ when $\gamma$ is a counterclockwise parameterization of a unit circle of radius $R$.
+\end{example}
+
+	Generalizing, we have:
+	\begin{theorem}
+		Let $\sigma$ be any Jordan curve which circles the origin in the counterclockwise direction.
+	\end{theorem}
+	\underline{CLAIM:} $\int_\sigma \omega = 2\pi$\\
+	\\
+	\begin{proof}
+		\begin{enumerate}
+			\item{Does not depend on the shape of $\sigma$ (as long as it's around the origin)}
+			\item{
+			Any such curve can be continuously deformed in the circle\\
+			Let $\sigma = \sigma_1 + \sigma_2$\\
+			$\gamma = -\sigma_1 - \sigma_2$ (since it is counterclockwise)\\
+			Without loss of generality, assume $\sigma$ is longer than $\gamma$\\
+			$$\int_{\sigma_1} \omega = \int_\alpha \omega + \int_{\gamma_1} \omega + \int_{\beta} \omega \overset{\text{Green's}}{=} \int_{R_1} (\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}) dA = 0$$
+			$$\int_{\sigma_2} \omega = \int_{-\beta} \omega + \int_{\gamma_2} \omega + \int_{-\alpha} \omega \overset{\text{Green's}}{=} \int_{R_2} (\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}) dA = 0$$
+			Note that $(\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}) = 0 \Longrightarrow$ closed
+			}
+		\end{enumerate}
+		And now, if we add the 2 equations, then we get:
+		\begin{align*}
+			\int_{\sigma_1} \omega + \int_{\sigma_2} \omega + \int_{\gamma_1} \omega + \int_{\gamma_2} \omega &= \int_\sigma \omega + \int_{-\gamma} \omega\\
+			&= \int_\sigma \omega + -\int_{\gamma} \omega = 0
+		\end{align*}
+		$\Longrightarrow \int_\sigma \omega = \int_{\gamma} \omega = 2\pi$
+	\end{proof}
+
+	\begin{note}
+		$\frac{1}{2\pi} \int_{\gamma} \omega$ is always an integer. It will give the number of times $\gamma$ encircles the origin in the counterclockwise direction
+	\end{note}
+
+	\begin{definition}
+		If $\gamma$ is a closed curve which wraps around the origin, the integrals
+		$$\frac{1}{2\pi} \int_{\gamma} \frac{-y}{x^2+y^2} + \frac{x}{x^2+y^2}$$
+		is called the \textbf{winding number} of $\gamma$
+	\end{definition}
+
+	\begin{example}
+		if $\gamma$ never completely encircles the origin, the winding number is 0
+	\end{example}
+
+	\begin{example}
+		if $\gamma$ encircles the origin once in the counterclockwise direction, then winding number is $-1$
+	\end{example}
+
+	\begin{note}
+		The corresponding vector field to the 1-form used above is
+		$$F(x,y) = (\frac{-y}{x^2+y^2}, \frac{x}{x^2+y^2})$$
+		This vector field is called a \textbf{vortex field}.
+	\end{note}
+
+	\begin{example}
+		Evaluate $\int_\gamma F ds$ where $F$ is the vortex field and $\gamma$ is the boundary curve of the square $[-1,1] \times [-1,1]$ oriented in the clockwise direction.\\
+		\\
+		\begin{align*}
+			\varointclockwise F ds &= \int_\gamma (\frac{-y}{x^2+y^2}, \frac{x}{x^2+y^2}) ds\\
+			&= 2\pi \cdot (\text{Winding Number})\\
+			&= 2\pi (-1)\\
+			&= -2\pi
+		\end{align*}
+	\end{example}
+
+	\begin{example}
+		$f(x,y) = -tan^{-1} (\frac{x}{y}) + C, y\neq 0$\\
+		\\
+		$$\frac{\partial f}{\partial x} = \frac{-y}{x^2+y^2}, \frac{\partial f}{\partial y} = \frac{x}{x^2+y^2}$$
+		But $f(x,y)$ is not defined for all of $\mathbb{R}^2$, but the same set without the point $(0,0)$.\\
+		We can find a potential function on some subset, say $\{ (x,y)\in\mathbb{R}^2 | y>0 \}$ (simply connected subset).
+	\end{example}
+
+\newpage
+
 \section{Friday, March 2, 2018}
 
 We'll determine the orientation by choosing a unit normal vector.

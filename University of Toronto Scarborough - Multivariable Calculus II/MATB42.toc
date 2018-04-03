@@ -21,4 +21,5 @@
 \contentsline {subsection}{\numberline {10.1}Finding the potential function}{36}{subsection.10.1}
 \contentsline {subsection}{\numberline {10.2}Green's Theorem}{38}{subsection.10.2}
 \contentsline {subsection}{\numberline {10.3}Winding Numbers}{41}{subsection.10.3}
-\contentsline {section}{\numberline {11}Friday, March 2, 2018}{43}{section.11}
+\contentsline {section}{\numberline {11}Friday, February 9, 2018}{43}{section.11}
+\contentsline {section}{\numberline {12}Friday, March 2, 2018}{45}{section.12}

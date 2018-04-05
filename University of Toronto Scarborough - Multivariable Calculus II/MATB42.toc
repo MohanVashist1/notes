@@ -27,4 +27,5 @@
 \contentsline {subsection}{\numberline {12.2}Surfaces}{46}{subsection.12.2}
 \contentsline {section}{\numberline {13}Friday, February 16, 2018}{50}{section.13}
 \contentsline {subsection}{\numberline {13.1}Surfaces (cont'd)}{50}{subsection.13.1}
-\contentsline {section}{\numberline {14}Friday, March 2, 2018}{53}{section.14}
+\contentsline {section}{\numberline {14}Friday, February 26, 2018}{53}{section.14}
+\contentsline {section}{\numberline {15}Friday, March 2, 2018}{57}{section.15}

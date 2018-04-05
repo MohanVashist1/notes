@@ -1687,7 +1687,125 @@ In the limit, we get the Riemann Integral.
 \end{example}
 
 In the $ij$th piece, choose $\phi (u_i^*, u_j^*))$ then evaluate $f$ at that point; the volume is $f(\phi (u_i^*, u_j^*)))\cdot \text{area of the $ij$th piece}$. The sides of the the $ij$th piece are: $\phi_u \Delta u$ and $\phi_v \Delta v$
+\newpage
 
+\section{Friday, February 26, 2018}
+
+$f(\phi (u_i^*, u_j^*)))\cdot \text{area of the $ij$th piece}$ with sides $\phi_u \Delta u$ and $\phi_v \Delta v$\\
+area $= |\phi_u \Delta u \times \phi_v \Delta v| = \Delta v \Delta u ||\phi_u \times \phi_v||$\\
+
+$$\int_\Phi f dS = \sum_{i=j} f(\phi (u_i^*, u_j^*))) ||\phi_u \times \phi_v|| \Delta v \Delta u $$
+If we take the limit of the Reimann Sum, then
+$$\int_\Phi f dS = \int_D f(\phi (u, u))) ||\phi_u \times \phi_v|| d v d u$$
+$$\int_\Phi f dS = \int_D f(\phi (u, u))) ||\phi_u \times \phi_v|| dA$$
+
+\begin{example}
+	Let $S$ be the piece of the paraboloid $z=1-x^2 -y^2$ which lies above the $xy$-plane. Find the surface area of $S$, and evaluate $\int_S d dS$ when $f(x,y,z)=z$\\
+	\\
+	$\Phi (u,v) = (u,v,1-u^2,v^2)$ where $(u,v) \in$ disk\\
+	This type of parameterization is bad, please try to avoid it.\\
+	\\
+	Better Parameterization: $\Phi (r, \theta) = (r\cos\theta, r\sin\theta, 1-r^2)$
+	$$D = \begin{cases}
+		r \in [0,1]\\
+		\theta \in [0,2\pi]
+	\end{cases}$$
+
+	$$\phi_r = (\cos\theta, \sin\theta, -2r)$$
+	$$\phi_\theta = (-r\sin\theta, r\cos\theta, 0)$$
+	$$\phi_r \times \phi_\theta = (2r^2 \cos\theta, 2r^2 \sin\theta, r)$$
+	$$||\phi_r \times \phi_\theta|| = \sqrt{4r^4 \cos^2 \theta + 4r^4 \sin^2 \theta + r^2} = \sqrt{4r^4 + r^2} = |r| \cdot \sqrt{4r^4 + 1} = r\sqrt{4r^4 + 1}$$
+
+	The surface area:
+	\begin{align*}
+		\int_S dS &= \int_D ||\phi_r \times \phi_\theta|| dA\\
+		&= \int^{2\pi}_0 \int^1_0 r\sqrt{4r^4 + 1} dr d\theta\\
+		&= 2\pi \int^1_0 r\sqrt{4r^4 + 1} dr\\
+		&= ... = \frac{\pi}{6} [5^{\frac{3}{2}} - 1]
+	\end{align*}
+
+	\begin{align*}
+		\int_S z dS &= \int_D (z(r,\theta)) ||\phi_r \times \phi_\theta|| dA\\
+		&= \int^{2\pi}_0 \int^1_0 (1-r^2) r\sqrt{4r^4 + 1} dr d\theta\\
+		&= ... = \frac{\pi}{60} [5^{\frac{5}{2}} - 11]
+	\end{align*}
+\end{example}
+
+\begin{example}
+	Find the area of the piece of the plane $x+y+z=1$ which lies over the elliptical disk $x^2 + 2y^2 \leq 1$.\\
+	\begin{note}
+		Ellipse: $x^2 + 2y^2 = 1$ and $x=\cos\theta, y=\frac{1}{\sqrt{2}} \sin\theta$\\
+		Elliptical Disk: $(r\cos\theta, \frac{r}{\sqrt{2}} \sin\theta)$
+	\end{note}
+	The surface can be parameterized by the following:
+	$$\Phi (r,\theta) = (r\cos\theta, \frac{r}{\sqrt{2}} \sin\theta, 1-r\cos\theta-\frac{r}{\sqrt{2}} \sin\theta, r \in [0,1], \theta \in [0,2\pi])$$
+	$$\phi_r = (\cos\theta, \frac{\sin\theta}{\sqrt{2}}, -\cos\theta - \frac{\sin\theta}{\sqrt{2}})$$
+	$$\phi_\theta = (-r\sin\theta, \frac{r}{\sqrt{2}} \cos\theta, r\sin\theta - \frac{r}{\sqrt{2}} \cos\theta)$$
+	$$\phi_r \times \phi_\theta = (\frac{r}{\sqrt{2}},\frac{r}{\sqrt{2}},\frac{r}{\sqrt{2}})$$
+	$$\phi_r \times \phi_\theta = \frac{r}{\sqrt{2}} (1,1,1)$$
+	$$||\phi_r \times \phi_\theta|| = \sqrt{\frac{3}{2}} r$$
+
+	$$\int_\Phi dS = \int_D ||\phi_r \times \phi_\theta|| dA = \sqrt{\frac{3}{2}} \int^{2\pi}_0 \int^1_0 rdrd\theta = ... = \sqrt{\frac{3}{2}} \pi$$
+\end{example}
+
+\begin{definition}
+ A \textbf{$k$-dimensional parameterized surface} is a function $\Phi: D \subset \mathbb{R}^k \mapsto \mathbb{R}^n$ where $D$ is some domain $\mathbb{R}^k, k\leq n$. The surface $S$ corresponting to the function $\Phi$ is its image $\Phi (D)$.
+\end{definition}
+
+$phi (u_1, ..., u_k) = (phi_1 (u_1, ..., u_k), ..., phi_n (u_1, ..., u_k))$. This means there are $k$ tangent vectors and $n$ lines.
+
+\begin{align*}
+	||a \times b|| &= ||a||||b||\sin\theta, \theta = \Delta (a,b)\\
+	&= ||a \times b||^2 = ||a||^2||b||^2\sin^2\theta\\
+	&= ||a||^2||b||^2 (1-\cos^2 \theta)\\
+	&= ||a||^2||b||^2 - ||a||^2||b||^2\cos^2 \theta\\
+	&= ||a||^2||b||^2 - (a\cdot b)^2\\
+	&= det\begin{bmatrix}
+||a||^2 & a\cdot b \\
+a\cdot b & ||b||^2
+\end{bmatrix} =
+det\begin{bmatrix}
+a\cdot a & a\cdot b \\
+a\cdot b & b\cdot b
+\end{bmatrix} = det(CP)
+\end{align*}
+
+$$\int_\Phi f dS = \int_D f(\Phi (u_1,...,u_k)) \sqrt{|det(CP)|} dV$$
+where
+$$CP = (\Phi_{u_i} \cdot \Phi_{u_j}), i,j \in [1,k], \phi_{u_i} = (\frac{\partial \phi_1}{\partial u_i}, ..., \frac{\partial \phi_n}{\partial u_i})$$
+
+\begin{remark}
+	$$||\phi_u \times \phi_v|| = \sqrt{[\frac{\partial (\phi_1, \phi_2)}{\partial (u,v)}]^2 + [\frac{\partial (\phi_2, \phi_3)}{\partial (u,v)}]^2 + [\frac{\partial (\phi_3, \phi_1)}{\partial (u,v)}]^2}$$
+	where
+	$$\frac{\partial (\phi_i, \phi_j)}{\partial (u,v)} = det\begin{bmatrix}
+	\frac{\partial \phi_i}{\partial u} & \frac{\partial \phi_i}{\partial v} \\
+	\frac{\partial \phi_j}{\partial u} & \frac{\partial \phi_j}{\partial v}
+	\end{bmatrix}$$
+\end{remark}
+
+\begin{remark}
+	\begin{itemize}
+		\item{$\phi$ in the piece of the graph (in $\mathbb{R}^3$) of some function $g:\mathbb{R}^2\mapsto \mathbb{R}$ lying over $D$, the domain of $g$.}
+		\item{$\int f dS = \int_D f(u,v,g(u,v))||\phi_u \times \phi_v||dA = \int_D f(u,v,g(u,v)) \sqrt{(\frac{\partial g}{\partial u})^2 + ()\frac{\partial g}{\partial v})^2 + 1}dA$}
+		\item{The arc length for $\gamma: [a,b] \mapsto \mathbb{R}^2$ is the graph of $\gamma=g(t)$\\
+		$\Longrightarrow$ arclength $= \int^b_a \sqrt{1 + (\frac{\partial g}{\partial \gamma})^2}$}
+	\end{itemize}
+\end{remark}
+
+\begin{remark}
+	$dS = \sec\theta dA$ and $\theta = \Delta (\tan, \text{plane}, e_3)$
+\end{remark}
+
+\begin{example}
+	Area of piece of $z=x^2+4y$ which lies over $\Delta$ in $xy$-plane with vertices $(0,0), (1,0), (1,2)$\\
+	\\
+	$$\phi (u,v) = (u,v,u^2 + 4v), (u,v) \in D$$
+	\begin{align*}
+		\int_S dS &= \int_D \sqrt{(\frac{\partial z}{\partial u})^2 + (\frac{\partial z}{\partial v})^2 + 1} dA\\
+		&= \int^2_0 \int^1_{\frac{r}{2}} \sqrt{24^2 + 4^4 + 1} dA\\
+		&= ... = \frac{1}{6} [21^{\frac{3}{2}} - 17^{\frac{3}{2}}]
+	\end{align*}
+\end{example}
 \newpage
 
 \section{Friday, March 2, 2018}

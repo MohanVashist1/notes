@@ -84,3 +84,8 @@
 \BOOKMARK [3][-]{subsubsection.8.1.6}{whitespace, terminal, integer, identifer}{subsection.8.1}% 84
 \BOOKMARK [3][-]{subsubsection.8.1.7}{chainl1, chainr1}{subsection.8.1}% 85
 \BOOKMARK [3][-]{subsubsection.8.1.8}{between}{subsection.8.1}% 86
+\BOOKMARK [1][-]{section.9}{Thursday, March 15, 2018}{}% 87
+\BOOKMARK [2][-]{subsection.9.1}{Num.hs}{section.9}% 88
+\BOOKMARK [3][-]{subsubsection.9.1.1}{Purpose}{subsection.9.1}% 89
+\BOOKMARK [3][-]{subsubsection.9.1.2}{Plus function parsers from strings "exprParserL" and "exprParserL2"}{subsection.9.1}% 90
+\BOOKMARK [3][-]{subsubsection.9.1.3}{expression Parsing from strings}{subsection.9.1}% 91

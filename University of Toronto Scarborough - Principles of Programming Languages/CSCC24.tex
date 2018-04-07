@@ -7,25 +7,8 @@
 
 \usepackage{listings}
 \usepackage{color}
+\usepackage{helvet}
 
-\lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\footnotesize,
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=b,
-    keepspaces=true,
-    numbers=left,
-    numbersep=5pt,
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    tabsize=2
-}
 \lstset{
   frame=none,
   xleftmargin=2pt,
@@ -47,6 +30,8 @@
   basicstyle=\small\sffamily,
   showstringspaces=false,
   morecomment=[l]\%,
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true
 }
 
 \usepackage{upgreek}
@@ -288,7 +273,7 @@ In Scheme:
 The first line fails but the second line succeeds. This is because Types are checked dynamically. When running the program, only the code that is actually run is checked.
 
 In Haskell, the following line fails:
-\begin{lstlisting}
+\begin{lstlisting}{language=haskell}
     if True then 0 else 0 + "hello"
 \end{lstlisting}
 
@@ -300,7 +285,7 @@ Food for though, Java is both compiled and interpreted.
 
 In Haskell, we define:
 
-\begin{lstlisting}
+\begin{lstlisting}{language=haskell}
     trio x = [x, x, x]
 \end{lstlisting}
 The inferred type is:
@@ -308,7 +293,7 @@ The inferred type is:
     a -> [a]
 \end{lstlisting}
 This is analogous to Java's
-\begin{lstlisting}
+\begin{lstlisting}{language=Java}
     <T> LinkedList<T> trio(<T> x)
 \end{lstlisting}
 
@@ -322,7 +307,7 @@ This is analogous to Java's
 Supposed you have defined $d$ of type $a \mapsto [a]$, Then you would need one test to know what it does. Say we test $d True$ and the answer has length 2. Then we can deduce that $d x$ returns $[x,x]$ for all $x$.\\
 \\
 The basic explanation for this is that $d$ cannot vary behaviour by types. Haskell allows type-determined behaviour, but the function type will look like:
-\begin{lstlisting}
+\begin{lstlisting}{language=Haskell}
     Foo a => a -> [a]
 \end{lstlisting}
 
@@ -1673,8 +1658,85 @@ between basically runs its open parser first, then runs the p parser, which resu
 \newpage
 
 
+\section{Thursday, March 15, 2018}
+
+\subsection{Num.hs}
+
+\begin{lstlisting}{language=haskell}
+module Num where
+
+import ParserLib
+import Data.Char
+import Control.Applicative
+
+data Expr = N Integer
+        | Plus Expr Expr
+  deriving (Eq, Show)
+
+interp :: Expr -> Integer
+interp (N i) = i
+interp (Plus e1 e2) = interp e1 + interp e2
 
 
+-- expr ::= { integer "+" } integer
+
+-- Left associative below:
+-- E.g., 1+2+3 means (1+2)+3
+
+exprParserL :: Parser Expr
+exprParserL = do
+  i <- integer
+  more (N i)
+where
+  more a = do
+      char '+'
+      j <- integer
+      more (Plus a (N j))
+    <|>
+      return a
+
+exprParserL2 :: Parser Expr
+exprParserL2 = chainl1 (fmap N integer) op
+where
+  op = do char '+'
+          return Plus
+
+-- Right associative below:
+-- E.g., 1+2+3 means 1+(2+3)
+
+exprParser :: Parser Expr
+exprParser = do
+  i <- integer
+  (eof *> return (N i)) <|>
+    (do char '+'
+        j <- exprParser
+        return (Plus (N i) j))
+
+exprParser2 :: Parser Expr
+exprParser2 = chainr1 (fmap N integer) op
+where
+  op = do
+      char '+'
+      return Plus
+\end{lstlisting}
+
+\subsubsection{Purpose}
+
+So now that we've done Parsers, we ended up doing an assignment that was about making parsers that turn strings into things like integers and functions, but all in the same format it was given in as a string. Num.hs is essentially about of that into something that actually makes sense.\\
+\\
+In this file, we're gonna just be focusing on parsing expressions which are either a Plus of 2 expressions or an integer. We have an interpreter that takes in an integer that represents the number i and just return i and for the Plus case, we'll interpret the two expressions (which will be integers once interpreted), and then we'll return their sum.
+
+\subsubsection{Plus function parsers from strings "exprParserL" and "exprParserL2"}
+
+If you're reading this and you haven't done the assignment, he also gives an explanation on how to implement a Parser that converts a string into an expression. One implementation that looks like the implementation of chainl1 in ParserLib.hs (because that's essentially what it's trying to do), and the other one utilizes the fact that the "Expr" constructors are also functions. For example, "N" is a function that given an integer "i" returns the data type "(N i)" and "Plus" is a function that given two expressions "a" and "b" will return the data type "(Plus a b)".
+
+\subsubsection{expression Parsing from strings}
+
+And for "exprParser", it is essentially a Parser for turning strings into our expression type. So $a <|> b$ is the notation for "if Parser a works, return a, otherwise do Parser b" so the two cases are our integer parser that\\
+\\
+1. If the string is just an integer "i" (we check this by running eof so that there is no unprocessed input), we return the type "(N i)".\\
+\\
+2. If that case does not work or only the integer gets parser'd but the eof fails because there's more stuff, our second case looks for a "+" character and recursively calls itself which would return an integer, it then takes that integer and returns "(Plus (N i) j)". Note that the "i" here comes from the previous case in which eof fails.
 
 
 

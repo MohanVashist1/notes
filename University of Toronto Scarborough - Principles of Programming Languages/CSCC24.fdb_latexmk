@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1523141553 "CSCC24.tex" "CSCC24.pdf" "CSCC24" 1523141556
+["pdflatex"] 1523143407 "CSCC24.tex" "CSCC24.pdf" "CSCC24" 1523143410
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1480098666 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1480098696 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -162,6 +162,7 @@
   "/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgffor.sty" 1480098837 348 8927fde343487e003b01a4c2ca34073b ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty" 1480098837 274 4cad6e665cc93ac2ac979039a94fa1e1 ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty" 1480098837 325 2bcd023400636339210573e2b3ee298b ""
+  "/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/helvet.sty" 1480098837 1500 3c2647c8649928795ededd42a6e85f85 ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty" 1493159439 82022 7a7982677b121426004df32285138f63 ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/tools/calc.sty" 1480098841 10214 d03d065f799d54f6b7e9b175f8d84279 ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/tools/verbatim.sty" 1480098841 7264 cf839ee7f0c2bfc711b0b88970764569 ""
@@ -173,15 +174,15 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1495593487 4129592 0e6cfee100d68e6d96b92c0258f2ff73 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "CSCC24.aux" 1523141556 11072 b7129d111f6ca76207b559342327f784 ""
-  "CSCC24.out" 1523141556 6388 eb4d5eea0a28042984dd2f44e92c826e ""
-  "CSCC24.tex" 1523141548 48455 d41d50b38a90e008d5bad37f069ae441 ""
-  "CSCC24.toc" 1523141556 8412 44e93d6bde971f675354190badf233d3 ""
+  "CSCC24.aux" 1523143409 11813 96c439e4212aae3da103b5f6c429fba2 ""
+  "CSCC24.out" 1523143409 6789 5738981c5e7d48530fec3785cbce7ecf ""
+  "CSCC24.tex" 1523143403 51098 a0f825424a9739ab43d2a9e0413d1cee ""
+  "CSCC24.toc" 1523143409 8904 fb9144b3fdddcac2c26b060f9e8c5c68 ""
   "imgs/syntax1.png" 1520897024 31177 9924a18fa1c71b3f91621eb87948a9fd ""
   "imgs/syntax2.png" 1520897032 44626 739aac5d096966d08ba4b483e3740c4d ""
   (generated)
-  "CSCC24.log"
-  "CSCC24.pdf"
   "CSCC24.aux"
-  "CSCC24.out"
   "CSCC24.toc"
+  "CSCC24.log"
+  "CSCC24.out"
+  "CSCC24.pdf"

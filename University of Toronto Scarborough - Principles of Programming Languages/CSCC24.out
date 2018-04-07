@@ -89,3 +89,6 @@
 \BOOKMARK [3][-]{subsubsection.9.1.1}{Purpose}{subsection.9.1}% 89
 \BOOKMARK [3][-]{subsubsection.9.1.2}{Plus function parsers from strings "exprParserL" and "exprParserL2"}{subsection.9.1}% 90
 \BOOKMARK [3][-]{subsubsection.9.1.3}{expression Parsing from strings}{subsection.9.1}% 91
+\BOOKMARK [2][-]{subsection.9.2}{NumVar.hs}{section.9}% 92
+\BOOKMARK [3][-]{subsubsection.9.2.1}{Purpose and interp implementation}{subsection.9.2}% 93
+\BOOKMARK [3][-]{subsubsection.9.2.2}{interpM implementation}{subsection.9.2}% 94

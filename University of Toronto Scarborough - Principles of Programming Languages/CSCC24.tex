@@ -1738,6 +1738,50 @@ And for "exprParser", it is essentially a Parser for turning strings into our ex
 \\
 2. If that case does not work or only the integer gets parser'd but the eof fails because there's more stuff, our second case looks for a "+" character and recursively calls itself which would return an integer, it then takes that integer and returns "(Plus (N i) j)". Note that the "i" here comes from the previous case in which eof fails.
 
+\newpage
+
+\subsection{NumVar.hs}
+
+\begin{lstlisting}{language=haskell}
+module NumVar where
+
+import           Data.Map (Map)
+import qualified Data.Map as Map
+import           Data.Maybe (fromJust)
+
+data Expr = N Integer
+        | Var String
+        | Plus Expr Expr
+  deriving (Eq, Show)
+
+interp :: Map String Integer -> Expr -> Integer
+interp env (N i) = i
+interp env (Plus e1 e2) = interp env e1 + interp env e2
+interp env (Var v) = fromJust (Map.lookup v env)
+
+example = interp (Map.fromList [("x", 5), ("y", 4)])
+               (Plus (N 1) (Plus (Var "x") (Var "y")))
+
+interpM :: Map String Integer -> Expr -> Maybe Integer
+interpM env (N i) = Just i
+interpM env (Plus e1 e2) = fmap (+) (interpM env e1) <*> (interpM env e2)
+interpM env (Var v) = Map.lookup v env
+
+exampleM = interpM (Map.fromList [("x", 5), ("y", 4)])
+                 (Plus (N 1) (Plus (Var "x") (Var "y")))
+\end{lstlisting}
+
+\subsubsection{Purpose and interp implementation}
+
+This is basically the same as "Num.hs" but introducing environment, which are basically Maps that map strings to integers that are a new argument for the interpreters. So the new case for our interpreter is for a Variable that looks up the string that the var is associated with and just returns whatever it finds.\\
+\\
+However, the interp implementation can run into errors, for example, the whole program crashes if it cannot find a variable in the environment (a variable has not been assigned).
+
+\subsubsection{interpM implementation}
+
+The interpM implementation basically turns its output from an integer to a Maybe Integer, so if the variable cannot be found in the map, it just returns an Nothing, which makes the whole expression evaluate to Nothing instead of crashing.
+
+
 
 
 \end{document}

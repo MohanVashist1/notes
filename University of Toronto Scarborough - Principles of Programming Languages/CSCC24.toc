@@ -101,3 +101,6 @@
 \contentsline {subsubsection}{\numberline {9.1.1}Purpose}{43}{subsubsection.9.1.1}
 \contentsline {subsubsection}{\numberline {9.1.2}Plus function parsers from strings "exprParserL" and "exprParserL2"}{43}{subsubsection.9.1.2}
 \contentsline {subsubsection}{\numberline {9.1.3}expression Parsing from strings}{44}{subsubsection.9.1.3}
+\contentsline {subsection}{\numberline {9.2}NumVar.hs}{45}{subsection.9.2}
+\contentsline {subsubsection}{\numberline {9.2.1}Purpose and interp implementation}{45}{subsubsection.9.2.1}
+\contentsline {subsubsection}{\numberline {9.2.2}interpM implementation}{46}{subsubsection.9.2.2}

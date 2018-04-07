@@ -7,27 +7,47 @@
 
 \usepackage{listings}
 \usepackage{color}
- 
+
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
+    backgroundcolor=\color{backcolour},
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
     basicstyle=\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
     showstringspaces=false,
-    showtabs=false,                  
+    showtabs=false,
     tabsize=2
 }
- 
-\lstset{style=mystyle}
+\lstset{
+  frame=none,
+  xleftmargin=2pt,
+  stepnumber=1,
+  numbers=left,
+  numbersep=5pt,
+  numberstyle=\ttfamily\tiny\color[gray]{0.3},
+  belowcaptionskip=\bigskipamount,
+  captionpos=b,
+  escapeinside={*'}{'*},
+  language=haskell,
+  tabsize=2,
+  emphstyle={\bf},
+  commentstyle=\it,
+  stringstyle=\mdseries\rmfamily,
+  showspaces=false,
+  keywordstyle=\bfseries\rmfamily,
+  columns=flexible,
+  basicstyle=\small\sffamily,
+  showstringspaces=false,
+  morecomment=[l]\%,
+}
 
 \usepackage{upgreek}
 
@@ -45,31 +65,31 @@
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
 \usepackage{color}
- 
+
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
- 
+
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
+    backgroundcolor=\color{backcolour},
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
     basicstyle=\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
     showstringspaces=false,
-    showtabs=false,                  
+    showtabs=false,
     tabsize=2
 }
- 
+
 \lstset{style=mystyle}
 
 \usepackage{dsfont}
@@ -95,7 +115,7 @@
 \renewcommand\qedsymbol{$\blacksquare$}
 
 \usepackage{fancyhdr}
- 
+
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{Principles of Programming Languages -- Winter 2018}
@@ -173,7 +193,7 @@ Computes
     [3,-1,4]
 \end{lstlisting}
 
-And 
+And
 
 \begin{lstlisting}[language=Haskell]
     folder (+) 0 [3,1,4]
@@ -287,7 +307,7 @@ The inferred type is:
 \begin{lstlisting}
     a -> [a]
 \end{lstlisting}
-This is analogous to Java's 
+This is analogous to Java's
 \begin{lstlisting}
     <T> LinkedList<T> trio(<T> x)
 \end{lstlisting}
@@ -386,12 +406,12 @@ There are 3 types of equalities.
     eq?
 \end{lstlisting}
 	This one is Good for booleans and symbols, uses pointer inequality for aggregates like strings and lists, but has complicated rules for numbers.
-	
+
 \begin{lstlisting}
     eqv?
 \end{lstlisting}
 	This one has complicated rules for numbers as well, and different from eq? as it treats the floating-points NaN and signed zero differently.
-	
+
 	\begin{lstlisting}
     equal?
 \end{lstlisting}
@@ -407,7 +427,7 @@ You can define functions and constants, recursion is allowed.
 ; a function with 2 parameters
 (define (my-log base x)
 	(/ (log x) (log base)))
-    
+
 \end{lstlisting}
 
 \subsection{Anonymous Functions}
@@ -487,7 +507,7 @@ letrec allows more recursive bindings
 		[odd
 			(lambda (n)
 				(not (even (- n 1))))])
-	(even (fac 5))) 
+	(even (fac 5)))
 \end{lstlisting}
 This returns whether or not factorial 5 is even. So true.
 
@@ -547,7 +567,7 @@ You can test for a literal, cons cell, or a record type, can get their content a
 
 \begin{lstlisting}
 	(struct dim (width height))
-	
+
 	(define (foo x)
 		(match x
 			['() 'nada]
@@ -588,9 +608,9 @@ If we want to evaluate multiple expressions in the order we specify
 	(begin
 		(display ln "Please enter your name")
 		(read-line)) ; this returns the last expression
-		
+
 	(begin0 expr1 expr2) ; this returns the first expression, but the others are still evaluated.
-	
+
 	(when (> x 0) expr1 expr2 ...)
 	; if true, evaluates the exoressions, returns what the last one returns, if false, returns #<void>
 \end{lstlisting}
@@ -643,7 +663,7 @@ So we define foldl as
 	[( cons hd tl) (foldl binop (binop a hd) tl )]))
 \end{lstlisting}
 
-So Intuitively, 
+So Intuitively,
 
 \begin{lstlisting}
 	(foldl binop a (list x y z))
@@ -867,7 +887,7 @@ case expr of
 	x : xs | x < 0 -> x + foo xs
 		  | x > 2 -> x - foo xs
 		  | True -> x * foo xs
-		  
+
 -- definition case
 foo [] = 0
 foo (x : xs) | x < 0 -> x + foo xs
@@ -989,7 +1009,7 @@ In this example, the user chooses what type to use for $a$, but that chosen type
 Note that constraints propagate down the dependency chain:
 \begin{lstlisting}
 	(==) :: Eq a => a -> a -> Bool
-	
+
 	eq3 :: Eq a => a -> a -> a -> Bool
 	eq3 x y z = x==y && y==z
 \end{lstlisting}
@@ -1020,11 +1040,11 @@ Constraints propagate down the dependency chain, including other instance implem
 \begin{lstlisting}
 class ADT a where
 	tag :: a -> String
-	
+
 instance ADT (Either a b) where
 	tag (Left _) = "Left"
 	tag (Right _) = "Right"
-	
+
 instance ADT MyType where
 	tag Nada = "Nada"
 	tag (Duplet _ _) = "Duplet"
@@ -1133,7 +1153,7 @@ Now can implement tenary too:
 
 \begin{lstlisting}
 listTenary :: (a->b->c->d)->[a]->[b]->[c]->[d]
-listTenary tenary as bs cs = 
+listTenary tenary as bs cs =
 	((tenary <$> as) 'ap_List' bs) 'ap_List' cs
 \end{lstlisting}
 
@@ -1143,7 +1163,7 @@ There is a class for this too.
 class Functor f => Applicative f where
 	pure :: a -> f a
 	(<*>) :: f (a -> b) - > f a - > f b
-	
+
 -- example instance
 instance Applicative Maybe where
 	pure a = Just a
@@ -1218,7 +1238,7 @@ There is a class for that too.
 class Applicative f => Monad f where
 	return ::  a -> f a
 	(>>=) :: f a -> (a -> f b) -> f b
-	
+
 -- example instance
 
 instance Monad [] where
@@ -1417,7 +1437,7 @@ sub:
 		read; if not "-" then fail
 		sub)
 	if that failed: atom
-	
+
 atom:
 	read;
 	if "1" or "0": return
@@ -1428,8 +1448,11 @@ atom:
 
 \section{Thursday, March 8, 2018}
 
-\subsection{Parser Library}
+The lectures after this, Albert no longer provides lecture slides, but instead, decides to do everything in haskell files, so I will just be posting the lecture slides here and an explanation.
 
+\subsection{ParserLib.hs}
+
+Albert provided this really long document called "Pearl.pdf" that explained the concept of parsing, and parsers are essentially built from this one basic parser that "consumes" one character of a string and returns a result based off that input (so think of a parser consuming the $c$ of a $(c:cs)$ string, and returning some result based off that input with the rest of the unparsed string ($cs$)).
 
 \begin{lstlisting}{language=haskell}
 -- | Library of parser definition and operations.
@@ -1539,56 +1562,122 @@ instance Alternative Parser where
                   Nothing -> p2 inp
     -- many :: Parser a -> Parser [a]
     -- 0 or more times, maximum munch, collect the answers into a list.
+    -- Can use default implementation.
 
     -- some :: Parser a -> Parser [a]
     -- 1 or more times, maximum munch, collect the answers into a list.
-
+    -- Can use default implementation.
 
 instance Monad Parser where
-    
+    return = pure
+    PsrOf p1 >>= k = PsrOf q
+      where
+        q inp = case p1 inp of
+                  Nothing -> Nothing
+                  Just (rest, a) -> dePsr (k a) rest
 
--- | Zero or more operands separated by an operator.
-chainl :: Parser a                -- ^ operand parser
-       -> Parser (a -> a -> a)    -- ^ operator parser
-       -> a                       -- ^ start value
-       -> Parser a                -- ^ evaluated answer
-chainl = undefined
+-- | Space or newline or tab.
+whitespace :: Parser Char
+whitespace = satisfy (\c -> c `elem` ['\t', '\n', ' '])
 
--- | One or more operands separated by an operator.
+-- | Consume zero or more whitespaces, maximum munch.
+whitespaces :: Parser String
+whitespaces = many whitespace
+
+-- | Read and check a terminal string, then skip trailing spaces.
+terminal :: String -> Parser String
+terminal wanted = string wanted <* whitespaces
+
+-- | Read an integer, then skip trailing spaces.
+integer :: Parser Integer
+integer = sign <*> (read <$> some (satisfy isDigit)) <* whitespaces
+  where
+    sign = (char '-' *> pure negate) <|> pure id
+
+-- | Read an identifier, then skip trailing spaces.  Disallow certain keywords.
+identifier :: [String] -> Parser String
+identifier keywords = do
+    c <- satisfy isAlpha
+    cs <- many (satisfy isAlphaNum)
+    whitespaces
+    let str = c:cs
+    if str `elem` keywords then empty else return str
+
+-- | One or more operands separated by an operator. Apply the operator(s) in a
+-- left-associative way.
 chainl1 :: Parser a               -- ^ operand parser
         -> Parser (a -> a -> a)   -- ^ operator parser
         -> Parser a               -- ^ evaluated answer
-chainl1 = undefined
+chainl1 arg op = do
+    a <- arg
+    more a
+  where
+    more x = do
+        f <- op
+        y <- arg
+        more (f x y)
+      <|>
+        return x
 
--- | Consume zero or more spaces, maximum munch.
-spaces :: Parser String
-spaces = undefined
+-- | One or more operands separated by an operator. Apply the operator(s) in a
+-- right-associative way.
+chainr1 :: Parser a               -- ^ operand parser
+        -> Parser (a -> a -> a)   -- ^ operator parser
+        -> Parser a               -- ^ evaluated answer
+chainr1 arg op = do
+    x <- arg
+    ((\f y -> f x y) <$> op <*> chainr1 arg op) <|> return x
+
+-- | Parse a thing that is wrapped between open and close brackets.
+between :: Parser open          -- ^ open bracket parser
+        -> Parser close         -- ^ close bracket parser
+        -> Parser a             -- ^ thing parser
+        -> Parser a             -- ^ return the thing parsed
+between open close p = open *> p <* close
 \end{lstlisting}
 
+\subsubsection{Parser Implementation}
+
+
+So how he sets up Parsers here is that every parser returns a Maybe containing a string of the unconsumed input with $a$ being the result, and if it fails at any point, it returns Nothing. So Parsers are essentially "eating" a string, performing some functions (maybe, success or fail) and then returning the value in a way that it can be further parsed if necessary, or just Nothing if it fails along the way. It's built as a Monad so you can keep applying Parsers to a string easily, and this makes it easier to check for failure.
+
+\subsubsection{anyChar}
+
+the anyChar function here is a great example here, the Parser consumes one char of the string, and if eats nothing (no more string left to parse), it fails, otherwise, it succeeds and formats the output accordingly
+
+\subsubsection{satisfy and char}
+
+For char, it uses satisfy which uses a function that if the predicate holds true, then the Parser succeeds and returns what the Parser ate, otherwise, the Parser fails. So char specifically uses a lambda function that checks if it is the argument "wanted".
+
+\subsubsection{eof}
+
+This one succeeds if the Parser is called on an empty string (nothing left to eat).
+
+\subsubsection{empty, many, and some}
+
+Just like what the comments say, the empty Parser fails for any input, the many parser runs a parser as many times as it will succeed and populate a list with the results, and will return the list on the first failure, and the some parser does the exact same thing, but there must be at least one success, while the many parser allows for 0 successes.
+
+\subsubsection{whitespace, terminal, integer, identifer}
+whitespace just has the Parser eat one whitespace character, whitespaces eats whitepspace characters with the many parser.\\
+\\
+terminal eats all of the whitespaces after a string parser, and identifier eats a string and succeeds if the string is not in the list of provided strings, fails otherwise.
+
+\subsubsection{chainl1, chainr1}
+chainl1 recursively calls the "more" function if it can find more operations and arguments. It coming from the left means that it evaluates it from the left side first (so like this: $(((1+2)+3)+4)+5$).\\
+\\
+chainr1 does the exact same thing but on the right side this time $5+(4+(3+(1+2)))$.
+
+\subsubsection{between}
+between basically runs its open parser first, then runs the p parser, which result is returned, and then runs the close parser.
+
+\newpage
+
+
+
+
+
+
+
+
+
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

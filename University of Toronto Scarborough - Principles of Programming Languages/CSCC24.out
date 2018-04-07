@@ -75,4 +75,12 @@
 \BOOKMARK [3][-]{subsubsection.7.2.8}{Recursive Descent Parsing}{subsection.7.2}% 75
 \BOOKMARK [3][-]{subsubsection.7.2.9}{Recursive Descent Parser Example}{subsection.7.2}% 76
 \BOOKMARK [1][-]{section.8}{Thursday, March 8, 2018}{}% 77
-\BOOKMARK [2][-]{subsection.8.1}{Parser Library}{section.8}% 78
+\BOOKMARK [2][-]{subsection.8.1}{ParserLib.hs}{section.8}% 78
+\BOOKMARK [3][-]{subsubsection.8.1.1}{Parser Implementation}{subsection.8.1}% 79
+\BOOKMARK [3][-]{subsubsection.8.1.2}{anyChar}{subsection.8.1}% 80
+\BOOKMARK [3][-]{subsubsection.8.1.3}{satisfy and char}{subsection.8.1}% 81
+\BOOKMARK [3][-]{subsubsection.8.1.4}{eof}{subsection.8.1}% 82
+\BOOKMARK [3][-]{subsubsection.8.1.5}{empty, many, and some}{subsection.8.1}% 83
+\BOOKMARK [3][-]{subsubsection.8.1.6}{whitespace, terminal, integer, identifer}{subsection.8.1}% 84
+\BOOKMARK [3][-]{subsubsection.8.1.7}{chainl1, chainr1}{subsection.8.1}% 85
+\BOOKMARK [3][-]{subsubsection.8.1.8}{between}{subsection.8.1}% 86

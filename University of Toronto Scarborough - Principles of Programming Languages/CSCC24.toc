@@ -87,4 +87,12 @@
 \contentsline {subsubsection}{\numberline {7.2.8}Recursive Descent Parsing}{34}{subsubsection.7.2.8}
 \contentsline {subsubsection}{\numberline {7.2.9}Recursive Descent Parser Example}{34}{subsubsection.7.2.9}
 \contentsline {section}{\numberline {8}Thursday, March 8, 2018}{35}{section.8}
-\contentsline {subsection}{\numberline {8.1}Parser Library}{35}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.1}ParserLib.hs}{35}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}Parser Implementation}{39}{subsubsection.8.1.1}
+\contentsline {subsubsection}{\numberline {8.1.2}anyChar}{39}{subsubsection.8.1.2}
+\contentsline {subsubsection}{\numberline {8.1.3}satisfy and char}{39}{subsubsection.8.1.3}
+\contentsline {subsubsection}{\numberline {8.1.4}eof}{40}{subsubsection.8.1.4}
+\contentsline {subsubsection}{\numberline {8.1.5}empty, many, and some}{40}{subsubsection.8.1.5}
+\contentsline {subsubsection}{\numberline {8.1.6}whitespace, terminal, integer, identifer}{40}{subsubsection.8.1.6}
+\contentsline {subsubsection}{\numberline {8.1.7}chainl1, chainr1}{40}{subsubsection.8.1.7}
+\contentsline {subsubsection}{\numberline {8.1.8}between}{40}{subsubsection.8.1.8}

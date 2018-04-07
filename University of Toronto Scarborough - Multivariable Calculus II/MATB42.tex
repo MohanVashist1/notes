@@ -1967,12 +1967,106 @@ The plus and minus determines if it is in the same direction as $n$ or in the op
 	$$\phi_v = (-sin(v)sin(u), cos(v)sin(u), 0)$$
 	$$\phi_u \times \phi_v =sin(u)(cos(v)sin(u), sin(v)sin(u), cos(u))$$
 	The $z$-component of both $u$ and $\phi_u \times \phi_v$ are positive, so they are the correct direction.
-
+	\\
+	\\
+	$\Longrightarrow$ \begin{align*}
+		\int_{S_2} F dS &= \int_{u,v} (\cos v \sin v, \cos u + 1, \sin v \sin u)\cdot (\cos v \sin^2 u, \sin v \sin^2 u, \cos u \sin u) dA\\
+		&= \int_0^{\frac{\pi}{2}} \int^{2\pi}_0 (\cos^2 v \sin^3 u + \cos u \sin v \sin^2 u + \sin v \sin^2 u + \sin v \sin^2 u \cos u) dv du\\
+		&= \frac{2\pi}{3}
+\end{align*}
+Therefore $$\int_{S_1 \cup S_2} F dS = \frac{\pi}{2} + \frac{2\pi}{3}$$
 \end{example}
 
+\newpage
 
+\section{Monday, March 5, 2018}
 
+\subsection{Divergence}
 
+\begin{definition}
+	Let $F : \mathbb{R}^n \mapsto \mathbb{R}^n$ be a vector field, we determine the \textbf{divergence of $F$}, denoted $div F$ or $\nabla F$ by
+	$$div F = \frac{\partial F_1}{\partial x_1} + ... + \frac{\partial F_n}{\partial x_n} = \sum_{i=1}^n \frac{\partial F_i}{\partial x_i}$$
+\end{definition}
 
+\begin{note}
+		The $div F$ is a funtion $div F : \mathbb{R}^n \mapsto \mathbb{R}$
+\end{note}
+\begin{note}
+	Geometrically, $div F$ represents the rate of expansion (or contraction) per unit volume. For example, given $F:\mathbb{R}^n \mapsto \mathbb{R}^2, F(x,y,z) = (x,y,z)$
+	$$div F = \frac{\partial x}{\partial x} + \frac{\partial y}{\partial y} + \frac{\partial z}{\partial z} = 3$$
+	So in this example, the volume is expanding at 3 cubic units per unit volume per unit time.
+\end{note}
+
+\begin{example}
+	(Using the previous equation)\\
+	Let $R$ be the interior of the bowl, we want $\int_R div F dV$
+	$$div F = \frac{\partial x}{\partial x} + \frac{\partial y}{\partial z} + \frac{\partial z}{\partial y} = 1 + 0 + 0 = 1$$
+	$\Longrightarrow \int_R div F dV = \text{Volume of $R$}$\\
+	We know $R : 0 \leq x^2 + y^2 \leq 1, x^2 + y^2 \leq z \leq sqrt{1 - (x^2 + y^2)}$
+	So we will use cylindrical coordinates (polar coordinates with a $z$ axis.)
+	\begin{align*}
+		\text{Volume of $R$} &=  \int_0^{2\pi} \int^1_0 \int^{1+\sqrt{1-r^2}}_{r^2} rdzdrd\theta\\
+		&= 2\pi  \int^1_0 \int^{1+\sqrt{1-r^2}}_{r^2} r dzdr\\
+		&=  2\pi  \int^1_0 (r+ r\sqrt{1-r^2} - r^3)dr\\
+		&= \frac{7\pi}{6}
+	\end{align*}
+\end{example}
+
+For the following remarks, Let $S$ be a 2 dimensional surface in $\mathbb{R}^3$ oriented by $n$
+\begin{remark}
+	If $\Phi (u,v)$ is a regular parameterization of $S$ and $n = \frac{\phi_u \times \phi_v}{||\phi_u \times \phi_v||}$
+\end{remark}
+\begin{remark}
+	If $\Phi_1$ and $\Phi_2$ are two orientation preserving parameterizations of $S$ and if $F$ is a continuous vector field defined on $S$, then
+	$$\int_{\Phi_1} F dS = \int_{\Phi_2} F dS$$
+	Should $\Phi_1$ be orientation preserving and $\Phi_2$ be orientation reserving we would have
+	$$\int_{\Phi_1} F dS = -\int_{\Phi_2} F dS$$
+\end{remark}
+\begin{remark}
+	If $\Phi_1$ and $\Phi_2$ are (regular) parameterizations of $S$ and if $f$ is a countinuous real valued function defined on $S$ then
+	$$\int_{\Phi_1} f dS = \int_{\Phi_2} f dS$$
+\end{remark}
+
+\begin{example}
+	$$F(x) = \frac{x}{||x||^3}$$
+	$S$ is the unit sphere centered at the origin oriented by the unit outer normal $n$.\\
+	\\
+	\underline{normally written:} $\frac{r}{||r||^3}$ (said to satisfy the "inverse square law")\\
+	we want to compute the flux of $F$ through $S$, $\int_S F \cdot n dS = \int_\Phi F \cdot n dS$ where $\Phi$ is any orientation preserving parameterization of $S$. Note that $$n = \frac{(2x,2y,2z)}{||(2x,2y,2z)||} = \frac{x}{||x||}$$\\
+	This works for any sphere at the origin no matter the radius\\
+	\begin{align*}
+		\int_\Phi F \cdot n dS &= \int_\Phi \frac{x}{||x||^3}\cdot \frac{x}{||x||} dS\\
+		&= \int_\Phi \frac{||x||^2}{||x||^4} dS\\
+		&= \int_\Phi \frac{1}{||x||^2} dS\\
+		&= \int_\Phi 1 dS\\
+		&= \text{the surface area of $S$} = 4\pi
+	\end{align*}
+	Since $S$ is a unit sphere, even if the sphere had radius $S$, then $\int_\Phi F \cdot n dS = 4\pi$
+\end{example}
+
+\begin{theorem}
+	\textbf{Divergence Theorem} or Gauss' Theorem is the following. Let $S$ be a closed surface in $\mathbb{R}^3$ oriented by the outward pointing unit normal $n$ and let $R$ be the region enclosed by $S (\partial R = S)$. Suppose $F$ is a smooth vector field defined throughout $R$. Then:
+	$$\iiint_R div F dV = \iint_{S=\partial R} F dS$$
+\end{theorem}
+
+\begin{remark}
+	The theorem could have been stated with different notation
+	$$\iiint_R \nabla \cdot F dV = \iiint_R div F dV = \iint_{\partial R} F dS = \iint_{\partial R} F\cdot n dS$$
+\end{remark}
+
+\begin{remark}
+	(In 2-dimensions), Divergence theorem in $\mathbb{R}^2$ is: Let $\gamma$ be a jordan curve in $\mathbb{R}^2$ oriented in the counterclockwise direction, Let $F = (F_1, F_2)$ be a smooth vector field defined throughout $R$ where $R$ is the region enclosed by $\gamma$. Put $G=(F_2 -F_1) \Longrightarrow F \cdot G = 0$ and $||F||=||G||$ Then $\gamma '(t) = (\gamma_1 '(t), \gamma_2 '(t))$ is a tangent and $(\gamma_2 '(t)-\gamma_1 '(t))$ is an outward normal $n$.\\
+	Green's Theorem gives $\int_\gamma G \cdot n ds = \int_\gamma F \cdot T ds \overset{\text{Green}}{=} \iint_R (\frac{\partial G_1}{\partial x} + \frac{\partial G_2}{\partial x})dA = \iint_R div G dA$\\
+	\\
+	This is sometimes called the 2-dimensional divergence theorem.
+\end{remark}
+
+\begin{note}
+	Gauss' Theorem is a generalization of Green's Theorem to $\mathbb{R}^3$, the closed surgace has 2 natural orientations; outward and inward. (If it does not tell you the orientation then by default the oriengation is given by the outward pointing normal)
+\end{note}
+
+\begin{remark}
+	If $S$ if a closed surface in $\mathbb{R}^3$, the default orientation is the outward pointing unit normal
+\end{remark}
 
 \end{document}

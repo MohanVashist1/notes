@@ -7,7 +7,6 @@
 
 \usepackage{listings}
 \usepackage{color}
-\setmonofont{Consolas}
 
 \definecolor{background}{RGB}{39, 40, 34}
 \definecolor{string}{RGB}{230, 219, 116}
@@ -2150,5 +2149,314 @@ So in this example, we have a the same datatype as before, except now the binary
 So when the interpreter reaches the "Rec" datatype, it stores a VClosure of its environment, input variable, and the function body, all under the function name in the map and then evaluates the body.\\
 \\
 Remember how (App f e) first evaluates "f" first before evaluating "e"? Well in our lambda example, "f" is just a lambda that evaluates into a (VClosure), but in this recursive example, "f" is just a variable of the function name, and in our implementation of the interpreter, the interpreter just looks for what is the value of the variable name in the map, in this case, if we previously store the function in the map, then the variable would be interpreted into a VClosure, just as the lambda case, and all of the steps would follow from there. This is how function calls would work, if the interpreter finds a function name, it would return the VClosure of that function, and it would do the same thing as a lambda would do from there.
+
+\section{Thursday, March 29, 2018}
+
+\subsection{SelfApp.hs, SelfApp.ss}
+
+\subsubsection{SelfApp.hs}
+
+\begin{lstlisting}
+module SelfApp where
+
+import NumLambda
+
+-- \f -> \n -> if n=0 then 1
+--             else n * (f f) (n-1)
+fac_proto = Lambda "f" (
+            Lambda "n" (
+              IsZero (Var "n")
+                (N 1)
+                (Mul
+                   (Var "n")
+                   (App (App (Var "f") (Var "f"))
+                              (Plus (Var "n") (N (-1)))))))
+
+-- fac n = fac_proto fac_proto n
+fac n = mainInterp (App (App fac_proto fac_proto) (N n))
+
+{-
+Here is a trace:
+
+   fac_proto fac_proto 2
+->
+   (\f -> \n -> if n=0 then 1 else n * (f f) (n-1)) fac_proto 2
+->
+   (\n -> if n=0 then 1 else n * (f f) (n-1)) 2   where f = fac_proto = \f ...
+->
+   if 2=0 then 1 else 2 * (f f) (2-1)    where f = fac_proto = ...
+->
+   2 * (f f) (2-1)    where f = fac_proto = ...
+->
+   2 * (\f -> \n -> ...) fac_proto (2-1)
+->
+   2 * (\n -> if n=0 then 1 else n * (fac_proto fac_proto) (n-1)) (2-1)
+->
+   2 * (\n -> if n=0 then 1 else n * (fac_proto fac_proto) (n-1)) 1
+->
+   2 * if 1=0 then 1 else 1 * (fac_proto fac_proto) (1-1)
+->
+   2 * 1 * fac_proto fac_proto (1-1)
+->
+   2 * 1 * (\n -> if n=0 then 1 else n * fac_proto fac_proto (n-1)) (1-1)
+->
+   2 * 1 * (\n -> if n=0 then 1 else n * fac_proto fac_proto (n-1)) 0
+->
+   2 * 1 * if 0=0 then 1 else 0 * ...
+->
+   2 * 1 * 1
+-}
+
+-- \f -> \n -> if n=0 then 0
+--             else if n-1=0 then 1
+--             else f f (n-1) + f f (n-2)
+fib_proto = Lambda "f" (
+            Lambda "n" (
+              IsZero (Var "n")
+                (N 0)
+                (IsZero (Plus (Var "n") (N (-1)))
+                   (N 1)
+                   (Plus (App (App (Var "f") (Var "f"))
+                              (Plus (Var "n") (N (-1))))
+                         (App (App (Var "f") (Var "f"))
+                              (Plus (Var "n") (N (-2))))
+                   )
+                )
+              )
+            )
+
+fib n = mainInterp (App (App fib_proto fib_proto) (N n))
+
+-- The theme can be represented by this "diagonal" or self-application
+-- combinator, aka "Delta": \x -> x x
+diag = Lambda "x" (App (Var "x") (Var "x"))
+-- Recall diagonalization proofs from C63...
+
+{-
+So why do languages support recursion directly?  Why not just make you write
+code like this?
+
+Answer: Language design tries to let you express your intention directly rather
+than encoding/simulating your intention as something else.  Your code is then
+more readable.
+-}
+\end{lstlisting}
+
+\subsubsection{SelfApp.ss}
+
+\begin{lstlisting}
+#lang racket
+
+(define (fac_proto f n)
+(if (equal? n 0)
+    1
+    (* n (f f (- n 1)))))
+
+(define (fac n)
+(fac_proto fac_proto n))
+\end{lstlisting}
+
+\subsubsection{Explanation to Self Application}
+
+These two pieces of code do essentially the exact same thing, the first is just in Haskell and the second is in Scheme. But this is just more obvious in the first example.\\
+\\
+Think about the factorial function that uses recursion, it's simple enough, it just calls itself with it's name to apply itself recursively. But what if you want to make a recursive lambda? Since the lambda doesn't have a name, how do you call it? So the solution to this is to pass in the function into itself as one of it's arguments, and since you can refer to it's arguments by name, you can refer to the function by name, and this is how lambda recursion works. In this example, the lambda stores itself as "f", and calls itself with the function "f".
+
+\subsection{NumStack.hs}
+
+\begin{lstlisting}
+module NumStack where
+
+import Control.Applicative
+
+data Expr = N Integer
+        | Plus Expr Expr
+  deriving (Eq, Show)
+
+interp :: Expr -> Integer
+interp (N i) = i
+interp (Plus e1 e2) = interp e1 + interp e2
+
+{-
+Below, an implementation that avoids non-tail recursion.  It uses an explicit
+custom stack instead.  This is closer to a real, low-level implementation:
+
+* tail recursion/call = loop, goto
+
+* stack = stack
+-}
+
+data Frame = TODO Expr | Add Integer
+  deriving Show
+
+eval :: [Frame] -> Expr -> Integer
+eval stack (N i) = exec stack i
+eval stack (Plus d1 d2) = eval (TODO d2 : stack) d1
+
+exec :: [Frame] -> Integer -> Integer
+exec [] i = i
+exec (TODO d : stack) i = eval (Add i : stack) d
+exec (Add i0 : stack) i = exec stack (i0 + i)
+
+interp2 :: Expr -> Integer
+interp2 = eval []
+
+{- Here is a trace:
+
+interp2 (Plus (Plus (N 1) (N 2))
+              (Plus (N 3) (N 4)))
+= eval [] (Plus (Plus (N 1) (N 2))
+              (Plus (N 3) (N 4)))
+= eval [TODO (Plus (N 3) (N 4))] (Plus (N 1) (N 2))   (*)
+= eval [TODO (N 2), TODO (Plus (N 3) (N 4))] (N 1)
+= exec [TODO (N 2), TODO (Plus (N 3) (N 4))] 1
+= eval [Add 1, TODO (Plus (N 3) (N 4))] (N 2)
+= exec [Add 1, TODO (Plus (N 3) (N 4))] 2
+= exec [TODO (Plus (N 3) (N 4))] (1+2)                (**)
+= eval [Add (1+2)] (Plus (N 3) (N 4))
+= ...
+= exec [Add (1+2)] (3+4)
+= exec [] ((1+2)+(3+4))
+= ((1+2)+(3+4))
+-}
+
+{-
+Invariant:
+forall e, stack: eval stack e = exec stack (interp e)
+
+Corollary:
+ interp2 e
+= eval [] e
+= exec [] (interp e)
+= interp e
+
+Induction proof: [strong] induction on e.
+
+Base case: e = N i
+  WTP: eval stack (N i) = exec stack (interp (N i))
+
+    eval stack (N i)
+  = exec stack i
+  = exec stack (interp (N i))
+
+    LHS
+  = eval stack (N i)
+  = exec stack i
+
+    RHS
+  = exec stack (interp (N i))
+  = exec stack i
+
+  So LHS = RHS.
+
+Induction step: e = Plus d1 d2
+Induction hypothesis:
+
+  forall s: eval s d1 = exec s (interp d1)
+  forall s: eval s d2 = exec s (interp d2)
+
+  WTP: eval stack (Plus d1 d2) = exec stack (interp (Plus d1 d2))
+
+    LHS
+  = eval stack (Plus d1 d2)
+  = eval (TODO d2 : stack) d1
+  = exec (TODO d2 : stack) (interp d1)
+  = eval (Add (interp d1) : stack) d2
+  = exec (Add (interp d1) : stack) (interp d2)
+  = exec stack (interp d1 + interp d2)
+
+    RHS
+  = exec stack (interp (Plus d1 d2))
+  = exec stack (interp d1 + interp d2)
+
+  So LHS = RHS as wanted.
+-}
+
+{-
+registers: r0, ep (Expr pointer), stack pointer (implicitly used by push and pop)
+
+label eval:
+  if ep points to N i:
+      r0 := i
+      goto exec
+  if ep points to Plus d1 d2:
+      push (TODO d2)
+      ep := d1
+      goto eval
+
+label exec:
+  if stack is empty:
+      goto exit
+  pop
+  if that was TODO d:
+      push (Add r0)
+      ep := d
+      goto eval
+  if that was Add i0:
+      r0 := i0 + r0
+      goto exec
+
+label exit:
+  the answer is in r0
+  so return r0
+-}
+
+{-
+That stack reminds you what to do next after you finish the current small task.
+
+Some people call it the "continuation stack" because it represents what/where you
+need to continue.
+-}
+\end{lstlisting}
+
+\subsubsection{Explanation}
+
+So this is an implementation of non-tail recursion on a function that only takes in integers and the addition of integers. So the interpreter here just evaluates Expressions until they are integers.\\
+\\
+So there are two types of frames that can be in the stack, one is TODO, which is for expressions that have not been evaluated yet, and ADD, which is for numbers that have been computed, but the rest of the equation that belongs with this number has not been computed yet.\\
+\\
+In this case, that would be when (Plus e1 e2) is being evaluated. Lets say we evaluate e1 first, we do so and place it on the stack as (Add i) and then evaluate e2. Once they are both evaluated, we add them together and continue to clear items off the stack.\\
+\\
+We also have two functions that call each other, one is eval, which evaluates expressions, and exec, which place expressions and integers from the stack to be worked on.
+
+\subsubsection{The Trace Example}
+
+Here's an explanation of the trace if you don't get it. I'll be refering to the section of the data type where the expressions are evaluated as "the table".
+
+\begin{lstlisting}
+-- the entire expression is being interpreted
+= interp2 (Plus (Plus (N 1) (N 2))
+              (Plus (N 3) (N 4)))
+-- eval is called, the stack is empty, and the entire expression is on the table
+= eval [] (Plus (Plus (N 1) (N 2))
+              (Plus (N 3) (N 4)))
+-- the second part of the expression is put on the stack as a TODO, the first part of the expression is on the table
+= eval [TODO (Plus (N 3) (N 4))] (Plus (N 1) (N 2))
+-- the second part of THAT expression is put on the stack as a TODO, the first part of the original expression is on the table
+= eval [TODO (N 2), TODO (Plus (N 3) (N 4))] (N 1)
+-- the expression on the table is evaluated to one
+= exec [TODO (N 2), TODO (Plus (N 3) (N 4))] 1
+-- the evaluated expression is added to the stack as an Add, the next item is removed off the stack to be evaluated
+= eval [Add 1, TODO (Plus (N 3) (N 4))] (N 2)
+-- this item is evaluated to 2
+= exec [Add 1, TODO (Plus (N 3) (N 4))] 2
+-- the add is taken off the stack and is added to the value on the table
+= exec [TODO (Plus (N 3) (N 4))] (1+2)
+-- swap what is on the table with what is on the stack
+= eval [Add (1+2)] (Plus (N 3) (N 4))
+-- do previous steps again
+= ...
+-- once that expression has been evaluated, go back to the stack
+= exec [Add (1+2)] (3+4)
+-- add the two values together from the stack
+= exec [] ((1+2)+(3+4))
+-- stack is now empty release the value
+= ((1+2)+(3+4))
+\end{lstlisting}
+
+\subsubsection{The rest of the file}
+
+So the rest of the file is just the proof of the invariant that these functions do in fact, work. So essentially a proof of Correctness. After that there's just a more lower level version of the algorithm, that is using pointers and registers. It looks like assembly.
+
 
 \end{document}

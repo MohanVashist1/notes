@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1523307901 "CSCC24.tex" "CSCC24.pdf" "CSCC24" 1523307905
+["pdflatex"] 1523311824 "CSCC24.tex" "CSCC24.pdf" "CSCC24" 1523311828
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1480098666 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1480098696 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -170,15 +170,15 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1495593487 4129592 0e6cfee100d68e6d96b92c0258f2ff73 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "CSCC24.aux" 1523307904 12763 a78f26dd398d72ec23c3ef2fcb75cc7b ""
-  "CSCC24.out" 1523307904 7603 35a8ae2329ab06830e7d492dbdf129cf ""
-  "CSCC24.tex" 1523307893 67731 832eacef58b4ee62bab8a1b5e4ec089c ""
-  "CSCC24.toc" 1523307904 9899 394710d7716bd16e6b9f6e3ab1569fe6 ""
+  "CSCC24.aux" 1523311826 13741 66a2c5905b69f5a10d2f188678784827 ""
+  "CSCC24.out" 1523311826 8281 182086a55b7a39dc11d6dbf43c75229a ""
+  "CSCC24.tex" 1523311821 77174 2eacc4a5ed2da6afe37da8474506f7ee ""
+  "CSCC24.toc" 1523311826 10715 dd0d58d798baa78e2569a73b35f87016 ""
   "imgs/syntax1.png" 1520897024 31177 9924a18fa1c71b3f91621eb87948a9fd ""
   "imgs/syntax2.png" 1520897032 44626 739aac5d096966d08ba4b483e3740c4d ""
   (generated)
-  "CSCC24.toc"
   "CSCC24.log"
-  "CSCC24.pdf"
-  "CSCC24.out"
   "CSCC24.aux"
+  "CSCC24.pdf"
+  "CSCC24.toc"
+  "CSCC24.out"

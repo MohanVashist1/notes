@@ -7,10 +7,19 @@
 
 \usepackage{listings}
 \usepackage{color}
-\usepackage{helvet}
+\setmonofont{Consolas}
+
+\definecolor{background}{RGB}{39, 40, 34}
+\definecolor{string}{RGB}{230, 219, 116}
+\definecolor{comment}{RGB}{117, 113, 94}
+\definecolor{normal}{RGB}{248, 248, 242}
+\definecolor{identifier}{RGB}{166, 226, 46}
 
 \lstset{
-  frame=none,
+  frame=single,
+  frame=tlbr,
+  framesep=0.2cm,
+  framerule=0pt,
   xleftmargin=2pt,
   stepnumber=1,
   numbers=left,
@@ -27,11 +36,30 @@
   showspaces=false,
   keywordstyle=\bfseries\rmfamily,
   columns=flexible,
-  basicstyle=\small\sffamily,
+  basicstyle=\linespread{1.1}\small\sffamily,
   showstringspaces=false,
   morecomment=[l]\%,
   basicstyle=\footnotesize\ttfamily,
   breaklines=true
+  numbers=left,                   		% where to put the line-numbers
+  stepnumber=1,                   		% the step between two line-numbers.
+  numbersep=5pt,                  		% how far the line-numbers are from the code
+  numberstyle=\tiny\color{black}\ttfamily,
+  backgroundcolor=\color{background},  		% choose the background color. You must add \usepackage{color}
+  showspaces=false,               		% show spaces adding particular underscores
+  showstringspaces=false,         		% underline spaces within strings
+  showtabs=false,                 		% show tabs within strings adding particular underscores
+  tabsize=4,                      		% sets default tabsize to 2 spaces
+  captionpos=b,                   		% sets the caption-position to bottom
+  breaklines=true,                		% sets automatic line breaking
+  breakatwhitespace=true,         		% sets if automatic breaks should only happen at whitespace
+  title=\lstname,                 		% show the filename of files included with \lstinputlisting;
+  basicstyle=\color{normal}\ttfamily,					% sets font style for the code
+  keywordstyle=\color{magenta}\ttfamily,	% sets color for keywords
+  stringstyle=\color{string}\ttfamily,		% sets color for strings
+  commentstyle=\color{comment}\ttfamily,	% sets color for comments
+  emph={format_string, eff_ana_bf, permute, eff_ana_btr},
+  emphstyle=\color{identifier}\ttfamily
 }
 
 \usepackage{upgreek}
@@ -50,32 +78,6 @@
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
 \usepackage{color}
-
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
-\lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\footnotesize,
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=b,
-    keepspaces=true,
-    numbers=left,
-    numbersep=5pt,
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    tabsize=2
-}
-
-\lstset{style=mystyle}
 
 \usepackage{dsfont}
 
@@ -1781,7 +1783,372 @@ However, the interp implementation can run into errors, for example, the whole p
 
 The interpM implementation basically turns its output from an integer to a Maybe Integer, so if the variable cannot be found in the map, it just returns an Nothing, which makes the whole expression evaluate to Nothing instead of crashing.
 
+\section{Thursday, March 22, 2018}
 
+\subsection{NumLet.hs}
 
+\begin{lstlisting}{language=haskell}
+module NumLet where
+
+import           Data.Map.Strict (Map)
+import qualified Data.Map.Strict as Map
+import           Data.Maybe (fromJust)
+
+data Expr = N Integer
+        | Var String
+        | Plus Expr Expr
+        | Let [(String, Integer)] Expr  -- Unrealistic but simpler.
+  deriving (Eq, Show)
+
+mainInterp :: Expr -> Integer
+mainInterp e = interp Map.empty e
+
+interp :: Map String Integer -> Expr -> Integer
+interp env (N i) = i
+interp env (Var v) = fromJust (Map.lookup v env)
+interp env (Plus e1 e2) = interp env e1 + interp env e2
+interp env (Let bindings e) =
+  let env_new = Map.union (Map.fromList bindings) env
+  in interp env_new e
+  {- In Map.union s1 s2 when a key occurs in both s1 and s2, s1's version is
+     adopted.
+
+     So here an inner binding shadows an outer binding of the same variable
+     name --- "shadowing".
+  -}
+
+-- (let y=6 in y+4) + (let x=5 in x+1)
+example = Plus (Let [("y", 6)] (Plus (Var "y") (N 4)))
+             (Let [("x", 5)] (Plus (Var "x") (N 1)))
+
+-- More realistic:
+data Expr2 = N2 Integer
+         | Var2 String
+         | Plus2 Expr2 Expr2
+         | Let2 [(String, Expr2)] Expr2
+           -- let x=4; y=x+1 in x+y
+  deriving (Eq, Show)
+
+{-
+Semantics choice:
+
+* Scope: Like let* in Scheme:
+
+     let x=2+3; y=x+4 in x+y
+
+ the y=x+4 has access to x=5.
+
+     let x=y+1; y=x+1 in ...
+
+ x=y+1 refers to y outside, not y=x+1.
+
+* Evaluation order:
+
+     let x=2+3; y=x+4 in x+y
+
+ Evaluate 2+3, then evaluate x+4, then x+y --- call by value (CBV), aka eager
+ evaluation.
+
+ So the environment just needs to map variables to numbers.
+
+Overall, it is as though:
+
+  let x=2+3; y=x+4 in x+y
+= let x=2+3 in let y=x+4 in x+y
+-}
+
+interp2 :: Map String Integer -> Expr2 -> Integer
+interp2 env (N2 i) = i
+interp2 env (Var2 v) = case Map.lookup v env of
+Just a -> a
+Nothing -> error (v ++ " is not found")
+interp2 env (Plus2 e1 e2) = interp2 env e1 + interp2 env e2
+interp2 env (Let2 [] body) = interp2 env body
+interp2 env (Let2 ((v,rhs) : defs) body) =
+  let a = interp2 env rhs
+      new_env = Map.insert v a env
+  in interp2 new_env (Let2 defs body)
+
+mainInterp2 :: Expr2 -> Integer
+mainInterp2 = interp2 Map.empty
+
+-- let x=2+3; y=x+4 in x+y
+example2 = Let2 [ ("x", Plus2 (N2 2) (N2 3))
+              , ("y", Plus2 (Var2 "x") (N2 4))
+              ]
+              (Plus2 (Var2 "x") (Var2 "y"))
+
+{-  let x=2; y=x; z=x+y in ...
+
+(v,rhs) =   ("x", N2 2) :
+defs  =  ("y", Var2 "x") : ("z", Plus2 (Var2 "x") (Var2 "y")) : []
+
+-}
+\end{lstlisting}
+
+\subsubsection{Let implementation}
+
+So here, we have essentially what we saw from the previous implementation but now we have a Let type that consists of a list of string integer pairings, the string being the name of the variable and the integer corresponds to its value. \\
+\\
+So as you can see in the "interp" interpreter, when it runs into a Let case, the List of (String, Integer) is conveniently turned into a Map with "Map.fromList" and we use "Map.union" to combine our current environment with this Map with the bindings (union will be favouring our new Map for collisions).\\
+\\
+So basically that implementation is great if all of your bindings are already calculated for you, but what if your bindings are expressions that rely on previous bindings to be calculated?\\
+\\
+So for this new case, we create another datatype "Expr2" that is exactly like "Expr" but the bindings are "(String, Expr2)" pairings. In this example, we want our later bindings to have access to our earlier bindings.\\
+\\
+So in our interpreter for this datatype ("interp2"), we do everything in the exact same way again, but for Let, we just interpret the body if the list is empty and if it isn't, we take the first binding in the list, add it as a variable into a new environment variable, and then recursively evaluate another Let operation with the rest of the variables under the new environment.
+
+\newpage
+
+\subsection{NumLambda.hs}
+
+\begin{lstlisting}
+module NumLambda where
+
+import           Data.Map.Strict (Map)
+import qualified Data.Map.Strict as Map
+import           Debug.Trace
+
+data Expr = N Integer
+          | Var String
+          | Plus Expr Expr
+          | Mul Expr Expr
+          | IsZero Expr Expr Expr
+          | Lambda String Expr
+          | App Expr Expr
+    deriving (Eq, Show)
+
+{-
+Semantics of App f e: "call by value" (CBV), aka "eager evaluation":
+
+1. Evaluate f until it is a value.  Expect it to be a lambda (later closure).
+2. Evaluate e until it is a value.
+3. Plug and chug.  (Implemented by extending the environment, as said.)
+-}
+
+-- The type of possible answers from the interpreter.
+data Value = VN Integer
+           | VClosure (Map String Value) String Expr
+             -- Cannot be simply "VFunc String Expr", see below.
+    deriving (Eq, Show)
+
+{-
+Lambda is evaluated to VClosure. VClosure needs to remember an environment
+because:
+
+Suppose your lambda is \y->x+y.  What do you use for x?!
+
+Terminology: y is a "bound variable", x is a "free variable".
+
+Bound variable (of an expression): You can see where the variable is bound
+(introduced or declared or defined).
+
+Free variable (of an expression): You can't, it probably comes from the outside.
+
+A free variable like x is probably introduced from an outer context:
+
+    (\x -> ..... (\y -> x + y) ....) 10
+
+When the interpreter runs into \y->x+y, and if it already knows x=10 from
+processing the outer context, it needs to attach "x=10" to \y->x+y so it doesn't
+forget.
+
+Why not just substitute?  Answer: Much slower, and has its own subtle problems
+--- look up "variable capture" for how easy it is to do it wrong.  This also
+holds for how we implement App: We won't substitute, we will just extend the
+environment.
+
+Terminology: The combination "\y->x+y, oh BTW x=10 there" is a "closure".
+
+A closure is a record or data structure that stores an expression (usually a
+lambda, but generally can be any expression) together with the
+environment/bindings for all of its free variables.
+
+Fun fact: When the Javascript, Java, and C++ finally added lambda to their
+languages, they finally realized how difficult this business of free variables
+and closures is!  They also have an extra issue:
+
+Since "x" is a mutable variable in their languages, you get to ask: Does it mean
+the value of x at the time of creating the lambda, or does it mean a reference
+to x?
+
+Java: value at the time of lambda creation ("final variable").
+Javascript: reference.
+C++: extra syntax for you to choose.
+-}
+
+mainInterp = interp Map.empty
+
+interp :: Map String Value -> Expr -> Value
+interp env (N i) = VN i
+interp env (Var v) = case Map.lookup v env of
+  Just val -> val
+  Nothing -> error (v ++ " not found")
+interp env (Plus e1 e2) = case (interp env e1, interp env e2) of
+  (VN i, VN j) -> VN (i + j)
+  _ -> error "wrong type in Plus"
+interp env (Mul e1 e2) = case (interp env e1, interp env e2) of
+  (VN i, VN j) -> VN (i * j)
+  _ -> error "wrong type in Mul"
+interp env (IsZero test e1 e2) = case interp env test of
+  VN 0 -> interp env e1
+  VN _ -> interp env e2
+  _ -> error "wrong type in IsZero"
+interp env (Lambda v body) = VClosure env v body
+interp env (App f e) = case interp env f of
+  VClosure fEnv v body ->
+      let eVal = interp env e
+          bEnv = Map.insert v eVal fEnv  -- fEnv, not env
+      in interp bEnv body
+  _ -> error "wrong type in App"
+
+-- (\x -> (\x -> \f -> f x) 10000 (\y -> x + y)) 10
+example1 = App (Lambda "x"
+                  (App (App (Lambda "x" (Lambda "f" (App (Var "f") (Var "x"))))
+                            (N 10000))
+                       (Lambda "y" (Plus (Var "x") (Var "y")))))
+               (N 10)
+
+{-
+Question: For bEnv, what if we used the following instead?
+
+   bEnv = Map.insert v eVal env
+
+Try with example1.
+
+This was basically the bug made in early implementations of Lisp.  Some people
+still regard this bug as a feature: "dynamic scoping".
+
+Dynamic scoping: a variable name refers to whichever thing has that name at the
+time/place of evaluation.
+
+Lexical/Static scoping: a variable name refers to the innermost outer binding in the code.
+-}
+\end{lstlisting}
+
+\subsubsection{Implementation}
+
+So this implementation is similar to the previous once except it has Multiplication, and a datatype that returns "e1" if "test" evaluates to 0 and returns "e2" otherwise. There is also a lambda data type that takes in a string and an expression.\\
+\\
+There's another bit of a switch up here as well, instead of outputting just an integer, the interpreter outputs a "Value" datatype, which could either be an integer, or a "VClosure", which contains an environment, a string, and an expression.\\
+\\
+There is also another data type called the "App", with 2 Expressions, the first one is meant to be a function (so after it is interpeted, a VClosure) and the second expression is the input to that function.
+
+\subsubsection{Lambda and App interpreted}
+
+So when a Lambda is interpreted, it returns a Vclosure with its environment, a string that will be the binding of its input variable (lets call it, "v" for example), and the body of the function.\\
+\\
+Now, what happens after this? Well all we can do with a VClosure after this is if the lambda was the first expression of an "App". If we take a look at what happens when an "App" is interpreted, the first expression is interpreted, and if it is a VClosure, then the second input is evaluated, lets call this interpreted second expression "x". So now "x" is inserted into a Map under the key of "v" and then the body of the VClosure is evaluated.\\
+\\
+This makes sense, as in Haskell, this is how you pass in input to a lambda function, the expression after the lambda function is evaluated and then put in as input for the lambda function.
+
+\newpage
+
+\subsection{NumRec.hs}
+
+\begin{lstlisting}
+module NumRec where
+
+import           Data.Map.Strict (Map)
+import qualified Data.Map.Strict as Map
+import           Debug.Trace
+
+data Expr = N Integer
+        | Var String
+        | Op2 BinOp Expr Expr
+        | IfZero Expr Expr Expr
+        | App Expr Expr
+        | Rec String String Expr Expr
+  deriving (Eq, Show)
+
+{- Rec is recursive function binding and use.
+
+     let f x = (... may call f ...) in body
+
+ is represented by
+
+     Rec "f" "x" (... may call f ...) body
+-}
+
+data BinOp = Plus | Minus | Times deriving (Eq, Show)
+
+binop Plus = (+)
+binop Minus = (-)
+binop Times = (*)
+
+{-
+Semantics of App f e: "call by value" (CBV), aka "eager evaluation":
+
+1. Evaluate f until it is a value.  Expect it to be a closure.
+2. Evaluate e until it is a value.
+3. Plug and chug.  (Implemented by extending the environment, as said.)
+
+-}
+
+-- The type of possible answers from the interpreter.
+data Value = VN Integer
+         | VClosure (Map String Value) String Expr
+  deriving (Eq, Show)
+
+mainInterp = interp Map.empty
+
+interp :: Map String Value -> Expr -> Value
+interp env (N i) = VN i
+interp env (Var v) = case Map.lookup v env of
+Just val -> val
+Nothing -> error (v ++ " not found")
+interp env (Op2 op e1 e2) = case (interp env e1, interp env e2) of
+(VN i, VN j) -> VN (binop op i j)
+_ -> error "wrong type in Op2"
+interp env (IfZero e e0 e1) = case interp env e of
+VN 0 -> interp env e0
+VN _ -> interp env e1
+_ -> error "wrong type in IsZero"
+interp env (App f e) = case interp env f of
+VClosure fEnv v body ->
+    let eVal = interp env e
+        bEnv = Map.insert v eVal fEnv
+    in interp bEnv body
+_ -> error "wrong type in App"
+interp env (Rec f v fbody body) =
+  let new_env = Map.insert f (VClosure new_env v fbody) env
+  in interp new_env body
+
+{-
+new_env is a cyclic data structure now.  I use Haskell lazy evaluation to set it
+up.
+
+In other languages, use a mutable cell:
+
+Introduce new mutable cell "self".
+self := garbage.
+new_env := Map.insert f self env
+self := VClosure new_env v body
+-}
+
+{-
+fib 0 = 0
+fib 1 = 1
+fib n = fib (n-1) + fib (n-2)
+-}
+
+fibbody = (IfZero (Var "n")
+          (N 0)
+          ((IfZero (Op2 Minus (Var "n") (N 1))
+             (N 1)
+             (Op2 Plus (App (Var "fib") (Op2 Minus (Var "n") (N 1)))
+                       (App (Var "fib") (Op2 Minus (Var "n") (N 2)))))))
+
+fib n = mainInterp (Rec "fib" "n" fibbody
+                   (App (Var "fib") (N n)))
+\end{lstlisting}
+
+\subsubsection{Recursive implementation}
+
+So in this example, we have a the same datatype as before, except now the binary operator has been generalized and we have a "Rec" datatype that takes in 2 strings and 2 expressions. The first string being the name of the function, the second string is the name of the function's input variable, the first expression is the body of the function and the last expression is the rest of the expression that we need to evaluate.\\
+\\
+So when the interpreter reaches the "Rec" datatype, it stores a VClosure of its environment, input variable, and the function body, all under the function name in the map and then evaluates the body.\\
+\\
+Remember how (App f e) first evaluates "f" first before evaluating "e"? Well in our lambda example, "f" is just a lambda that evaluates into a (VClosure), but in this recursive example, "f" is just a variable of the function name, and in our implementation of the interpreter, the interpreter just looks for what is the value of the variable name in the map, in this case, if we previously store the function in the map, then the variable would be interpreted into a VClosure, just as the lambda case, and all of the steps would follow from there. This is how function calls would work, if the interpreter finds a function name, it would return the VClosure of that function, and it would do the same thing as a lambda would do from there.
 
 \end{document}

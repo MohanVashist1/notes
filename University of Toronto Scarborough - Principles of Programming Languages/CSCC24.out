@@ -92,3 +92,11 @@
 \BOOKMARK [2][-]{subsection.9.2}{NumVar.hs}{section.9}% 92
 \BOOKMARK [3][-]{subsubsection.9.2.1}{Purpose and interp implementation}{subsection.9.2}% 93
 \BOOKMARK [3][-]{subsubsection.9.2.2}{interpM implementation}{subsection.9.2}% 94
+\BOOKMARK [1][-]{section.10}{Thursday, March 22, 2018}{}% 95
+\BOOKMARK [2][-]{subsection.10.1}{NumLet.hs}{section.10}% 96
+\BOOKMARK [3][-]{subsubsection.10.1.1}{Let implementation}{subsection.10.1}% 97
+\BOOKMARK [2][-]{subsection.10.2}{NumLambda.hs}{section.10}% 98
+\BOOKMARK [3][-]{subsubsection.10.2.1}{Implementation}{subsection.10.2}% 99
+\BOOKMARK [3][-]{subsubsection.10.2.2}{Lambda and App interpreted}{subsection.10.2}% 100
+\BOOKMARK [2][-]{subsection.10.3}{NumRec.hs}{section.10}% 101
+\BOOKMARK [3][-]{subsubsection.10.3.1}{Recursive implementation}{subsection.10.3}% 102

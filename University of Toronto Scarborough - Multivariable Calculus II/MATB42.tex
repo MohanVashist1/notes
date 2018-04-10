@@ -2071,6 +2071,59 @@ For the following remarks, Let $S$ be a 2 dimensional surface in $\mathbb{R}^3$ 
 
 \newpage
 
+\section{Monday, April 2, 2018}
+
+\begin{example}
+	Evaluate
+	$$\int_\gamma \omega = \int_\gamma [y + ln(x^2 + 1)]dx + [z + \arctan(y)]dy + e^{z^2} dz$$
+	where $\gamma$ consists of straight line segments from $(2,0,0)$ to $(0,2,0)$ to $(0,0,4)$ and back to $(2,0,0)$.\\
+	$d\omega = dydx + dzdy = - (dxdy + dydz)$
+	can we find a super surface $\mathbb{S}$ containing $\gamma$?\\
+
+	Consider the plane $z=4-2x-2y$\\
+	$S$ is the piece of $\mathbb{S}$ cut out by line segements (this is the piece of $\mathbb{S}$ lying over the region in the $xy$-plane bounded by $y=0, x=0, x+y=2$).\\
+	Denote this region (in $xy$-plane) by $D$, For compatibility, $n$ points upward. We can apply Stokes' Theoreom on it. (Note: since $dxdy = 1 > 0$, this is the correct orientation)
+	\begin{align*}
+		\int_\gamma \omega &= \int_S d\omega\\
+		&= -\int (dxdy+dydz)\\
+		&= -\int (\begin{vmatrix}
+1 & 0 \\
+0 & 1
+\end{vmatrix} + \begin{vmatrix}
+0 & 1 \\
+-2 & -2
+\end{vmatrix})dA\\
+&= -\int_D (1+2)dA\\
+&= -3\int_D dA\\
+&= -3\int^2_0 \int^{2-x}_0 dydx\\
+&= -3\int^2_0 (2-x)dx\\
+&= -6
+	\end{align*}
+\end{example}
+
+\begin{example}
+	Compute $\int_S Fds$ where $F=(1,2,3)$ and $S$ is the cone with the vertex $(1,3,5)$ and the base is the circle $x^2+y^2 = 1$ in the $xy$-plane oriented with the normal that points away from the center line.\\
+	$S$ is not closed so we can use the Divergence Theorem.\\
+	but $Div F = 0$ and $F$ is defined throughout $\mathbb{R}^3$. There exists a $G$ such that $F = curl G$.\\
+	Use Stokes' Theorem when $(n=3, k=2)$
+
+	$$\int_S F dS = \int_S (curl G)dS = \int_{\partial S} G ds$$
+	take $G = (2z, 3x, y)$. $\partial S$ is just the circle $x^2 + y^2 = 1$ in the $xy$-plane. $\gamma (t) = (\cos t, \sin t, 0), t \in [0,2\pi]$
+
+	\begin{align*}
+		\int_\gamma (2(0), 3\cos t, \sin t) \cdot (-\sin t, \cos t, 0)dt &=  3\int^{2\pi}_0 \cos^2 t dt\\
+		&= 3\int^{2\pi}_0 (\frac{1}{2} +  \frac{1}{2} \cos t)dt\\
+		&= 3 \frac{1}{2} 2\pi = 3\pi
+	\end{align*}
+\end{example}
+
+\begin{example}
+	Let $S$ be the surface $y=10-x^2-z^2$ with $y\geq 1$ oriented by the unit normal with positive $y$-component. Evaluate $\int_S d\omega$ when $$\omega = (2xyz+5z)dx + e^x \cos (yz) dy + x^2y dz$$
+	$$d\omega = x^2 +e^x \sin (yz) dydx + 5dzdx + (e^x \cos (yz) - 2xz)dxdy$$
+\end{example}
+
+\newpage
+
 \section{Friday, April 6, 2018}
 
 \begin{example}

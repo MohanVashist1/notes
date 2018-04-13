@@ -2071,6 +2071,52 @@ For the following remarks, Let $S$ be a 2 dimensional surface in $\mathbb{R}^3$ 
 
 \newpage
 
+\section{Monday, March 26, 2018}
+
+Proof for Stokes' Special Case
+
+\begin{proof}
+	Assume that $S$ can be divided into finitely many non-overlapping subsurfaces, each of which has a 1 to 1 projection into a coordinate plane. If 2 subsurfaces meet in a curve, the oreintations on the curve will be in opposite directions, and cancel out.\\
+	\\
+	We will establish the result for one such subsurface, we will also call $S$ without loss of generality. For convenience, we assume the plan of projection to be the $xy$-plane.\\
+	\\
+	The surface given by space $z=z(x,y)$ where $z$ is a $C^2$ function. We denote $\partial S$ by $S$, projection $D$ with boundary $C^*$\\
+	\\
+	$n$ points upward, $C, C^*$ are oriented in the counterclockwise direction when viewed from above. $F=(F_1, F_2, F_3)$ is smooth.\\
+	\\
+	now $$n = \frac{1}{\sqrt{1+(\frac{\partial z}{\partial x})^2 + (\frac{\partial z}{\partial y})^2}} (-\frac{\partial z}{\partial x}, -\frac{\partial z}{\partial y}, 1)$$
+	$$\Longrightarrow dS = \sqrt{1+(\frac{\partial z}{\partial x})^2 + (\frac{\partial z}{\partial y})^2} dA$$
+	$$\int_S curl F dS = \int_D [(\frac{\partial F_3}{\partial y} - \frac{\partial F_2}{\partial z})(-\frac{\partial z}{\partial x}) + (\frac{\partial F_1}{\partial z} - \frac{\partial F_3}{\partial x})(-\frac{\partial z}{\partial y}) + (\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y})]dA$$
+	On $\partial S = C$, we have
+	$$dz = \frac{\partial z}{\partial x}dx + \frac{\partial z}{\partial y}dy$$
+	so
+	\begin{align*}
+		\int_C F ds &= \int_{C^*} F_1 dx + F_2dy+F_3(\frac{\partial z}{\partial x}dx + \frac{\partial z}{\partial y}dy)\\
+		&= \int_{C^*} [F_1 + F_3\frac{\partial z}{\partial x}]dx + [F_2 + F_3\frac{\partial z}{\partial y}]dy\\
+		&\overset{\text{Green's}}{=} \int_D (\frac{\partial}{\partial x} [F_2 + F_3\frac{\partial z}{\partial y}] - \frac{\partial}{\partial y} [F_1 + F_3\frac{\partial z}{\partial x}])dA\\
+		&= \int_D [(-\frac{\partial F_3}{\partial y}\frac{\partial z}{\partial x} + \frac{\partial F_2}{\partial z}\frac{\partial z}{\partial x}) + (-\frac{\partial F_1}{\partial z}\frac{\partial z}{\partial y} + \frac{\partial F_3}{\partial x}\frac{\partial z}{\partial y}) + (\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y})]\\
+		&= \int_S curl F dS
+	\end{align*}
+\end{proof}
+
+\begin{example}
+	Use Stroke's Theorem to evaluate
+	$$\int_S (curl F) dS$$
+	where $F = (-yz, 0, xy)$ and $S$ is the part of the cone $y=2\sqrt{x^2 + z^2}$ between $y\in[2,4]$ oriented by the unit normal $n$ which points away from the $y$-axis.\\
+	\\
+	Since $n$ is outward, $\gamma_4$ is clockwise and $\gamma_2$ is counterclockwise when viewed from wait out in the $y$-axis.
+	$$\gamma_4 (t) = (2\cos t, 4, 2\sin t), t\in [0,2\pi]$$
+	$$\gamma_2 (t) = (\sin t, 2, \cos t), t\in[0,2\pi]$$
+	\begin{align*}
+		\int_S (curl F)dS &= \int_{\partial S} F dS\\
+		&= \int_{\partial S = \gamma_2 + \gamma_4} -yzdx+xydz\\
+		&= \int^{2\pi}_0 [(-2\cos t)(\cos t) + (2\sin t) (-\sin t)]dt\\ &+ \int^{2\pi}_0 (-8\sin t)(-2\sin t)+ (8\cos t)(2\cos t)dt\\
+		&= -2\int^{2\pi}_0 (1)dt + 16\int^{2\pi}_0 (\sin^2 t + \cos^2 t)dt = 28\pi
+	\end{align*}
+\end{example}
+
+\newpage
+
 \section{Monday, April 2, 2018}
 
 \begin{example}

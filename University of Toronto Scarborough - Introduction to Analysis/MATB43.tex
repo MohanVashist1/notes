@@ -1902,7 +1902,105 @@ this obtains a one to one correspondence between $S$ and the set of sequences.\\
 
 \end{example}
 
+\newpage
 
+\section{Friday, April 6, 2018}
+
+\subsection{the Limit of the Supremum and the Limit of the Infimum}
+
+\begin{note}
+	If $S_n$ is not bounded above, then the limit of the Supremum of $S_n$ is $\infty$\\
+	If $S_n$ is not bounded below, then the limit of the Infimum of $S_n$ is $-\infty$
+\end{note}
+
+Consider the bounded sequence $\{ S_n \}$.\\
+Let $A_N = \sup \{ S_n | n > N \}$
+$A_N$ forms a decreasing Sequence and converges, define
+$$\lim_{n\to\infty} \sup S_n = \lim_{N\to\infty} A_N$$
+
+Similarly, $B_N = \inf \{ S_n | n > N \}$, $B_N$ is an increasing sequence bounded above, Let
+$$\lim_{n\to\infty} \inf S_n = \lim_{N\to\infty} B_N$$
+
+\begin{example}
+	$$S_n = (-1)^n, \lim_{n\to\infty} \sup S_n = 1, \lim_{n\to\infty} \inf S_n = -1$$
+\end{example}
+
+\begin{example}
+	$$S_n = n (1+(-1)^n) = \begin{cases}
+		2n, &\text{if $n$ even}\\
+		0, &\text{if $n$ odd}
+	\end{cases}, \lim_{n\to\infty} \sup S_n = \infty, \lim_{n\to\infty} \inf S_n = 0$$
+\end{example}
+
+\begin{example}
+	Let $S_n = \sin(\frac{n\pi}{3})$. The only possible solutions are $\pm \frac{\sqrt{3}}{2}, 0$, so
+	$$\lim_{n\to\infty} \sup S_n = \frac{\sqrt{3}}{2}, \lim_{n\to\infty} \inf S_n = -\frac{\sqrt{3}}{2}$$
+\end{example}
+
+\begin{proposition}
+	For any sequence $S_n$, there exists a subsequence, whose limit is $lim_{n\to\infty} \sup S_n$ and one whose limit is $lim_{n\to\infty} \inf S_n$
+\end{proposition}
+
+\begin{proof}
+	Assume $\lim_{n\to\infty} \sup S_n \neq \infty$. Let $a= \lim_{n\to\infty} \sup S_n$, so $a = \lim_{N\to\infty} A_N$\\
+	So given $K$, there exists $M$, such that for $N \geq M, |a_k - a| < \frac{1}{k}$\\
+	\\
+	Now, $A_m = \sup_{n > M} \{ s_n \} \Longrightarrow$ There exists $m_k >  M_k$ such that $|A_m - S_{m_k} |< \frac{1}{2k}$
+	$$|S_{n_k} - a| \leq  | S_{n_k} - A_m | + |A_m - a| < \frac{1}{k}, S_{n_k} \to a \text{ as } k\to\infty$$
+
+	Analogous construction for $\lim\inf S_n$
+\end{proof}
+
+\begin{remark}
+	For any $N$, $B_N \leq A_N$\\
+	$$\Longrightarrow \lim_{n\to\infty} \inf S_n = \lim_{n\to\infty} B_n \leq \lim_{n\to\infty} A_n = \lim_{n\to\infty} \sup S_n$$
+\end{remark}
+
+\begin{proposition}
+	Suppose $\{ S_n \}$ converges to a, then $$\lim_{n\to\infty} \sup S_n = a = \lim_{n\to\infty} \inf S_n$$
+\end{proposition}
+
+\begin{proof}
+	Since $\{ S_n \} \to a$, every subsequence to $a$ in particular, a substance which converges to $\lim_{n\to\infty} \sup S_n$, converges to $a, \Longrightarrow$ $a=\lim_{n\to\infty} \sup S_n$
+\end{proof}
+
+\textbf{There's something here I'm missing}
+
+\begin{proof}
+ let $\{ S_{n_k} \}$ be a convergent subsequence, then
+ $$\lim_{k\to\infty} S_{n_k} = \lim_{k\to\infty} \sup(S_{n_k}) \leq \lim_{n\to\infty} \sup (S_n) \Longrightarrow \sup (S) \leq \lim_{n\to\infty} \sup (S)$$
+ But there exists a convergent subsequence whose limit is
+ $$\lim_{n\to\infty} \sup (S) \Longrightarrow \sup(S) = \lim_{n\to\infty} \sup (S_n)$$
+
+ Similar argument for $\inf$ case.
+\end{proof}
+
+\subsection{Root Test Revisited}
+
+Given a series $\sum^\infty_{n=1} a_n$
+
+\begin{proposition}
+	If $$A = \lim_{n\to\infty} \sup |a_n|^{\frac{1}{n}} < 1$$
+	then $\sum_n a_n$ converges. If $A > 1$ then$\sum_n a_n$ diverges.
+\end{proposition}
+
+\begin{proof}
+	Let $A_n = \inf_{n \geq N} \{ |a_n|^{\frac{1}{n}} \}$ so $$\lim_{n\to\infty} \inf |a_n|^{\frac{1}{n}} = \lim_{N\to\infty} A_N$$Suppose
+	$$\lim_{n\to\infty} \inf |a_n|^{\frac{1}{n}} < 1$$\\
+	Pick a $c$ such that
+	$$\lim_{n\to\infty} \inf |a_n|^{\frac{1}{n}} < c < 1$$
+	then there exists an $M$ such that for $N \geq M, A_n < c, since $A_M = \sup_{n \geq M} \{ |a_n|^{\frac{1}{n}}$
+	$$\Longrightarrow |a_n|^{\frac{1}{n}} <  c \text{ for } n \geq M$$
+	$$\Longrightarrow |a_n| <  c^n \text{ for } n \geq M$$
+	since $\sum_{n \geq M} c^n$ converges, so does $\sum_{n \geq M} a_n \Longrightarrow \sum^\infty_{n=0} a_n$ converges.\\
+	\\
+	Just do $$\lim_{n\to\infty} \sup |a_n|^{\frac{1}{n}} > c > 1$$
+\end{proof}
+
+\subsection{Radius of convergent power series}
+
+$$\sum^\infty_{n=0} a_n x^n, c = \lim_{n\to\infty} \sup |a_n|^{\frac{1}{n}}$$
+$R = \frac{1}{c}$ if $c\neq 0$ is the radius of convergence, if $c=0,$ then $R = (-\infty, \infty)$
 
 
 \end{document}

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1523571050 "MATB43.tex" "MATB43.pdf" "MATB43" 1523649724
+["pdflatex"] 1524082543 "MATB43.tex" "MATB43.pdf" "MATB43" 1524082545
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1480098698 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -171,13 +171,13 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1495593487 4129592 0e6cfee100d68e6d96b92c0258f2ff73 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "MATB43.aux" 1523571051 6290 17f5984478ad6933fffe00b59ef9a222 ""
-  "MATB43.out" 1523571051 3550 3c5487ddf8ba9185493878e3885e8c5d ""
-  "MATB43.tex" 1523571047 78849 fa528d163f24280735a33a8e5b71ff62 ""
-  "MATB43.toc" 1523571051 4506 95c59dee641374ab392cdeef706711f0 ""
+  "MATB43.aux" 1524082544 6967 beccc4612b6f43f7bf0b84aa4a060b93 ""
+  "MATB43.out" 1524082544 4018 59041a4f6692e91c379753578e525207 ""
+  "MATB43.tex" 1524082541 82491 f2a415b2631f4de1e8053c558c394661 ""
+  "MATB43.toc" 1524082544 5075 c95767e5a2c0a618fda1ba84daf57604 ""
   (generated)
-  "MATB43.log"
   "MATB43.aux"
+  "MATB43.toc"
   "MATB43.pdf"
   "MATB43.out"
-  "MATB43.toc"
+  "MATB43.log"

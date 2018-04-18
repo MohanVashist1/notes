@@ -1405,6 +1405,134 @@ $$e^x = exp(x) = \sum^\infty_{k=0} \frac{x^k}{k!}$$
 
 \newpage
 
+\section{Monday, February 26, 2018}
+
+\subsection{Exponential Function}
+
+$exp(x)=\sum^\infty_{n=0} \frac{x^n}{n!}$ converges on $\mathbb{R}$\\
+$e = exp(1) = \sum^\infty_{n=0} \frac{1}{n!}$\\
+checked: $e^{\frac{l}{m}} = exp(\frac{l}{m}), l,m\in\mathbb{Z}, m\neq 0$\\
+We can then define $e^r, r\in\mathbb{R}, e^r = exp(r)$
+
+\subsubsection{Properties of the Exponential Function}
+
+\begin{property}
+	$$\frac{d}{dx} e^x = e^x > 0$$
+\end{property}
+
+\begin{property}
+	$$e^{x+y} = e^x e^y$$
+\end{property}
+
+\begin{property}
+	$e^x$is strictly increasing
+\end{property}
+
+\begin{property}
+	$\lim_{x\to\infty} e^x = \infty, \lim_{x\to-\infty} e^x = 0$
+\end{property}
+
+The 3rd and 4th properties imply that $e$ is bijective. So for any $y>0$, there exists a unique $x : e^x = y \Longrightarrow e$ has an inverse.
+
+\subsection{Logarithm}
+
+$$\log x = \int^x_1 \frac{dt}{t}, x > 0$$
+
+\begin{proposition}
+	$\log (e^x) = x, \forall x\in\mathbb{R}$
+\end{proposition}
+
+\begin{proof}
+	\begin{align*}
+		\frac{d}{dx} \log (e^x) &= \log' (e^x) \frac{d}{dx} e^x\\
+		&= \frac{1}{e^x} e^x = 1
+	\end{align*}
+\end{proof}
+
+Now set $x=0$, $\log (e^0) = \log (1) = 0 \Longrightarrow c=0 \Longrightarrow \log (e^x) = x$. So $\log$ is an invserse to $e^x$ and vice versa.
+
+\subsubsection{Properties of the Logarithmic Function}
+
+\begin{property}
+	$$\log (xy) = \log(x) + \log(y)$$
+\end{property}
+
+\begin{property}
+	$$\frac{d}{dx} \log (x) = \frac{1}{x}$$
+\end{property}
+
+\begin{property}
+	$$\lim_{x\to\infty} \log(x) = \infty, \lim_{x\to 0^+} \log (x) = - \infty$$
+\end{property}
+
+\begin{definition}
+	for $a > 0$, define
+	$$a^x = e^x\log(a)$$
+\end{definition}
+
+\begin{proposition}
+	$$e = \lim_{t\to 0} (1+t)^{\frac{1}{t}} = \lim_{n\to\infty} (1 + \frac{1}{n})^{\frac{1}{n}}$$
+\end{proposition}
+
+\begin{proof}
+	\begin{align*}
+		\log(\lim_{t\to 0} (1+t)^{\frac{1}{t}}) &\overset{\text{continuous}}{=} \lim_{t\to 0}\log((1+t)^{\frac{1}{t}})\\
+		&= \lim_{t\to 0} \frac{1}{t} \log(1+t)\\
+		&= \lim_{t\to 0} \frac{\log(1+t) - \log(1)}{t}\\
+		&= \lim_{t\to 0} \frac{\log(1+t)}{t}\\
+		&= \log (\lim_{t\to 0} (1+t)^{\frac{1}{t}})\\
+		&\Longrightarrow e = (\lim_{t\to 0} (1+t)^{\frac{1}{t}})
+	\end{align*}
+	Since $[\frac{d}{dt} (\log t)]_{t=1} = 1 = \log (e) = 1$ and $\log$ is a bijection
+\end{proof}
+
+\subsection{Trigonometric Numbers}
+
+\begin{definition}
+	$$\sin x = 1 - \frac{x^3}{3!} + \frac{x^5}{5!} - ... = \sum^\infty_{n=0} (-1)^n \frac{x^{2n+1}}{(2n+1)!}$$
+\end{definition}
+
+Note that the ratio test implies that a series converges for all $x\in\mathbb{R}$
+
+\begin{definition}
+	$$\cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - ... = \sum^\infty_{n=0} (-1)^n \frac{x^{2n}}{(2n)!}$$
+\end{definition}
+
+\begin{definition}
+	(Derivatives of $\sin, \cos$)
+	$$\frac{d}{dt} \sin x = \cos x, \frac{d}{dt} \cos x = -\sin x$$
+\end{definition}
+
+Note that:
+
+$$\cos (ix) = \sum^\infty_{n=0} (-1)^n \frac{(ix)^{2n}}{(2n)!} = \sum^\infty_{n=0} \frac{x^{2n}}{(2n)!}$$
+$$\sin (ix) = \sum^\infty_{n=0} (-1)^n \frac{(ix^{2n+1})}{(2n+1)!}$$
+
+Then
+$$e^{ix} = \sum^\infty_{i=0} \frac{(ix)^n}{n!} = \cos x + i \sin x$$
+
+Now:
+
+\begin{align*}
+	e^{i (x+y)} &= e^{ix}e^{iy}\\
+	&= \cos (x+y) + i\sin(x+y)\\
+	&= (\cos x + i \sin x)(\cos y + i \sin y)\\
+	&\Longrightarrow e^{i (x+y)} = (\cos x\cos y - \sin y \sin x)+i(\sin x \cos y + \cos x \sin y)
+\end{align*}
+
+So now we have
+$$\cos (x+y) = \cos x\cos y - \sin y \sin x$$
+$$\sin (x+y) = \sin x \cos y + \cos x \sin y$$
+
+Also:
+
+$$e^{-ix} = \cos (-x) + i\sin (x) = \cos (x) - i\sin (x)$$
+$$e^{ix} + e^{-ix} = 2\cos(x), e^{ix} - e^{-ix} = 2i\sin(x)$$
+$$\Longrightarrow \cos (x) = \frac{e^{ix} + e^{-ix}}{2}, \sin (x) = \frac{e^{ix} - e^{-ix}}{2}$$
+
+
+\newpage
+
 \section{Friday, March 2, 2018}
 
 \subsection{Open and closed subsets of the real numbers}

@@ -54,7 +54,10 @@
 \contentsline {section}{\numberline {18}Monday, March 19, 2018}{56}{section.18}
 \contentsline {subsection}{\numberline {18.1}Topology of real numbers}{56}{subsection.18.1}
 \contentsline {subsection}{\numberline {18.2}More on the exponential function}{56}{subsection.18.2}
-\contentsline {section}{\numberline {19}Friday, April 6, 2018}{58}{section.19}
-\contentsline {subsection}{\numberline {19.1}the Limit of the Supremum and the Limit of the Infimum}{58}{subsection.19.1}
-\contentsline {subsection}{\numberline {19.2}Root Test Revisited}{59}{subsection.19.2}
-\contentsline {subsection}{\numberline {19.3}Radius of convergent power series}{60}{subsection.19.3}
+\contentsline {section}{\numberline {19}April 2, 2018}{58}{section.19}
+\contentsline {subsection}{\numberline {19.1}Uniform Continuity}{58}{subsection.19.1}
+\contentsline {subsection}{\numberline {19.2}The limit of the Supremum and Infimum}{59}{subsection.19.2}
+\contentsline {section}{\numberline {20}Friday, April 6, 2018}{60}{section.20}
+\contentsline {subsection}{\numberline {20.1}the Limit of the Supremum and the Limit of the Infimum}{60}{subsection.20.1}
+\contentsline {subsection}{\numberline {20.2}Root Test Revisited}{61}{subsection.20.2}
+\contentsline {subsection}{\numberline {20.3}Radius of convergent power series}{62}{subsection.20.3}

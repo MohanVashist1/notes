@@ -2032,6 +2032,80 @@ this obtains a one to one correspondence between $S$ and the set of sequences.\\
 
 \newpage
 
+\section{April 2, 2018}
+
+\subsection{Uniform Continuity}
+
+\begin{definition}
+	(Uniform continuity) $S\subset\mathbb{R}, f:S \mapsto\mathbb{R}, x_0 \in S$\\
+	$f$ is continuous at $x_0$, given $\epsilon > 0$, there exists $\delta > 0$ such that, for $|x-x_0|<\delta, |f(x)-f(x_0)|<\epsilon$, $\delta$ depends on $x_0$
+\end{definition}
+
+\begin{example}
+	$f(x) = \frac{1}{x}, x\in (-1,0)$, regard $\epsilon$ as fixed as $x_0$ gets closer to 0, the slope of the graph $\frac{1}{x_0^2}$ increases so $\delta$ must get smaller:\\
+	Using Mean Value Theorem:
+
+	$|f(x) - f(x_0)| = f'(x_1)(x-x_0)$ where $x_1$ lies inbetween $x, x_0$.\\
+	$\epsilon = f'(x_1)\delta$\\
+	The choice of $\delta$: as $x_0$ gets closer to 0, $f'(x_0)= \frac{1}{x_0^2}$ gets larger, so $\delta$ must get smaller.\\
+	\\
+	However on $(-2, -1)$. $f'(x_0) = \frac{1}{x_0^2} \leq 1 \Longrightarrow |f(x)-f(x_0)| \leq |x - x_0|$. So if we want $|f(x)-f(x_0)|<\epsilon$, we need only take $|x-x_0|< \epsilon,$ i.e. $\delta = \epsilon$
+\end{example}
+
+\begin{definition}
+	$f$ is \textbf{uniformly continuous} on $S$, if given $\epsilon > 0$, there exists $\delta > 0$ such that $|f(y)-f(x)|< \epsilon$ if $|y-x|<\delta$\\
+	i.e. $\delta$ does not depend on $x$
+\end{definition}
+
+\begin{example}
+	on $(-2, -1), f(x)=\frac{-1}{x}$ is uniformly continuous, but on $(-1,0)$ it is not.
+\end{example}
+
+\begin{example}
+	$S = \mathbb{R}, f(x)=\sin (x)$\\
+	then $|\sin x - \sin y| = |\cos z| |x-y| \leq |x-y|$\\
+	$z$ is between $x,y$ so to achieve $|\sin x - \sin y|<\epsilon$, take $|x-y|<\epsilon$
+\end{example}
+
+\begin{note}
+	$dom(S)$ is unbounded
+\end{note}
+
+\begin{theorem}
+	$f$ uniformly continuous on $S \Longrightarrow$ $f$ continuous on $S$.
+\end{theorem}
+
+\begin{remark}
+	$f(x) = \frac{-1}{x}$ being uniformly continuous on $[-2,-1]$ is not a coincidence
+\end{remark}
+
+\begin{theorem}
+	$K \subset \mathbb{R}$ is compact, $f:K \mapsto \mathbb{R}$ is continuous $\Longrightarrow f$ is uniformly continuous.
+\end{theorem}
+
+\begin{proof}
+	 need to show: given $\epsilon > 0$, there exists $\delta > 0$ so that
+	 $$|x-y| < \delta \Longrightarrow |f(x) - f(y)| < \epsilon, \forall x,y\in K$$
+	 suppose this condition does not hold for a given $\epsilon > 0$\\
+	 \\
+	 i.e. For any $\delta > 0, \exists x,y \in K$ with $|f(x)-f(y)| \geq \epsilon$. In particular, for $\delta = \frac{1}{n}, \exists$ points $x_n, y_n \in K$ with $|x_n - y_n| < \frac{1}{n}$ but $f(x_n)-f(y_n) \geq \epsilon$ so $\{ x_n \} \subset K$ is compact.\\
+	 $\Longrightarrow$ there exists a subsequence $\{ x_{n_k} \} \to a \in k$\\
+	 $\Longrightarrow  \{ y_{n_k} \} \to a$ as well.\\
+	 \\
+	 $f$ is continuous implies that $f(x_{n_k}) \to f(a)$ and $f(y_{n_k}) \to f(a)$ as $k\to\infty$. So for a large enough $k$
+	 $|f(x_{n_k})-f(y_{n_k})|<\epsilon$\\
+	 $\Longrightarrow$ $f$ is in fact uniformly continuous on $K$.
+\end{proof}
+
+\subsection{The limit of the Supremum and Infimum}
+
+given a sequence $\{ S_n \} \subset \mathbb{R}$, bounded below.
+$$A_N = \inf \{ S_{N+1}, S_{N+2},...\} = \inf_{n > N} \{ S_n \}$$
+
+Note that $A_N \leq A_{N+1} \leq  ...$ is an increasing sequence
+
+\newpage
+
 \section{Friday, April 6, 2018}
 
 \subsection{the Limit of the Supremum and the Limit of the Infimum}

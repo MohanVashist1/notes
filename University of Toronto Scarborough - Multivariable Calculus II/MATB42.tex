@@ -50,12 +50,13 @@
 \newtheorem*{remark}{Remark}
 \newtheorem*{note}{Note}
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem{example}[theorem]{Example}
 
 \theoremstyle{definition}
 
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{example}[theorem]{Example}
+
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{property}[theorem]{Property}
@@ -707,7 +708,7 @@ All parameterize the same curve.
 \end{definition}
 
 \begin{definition}
-	$\gamma'(t)$ is the tanget $v$ to the curve at the point $\gamma (t)$. Hence, the tanget line at $\gamma (t_0)$ is given by
+	$\gamma'(t)$ is the tangent $v$ to the curve at the point $\gamma (t)$. Hence, the tanget line at $\gamma (t_0)$ is given by
 	$$\gamma (t_0) + \lambda \gamma ' (t_0), \lambda \in \mathbb{R}$$
 \end{definition}
 
@@ -1104,7 +1105,7 @@ The line integral of a conservative vector field is independent of the choice of
 \end{corollary}
 
 \begin{definition}
-  If $F=\nabla g$ is a conservative vector field then $g$ is called a potential function for the vector field F
+  If $F=\nabla g$ is a conservative vector field then $g$ is called a \textbf{potential function for the vector field $F$}
 \end{definition}
 
 \begin{theorem}
@@ -1296,7 +1297,7 @@ And so we want to find $g$. We have to do the following steps to find $g$
 	$$\frac{1}{2} \iint_R (1+1) dA = \iint_R dA = \text{The area of $R$}$$
 
 	\begin{corollary}
-		If the domain of $\omega$ (in $\mathbb{R}^2$) is simply connected, the $\omega$ is closed $\Longrightarrow$ exact.
+		If the domain of $\omega$ (in $\mathbb{R}^2$) is simply connected, then $\omega$ is closed $\Longrightarrow$ exact.
 	\end{corollary}
 
 	$\omega = F_1 dx + F_2 dy$, so closed would be $(\frac{\partial F_2}{\partial x} = \frac{\partial F_1}{\partial y})$\\
@@ -2068,6 +2069,176 @@ For the following remarks, Let $S$ be a 2 dimensional surface in $\mathbb{R}^3$ 
 \begin{remark}
 	If $S$ if a closed surface in $\mathbb{R}^3$, the default orientation is the outward pointing unit normal
 \end{remark}
+
+\newpage
+
+\section{Monday, March 23, 2018}
+
+\subsection{Fundamental Theorem of Calculus}
+
+$I = [a,b]$, $\partial I = \{ a,b \}$\\
+$f:\mathbb{R}\mapsto\mathbb{R}$ is an 0-form\\
+$$\int_I df = \int_{\partial I} f = f(b) - f(a)$$
+Similar for GFTC
+
+\subsection{Green's Theorem}
+
+$\gamma$ is a closed curve, $R$ is the enclosed region $\gamma = \partial R$.$\omega = F_1 dx + F_2 dy$ is a 1-form.
+$$\int_R (\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y})dA = \int_\gamma \omega$$
+$$d\omega = \frac{\partial F_1}{\partial x}dxdx + \frac{\partial F_1}{\partial y}dydx + \frac{\partial F_2}{\partial x}dxdy + \frac{\partial F_2}{\partial y}dydy &= (\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y})dxdy$$
+
+\subsection{Gauss' Divergence Theorem}
+
+$\Phi$ is a closed surface, $R$ is the enclosed region, $(\partial R = \Phi)$. Assume $n$ is the outward pointing unit normal. $F = (F_1, F_2, F_3)$.\\
+\\
+The theorem gives
+$$\int_R div F dV = \int_{\Phi= \partial R} F dS$$
+so
+$$\int_{\partial R} F dS = \int_{\partial R} F_1dydz + F_2dzdx + F_3 dxdy$$
+and
+$$\int_{\partial R} \omega \text{ where } \omega = F_1dydz + F_2dzdx + F_3 dxdy$$
+The general form is
+$$\int_R d\omega = \int_{\partial R} \omega$$
+
+\begin{theorem}
+	Let $\mathbb{S}$ be an oriented $k$-dimensional surface in $\mathbb{R}^n$ and let $\Phi$ be a closed $(k-1)$-dimensional surface contained in $\mathbb{S}$. Let $S$ be a surface enclosed by $\Phi (\Phi= \partial S)$
+
+	If $\omega$ is a $(k-1)$-form then
+	$$\int_S d\omega = \int_{\Phi = \partial S} \omega$$
+	provided the orientations on $S$ and $\partial S$ are compatible.
+\end{theorem}
+
+\begin{remark}
+	$S$ is a surface enclosed by $\Phi$, note that there may be more than one surface enclosed by $\Phi$.\\
+	\\
+	This only makes sense in the context of $\Phi$ being on a "super" surface
+\end{remark}
+
+\begin{remark}
+	Does not work with non-oriented surfaces
+\end{remark}
+
+Notice that if
+$$n=1, k=1$$
+Stokes Theorem gives the Fundamental Theorem of Calculus
+$$n=2,3, k=1$$
+Stokes Theorem gives the Generalized Fundamental Theorem of Calculus
+$$n = 2, k = 2$$
+Stokes Theorem gives Green's Theorem
+$$n=3, k=3$$
+Stokes Theorem gives Divergence (Gauss') Theorem\\
+and for $n=3, k=2$, let $\omega = F_1 dx + F_2 dy + F_3 dz$ then
+\begin{align*}
+	d\omega &= dF_1 \wedge dx + dF_2 \wedge dy + dF_3 \wedge dz\\
+	&= ....\\
+	&= (\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y})dx \wedge dy + (\frac{\partial F_3}{\partial y} - \frac{\partial F_2}{\partial z})dy \wedge dz + (\frac{\partial F_1}{\partial z} - \frac{\partial F_3}{\partial x})dz \wedge dx
+\end{align*}
+If $F=(F_1, F_2, F_3)$, Stokes' Theorem ($n=3, k=2$) gives
+
+\begin{align*}
+	\int_{\partial S} F ds &= \int_{\partial S} \omega\\
+	 &= \int_S d\omega\\
+	 &= \int_S (\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z})dy \wedge dz + (\frac{\partial F_1}{\partial z}-\frac{\partial F_3}{\partial x})dz\wedge dx + (\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y})dx\wedge dy\\
+	 &= \int_S (\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z}, \frac{\partial F_1}{\partial z} - \frac{\partial F_3}{\partial x}, \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y})dS
+\end{align*}
+
+\begin{definition}
+	If $F=(F_1, F_2, F_3)$, the vector field
+	$$(\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z}, \frac{\partial F_1}{\partial z} - \frac{\partial F_3}{\partial x}, \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y})$$
+	is called the \textbf{curl of $F$} and is denoted as curl $F$ or $\nabla \times F$
+\end{definition}
+
+$$curl F = \nabla \times F = det\begin{pmatrix}
+e_1 & e_2 & e_3 \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+F_1 & F_2 & F_3
+\end{pmatrix}$$
+$$\int_{\partial S} = \int_S (\text{curl} F)dS = \int_S (\text{curl} F)\cdot n dS$$
+
+\begin{theorem}
+	If $f:\mathbb{R}^3\mapsto\mathbb{R}$ is of class $C^2$ Then
+	$$\nabla \times (\nabla f) = 0$$
+	$$(\text{curl}(\text{grad} f) = 0)$$
+\end{theorem}
+
+If we did the calculation we would get pairs of mixed partials (with opposite signs).\\
+Because $f$ is $C^2$, these will be equal and cancel.\\
+Where have we seen this before? ($k$-forms, $d\omega = 0$)
+$$\omega=df, d\omega = d^2 f = 0$$
+
+\begin{theorem}
+	If $F$ is a $C^2$ vector field on $\mathbb{R}^3$ then
+	$$\nabla \cdot (\nabla \times F) = 0$$
+	$$(\text{div}(\text{curl} F) = 0)$$
+\end{theorem}
+
+$\text{curl} F = 0$ is the vector field equivalent to a 1-form $\omega$ being closed\\
+If $\text{curl} F = 0$ if $F$ is defined throughout $\mathbb{R}^3$, then $F$ is a gradient field (conservative).
+
+\begin{remark}
+	If $div G = 0$ and $G$ is defined throughout $\mathbb{R}^3$, then there is a $F$ such that $curl F = G$.\\
+	If there is a $F$ such that $curl F = G$, then $F$ is said to be a \textbf{vector potential} for $G$.\\
+	If $F$ is a vector potential for $G$, then so is $F+\nabla h$, where $h:\mathbb{R}^3\mapsto\mathbb{R}$ is of class $C^2$ (the \textbf{gauge freedom}).
+\end{remark}
+
+\begin{theorem}
+	If $S$ is a closed bounded (2-dim) surface in $\mathbb{R}^3$ and $F$ is a $C^2$ vector field throughout the interior, $R$, of $S$ then
+	$$\int_{S = \partial R} (\text{curl} F)\cdot dS$$
+
+\end{theorem}
+\begin{proof}
+	$$\int_{S = \partial R} (\text{curl} F) dS \overset{\text{div thm}}{=} \int_R \text{div}(\text{curl} F)dV = 0$$
+\end{proof}
+
+Assume that $G$ has a vector potential $F$. If oriented surfaces $S_1$ and $S_2$ have the same compatibility oriented boundary $C$, then
+
+$$\int_{S_1} G dS = \int_{S_2} G dS = \int_C F ds$$
+
+If $G$ has a vector potential, it is surface independent (just as a vector field with scalar potential is path independent)
+
+\begin{definition}
+	If $\text{curl} F = 0$ at a point, the flow is said to be \textbf{irrotational} at the point (i.e., no whirl pool.)
+\end{definition}
+
+\begin{theorem}
+	Strokes' Theorem (special case)\\
+	Let $\mathbb{S}$ be an oriented (2-dimensional) surface in $\mathbb{R}^3$ and let $\gamma$ be an oriented simple closed curve on $\mathbb{S}$. Let $S$ be a surface enclosed by $\omega$, so that $\gamma = \partial S$. If $F$ is a $C^1$ vector field on $\mathbb{S}$ then
+	$$\int_{\gamma = \partial S} F ds = \int_S (\text{curl} F)dS$$
+	provided the oreintations are compatible.
+\end{theorem}
+
+\begin{remark}
+	This is the usual version of Stokes' Theorem
+\end{remark}
+\begin{remark}
+	We can be explicit about what it means for the orientations to be compatible. The orientation of $\gamma$ can be given by a unit tangent vector, denoted by $I$. (note: $I$ is also tangent to the surface)
+\end{remark}
+
+Let $N$ be the unit normal to $\gamma$ $(N \bot T)$ which points away from $S$.\\
+\\
+Let $n = N \times T$. Assume $\Phi (u,v)$ parameterizes $S_1$, the orientations of $\gamma$ and $\Phi$ if
+$$n = \frac{\phi_u \times \phi_v}{||\phi_u \times \phi_v||}$$
+and for a compatible orientation, we need $\Phi (v,u)$
+
+\begin{example}
+	Use Stokes' theorem to evaluate
+	$$\int_S (\text{curl} F) dS$$
+	where $F(x,y,z)=(z+2, x, x^2 y^3 z)$
+	and $S$ is the part of the parabloid $z=7-x^2-y^2$ with $z\geq -2$ oriented with the upward pointing unit normal $n$.\\
+	\\
+	The boundary of $S$ is where the plane and paraboloid intersect  $$z=-2$$
+	$$-2=7-x^2-y^2$$
+	$$x^2+y^2 = 9$$
+	To be compatible with $n$, we need to parameterize the boundary in the counterclockwise direction when viewed from above.
+
+	$$\gamma (t) = (3\cos t, 3\sin t, -2), t\in [0,2\pi]$$
+
+	\begin{align*}
+		\int_S (\text{curl} F) dS &=  \int_{\partial S = \gamma} F ds\\
+		&= \int^{2\pi}_0 (0, 3\cos t, 3^5 \cos^2 t \sin^3 t (-2))\cdot (-3\sin t, 3\cos t, 0)dt\\
+		&=9 \int^{2\pi}_0 \cos^2 t = 9 \int^{2\pi}_0 \frac{1}{2}+\frac{1}{2}\cos (2t)dt = 9\pi \tag*{since $\int^{2\pi}_0\frac{1}{2}\cos (2t)dt=0$}
+	\end{align*}
+\end{example}
 
 \newpage
 

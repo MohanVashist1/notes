@@ -1512,7 +1512,6 @@ Continuing from the example from before:
 	&\overset{\text{Green's}}{&=} \int_{\gamma_1} F_1 dx + F_2 dy + \int_{\sigma} F_1 dx + F_2 dy + \int_{-\sigma} F_1 dx + F_2 dy + \int_{-\gamma_2} F_1 dx + F_2 dy\\
 	&= \int_{\gamma_1} F_1 dx + F_2 dy + \int_{\gamma_2} F_1 dx + F_2 dy\\
 	&= \int_{\partial (R_1 \cup R_2)} F_1 dx + F_2 dy
-
 	Then conclude using Lemma 1 and 2
 \end{proof}
 
@@ -1572,8 +1571,7 @@ $$\gamma' (u) = (\frac{\partial \phi_1}{\partial u} (u,v_0),..., \frac{\partial 
 
 So at the point $\phi (u_0, v_0)$, we have two tangent vectors, $\phi_u (u_0, v_0)$ and $\phi_v (u_0, v_0)$\\
 \\
-In the case of the $k$-dimensional surface, there will be $k$ of these tangets. (\phi_{u_1}, i = 1,...,k)\\
-\\
+In the case of the $k$-dimensional surface, there will be $k$ of these tangets. $$(\phi_{u_1}, i = 1,...,k)$$
 Any other tangent vector at $\phi (u_0, v_0)$ can be written as a linear combination of $\phi_u$ and $\phi_v$.
 $$T(u_0, v_0) = \lambda \phi_u (u_0, v_0) + \mu \phi_v (u_0, v_0), \lambda, \mu \in \mathbb{R}$$
 $$T(u_1, ..., u_k) = \sum^k_{i=1} \lambda_i \phi_{u_i} (u_1, ..., u_k))$$
@@ -2072,7 +2070,205 @@ For the following remarks, Let $S$ be a 2 dimensional surface in $\mathbb{R}^3$ 
 
 \newpage
 
-\section{Monday, March 23, 2018}
+\section{Friday, March 9, 2018}
+
+\subsection{Divergence Theorem or Gauss' Theorem}
+
+Let $S$ be a closed surface in $\mathbb{R}^3$ oriented by the outward pointing unit normal $n$ and let $R$ be the region enclosed by $S$ ($\partial R = S$). Suppose $F$ is a smooth vector field defined through $R$. Then
+$$\iiint_R div F dV = \iint_{S=\partial R} F dS$$
+Write $F$ as $F=F_1 e_1 + F_2 e_2 + F_3 e_3$\\
+Now $div F = \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial z} + \frac{\partial F_3}{\partial z}$ and we can write
+
+$$\int_R div F dV = \int_R\frac{\partial F_1}{\partial x}dV + \int_R\frac{\partial F_2}{\partial z}dV + \int_R\frac{\partial F_3}{\partial z}dV$$
+
+\begin{remark}
+    If $R$ is finitely simple in the $z$-direction we have
+    $$\int_R \frac{\partial F_3}{\partial z} dV = \int_S F_3 e_3 \cdot n dS$$
+\end{remark}
+
+\begin{remark}
+    If $R$ is finitely simple in the $x$-direction we have
+    $$\int_R \frac{\partial F_1}{\partial x} dV = \int_S F_1 e_1 \cdot n dS$$
+\end{remark}
+
+\begin{remark}
+    If $R$ is finitely simple in the $y$-direction we have
+    $$\int_R \frac{\partial F_2}{\partial y} dV = \int_S F_2 e_2 \cdot n dS$$
+\end{remark}
+
+If a region can be divided into such finitely simple regions, we can work over the individual pieces and sum the integrals. Hence, we get the Divergence Theorem for all "nice" regions.
+
+\newpage
+
+\section{Monday, March 12, 2018}
+
+\subsection{Gauss' Law}
+
+\begin{definition}
+    If $R$ is a closed and bounded region in $\mathbb{R}^3$ and $0 \not\in \partial R$, then
+
+$$\int_{\partial R} \frac{x}{||x||^3} dS = \begin{cases}
+4\pi, &\text{ if } 0 \in R\\
+0, &\text{ if } 0 \not\in R\\
+\end{cases}$$
+\end{definition}
+
+We can think of a 0-form as a real-valued function $f:\mathbb{R}^n\mapsto \mathbb{R}$.\\
+The basic 1-forms are expressions
+$$dx, dy, dz,... \text{ or } dx_1, ...., dx_n,....$$
+A 1-form $\omega$ is a linear combination of the basic 1-forms
+
+$$\omega = F_1 (x) dx_1 + ... + F_n (x) dx_n$$
+
+\newpage
+
+\section{Friday, March 16, 2018}
+
+\begin{definition}
+    A $k$th order differential form (k-form) on $\mathbb{R}^n$ is a sum of terms of the form
+    $$f(x) dx_{i_1} \wedge ... \wedge dx_{i_k}$$
+    subject to the rule
+    $$dx_i \wedge dx_j = - dx_j \wedge dx_i$$
+\end{definition}
+
+\begin{remark}
+    The $x_{i_1},...,x_{i_k}$ is a choice of $k$ symbols from $x_1, x_2, ..., x_n$ for each $k$
+\end{remark}
+
+\begin{definition}
+    The basic 2-forms are the expressions
+    $$dxdy, dydz,dzdx, ... \text{ or } dx_1 dx_2 ,...., dx_n dx_1$$
+\end{definition}
+
+\begin{definition}
+    A 2-form $n$ is a linear combination of the basic 2-forms
+    $$n=\sum F_i (x) dx_j dx_k$$
+\end{definition}
+
+\begin{definition}
+    The basic 3-forms are the expressions such as
+    $$dxdydz$$
+\end{definition}
+\newpage
+
+\section{Friday, March 16, 2018}
+
+\begin{definition}
+    (Wedge Addition) Given 2 $k$-forms $o$ and $n$, we can define a new $k$-form $o + n$ by collecting common terms and adding
+\end{definition}
+
+\begin{definition}
+    (Wedge Product) Given a $k$-form $o$ and a $l$-form $n$, we define $k+l$-form $o \wedge n$ by the rule
+    $$(f(x)dx_{i_1}\wedge ... \wedge dx_{i_k})\wedge(g(x)dx_{j_1}\wedge ... \wedge dx_{j_l}) = fg(x)dx_{i_1}\wedge ... \wedge dx_{i_k} \wedge dx_{j_1}\wedge ... \wedge dx_{j_l} $$
+\end{definition}
+
+\begin{property}
+    For each $k$, there is a $k$-form $O$ such that $O + \omega = \omega$ for all $k$-forms $\omega$ and $O \wedge n = O$ for all $l$-forms $n$. (zero element).
+\end{property}
+
+\begin{property}
+    If $o,n,m$ are $k,l,m$-forms then
+    $$o\wedge(n\wedge m) = (w\wedge n) \wedge m$$
+\end{property}
+
+\begin{property}
+    If $o$ is a $k$-form and $n$ is a $l$-form then
+    $$o \wedge n = (-1)^{kl} (n\wedge o)$$
+\end{property}
+
+\begin{property}
+    If $f$ is a 0-form, $\omega$ is a $k$-form then
+    $$f\wedge \omega = f\omega$$
+\end{property}
+
+\begin{property}
+    If $f$ is a 0-form, $w_1, w_2$ are $k$-forms and $n$ is a $l$-form then
+    $$(fw_1 + w_2)\wedge n = f(w_1 \wedge n) + (w_2 \wedge n)$$
+\end{property}
+
+\begin{definition}
+    The (exterior) derivative or (exterior) differential of a $k$-form, $k > 0$, is given by the rule
+
+    $$d(fdx_{i_1} \wedge ... \wedge dx_{i_k}) = (df)\wedge dx_{i_1} \wedge ... \wedge dx_{i_k}$$
+\end{definition}
+
+\begin{definition}
+    For a 0-form $f$, the (exterior) derivative is defined to be the 1-form
+
+    $$df = \frac{\partial f}{x_1}dx_1 + ... + \frac{\partial f}{x_n}dx_n$$
+\end{definition}
+
+\begin{remark}
+    If $\omega$ is a $k$-form, $d\omega$ is a $k+1$-form
+\end{remark}
+
+\begin{property}
+    Let $w,n$ be $k$-forms, $k\geq 0$, then
+    $$d(w + n) = dw + dn$$
+\end{property}
+
+\begin{property}
+    Let $w$ be a $k$-form and $n$ be a $l$-form then
+    $$d(w \wedge n) = dw \wedge n + (-1)^k (w \wedge dn)$$
+\end{property}
+
+\begin{property}
+    Let $w$ be a $k$-form then
+    $$d^2 w = d(dw) = 0$$
+    (usually denoted as $d^2 = 0$)
+\end{property}
+
+\begin{definition}
+    Let $w$ be a $k$-form in $\mathbb{R}^n$ THen
+    \begin{enumerate}
+        \item{if $dw = 0$, we say $w$ is closed}
+        \item{if $w=dn$, for some $k-1$-form $n$, we say that $w$ is exact}
+    \end{enumerate}
+\end{definition}
+
+\begin{theorem}
+    \begin{itemize}
+        \item{exact $\Longrightarrow$ closed}
+        \item{If $w$ is closed and $w$ is defined throughout $\mathbb{R}^n$, then $w$ is exact}
+    \end{itemize}
+\end{theorem}
+
+\begin{definition}
+    Let $\Phi : D \subset \mathbb{R}^k \mapsto\mathbb{R}^n$ $(n \geq  k)$ paramerterize a $k$-dim surface $S$ in $\mathbb{R}^n$. We define $\int_S \omega = \int_\Phi omega$ for a $k$-form $\omega$ by the rule
+
+    $$\int_\Phi f dx_{i_1} \wedge ... \wedge dx_{i_k} \equiv \int_D f(\Phi (u_1,..., u_k)) \frac{\partial (\phi_1,..., \phi_k)}{\partial (u_1,..., u_k)} dV$$
+    where
+    $$\Phi (u_1,..., u_k) = (\phi_1 (u_1,..., u_k), ..., \phi_n (u_1,..., u_k))$$
+    and
+    $$\frac{\partial (\phi_1,..., \phi_k)}{\partial (u_1,..., u_k)} = det\begin{bmatrix}
+    \frac{\partial \phi_{i_1}}{\partial u_1} & \frac{\partial \phi_{i_1}}{\partial u_2} & \dots  & \frac{\partial \phi_{i_1}}{\partial u_k} \\
+    \frac{\partial \phi_{i_2}}{\partial u_1} & \frac{\partial \phi_{i_2}}{\partial u_2} & \dots  & \frac{\partial \phi_{i_2}}{\partial u_k} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    \frac{\partial \phi_{i_k}}{\partial u_1} & \frac{\partial \phi_{i_k}}{\partial u_2} & \dots  & \frac{\partial \phi_{i_k}}{\partial u_k}
+\end{bmatrix}$$
+\end{definition}
+
+\begin{definition}
+    Let $F = (F_1, F_2, F_3)$ be a vector field in $\mathbb{R}^3$.\\
+    Let $\Phi : D \subset \mathbb{R}^2 \mapsto \mathbb{R}^3$ be a parameterization of an orientable surface $S$ and let $n$ be a unit normal corresponding to the orientation determined by the parameterization
+    $$n = \frac{\phi_u \times \phi_v}{||\phi_u \times \phi_v||}$$
+\end{definition}
+
+\newpage
+
+\section{Monday, March 19, 2018}
+
+$$\int_S F \cdot dS = \int_\Phi D \cdot dS = \int_\Phi F \cdot n dS = \int_\Phi F \cdot \frac{\phi_u \times \phi_v}{||\phi_u \times \phi_v||} dS$$
+
+\begin{align*}
+    &=\int_\Phi \frac{F_1 \frac{\partial (\phi_2, \phi_3)}{\partial (u,v)} + F_2 \frac{\partial (\phi_3, \phi_1)}{\partial (u,v)}+F_3\frac{\partial (\phi_1, \phi_2)}{\partial (u,v)}}{||\phi_u \times \phi_v||} dS\\
+    &=\int_\Phi \frac{F_1 \frac{\partial (\phi_2, \phi_3)}{\partial (u,v)} + F_2 \frac{\partial (\phi_3, \phi_1)}{\partial (u,v)}+F_3\frac{\partial (\phi_1, \phi_2)}{\partial (u,v)}}{||\phi_u \times \phi_v||} ||\phi_u \times \phi_v||dA\\
+    &=\int_\Phi F_1 dx_2 \wedge dx_3 + F_2 dx_3 \wedge dx_1 + F_3 dx_1 \wedge dx_2
+\end{align*}
+
+\newpage
+
+\section{Friday, March 23, 2018}
 
 \subsection{Fundamental Theorem of Calculus}
 
@@ -2366,7 +2562,7 @@ $$\nabla = (\frac{\partial}{\partial x_1} + ... + \frac{\partial}{\partial x_n})
 $\nabla$ acts on functions of vector fields
 $$\nabla f = (\frac{\partial}{\partial x_1} + ... + \frac{\partial}{\partial x_n})f = (\frac{\partial f}{\partial x_1} + ... + \frac{\partial f}{\partial x_n}) $$
 $$\nabla \cdot F = (\frac{\partial}{\partial x_1} + ... + \frac{\partial}{\partial x_n}) (f_1,...,f_n) = (\frac{\partial f_1}{\partial x_1} + ... + \frac{\partial f_n}{\partial x_n})$$
-\underset{in $\mathbb{R}^3$}, $f=(f_1, f_2, f_3)$
+\text{in $\mathbb{R}^3$}, $f=(f_1, f_2, f_3)$
 
 $$\nabla \times f = (\frac{\partial}{\partial x_1} + ... + \frac{\partial}{\partial x_n}) \times (f_1,...,f_n) = (\frac{\partial F_3}{\partial y} - \frac{\partial F_2}{\partial z}, \frac{\partial F_1}{\partial z} - \frac{\partial F_3}{\partial x}, \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y})$$
 

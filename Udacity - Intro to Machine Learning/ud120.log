@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  20 APR 2018 17:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  29 MAR 2018 11:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**MATB42.tex
-(./MATB42.tex
+**ud120.tex
+(./ud120.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
@@ -83,25 +83,11 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks18
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/esint/esint.sty
-Package: esint 
-\symlargesymbolsA=\mathgroup5
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2015/03/04 v2.20.2
-\thm@style=\toks19
-\thm@bodyfont=\toks20
-\thm@headfont=\toks21
-\thm@notefont=\toks22
-\thm@headpunct=\toks23
-\thm@preskip=\skip46
-\thm@postskip=\skip47
-\thm@headsep=\skip48
-\dth@everypar=\toks24
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks25
+\KV@toks@=\toks19
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
@@ -121,23 +107,23 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 ))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/doublestroke/dsfont.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
- (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/calc.sty
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count100
 \calc@Bcount=\count101
 \calc@Adimen=\dimen114
 \calc@Bdimen=\dimen115
-\calc@Askip=\skip49
-\calc@Bskip=\skip50
+\calc@Askip=\skip46
+\calc@Bskip=\skip47
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count102
-\calc@Cskip=\skip51
+\calc@Cskip=\skip48
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
@@ -147,7 +133,7 @@ LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \g_MT_multlinerow_int=\count103
 \l_MT_multwidth_dim=\dimen116
-\origjot=\skip52
+\origjot=\skip49
 \l_MT_shortvdotswithinadjustabove_dim=\dimen117
 \l_MT_shortvdotswithinadjustbelow_dim=\dimen118
 \l_MT_above_intertext_sep=\dimen119
@@ -253,11 +239,11 @@ File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
 )
-\Hy@SectionHShift=\skip53
+\Hy@SectionHShift=\skip50
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks26
-\inpenc@posthook=\toks27
+\inpenc@prehook=\toks20
+\inpenc@posthook=\toks21
  (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OML ...
@@ -735,7 +721,7 @@ File: babel.def 2017/05/19 3.10 Babel common definitions
 \l@newzealand = a dialect from \language\l@british 
 )) (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks28
+\pgfutil@everybye=\toks22
 \pgfutil@tempdima=\dimen128
 \pgfutil@tempdimb=\dimen129
  (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
@@ -749,10 +735,10 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
  (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
  (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks29
-\pgfkeys@temptoks=\toks30
+\pgfkeys@pathtoks=\toks23
+\pgfkeys@temptoks=\toks24
  (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks31
+\pgfkeys@tmptoks=\toks25
 ))
 \pgf@x=\dimen130
 \pgf@y=\dimen131
@@ -768,9 +754,9 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 \c@pgf@countb=\count116
 \c@pgf@countc=\count117
 \c@pgf@countd=\count118
-\t@pgf@toka=\toks32
-\t@pgf@tokb=\toks33
-\t@pgf@tokc=\toks34
+\t@pgf@toka=\toks26
+\t@pgf@tokb=\toks27
+\t@pgf@tokc=\toks28
  (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
@@ -807,9 +793,9 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 \pgfmath@dimen=\dimen138
 \pgfmath@count=\count121
 \pgfmath@box=\box29
-\pgfmath@toks=\toks35
-\pgfmath@stack@operand=\toks36
-\pgfmath@stack@operation=\toks37
+\pgfmath@toks=\toks29
+\pgfmath@stack@operand=\toks30
+\pgfmath@stack@operation=\toks31
 ) (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count122
@@ -894,8 +880,8 @@ Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
  (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen165
 \pgffor@skip=\dimen166
-\pgffor@stack=\toks38
-\pgffor@toks=\toks39
+\pgffor@stack=\toks32
+\pgffor@toks=\toks33
 )) (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
  (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
@@ -930,8 +916,8 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 Package: tcolorbox 2017/04/25 version 4.03 text color boxes
  (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks40
-\verbatim@line=\toks41
+\every@verbatim=\toks34
+\verbatim@line=\toks35
 \verbatim@in@stream=\read2
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
@@ -955,74 +941,60 @@ Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
 \tcb@temp=\box46
 \tcb@out=\write4
 \tcb@record@out=\write5
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks36
+\thm@bodyfont=\toks37
+\thm@headfont=\toks38
+\thm@notefont=\toks39
+\thm@headpunct=\toks40
+\thm@preskip=\skip51
+\thm@postskip=\skip52
+\thm@headsep=\skip53
+\dth@everypar=\toks41
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup6
-\symAMSb=\mathgroup7
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/local/texlive/2017/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
-\fancy@headwidth=\skip54
-\f@ncyO@elh=\skip55
-\f@ncyO@erh=\skip56
-\f@ncyO@olh=\skip57
-\f@ncyO@orh=\skip58
-\f@ncyO@elf=\skip59
-\f@ncyO@erf=\skip60
-\f@ncyO@olf=\skip61
-\f@ncyO@orf=\skip62
-)
+)) (./ud120.aux)
+\openout1 = `ud120.aux'.
 
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 43.
-
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is useless on input line 44.
-
-
-Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 45.
-
-
-Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 46.
-
-\c@theorem=\count138
-(./MATB42.aux)
-\openout1 = `MATB42.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 32.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    ... okay on input line 32.
  (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count139
+\scratchcounter=\count138
 \scratchdimen=\dimen174
 \scratchbox=\box47
-\nofMPsegments=\count140
-\nofMParguments=\count141
+\nofMPsegments=\count139
+\nofMParguments=\count140
 \everyMPshowfont=\toks42
-\MPscratchCnt=\count142
+\MPscratchCnt=\count141
 \MPscratchDim=\dimen175
-\MPnumerator=\count143
-\makeMPintoPDFobject=\count144
+\MPnumerator=\count142
+\makeMPintoPDFobject=\count143
 \everyMPtoPDFconversion=\toks43
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1037,1492 +1009,73 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \AtBeginShipoutBox=\box48
-Package hyperref Info: Link coloring OFF on input line 64.
+Package hyperref Info: Link coloring OFF on input line 32.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count145
+\c@section@level=\count144
 )
-LaTeX Info: Redefining \ref on input line 64.
-LaTeX Info: Redefining \pageref on input line 64.
-LaTeX Info: Redefining \nameref on input line 64.
- (./MATB42.out) (./MATB42.out)
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
+ (./ud120.out) (./ud120.out)
 \@outlinefile=\write6
-\openout6 = `MATB42.out'.
+\openout6 = `ud120.out'.
 
  ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+esint on input line 70.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/esint/uesint.fd
-File: uesint.fd 
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 70.
+LaTeX Font Info:    Try loading font information for U+msa on input line 38.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 70.
+LaTeX Font Info:    Try loading font information for U+msb on input line 38.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./MATB42.toc [1
+) (./ud120.toc)
+\tf@toc=\write7
+\openout7 = `ud120.toc'.
+
+ [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 48--53
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[2])
-\tf@toc=\write7
-\openout7 = `MATB42.toc'.
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 80--87
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--87
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--87
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--98
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--98
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--98
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 114--117
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--129
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[5]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 166--171
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 180--183
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 213--217
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 218--223
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 218--223
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 218--223
-
- []
-
-
-Overfull \hbox (41.90741pt too wide) in paragraph at lines 236--236
-[] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[8]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[9]
-Overfull \hbox (41.90741pt too wide) in paragraph at lines 256--256
-[] 
- []
-
-
-Overfull \hbox (41.90741pt too wide) in paragraph at lines 272--272
-[] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 311--314
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[11]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 323.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\pi' on input line 323.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 323.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[12]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[13]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[14]
-Overfull \hbox (14.07155pt too wide) in paragraph at lines 403--405
-[]$\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 a \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 t < \OT1/cmr/m/n/12 0$ for the even ex-ten-sion item$\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 a \OMS/cmsy/m/n/12 ^^T
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 412--421
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 412--421
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 412--421
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 472--475
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 521--526
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 548--551
-
- []
-
-
-Overfull \hbox (0.77238pt too wide) in paragraph at lines 562--562
-[] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[19]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[20]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 655--658
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 696--700
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 718--721
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 724--727
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 730--734
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 747--750
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 775--780
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 775--780
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--792
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--792
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 801--803
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 801--803
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 811--813
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 811--813
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 852--854
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 852--854
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 854--858
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 864--867
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[27]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[28]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[29]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 978--982
-
- []
-
-
-Overfull \hbox (14.80862pt too wide) in paragraph at lines 978--982
-\OT1/cmr/m/n/12 We can think of $\OML/cmm/m/it/12 F \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12 f[]; :::; f[]\OT1/cmr/m/n/12 )$ and $\OML/cmm/m/it/12 ds \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12 dx[]; :::; dx[]\OT1/cmr/m/n/12 )$ where $\OML/cmm/m/it/12 dx[] \OT1/cmr/m/n/12 = []\OML/cmm/m/it/12 dt; i \OT1/cmr/m/n/12 =
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[31]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[32]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[33]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 1117--1120
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1124--1130
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1124--1130
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 1147--1150
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 1201--1202
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 1211--1217
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1211--1217
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[38]
-
-./MATB42.tex:1240: LaTeX Error: Environment Theorem undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1240 	\begin{Theorem}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./MATB42.tex:1243: LaTeX Error: \begin{document} ended by \end{Theorem}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1243 	\end{Theorem}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[39]
-Underfull \hbox (badness 10000) in paragraph at lines 1263--1270
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1263--1270
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1278--1280
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1278--1280
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[40]
-Underfull \hbox (badness 10000) in paragraph at lines 1312--1315
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[41]
-./MATB42.tex:1325: Undefined control sequence.
-l.1325 		$\int_\gammma
-                       xyd + xdy$ can go from $(1,0)\to (-1,0)$ in 2 differe...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-./MATB42.tex:1326: LaTeX Error: Environment enu undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1326 		\begin{enu}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1324--1327
-
- []
-
-
-./MATB42.tex:1329: LaTeX Error: \begin{example} on input line 1323 ended by \end{enu}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1329 		\end{enu}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[42]
-Underfull \hbox (badness 10000) in paragraph at lines 1347--1354
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1347--1354
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1347--1354
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1359--1363
-
- []
-
-./MATB42.tex:1363: Misplaced alignment tab character &.
-l.1363 ...-Rsint) + (\frac{-R cost}{R^2})(Rcost) &
-                                                  = \frac{R^2}{R^2} sin^2 t ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1363--1371
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1363--1371
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[43]
-Underfull \hbox (badness 10000) in paragraph at lines 1388--1391
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1388--1391
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1394--1398
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[44]
-Underfull \hbox (badness 10000) in paragraph at lines 1436--1438
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1436--1438
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1447--1449
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1447--1449
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[45]
-Overfull \hbox (17.8034pt too wide) in paragraph at lines 1484--1489
-[]\OT1/cmr/m/n/12 For a fixed $\OML/cmm/m/it/12 x; F[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )$ and $[](\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )$ are con-tin-u-ous func-tions for $\OML/cmm/m/it/12 y \OMS/cmsy/m/n/12 2 \OT1/cmr/m/n/12 [\OML/cmm/m/it/12 g[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; g[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )]$. 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1484--1489
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1484--1489
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[46]
-./MATB42.tex:1511: Missing $ inserted.
-<inserted text> 
-                $
-l.1511 	\int
-            _{R_1 \cup R_2} (\frac{\partial F_2}{\partial x} - \frac{\partia...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./MATB42.tex:1511: Misplaced alignment tab character &.
-l.1511 ...} - \frac{\partial F_1}{\partial y})dA &
-                                                  = \int_{R_1} (\frac{\parti...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./MATB42.tex:1512: Misplaced alignment tab character &.
-<recently read> &
-                 
-l.1512 	&
-         \overset{\text{Green's}}{&=} \int_{\gamma_1} F_1 dx + F_2 dy + \int...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./MATB42.tex:1512: Misplaced alignment tab character &.
-<recently read> &
-                 
-l.1512 	&\overset{\text{Green's}}{&=}
-                                      \int_{\gamma_1} F_1 dx + F_2 dy + \int...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./MATB42.tex:1512: Misplaced alignment tab character &.
-<argument> &
-            =
-l.1512 	&\overset{\text{Green's}}{&=}
-                                      \int_{\gamma_1} F_1 dx + F_2 dy + \int...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./MATB42.tex:1512: Misplaced alignment tab character &.
-<argument> &
-            =
-l.1512 	&\overset{\text{Green's}}{&=}
-                                      \int_{\gamma_1} F_1 dx + F_2 dy + \int...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./MATB42.tex:1513: Misplaced alignment tab character &.
-<recently read> &
-                 
-l.1513 	&
-         = \int_{\gamma_1} F_1 dx + F_2 dy + \int_{\gamma_2} F_1 dx + F_2 dy\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./MATB42.tex:1514: Misplaced alignment tab character &.
-<recently read> &
-                 
-l.1514 	&
-         = \int_{\partial (R_1 \cup R_2)} F_1 dx + F_2 dy
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./MATB42.tex:1515: Missing $ inserted.
-<inserted text> 
-                $
-l.1515 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./MATB42.tex:1515: Missing } inserted.
-<inserted text> 
-                }
-l.1515 
-       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./MATB42.tex:1515: Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.1515 
-       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[47]
-Overfull \hbox (1.32321pt too wide) in paragraph at lines 1570--1571
-[]\OT1/cmr/bx/n/12 Note. []$\OML/cmm/m/it/12 ^^M[]$ \OT1/cmr/m/it/12 is tanget to the sur-face, it rep-re-sents $\OML/cmm/m/it/12 u$\OT1/cmr/m/it/12 -curves or $\OML/cmm/m/it/12 u$\OT1/cmr/m/it/12 -lines $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 u; v[]\OT1/cmr/m/n/12 ) =
- []
-
-
-Overfull \hbox (2.90497pt too wide) in paragraph at lines 1573--1575
-[]\OT1/cmr/m/n/12 So at the point $\OML/cmm/m/it/12 ^^^\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 u[]; v[]\OT1/cmr/m/n/12 )$, we have two tan-gent vec-tors, $\OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 u[]; v[]\OT1/cmr/m/n/12 )$ and $\OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 u[]; v[]\OT1/cmr/m/n/12 )$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1573--1575
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[48]
-Underfull \hbox (badness 10000) in paragraph at lines 1583--1585
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[49]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[50]
-Underfull \hbox (badness 10000) in paragraph at lines 1636--1638
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1640--1642
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[51]
-Underfull \hbox (badness 10000) in paragraph at lines 1669--1672
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[52]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[53]
-Underfull \hbox (badness 10000) in paragraph at lines 1694--1696
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1703--1709
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1703--1709
-
- []
-
-
-Overfull \hbox (27.66026pt too wide) detected at line 1717
-\OMS/cmsy/m/n/12 jj\OML/cmm/m/it/12 ^^^[] \OMS/cmsy/m/n/12 ^^B \OML/cmm/m/it/12 ^^^[]\OMS/cmsy/m/n/12 jj \OT1/cmr/m/n/12 = [] = [] = \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 r\OMS/cmsy/m/n/12 j ^^A [] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 r[]
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[54]
-Underfull \hbox (badness 10000) in paragraph at lines 1735--1736
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[55]
-Overfull \hbox (58.3958pt too wide) in paragraph at lines 1789--1790
-[]$[] \OML/cmm/m/it/12 fdS \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 u; v; g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 u; v\OT1/cmr/m/n/12 ))\OMS/cmsy/m/n/12 jj\OML/cmm/m/it/12 ^^^[] \OMS/cmsy/m/n/12 ^^B \OML/cmm/m/it/12 ^^^[]\OMS/cmsy/m/n/12 jj\OML/cmm/m/it/12 dA \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 u; v; g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 u; v\OT1/cmr/m/n/12 ))[]\OML/cmm/m/it/12 dA$ 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[56]
-Underfull \hbox (badness 10000) in paragraph at lines 1800--1802
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1800--1802
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[57]
-Underfull \hbox (badness 10000) in paragraph at lines 1824--1827
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[58]
-Underfull \hbox (badness 10000) in paragraph at lines 1857--1860
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1865--1869
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1865--1869
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1865--1869
-
- []
-
-
-Overfull \hbox (2.40672pt too wide) detected at line 1869
-\OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 jj[]jj\OT1/cmr/m/n/12 ) = (^^A\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 )(\OML/cmm/m/it/12 tF \OMS/cmsy/m/n/12 ^^A \OML/cmm/m/it/12 n\OT1/cmr/m/n/12 ) = (\OML/cmm/m/it/12 F \OMS/cmsy/m/n/12 ^^A \OML/cmm/m/it/12 n\OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 )
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[59]
-Underfull \hbox (badness 10000) in paragraph at lines 1902--1907
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1902--1907
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[60]
-Underfull \hbox (badness 10000) in paragraph at lines 1927--1932
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1927--1932
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[61]
-Underfull \hbox (badness 10000) in paragraph at lines 1947--1953
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1964--1966
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1964--1966
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[62]
-Underfull \hbox (badness 10000) in paragraph at lines 1968--1972
-
- []
-
-
-Overfull \hbox (57.03249pt too wide) in paragraph at lines 1976--1976
-[] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[63]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[64]
-Underfull \hbox (badness 10000) in paragraph at lines 2031--2035
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2035--2037
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[65]
-Underfull \hbox (badness 10000) in paragraph at lines 2058--2062
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[66]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[67]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[68]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[69]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[70]
-Overfull \hbox (0.2089pt too wide) detected at line 2163
-\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 dx[] \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 ::: \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 dx[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 dx[] \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 ::: \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 dx[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 fg\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 dx[] \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 ::: \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 dx[] \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 dx[] \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 ::: \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 dx[]
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[71]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[72]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[73]
-Underfull \hbox (badness 10000) in paragraph at lines 2276--2278
-
- []
-
-./MATB42.tex:2285: Misplaced alignment tab character &.
-l.2285 ... + \frac{\partial F_2}{\partial y}dydy &
-                                                  = (\frac{\partial F_2}{\pa...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2289--2292
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[74]
-Underfull \hbox (badness 10000) in paragraph at lines 2309--2312
-
- []
-
-
-Overfull \hbox (23.52335pt too wide) in paragraph at lines 2340--2340
-[] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[75]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[76]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[77]
-Underfull \hbox (badness 10000) in paragraph at lines 2414--2417
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2422--2426
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[78]
-Underfull \hbox (badness 10000) in paragraph at lines 2447--2455
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2447--2455
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2447--2455
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2447--2455
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[79]
-Underfull \hbox (badness 10000) in paragraph at lines 2472--2476
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[80]
-Underfull \hbox (badness 10000) in paragraph at lines 2492--2496
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[81]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[82]
-Underfull \hbox (badness 10000) in paragraph at lines 2547--2550
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2560--2562
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2560--2562
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[83]
-Underfull \hbox (badness 10000) in paragraph at lines 2585--2590
-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2585--2590
+Underfull \hbox (badness 10000) in paragraph at lines 48--53
 
  []
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+Underfull \hbox (badness 10000) in paragraph at lines 60--63
 
-[84]
-Underfull \hbox (badness 10000) in paragraph at lines 2610--2612
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[85]
-Overfull \hbox (23.51567pt too wide) in paragraph at lines 2661--2664
-[][]\OT1/cmr/bx/n/12 Example 25.7. []\OT1/cmr/m/it/12 Find the curve which min-i-mizes the dis-tance be-tween $\OT1/cmr/m/n/12 (1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1)&(3\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 5)$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2661--2664
-
  []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[86]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[87]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[88]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
 
-[89]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2719.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2719.
- (./MATB42.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2719.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2719.
-Package rerunfilecheck Info: File `MATB42.out' has not changed.
-(rerunfilecheck)             Checksum: 4B90DCFA1ED6D9B1F3F72571EBF1A58C;3064.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2719.
+[2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
+ (./ud120.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
+Package rerunfilecheck Info: File `ud120.out' has not changed.
+(rerunfilecheck)             Checksum: 008941651B6BB6C39231F4FB74449F26;309.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
  ) 
 Here is how much of TeX's memory you used:
- 20145 strings out of 492995
- 373976 string characters out of 6132704
- 442847 words of memory out of 5000000
- 23012 multiletter control sequences out of 15000+600000
- 17619 words of font info for 71 fonts, out of 8000000 for 9000
+ 19556 strings out of 492995
+ 367491 string characters out of 6132704
+ 434227 words of memory out of 5000000
+ 22760 multiletter control sequences out of 15000+600000
+ 14101 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,19n,73p,925b,496s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on MATB42.pdf (89 pages, 449812 bytes).
+ 55i,6n,73p,924b,337s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on ud120.pdf (2 pages, 45685 bytes).
 PDF statistics:
- 966 PDF objects out of 1000 (max. 8388607)
- 846 compressed objects within 9 object streams
- 325 named destinations out of 1000 (max. 500000)
- 389 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 62 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

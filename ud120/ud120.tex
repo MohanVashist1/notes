@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+
+\usepackage{upgreek}
+
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+\graphicspath{ {imgs/} }
+
+\usepackage{dsfont}
+
+\usepackage{mathtools}
+
+\usepackage{hyperref}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{mathtools}
+
+\usepackage{textcomp}
+
+\usepackage[english]{babel}
+
+\usepackage{tikz}
+
+\usepackage{tcolorbox}
+
+\usepackage{amsthm,amssymb}
+
+\setlength{\parindent}{0cm}
+
+\begin{document}
+
+  \title{ud120: Intro to Machine Learning\\ Lecture Notes}
+  \date{Udacity -- Summer 2018}
+  \author{Joshua Concon}
+  \maketitle
+  \href{https://classroom.udacity.com/courses/ud120}{The link to the course can be found here.} If you find any problems in these notes, feel free to contact me at conconjoshua@gmail.com.
+
+  \tableofcontents
+
+  \pagebreak
+
+  \section{Naive Bayes}
+
+  \subsection{Machine Learning Example}
+
+  We are shown examples of animals that are acerous and non-acerous, and are asked to classify in which category a horse belongs in.\\
+  \\
+  A horse is actually an acerous example because it doesn't have horns, but this is an example of how some machine learning examples work. They look at a bunch of examples, and make predictions based on those examples.\\
+  \\
+  Other examples of this classification style system are "recommender systems".
+
+  \subsection{Features and Labels}
+
+  In Machine Learning, we first try to extract features from an input and attach labels to them. For example, for someone who likes music, the input features would be tempo, intensity, lyrics and etc, and their labels might be song they do like, and songs that they do not like.
+
+  \subsection{Scatter plots}
+
+  One thing we can do is plot our data in a scatter plot and we can try to understand patterns in our data. For example, for a self-driving car, if our input is the bumpiness and the steepness of the road. We can plot the data of the bumpiness against the steepness, and from this, we can correlate the speed of the car in which it may be safer to travel in certain speeds in certain conditions.\\
+  \\
+  What some machine learning algorithms do is determine some \textbf{decision surface} in our scatter plot, in which plots on one side are all labelled one label, and the plots on the other side are all labelled another. This makes it easier to make generalized predictions for new data points.
+
+  \subsection{Naive Bayes}
+
+  This is a common way to find the decision surface.
+
+  \subsubsection{sklearn}
+
+
+
+
+\end{document}

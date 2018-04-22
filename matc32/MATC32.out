@@ -1,0 +1,73 @@
+\BOOKMARK [1][-]{section.1}{Tuesday, September 5, 2017}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{The Seven Bridges of Konigsberg}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{\(Outline\) Solution to Konigsberg}{section.1}% 3
+\BOOKMARK [1][-]{section.2}{Friday, September 8, 2017}{}% 4
+\BOOKMARK [2][-]{subsection.2.1}{Graphs}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.2}{Graph Theory Applications}{section.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Uber}{subsection.2.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Monge's Theorem \(on matching\)}{subsection.2.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Marriage \(Stable\) Problem}{subsection.2.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.2.4}{Scheduling \(Graph Colouring\)}{subsection.2.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.2.5}{Network Problems}{subsection.2.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.2.6}{Uber \(Pathfinding\)}{subsection.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.3}{Morphism}{section.2}% 13
+\BOOKMARK [1][-]{section.3}{Tuesday, September 12, 2017}{}% 14
+\BOOKMARK [2][-]{subsection.3.1}{More Morphism}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.2}{Decomposing Graphs}{section.3}% 16
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Connectivity of G}{subsection.3.2}% 17
+\BOOKMARK [1][-]{section.4}{Friday, September 15, 2017}{}% 18
+\BOOKMARK [2][-]{subsection.4.1}{Equivalence Relations on a set}{section.4}% 19
+\BOOKMARK [1][-]{section.5}{Tuesday, September 19, 2017}{}% 20
+\BOOKMARK [2][-]{subsection.5.1}{Konig's Theorem \(continued\)}{section.5}% 21
+\BOOKMARK [2][-]{subsection.5.2}{Networks}{section.5}% 22
+\BOOKMARK [1][-]{section.6}{Tuesday, September 26, 2017}{}% 23
+\BOOKMARK [2][-]{subsection.6.1}{Flow on a network}{section.6}% 24
+\BOOKMARK [1][-]{section.7}{Friday, September 29, 2017}{}% 25
+\BOOKMARK [2][-]{subsection.7.1}{Max-flow Min-Cut Theorem \(continued\)}{section.7}% 26
+\BOOKMARK [2][-]{subsection.7.2}{\(Ford-Fulkerson\) Algorithm for finding a maximal flow for a network}{section.7}% 27
+\BOOKMARK [1][-]{section.8}{Tuesday, October 3, 2017}{}% 28
+\BOOKMARK [2][-]{subsection.8.1}{Applying Min-cut Max-flow}{section.8}% 29
+\BOOKMARK [1][-]{section.9}{Friday, October 6, 2017}{}% 30
+\BOOKMARK [2][-]{subsection.9.1}{Hall's Theorem on Perfect Matching}{section.9}% 31
+\BOOKMARK [2][-]{subsection.9.2}{Connectivity: Menger's Theorem}{section.9}% 32
+\BOOKMARK [1][-]{section.10}{Tuesday, October 17, 2017}{}% 33
+\BOOKMARK [2][-]{subsection.10.1}{Planar Graphs}{section.10}% 34
+\BOOKMARK [1][-]{section.11}{Tuesday, October 24, 2017}{}% 35
+\BOOKMARK [2][-]{subsection.11.1}{Closed sets}{section.11}% 36
+\BOOKMARK [1][-]{section.12}{Friday, October 27, 2017}{}% 37
+\BOOKMARK [2][-]{subsection.12.1}{More Definitions for Planar Graphs}{section.12}% 38
+\BOOKMARK [2][-]{subsection.12.2}{Planar Graphs}{section.12}% 39
+\BOOKMARK [3][-]{subsubsection.12.2.1}{Application of Euler's formula for connected, planar graphs}{subsection.12.2}% 40
+\BOOKMARK [1][-]{section.13}{Tuesday, October 31, 2017}{}% 41
+\BOOKMARK [2][-]{subsection.13.1}{Subdivisions}{section.13}% 42
+\BOOKMARK [2][-]{subsection.13.2}{Dual Graphs}{section.13}% 43
+\BOOKMARK [2][-]{subsection.13.3}{Platonic Solids}{section.13}% 44
+\BOOKMARK [1][-]{section.14}{Friday, November 3, 2017}{}% 45
+\BOOKMARK [2][-]{subsection.14.1}{Classifying Platonic Solids}{section.14}% 46
+\BOOKMARK [2][-]{subsection.14.2}{Coloring}{section.14}% 47
+\BOOKMARK [2][-]{subsection.14.3}{Bounds for colouring}{section.14}% 48
+\BOOKMARK [3][-]{subsubsection.14.3.1}{Lower Bound}{subsection.14.3}% 49
+\BOOKMARK [3][-]{subsubsection.14.3.2}{Upper Bound}{subsection.14.3}% 50
+\BOOKMARK [1][-]{section.15}{Tuesday, November 7, 2017}{}% 51
+\BOOKMARK [2][-]{subsection.15.1}{Colouring Problems}{section.15}% 52
+\BOOKMARK [3][-]{subsubsection.15.1.1}{Lower Bound}{subsection.15.1}% 53
+\BOOKMARK [1][-]{section.16}{Tuesday, November 14, 2017}{}% 54
+\BOOKMARK [2][-]{subsection.16.1}{5-Colour Theorem}{section.16}% 55
+\BOOKMARK [1][-]{section.17}{Friday, November 17, 2017}{}% 56
+\BOOKMARK [2][-]{subsection.17.1}{Graph Colouring}{section.17}% 57
+\BOOKMARK [2][-]{subsection.17.2}{Spanning Trees}{section.17}% 58
+\BOOKMARK [3][-]{subsubsection.17.2.1}{Finding a Minimum Spanning Tree}{subsection.17.2}% 59
+\BOOKMARK [1][-]{section.18}{Tuesday, November 21, 2017}{}% 60
+\BOOKMARK [2][-]{subsection.18.1}{Kruskal's Algorithm}{section.18}% 61
+\BOOKMARK [2][-]{subsection.18.2}{Prim's Algorithm}{section.18}% 62
+\BOOKMARK [2][-]{subsection.18.3}{Dijkstra's Algorithm}{section.18}% 63
+\BOOKMARK [1][-]{section.19}{Friday, November 24, 2017}{}% 64
+\BOOKMARK [2][-]{subsection.19.1}{Spanning Cycles \205 Eulerian Cycles}{section.19}% 65
+\BOOKMARK [1][-]{section.20}{Tuesday, November 28, 2017}{}% 66
+\BOOKMARK [2][-]{subsection.20.1}{Hamiltonian Paths /Cycles}{section.20}% 67
+\BOOKMARK [3][-]{subsubsection.20.1.1}{Necessary Conditions}{subsection.20.1}% 68
+\BOOKMARK [3][-]{subsubsection.20.1.2}{Sufficient Conditions}{subsection.20.1}% 69
+\BOOKMARK [1][-]{section.21}{Friday, December 1, 2017}{}% 70
+\BOOKMARK [2][-]{subsection.21.1}{Hamiltonian Graphs}{section.21}% 71
+\BOOKMARK [3][-]{subsubsection.21.1.1}{Necessary Condition}{subsection.21.1}% 72
+\BOOKMARK [3][-]{subsubsection.21.1.2}{Sufficient Condition}{subsection.21.1}% 73

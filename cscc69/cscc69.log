@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 MAY 2018 19:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  9 JUN 2018 16:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1213,38 +1213,38 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 78.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./cscc69.toc [1
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2])
 \tf@toc=\write7
 \openout7 = `cscc69.toc'.
 
- [2] [3] [4] [5] [6] [7]
+ [3] [4] [5] [6] [7] [8]
 Overfull \hbox (2.61176pt too wide) in paragraph at lines 266--267
 \OT1/cmr/m/n/10 Cooperating processes need to exchange information, using either shared memory
  []
 
-[8]
+[9]
 Overfull \hbox (5.77835pt too wide) in paragraph at lines 306--307
 \OT1/cmr/m/n/10 "prog" into the process' address space, initializes hardware context and arguments
  []
 
-[9] [10] [11]
+[10] [11] [12]
 Overfull \hbox (17.08397pt too wide) in paragraph at lines 392--393
 \OT1/cmr/m/n/10 Two concurrent threads manipulated a shared resource without any synchronization.
  []
 
-[12]
+[13]
 Overfull \hbox (5.25061pt too wide) in paragraph at lines 458--459
 \OT1/cmr/m/n/10 First attempt does not have enough about state of each process, it only remembers
  []
 
-[13]
+[14]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 486.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 486.
- [14]
+ [15]
 Overfull \hbox (3.36159pt too wide) in paragraph at lines 538--539
 []\OT1/cmr/m/n/10 Represents a resource with many units available, or a resource allowing
  []
@@ -1254,7 +1254,7 @@ Overfull \hbox (17.38948pt too wide) in paragraph at lines 546--547
 \OT1/cmr/m/n/10 using lower-level primitives, Uniprocessors to disable interrupts and Multiprocessors,
  []
 
-[15]
+[16]
 Overfull \hbox (4.8061pt too wide) in paragraph at lines 553--554
 []\OT1/cmr/m/n/10 Some only read the object, others only write it, we allow multiple concurrent
  []
@@ -1289,40 +1289,105 @@ Underfull \hbox (badness 10000) in paragraph at lines 579--582
 
  []
 
-[16] [17]
+[17] [18]
 Underfull \hbox (badness 10000) in paragraph at lines 649--653
 
  []
 
-[18]
+[19]
 Overfull \hbox (6.50069pt too wide) in paragraph at lines 684--685
 []\OT1/cmr/m/n/10 Proportionality -- "simple" tasks complete quickly while more "complicated"
  []
 
-[19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 704.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 704.
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 707--718
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 707--718
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 707--718
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 707--718
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 721--724
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 733--736
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 747--751
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 754--757
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 762--775
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 762--775
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 762--775
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 762--775
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 762--775
+
+ []
+
+[23]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 778.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 778.
  (./cscc69.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 704.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 704.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 778.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 778.
 Package rerunfilecheck Info: File `cscc69.out' has not changed.
-(rerunfilecheck)             Checksum: E88FA643EE800D2C28A3530B5F0D118D;5401.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 704.
+(rerunfilecheck)             Checksum: 2D43044E8AE4FE148B9DBFCA54B03775;6223.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 778.
  ) 
 Here is how much of TeX's memory you used:
- 29246 strings out of 492995
- 550501 string characters out of 6132704
- 591590 words of memory out of 5000000
- 32256 multiletter control sequences out of 15000+600000
+ 29273 strings out of 492995
+ 550930 string characters out of 6132704
+ 591599 words of memory out of 5000000
+ 32267 multiletter control sequences out of 15000+600000
  14427 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,73p,10357b,1252s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm
 1000.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on cscc69.pdf (19 pages, 196870 bytes).
+Output written on cscc69.pdf (23 pages, 206895 bytes).
 PDF statistics:
- 594 PDF objects out of 1000 (max. 8388607)
- 554 compressed objects within 6 object streams
- 145 named destinations out of 1000 (max. 500000)
- 589 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 669 PDF objects out of 1000 (max. 8388607)
+ 624 compressed objects within 7 object streams
+ 161 named destinations out of 1000 (max. 500000)
+ 677 words of extra memory for PDF output out of 10000 (max. 10000000)
 

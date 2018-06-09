@@ -639,7 +639,7 @@ Processes repeatedly alternate between computation and I\slash O.
   \item The last CPU burst ends with a call to terminate the process.
 \end{itemize}
 
-\paragraph{I\slash O - Bound Processes} These processes have short SPU bursts and frequent (long) I\slash O bursts
+\paragraph{I\slash O - Bound Processes} These processes have short CPU bursts and frequent (long) I\slash O bursts
 \paragraph{CPU - Bound Processes} These processes long CPU burts and infrequent I\slash O bursts
 
 During I\slash O bursts, CPU is not needed, this is an opportunity to execute another process.
@@ -698,7 +698,81 @@ Note that goals sometimes conflict with each other
 
 \paragraph{Preemptive Scheduling} CPU can be taken from a running process and allocated to another. Needed in interactive or real-time systems.
 
+\newpage
+
+\section{Tuesday, May 29, 2018}
+
+\subsection{Problem: Dining Philosophers}
+
+A philosopher needs two forks to eat, 5 philosophers with 5 meals sharing 5 forks.
+\\
+\\
+One idea of a solution is that if a philosopher gets hungry, grab a left fork and a right fork. But if they all get hungry at the same time, they will all have one fork and can't eat. So we're looking for a better solution.
+\\
+\\
+In the previous non-solution, we only had 2 states, "eating" and "thinking", but in the following solution, we'll have 3 states, "eating", "hungry", and "thinking". One semphore for each philosopher. The Philosopher will think, then call a \codeword{take_forks()} function, eat, and then calls a \codeword{put_forks()} function. We also need a mutex for entering and exiting the critical section of eating.\\
+\\
+What does the \codeword{take_forks()} function do? It enter's the critical region with a mutex, since the philosopher and the two philosophers next to that person can change their state. It then calls another function called \codeword{test()}, that changes the state to eating if the philosophers next to the one we're currently refering to are not eating, and then exits the critical region. Changing the state to hungry is a critical state since 3 people can change one person's state for all philosophers. The semaphores are used since if \codeword{test()} fails since there are not enough forks to eat, then that philosopher will be blocked until a fork is returned, since their semphore cannot be decremented.\\
+\\
+After a philosopher finishes eating, he will put down his forks, in teh sense that he will check if the two people sitting next two him want to eat and have access to their other fork.
+
+\subsection{Scheduling Algorithms}
+\subsubsection{FCFS}
+"First come, first serve", all you need is a queue, so it's very easy to implement. However, has no prioritization.\\
+\\
+It's problem whoever that it's average waiting time is often quite long and causes the:
+
+\paragraph{Convoy effect} All other processes wait for the one big process to release the CPU
 
 
+\subsubsection{SJF}
+
+"Shortest Job First", this is better, but we need to know the processing time in advance. It also does not take into account fairness and starvation.
+
+\subsubsection{Round Robin}
+Designed for time-sharing system, is a pre-emptive algorithm. Here the ready queue is circular, each process is allowed to run for time quantum $q$ before being preempted and put back on queue. This is good, but the choice of quantum is critical, the bigger it is, the closer the algorithm is to FCFS, and the smaller it is, the more it becomes like processor sharing, which is inefficient.\\
+\\
+However, there is also no prioritization in this solution as well. If we want to enforce prioritization, it would be tricky, like multiple queues. This may cause starvation or priority inversion, as low priority tasks may never run and low priority tasks may prevent high priority tasks from making progress by holding a resource.
+
+\subsubsection{Mars Rover Pathfinder Bug Example}
+
+The Mars Rover was not making progress being it kept doing context switches, and left all of its work in the shared memory before the context switch. This is priority inversion, as a high priority tasks now has a smaller amount of space on the shared memory to work with
+
+\subsection{What do real systems do?}
+
+Real systems us a combination of Multilevel queue scheduling, like Round Robin with priorities and Feedback Scheduling, which is adjusting the quantum accordingly by feedback of real usage.
+
+\subsubsection{Multi-Level Queue Scheduling}
+
+There is going to be two scheduling policies here, the first decides which queue to serve (e.g. based on queue priorities), and second decides which job within a queue to choose.
+\\
+\\
+So in an implementation, a quantum of a lower priority queue would be longer than a quantum of a higher priority queue. So if a highest priority task finishes during quantum, that is a good result, but if not, the task is bumped into second highest priority. This means that the shortest high priority jobs get done first, and that the processes are ordered by how long they take, so we now know if they are short or long jobs.
+
+\subsubsection{Feedback Scheduling}
+
+We want to give priority to shorter jobs, IO bound jobs, and to interactive jobs, but we don't know beforehand whether a job is short or long and whether it's IO bound or CPU bound.\\
+\\
+We can adjust criteria for choosing a particular process based on past history, such as Multi-Level Queues, can prefer processes that do not use full quantum, can change priority of porcesses based on age, can change priority of processes based on CPU consumed so far, can boost priority following a user-input event.
+
+
+
+\subsubsection{Timesharing in Linux 2.8}
+
+Linux always runs the task in the active array with the highest priority, if there are other processes with the same priority, do round robin between then and switch after granularity time units.\\
+\\
+If timeslice expires, move to the expired array. This way, tasks are being re arranged and prevents starvation.\\
+\\
+But how do we determine priority of a process?\\
+\\
+Some processes are more important than others, so static priorities are assigned to processes, and bonuses are added or subtracted depending on if it's an interactive and \slash or IO bound processes, which can be identified by sleep average (time process has the CPU does not do anything, which is time process is sleeping vs its CPU time.)
+\\
+\\
+How do we determine timeslive and granularity?
+\\
+\\
+Timeslice depends on static priority, which for example, can be anywhere from 5 to 800 milliseconds and Granularity depends on a dynamic priority
+
+\newpage
 
 \end{document}

@@ -70,3 +70,14 @@
 \BOOKMARK [3][-]{subsubsection.3.5.3}{What is processor scheduling?}{subsection.3.5}% 70
 \BOOKMARK [3][-]{subsubsection.3.5.4}{Scheduling Goals}{subsection.3.5}% 71
 \BOOKMARK [3][-]{subsubsection.3.5.5}{Types of Scheduling}{subsection.3.5}% 72
+\BOOKMARK [1][-]{section.4}{Tuesday, May 29, 2018}{}% 73
+\BOOKMARK [2][-]{subsection.4.1}{Problem: Dining Philosophers}{section.4}% 74
+\BOOKMARK [2][-]{subsection.4.2}{Scheduling Algorithms}{section.4}% 75
+\BOOKMARK [3][-]{subsubsection.4.2.1}{FCFS}{subsection.4.2}% 76
+\BOOKMARK [3][-]{subsubsection.4.2.2}{SJF}{subsection.4.2}% 77
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Round Robin}{subsection.4.2}% 78
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Mars Rover Pathfinder Bug Example}{subsection.4.2}% 79
+\BOOKMARK [2][-]{subsection.4.3}{What do real systems do?}{section.4}% 80
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Multi-Level Queue Scheduling}{subsection.4.3}% 81
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Feedback Scheduling}{subsection.4.3}% 82
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Timesharing in Linux 2.8}{subsection.4.3}% 83

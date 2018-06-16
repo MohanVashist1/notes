@@ -775,4 +775,169 @@ Timeslice depends on static priority, which for example, can be anywhere from 5 
 
 \newpage
 
+\section{Tuesday, June 5, 2018}
+
+\subsection{Memory Management}
+
+Every active process needs memory and CPU scheduling allows processes to share the processor. So we should figure out how to share main memory as well.\\
+\\
+So for this section, in terms of Memory Management, we want to support enough active processes to keep the CPU busy, Use memory efficiently in that we minimize wasted memory, and keep memory management overhead small.
+
+\subsubsection{Requirements}
+
+\paragraph{Relocation} When allocating memory for a process, we won't know what physical memory will be available when their programs run and the scheduler may swap processes in and out of memory, so we need to be able to bring back a process into a different region of memory. This implies that we will need some type of address translation.
+
+\paragraph{Logical Organization} The machine accesses memory addresses as a one dimensional array of btyes, and programmers organize code into modules, so we need to map these two views together
+
+\paragraph{Protection} A process' memory should be protected from unwanted access by other processes, both intentional and accidental, this requires hardware support.
+
+\paragraph{Sharing} In some instances, processes need to be able to access the same memory locations, so we need ways to specify and control what kind of sharing is allowed.
+
+\paragraph{Physical Organization} Memory and Disk form a two-level hierarchy, flow of information between levels must be managed. This is because the CPU can only access data in registers or in memory, not the disk.
+
+\subsubsection{Meeting the Requirements}
+
+Modern systems use \textbf{virtual memory}, which is a complicated technique requiring hardware and software support. We'll build up to virtual memory by looking at some simpler schemes first, such as Fixed and Dynamic partitioning, Paging and Segmentation.
+
+\subsubsection{Address Binding}
+
+Programs must be in memory to execute, so a program binary is \textbf{loaded} into a process, so we need to allocate memory for the instructions and the data.\\
+\\
+And these addresses in programs must be translated to real addresses since Programmers use \textbf{symbolic memory addresses} (i.e. variable names) to refer to memory locations and the CPU fetches from, and stores to \textbf{real memory addresses}
+
+\subsubsection{When are addresses bound?}
+
+\paragraph{Compile Time?} This is called \textbf{absolute code} since binary contains real addresses. The disadvantage of this is that we must know what memory process will use during compilation and no relocation is possible.
+
+\paragraph{Load Time?} Compiler translates (binds) symbolic addresses to \textbf{logical, relocatable addresses} within a compilation unit (source file). So a linker takes a collection of object files and translates these addresses to logical, absolute addresses within the executable, which resolves references to symbols defined in other files or modules. The loader translates logical, absolute addresses to physical addresses when program is loaded into memory.\\
+\\
+Disadvantages are that programs can be loaded to different addresses when they start, but cannot be relocated later.
+
+\paragraph{Execution Time?} The executable object file, \codeword{a.out}, contains addresses for the entire program, this is good for translation to physical addresses as relocation is easier, but this requires special hardware.
+
+\subsubsection{Address Translation: Logical and physical addresses}
+
+The source code uses \textbf{symbolic addresses} (variable names), and is compiled to a program binary that uses \textbf{logical addresses} (relative to start of stack frame), the program binary is then loaded and executed as a process, where the logical addreses need to be translated to physical addresses.\\
+\\
+For now, we'll assume that the entire address space of process must be in the main memory and a process uses a contiguous chunk of main memory.
+
+\subsubsection{Fixed Partitioning}
+
+This is dividing memory into regions with fixed boundaries, which can be equal or unequal sizes. A single processes can be loaded into each remaining partition. However, the disadvantages of this is that Memory is wasted if any single process is smaller than a partition (this is called \textbf{internal fragmentation}), and that Programmers must deal with programs that are larger than a partition, this is called \textbf{overlays}.
+\\
+\\
+Note that the number of partitions determines the number of active processes and if all paritions are occupied by waiting processes, some processes need to swap out.\\
+\\
+Equal-sized paritions means that processes can be loaded into any available partition and unequal-sized paritions need a queue for each partition and for each process, we'll add it to the queue of the smallest partition in which it will fit or have a single queue and assign a process to the smallest available parition.
+
+\subsubsection{Dynamic Partitioning}
+
+Paritions will vary in length and number over time, so when a process is brought into memory, a partition of the right size is created to hold it.
+\\
+\\
+Disadvantages of this is that as some processes come and go, "holes" are created, and some blocks may be too small for any process, this is called \textbf{external fragmentation}.\\
+\\
+The Operating System may also move processes around to create larger chunks of free space, this is called \textbf{compaction} and requires processes to be relocatable.
+
+\subsubsection{Heap Manamgement}
+
+How is dynamic memory management implemented (\codeword{malloc() \slash free()})? This is done with a dynamic partitioning system to maintain a contiguous range of logical addresses, and allow allocating and deallocating of dynamic memory.
+
+\subsubsection{Tracking Memory Allocation}
+
+We could try using bitmaps where 1 bit represented one allocation unit, and 0 meant free and 1 meant allocated, to track memory allocation. The disadvantages of this is that allocating a $N$-unit chunk takes $O(N)$, which is slow.\\
+\\
+Another implementation is a linked lists of allocated and free segments, but we would need to store it, Lists need memory too.\\
+\\
+We should have each block to have a header that records its size and status (used or free) so searching for free blocks is only linear in total number of blocks. We can also store pointers in the free blocks to create a doubly-linked list.\\
+\\
+Freeing Blocks would result in surrounding free blocks to merge, this will be easier if all blocks end with a footer with size and status info (called a \textbf{boundary tag}).
+
+\subsubsection{Placement Algorithms}
+
+Compaction is time-consuming and not always possible. We can reduce the need for it by being careful about how memory is allocated to processes over time. Given multiple blocks of free memory of sufficient size, how should we choose which one to use.\\
+\\
+\paragraph{First-fit} choose first block that is large enough; search can start at beginning, or where previous search ended (called next-fit). This is the simplest and often the fastest and most efficient, but it may leave small fragments near start of memory that must be searched repeatedly
+
+\paragraph{Best-fit} choose the block that is closest in size to the request. However, left over fragments tend to be so small that they are so unusable. In practice, similar storage utilization to frist-fit.
+\paragraph{Worst-fit} choose the largest block. Not as good as best-fit or first-fit in practice.
+\paragraph{Quick-fit} keep multiple free lists for commmon block sizes. This is great for fast allocation, generally harder to coalesce.
+
+\subsubsection{Problems with Partitioning}
+
+With fixed partitioning, \textbf{internal fragmentation} and need for overlays are big problems, so this scheme is too inflexible. With dynamic partitioning, \textbf{external fragmentation} and management of space are major problems. The basic problem is that processes must be allocated to contiguous blocks of physical memory, so its hard to figure out how to size these blocks given that processes are not all the same.\\
+\\
+We'll look now at paging as a solution
+
+\subsubsection{Paging}
+
+Partition memory into equal, fixed-size chunks. These are called \textbf{page frames} or simply \textbf{frames}. Then divide processes' memory into chunks of the same size, these are called \textbf{pages}.\\
+\\
+Possible page frame sizes are restricted to powers of 2 to simplify translation.\\
+\\
+This results in an elimination of external fragmentation, and internal fragmentation is at most, a part of one page per process.
+
+\subsubsection{Address Translation}
+
+Swapping and compaction require a way to change the physical memory addresses a process refers to, so we really need dynamic relocation (aka execution-time binding of addresses). Note that this process refers to relative addresses, hardware translates to physical addresses as instruction is executed.\\
+\\
+We assume that all memory used by any process is contiguous in these methods. The basic idea for hardware for relocation is that we add relative addresses to process statarting addresses (or base addresses) to form real, or physical, addresses. This is to check that the address generated is within the process's space.\\
+\\
+2 registers will store the "base" and "limit" of the process. When a process is assigned to a CPU, the "base" register will be loaded with the starting address of the process, and the "limit" register will be loaded with the last address of the process.\\
+\\
+This is all done in hardware by a Memory Management Unit (MMU).
+
+\subsubsection{Address Translation for Paging}
+
+So now we need more than just the base and limit registers now. Operating systems maintain a \textbf{page table} for each process. This page table records which phyiscal frame holds each page, so
+$$\text{virtual address} = \text{page number} + \text{page offset}$$
+
+$$\text{page number} = \text{virtual address} + \text{page size}$$
+
+$$\text{page offset} = \text{virtual address} \% \text{page size}$$
+
+These calculations are really simple if page size is a power of 2.\\
+\\
+On each memory reference, processor translates page number to frame number and adds offset to generate a phyiscal address. So a "page table base register" is kept to quickly locate the page table for the running process.
+
+\subsubsection{Page Table Entries (PTE)}
+
+Page table entries control mapping. They contain a \textbf{modify bit} that says whether or not a page has been written and is set when a write to a page occurs, a \textbf{reference bit} that says whether a page has been accessed and is set when a read or write to a page occurs, a \textbf{valid bit} says whether the PTE can be used, and is checked on each used of the virtual address. PTEs also contain \textbf{Protection Bits} that specify what operations are allowed on the page (such as read, write, and execute), and the \textbf{Page frame Number (PFN)} determines the physical page it refers to.\\
+\\
+Note that not all bits are provided by all architectures.
+
+\subsubsection{Page Lookups}
+
+\includegraphics[scale=.50]{pagelookup}
+
+This approach is wrong since it needs 2 references for address lookup, one for the page table and the other for the actual memory. The idea is to use hardware cache of page table entries called a \textbf{Translation Lookaside Buffer (TLB)}, which stores recently used translations.
+
+\subsubsection{Translation Lookaside Buffer}
+
+These translate virtual page numbers into PTEs (not phyiscal addresses), and can be done in a single machine cycle.\\
+\\
+TBLs are implemented in hardware with Fully associative cache (so that all entries are looked up in parellel, cache tags are virtual page numbers, cache values are PTEs). With the Page table entry and the offset, we can directly calculate the physical address.\\
+\\
+TLBs are small, only varying from 64-1024 entries, and address translations for most instructions are handled using the TLB (~99\%). If the PTE is found in the TLB, this is called a \textbf{TLB Hit}, and if it isn't and the page table in memory needs to be checked, this is called a \textbf{TLB Miss}.
+\\
+\\
+TLBs are effective because of locality, Processes only use a handful of pages at a time and so we only need to "map" those pages. Hit rates are therefore very important.
+
+\subsubsection{Managing TLBs}
+
+Who places translations into the TLB?\\
+\\
+(Hardware Solution) The Memory Management Unit knows where page tables are in main memory, and are accessed by the MMU directly as the OS maintains the tables. Tables also have to be in a hardware defined format for the MMU.\\
+\\
+(Software Solution) The OS places them. The TLB faults to the OS, the OS finds the appropriate PTE, and loads it into the TLB. This however, must be fast, and the CPU ISA has instructions for manipulating the TLB. In this solution, tables can be in any format convenient for the OS.\\
+\\
+The OS ensures that the TLB and page tables are consistent, so that when it changes the protection bits of a PTE, it needs to invalid that same PTE if it is in the TLB.\\
+\\
+TLBs are reloaded on a process context switch, and since it's more efficient to just invalidate all the entries instead of selecting specific ones, that is done on a context switch.\\
+\\
+When the TLB misses and a new PTE has to be loaded, the cached PTE must be evicted. Choosing a PTE to evict is called the \textbf{TLB replacement policy}, and is implemented in hardware, and is often very simple.
+
+
+
+
 \end{document}

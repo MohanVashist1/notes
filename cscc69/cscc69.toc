@@ -101,3 +101,35 @@
 \contentsline {subsubsection}{\numberline {4.3.1}Multi-Level Queue Scheduling}{22}{subsubsection.4.3.1}
 \contentsline {subsubsection}{\numberline {4.3.2}Feedback Scheduling}{22}{subsubsection.4.3.2}
 \contentsline {subsubsection}{\numberline {4.3.3}Timesharing in Linux 2.8}{23}{subsubsection.4.3.3}
+\contentsline {section}{\numberline {5}Tuesday, June 5, 2018}{24}{section.5}
+\contentsline {subsection}{\numberline {5.1}Memory Management}{24}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Requirements}{24}{subsubsection.5.1.1}
+\contentsline {paragraph}{Relocation}{24}{section*.21}
+\contentsline {paragraph}{Logical Organization}{24}{section*.22}
+\contentsline {paragraph}{Protection}{24}{section*.23}
+\contentsline {paragraph}{Sharing}{24}{section*.24}
+\contentsline {paragraph}{Physical Organization}{24}{section*.25}
+\contentsline {subsubsection}{\numberline {5.1.2}Meeting the Requirements}{24}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.3}Address Binding}{24}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.4}When are addresses bound?}{25}{subsubsection.5.1.4}
+\contentsline {paragraph}{Compile Time?}{25}{section*.26}
+\contentsline {paragraph}{Load Time?}{25}{section*.27}
+\contentsline {paragraph}{Execution Time?}{25}{section*.28}
+\contentsline {subsubsection}{\numberline {5.1.5}Address Translation: Logical and physical addresses}{25}{subsubsection.5.1.5}
+\contentsline {subsubsection}{\numberline {5.1.6}Fixed Partitioning}{25}{subsubsection.5.1.6}
+\contentsline {subsubsection}{\numberline {5.1.7}Dynamic Partitioning}{26}{subsubsection.5.1.7}
+\contentsline {subsubsection}{\numberline {5.1.8}Heap Manamgement}{26}{subsubsection.5.1.8}
+\contentsline {subsubsection}{\numberline {5.1.9}Tracking Memory Allocation}{26}{subsubsection.5.1.9}
+\contentsline {subsubsection}{\numberline {5.1.10}Placement Algorithms}{26}{subsubsection.5.1.10}
+\contentsline {paragraph}{First-fit}{27}{section*.29}
+\contentsline {paragraph}{Best-fit}{27}{section*.30}
+\contentsline {paragraph}{Worst-fit}{27}{section*.31}
+\contentsline {paragraph}{Quick-fit}{27}{section*.32}
+\contentsline {subsubsection}{\numberline {5.1.11}Problems with Partitioning}{27}{subsubsection.5.1.11}
+\contentsline {subsubsection}{\numberline {5.1.12}Paging}{27}{subsubsection.5.1.12}
+\contentsline {subsubsection}{\numberline {5.1.13}Address Translation}{27}{subsubsection.5.1.13}
+\contentsline {subsubsection}{\numberline {5.1.14}Address Translation for Paging}{28}{subsubsection.5.1.14}
+\contentsline {subsubsection}{\numberline {5.1.15}Page Table Entries (PTE)}{28}{subsubsection.5.1.15}
+\contentsline {subsubsection}{\numberline {5.1.16}Page Lookups}{29}{subsubsection.5.1.16}
+\contentsline {subsubsection}{\numberline {5.1.17}Translation Lookaside Buffer}{29}{subsubsection.5.1.17}
+\contentsline {subsubsection}{\numberline {5.1.18}Managing TLBs}{29}{subsubsection.5.1.18}

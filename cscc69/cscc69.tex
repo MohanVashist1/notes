@@ -937,7 +937,71 @@ TLBs are reloaded on a process context switch, and since it's more efficient to 
 \\
 When the TLB misses and a new PTE has to be loaded, the cached PTE must be evicted. Choosing a PTE to evict is called the \textbf{TLB replacement policy}, and is implemented in hardware, and is often very simple.
 
+\newpage
+
+\section{Tuesday, June 12, 2018}
 
 
+\newpage
+
+\section{Tuesday, June 19, 2018}
+
+\subsection{Eviction Algorithm}
+
+\subsubsection{Least Recently Used (LRU)}
+
+LRU uses reference information to make a more informed replacement decision. The idea is that we can't predict the future, but we can make a guess based upon past experience. On replacement, we evict the page that has not been used for the longest time in the past, which is Belady's future.\\
+\\
+To implement this, we need to timestamp every page, and sort them to get the LRU page.
+\\
+\\
+Well, the first problem is that we need to sort every time we evict, and where do we store the timestamp? That's something we have to store for every page. Sorting can also be costly.
+\\
+\\
+We can try keeping pages in a stack, on reference, move a page to the top of the stack, and on eviction, replace page at the bottom, but is also very costly to manipulate stack on every memory reference.\\
+\\
+We don't implement the exact LRU, but we can use approximations by the PTE reference bit. The basic idea is that initially, all $R$ bits are zero; as processes execute, bits are set to 1 for pages that are used, so we periodically examine the R bits, we do not know order of use, but we know pages that were or were not used.\\
+\\
+Additionally, we can also have a reference bit algorithm where we keep a counter for each page, and at regular intervals, for each page, we shift $R$ bit into high bit of counter register, shift the other bits to the right, and pages with "larger" counters were used more recently.
+
+\subsubsection{Counting-based replacement}
+
+You can also count the number of uses of a page, here are the uses:
+\paragraph{Least-Frequently-Used (LFU)} Replace the page used least often, pages that are heavily used at one time tend to stick around even when not needed anymore. Newly allocated pages haven't had a change to be used much though.
+
+\paragraph{Most-Frequently-Used (MFU)} This algorithm favours new pages.
+
+Neither of them is common, both are poor approximations of OPT.
+
+\subsubsection{Fixed vs. Variable Space}
+
+In a multiprogramming system, we need a way to allocate memory to competing processes. The problem is, how do we determine how much memory to give each process? There are two solutions.
+
+\paragraph{Fixed Space Algorithms} Each process is given a limit of pages it can use, when it reaches the limit, it replaces from its own pages, but some processes may do well with this system while others may suffer.
+
+\paragraph{Variable Space Algorithms} Process' set of pages grows and shrinks dynamically, however, one process can take up all the possible space, and replacement and set size are separate, so replacement is hard.
+
+\subsubsection{Working Set Model}
+
+How do you decide how large the fixed or variable space for a process should be?\\
+\\
+A Working Set of a process is used to model the dynamic locality of its memory usage. The definition is
+$$WS(t,\Delta) = \{ \text{pages $P$ such that $P$ was referenced in the time interval $(t, t-\Delta)$} \}$$
+$$t=\text{time}$$
+$$\Delta = \text{working set window (measured in page references)}$$
+
+A page is in the working set (WS) only if it was referenced in the last $\Delta$ references.\\
+\\
+The working set size is the number of pages in the working set, the number of pages referenced in the interval $(t,t-\Delta)$.\\
+\\
+The working set size changes with program locality. During periods of poor locality, you reference more pages, and within that period of time, the working set size is larger.\\
+\\
+Intuitively, we want the working set to be the set of pages a process needs in memory to prevent heavy faulting, so each process has a parameter $\Delta$ that determines a working set with few faults.
+
+% Switches slides at this point, I didn't copy everything
+
+\subsection{File Systems}
+
+What do file systems do? They provide a nice abstraction of storage.
 
 \end{document}

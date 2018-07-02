@@ -941,13 +941,186 @@ When the TLB misses and a new PTE has to be loaded, the cached PTE must be evict
 
 \section{Tuesday, June 12, 2018}
 
+\subsection{Paging}
 
+What happens if not all pages of all processes fit into physical memory?\\
+\\
+Then the process is moved into the \textbf{swap space} on the disk.\\
+\\
+What happens if the page is evicted from main memory?\\
+\\
+The PTE in the page table will be set to invalid, the page will be relocated to the swap space and another PTE will store the page's location in swap space.
 
-\newpage
+\subsection{Page Table Management}
 
-\section{Tuesday, June 19, 2018}
+How much space does a page table take up?\\
+\\
+From around 100MB to almost 16 PB (16 million GB) for a page table. To solve this space issue we have
+\begin{itemize}
+    \item Hierarchical (multi-level) page tables
+    \item Hashed page tables
+    \item Inverted Page tables
+\end{itemize}
 
-\subsection{Eviction Algorithm}
+How can we reduce space overhead?\\
+\\
+Observation: We only need to map the portion of the address space actually being used (which is a tiny fraction of the entire address space), so we might be able to use this to solve that problem.
+\\
+\\
+How do we only map what is being used?
+\\
+\\
+We can do this by dynamically extending the page table when we need it. Note that this does not work if the address space is sparse (suffering a lot of internal fragmentation).
+\\
+\\
+We can use another level of indirection: two-level page tables, or generally, multi-level page tables
+\\
+\\
+Now consider a PCB in the virtual address space with only a bit of space being used by the stack and the heap. This means that the space in between the stack and heap is unused. How does address translation work now?\\
+\\
+\subsubsection{Multilevel Page Tables (MLPT)}
+
+The idea is that the top level of a MLPT would redirect to secondary page tables and so on.\\
+\\
+So in Two-level Page Tables, the Virtual Addresses (VAs) have three parts.
+\begin{itemize}
+    \item A \textbf{Master page number} that maps VAs to the secondary page table
+    \item A \textbf{Secondary page number} that maps page numbers to a physical frame
+    \item An \textbf{Offset} that specifies an address within the physical frame
+\end{itemize}
+
+\textbf{\underline{Example:}}\\
+Consider a 32-bit virtual address space, with 4K pages, which requires 12 bits. So the offset is 12 bits, leaving us with 20 left. We want the master and the secondary page tables in 1 page each, so the master page table is in a page of 4K and the secondary page table is in a page of 4K, and since page table entry is 4 bytes, we can fix a maximum of
+$$4,000 / 4 = 1,000$$
+entries in each page table. And since 10 bits are required to display $1,000$ entries for both the master page table and the secondary page table, then we have a perfect fit.\\
+\\
+This is because the master page identifier is 10-bits, the secondary page table identifier is 10 bits, and the offset is 12 bits. So in total, it is 32 bits, which is how much we have.
+
+\subsection{Inverted Page Tables}
+
+These keep one table with an entry for each physical page table. Entries record which virtual page number is stored in that frame as well as the process ID.\\
+\\
+This takes up less space, but lookups are slower. References use virtual addresses, and the table is indexed by physical addresses. We can use hasing to reduce the search time.
+
+\subsection{Efficient Translations}
+
+Our original page table scheme already doubled the cost of doing memory lookups. One lookup into the page table, another to fetch the data.\\
+\\
+Two-level page tables triple the cost. Two lookups into the page tables, a third to fetch the data, and this assumes the page table is in memory.\\
+\\
+TLB's hide the cost for frequently-used pages.
+
+\subsection{Page allocation and eviction}
+What happens when a new page is allocated?\\
+\\
+Initially pages are allocated from memory. When memory fills up, some other page needs to be evicted from memory. This is why physical memory pages are called "frames".\\
+\\
+Then evicted pages go to disk (the swap file). When it evicts a page, the OS sets the PTE as invalid and stores the location of \underline{the page in the swap file} in the PTE
+
+\subsection{Page Faults}
+
+What happens when a process accesses a page that has been evicted?
+
+\begin{enumerate}
+    \item When a process accesses the page, the invalid PTE will cause a trap (page fault).
+    \item The trap will run the OS page fault handler
+    \item Handler uses the invalid PTE to locate page in swap file
+    \item Reads page into a physical frame, updates PTE to point to it
+    \item Restarts process
+\end{enumerate}
+
+\subsection{Policy Decisions}
+
+Page tables, MMU, TLB, etc. are mechanisms that make virtual memory possible. We'll look at policies of virtual memory management:
+
+\paragraph{Fetch Policy} when to fetch a page
+\paragraph{Placement Policy} where to put the page
+\paragraph{Repalcement Policy} what page to evict to make room?
+
+\subsection{Fetch Policy}
+
+\subsubsection{Demand Paging}
+\textbf{Demand Paging} is looking at pages in the swap space in the disk when it is needed.\\
+\\
+The process can only page fault on one page at a time in this scenario , so when the process does a read, the Disk receives a single page-sized read request
+
+\subsubsection{Prepaging (aka Prefetching)}
+
+This method is predicting what future pages will be used at time of current fault, however, we may not know on which variables to base our predictions on and what to do if the predictions are wrong.
+
+\subsection{Placement Policy}
+In paging systems, memory management hardware can translate any virtual-to-physical mapping equally well. Why would we prefer some mappings over others?
+\paragraph{NUMA (non-uniform memory access) multiprocessors} Any processor can access the entire memory, but local memory is faster.
+
+\paragraph{Cache performance} Choosing physical pages to minimize cache conflicts.
+
+\subsection{Replacement Policy}
+What page to evict to make room?
+\subsubsection{Evicting the best page}
+
+The goal of the replacement algorithm is to reduce the fault rate by selecting the best "victim" page to remove. Replacement algorithms are evaluated on a reference string by counting the number of page faults. Note that a reference string has records of pages and number of page faults.
+
+Let's start by assuming that we know the reference string, then what is the best replacement policy in this case?
+
+We that the best page to evict is the one that is never used again, and because of this, there will never be a fault on it. We also know that never is a long time, so picking the page closest to never is the next best thing. Evicting the page that won't be used for the longest period of time minimizes the number of page faults.
+
+\paragraph{Cold Misses} When a page is referenced for the first time (this is unavoidable)
+
+\paragraph{Capacity Misses} Caused by replacement due to limited size of memory.
+
+\subsubsection{Belady's Algorithm (aka OPT aka MIN)}
+
+This algorithm is known as the optimal page replacement algorithm because it has the lowest fault rate for any page reference stream.\\
+\\
+The idea is that we replace the page that will not be used for the longest period of time, the problem however is that we have to know the future perfectly.
+\\
+\\
+Belady's algorithm is still useful as it is used as a guide to compare implementations of page replacement algorithms with the optimal to gauge room for improvement. i.e. If the optimal is not much better, then the algorithm is pretty good, otherwise, the algorithm could use some work. Note that Random replacement is often the lower bound.
+
+\subsubsection{What are possible replacement algorithms?}
+
+\begin{itemize}
+    \item (FIFO) First-in-first-out
+    \item (LRU) Least-recently-used
+    \item Least-frequently-used
+    \item Most-frequently-used
+\end{itemize}
+
+Many of these require book-keeping.
+
+\subsubsection{Not-Recently-Used (NRU)}
+
+We divide the pages into 4 classes:
+\begin{enumerate}
+    \item Not referenced, not modified
+    \item Not referenced, modified
+    \item Referenced, not modified
+    \item Referenced, modified
+\end{enumerate}
+
+And we remove pages at from from lowest-numbered class that is not empty.
+
+\subsubsection{First-In-First-Out (FIFO)}
+
+FIFO is an obvious algorithm and simple to implement. We just need to maintain a list of pages in order in which they were paged in, on replacement, we evict the one brought in the longest time ago.\\
+\\
+This might be good because maybe the one brought in the longest ago is not being used, but this may also be bad as we don't have any info to say one way or the other.\\
+\\
+FIFO suffers from "Belady's Anomaly", which is that the fault rate might actually increase when the algorithm is given more memory (this is very bad).
+
+\subsubsection{Second-Chance}
+
+The idea is that FIFO only considers age and NRU only considers usage, maybe we should combine the two.\\
+\\
+The algorithm is that we don't evict the oldest page if it has been used but evict the oldest page that has not been used.\\
+\\
+Pages that are used often enough to keep reference bits set will not be replaced.
+
+\subsubsection{Second-Chance Implementaiton}
+
+We want to replace the page that is "old enough". We do this by arranging all of the physical page frames in a big circle (like a clock) and we sweep through the pages in a circular order like a clock, and if ther reference bit is off, that means it has not been used recently and we exict that page. If there reference bit is on, that means it has been used recently andd we turn it off to go to the next page. So the clock hand moves quickly when pages are needed, and there is low overhead when there is plenty of memory.
+
+\subsection{Eviction Algorithms}
 
 \subsubsection{Least Recently Used (LRU)}
 
@@ -970,9 +1143,32 @@ Additionally, we can also have a reference bit algorithm where we keep a counter
 You can also count the number of uses of a page, here are the uses:
 \paragraph{Least-Frequently-Used (LFU)} Replace the page used least often, pages that are heavily used at one time tend to stick around even when not needed anymore. Newly allocated pages haven't had a change to be used much though.
 
-\paragraph{Most-Frequently-Used (MFU)} This algorithm favours new pages.
+\paragraph{Most-Frequently-Used (MFU)} This algorithm favours new pages. This fixes the problem in LFU.
 
 Neither of them is common, both are poor approximations of OPT.
+
+\subsubsection{Comparing Replacement Algorithms}
+
+\begin{center}
+ \begin{tabular}{||c c c||}
+ \hline
+ Algorithm Name & Ease of Implementation & Performance \\ [0.5ex]
+ \hline\hline
+ Not Recently Used & Good & Ok \\
+ \hline
+ First In First Out & Good & Ok\\
+ \hline
+ Least Recently Used & Bad & Very Good\\
+ \hline
+ Least Frequently Used & Bad & Bad\\
+ \hline
+ Most Frequently Used & Bad & Bad\\
+ \hline
+ Second Chance & Good & Good\\ [1ex]
+ \hline
+\end{tabular}
+\end{center}
+
 
 \subsubsection{Fixed vs. Variable Space}
 
@@ -997,9 +1193,44 @@ The working set size is the number of pages in the working set, the number of pa
 \\
 The working set size changes with program locality. During periods of poor locality, you reference more pages, and within that period of time, the working set size is larger.\\
 \\
-Intuitively, we want the working set to be the set of pages a process needs in memory to prevent heavy faulting, so each process has a parameter $\Delta$ that determines a working set with few faults.
+Intuitively, we want the working set to be the set of pages a process needs in memory to prevent heavy faulting, so each process has a parameter $\Delta$ that determines a working set with few faults. We also don't want to run a process unless the working set is in memory.
 
-% Switches slides at this point, I didn't copy everything
+\subsubsection{Working Set Problems}
+
+There are w few problems with Working sets, such as
+\begin{itemize}
+  \item How do we determine $\Delta$?
+  \item How do we know when the working set changes?
+\end{itemize}
+
+These questions are too hard to answer, so working sets are not used in practice as a page replacement algorithm. However, it is still used as an abstraction, as the intuition is still valid, and it's useful to understand how much memory a particular program needs (such as Firefox or Chrome).
+
+\subsection{Page Fault Frequency}
+
+Page Fault Frequency (PFF) is a variable space algorithm that uses a more ad-hoc approach. It monitors the fault rate for each process, and if the fault rate is above a upper threshold, we give it more memory with the idea that it will fault less, but this is not always the case as seen with FIFO and Belday's Anomaly. If the fault rate is below a low threshold, we take memory so that it might fault more, but this is not always the case.\\
+\\
+It's hard to use PFF to distinguish between changes in locality and changes in the size of the working set.
+
+\subsubsection{Thrashing}
+
+Thrashing is when more time is spent by the OS in paging data back and forth from the disk than executing the actual user programs. This means that no time is spent doing useful work (making progress).\\
+\\
+Page replacement algorithms avoid thrashing. Thrashing casses the system to be overcommitted, since the Os has no idea which pages should be in memory to reduce faults, and it could just be that there isn't enough physical memory for all of the processes in the system.\\
+\\
+The possible solutions to thrashing are swapping, which is writing out all pages of a process and then suspending it, or simply acquiring more memory.
+
+\subsubsection{Windows XP Paging Policy}
+
+Windows uses Local page replacement, which is a per-process FIFO system. Pages are stolen from process using more than their minimum working set. Processes start with a default of 50 pages. XP monitors page fault rates and adjust working set sizes accordingly. On a page fault, a cluster of pages around the missing page are brough into memory as well as the missing page.
+
+\subsubsection{Linux Paging}
+
+Linux uses a global replacement, like most Unix systems. It uses a modified second-change clock algorithm, in which pages "age" with each pass of the clock hand and pages that are not used for a long time will eventually have a value of zero.
+
+
+\newpage
+
+\section{Tuesday, June 19, 2018}
 
 \subsection{File Systems}
 

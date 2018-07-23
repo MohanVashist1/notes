@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1530551935 "cscc69.tex" "cscc69.pdf" "cscc69" 1530551937
+["pdflatex"] 1532305514 "cscc69.tex" "cscc69.pdf" "cscc69" 1532305516
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1480098666 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1480098696 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -184,14 +184,14 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1495593487 4129592 0e6cfee100d68e6d96b92c0258f2ff73 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "cscc69.aux" 1530551937 19339 78d89158b1fee2e4c1fe26e870851b7f ""
-  "cscc69.out" 1530551937 10481 a6beb923a046bb4613e7f34adf8c28ef ""
-  "cscc69.tex" 1530551932 69628 d62e5b54dc480b876c9e4a5ad9075c16 ""
-  "cscc69.toc" 1530551937 15287 16e553e50bb9d2c04956d431865d6b42 ""
+  "cscc69.aux" 1532305515 24241 adff54a588583d86f60a95ebe6fca24c ""
+  "cscc69.out" 1532305515 12756 bf59abed3c2c4cf925c49cbb153b941a ""
+  "cscc69.tex" 1532305509 83028 534b10ea7943928ca50449f00f86170f ""
+  "cscc69.toc" 1532305515 19307 fd2fa5f6fb8ee14efd6b48576c525ba3 ""
   "imgs/pagelookup.png" 1529173608 57363 a01ed9aceea91b2aa9c5737e9ff56eb7 ""
   (generated)
-  "cscc69.toc"
-  "cscc69.log"
-  "cscc69.pdf"
-  "cscc69.aux"
   "cscc69.out"
+  "cscc69.toc"
+  "cscc69.pdf"
+  "cscc69.log"
+  "cscc69.aux"

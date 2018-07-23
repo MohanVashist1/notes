@@ -15,11 +15,17 @@
 
 \usepackage{xcolor}
 
+\usepackage{listings}
+
 \usepackage{xparse}
 
 \NewDocumentCommand{\codeword}{v}{%
 \texttt{\textcolor{blue}{#1}}%
 }
+
+\lstset{language=C,keywordstyle={\bfseries \color{blue}}}
+
+
 
 \lstset{language=C,keywordstyle={\bfseries \color{blue}}}
 
@@ -1035,18 +1041,18 @@ Page tables, MMU, TLB, etc. are mechanisms that make virtual memory possible. We
 
 \paragraph{Fetch Policy} when to fetch a page
 \paragraph{Placement Policy} where to put the page
-\paragraph{Repalcement Policy} what page to evict to make room?
+\paragraph{Replacement Policy} what page to evict to make room?
 
 \subsection{Fetch Policy}
 
 \subsubsection{Demand Paging}
 \textbf{Demand Paging} is looking at pages in the swap space in the disk when it is needed.\\
 \\
-The process can only page fault on one page at a time in this scenario , so when the process does a read, the Disk receives a single page-sized read request
+The process can only page fault on one page at a time in this scenario, so when the process does a read, the Disk receives a single page-sized read request
 
 \subsubsection{Prepaging (aka Prefetching)}
 
-This method is predicting what future pages will be used at time of current fault, however, we may not know on which variables to base our predictions on and what to do if the predictions are wrong.
+This method is predicting what future pages will be used at time of current fault and loading all of them, however, we may not know on which variables to base our predictions on and what to do if the predictions are wrong.
 
 \subsection{Placement Policy}
 In paging systems, memory management hardware can translate any virtual-to-physical mapping equally well. Why would we prefer some mappings over others?
@@ -1062,7 +1068,7 @@ The goal of the replacement algorithm is to reduce the fault rate by selecting t
 
 Let's start by assuming that we know the reference string, then what is the best replacement policy in this case?
 
-We that the best page to evict is the one that is never used again, and because of this, there will never be a fault on it. We also know that never is a long time, so picking the page closest to never is the next best thing. Evicting the page that won't be used for the longest period of time minimizes the number of page faults.
+We know that the best page to evict is the one that is never used again, and because of this, there will never be a fault on it. We also know that never is a long time, so picking the page closest to never is the next best thing. Evicting the page that won't be used for the longest period of time minimizes the number of page faults.
 
 \paragraph{Cold Misses} When a page is referenced for the first time (this is unavoidable)
 
@@ -1118,7 +1124,7 @@ Pages that are used often enough to keep reference bits set will not be replaced
 
 \subsubsection{Second-Chance Implementaiton}
 
-We want to replace the page that is "old enough". We do this by arranging all of the physical page frames in a big circle (like a clock) and we sweep through the pages in a circular order like a clock, and if ther reference bit is off, that means it has not been used recently and we exict that page. If there reference bit is on, that means it has been used recently andd we turn it off to go to the next page. So the clock hand moves quickly when pages are needed, and there is low overhead when there is plenty of memory.
+We want to replace the page that is "old enough". We do this by arranging all of the physical page frames in a big circle (like a clock) and we sweep through the pages in a circular order like a clock, and if the reference bit is off, that means it has not been used recently and we exict that page. If there reference bit is on, that means it has been used recently and we turn it off to go to the next page. So the clock hand moves quickly when pages are needed, and there is low overhead when there is plenty of memory.
 
 \subsection{Eviction Algorithms}
 
@@ -1136,7 +1142,7 @@ We can try keeping pages in a stack, on reference, move a page to the top of the
 \\
 We don't implement the exact LRU, but we can use approximations by the PTE reference bit. The basic idea is that initially, all $R$ bits are zero; as processes execute, bits are set to 1 for pages that are used, so we periodically examine the R bits, we do not know order of use, but we know pages that were or were not used.\\
 \\
-Additionally, we can also have a reference bit algorithm where we keep a counter for each page, and at regular intervals, for each page, we shift $R$ bit into high bit of counter register, shift the other bits to the right, and pages with "larger" counters were used more recently.
+Additionally, we can also have a reference bit algorithm where we keep a counter for each page, and at regular intervals, for each page, we shift the $R$ bit into highest bit of counter register, and then shift all the bits to the right, and pages with "larger" counters were used more recently.
 
 \subsubsection{Counting-based replacement}
 
@@ -1197,7 +1203,7 @@ Intuitively, we want the working set to be the set of pages a process needs in m
 
 \subsubsection{Working Set Problems}
 
-There are w few problems with Working sets, such as
+There are a few problems with Working sets, such as
 \begin{itemize}
   \item How do we determine $\Delta$?
   \item How do we know when the working set changes?
@@ -1215,7 +1221,7 @@ It's hard to use PFF to distinguish between changes in locality and changes in t
 
 Thrashing is when more time is spent by the OS in paging data back and forth from the disk than executing the actual user programs. This means that no time is spent doing useful work (making progress).\\
 \\
-Page replacement algorithms avoid thrashing. Thrashing casses the system to be overcommitted, since the Os has no idea which pages should be in memory to reduce faults, and it could just be that there isn't enough physical memory for all of the processes in the system.\\
+Page replacement algorithms avoid thrashing. Thrashing causes the system to be overcommitted, since the OS has no idea which pages should be in memory to reduce faults, and it could just be that there isn't enough physical memory for all of the processes in the system.\\
 \\
 The possible solutions to thrashing are swapping, which is writing out all pages of a process and then suspending it, or simply acquiring more memory.
 
@@ -1223,17 +1229,309 @@ The possible solutions to thrashing are swapping, which is writing out all pages
 
 Windows uses Local page replacement, which is a per-process FIFO system. Pages are stolen from process using more than their minimum working set. Processes start with a default of 50 pages. XP monitors page fault rates and adjust working set sizes accordingly. On a page fault, a cluster of pages around the missing page are brough into memory as well as the missing page.
 
-\subsubsection{Linux Paging}
+\subsubsection{Linux Paging Policy}
 
-Linux uses a global replacement, like most Unix systems. It uses a modified second-change clock algorithm, in which pages "age" with each pass of the clock hand and pages that are not used for a long time will eventually have a value of zero.
-
+Linux uses a global replacement, like most Unix systems. It uses a modified second-chance clock algorithm, in which pages "age" with each pass of the clock hand and pages that are not used for a long time will eventually have a value of zero.
 
 \newpage
 
-\section{Tuesday, June 19, 2018}
+\section{Tuesday, July 3, 2018}
+
+
+
 
 \subsection{File Systems}
 
-What do file systems do? They provide a nice abstraction of storage.
+\paragraph{What do file systems do?} They provide a nice abstraction of storage
+
+\subsection{File Management Systems}
+
+File Management Systems...
+\begin{itemize}
+    \item implement an abstraction (files) for secondary storage
+    \item organize files logically (directories)
+    \item Permit sharing of data between processes, people, and machines
+    \item Protect data from unwanted access (security)
+\end{itemize}
+
+\subsection{File Concept}
+
+A file is a named collection of data with some attributes. Attributes such as, Name, Owner, Location, Size, Protection, Creation Time, Time of Last Access
+
+\subsection{File Types}
+
+A file's type can be encoded in its name or contents.\\
+\underline{Ex.} Windows encodes type in name
+\underline{Ex.} Unix sometimes encodes type in contents, such as \#! for shell scripts
+
+\subsubsection{File Operations}
+\begin{itemize}
+    \item Create
+    \item Write
+    \item Read
+    \item Delete
+    \item Open
+    \item Close
+    \item etc...
+\end{itemize}
+
+\subsection{File Access Methods}
+
+General-purpose file systems support simple methods:
+
+\paragraph{Sequential Access} Read bytes one at a time, in order. Operations are \codeword{read next} and \codeword{write next}.
+
+\paragraph{Direct Access} Random access given a block/byte number. Operations are \codeword{read n} (byte at offset n) and \codeword{write n}\\
+
+\underline{Ex.} Unix uses both\\
+\\
+Database systems support more sophisticated methods.
+
+\subsection{Handling operations on files}
+
+Involves searching the directory for the entry associated with the named file.\\
+\\
+When the file is first used actively, store its attribute info in a system-wide open-file table; the index into this table is used on subsequent operations. This implies no searching.
+
+\subsection{Shared open files}
+
+There are actually 2 levels of internal tables.
+\begin{itemize}
+    \item a \textbf{per-process table} of all files that each process has open (this holds the current file position for the process)
+    \item each entry in the per-process table points to an entry in the \textbf{system-wide open-file table} (for process independent info)
+\end{itemize}
+
+\subsection{Directories}
+
+Directories server multiple purposes
+
+\paragraph{For users} They provide a structured way to organize files
+\paragraph{For the file system} they provide a convenient naming interface that allows the implementation to separate logical file organization from physical file placement on the disk
+\\
+\\
+Directories also store information about files (owner, permission, etc.)\\
+\\
+Most files support multi-level directories and naming hierarchies (such as \codeword{/}, \codeword{/usr/}, \codeword{/usr/local/})
+
+\subsubsection{What is a directory at the OS level?}
+
+A directory is a list of entries, names and associated \textbf{metadata}. Metadata not being data itself, but information that describes the properties of the data (such as size, protection, location, etc.)\\
+\\
+The Directories are usually a list that is usually unordered (effectively random). The entries are usually sorted by the program that reads the directory.
+\\
+\\
+Directories are typically stored in files. This makes it easier as you would only need to manage one kind of secondary storage unit.
+
+\subsubsection{Operations on Directories}
+
+\paragraph{Search} Find a particular file within directory
+\paragraph{Create file} Add a new entry to the directory
+\paragraph{Delete file} Remove an entry from the directory
+\paragraph{List directory} Return file names and requested attributes of entries
+\paragraph{Update directory} Record a change to some file's attributes
+
+\underline{Ex.} Unix. In Unix, directories are implemented in files, and you use file operations to create directories.\\
+A C runtime library provides a higher-level abstraction for reading directories.
+
+\subsection{Path Name Translation}
+
+Let's say you want to open \codeword{/one/two/three}\\
+\\
+The file system first open \codeword{/}, which is the root directory, a well known directory that the file system can always find. They the file system searches for an entry \codeword{one} in the root directory, and then open the \codeword{one} directory and look for \codeword{two} in that directory, and then find and open the file \codeword{three}.\\
+\\
+Systems spend a lot of time walking directory paths, so this is why open is separate from read and write. The OS will cache prefix lookups to increase performance.
+
+\subsection{File System Implementation}
+
+How do file systems use the disk to store files?\\
+\\
+File systems define a block size, and Disk space is allocated in granularity of blocks (units of blocks).
+\\
+A "Master Block" determines location of the root directory (aka the partition control block, superblock). It's always at a well-known disk location and is often replicated accross the disk for reliability.
+\\
+A free map determines which blocks are free and which are allocated. It's usually implemented as a bitmap, one bit per block on the disk, and is also stored on the disk and cached in memory for performance.
+\\
+Remaining disk blocks are used to store files (and directories). There are many ways to do this.
+
+\subsubsection{Directory Implementation}
+
+\paragraph{Option 1: Linear List} This is a simple list of file names and pointers to data blocks, this requires a linear search to find entries, so it is easy to implement, but slow to execute. This is bad since directory operations are frequent.
+
+\paragraph{Option 2: Hash Table}
+
+Add a hash data structure to the linear list and we Hash the file name to get the pointer to the entry in the linear list.
+
+\subsection{Disk Layout Strategies}
+
+Since files span multiple disk blocks, How do you find all of the blocks for a file?
+
+\begin{enumerate}
+    \item Contiguous allocation. This is like memory, is fast, simplifies directory access, but is inflexible, causes fragmentation, and needs compaction.
+
+    \item Linked, or chained, structure. This is where each block points to next, and the directory points to the first block, this is good for sequential access, but bad for all others
+
+    \item Indexed structure (indirection, hierarchy). An "index block" contains pointers to many other blocks. This handles random searches better and is still good for sequential, but it may need multiple index blocks that are linked together.
+\end{enumerate}
+
+\subsubsection{Contiguous Allocation}
+
+This just means that each file is stored in contiguously in blocks. Like how it is done in main memory.
+
+\subsubsection{Linked Allocation}
+
+This just means that each file can be separated and stored in different blocks, with a linked list linking the blocks together in order.
+
+\subsubsection{Indexed Allocation: Unix Inodes}
+
+Unix inodes implement an indexed structure for files. Each inode contains 15 block pointers, the first 12 are direct block pointers, and the last 3 are single, double, and triple indirect block pointers (meaning that the single pointer points to a inode that points to blocks, the double pointer points to an inode that points to inodes that point to blocks, etc...)
+
+\subsubsection{Unix Inodes and Path Search}
+
+Unix Inodes are not directories, they just describe where on the desk the blocks for a file are placed. Directories are files, so inodes also describe where the blocks for directories are placed on the disk.
+\\
+\\
+Directory entries map filenames to inodes.
+\\
+\underline{Ex.} To open \codeword{/one}
+\begin{enumerate}
+    \item We first use the master Block to find the inode for \codeword{/} and read that inode into memory
+
+    \item inode allows us to find data block for directory \codeword{/}
+
+    \item Read \codeword{/}, look for the entry for \codeword{one}
+
+    \item this entry gives us the location of the inode for \codeword{one}
+
+    \item We read the inode for \codeword{one} into memory
+
+    \item The inode says where the first data block is on the disk
+
+    \item We read that block into memory to access the data in the file
+\end{enumerate}
+
+\subsubsection{Possible Directory Implementations}
+
+The possible directory structures are single-level, two-level, tree-structured. There is also acyclic graph directories, which allows for shared directories, which means that the same file may be in 2 directories.
+
+\subsubsection{File Links}
+
+Sharing can be implemented by creating a new directory entry called a link, which is a pointer to another file or subdirectory. These links can be symbolic (aka soft) links or hard links.
+
+\paragraph{Symbolic or Soft Link} Directory entry contains "true" path to the file
+
+\paragraph{Hard links} Second directory entry identical to the first
+
+\subsubsection{Issues with Acyclic Graphs}
+
+With links, a file may have multiple absolute path names, this makes traversing a file system more complicated, as we should avoid traversing shared structures more than once.
+\\
+\\
+Sharing can occur with duplication of information, but maintaining consistency is a problem. This can occur for example, when updating permissions in a directory entry with a hard link.
+\\
+\\
+\paragraph{Deletion: When can the space allocated to a shared file be deallocated and reused?} This problem is somewhat easier to handle with symbolic link, which means that Deletion of a link is OK, but deletion of the file entry itself deallocates space and leaves the link pointers dangling.
+
+A reference count for hard links is kept, so the file that the links point to is deleted when all referencing links are deleted.
+
+\subsection{File Sharing}
+
+File sharing has been around since timesharing. It's easy to do on a single machine and PCs, workstations, and networks get us there.
+\\
+\\
+File sharing is incredibly important for getting work done. It is the basis for communication and synchronization.
+\\
+\\
+There are two key issues when sharing files. \textbf{Semantics of concurrent access}, such as What happens when one process reads while another writes and What happens when two processes open a file for writing, and \textbf{Protection}.
+
+\subsubsection{Protection}
+
+File systems implement some kind of protection system that specifies who can access a file and How they can access it.
+\\
+\\
+A protection system dictates whether given action by a given subject on a given object should be allowed.
+\\
+\underline{Ex.} You can read and\slash or write your files, but others cannot.
+
+\subsubsection{Types of Access}
+
+\begin{itemize}
+    \item None
+    \item Knowledge
+    \item Execution
+    \item Reading
+    \item Appending
+    \item Updating
+    \item Changing Protection
+    \item Deletion
+\end{itemize}
+
+\subsubsection{Representing Protection}
+
+\paragraph{Access Control Lists (ACL)} For each object, maintain a list of subject and their permitted actions
+
+\paragraph{Capabilities} For each subject, maintain a list of objects and their permitted actions
+
+Think of a chart comparing Subjects to Objects containing the permissions for each relation.
+
+\subsubsection{ACLS and Capabilities}
+
+The approaches differ only in how the table is represented.
+\\
+\\
+Capabilities are easier to transfer between users, as they are like keys and can handoff, it does not depend on the subject.
+\\
+\\
+In practice, ACLs are easier to manage, they are Object-centric, easy to grant and easy to revoke. To revoke capabilities, we have to keep track of all subjects that have the capability -- a challenging problem.
+\\
+\\
+
+ACLs have a problem when objects are heavily shared, because they become very large.
+
+\subsubsection{File Buffer Cache}
+
+Applications exhibit significant locality for reading and writing files. Due to this, the idea is that we should cache file blocks in memory to capture locality.
+\\
+\\
+This is called the \textbf{File Buffer Cache}. This cache is system wide, used and shared by all processes. Reading from the cache makes a disk perform like memory. Even a small amount of cache (4 MB) can be very effective.
+\\
+\\
+The Issues with it is that the file bugger cache competes with the virtual memory, and like the virtual memory, it has a limited size. This means that it will need to use replacement algorithms here (LRU is usually used)
+
+\subsubsection{Caching Writes}
+
+On a write, some application assume that data makes it through the buffer and onto the disk. As a result, writes are often slow, even with caching.
+\\
+\\
+There are several ways to compensate for this
+
+\paragraph{"write-behind"} Maintain a queue of uncommitted blocks and periodically flush the queue to the disk. This method is unreliable though.
+
+\paragraph{Battery backed-up RAM (NVRAM)} As with write-behind, but maintain a queue in NVRAM. This option is expensive.
+
+\paragraph{Log-structured File System} Always write contiguously at end of previous write.
+
+\subsubsection{Read Ahead}
+
+Many file systems implement \textbf{"read ahead"}. This is when the file system predicts that the process will request the next block and goes ahead and requests it. This can happen while the process is computing the previous block, which overlaps I\slash O with execution.
+\\
+\\
+When the process requests the block, it will be in the cache. This compliments the on-disk cache, which also is doing read ahead.
+\\
+\\
+For sequentially accessed files, this can be a huge positive. Unless blocks for the file are scattered across the disk, but file systems try to prevent that during allocation.
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}

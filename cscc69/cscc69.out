@@ -132,6 +132,35 @@
 \BOOKMARK [2][-]{subsection.6.12}{Page Fault Frequency}{section.6}% 132
 \BOOKMARK [3][-]{subsubsection.6.12.1}{Thrashing}{subsection.6.12}% 133
 \BOOKMARK [3][-]{subsubsection.6.12.2}{Windows XP Paging Policy}{subsection.6.12}% 134
-\BOOKMARK [3][-]{subsubsection.6.12.3}{Linux Paging}{subsection.6.12}% 135
-\BOOKMARK [1][-]{section.7}{Tuesday, June 19, 2018}{}% 136
+\BOOKMARK [3][-]{subsubsection.6.12.3}{Linux Paging Policy}{subsection.6.12}% 135
+\BOOKMARK [1][-]{section.7}{Tuesday, July 3, 2018}{}% 136
 \BOOKMARK [2][-]{subsection.7.1}{File Systems}{section.7}% 137
+\BOOKMARK [2][-]{subsection.7.2}{File Management Systems}{section.7}% 138
+\BOOKMARK [2][-]{subsection.7.3}{File Concept}{section.7}% 139
+\BOOKMARK [2][-]{subsection.7.4}{File Types}{section.7}% 140
+\BOOKMARK [3][-]{subsubsection.7.4.1}{File Operations}{subsection.7.4}% 141
+\BOOKMARK [2][-]{subsection.7.5}{File Access Methods}{section.7}% 142
+\BOOKMARK [2][-]{subsection.7.6}{Handling operations on files}{section.7}% 143
+\BOOKMARK [2][-]{subsection.7.7}{Shared open files}{section.7}% 144
+\BOOKMARK [2][-]{subsection.7.8}{Directories}{section.7}% 145
+\BOOKMARK [3][-]{subsubsection.7.8.1}{What is a directory at the OS level?}{subsection.7.8}% 146
+\BOOKMARK [3][-]{subsubsection.7.8.2}{Operations on Directories}{subsection.7.8}% 147
+\BOOKMARK [2][-]{subsection.7.9}{Path Name Translation}{section.7}% 148
+\BOOKMARK [2][-]{subsection.7.10}{File System Implementation}{section.7}% 149
+\BOOKMARK [3][-]{subsubsection.7.10.1}{Directory Implementation}{subsection.7.10}% 150
+\BOOKMARK [2][-]{subsection.7.11}{Disk Layout Strategies}{section.7}% 151
+\BOOKMARK [3][-]{subsubsection.7.11.1}{Contiguous Allocation}{subsection.7.11}% 152
+\BOOKMARK [3][-]{subsubsection.7.11.2}{Linked Allocation}{subsection.7.11}% 153
+\BOOKMARK [3][-]{subsubsection.7.11.3}{Indexed Allocation: Unix Inodes}{subsection.7.11}% 154
+\BOOKMARK [3][-]{subsubsection.7.11.4}{Unix Inodes and Path Search}{subsection.7.11}% 155
+\BOOKMARK [3][-]{subsubsection.7.11.5}{Possible Directory Implementations}{subsection.7.11}% 156
+\BOOKMARK [3][-]{subsubsection.7.11.6}{File Links}{subsection.7.11}% 157
+\BOOKMARK [3][-]{subsubsection.7.11.7}{Issues with Acyclic Graphs}{subsection.7.11}% 158
+\BOOKMARK [2][-]{subsection.7.12}{File Sharing}{section.7}% 159
+\BOOKMARK [3][-]{subsubsection.7.12.1}{Protection}{subsection.7.12}% 160
+\BOOKMARK [3][-]{subsubsection.7.12.2}{Types of Access}{subsection.7.12}% 161
+\BOOKMARK [3][-]{subsubsection.7.12.3}{Representing Protection}{subsection.7.12}% 162
+\BOOKMARK [3][-]{subsubsection.7.12.4}{ACLS and Capabilities}{subsection.7.12}% 163
+\BOOKMARK [3][-]{subsubsection.7.12.5}{File Buffer Cache}{subsection.7.12}% 164
+\BOOKMARK [3][-]{subsubsection.7.12.6}{Caching Writes}{subsection.7.12}% 165
+\BOOKMARK [3][-]{subsubsection.7.12.7}{Read Ahead}{subsection.7.12}% 166

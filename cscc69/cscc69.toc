@@ -227,3 +227,55 @@
 \contentsline {paragraph}{Battery backed-up RAM (NVRAM)}{48}{section*.62}
 \contentsline {paragraph}{Log-structured File System}{49}{section*.63}
 \contentsline {subsubsection}{\numberline {7.12.7}Read Ahead}{49}{subsubsection.7.12.7}
+\contentsline {section}{\numberline {8}Tuesday, July 10, 2018}{50}{section.8}
+\contentsline {subsection}{\numberline {8.1}File System Implementation}{50}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Disk Components}{50}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Disk service time components}{50}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Mixing workloads can be tricky}{50}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.5}Components of disk access time}{50}{subsection.8.5}
+\contentsline {paragraph}{Seek}{50}{section*.64}
+\contentsline {paragraph}{Rotation}{50}{section*.65}
+\contentsline {paragraph}{Transfer}{50}{section*.66}
+\contentsline {subsubsection}{\numberline {8.5.1}Disks are Slow}{51}{subsubsection.8.5.1}
+\contentsline {subsection}{\numberline {8.6}OS design principles}{51}{subsection.8.6}
+\contentsline {paragraph}{minimize the number of disk accesses}{51}{section*.67}
+\contentsline {paragraph}{When using the disk, try to minimize access cost}{51}{section*.68}
+\contentsline {subsection}{\numberline {8.7}Disks are Messy}{51}{subsection.8.7}
+\contentsline {subsection}{\numberline {8.8}OS and Disk interaction}{51}{subsection.8.8}
+\contentsline {subsection}{\numberline {8.9}Logical Block Addressing}{51}{subsection.8.9}
+\contentsline {subsection}{\numberline {8.10}Disk Scheduling}{51}{subsection.8.10}
+\contentsline {paragraph}{FCFS (do nothing)}{52}{section*.69}
+\contentsline {paragraph}{SSTF (shorted seek time first)}{52}{section*.70}
+\contentsline {paragraph}{SCAN (elevator)}{52}{section*.71}
+\contentsline {paragraph}{C-SCAN}{52}{section*.72}
+\contentsline {paragraph}{LOOK}{52}{section*.73}
+\contentsline {paragraph}{C-LOOK}{52}{section*.74}
+\contentsline {subsubsection}{\numberline {8.10.1}Back to files and directories}{52}{subsubsection.8.10.1}
+\contentsline {subsubsection}{\numberline {8.10.2}Disk Layout Strategies}{52}{subsubsection.8.10.2}
+\contentsline {paragraph}{Contiguous Allocation}{52}{section*.75}
+\contentsline {paragraph}{Linked, or chained, structure}{52}{section*.76}
+\contentsline {paragraph}{Indexed structure (indirection, hierarchy)}{52}{section*.77}
+\contentsline {subsubsection}{\numberline {8.10.3}Indexed Allocation: Unix Inodes}{53}{subsubsection.8.10.3}
+\contentsline {subsubsection}{\numberline {8.10.4}Unix Inodes and Path Search}{53}{subsubsection.8.10.4}
+\contentsline {paragraph}{Note}{53}{section*.78}
+\contentsline {subsection}{\numberline {8.11}File System Implementation}{53}{subsection.8.11}
+\contentsline {subsubsection}{\numberline {8.11.1}Original Unix File System}{53}{subsubsection.8.11.1}
+\contentsline {subsubsection}{\numberline {8.11.2}Data and Inode Placement}{53}{subsubsection.8.11.2}
+\contentsline {subsubsection}{\numberline {8.11.3}Fast File System (FFS)}{54}{subsubsection.8.11.3}
+\contentsline {subsubsection}{\numberline {8.11.4}Cylinder Groups}{54}{subsubsection.8.11.4}
+\contentsline {subsubsection}{\numberline {8.11.5}Space Allocation in Cylinder Groups}{54}{subsubsection.8.11.5}
+\contentsline {subsubsection}{\numberline {8.11.6}More FFS Solutions}{54}{subsubsection.8.11.6}
+\contentsline {subsection}{\numberline {8.12}The Linux Second Extended File System (EXT2)}{54}{subsection.8.12}
+\contentsline {subsection}{\numberline {8.13}Fast File System: Consistency Issues}{56}{subsection.8.13}
+\contentsline {subsubsection}{\numberline {8.13.1}Fast File System Observations}{56}{subsubsection.8.13.1}
+\contentsline {subsection}{\numberline {8.14}Log Structured File System (LSF)}{56}{subsection.8.14}
+\contentsline {subsubsection}{\numberline {8.14.1}LFS Reads}{56}{subsubsection.8.14.1}
+\contentsline {subsection}{\numberline {8.15}NTFS (Windows)}{57}{subsection.8.15}
+\contentsline {subsubsection}{\numberline {8.15.1}Master File Table Record}{57}{subsubsection.8.15.1}
+\contentsline {subsubsection}{\numberline {8.15.2}Master File Table Record for a Small Directory}{58}{subsubsection.8.15.2}
+\contentsline {subsection}{\numberline {8.16}Better I/\penalty \exhyphenpenalty O performance through parallelism}{58}{subsection.8.16}
+\contentsline {paragraph}{RAID}{58}{section*.79}
+\contentsline {paragraph}{RAID Level 0}{58}{section*.80}
+\contentsline {paragraph}{RAID Level 1}{58}{section*.81}
+\contentsline {paragraph}{RAID Level 4}{58}{section*.82}
+\contentsline {paragraph}{RAID Level 5}{58}{section*.83}

@@ -1523,8 +1523,280 @@ For sequentially accessed files, this can be a huge positive. Unless blocks for 
 \newpage
 
 
+\section{Tuesday, July 10, 2018}
 
+\subsection{File System Implementation}
 
+Files and directories live on \textbf{secondary storage}. Anything outside of that is \textbf{primary memory}. Secondary storage is anything that does not permit direct instruction execution or data fetch via machine load\slash store instructions. It is also persistent, as data survives during a loss of power.
+\\
+\\
+We are focusing on the use of fixed hard magnetic disks for implementing secondary storage.
+
+\subsection{Disk Components}
+
+A Disk consists of an Actuator that has metal pins attached to it that are the read and write heads, the cylinder itself is made of multiple platters with an upper and a lower surface. A circle (or a fixed radius around the platter) on the disk is called a track, and a portion of an angle of the track is called a sector.
+
+\subsection{Disk service time components}
+
+When the Disk wants to move from one part of the disk to another, the head first moves up or down the line going from the inside to the outside of the disk. Then the disk needs to rotate to the angle it wants to go to.\\
+\\
+This means that sequential access is a lot faster than random access.
+
+\subsection{Mixing workloads can be tricky}
+
+\underline{Ex.} Suppose there are two processes. If each process are run in isolation, they get 20 MB/s disk throughput. However, if you run the two processes simultaneously, each gets only 2 MB/s.
+
+\subsection{Components of disk access time}
+
+Disk request performance depends on three steps
+
+\paragraph{Seek} This is moving the disk arm to the correct cylinder. This depends on how fast a disk arm can move.
+
+\paragraph{Rotation} This is waiting for the sector to rotate under the head. It depends on the rotation rate of the disk.
+
+\paragraph{Transfer} This is the transferring of data from the surface into the disk controller electronics, sending it back to the host. This depends on the density
+
+\subsubsection{Disks are Slow}
+
+If we look at seek times,  we see that it's an average of 5-6 milliseconds each seek, and rotation speeds add an average latency of 3 milliseconds. This is very slow, so sequential access is much faster than random.
+
+\subsection{OS design principles}
+
+Since the disk I\slash O is slow, we want to
+\paragraph{minimize the number of disk accesses} which can be done through caching
+\paragraph{When using the disk, try to minimize access cost} Which particularly targets seeks and rotation. We can plan and schedule our disk requests and arrange the data to have more sequential accesses compared to random accesses.
+
+\subsection{Disks are Messy}
+
+Disk are messy physical devices, they are prone to errors, bad blocks, missed seeks, etc.
+\\
+\\
+It is the job of the OS to hide this mess from higher level software.
+
+\subsection{OS and Disk interaction}
+
+Specifying disk requests requires a lot of info. This includes the cyclinder number, the surface number, the track number, the sector number, the transfer size, etc...
+\\
+\\
+Modern disks are more complicated, as not all tracks have the same number of sectors and sectors are remapped, and other complications.
+\\
+\\
+Older disks required the OS to specify all of this information, but fortunately modern drives provide a more high-level interface: \textbf{logical block addressing}
+
+\subsection{Logical Block Addressing}
+
+The disk exports its data as a logical array of blocks from 0 to $N$. The Disk maps logical blocks to a specific cylinder, surface, track, and sector. So the OS would only need to specify the logical block number to read and write to.
+\\
+\\
+With this solution, the disk parameters are hidden from the OS
+
+\subsection{Disk Scheduling}
+
+Because seeks are so expensive, the OS tries to schedule disk requests that are queued waiting for the disk
+
+\paragraph{FCFS (do nothing)} This is more reasonable when the queue only has a few requests, but long requests in the queue cause long waiting times.
+
+\paragraph{SSTF (shorted seek time first)} This minimizes arm momement (seek time) and maximizes the request rate, it also favours middle blocks.
+
+\paragraph{SCAN (elevator)} Requests are serviced in one direction until done, then the direction is reversed.
+
+\paragraph{C-SCAN} Like SCAN, but only goes in one direction (like a type writer)
+
+\paragraph{LOOK} Like SCAN, but only goes as far as the last request in each direction. So if the disk goes from 0-199, and the lowest number request is 5, then LOOK goes left until it gets to 5, then it goes right, but SCAN goes all the way to 0 and then it goes right.
+
+\paragraph{C-LOOK} The Same as look, but only goes in one direction.
+
+In general, unless there are request queues, disk scheduling does not have much impact. This is more important for servers, but less for PCs.
+\\
+\\
+Modern Disks often do the disk scheduling themselves, usually ignoring or undoing any scheduling done by the OS. This is because disks know their layout better than the OS so they can optimize themselves better.
+
+\subsubsection{Back to files and directories}
+
+How does the OS implement the abstraction of files and directories on top of this logical array of disk blocks?
+
+\subsubsection{Disk Layout Strategies}
+
+Files span multiple disk blocks. How do you find all of the blocks for a file?
+
+\paragraph{Contiguous Allocation} This is like memory, is fast and simplifies directory access. However, it is inflexible, causes fragmentation, and needs compaction.
+
+\paragraph{Linked, or chained, structure} Each block points to the first. This is good for sequential access, but bad for all others.
+
+\paragraph{Indexed structure (indirection, hierarchy)} An "index block" contains pointers to many other blocks. This approach handles random searches a lot better, and is still good for sequential. You may need multiple index blocks that are linked together though.
+
+\subsubsection{Indexed Allocation: Unix Inodes}
+
+Unix inodes implement an indexed structure for files. Each inode contains 15 block pointers, where the first 12 are direct block pointers (they point to data blocks) and then the last 3 will be a single indirect pointer, a double indirect pointer, and a triple indirect pointer (in which they all point to inodes).
+
+\subsubsection{Unix Inodes and Path Search}
+
+\paragraph{Note} Unix Inodes are not directories, they describe where on the disk the blocks for a file are placed. Directories are also files, so inodes also describe where the blocks for directories are placed on the disk.
+
+\underline{Ex.} We need to find the first data block for the file \codeword{/one.txt}
+
+To open \codeword{/one.txt}, we use the Master Block to find the inode for \codeword{/} on the disk and read the inode into memory. The inode then allows us to find the data block for the directory \codeword{/}, we read it, and look for the entry for \codeword{one.txt}. This entry locates the inode for \codeword{one.txt}, so we read that into memory and that inode says where the first data block is on the disk. We read that block into memory to access the data in the file.
+
+\subsection{File System Implementation}
+
+A "Master Block" determines the location of the root directory (aka partition control block or superblock). A free map determines which blocks are free and which are allocated. The remaining disk blocks are used to store files and directories.
+
+\subsubsection{Original Unix File System}
+
+Recall that the File System sees storage as a linear array of blocks, so each block has a \textbf{logical block number (LBN)} in the original Unix. This is a simple, straightforward implementation that is easy to understand, but is a poor utilization of disk bandwidth because to find a block, the file system must search through $O(n)$ blocks, where $n$ is the total number of blocks. This is slow and can be improved on.
+
+\subsubsection{Data and Inode Placement}
+
+The Original Unix File System had two placement problems:
+\\
+\\
+One was that \textbf{Data blocks allocated randomly in aging file systems}. This means that blocks for the same file are allocated sequentially when the File System is new. As the File System "ages" and fills, we need to allocate blocks of a file into the blocks of freed up spaces when other files are deleted. The problem where is that deleted files are essentially randomly placed and the blocks for new files become scattered across the disk.
+\\
+\\
+The second is that \textbf{Inodes become allocated far from blocks}. All of the inodes would be allocated at the beginning of the disk, far from the data. This implies that traversing file name paths, manipulating files and directories requires going back and forth from inodes to data blocks.
+\\
+\\
+Both of these problems generate many long seeks.
+
+\subsubsection{Fast File System (FFS)}
+
+People working on BSD Unix did a redesign that they called the \textbf{Fast File System}. It improved the disk utilization and decreased the response time of Unix's File System. It is now the File System in which all other Unix Filesystems are compared to and is a good example of being device-aware for performance.
+
+\subsubsection{Cylinder Groups}
+
+BDS FFS addressed placement problems using the notation of a cylinder group (aka allocation groups in lots of modern Filesystems). This has the disk partitioned into groups of cylinders. Data blocks in the same file are allocated in the same cylinder group. Inodes for files allocated in the same cylinder group as file data blocks.
+\\
+\\
+Allocation in cylinder groups provides closeness and reduces the number of long seeks.
+\\
+\\
+However, to be able to allocate to cylinder groups, the disk must have free space scattered across cylinders. This means that 10\% of the disk is reserved just for this purpose. If a preferred cylinder group is full, we allocate space to a "nearby" group.
+
+\subsubsection{Space Allocation in Cylinder Groups}
+
+If possible, do allocation in groups of 8 blocks (bytes in the bitmap). We do allocation by first finding the first byte that is all zero, and we backtrack into the previous cylinder group to check for zero.
+
+\subsubsection{More FFS Solutions}
+
+Small blocks (around 1K) in the original Unix File System caused 2 problems: Low bandwidth utilization and small max file size.
+\\
+\\
+This is fixed by using a larger block (4k) but has the new problem of internal fragmentation.
+
+\subsection{The Linux Second Extended File System (EXT2)}
+
+A blog group contains
+\begin{itemize}
+    \item a Super-block
+    \item a Group descriptor
+    \item a Bock bitmap
+    \item an I-node bitmap
+    \item I-nodes
+    \item Data blocks
+\end{itemize}
+
+A linux directory entry has an inode number, an entry size that helps point to the index of the next entry, a type, a file name length, and then the file name.
+
+\includegraphics[scale=0.75]{yes1}\\
+
+\includegraphics[scale=0.75]{yes2}
+\subsection{Fast File System: Consistency Issues}
+
+The Inodes have a fixed size structure stored in cylinder groups, and Metadata updates are synchronous operations. The operations can be placed in the wrong order as such:
+\begin{itemize}
+    \item Writing newly allocated inodes to the disk before its name is entered in a directory
+    \item Removing a directory name before the inode is deallocated
+    \item Writing a deallocated inode to disk before its blocks are placed into the cylinder group free list
+\end{itemize}
+\\
+\\
+Some updates can also create cyclical dependencies.
+
+\subsubsection{Fast File System Observations}
+
+If the server crashes in between any of the above synchronous operations, then the file system is in an inconsistent state.
+\\
+\\
+The solutions to this are \textbf{fsck} which is a post-crash recovery process to scan the file system structure and restore consistency, and also log updates to enable roll-back or roll-forward.
+\\
+\\
+The performance of the Fast File System is optimized for disk block clustering, using properties of the disk to inform system layout.
+\\
+\\
+\underline{Observation:} Memory is now large enough that most of the reads that go to the disk are the first read of a file. Subsequent reads are satisfied in memory by file buffer cache. This means that there is no performance problem with reads, but write calls could be made much faster.
+\\
+\\
+Writes are not well-clusted, they include inodes and data blocks.
+
+\subsection{Log Structured File System (LSF)}
+
+This is writing all file system data into a continuous log. This uses inodes and directories from the Fast File System. It requires an inode map to find the inodes, as an inode number is no longer a simple index.
+\\
+\\
+There is alsoa  Cleaner that reclaims space from overwritten or deleted blocks.
+
+\subsubsection{LFS Reads}
+
+If the writes are now easy in this implementaiton, what happens to the reads?
+\\
+\\
+Now, to read a file from the disk:
+\begin{enumerate}
+    \item We Read the superblock to find the index file
+    \item We Read the index file (it's a linear search on a block of inodes)
+    \item We use the disk address in the inode to read the block of the index file containing the inode map.
+    \item We get the file's inodes
+    \item Then we use the inode as usual to find the file's data blocks
+\end{enumerate}
+But remember, we expect reads to hit in memory most of the time.
+
+\subsection{NTFS (Windows)}
+
+The New Technology File System from Microsoft replaced the old FAST file system.
+\\
+\\
+The designers had the following goals:
+\begin{itemize}
+    \item Eliminate fixed-size short names
+    \item Implement a more thorough permissions scheme
+    \item Provide good performance
+    \item Support large files
+    \item Provide extra functionality, such as Compression, Encryption and Types.
+\end{itemize}
+
+In other words, they wanted a file system that was flexible enough to support future needs.
+\\
+\\
+Each volume (partition) is a linear sequence of blocks (usually 4KB block size). Each volume also has a Master File Table (MFT), which is a sequence of 1 KB records and contains one or more records per file or directory, so it's similar to inodes, but more flexible. Each MFT record is a sequence of variable length (attribute, value) pairs. Long attributes can be stored externally, and a pointer kept in the MFT record.
+\\
+\\
+NTFS tries to allocate files in runs of consecutive blocks
+
+\subsubsection{Master File Table Record}
+
+\includegraphics[scale=0.5]{yes3}
+
+Each "data" attronite indicates the starting block and the number of blocks in a "run" (or extent). If all the records don't fit into one Master File Table record, extension records can be used to hold more.
+
+\subsubsection{Master File Table Record for a Small Directory}
+
+\includegraphics[scale=0.5]{yes4}
+
+Directory entries are stored as a simple list. Large directories use B+ trees
+
+\subsection{Better I\slash O performance through parallelism}
+
+The Idea is that we should spread the work across several disks.
+
+\paragraph{RAID} Redundant Arrays of Inexpensive Disks
+
+\paragraph{RAID Level 0} Using two disks, we put half of the data on one disk and the other half on the other (this is called striping), this will double our capacity as well as read and write speeds, but if one disk fails, then data is lost, so it is not reliable
+
+\paragraph{RAID Level 1} Using two disks again, but the data is backed up onto both of them. This has the speed for reading and writing and capacity of one disk, but if one disk fails, then the data is still there because at least half of the disks where used for redundancy.
+
+\paragraph{RAID Level 4} Consider 5 disks, 4 are dedicated to storage and the last disk contains enough information so that if any number of the other disks fail, the last disk will be able to construct their last saved state.
+
+\paragraph{RAID Level 5} Considering 5 disks again, now the dedicated disk for reconstructing failing disks will have its storage spread out to all the other disks.
 
 
 

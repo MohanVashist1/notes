@@ -164,3 +164,35 @@
 \BOOKMARK [3][-]{subsubsection.7.12.5}{File Buffer Cache}{subsection.7.12}% 164
 \BOOKMARK [3][-]{subsubsection.7.12.6}{Caching Writes}{subsection.7.12}% 165
 \BOOKMARK [3][-]{subsubsection.7.12.7}{Read Ahead}{subsection.7.12}% 166
+\BOOKMARK [1][-]{section.8}{Tuesday, July 10, 2018}{}% 167
+\BOOKMARK [2][-]{subsection.8.1}{File System Implementation}{section.8}% 168
+\BOOKMARK [2][-]{subsection.8.2}{Disk Components}{section.8}% 169
+\BOOKMARK [2][-]{subsection.8.3}{Disk service time components}{section.8}% 170
+\BOOKMARK [2][-]{subsection.8.4}{Mixing workloads can be tricky}{section.8}% 171
+\BOOKMARK [2][-]{subsection.8.5}{Components of disk access time}{section.8}% 172
+\BOOKMARK [3][-]{subsubsection.8.5.1}{Disks are Slow}{subsection.8.5}% 173
+\BOOKMARK [2][-]{subsection.8.6}{OS design principles}{section.8}% 174
+\BOOKMARK [2][-]{subsection.8.7}{Disks are Messy}{section.8}% 175
+\BOOKMARK [2][-]{subsection.8.8}{OS and Disk interaction}{section.8}% 176
+\BOOKMARK [2][-]{subsection.8.9}{Logical Block Addressing}{section.8}% 177
+\BOOKMARK [2][-]{subsection.8.10}{Disk Scheduling}{section.8}% 178
+\BOOKMARK [3][-]{subsubsection.8.10.1}{Back to files and directories}{subsection.8.10}% 179
+\BOOKMARK [3][-]{subsubsection.8.10.2}{Disk Layout Strategies}{subsection.8.10}% 180
+\BOOKMARK [3][-]{subsubsection.8.10.3}{Indexed Allocation: Unix Inodes}{subsection.8.10}% 181
+\BOOKMARK [3][-]{subsubsection.8.10.4}{Unix Inodes and Path Search}{subsection.8.10}% 182
+\BOOKMARK [2][-]{subsection.8.11}{File System Implementation}{section.8}% 183
+\BOOKMARK [3][-]{subsubsection.8.11.1}{Original Unix File System}{subsection.8.11}% 184
+\BOOKMARK [3][-]{subsubsection.8.11.2}{Data and Inode Placement}{subsection.8.11}% 185
+\BOOKMARK [3][-]{subsubsection.8.11.3}{Fast File System \(FFS\)}{subsection.8.11}% 186
+\BOOKMARK [3][-]{subsubsection.8.11.4}{Cylinder Groups}{subsection.8.11}% 187
+\BOOKMARK [3][-]{subsubsection.8.11.5}{Space Allocation in Cylinder Groups}{subsection.8.11}% 188
+\BOOKMARK [3][-]{subsubsection.8.11.6}{More FFS Solutions}{subsection.8.11}% 189
+\BOOKMARK [2][-]{subsection.8.12}{The Linux Second Extended File System \(EXT2\)}{section.8}% 190
+\BOOKMARK [2][-]{subsection.8.13}{Fast File System: Consistency Issues}{section.8}% 191
+\BOOKMARK [3][-]{subsubsection.8.13.1}{Fast File System Observations}{subsection.8.13}% 192
+\BOOKMARK [2][-]{subsection.8.14}{Log Structured File System \(LSF\)}{section.8}% 193
+\BOOKMARK [3][-]{subsubsection.8.14.1}{LFS Reads}{subsection.8.14}% 194
+\BOOKMARK [2][-]{subsection.8.15}{NTFS \(Windows\)}{section.8}% 195
+\BOOKMARK [3][-]{subsubsection.8.15.1}{Master File Table Record}{subsection.8.15}% 196
+\BOOKMARK [3][-]{subsubsection.8.15.2}{Master File Table Record for a Small Directory}{subsection.8.15}% 197
+\BOOKMARK [2][-]{subsection.8.16}{Better I/O performance through parallelism}{section.8}% 198

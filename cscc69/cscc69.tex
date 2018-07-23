@@ -1798,10 +1798,291 @@ The Idea is that we should spread the work across several disks.
 
 \paragraph{RAID Level 5} Considering 5 disks again, now the dedicated disk for reconstructing failing disks will have its storage spread out to all the other disks.
 
+\newpage
 
 
+\section{Tuesday, July 17, 2018}
+
+\subsection{Types of Resources}
+
+\paragraph{Reusable} These resources can be used by one process at a time, released and used by antoher process. This includes printers, memory, processors, files, locks, semaphores, and monitors.
+
+\paragraph{Consumable} These resources are dynamically created and destroyed, and can only be allocated once. Some examples are interrupts, signals, and messages.
 
 
+\subsection{Not just an OS Problem}
+
+There was a law passed by Kansas Legislature in the early 20th century.\\
+\\
+"When two trains approach each other at a corssing, both shall come to a full stop and neither shall start upon again until the other has gone"
+
+\subsection{Deadlock Defined}
+
+A deadlock is the \textbf{permanent} blocking of a set of processes that either compete for system resources or communicate with each other.
+\\
+\\
+Each process in the set is blocked, waiting for an event which can only be caused by another process in the set. Key points here are that resources are finite and may be held by other waiting processes, and processes wait if a resource they need is unavailable.
+
+\subsection{Example of a Deadlock}
+
+Suppose processes $P$ and $Q$ need (reusable) resources $A$ and $B$.\\
+\\
+$P$ gets resource $A$ and $Q$ gets resource $B$, but now $P$ wants to get $B$ and $Q$ wants to get $A$, but they can't because the other process is using it.
+\\
+\\
+If this is drawn out in a diagram, a deadlock will result in a loop.
+
+\subsection{Dining Philosophers}
+
+A philosopher needs two forks to eat. If the protocol for all of them is to grab the right fork and then the left fork when hungry, this can cause a deadlock. (Note that this does not guarantee a deadlock, but it can happen, for example, if the philosophers all get hungry at the same time and they all pick up their left fork, there is no more right forks to pick up and they will all be stuck in a deadlock)
+
+\subsection{Conditions for Deadlock}
+
+These are the necessary conditions for a Deadlock
+
+\begin{enumerate}
+  \item \textbf{Mutual Exclusion}, So that only one process may use a resource at a time
+  \item \textbf{Hold and wait}, a process may hold allocated resources while awaiting to be assigned other resources
+  \item \textbf{No preemption}, No resource can be forcibly removed from a process holding it.
+\end{enumerate}
+
+
+There is also
+
+\paragraph{Circular Wait} which is a closed chain of processes exist, such that each process holds at least one resource needed by the next process in the chain.
+
+Together, these 4 conditions are necessary and sufficient for a deadlock (circular wait is the only condition that is sufficient, but not necessary).
+
+\subsection{Solutions to Deadlocks}
+
+\subsubsection{Deadlock Prevention}
+
+Ensure one of the 4 conditions doesn't occur
+\paragraph{Preventing Mutual Exclusion} This one is not feasible, as it is often required for correctness
+
+\paragraph{Preventing Hold and Wait} This is only getting the resources when they are all available at the same time. This is flawed as it may cause starvation due to the resources not being available all at the same time, may hold resources for a long time without using them which can block other processes. The processes may not know all resource requirements in advance, and may also have opportunities to use alternative resources, but may not take it with this opportunity. An alternative is to release all currently-held resources when a new one is needed, then make a request for the entire set of resources once again (so all the resources and the new one), but this may also cause a deadlock by rolling back their work.
+
+\paragraph{Preventing No-Preemption} This is forcibly removing a resource from one process and assign it to another. However you may need to save the state of the process losing the resource so it can recover it later, we may need to rollback to an either state, and this method is also impossible for consumable resources.
+
+\paragraph{Preventing Circular Waiting} Assign a linear ordering to resource types and require that a process holding a resource of one type, $R$, can only request resources that follow $R$ in the ordering.
+
+\underline{Ex. of Preventing Circular-wait}
+
+Let's define that $R_i$ precedes $R_j$ if $i < j$.
+\\
+\\
+Let's consider the example of two processes, $P$ and $Q$, and resources $R_i$ and $R_j$. For a deadlock to occur, we need process $P$ to hold $R_i$ and request $R_j$, while process $Q$ holds $R_j$ and requests $R_i$.
+\\
+\\
+If we consider these both to be true, it implies that $i<j$ from process $P$'s request and that $j<i$ from process $Q$'s request, this is impossible, so deadlocks are impossible with this method.
+\\
+\\
+However, it can be hard to come up with a total order when there are lots of resource types
+
+\subsubsection{Deadlock Avoidance}
+
+All prevention strategies are unsatisfactory in some situations. \textit{Avoidance} allows the first three conditions to occur, but orders events to ensure that circular wait does not occur. This however, requires knowledge of future resource requests to decide what order to choose, and the amount and type of information varies by algorithm.
+\\
+\\
+There are two avoidance strategies
+
+\begin{enumerate}
+  \item Do not start a process if its maximum resource requirements, together with the maximum needs of all processes already running, exceed the total system resources. This approach however, is very pessimistic, and assumes that all processes will need all their resources at the same time.
+
+  \item Do not grant an individual resource request if it might lead to a deadlock.
+\end{enumerate}
+
+\subsubsection{Safe States}
+
+A state is \textbf{safe} if there is at least one sequence of process executions that does not lead to deadlock, \textit{even if every process requests their maximum allocation immediately}.
+
+
+\subsubsection{Unsafe States and Algorithm}
+
+A unsafe state is one which is not safe. This is because it's just risky and a deadlock could happen, but it does not necessary imply a deadlock. It's just unsafe.
+\\
+\\
+The \textbf{Deadlock} avoidance algorithm is as follows:
+\\
+For every resource request
+\begin{enumerate}
+    \item Update the state assuming that request is granted
+    \item Check if the new state is safe
+    \item If the state is safe, continue
+    \item If the state is not safe, then restore the old state and block the process until it is safe to grant the request
+\end{enumerate}
+
+This is called the \textbf{Banker's Algorithm}, and in it, processes must declare their maximum needs.
+
+\subsubsection{Restrictions on Avoidance}
+
+Maximum resource requirements for each process must be known in advance. Processes must also be independent, so that if the order of execution is constrained by synchronization requirements, then the system is not free to choose a safe sequence.
+\\
+\\
+Avoidance also requires a fixed number of resources to allocate.
+
+\subsubsection{Deadlock Detection and Recovery}
+
+Prevention and avoidance is awkward and costly. Algorithms need to be cautious, thus, will not maximize the utilization of its resources.
+\\
+\\
+Instead, allow deadlocks to occur, but detect when this happens and find a way to break it.  So this new approach is to check for the circular wait condition periodically.
+\\
+\\
+But how do we detect a deadlock? We draw \textbf{Resource Allocation Graphs}, and check for cycles within that. These are directed graphs where all processes and resources are nodes, and there is an edge between a process node $A$ to a resource node $B$ if process $A$ requests and is waiting for resource $B$, and there is an edge between a resource node $C$ and a process node $D$ if the resource $C$ is currently being held (or used) by a process $D$.
+
+\subsubsection{Deadlock Recovery}
+
+Here are solutions when a deadlock is found
+
+\paragraph{Drastic} Kill all deadlocked processes
+
+\paragraph{Painful} Backup and restart deadlocked processes (hopefully, non-determinism will keep the deadlock from repeating)
+
+\paragraph{Better} Selectively kill deadlocked processes until the cycle is broken. This means re-running the detection algorithm after each kill.
+
+\paragraph{Tricky} Selectively preempt resources until cycle is broken. However this method requires that processes must be rolled back.
+
+\subsection{Reality Check}
+
+No single strategy for dealing with deadlocks is appropriate for all resources in all situations. All of the strategies are costly in terms of computation overhead, or restricting use of resources.\\
+\\
+Most operating systems employ the \textbf{Ostrich Algorithm}, which is to ignore the problem and hope it doesn't happen again.
+
+\subsubsection{Why does the Ostrich Algorithm Work?}
+
+Recall the causes of a deadlock:
+\begin{itemize}
+    \item Resources are finite
+    \item Processes wait if a resource they need is unavailable
+    \item Resources may be held by other waiting processes
+\end{itemize}
+
+Prevention, Avoidance, and Detection mostly deal with the last 2 points, and Modern operating systems virtualize most physical resources, eliminating the first problem. Some logical resources can't be virtualized, such as bank accounts or the process table, these are protected by synchronization objects, which are now the only resources we can deadlock on
+
+\subsubsection{What is atomicity?}
+
+Consider the ATM banking example from earlier.
+\\
+\\
+What if we needed to transfer funds between accounts? There is a withdrawal of funds from one account, and a deposit of funds into the other.
+\\
+\\
+These operations should appear as a single \textbf{atomic} operation. Another process reading the account should see either both updates, or none. So either both operations complete, or neither does.
+
+\subsubsection{Why would atomicity fail?}
+
+Suppose fund transfer is implemented by our known withdraw and deposit functions using locks. What can go wrong?
+\\
+\\
+Well lets say that the whole system crashes during the middle of the transfer is complete, this would result in only half of the work being done, which is not atomic.
+
+\subsubsection{Definitions for Transactions}
+
+\paragraph{Transaction} A collection of operations that performs a single logical function and are executed atomically. In this course, it involves a sequence of read and write operations terminated by a \textbf{commit} or an \textbf{abort}.
+
+\paragraph{Committed} A transaction that has completed successfully, this means that all operations took effect. Once committed, a transaction cannot be undone.
+
+\paragraph{Aborted} A transaction that did not complete normally. This means that none of the operations took effect
+
+\subsubsection{How to ensure atomicity in the face of failures?}
+
+Note that reads don't really matter, because it doesn't change anything, so only writes happen.
+\\
+\\
+What we can do is write all intended operations to a log on a stable storage. Then we execute the actual operation. This can be used to undo\slash redo any transaction, allowing recovery from arbitrary failures.
+
+\subsubsection{Write-ahead logging}
+
+Before performing any operations on the data, write the intended operations to a log on stable storage. The Log records identify the transaction, the data item, and the old and new values. Special records indicate the start and commit (or abort) of a transaction. The log can then be used to undo or redo the effect of any transaction, allowing recovery from arbitrary failures.
+
+\subsubsection{Problems with logging}
+
+\begin{itemize}
+  \item It is very time-consuming to process an entire log after a failure.
+  \item Logs require a large amount of space
+  \item Performance penalty -- each write requires a log update befoore the data update.
+\end{itemize}
+
+Checkpoints help with the first two problems
+\begin{itemize}
+  \item Periodically write all updates to log and data to stable storage; write a checkpoint entry to the log
+  \item Recovery then only needs to look at the log since the last checkpoint.
+\end{itemize}
+
+\subsection{Concurrent Transactions}
+
+Transactions must appear to execute in some arbitrary but serial order.
+
+\paragraph{Solution 1} All transactions execute in a critical section, with a single common lock (or mutex semaphore) to protect access to all shared data. However, most transactions will access different data and this unnecessarily limits concurrency.
+
+\paragraph{Solution 2} Allow operations from multiple transactions to overlap, as long as they don't conflict. But the end result of a set of transactions in this way must be indistinguishable from Solution 1.
+
+\subsubsection{Confliciting Operations}
+
+Operations in two different transactions conflict if both access the same data item and at least one is a write. Non-conflicting operations can be reordered (swapped) without changing the outcome. If a serial schedule can be obtained by swapping non-conflicting operations, then the original schedule is \textbf{conflict-serializable}.
+
+\subsubsection{Conflict Serializability Example}
+
+Consider two processes $T_0$ and $T_1$, lets say $T_0$ reads and writes to a file $A$, then $T_1$ reads and writes to a file $A$, then $T_0$ reads and writes to a file $B$, then $T_1$ reads and writes to a file $B$.
+\\
+\\
+This serial execution is conflict serializable with the execution of $T_0$ doing all its operations first then $T_1$ doing all of it's operations last, since $T_1$ does all of its operations last anyways.
+
+\subsubsection{Ensuring serializability}
+
+\paragraph{Two-phase locking} This method includes individual data items having their own locks. Each transaction has a growing phase and a shrinking phase, but does not guarantee to be deadlock free.
+\paragraph{Growing} A transaction may obtain locks, but may not release any lock
+\paragraph{Shrinking} A transaction may release locks, but may not acquire any new locks.
+
+\subsection{Timestamps}
+
+\subsubsection{Timestamp Protocols}
+
+Each transaction gets a unique \textbf{timestamp} before it start executing. Transactions with "earlier" timestamps must appear to complete before any later transactions.
+\\
+\\
+Each data item has two timestamps
+\paragraph{W-TS} The largest timestamp of any transaction that successfully wrote the item
+\paragraph{R-TS} The largest timestamp of any transaction that successfully read the item
+
+\subsubsection{Timestamp Ordering}
+
+\paragraph{Read Timestamps} If the transaction has an "earlier" timestamp than W-TS on data, then transaction will end up reading a value that has already overwritten, since the read is going to happen before the write. In this case, we abort the transaction and restart with a new timestamp for read.
+
+\paragraph{Write Timestamps} If the transaction has an "earlier" timestamp than R-TS (W-TS) on the data, then the value produced by this write should have been read (overwritten) already. We solve this by also aborting and restarting.
+
+Note that some transactions may "starve" if repeatedly aborted and restarted.
+
+\subsection{Deadlock and Starvation}
+
+A set of threads is in a \textbf{deadlocked} state when ever process in the set is waiting for an event that can be caused only by another process in the set.
+\\
+\\
+A thread suffering \textbf{starvation (or indefinite postponement)} if it is waiting indefinitely because other threads are preferred in some way.
+
+\subsubsection{Communication Deadlocks}
+
+Messages between communicating processes are a consumable resource.
+\\
+\\
+\underline{Ex.}\\
+Process $B$ is waiting for a request, and Process $A$ sends a request to $B$, and waits for a reply, and Process $A$'s request gets lost in the network. Then Process $B$ keeps waiting for a request and $A$ keeps waiting for a reply, this is a deadlock.
+\\
+\\
+The solution is to use timeouts and portocols to detect duplicate messages
+
+\subsubsection{Livelock}
+
+"Alive, but not doing any work"
+\\
+\\
+Occurs when a set of processes continually try some failed operation and prevent other processes in the set from making process. This is functionally equivalent to a deadlock.
+\\
+\\
+\underline{Ex.} Consider a set of processes retrying a failed \codeword{fork()}. Let's say that the operation is done when the process table is full, so no process exits, so \codeword{fork()} keeps failing
+
+\newpage
 
 
 

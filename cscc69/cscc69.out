@@ -196,3 +196,36 @@
 \BOOKMARK [3][-]{subsubsection.8.15.1}{Master File Table Record}{subsection.8.15}% 196
 \BOOKMARK [3][-]{subsubsection.8.15.2}{Master File Table Record for a Small Directory}{subsection.8.15}% 197
 \BOOKMARK [2][-]{subsection.8.16}{Better I/O performance through parallelism}{section.8}% 198
+\BOOKMARK [1][-]{section.9}{Tuesday, July 17, 2018}{}% 199
+\BOOKMARK [2][-]{subsection.9.1}{Types of Resources}{section.9}% 200
+\BOOKMARK [2][-]{subsection.9.2}{Not just an OS Problem}{section.9}% 201
+\BOOKMARK [2][-]{subsection.9.3}{Deadlock Defined}{section.9}% 202
+\BOOKMARK [2][-]{subsection.9.4}{Example of a Deadlock}{section.9}% 203
+\BOOKMARK [2][-]{subsection.9.5}{Dining Philosophers}{section.9}% 204
+\BOOKMARK [2][-]{subsection.9.6}{Conditions for Deadlock}{section.9}% 205
+\BOOKMARK [2][-]{subsection.9.7}{Solutions to Deadlocks}{section.9}% 206
+\BOOKMARK [3][-]{subsubsection.9.7.1}{Deadlock Prevention}{subsection.9.7}% 207
+\BOOKMARK [3][-]{subsubsection.9.7.2}{Deadlock Avoidance}{subsection.9.7}% 208
+\BOOKMARK [3][-]{subsubsection.9.7.3}{Safe States}{subsection.9.7}% 209
+\BOOKMARK [3][-]{subsubsection.9.7.4}{Unsafe States and Algorithm}{subsection.9.7}% 210
+\BOOKMARK [3][-]{subsubsection.9.7.5}{Restrictions on Avoidance}{subsection.9.7}% 211
+\BOOKMARK [3][-]{subsubsection.9.7.6}{Deadlock Detection and Recovery}{subsection.9.7}% 212
+\BOOKMARK [3][-]{subsubsection.9.7.7}{Deadlock Recovery}{subsection.9.7}% 213
+\BOOKMARK [2][-]{subsection.9.8}{Reality Check}{section.9}% 214
+\BOOKMARK [3][-]{subsubsection.9.8.1}{Why does the Ostrich Algorithm Work?}{subsection.9.8}% 215
+\BOOKMARK [3][-]{subsubsection.9.8.2}{What is atomicity?}{subsection.9.8}% 216
+\BOOKMARK [3][-]{subsubsection.9.8.3}{Why would atomicity fail?}{subsection.9.8}% 217
+\BOOKMARK [3][-]{subsubsection.9.8.4}{Definitions for Transactions}{subsection.9.8}% 218
+\BOOKMARK [3][-]{subsubsection.9.8.5}{How to ensure atomicity in the face of failures?}{subsection.9.8}% 219
+\BOOKMARK [3][-]{subsubsection.9.8.6}{Write-ahead logging}{subsection.9.8}% 220
+\BOOKMARK [3][-]{subsubsection.9.8.7}{Problems with logging}{subsection.9.8}% 221
+\BOOKMARK [2][-]{subsection.9.9}{Concurrent Transactions}{section.9}% 222
+\BOOKMARK [3][-]{subsubsection.9.9.1}{Confliciting Operations}{subsection.9.9}% 223
+\BOOKMARK [3][-]{subsubsection.9.9.2}{Conflict Serializability Example}{subsection.9.9}% 224
+\BOOKMARK [3][-]{subsubsection.9.9.3}{Ensuring serializability}{subsection.9.9}% 225
+\BOOKMARK [2][-]{subsection.9.10}{Timestamps}{section.9}% 226
+\BOOKMARK [3][-]{subsubsection.9.10.1}{Timestamp Protocols}{subsection.9.10}% 227
+\BOOKMARK [3][-]{subsubsection.9.10.2}{Timestamp Ordering}{subsection.9.10}% 228
+\BOOKMARK [2][-]{subsection.9.11}{Deadlock and Starvation}{section.9}% 229
+\BOOKMARK [3][-]{subsubsection.9.11.1}{Communication Deadlocks}{subsection.9.11}% 230
+\BOOKMARK [3][-]{subsubsection.9.11.2}{Livelock}{subsection.9.11}% 231

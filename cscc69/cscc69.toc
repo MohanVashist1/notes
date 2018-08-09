@@ -1,337 +1,393 @@
 \select@language {english}
-\contentsline {section}{\numberline {1}Tuesday, May 8, 2018}{7}{section.1}
-\contentsline {subsection}{\numberline {1.1}What is an operating system?}{7}{subsection.1.1}
-\contentsline {paragraph}{User Mode}{7}{section*.2}
-\contentsline {paragraph}{Kernel}{7}{section*.3}
-\contentsline {subsection}{\numberline {1.2}Storage Hierarchy}{7}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}Storage Structure}{7}{subsection.1.3}
-\contentsline {subsection}{\numberline {1.4}Caching}{7}{subsection.1.4}
-\contentsline {subsection}{\numberline {1.5}Concurrency}{7}{subsection.1.5}
-\contentsline {subsection}{\numberline {1.6}C Programming and Memory}{8}{subsection.1.6}
-\contentsline {subsection}{\numberline {1.7}The Process Concept}{8}{subsection.1.7}
-\contentsline {subsection}{\numberline {1.8}Process Data Structures}{8}{subsection.1.8}
-\contentsline {subsection}{\numberline {1.9}Process Control Block}{8}{subsection.1.9}
-\contentsline {paragraph}{Process state}{8}{section*.4}
-\contentsline {paragraph}{Program counter}{8}{section*.5}
-\contentsline {paragraph}{CPU Registers}{8}{section*.6}
-\contentsline {paragraph}{CPU scheduling information}{9}{section*.7}
-\contentsline {paragraph}{Memory Management Info}{9}{section*.8}
-\contentsline {paragraph}{I/\penalty \exhyphenpenalty O status information}{9}{section*.9}
-\contentsline {subsection}{\numberline {1.10}Process state and state changes}{9}{subsection.1.10}
-\contentsline {subsection}{\numberline {1.11}State Queues}{9}{subsection.1.11}
-\contentsline {subsection}{\numberline {1.12}PCBs and State Queues}{9}{subsection.1.12}
-\contentsline {subsection}{\numberline {1.13}Context Switch}{9}{subsection.1.13}
-\contentsline {paragraph}{Context Switch}{9}{section*.10}
-\contentsline {subsection}{\numberline {1.14}Operations on Processes}{9}{subsection.1.14}
-\contentsline {subsubsection}{\numberline {1.14.1}Process Creation}{10}{subsubsection.1.14.1}
-\contentsline {subsubsection}{\numberline {1.14.2}Process Termination}{10}{subsubsection.1.14.2}
-\contentsline {subsection}{\numberline {1.15}Process Creation}{10}{subsection.1.15}
-\contentsline {subsubsection}{\numberline {1.15.1}Unix}{10}{subsubsection.1.15.1}
-\contentsline {subsubsection}{\numberline {1.15.2}Why fork?}{10}{subsubsection.1.15.2}
-\contentsline {subsubsection}{\numberline {1.15.3}Unix Shells}{10}{subsubsection.1.15.3}
-\contentsline {subsection}{\numberline {1.16}Example: Concurrent Web Server}{10}{subsection.1.16}
-\contentsline {subsection}{\numberline {1.17}Parallel Programming}{11}{subsection.1.17}
-\contentsline {subsection}{\numberline {1.18}Example: Concurrent Servers}{11}{subsection.1.18}
-\contentsline {subsection}{\numberline {1.19}Rethinking Processes}{11}{subsection.1.19}
-\contentsline {subsection}{\numberline {1.20}Threads}{11}{subsection.1.20}
-\contentsline {subsection}{\numberline {1.21}Thread Interface}{11}{subsection.1.21}
-\contentsline {subsection}{\numberline {1.22}Thread Scheduling}{11}{subsection.1.22}
-\contentsline {subsection}{\numberline {1.23}Threads Summary}{12}{subsection.1.23}
-\contentsline {subsection}{\numberline {1.24}Cooperating Processes}{12}{subsection.1.24}
-\contentsline {subsection}{\numberline {1.25}Interprocess Communication}{12}{subsection.1.25}
-\contentsline {section}{\numberline {2}Tuesday, May 15, 2018}{13}{section.2}
-\contentsline {subsection}{\numberline {2.1}Bootstrapping}{13}{subsection.2.1}
-\contentsline {paragraph}{BIOS}{13}{section*.11}
-\contentsline {subsection}{\numberline {2.2}Operating System Startup}{13}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Memory Layout}{13}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}From Program to Process}{13}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Unix Shells}{13}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Requesting OS Services}{14}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Boundary Crossings}{14}{subsection.2.7}
-\contentsline {subsection}{\numberline {2.8}System Calls for Process Management}{14}{subsection.2.8}
-\contentsline {paragraph}{fork}{14}{section*.12}
-\contentsline {paragraph}{waitpid}{14}{section*.13}
-\contentsline {paragraph}{execve}{14}{section*.14}
-\contentsline {paragraph}{exit}{14}{section*.15}
-\contentsline {subsection}{\numberline {2.9}System Calls for File Manamgement}{14}{subsection.2.9}
-\contentsline {subsection}{\numberline {2.10}Systems Call Example}{15}{subsection.2.10}
-\contentsline {subsection}{\numberline {2.11}System Call Interface}{15}{subsection.2.11}
-\contentsline {subsection}{\numberline {2.12}System Call Operation}{15}{subsection.2.12}
-\contentsline {subsection}{\numberline {2.13}Introduction to Synchronization}{15}{subsection.2.13}
-\contentsline {subsubsection}{\numberline {2.13.1}Motivating Example}{15}{subsubsection.2.13.1}
-\contentsline {subsubsection}{\numberline {2.13.2}Interlevced Schedules}{16}{subsubsection.2.13.2}
-\contentsline {subsubsection}{\numberline {2.13.3}What went wrong}{16}{subsubsection.2.13.3}
-\contentsline {subsubsection}{\numberline {2.13.4}Revisiting the Example}{16}{subsubsection.2.13.4}
-\contentsline {subsubsection}{\numberline {2.13.5}Mutal Exclusion}{16}{subsubsection.2.13.5}
-\contentsline {subsubsection}{\numberline {2.13.6}What program data is shared between threads?}{16}{subsubsection.2.13.6}
-\contentsline {subsubsection}{\numberline {2.13.7}The Critical Section Problem}{16}{subsubsection.2.13.7}
-\contentsline {subsubsection}{\numberline {2.13.8}Critical Section Requirements}{17}{subsubsection.2.13.8}
-\contentsline {subsubsection}{\numberline {2.13.9}Some Assumptions and Notation}{17}{subsubsection.2.13.9}
-\contentsline {subsubsection}{\numberline {2.13.10}2-Thread Solutions: First Attempt}{17}{subsubsection.2.13.10}
-\contentsline {subsubsection}{\numberline {2.13.11}2-Thread Solutions: Second Attempt}{17}{subsubsection.2.13.11}
-\contentsline {subsubsection}{\numberline {2.13.12}2-Thread Solutions: Third Attempt}{18}{subsubsection.2.13.12}
-\contentsline {subsubsection}{\numberline {2.13.13}Synchronization Hardware}{18}{subsubsection.2.13.13}
-\contentsline {subsubsection}{\numberline {2.13.14}Atomic Instructions: Test-and-Set Lock (TSL)}{18}{subsubsection.2.13.14}
-\contentsline {section}{\numberline {3}Tuesday, May 22, 2018}{19}{section.3}
-\contentsline {subsection}{\numberline {3.1}Producer and Consumer}{19}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Semaphores}{19}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Types of Semaphores}{19}{subsubsection.3.2.1}
-\contentsline {subsection}{\numberline {3.3}The reader, writer problem}{20}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Monitors}{20}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}Bounded Buffer Problem}{21}{subsubsection.3.4.1}
-\contentsline {subsection}{\numberline {3.5}Process Scheduling}{21}{subsection.3.5}
-\contentsline {subsubsection}{\numberline {3.5.1}What happens on a dispatch /\penalty \exhyphenpenalty context switch?}{22}{subsubsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.2}Process Life Cycle}{22}{subsubsection.3.5.2}
-\contentsline {paragraph}{I/\penalty \exhyphenpenalty O - Bound Processes}{22}{section*.16}
-\contentsline {paragraph}{CPU - Bound Processes}{22}{section*.17}
-\contentsline {subsubsection}{\numberline {3.5.3}What is processor scheduling?}{22}{subsubsection.3.5.3}
-\contentsline {subsubsection}{\numberline {3.5.4}Scheduling Goals}{23}{subsubsection.3.5.4}
-\contentsline {subsubsection}{\numberline {3.5.5}Types of Scheduling}{23}{subsubsection.3.5.5}
-\contentsline {paragraph}{Non-preemptive scheduling}{23}{section*.18}
-\contentsline {paragraph}{Preemptive Scheduling}{23}{section*.19}
-\contentsline {section}{\numberline {4}Tuesday, May 29, 2018}{24}{section.4}
-\contentsline {subsection}{\numberline {4.1}Problem: Dining Philosophers}{24}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Scheduling Algorithms}{24}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}FCFS}{24}{subsubsection.4.2.1}
-\contentsline {paragraph}{Convoy effect}{24}{section*.20}
-\contentsline {subsubsection}{\numberline {4.2.2}SJF}{24}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.3}Round Robin}{25}{subsubsection.4.2.3}
-\contentsline {subsubsection}{\numberline {4.2.4}Mars Rover Pathfinder Bug Example}{25}{subsubsection.4.2.4}
-\contentsline {subsection}{\numberline {4.3}What do real systems do?}{25}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Multi-Level Queue Scheduling}{25}{subsubsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.2}Feedback Scheduling}{25}{subsubsection.4.3.2}
-\contentsline {subsubsection}{\numberline {4.3.3}Timesharing in Linux 2.8}{26}{subsubsection.4.3.3}
-\contentsline {section}{\numberline {5}Tuesday, June 5, 2018}{27}{section.5}
-\contentsline {subsection}{\numberline {5.1}Memory Management}{27}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}Requirements}{27}{subsubsection.5.1.1}
-\contentsline {paragraph}{Relocation}{27}{section*.21}
-\contentsline {paragraph}{Logical Organization}{27}{section*.22}
-\contentsline {paragraph}{Protection}{27}{section*.23}
-\contentsline {paragraph}{Sharing}{27}{section*.24}
-\contentsline {paragraph}{Physical Organization}{27}{section*.25}
-\contentsline {subsubsection}{\numberline {5.1.2}Meeting the Requirements}{27}{subsubsection.5.1.2}
-\contentsline {subsubsection}{\numberline {5.1.3}Address Binding}{27}{subsubsection.5.1.3}
-\contentsline {subsubsection}{\numberline {5.1.4}When are addresses bound?}{28}{subsubsection.5.1.4}
-\contentsline {paragraph}{Compile Time?}{28}{section*.26}
-\contentsline {paragraph}{Load Time?}{28}{section*.27}
-\contentsline {paragraph}{Execution Time?}{28}{section*.28}
-\contentsline {subsubsection}{\numberline {5.1.5}Address Translation: Logical and physical addresses}{28}{subsubsection.5.1.5}
-\contentsline {subsubsection}{\numberline {5.1.6}Fixed Partitioning}{28}{subsubsection.5.1.6}
-\contentsline {subsubsection}{\numberline {5.1.7}Dynamic Partitioning}{29}{subsubsection.5.1.7}
-\contentsline {subsubsection}{\numberline {5.1.8}Heap Manamgement}{29}{subsubsection.5.1.8}
-\contentsline {subsubsection}{\numberline {5.1.9}Tracking Memory Allocation}{29}{subsubsection.5.1.9}
-\contentsline {subsubsection}{\numberline {5.1.10}Placement Algorithms}{29}{subsubsection.5.1.10}
-\contentsline {paragraph}{First-fit}{30}{section*.29}
-\contentsline {paragraph}{Best-fit}{30}{section*.30}
-\contentsline {paragraph}{Worst-fit}{30}{section*.31}
-\contentsline {paragraph}{Quick-fit}{30}{section*.32}
-\contentsline {subsubsection}{\numberline {5.1.11}Problems with Partitioning}{30}{subsubsection.5.1.11}
-\contentsline {subsubsection}{\numberline {5.1.12}Paging}{30}{subsubsection.5.1.12}
-\contentsline {subsubsection}{\numberline {5.1.13}Address Translation}{30}{subsubsection.5.1.13}
-\contentsline {subsubsection}{\numberline {5.1.14}Address Translation for Paging}{31}{subsubsection.5.1.14}
-\contentsline {subsubsection}{\numberline {5.1.15}Page Table Entries (PTE)}{31}{subsubsection.5.1.15}
-\contentsline {subsubsection}{\numberline {5.1.16}Page Lookups}{32}{subsubsection.5.1.16}
-\contentsline {subsubsection}{\numberline {5.1.17}Translation Lookaside Buffer}{32}{subsubsection.5.1.17}
-\contentsline {subsubsection}{\numberline {5.1.18}Managing TLBs}{32}{subsubsection.5.1.18}
-\contentsline {section}{\numberline {6}Tuesday, June 12, 2018}{34}{section.6}
-\contentsline {subsection}{\numberline {6.1}Paging}{34}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Page Table Management}{34}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}Multilevel Page Tables (MLPT)}{35}{subsubsection.6.2.1}
-\contentsline {subsection}{\numberline {6.3}Inverted Page Tables}{35}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Efficient Translations}{35}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}Page allocation and eviction}{36}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}Page Faults}{36}{subsection.6.6}
-\contentsline {subsection}{\numberline {6.7}Policy Decisions}{36}{subsection.6.7}
-\contentsline {paragraph}{Fetch Policy}{36}{section*.33}
-\contentsline {paragraph}{Placement Policy}{36}{section*.34}
-\contentsline {paragraph}{Replacement Policy}{36}{section*.35}
-\contentsline {subsection}{\numberline {6.8}Fetch Policy}{36}{subsection.6.8}
-\contentsline {subsubsection}{\numberline {6.8.1}Demand Paging}{36}{subsubsection.6.8.1}
-\contentsline {subsubsection}{\numberline {6.8.2}Prepaging (aka Prefetching)}{37}{subsubsection.6.8.2}
-\contentsline {subsection}{\numberline {6.9}Placement Policy}{37}{subsection.6.9}
-\contentsline {paragraph}{NUMA (non-uniform memory access) multiprocessors}{37}{section*.36}
-\contentsline {paragraph}{Cache performance}{37}{section*.37}
-\contentsline {subsection}{\numberline {6.10}Replacement Policy}{37}{subsection.6.10}
-\contentsline {subsubsection}{\numberline {6.10.1}Evicting the best page}{37}{subsubsection.6.10.1}
-\contentsline {paragraph}{Cold Misses}{37}{section*.38}
-\contentsline {paragraph}{Capacity Misses}{37}{section*.39}
-\contentsline {subsubsection}{\numberline {6.10.2}Belady's Algorithm (aka OPT aka MIN)}{37}{subsubsection.6.10.2}
-\contentsline {subsubsection}{\numberline {6.10.3}What are possible replacement algorithms?}{38}{subsubsection.6.10.3}
-\contentsline {subsubsection}{\numberline {6.10.4}Not-Recently-Used (NRU)}{38}{subsubsection.6.10.4}
-\contentsline {subsubsection}{\numberline {6.10.5}First-In-First-Out (FIFO)}{38}{subsubsection.6.10.5}
-\contentsline {subsubsection}{\numberline {6.10.6}Second-Chance}{39}{subsubsection.6.10.6}
-\contentsline {subsubsection}{\numberline {6.10.7}Second-Chance Implementaiton}{39}{subsubsection.6.10.7}
-\contentsline {subsection}{\numberline {6.11}Eviction Algorithms}{39}{subsection.6.11}
-\contentsline {subsubsection}{\numberline {6.11.1}Least Recently Used (LRU)}{39}{subsubsection.6.11.1}
-\contentsline {subsubsection}{\numberline {6.11.2}Counting-based replacement}{40}{subsubsection.6.11.2}
-\contentsline {paragraph}{Least-Frequently-Used (LFU)}{40}{section*.40}
-\contentsline {paragraph}{Most-Frequently-Used (MFU)}{40}{section*.41}
-\contentsline {subsubsection}{\numberline {6.11.3}Comparing Replacement Algorithms}{40}{subsubsection.6.11.3}
-\contentsline {subsubsection}{\numberline {6.11.4}Fixed vs. Variable Space}{40}{subsubsection.6.11.4}
-\contentsline {paragraph}{Fixed Space Algorithms}{40}{section*.42}
-\contentsline {paragraph}{Variable Space Algorithms}{40}{section*.43}
-\contentsline {subsubsection}{\numberline {6.11.5}Working Set Model}{40}{subsubsection.6.11.5}
-\contentsline {subsubsection}{\numberline {6.11.6}Working Set Problems}{41}{subsubsection.6.11.6}
-\contentsline {subsection}{\numberline {6.12}Page Fault Frequency}{41}{subsection.6.12}
-\contentsline {subsubsection}{\numberline {6.12.1}Thrashing}{42}{subsubsection.6.12.1}
-\contentsline {subsubsection}{\numberline {6.12.2}Windows XP Paging Policy}{42}{subsubsection.6.12.2}
-\contentsline {subsubsection}{\numberline {6.12.3}Linux Paging Policy}{42}{subsubsection.6.12.3}
-\contentsline {section}{\numberline {7}Tuesday, July 3, 2018}{43}{section.7}
-\contentsline {subsection}{\numberline {7.1}File Systems}{43}{subsection.7.1}
-\contentsline {paragraph}{What do file systems do?}{43}{section*.44}
-\contentsline {subsection}{\numberline {7.2}File Management Systems}{43}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}File Concept}{43}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}File Types}{43}{subsection.7.4}
-\contentsline {subsubsection}{\numberline {7.4.1}File Operations}{43}{subsubsection.7.4.1}
-\contentsline {subsection}{\numberline {7.5}File Access Methods}{43}{subsection.7.5}
-\contentsline {paragraph}{Sequential Access}{43}{section*.45}
-\contentsline {paragraph}{Direct Access}{44}{section*.46}
-\contentsline {subsection}{\numberline {7.6}Handling operations on files}{44}{subsection.7.6}
-\contentsline {subsection}{\numberline {7.7}Shared open files}{44}{subsection.7.7}
-\contentsline {subsection}{\numberline {7.8}Directories}{44}{subsection.7.8}
-\contentsline {paragraph}{For users}{44}{section*.47}
-\contentsline {paragraph}{For the file system}{44}{section*.48}
-\contentsline {subsubsection}{\numberline {7.8.1}What is a directory at the OS level?}{44}{subsubsection.7.8.1}
-\contentsline {subsubsection}{\numberline {7.8.2}Operations on Directories}{45}{subsubsection.7.8.2}
-\contentsline {paragraph}{Search}{45}{section*.49}
-\contentsline {paragraph}{Create file}{45}{section*.50}
-\contentsline {paragraph}{Delete file}{45}{section*.51}
-\contentsline {paragraph}{List directory}{45}{section*.52}
-\contentsline {paragraph}{Update directory}{45}{section*.53}
-\contentsline {subsection}{\numberline {7.9}Path Name Translation}{45}{subsection.7.9}
-\contentsline {subsection}{\numberline {7.10}File System Implementation}{45}{subsection.7.10}
-\contentsline {subsubsection}{\numberline {7.10.1}Directory Implementation}{46}{subsubsection.7.10.1}
-\contentsline {paragraph}{Option 1: Linear List}{46}{section*.54}
-\contentsline {paragraph}{Option 2: Hash Table}{46}{section*.55}
-\contentsline {subsection}{\numberline {7.11}Disk Layout Strategies}{46}{subsection.7.11}
-\contentsline {subsubsection}{\numberline {7.11.1}Contiguous Allocation}{46}{subsubsection.7.11.1}
-\contentsline {subsubsection}{\numberline {7.11.2}Linked Allocation}{46}{subsubsection.7.11.2}
-\contentsline {subsubsection}{\numberline {7.11.3}Indexed Allocation: Unix Inodes}{46}{subsubsection.7.11.3}
-\contentsline {subsubsection}{\numberline {7.11.4}Unix Inodes and Path Search}{47}{subsubsection.7.11.4}
-\contentsline {subsubsection}{\numberline {7.11.5}Possible Directory Implementations}{47}{subsubsection.7.11.5}
-\contentsline {subsubsection}{\numberline {7.11.6}File Links}{47}{subsubsection.7.11.6}
-\contentsline {paragraph}{Symbolic or Soft Link}{47}{section*.56}
-\contentsline {paragraph}{Hard links}{47}{section*.57}
-\contentsline {subsubsection}{\numberline {7.11.7}Issues with Acyclic Graphs}{47}{subsubsection.7.11.7}
-\contentsline {paragraph}{Deletion: When can the space allocated to a shared file be deallocated and reused?}{48}{section*.58}
-\contentsline {subsection}{\numberline {7.12}File Sharing}{48}{subsection.7.12}
-\contentsline {subsubsection}{\numberline {7.12.1}Protection}{48}{subsubsection.7.12.1}
-\contentsline {subsubsection}{\numberline {7.12.2}Types of Access}{48}{subsubsection.7.12.2}
-\contentsline {subsubsection}{\numberline {7.12.3}Representing Protection}{48}{subsubsection.7.12.3}
-\contentsline {paragraph}{Access Control Lists (ACL)}{48}{section*.59}
-\contentsline {paragraph}{Capabilities}{49}{section*.60}
-\contentsline {subsubsection}{\numberline {7.12.4}ACLS and Capabilities}{49}{subsubsection.7.12.4}
-\contentsline {subsubsection}{\numberline {7.12.5}File Buffer Cache}{49}{subsubsection.7.12.5}
-\contentsline {subsubsection}{\numberline {7.12.6}Caching Writes}{49}{subsubsection.7.12.6}
-\contentsline {paragraph}{"write-behind"}{49}{section*.61}
-\contentsline {paragraph}{Battery backed-up RAM (NVRAM)}{49}{section*.62}
-\contentsline {paragraph}{Log-structured File System}{50}{section*.63}
-\contentsline {subsubsection}{\numberline {7.12.7}Read Ahead}{50}{subsubsection.7.12.7}
-\contentsline {section}{\numberline {8}Tuesday, July 10, 2018}{51}{section.8}
-\contentsline {subsection}{\numberline {8.1}File System Implementation}{51}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Disk Components}{51}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Disk service time components}{51}{subsection.8.3}
-\contentsline {subsection}{\numberline {8.4}Mixing workloads can be tricky}{51}{subsection.8.4}
-\contentsline {subsection}{\numberline {8.5}Components of disk access time}{51}{subsection.8.5}
-\contentsline {paragraph}{Seek}{51}{section*.64}
-\contentsline {paragraph}{Rotation}{51}{section*.65}
-\contentsline {paragraph}{Transfer}{51}{section*.66}
-\contentsline {subsubsection}{\numberline {8.5.1}Disks are Slow}{52}{subsubsection.8.5.1}
-\contentsline {subsection}{\numberline {8.6}OS design principles}{52}{subsection.8.6}
-\contentsline {paragraph}{minimize the number of disk accesses}{52}{section*.67}
-\contentsline {paragraph}{When using the disk, try to minimize access cost}{52}{section*.68}
-\contentsline {subsection}{\numberline {8.7}Disks are Messy}{52}{subsection.8.7}
-\contentsline {subsection}{\numberline {8.8}OS and Disk interaction}{52}{subsection.8.8}
-\contentsline {subsection}{\numberline {8.9}Logical Block Addressing}{52}{subsection.8.9}
-\contentsline {subsection}{\numberline {8.10}Disk Scheduling}{52}{subsection.8.10}
-\contentsline {paragraph}{FCFS (do nothing)}{53}{section*.69}
-\contentsline {paragraph}{SSTF (shorted seek time first)}{53}{section*.70}
-\contentsline {paragraph}{SCAN (elevator)}{53}{section*.71}
-\contentsline {paragraph}{C-SCAN}{53}{section*.72}
-\contentsline {paragraph}{LOOK}{53}{section*.73}
-\contentsline {paragraph}{C-LOOK}{53}{section*.74}
-\contentsline {subsubsection}{\numberline {8.10.1}Back to files and directories}{53}{subsubsection.8.10.1}
-\contentsline {subsubsection}{\numberline {8.10.2}Disk Layout Strategies}{53}{subsubsection.8.10.2}
-\contentsline {paragraph}{Contiguous Allocation}{53}{section*.75}
-\contentsline {paragraph}{Linked, or chained, structure}{53}{section*.76}
-\contentsline {paragraph}{Indexed structure (indirection, hierarchy)}{53}{section*.77}
-\contentsline {subsubsection}{\numberline {8.10.3}Indexed Allocation: Unix Inodes}{54}{subsubsection.8.10.3}
-\contentsline {subsubsection}{\numberline {8.10.4}Unix Inodes and Path Search}{54}{subsubsection.8.10.4}
-\contentsline {paragraph}{Note}{54}{section*.78}
-\contentsline {subsection}{\numberline {8.11}File System Implementation}{54}{subsection.8.11}
-\contentsline {subsubsection}{\numberline {8.11.1}Original Unix File System}{54}{subsubsection.8.11.1}
-\contentsline {subsubsection}{\numberline {8.11.2}Data and Inode Placement}{54}{subsubsection.8.11.2}
-\contentsline {subsubsection}{\numberline {8.11.3}Fast File System (FFS)}{55}{subsubsection.8.11.3}
-\contentsline {subsubsection}{\numberline {8.11.4}Cylinder Groups}{55}{subsubsection.8.11.4}
-\contentsline {subsubsection}{\numberline {8.11.5}Space Allocation in Cylinder Groups}{55}{subsubsection.8.11.5}
-\contentsline {subsubsection}{\numberline {8.11.6}More FFS Solutions}{55}{subsubsection.8.11.6}
-\contentsline {subsection}{\numberline {8.12}The Linux Second Extended File System (EXT2)}{55}{subsection.8.12}
-\contentsline {subsection}{\numberline {8.13}Fast File System: Consistency Issues}{57}{subsection.8.13}
-\contentsline {subsubsection}{\numberline {8.13.1}Fast File System Observations}{57}{subsubsection.8.13.1}
-\contentsline {subsection}{\numberline {8.14}Log Structured File System (LSF)}{57}{subsection.8.14}
-\contentsline {subsubsection}{\numberline {8.14.1}LFS Reads}{57}{subsubsection.8.14.1}
-\contentsline {subsection}{\numberline {8.15}NTFS (Windows)}{58}{subsection.8.15}
-\contentsline {subsubsection}{\numberline {8.15.1}Master File Table Record}{58}{subsubsection.8.15.1}
-\contentsline {subsubsection}{\numberline {8.15.2}Master File Table Record for a Small Directory}{59}{subsubsection.8.15.2}
-\contentsline {subsection}{\numberline {8.16}Better I/\penalty \exhyphenpenalty O performance through parallelism}{59}{subsection.8.16}
-\contentsline {paragraph}{RAID}{59}{section*.79}
-\contentsline {paragraph}{RAID Level 0}{59}{section*.80}
-\contentsline {paragraph}{RAID Level 1}{59}{section*.81}
-\contentsline {paragraph}{RAID Level 4}{59}{section*.82}
-\contentsline {paragraph}{RAID Level 5}{59}{section*.83}
-\contentsline {section}{\numberline {9}Tuesday, July 17, 2018}{60}{section.9}
-\contentsline {subsection}{\numberline {9.1}Types of Resources}{60}{subsection.9.1}
-\contentsline {paragraph}{Reusable}{60}{section*.84}
-\contentsline {paragraph}{Consumable}{60}{section*.85}
-\contentsline {subsection}{\numberline {9.2}Not just an OS Problem}{60}{subsection.9.2}
-\contentsline {subsection}{\numberline {9.3}Deadlock Defined}{60}{subsection.9.3}
-\contentsline {subsection}{\numberline {9.4}Example of a Deadlock}{60}{subsection.9.4}
-\contentsline {subsection}{\numberline {9.5}Dining Philosophers}{60}{subsection.9.5}
-\contentsline {subsection}{\numberline {9.6}Conditions for Deadlock}{61}{subsection.9.6}
-\contentsline {paragraph}{Circular Wait}{61}{section*.86}
-\contentsline {subsection}{\numberline {9.7}Solutions to Deadlocks}{61}{subsection.9.7}
-\contentsline {subsubsection}{\numberline {9.7.1}Deadlock Prevention}{61}{subsubsection.9.7.1}
-\contentsline {paragraph}{Preventing Mutual Exclusion}{61}{section*.87}
-\contentsline {paragraph}{Preventing Hold and Wait}{61}{section*.88}
-\contentsline {paragraph}{Preventing No-Preemption}{61}{section*.89}
-\contentsline {paragraph}{Preventing Circular Waiting}{62}{section*.90}
-\contentsline {subsubsection}{\numberline {9.7.2}Deadlock Avoidance}{62}{subsubsection.9.7.2}
-\contentsline {subsubsection}{\numberline {9.7.3}Safe States}{62}{subsubsection.9.7.3}
-\contentsline {subsubsection}{\numberline {9.7.4}Unsafe States and Algorithm}{62}{subsubsection.9.7.4}
-\contentsline {subsubsection}{\numberline {9.7.5}Restrictions on Avoidance}{63}{subsubsection.9.7.5}
-\contentsline {subsubsection}{\numberline {9.7.6}Deadlock Detection and Recovery}{63}{subsubsection.9.7.6}
-\contentsline {subsubsection}{\numberline {9.7.7}Deadlock Recovery}{63}{subsubsection.9.7.7}
-\contentsline {paragraph}{Drastic}{63}{section*.91}
-\contentsline {paragraph}{Painful}{63}{section*.92}
-\contentsline {paragraph}{Better}{63}{section*.93}
-\contentsline {paragraph}{Tricky}{64}{section*.94}
-\contentsline {subsection}{\numberline {9.8}Reality Check}{64}{subsection.9.8}
-\contentsline {subsubsection}{\numberline {9.8.1}Why does the Ostrich Algorithm Work?}{64}{subsubsection.9.8.1}
-\contentsline {subsubsection}{\numberline {9.8.2}What is atomicity?}{64}{subsubsection.9.8.2}
-\contentsline {subsubsection}{\numberline {9.8.3}Why would atomicity fail?}{64}{subsubsection.9.8.3}
-\contentsline {subsubsection}{\numberline {9.8.4}Definitions for Transactions}{65}{subsubsection.9.8.4}
-\contentsline {paragraph}{Transaction}{65}{section*.95}
-\contentsline {paragraph}{Committed}{65}{section*.96}
-\contentsline {paragraph}{Aborted}{65}{section*.97}
-\contentsline {subsubsection}{\numberline {9.8.5}How to ensure atomicity in the face of failures?}{65}{subsubsection.9.8.5}
-\contentsline {subsubsection}{\numberline {9.8.6}Write-ahead logging}{65}{subsubsection.9.8.6}
-\contentsline {subsubsection}{\numberline {9.8.7}Problems with logging}{65}{subsubsection.9.8.7}
-\contentsline {subsection}{\numberline {9.9}Concurrent Transactions}{65}{subsection.9.9}
-\contentsline {paragraph}{Solution 1}{66}{section*.98}
-\contentsline {paragraph}{Solution 2}{66}{section*.99}
-\contentsline {subsubsection}{\numberline {9.9.1}Confliciting Operations}{66}{subsubsection.9.9.1}
-\contentsline {subsubsection}{\numberline {9.9.2}Conflict Serializability Example}{66}{subsubsection.9.9.2}
-\contentsline {subsubsection}{\numberline {9.9.3}Ensuring serializability}{66}{subsubsection.9.9.3}
-\contentsline {paragraph}{Two-phase locking}{66}{section*.100}
-\contentsline {paragraph}{Growing}{66}{section*.101}
-\contentsline {paragraph}{Shrinking}{66}{section*.102}
-\contentsline {subsection}{\numberline {9.10}Timestamps}{66}{subsection.9.10}
-\contentsline {subsubsection}{\numberline {9.10.1}Timestamp Protocols}{66}{subsubsection.9.10.1}
-\contentsline {paragraph}{W-TS}{67}{section*.103}
-\contentsline {paragraph}{R-TS}{67}{section*.104}
-\contentsline {subsubsection}{\numberline {9.10.2}Timestamp Ordering}{67}{subsubsection.9.10.2}
-\contentsline {paragraph}{Read Timestamps}{67}{section*.105}
-\contentsline {paragraph}{Write Timestamps}{67}{section*.106}
-\contentsline {subsection}{\numberline {9.11}Deadlock and Starvation}{67}{subsection.9.11}
-\contentsline {subsubsection}{\numberline {9.11.1}Communication Deadlocks}{67}{subsubsection.9.11.1}
-\contentsline {subsubsection}{\numberline {9.11.2}Livelock}{67}{subsubsection.9.11.2}
+\contentsline {section}{\numberline {1}Tuesday, May 8, 2018}{8}{section.1}
+\contentsline {subsection}{\numberline {1.1}What is an operating system?}{8}{subsection.1.1}
+\contentsline {paragraph}{User Mode}{8}{section*.2}
+\contentsline {paragraph}{Kernel}{8}{section*.3}
+\contentsline {subsection}{\numberline {1.2}Storage Hierarchy}{8}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Storage Structure}{8}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Caching}{8}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Concurrency}{8}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}C Programming and Memory}{9}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}The Process Concept}{9}{subsection.1.7}
+\contentsline {subsection}{\numberline {1.8}Process Data Structures}{9}{subsection.1.8}
+\contentsline {subsection}{\numberline {1.9}Process Control Block}{9}{subsection.1.9}
+\contentsline {paragraph}{Process state}{9}{section*.4}
+\contentsline {paragraph}{Program counter}{9}{section*.5}
+\contentsline {paragraph}{CPU Registers}{9}{section*.6}
+\contentsline {paragraph}{CPU scheduling information}{10}{section*.7}
+\contentsline {paragraph}{Memory Management Info}{10}{section*.8}
+\contentsline {paragraph}{I/\penalty \exhyphenpenalty O status information}{10}{section*.9}
+\contentsline {subsection}{\numberline {1.10}Process state and state changes}{10}{subsection.1.10}
+\contentsline {subsection}{\numberline {1.11}State Queues}{10}{subsection.1.11}
+\contentsline {subsection}{\numberline {1.12}PCBs and State Queues}{10}{subsection.1.12}
+\contentsline {subsection}{\numberline {1.13}Context Switch}{10}{subsection.1.13}
+\contentsline {paragraph}{Context Switch}{10}{section*.10}
+\contentsline {subsection}{\numberline {1.14}Operations on Processes}{10}{subsection.1.14}
+\contentsline {subsubsection}{\numberline {1.14.1}Process Creation}{11}{subsubsection.1.14.1}
+\contentsline {subsubsection}{\numberline {1.14.2}Process Termination}{11}{subsubsection.1.14.2}
+\contentsline {subsection}{\numberline {1.15}Process Creation}{11}{subsection.1.15}
+\contentsline {subsubsection}{\numberline {1.15.1}Unix}{11}{subsubsection.1.15.1}
+\contentsline {subsubsection}{\numberline {1.15.2}Why fork?}{11}{subsubsection.1.15.2}
+\contentsline {subsubsection}{\numberline {1.15.3}Unix Shells}{11}{subsubsection.1.15.3}
+\contentsline {subsection}{\numberline {1.16}Example: Concurrent Web Server}{11}{subsection.1.16}
+\contentsline {subsection}{\numberline {1.17}Parallel Programming}{12}{subsection.1.17}
+\contentsline {subsection}{\numberline {1.18}Example: Concurrent Servers}{12}{subsection.1.18}
+\contentsline {subsection}{\numberline {1.19}Rethinking Processes}{12}{subsection.1.19}
+\contentsline {subsection}{\numberline {1.20}Threads}{12}{subsection.1.20}
+\contentsline {subsection}{\numberline {1.21}Thread Interface}{12}{subsection.1.21}
+\contentsline {subsection}{\numberline {1.22}Thread Scheduling}{12}{subsection.1.22}
+\contentsline {subsection}{\numberline {1.23}Threads Summary}{13}{subsection.1.23}
+\contentsline {subsection}{\numberline {1.24}Cooperating Processes}{13}{subsection.1.24}
+\contentsline {subsection}{\numberline {1.25}Interprocess Communication}{13}{subsection.1.25}
+\contentsline {section}{\numberline {2}Tuesday, May 15, 2018}{14}{section.2}
+\contentsline {subsection}{\numberline {2.1}Bootstrapping}{14}{subsection.2.1}
+\contentsline {paragraph}{BIOS}{14}{section*.11}
+\contentsline {subsection}{\numberline {2.2}Operating System Startup}{14}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Memory Layout}{14}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}From Program to Process}{14}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Unix Shells}{14}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Requesting OS Services}{15}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Boundary Crossings}{15}{subsection.2.7}
+\contentsline {subsection}{\numberline {2.8}System Calls for Process Management}{15}{subsection.2.8}
+\contentsline {paragraph}{fork}{15}{section*.12}
+\contentsline {paragraph}{waitpid}{15}{section*.13}
+\contentsline {paragraph}{execve}{15}{section*.14}
+\contentsline {paragraph}{exit}{15}{section*.15}
+\contentsline {subsection}{\numberline {2.9}System Calls for File Manamgement}{15}{subsection.2.9}
+\contentsline {subsection}{\numberline {2.10}Systems Call Example}{16}{subsection.2.10}
+\contentsline {subsection}{\numberline {2.11}System Call Interface}{16}{subsection.2.11}
+\contentsline {subsection}{\numberline {2.12}System Call Operation}{16}{subsection.2.12}
+\contentsline {subsection}{\numberline {2.13}Introduction to Synchronization}{16}{subsection.2.13}
+\contentsline {subsubsection}{\numberline {2.13.1}Motivating Example}{16}{subsubsection.2.13.1}
+\contentsline {subsubsection}{\numberline {2.13.2}Interlevced Schedules}{17}{subsubsection.2.13.2}
+\contentsline {subsubsection}{\numberline {2.13.3}What went wrong}{17}{subsubsection.2.13.3}
+\contentsline {subsubsection}{\numberline {2.13.4}Revisiting the Example}{17}{subsubsection.2.13.4}
+\contentsline {subsubsection}{\numberline {2.13.5}Mutal Exclusion}{17}{subsubsection.2.13.5}
+\contentsline {subsubsection}{\numberline {2.13.6}What program data is shared between threads?}{17}{subsubsection.2.13.6}
+\contentsline {subsubsection}{\numberline {2.13.7}The Critical Section Problem}{17}{subsubsection.2.13.7}
+\contentsline {subsubsection}{\numberline {2.13.8}Critical Section Requirements}{18}{subsubsection.2.13.8}
+\contentsline {subsubsection}{\numberline {2.13.9}Some Assumptions and Notation}{18}{subsubsection.2.13.9}
+\contentsline {subsubsection}{\numberline {2.13.10}2-Thread Solutions: First Attempt}{18}{subsubsection.2.13.10}
+\contentsline {subsubsection}{\numberline {2.13.11}2-Thread Solutions: Second Attempt}{18}{subsubsection.2.13.11}
+\contentsline {subsubsection}{\numberline {2.13.12}2-Thread Solutions: Third Attempt}{19}{subsubsection.2.13.12}
+\contentsline {subsubsection}{\numberline {2.13.13}Synchronization Hardware}{19}{subsubsection.2.13.13}
+\contentsline {subsubsection}{\numberline {2.13.14}Atomic Instructions: Test-and-Set Lock (TSL)}{19}{subsubsection.2.13.14}
+\contentsline {section}{\numberline {3}Tuesday, May 22, 2018}{20}{section.3}
+\contentsline {subsection}{\numberline {3.1}Producer and Consumer}{20}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Semaphores}{20}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Types of Semaphores}{20}{subsubsection.3.2.1}
+\contentsline {subsection}{\numberline {3.3}The reader, writer problem}{21}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Monitors}{21}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Bounded Buffer Problem}{22}{subsubsection.3.4.1}
+\contentsline {subsection}{\numberline {3.5}Process Scheduling}{22}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}What happens on a dispatch /\penalty \exhyphenpenalty context switch?}{23}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Process Life Cycle}{23}{subsubsection.3.5.2}
+\contentsline {paragraph}{I/\penalty \exhyphenpenalty O - Bound Processes}{23}{section*.16}
+\contentsline {paragraph}{CPU - Bound Processes}{23}{section*.17}
+\contentsline {subsubsection}{\numberline {3.5.3}What is processor scheduling?}{23}{subsubsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.4}Scheduling Goals}{24}{subsubsection.3.5.4}
+\contentsline {subsubsection}{\numberline {3.5.5}Types of Scheduling}{24}{subsubsection.3.5.5}
+\contentsline {paragraph}{Non-preemptive scheduling}{24}{section*.18}
+\contentsline {paragraph}{Preemptive Scheduling}{24}{section*.19}
+\contentsline {section}{\numberline {4}Tuesday, May 29, 2018}{25}{section.4}
+\contentsline {subsection}{\numberline {4.1}Problem: Dining Philosophers}{25}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Scheduling Algorithms}{25}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}FCFS}{25}{subsubsection.4.2.1}
+\contentsline {paragraph}{Convoy effect}{25}{section*.20}
+\contentsline {subsubsection}{\numberline {4.2.2}SJF}{25}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Round Robin}{26}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.4}Mars Rover Pathfinder Bug Example}{26}{subsubsection.4.2.4}
+\contentsline {subsection}{\numberline {4.3}What do real systems do?}{26}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Multi-Level Queue Scheduling}{26}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}Feedback Scheduling}{26}{subsubsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.3}Timesharing in Linux 2.8}{27}{subsubsection.4.3.3}
+\contentsline {section}{\numberline {5}Tuesday, June 5, 2018}{28}{section.5}
+\contentsline {subsection}{\numberline {5.1}Memory Management}{28}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Requirements}{28}{subsubsection.5.1.1}
+\contentsline {paragraph}{Relocation}{28}{section*.21}
+\contentsline {paragraph}{Logical Organization}{28}{section*.22}
+\contentsline {paragraph}{Protection}{28}{section*.23}
+\contentsline {paragraph}{Sharing}{28}{section*.24}
+\contentsline {paragraph}{Physical Organization}{28}{section*.25}
+\contentsline {subsubsection}{\numberline {5.1.2}Meeting the Requirements}{28}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.3}Address Binding}{28}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.4}When are addresses bound?}{29}{subsubsection.5.1.4}
+\contentsline {paragraph}{Compile Time?}{29}{section*.26}
+\contentsline {paragraph}{Load Time?}{29}{section*.27}
+\contentsline {paragraph}{Execution Time?}{29}{section*.28}
+\contentsline {subsubsection}{\numberline {5.1.5}Address Translation: Logical and physical addresses}{29}{subsubsection.5.1.5}
+\contentsline {subsubsection}{\numberline {5.1.6}Fixed Partitioning}{29}{subsubsection.5.1.6}
+\contentsline {subsubsection}{\numberline {5.1.7}Dynamic Partitioning}{30}{subsubsection.5.1.7}
+\contentsline {subsubsection}{\numberline {5.1.8}Heap Manamgement}{30}{subsubsection.5.1.8}
+\contentsline {subsubsection}{\numberline {5.1.9}Tracking Memory Allocation}{30}{subsubsection.5.1.9}
+\contentsline {subsubsection}{\numberline {5.1.10}Placement Algorithms}{30}{subsubsection.5.1.10}
+\contentsline {paragraph}{First-fit}{31}{section*.29}
+\contentsline {paragraph}{Best-fit}{31}{section*.30}
+\contentsline {paragraph}{Worst-fit}{31}{section*.31}
+\contentsline {paragraph}{Quick-fit}{31}{section*.32}
+\contentsline {subsubsection}{\numberline {5.1.11}Problems with Partitioning}{31}{subsubsection.5.1.11}
+\contentsline {subsubsection}{\numberline {5.1.12}Paging}{31}{subsubsection.5.1.12}
+\contentsline {subsubsection}{\numberline {5.1.13}Address Translation}{31}{subsubsection.5.1.13}
+\contentsline {subsubsection}{\numberline {5.1.14}Address Translation for Paging}{32}{subsubsection.5.1.14}
+\contentsline {subsubsection}{\numberline {5.1.15}Page Table Entries (PTE)}{32}{subsubsection.5.1.15}
+\contentsline {subsubsection}{\numberline {5.1.16}Page Lookups}{33}{subsubsection.5.1.16}
+\contentsline {subsubsection}{\numberline {5.1.17}Translation Lookaside Buffer}{33}{subsubsection.5.1.17}
+\contentsline {subsubsection}{\numberline {5.1.18}Managing TLBs}{33}{subsubsection.5.1.18}
+\contentsline {section}{\numberline {6}Tuesday, June 12, 2018}{35}{section.6}
+\contentsline {subsection}{\numberline {6.1}Paging}{35}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Page Table Management}{35}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Multilevel Page Tables (MLPT)}{36}{subsubsection.6.2.1}
+\contentsline {subsection}{\numberline {6.3}Inverted Page Tables}{36}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Efficient Translations}{36}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Page allocation and eviction}{37}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Page Faults}{37}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}Policy Decisions}{37}{subsection.6.7}
+\contentsline {paragraph}{Fetch Policy}{37}{section*.33}
+\contentsline {paragraph}{Placement Policy}{37}{section*.34}
+\contentsline {paragraph}{Replacement Policy}{37}{section*.35}
+\contentsline {subsection}{\numberline {6.8}Fetch Policy}{37}{subsection.6.8}
+\contentsline {subsubsection}{\numberline {6.8.1}Demand Paging}{37}{subsubsection.6.8.1}
+\contentsline {subsubsection}{\numberline {6.8.2}Prepaging (aka Prefetching)}{38}{subsubsection.6.8.2}
+\contentsline {subsection}{\numberline {6.9}Placement Policy}{38}{subsection.6.9}
+\contentsline {paragraph}{NUMA (non-uniform memory access) multiprocessors}{38}{section*.36}
+\contentsline {paragraph}{Cache performance}{38}{section*.37}
+\contentsline {subsection}{\numberline {6.10}Replacement Policy}{38}{subsection.6.10}
+\contentsline {subsubsection}{\numberline {6.10.1}Evicting the best page}{38}{subsubsection.6.10.1}
+\contentsline {paragraph}{Cold Misses}{38}{section*.38}
+\contentsline {paragraph}{Capacity Misses}{38}{section*.39}
+\contentsline {subsubsection}{\numberline {6.10.2}Belady's Algorithm (aka OPT aka MIN)}{38}{subsubsection.6.10.2}
+\contentsline {subsubsection}{\numberline {6.10.3}What are possible replacement algorithms?}{39}{subsubsection.6.10.3}
+\contentsline {subsubsection}{\numberline {6.10.4}Not-Recently-Used (NRU)}{39}{subsubsection.6.10.4}
+\contentsline {subsubsection}{\numberline {6.10.5}First-In-First-Out (FIFO)}{39}{subsubsection.6.10.5}
+\contentsline {subsubsection}{\numberline {6.10.6}Second-Chance}{40}{subsubsection.6.10.6}
+\contentsline {subsubsection}{\numberline {6.10.7}Second-Chance Implementaiton}{40}{subsubsection.6.10.7}
+\contentsline {subsection}{\numberline {6.11}Eviction Algorithms}{40}{subsection.6.11}
+\contentsline {subsubsection}{\numberline {6.11.1}Least Recently Used (LRU)}{40}{subsubsection.6.11.1}
+\contentsline {subsubsection}{\numberline {6.11.2}Counting-based replacement}{41}{subsubsection.6.11.2}
+\contentsline {paragraph}{Least-Frequently-Used (LFU)}{41}{section*.40}
+\contentsline {paragraph}{Most-Frequently-Used (MFU)}{41}{section*.41}
+\contentsline {subsubsection}{\numberline {6.11.3}Comparing Replacement Algorithms}{41}{subsubsection.6.11.3}
+\contentsline {subsubsection}{\numberline {6.11.4}Fixed vs. Variable Space}{41}{subsubsection.6.11.4}
+\contentsline {paragraph}{Fixed Space Algorithms}{41}{section*.42}
+\contentsline {paragraph}{Variable Space Algorithms}{41}{section*.43}
+\contentsline {subsubsection}{\numberline {6.11.5}Working Set Model}{41}{subsubsection.6.11.5}
+\contentsline {subsubsection}{\numberline {6.11.6}Working Set Problems}{42}{subsubsection.6.11.6}
+\contentsline {subsection}{\numberline {6.12}Page Fault Frequency}{42}{subsection.6.12}
+\contentsline {subsubsection}{\numberline {6.12.1}Thrashing}{43}{subsubsection.6.12.1}
+\contentsline {subsubsection}{\numberline {6.12.2}Windows XP Paging Policy}{43}{subsubsection.6.12.2}
+\contentsline {subsubsection}{\numberline {6.12.3}Linux Paging Policy}{43}{subsubsection.6.12.3}
+\contentsline {section}{\numberline {7}Tuesday, July 3, 2018}{44}{section.7}
+\contentsline {subsection}{\numberline {7.1}File Systems}{44}{subsection.7.1}
+\contentsline {paragraph}{What do file systems do?}{44}{section*.44}
+\contentsline {subsection}{\numberline {7.2}File Management Systems}{44}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}File Concept}{44}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}File Types}{44}{subsection.7.4}
+\contentsline {subsubsection}{\numberline {7.4.1}File Operations}{44}{subsubsection.7.4.1}
+\contentsline {subsection}{\numberline {7.5}File Access Methods}{44}{subsection.7.5}
+\contentsline {paragraph}{Sequential Access}{44}{section*.45}
+\contentsline {paragraph}{Direct Access}{45}{section*.46}
+\contentsline {subsection}{\numberline {7.6}Handling operations on files}{45}{subsection.7.6}
+\contentsline {subsection}{\numberline {7.7}Shared open files}{45}{subsection.7.7}
+\contentsline {subsection}{\numberline {7.8}Directories}{45}{subsection.7.8}
+\contentsline {paragraph}{For users}{45}{section*.47}
+\contentsline {paragraph}{For the file system}{45}{section*.48}
+\contentsline {subsubsection}{\numberline {7.8.1}What is a directory at the OS level?}{45}{subsubsection.7.8.1}
+\contentsline {subsubsection}{\numberline {7.8.2}Operations on Directories}{46}{subsubsection.7.8.2}
+\contentsline {paragraph}{Search}{46}{section*.49}
+\contentsline {paragraph}{Create file}{46}{section*.50}
+\contentsline {paragraph}{Delete file}{46}{section*.51}
+\contentsline {paragraph}{List directory}{46}{section*.52}
+\contentsline {paragraph}{Update directory}{46}{section*.53}
+\contentsline {subsection}{\numberline {7.9}Path Name Translation}{46}{subsection.7.9}
+\contentsline {subsection}{\numberline {7.10}File System Implementation}{46}{subsection.7.10}
+\contentsline {subsubsection}{\numberline {7.10.1}Directory Implementation}{47}{subsubsection.7.10.1}
+\contentsline {paragraph}{Option 1: Linear List}{47}{section*.54}
+\contentsline {paragraph}{Option 2: Hash Table}{47}{section*.55}
+\contentsline {subsection}{\numberline {7.11}Disk Layout Strategies}{47}{subsection.7.11}
+\contentsline {subsubsection}{\numberline {7.11.1}Contiguous Allocation}{47}{subsubsection.7.11.1}
+\contentsline {subsubsection}{\numberline {7.11.2}Linked Allocation}{47}{subsubsection.7.11.2}
+\contentsline {subsubsection}{\numberline {7.11.3}Indexed Allocation: Unix Inodes}{47}{subsubsection.7.11.3}
+\contentsline {subsubsection}{\numberline {7.11.4}Unix Inodes and Path Search}{48}{subsubsection.7.11.4}
+\contentsline {subsubsection}{\numberline {7.11.5}Possible Directory Implementations}{48}{subsubsection.7.11.5}
+\contentsline {subsubsection}{\numberline {7.11.6}File Links}{48}{subsubsection.7.11.6}
+\contentsline {paragraph}{Symbolic or Soft Link}{48}{section*.56}
+\contentsline {paragraph}{Hard links}{48}{section*.57}
+\contentsline {subsubsection}{\numberline {7.11.7}Issues with Acyclic Graphs}{48}{subsubsection.7.11.7}
+\contentsline {paragraph}{Deletion: When can the space allocated to a shared file be deallocated and reused?}{49}{section*.58}
+\contentsline {subsection}{\numberline {7.12}File Sharing}{49}{subsection.7.12}
+\contentsline {subsubsection}{\numberline {7.12.1}Protection}{49}{subsubsection.7.12.1}
+\contentsline {subsubsection}{\numberline {7.12.2}Types of Access}{49}{subsubsection.7.12.2}
+\contentsline {subsubsection}{\numberline {7.12.3}Representing Protection}{49}{subsubsection.7.12.3}
+\contentsline {paragraph}{Access Control Lists (ACL)}{49}{section*.59}
+\contentsline {paragraph}{Capabilities}{50}{section*.60}
+\contentsline {subsubsection}{\numberline {7.12.4}ACLS and Capabilities}{50}{subsubsection.7.12.4}
+\contentsline {subsubsection}{\numberline {7.12.5}File Buffer Cache}{50}{subsubsection.7.12.5}
+\contentsline {subsubsection}{\numberline {7.12.6}Caching Writes}{50}{subsubsection.7.12.6}
+\contentsline {paragraph}{"write-behind"}{50}{section*.61}
+\contentsline {paragraph}{Battery backed-up RAM (NVRAM)}{50}{section*.62}
+\contentsline {paragraph}{Log-structured File System}{51}{section*.63}
+\contentsline {subsubsection}{\numberline {7.12.7}Read Ahead}{51}{subsubsection.7.12.7}
+\contentsline {section}{\numberline {8}Tuesday, July 10, 2018}{52}{section.8}
+\contentsline {subsection}{\numberline {8.1}File System Implementation}{52}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Disk Components}{52}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Disk service time components}{52}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Mixing workloads can be tricky}{52}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.5}Components of disk access time}{52}{subsection.8.5}
+\contentsline {paragraph}{Seek}{52}{section*.64}
+\contentsline {paragraph}{Rotation}{52}{section*.65}
+\contentsline {paragraph}{Transfer}{52}{section*.66}
+\contentsline {subsubsection}{\numberline {8.5.1}Disks are Slow}{53}{subsubsection.8.5.1}
+\contentsline {subsection}{\numberline {8.6}OS design principles}{53}{subsection.8.6}
+\contentsline {paragraph}{minimize the number of disk accesses}{53}{section*.67}
+\contentsline {paragraph}{When using the disk, try to minimize access cost}{53}{section*.68}
+\contentsline {subsection}{\numberline {8.7}Disks are Messy}{53}{subsection.8.7}
+\contentsline {subsection}{\numberline {8.8}OS and Disk interaction}{53}{subsection.8.8}
+\contentsline {subsection}{\numberline {8.9}Logical Block Addressing}{53}{subsection.8.9}
+\contentsline {subsection}{\numberline {8.10}Disk Scheduling}{53}{subsection.8.10}
+\contentsline {paragraph}{FCFS (do nothing)}{54}{section*.69}
+\contentsline {paragraph}{SSTF (shorted seek time first)}{54}{section*.70}
+\contentsline {paragraph}{SCAN (elevator)}{54}{section*.71}
+\contentsline {paragraph}{C-SCAN}{54}{section*.72}
+\contentsline {paragraph}{LOOK}{54}{section*.73}
+\contentsline {paragraph}{C-LOOK}{54}{section*.74}
+\contentsline {subsubsection}{\numberline {8.10.1}Back to files and directories}{54}{subsubsection.8.10.1}
+\contentsline {subsubsection}{\numberline {8.10.2}Disk Layout Strategies}{54}{subsubsection.8.10.2}
+\contentsline {paragraph}{Contiguous Allocation}{54}{section*.75}
+\contentsline {paragraph}{Linked, or chained, structure}{54}{section*.76}
+\contentsline {paragraph}{Indexed structure (indirection, hierarchy)}{54}{section*.77}
+\contentsline {subsubsection}{\numberline {8.10.3}Indexed Allocation: Unix Inodes}{55}{subsubsection.8.10.3}
+\contentsline {subsubsection}{\numberline {8.10.4}Unix Inodes and Path Search}{55}{subsubsection.8.10.4}
+\contentsline {paragraph}{Note}{55}{section*.78}
+\contentsline {subsection}{\numberline {8.11}File System Implementation}{55}{subsection.8.11}
+\contentsline {subsubsection}{\numberline {8.11.1}Original Unix File System}{55}{subsubsection.8.11.1}
+\contentsline {subsubsection}{\numberline {8.11.2}Data and Inode Placement}{55}{subsubsection.8.11.2}
+\contentsline {subsubsection}{\numberline {8.11.3}Fast File System (FFS)}{56}{subsubsection.8.11.3}
+\contentsline {subsubsection}{\numberline {8.11.4}Cylinder Groups}{56}{subsubsection.8.11.4}
+\contentsline {subsubsection}{\numberline {8.11.5}Space Allocation in Cylinder Groups}{56}{subsubsection.8.11.5}
+\contentsline {subsubsection}{\numberline {8.11.6}More FFS Solutions}{56}{subsubsection.8.11.6}
+\contentsline {subsection}{\numberline {8.12}The Linux Second Extended File System (EXT2)}{56}{subsection.8.12}
+\contentsline {subsection}{\numberline {8.13}Fast File System: Consistency Issues}{58}{subsection.8.13}
+\contentsline {subsubsection}{\numberline {8.13.1}Fast File System Observations}{58}{subsubsection.8.13.1}
+\contentsline {subsection}{\numberline {8.14}Log Structured File System (LSF)}{58}{subsection.8.14}
+\contentsline {subsubsection}{\numberline {8.14.1}LFS Reads}{58}{subsubsection.8.14.1}
+\contentsline {subsection}{\numberline {8.15}NTFS (Windows)}{59}{subsection.8.15}
+\contentsline {subsubsection}{\numberline {8.15.1}Master File Table Record}{59}{subsubsection.8.15.1}
+\contentsline {subsubsection}{\numberline {8.15.2}Master File Table Record for a Small Directory}{60}{subsubsection.8.15.2}
+\contentsline {subsection}{\numberline {8.16}Better I/\penalty \exhyphenpenalty O performance through parallelism}{60}{subsection.8.16}
+\contentsline {paragraph}{RAID}{60}{section*.79}
+\contentsline {paragraph}{RAID Level 0}{60}{section*.80}
+\contentsline {paragraph}{RAID Level 1}{60}{section*.81}
+\contentsline {paragraph}{RAID Level 4}{60}{section*.82}
+\contentsline {paragraph}{RAID Level 5}{60}{section*.83}
+\contentsline {section}{\numberline {9}Tuesday, July 17, 2018}{61}{section.9}
+\contentsline {subsection}{\numberline {9.1}Types of Resources}{61}{subsection.9.1}
+\contentsline {paragraph}{Reusable}{61}{section*.84}
+\contentsline {paragraph}{Consumable}{61}{section*.85}
+\contentsline {subsection}{\numberline {9.2}Not just an OS Problem}{61}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Deadlock Defined}{61}{subsection.9.3}
+\contentsline {subsection}{\numberline {9.4}Example of a Deadlock}{61}{subsection.9.4}
+\contentsline {subsection}{\numberline {9.5}Dining Philosophers}{61}{subsection.9.5}
+\contentsline {subsection}{\numberline {9.6}Conditions for Deadlock}{62}{subsection.9.6}
+\contentsline {paragraph}{Circular Wait}{62}{section*.86}
+\contentsline {subsection}{\numberline {9.7}Solutions to Deadlocks}{62}{subsection.9.7}
+\contentsline {subsubsection}{\numberline {9.7.1}Deadlock Prevention}{62}{subsubsection.9.7.1}
+\contentsline {paragraph}{Preventing Mutual Exclusion}{62}{section*.87}
+\contentsline {paragraph}{Preventing Hold and Wait}{62}{section*.88}
+\contentsline {paragraph}{Preventing No-Preemption}{62}{section*.89}
+\contentsline {paragraph}{Preventing Circular Waiting}{63}{section*.90}
+\contentsline {subsubsection}{\numberline {9.7.2}Deadlock Avoidance}{63}{subsubsection.9.7.2}
+\contentsline {subsubsection}{\numberline {9.7.3}Safe States}{63}{subsubsection.9.7.3}
+\contentsline {subsubsection}{\numberline {9.7.4}Unsafe States and Algorithm}{63}{subsubsection.9.7.4}
+\contentsline {subsubsection}{\numberline {9.7.5}Restrictions on Avoidance}{64}{subsubsection.9.7.5}
+\contentsline {subsubsection}{\numberline {9.7.6}Deadlock Detection and Recovery}{64}{subsubsection.9.7.6}
+\contentsline {subsubsection}{\numberline {9.7.7}Deadlock Recovery}{64}{subsubsection.9.7.7}
+\contentsline {paragraph}{Drastic}{64}{section*.91}
+\contentsline {paragraph}{Painful}{64}{section*.92}
+\contentsline {paragraph}{Better}{64}{section*.93}
+\contentsline {paragraph}{Tricky}{65}{section*.94}
+\contentsline {subsection}{\numberline {9.8}Reality Check}{65}{subsection.9.8}
+\contentsline {subsubsection}{\numberline {9.8.1}Why does the Ostrich Algorithm Work?}{65}{subsubsection.9.8.1}
+\contentsline {subsubsection}{\numberline {9.8.2}What is atomicity?}{65}{subsubsection.9.8.2}
+\contentsline {subsubsection}{\numberline {9.8.3}Why would atomicity fail?}{65}{subsubsection.9.8.3}
+\contentsline {subsubsection}{\numberline {9.8.4}Definitions for Transactions}{66}{subsubsection.9.8.4}
+\contentsline {paragraph}{Transaction}{66}{section*.95}
+\contentsline {paragraph}{Committed}{66}{section*.96}
+\contentsline {paragraph}{Aborted}{66}{section*.97}
+\contentsline {subsubsection}{\numberline {9.8.5}How to ensure atomicity in the face of failures?}{66}{subsubsection.9.8.5}
+\contentsline {subsubsection}{\numberline {9.8.6}Write-ahead logging}{66}{subsubsection.9.8.6}
+\contentsline {subsubsection}{\numberline {9.8.7}Problems with logging}{66}{subsubsection.9.8.7}
+\contentsline {subsection}{\numberline {9.9}Concurrent Transactions}{66}{subsection.9.9}
+\contentsline {paragraph}{Solution 1}{67}{section*.98}
+\contentsline {paragraph}{Solution 2}{67}{section*.99}
+\contentsline {subsubsection}{\numberline {9.9.1}Confliciting Operations}{67}{subsubsection.9.9.1}
+\contentsline {subsubsection}{\numberline {9.9.2}Conflict Serializability Example}{67}{subsubsection.9.9.2}
+\contentsline {subsubsection}{\numberline {9.9.3}Ensuring serializability}{67}{subsubsection.9.9.3}
+\contentsline {paragraph}{Two-phase locking}{67}{section*.100}
+\contentsline {paragraph}{Growing}{67}{section*.101}
+\contentsline {paragraph}{Shrinking}{67}{section*.102}
+\contentsline {subsection}{\numberline {9.10}Timestamps}{67}{subsection.9.10}
+\contentsline {subsubsection}{\numberline {9.10.1}Timestamp Protocols}{67}{subsubsection.9.10.1}
+\contentsline {paragraph}{W-TS}{68}{section*.103}
+\contentsline {paragraph}{R-TS}{68}{section*.104}
+\contentsline {subsubsection}{\numberline {9.10.2}Timestamp Ordering}{68}{subsubsection.9.10.2}
+\contentsline {paragraph}{Read Timestamps}{68}{section*.105}
+\contentsline {paragraph}{Write Timestamps}{68}{section*.106}
+\contentsline {subsection}{\numberline {9.11}Deadlock and Starvation}{68}{subsection.9.11}
+\contentsline {subsubsection}{\numberline {9.11.1}Communication Deadlocks}{68}{subsubsection.9.11.1}
+\contentsline {subsubsection}{\numberline {9.11.2}Livelock}{68}{subsubsection.9.11.2}
+\contentsline {section}{\numberline {10}Tuesday, July 24, 2018}{70}{section.10}
+\contentsline {subsection}{\numberline {10.1}Computer Security}{70}{subsection.10.1}
+\contentsline {subsubsection}{\numberline {10.1.1}Four Requirements of Secuity}{70}{subsubsection.10.1.1}
+\contentsline {paragraph}{Confidentiality}{70}{section*.107}
+\contentsline {paragraph}{Integrity}{70}{section*.108}
+\contentsline {paragraph}{Availability}{70}{section*.109}
+\contentsline {paragraph}{Authenticity}{70}{section*.110}
+\contentsline {subsubsection}{\numberline {10.1.2}Types of Threats}{70}{subsubsection.10.1.2}
+\contentsline {paragraph}{Loss of Confidentiality}{70}{section*.111}
+\contentsline {paragraph}{Attack on Integrity}{70}{section*.112}
+\contentsline {paragraph}{Attack on Availability}{70}{section*.113}
+\contentsline {paragraph}{Attack on Authenticity}{70}{section*.114}
+\contentsline {subsubsection}{\numberline {10.1.3}Vulnerabilities in the System}{70}{subsubsection.10.1.3}
+\contentsline {paragraph}{Physical Access}{70}{section*.115}
+\contentsline {paragraph}{Humans}{70}{section*.116}
+\contentsline {paragraph}{Operating System}{70}{section*.117}
+\contentsline {paragraph}{Networks}{70}{section*.118}
+\contentsline {subsubsection}{\numberline {10.1.4}Intrusion Detection}{70}{subsubsection.10.1.4}
+\contentsline {paragraph}{Signature-based Detection}{71}{section*.119}
+\contentsline {paragraph}{Anomaly Detection}{71}{section*.120}
+\contentsline {subsubsection}{\numberline {10.1.5}Malicious Software}{71}{subsubsection.10.1.5}
+\contentsline {paragraph}{Trap Doors}{71}{section*.121}
+\contentsline {paragraph}{Logic Bombs}{71}{section*.122}
+\contentsline {paragraph}{Trojan horses}{71}{section*.123}
+\contentsline {paragraph}{Virus}{71}{section*.124}
+\contentsline {paragraph}{Worms}{71}{section*.125}
+\contentsline {subsubsection}{\numberline {10.1.6}Stack and Buffer Overflow Attacks}{71}{subsubsection.10.1.6}
+\contentsline {subsubsection}{\numberline {10.1.7}Trusted Computing Base (TCB)}{71}{subsubsection.10.1.7}
+\contentsline {subsubsection}{\numberline {10.1.8}Network Communications}{72}{subsubsection.10.1.8}
+\contentsline {paragraph}{Passive}{72}{section*.126}
+\contentsline {paragraph}{Active}{72}{section*.127}
+\contentsline {paragraph}{Eavesdropping}{72}{section*.128}
+\contentsline {subparagraph}{Defense against Eavesdropping}{72}{section*.129}
+\contentsline {subsection}{\numberline {10.2}Encryption Keys}{72}{subsection.10.2}
+\contentsline {paragraph}{Secret-key Cryptography}{72}{section*.130}
+\contentsline {paragraph}{Public-key Cryptography}{72}{section*.131}
+\contentsline {paragraph}{Traffic Analysis}{72}{section*.132}
+\contentsline {subparagraph}{Defense against Traffic Analysis}{72}{section*.133}
+\contentsline {paragraph}{Replay}{72}{section*.134}
+\contentsline {subparagraph}{Defense against Replay}{72}{section*.135}
+\contentsline {paragraph}{Modification of Messages}{73}{section*.136}
+\contentsline {subparagraph}{Defense against Modification}{73}{section*.137}
+\contentsline {paragraph}{Masquerade}{73}{section*.138}
+\contentsline {subparagraph}{Defense against Masquerade}{73}{section*.139}
+\contentsline {subsubsection}{\numberline {10.2.1}Message Digests}{73}{subsubsection.10.2.1}
+\contentsline {subsubsection}{\numberline {10.2.2}Digital Signatures}{73}{subsubsection.10.2.2}
+\contentsline {subsubsection}{\numberline {10.2.3}Denial of Service}{73}{subsubsection.10.2.3}
+\contentsline {subsection}{\numberline {10.3}Security Design Principles}{73}{subsection.10.3}
+\contentsline {subsubsection}{\numberline {10.3.1}Principle of Least Privilege}{74}{subsubsection.10.3.1}
+\contentsline {paragraph}{Domains}{74}{section*.140}
+\contentsline {paragraph}{Protection Domains}{74}{section*.141}
+\contentsline {subsubsection}{\numberline {10.3.2}Principle of Least Common Mechanism}{74}{subsubsection.10.3.2}
+\contentsline {subsubsection}{\numberline {10.3.3}Protection Domains}{74}{subsubsection.10.3.3}
+\contentsline {subsubsection}{\numberline {10.3.4}Bruce Scheneir: 3 waves of security attacks}{74}{subsubsection.10.3.4}
+\contentsline {subsubsection}{\numberline {10.3.5}Secure Sockets Layer}{74}{subsubsection.10.3.5}
+\contentsline {subsubsection}{\numberline {10.3.6}Handshake Protocol}{75}{subsubsection.10.3.6}

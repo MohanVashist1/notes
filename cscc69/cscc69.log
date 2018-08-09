@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  22 JUL 2018 20:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  9 AUG 2018 18:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1213,38 +1213,38 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 84.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./cscc69.toc [1
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5])
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6])
 \tf@toc=\write7
 \openout7 = `cscc69.toc'.
 
- [6] [7] [8] [9] [10] [11]
+ [7] [8] [9] [10] [11] [12]
 Overfull \hbox (2.61176pt too wide) in paragraph at lines 272--273
 \OT1/cmr/m/n/10 Cooperating processes need to exchange information, using either shared memory
  []
 
-[12]
+[13]
 Overfull \hbox (5.77835pt too wide) in paragraph at lines 312--313
 \OT1/cmr/m/n/10 "prog" into the process' address space, initializes hardware context and arguments
  []
 
-[13] [14] [15]
+[14] [15] [16]
 Overfull \hbox (17.08397pt too wide) in paragraph at lines 398--399
 \OT1/cmr/m/n/10 Two concurrent threads manipulated a shared resource without any synchronization.
  []
 
-[16]
+[17]
 Overfull \hbox (5.25061pt too wide) in paragraph at lines 464--465
 \OT1/cmr/m/n/10 First attempt does not have enough about state of each process, it only remembers
  []
 
-[17]
+[18]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 492.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 492.
- [18]
+ [19]
 Overfull \hbox (3.36159pt too wide) in paragraph at lines 544--545
 []\OT1/cmr/m/n/10 Represents a resource with many units available, or a resource allowing
  []
@@ -1254,7 +1254,7 @@ Overfull \hbox (17.38948pt too wide) in paragraph at lines 552--553
 \OT1/cmr/m/n/10 using lower-level primitives, Uniprocessors to disable interrupts and Multiprocessors,
  []
 
-[19]
+[20]
 Overfull \hbox (4.8061pt too wide) in paragraph at lines 559--560
 []\OT1/cmr/m/n/10 Some only read the object, others only write it, we allow multiple concurrent
  []
@@ -1289,17 +1289,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 585--588
 
  []
 
-[20] [21]
+[21] [22]
 Underfull \hbox (badness 10000) in paragraph at lines 655--659
 
  []
 
-[22]
+[23]
 Overfull \hbox (6.50069pt too wide) in paragraph at lines 690--691
 []\OT1/cmr/m/n/10 Proportionality -- "simple" tasks complete quickly while more "complicated"
  []
 
-[23]
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 713--724
 
  []
@@ -1329,7 +1329,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 739--742
 
  []
 
-[24]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 753--757
 
  []
@@ -1339,32 +1339,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 760--763
 
  []
 
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 768--781
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 768--781
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 768--781
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 768--781
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 768--781
-
- []
-
 [26]
+Underfull \hbox (badness 10000) in paragraph at lines 768--781
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 768--781
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 768--781
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 768--781
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 768--781
+
+ []
+
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 788--791
 
  []
@@ -1379,7 +1379,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 810--813
 
  []
 
-[27]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 818--821
 
  []
@@ -1399,7 +1399,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 832--838
 
  []
 
-[28]
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 841--847
 
  []
@@ -1444,7 +1444,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 864--866
 
  []
 
-[29]
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 874--877
 
  []
@@ -1489,7 +1489,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 888--895
 
  []
 
-[30]
+[31]
 Underfull \hbox (badness 10000) in paragraph at lines 905--908
 
  []
@@ -1499,12 +1499,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 911--914
 
  []
 
-<imgs/pagelookup.png, id=1375, 608.2725pt x 256.96pt>
+<imgs/pagelookup.png, id=1486, 608.2725pt x 256.96pt>
 File: imgs/pagelookup.png Graphic file (type png)
  <use imgs/pagelookup.png>
 Package pdftex.def Info: imgs/pagelookup.png used on input line 917.
 (pdftex.def)             Requested size: 304.13551pt x 128.47968pt.
- [31]
+ [32]
 Underfull \hbox (badness 10000) in paragraph at lines 923--931
 
  []
@@ -1544,7 +1544,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 934--945
 
  []
 
-[32 <./imgs/pagelookup.png>] [33]
+[33 <./imgs/pagelookup.png>] [34]
 Underfull \hbox (badness 10000) in paragraph at lines 952--959
 
  []
@@ -1604,7 +1604,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 989--993
 
  []
 
-[34]
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 1000--1004
 
  []
@@ -1639,12 +1639,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1020--1025
 
  []
 
-[35]
+[36]
 Underfull \hbox (badness 10000) in paragraph at lines 1049--1052
 
  []
 
-[36]
+[37]
 Overfull \hbox (29.52852pt too wide) in paragraph at lines 1058--1059
 \OT1/cmr/m/n/10 In paging systems, memory management hardware can translate any virtual-to-physical
  []
@@ -1669,52 +1669,52 @@ Overfull \hbox (0.75069pt too wide) in paragraph at lines 1079--1085
 \OT1/cmr/m/n/10 of page replacement algorithms with the optimal to gauge room for improvement.
  []
 
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 1111--1116
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1111--1116
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1119--1124
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1119--1124
-
- []
-
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 1133--1146
+Underfull \hbox (badness 10000) in paragraph at lines 1111--1116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1133--1146
+Underfull \hbox (badness 10000) in paragraph at lines 1111--1116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1133--1146
+Underfull \hbox (badness 10000) in paragraph at lines 1119--1124
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1133--1146
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1133--1146
+Underfull \hbox (badness 10000) in paragraph at lines 1119--1124
 
  []
 
 [39]
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1146
+
+ []
+
+[40]
 Overfull \hbox (18.86215pt too wide) in paragraph at lines 1185--1186
  []\OT1/cmr/bx/n/10 Variable Space Al-go-rithms[] \OT1/cmr/m/n/10 Process' set of pages grows and shrinks dynamically,
  []
@@ -1729,7 +1729,7 @@ Overfull \hbox (8.40991pt too wide) detected at line 1192
 \OML/cmm/m/it/10 WS\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t; \OT1/cmr/m/n/10 ^^A) = \OMS/cmsy/m/n/10 f[]g
  []
 
-[40]
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 1196--1203
 
  []
@@ -1759,7 +1759,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1222--1227
 
  []
 
-[41] [42]
+[42] [43]
 Overfull \hbox (2.27837pt too wide) in paragraph at lines 1263--1266
 []$ \OT1/cmr/m/n/10 Windows encodes type in name $[]$ Unix sometimes encodes type in contents,
  []
@@ -1769,7 +1769,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1284--1285
 
  []
 
-[43]
+[44]
 Underfull \hbox (badness 10000) in paragraph at lines 1286--1289
 
  []
@@ -1804,7 +1804,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1318--1324
 
  []
 
-[44]
+[45]
 Overfull \hbox (3.88026pt too wide) in paragraph at lines 1333--1335
 []$[]$ \OT1/cmr/m/n/10 Unix. In Unix, directories are implemented in files, and you use file operations
  []
@@ -1824,27 +1824,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 1346--1355
 
  []
 
-[45]
+[46]
 Underfull \hbox (badness 10000) in paragraph at lines 1390--1397
 
  []
 
-[46]
-Underfull \hbox (badness 10000) in paragraph at lines 1426--1432
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1426--1432
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1426--1432
-
- []
-
 [47]
+Underfull \hbox (badness 10000) in paragraph at lines 1426--1432
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1426--1432
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1426--1432
+
+ []
+
+[48]
 Underfull \hbox (badness 10000) in paragraph at lines 1438--1445
 
  []
@@ -1859,7 +1859,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1448--1454
 
  []
 
-[48]
+[49]
 Underfull \hbox (badness 10000) in paragraph at lines 1478--1487
 
  []
@@ -1894,17 +1894,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1502--1506
 
  []
 
-[49]
-Underfull \hbox (badness 10000) in paragraph at lines 1515--1522
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1515--1522
-
- []
-
 [50]
+Underfull \hbox (badness 10000) in paragraph at lines 1515--1522
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1515--1522
+
+ []
+
+[51]
 Underfull \hbox (badness 10000) in paragraph at lines 1530--1534
 
  []
@@ -1919,7 +1919,7 @@ Overfull \hbox (6.45306pt too wide) in paragraph at lines 1557--1558
  []\OT1/cmr/bx/n/10 Transfer[] \OT1/cmr/m/n/10 This is the transferring of data from the surface into the disk controller
  []
 
-[51]
+[52]
 Underfull \hbox (badness 10000) in paragraph at lines 1571--1575
 
  []
@@ -1939,27 +1939,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 1588--1592
 
  []
 
-[52]
+[53]
 Underfull \hbox (badness 10000) in paragraph at lines 1609--1613
 
  []
 
-[53]
-Underfull \hbox (badness 10000) in paragraph at lines 1650--1660
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1650--1660
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1650--1660
-
- []
-
 [54]
+Underfull \hbox (badness 10000) in paragraph at lines 1650--1660
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1650--1660
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1650--1660
+
+ []
+
+[55]
 Overfull \hbox (9.46368pt too wide) in paragraph at lines 1667--1674
 \OT1/cmr/m/n/10 (aka allocation groups in lots of modern Filesystems). This has the disk partitioned
  []
@@ -1979,7 +1979,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1681--1685
 
  []
 
-[55] <imgs/yes1.png, id=1550, 441.14813pt x 242.40562pt>
+[56] <imgs/yes1.png, id=1660, 441.14813pt x 242.40562pt>
 File: imgs/yes1.png Graphic file (type png)
  <use imgs/yes1.png>
 Package pdftex.def Info: imgs/yes1.png used on input line 1700.
@@ -1989,12 +1989,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1700--1701
 
  []
 
-<imgs/yes2.png, id=1551, 347.79938pt x 281.55188pt>
+<imgs/yes2.png, id=1661, 347.79938pt x 281.55188pt>
 File: imgs/yes2.png Graphic file (type png)
  <use imgs/yes2.png>
 Package pdftex.def Info: imgs/yes2.png used on input line 1702.
 (pdftex.def)             Requested size: 260.84889pt x 211.16338pt.
- [56 <./imgs/yes1.png> <./imgs/yes2.png>]
+ [57 <./imgs/yes1.png> <./imgs/yes2.png>]
 
 ./cscc69.tex:1712: LaTeX Error: There's no line here to end.
 
@@ -2051,7 +2051,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1740--1745
 
  []
 
-[57]
+[58]
 Underfull \hbox (badness 10000) in paragraph at lines 1755--1760
 
  []
@@ -2066,12 +2066,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1767--1774
 
  []
 
-<imgs/yes3.png, id=1562, 465.23813pt x 164.11313pt>
+<imgs/yes3.png, id=1672, 465.23813pt x 164.11313pt>
 File: imgs/yes3.png Graphic file (type png)
  <use imgs/yes3.png>
 Package pdftex.def Info: imgs/yes3.png used on input line 1777.
 (pdftex.def)             Requested size: 232.61848pt x 82.05635pt.
- [58 <./imgs/yes3.png>] <imgs/yes4.png, id=1574, 551.05875pt x 144.54pt>
+ [59 <./imgs/yes3.png>] <imgs/yes4.png, id=1683, 551.05875pt x 144.54pt>
 File: imgs/yes4.png Graphic file (type png)
  <use imgs/yes4.png>
 Package pdftex.def Info: imgs/yes4.png used on input line 1783.
@@ -2081,180 +2081,250 @@ Overfull \hbox (22.2628pt too wide) in paragraph at lines 1799--1800
  []\OT1/cmr/bx/n/10 RAID Level 5[] \OT1/cmr/m/n/10 Considering 5 disks again, now the dedicated disk for reconstructing
  []
 
-[59 <./imgs/yes4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1815--1818
+[60 <./imgs/yes4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1814--1817
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1821--1825
+Underfull \hbox (badness 10000) in paragraph at lines 1820--1824
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1828--1834
+Underfull \hbox (badness 10000) in paragraph at lines 1827--1833
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1828--1834
+Underfull \hbox (badness 10000) in paragraph at lines 1827--1833
 
- []
-
-[60]
-Overfull \hbox (0.84811pt too wide) in paragraph at lines 1861--1862
- []\OT1/cmr/bx/n/10 Preventing Mu-tual Ex-clu-sion[] \OT1/cmr/m/n/10 This one is not feasible, as it is often required
  []
 
 [61]
-Underfull \hbox (badness 10000) in paragraph at lines 1871--1881
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1871--1881
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1871--1881
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1884--1888
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1902--1909
-
+Overfull \hbox (0.84811pt too wide) in paragraph at lines 1860--1861
+ []\OT1/cmr/bx/n/10 Preventing Mu-tual Ex-clu-sion[] \OT1/cmr/m/n/10 This one is not feasible, as it is often required
  []
 
 [62]
-Overfull \hbox (5.91722pt too wide) in paragraph at lines 1919--1923
-\OT1/cmr/m/n/10 Processes must also be independent, so that if the order of execution is constrained
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1919--1923
+Underfull \hbox (badness 10000) in paragraph at lines 1870--1880
 
  []
 
 
-Overfull \hbox (2.5747pt too wide) in paragraph at lines 1926--1933
-\OT1/cmr/m/n/10 Prevention and avoidance is awkward and costly. Algorithms need to be cautious,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1926--1933
+Underfull \hbox (badness 10000) in paragraph at lines 1870--1880
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1926--1933
+Underfull \hbox (badness 10000) in paragraph at lines 1870--1880
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1883--1887
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1901--1908
 
  []
 
 [63]
-Underfull \hbox (badness 10000) in paragraph at lines 1948--1951
+Overfull \hbox (5.91722pt too wide) in paragraph at lines 1918--1922
+\OT1/cmr/m/n/10 Processes must also be independent, so that if the order of execution is constrained
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1918--1922
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1965--1972
+Overfull \hbox (2.5747pt too wide) in paragraph at lines 1925--1932
+\OT1/cmr/m/n/10 Prevention and avoidance is awkward and costly. Algorithms need to be cautious,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1925--1932
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1965--1972
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1975--1979
+Underfull \hbox (badness 10000) in paragraph at lines 1925--1932
 
  []
 
 [64]
-Underfull \hbox (badness 10000) in paragraph at lines 1990--1994
+Underfull \hbox (badness 10000) in paragraph at lines 1947--1950
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1964--1971
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1964--1971
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1974--1978
 
  []
 
 [65]
-Underfull \hbox (badness 10000) in paragraph at lines 2027--2031
-
- []
-
-
-Overfull \hbox (7.69371pt too wide) in paragraph at lines 2042--2046
-\OT1/cmr/m/n/10 Each transaction gets a unique \OT1/cmr/bx/n/10 times-tamp \OT1/cmr/m/n/10 before it start executing. Transactions
- []
-
-
-Overfull \hbox (1.00063pt too wide) in paragraph at lines 2042--2046
-\OT1/cmr/m/n/10 with "earlier" timestamps must appear to complete before any later transactions. 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2042--2046
+Underfull \hbox (badness 10000) in paragraph at lines 1989--1993
 
  []
 
 [66]
-Overfull \hbox (4.63956pt too wide) in paragraph at lines 2051--2052
+Underfull \hbox (badness 10000) in paragraph at lines 2026--2030
+
+ []
+
+
+Overfull \hbox (7.69371pt too wide) in paragraph at lines 2041--2045
+\OT1/cmr/m/n/10 Each transaction gets a unique \OT1/cmr/bx/n/10 times-tamp \OT1/cmr/m/n/10 before it start executing. Transactions
+ []
+
+
+Overfull \hbox (1.00063pt too wide) in paragraph at lines 2041--2045
+\OT1/cmr/m/n/10 with "earlier" timestamps must appear to complete before any later transactions. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2041--2045
+
+ []
+
+[67]
+Overfull \hbox (4.63956pt too wide) in paragraph at lines 2050--2051
 \OT1/cmr/m/n/10 on data, then transaction will end up reading a value that has already overwritten,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2059--2063
+Underfull \hbox (badness 10000) in paragraph at lines 2058--2062
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2066--2074
+Underfull \hbox (badness 10000) in paragraph at lines 2065--2073
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2066--2074
+Underfull \hbox (badness 10000) in paragraph at lines 2065--2073
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2077--2084
+Underfull \hbox (badness 10000) in paragraph at lines 2076--2083
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2077--2084
+Underfull \hbox (badness 10000) in paragraph at lines 2076--2083
 
  []
 
-[67] [68]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2090.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2090.
+[68] [69]
+Overfull \hbox (12.38948pt too wide) in paragraph at lines 2090--2091
+\OT1/cmr/m/n/10 Computer Security is about techniques for computing in the presence of adversaries. 
+ []
+
+
+Overfull \hbox (7.72281pt too wide) in paragraph at lines 2099--2100
+[]\OT1/cmr/m/n/10 Cryptography gives us techniques for communicating in the presence of adversaries 
+ []
+
+
+Overfull \hbox (1.51378pt too wide) in paragraph at lines 2104--2105
+ []\OT1/cmr/bx/n/10 Attack on In-tegrity[] \OT1/cmr/m/n/10 Attacker alters existing files, programs, network packets,
+ []
+
+
+Overfull \hbox (15.27502pt too wide) in paragraph at lines 2110--2111
+ []\OT1/cmr/bx/n/10 Physical Ac-cess[] \OT1/cmr/m/n/10 unauthorized physical access makes it easy to gain unauthorized
+ []
+
+
+Overfull \hbox (29.07077pt too wide) in paragraph at lines 2112--2113
+ []\OT1/cmr/bx/n/10 Operating Sys-tem[] \OT1/cmr/m/n/10 Flaws in the system allows security protocols to be circumvented 
+ []
+
+[70]
+Underfull \hbox (badness 10000) in paragraph at lines 2134--2138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2141--2145
+
+ []
+
+
+Overfull \hbox (4.44508pt too wide) in paragraph at lines 2148--2152
+\OT1/cmr/m/n/10 dealing with networks is even harder, as they may contain Multiple administrative
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2148--2152
+
+ []
+
+[71]
+Overfull \hbox (3.83305pt too wide) in paragraph at lines 2163--2164
+ []\OT1/cmr/bx/n/10 Secret-key Cryp-tog-ra-phy[] \OT1/cmr/m/n/10 This is when the Private key is used for encryption
+ []
+
+[72] [73]
+Overfull \hbox (9.89597pt too wide) in paragraph at lines 2215--2216
+ []\OT1/cmr/bx/n/10 Protection Do-mains[] \OT1/cmr/m/n/10 A protection domain contains processes and the processes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2243--2253
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2243--2253
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2243--2253
+
+ []
+
+[74] [75]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2254.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2254.
  (./cscc69.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2090.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2090.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2254.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2254.
 Package rerunfilecheck Info: File `cscc69.out' has not changed.
-(rerunfilecheck)             Checksum: A9307E6943AF5FE51DBAFEADE9B487C3;17990.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2090.
+(rerunfilecheck)             Checksum: D283B0C4FF2D02F81DE2085C6B7BEDDE;19745.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2254.
  ) 
 Here is how much of TeX's memory you used:
- 29764 strings out of 492995
- 558355 string characters out of 6132704
- 592686 words of memory out of 5000000
- 32439 multiletter control sequences out of 15000+600000
+ 29851 strings out of 492995
+ 559677 string characters out of 6132704
+ 592699 words of memory out of 5000000
+ 32460 multiletter control sequences out of 15000+600000
  14427 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,73p,10357b,1252s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm
 1000.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on cscc69.pdf (68 pages, 515241 bytes).
+Output written on cscc69.pdf (75 pages, 531839 bytes).
 PDF statistics:
- 1803 PDF objects out of 2073 (max. 8388607)
- 1693 compressed objects within 17 object streams
- 473 named destinations out of 1000 (max. 500000)
- 1886 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1990 PDF objects out of 2073 (max. 8388607)
+ 1871 compressed objects within 19 object streams
+ 539 named destinations out of 1000 (max. 500000)
+ 2054 words of extra memory for PDF output out of 10000 (max. 10000000)
 

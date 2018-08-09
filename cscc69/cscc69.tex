@@ -1800,7 +1800,6 @@ The Idea is that we should spread the work across several disks.
 
 \newpage
 
-
 \section{Tuesday, July 17, 2018}
 
 \subsection{Types of Resources}
@@ -2084,7 +2083,172 @@ Occurs when a set of processes continually try some failed operation and prevent
 
 \newpage
 
+\section{Tuesday, July 24, 2018}
 
+\subsection{Computer Security}
 
+Computer Security is about techniques for computing in the presence of adversaries.
+
+\subsubsection{Four Requirements of Secuity}
+
+\paragraph{Confidentiality} Preventing unauthorized release of info
+\paragraph{Integrity} Prevent unauthorized modification of info
+\paragraph{Availability} Ensuring access to legitimiate users
+\paragraph{Authenticity} Verifying the identity of a user
+
+Cryptography gives us techniques for communicating in the presence of adversaries
+
+\subsubsection{Types of Threats}
+
+\paragraph{Loss of Confidentiality} Attacker gains knowledge they should not have access to
+\paragraph{Attack on Integrity} Attacker alters existing files, programs, network packets, etc.
+\paragraph{Attack on Availability} Theft or Denial of Service
+\paragraph{Attack on Authenticity} Attacker frabricates trusted sources
+
+\subsubsection{Vulnerabilities in the System}
+
+\paragraph{Physical Access} unauthorized physical access makes it easy to gain unauthorized digital access
+\paragraph{Humans} Who should you trust? And how much should you trust them with?
+\paragraph{Operating System} Flaws in the system allows security protocols to be circumvented
+\paragraph{Networks} Data travels over unsecured communication lines, across multiple administrative domains
+
+\subsubsection{Intrusion Detection}
+
+We generally want to know when a system has been compromised. There are two main approaches to this.
+
+\paragraph{Signature-based Detection} Examine System Activity or Network traffic patterns that match known attacks
+\paragraph{Anomaly Detection} identify patterns of "normal" behaviour over time and detect deviations from those patterns
+
+Systems need records of user activity to help detect and recover from intrusions. These records have to be protected from tampering by the intruder.
+
+\subsubsection{Malicious Software}
+
+\paragraph{Trap Doors} Programs that contains a secret entry point that allows attackers to bypass security
+\paragraph{Logic Bombs} Destructive code in a legitimate program triggered by some event
+\paragraph{Trojan horses} Apparently useful program that tricks users into running it, but may contain a logic bomb or be a vehicle for spreading a virus
+\paragraph{Virus} A program that can "infect" other programs by copying itself into them
+\paragraph{Worms} A program that spreads via network connections, do not need to attach another program unlike viruses
+
+\subsubsection{Stack and Buffer Overflow Attacks}
+
+This is the most common means of gaining unauthorized access to a system.
+\\
+\\
+It works by an Overflow on some stack-allocated input bugger past the space that is allocated for the input. Then overwriting the return address with the address of the exploit code, and then overwriting the next space in the stack with the exploit code itself.
+
+\subsubsection{Trusted Computing Base (TCB)}
+
+Think carefully about what you trust with your data.
+\\
+\\
+If you type your password on a keyboard, you're trusting the keyboard, the computer, the OS, the password library, and the application that is checking the password. So the TCB is the set of components that you trust your secrets with.
+
+\subsubsection{Network Communications}
+
+Protecting "assets" on a single computer system with multiple users is hard, but dealing with networks is even harder, as they may contain Multiple administrative domains and Users of the network may not have common intersts.
+\\
+\\
+There are two main categories of network attacks
+\paragraph{Passive} eavesdropping or monitoring communication
+\paragraph{Active} modification or tampering with the communication stream
+
+\paragraph{Eavesdropping} Reading network packets that were not intended for the attacker. This does not interfere with the delivry of the messsage to its intended recipient
+
+\subparagraph{Defense against Eavesdropping} Obfuscate message content so attacker gains no information from intercepting the message
+
+\subsection{Encryption Keys}
+
+Keys used for encryption and decryption can be the same or different.
+
+\paragraph{Secret-key Cryptography} This is when the Private key is used for encryption and decryption. This results in faster encryption, but distributing the shared secret key is a problem.
+
+\paragraph{Public-key Cryptography} This is when there is a Private key used only for encryption and a Public key for decryption. The decryption key can be published while the encryption key is kept secret, and they do not reveal each other, However this method is 1000 times slower to Secret-key Cryptography
+
+\paragraph{Traffic Analysis} This refers to infering information based on sender and recipients of messages, size of messages, frequency of communication, etc.
+
+\subparagraph{Defense against Traffic Analysis} Obfuscate communication pattern (i.e. make all messages the same length, all communications have the same number of messages, etc.)
+
+\paragraph{Replay} Capture a legitimate message and re-send it later to produce an unauthorized effect
+
+\subparagraph{Defense against Replay} Messages include a consumable item so they can't be reused.
+
+\paragraph{Modification of Messages} Altering contents of a messages to change the effect
+
+\subparagraph{Defense against Modification} Include message digest to detect tampering
+
+\paragraph{Masquerade} Attacker pretends to be another entity or user.
+
+\subparagraph{Defense against Masquerade} Digital Signatures
+
+\subsubsection{Message Digests}
+
+Given some input data of arbitrary length, compute a fixed length output. This is a one-way function in the sense that $y=f(x)$ is "easy" and finding $x$ given $y$ is computationally infeasible.
+
+To detect tampering, compare digest computed on received message against digest of sent message. You would need to know the original digest though.
+
+Sender can only encrypt or sign digest, or distribute digest separately from the message.
+
+\subsubsection{Digital Signatures}
+
+Provides a way to verify the origin and integrity of a message. The sender includes something with the message (or modifies the message in some way) that could only be generatede by the sender.
+
+Public-key cryptography helps here, as decrypting using the sender's public key verifies that the sender created the message. Typically, only a message digest is signed to reduce overhead.
+
+\subsubsection{Denial of Service}
+
+Denial of service is when a system asset becomes unavailable to legitimate users. This is is an attack on availability, and is commonly a network attack, which overloads a server with bogus requests so that there are no resources for legitimate ones.
+
+DDOS (Distributed Denial of Service) is when compromised computers are used as "zombies" in a coordinated attack on the victim.
+
+\subsection{Security Design Principles}
+
+Security is much, much more than just cryptography. If there is a fundamental flaw in the design of the system, then cryptography won't help. It's usually easier to find a bug in an implementation than to circumvent a cryptography system.
+
+Unfortunately, system design is still as much an art as it is a science. But decades of building systems the wrong way have helped us gain some learned wisdom.
+
+\subsubsection{Principle of Least Privilege}
+
+Figure out exactly which capabilities a program needs to run, and grant it only those. This is not always easy.
+
+\paragraph{Domains} A set of object and rights pairs.
+
+\paragraph{Protection Domains} A protection domain contains processes and the processes inside of it can only operate within the domain.
+
+\subsubsection{Principle of Least Common Mechanism} In a system with multiple users, mechanisms allowing resources to be shared by more than one user should be minimized.
+
+\subsubsection{Protection Domains}
+
+They can be represented by a protection matrix, but it's too costly to store such a sparse matrix. It can be done more efficiently with an Access Control List, in which each object is associated and the list contains all the domains that may access the object.
+
+Can also use Capabilities, where each process is a list of objects that may be accessed.
+
+\subsubsection{Bruce Scheneir: 3 waves of security attacks}
+
+\begin{enumerate}
+  \item physical attacks on wires and Hardware
+  \item syntactic attacks on cryptography protocols and systems
+  \item semantic attacks: humans and computers trust information that they shouldn't
+\end{enumerate}
+
+\subsubsection{Secure Sockets Layer}
+
+This is used for secure communications, typically seen in web services. It uses both public and private key cryptography.
+
+Communication begins with a \textbf{handshake protocol} between the client and server to establish identity, and set up session keys used to encrypt the remainder of the transmissions.
+
+It requires an existance of a trusted Certification Authority (CA) where CA issues certificates to verify a server's identity signed with the CA's private key, and the client can verify a certificate with the CA's public key.
+
+\subsubsection{Handshake Protocol}
+
+Consider a client and a server.
+\\
+\\
+So it starts by the Client sending a "hello" message to the server with the cipher suites that it can handle and the server sends one back in addition to the server certificate for the client to verify. So the client verifies the server identity. Generates a random pre-master secret key, and selects a cipher.
+\\
+\\
+The Client then sends a session key with the selected cipher suite back to the server to switch the symmetric key encryption of the session, and the server does the same.
+\\
+\\
+After that, the client and the server use their current session keys for the rest of their communication during that session with the current cipher suite.
 
 \end{document}

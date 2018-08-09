@@ -229,3 +229,24 @@
 \BOOKMARK [2][-]{subsection.9.11}{Deadlock and Starvation}{section.9}% 229
 \BOOKMARK [3][-]{subsubsection.9.11.1}{Communication Deadlocks}{subsection.9.11}% 230
 \BOOKMARK [3][-]{subsubsection.9.11.2}{Livelock}{subsection.9.11}% 231
+\BOOKMARK [1][-]{section.10}{Tuesday, July 24, 2018}{}% 232
+\BOOKMARK [2][-]{subsection.10.1}{Computer Security}{section.10}% 233
+\BOOKMARK [3][-]{subsubsection.10.1.1}{Four Requirements of Secuity}{subsection.10.1}% 234
+\BOOKMARK [3][-]{subsubsection.10.1.2}{Types of Threats}{subsection.10.1}% 235
+\BOOKMARK [3][-]{subsubsection.10.1.3}{Vulnerabilities in the System}{subsection.10.1}% 236
+\BOOKMARK [3][-]{subsubsection.10.1.4}{Intrusion Detection}{subsection.10.1}% 237
+\BOOKMARK [3][-]{subsubsection.10.1.5}{Malicious Software}{subsection.10.1}% 238
+\BOOKMARK [3][-]{subsubsection.10.1.6}{Stack and Buffer Overflow Attacks}{subsection.10.1}% 239
+\BOOKMARK [3][-]{subsubsection.10.1.7}{Trusted Computing Base \(TCB\)}{subsection.10.1}% 240
+\BOOKMARK [3][-]{subsubsection.10.1.8}{Network Communications}{subsection.10.1}% 241
+\BOOKMARK [2][-]{subsection.10.2}{Encryption Keys}{section.10}% 242
+\BOOKMARK [3][-]{subsubsection.10.2.1}{Message Digests}{subsection.10.2}% 243
+\BOOKMARK [3][-]{subsubsection.10.2.2}{Digital Signatures}{subsection.10.2}% 244
+\BOOKMARK [3][-]{subsubsection.10.2.3}{Denial of Service}{subsection.10.2}% 245
+\BOOKMARK [2][-]{subsection.10.3}{Security Design Principles}{section.10}% 246
+\BOOKMARK [3][-]{subsubsection.10.3.1}{Principle of Least Privilege}{subsection.10.3}% 247
+\BOOKMARK [3][-]{subsubsection.10.3.2}{Principle of Least Common Mechanism}{subsection.10.3}% 248
+\BOOKMARK [3][-]{subsubsection.10.3.3}{Protection Domains}{subsection.10.3}% 249
+\BOOKMARK [3][-]{subsubsection.10.3.4}{Bruce Scheneir: 3 waves of security attacks}{subsection.10.3}% 250
+\BOOKMARK [3][-]{subsubsection.10.3.5}{Secure Sockets Layer}{subsection.10.3}% 251
+\BOOKMARK [3][-]{subsubsection.10.3.6}{Handshake Protocol}{subsection.10.3}% 252

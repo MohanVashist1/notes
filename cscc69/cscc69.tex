@@ -2243,12 +2243,27 @@ It requires an existance of a trusted Certification Authority (CA) where CA issu
 Consider a client and a server.
 \\
 \\
-So it starts by the Client sending a "hello" message to the server with the cipher suites that it can handle and the server sends one back in addition to the server certificate for the client to verify. So the client verifies the server identity. Generates a random pre-master secret key, and selects a cipher.
+So it starts by the Client sending a "hello" message to the server with the cipher suites that it can handle, the session id, and the client random, which is random information from the client.
 \\
 \\
-The Client then sends a session key with the selected cipher suite back to the server to switch the symmetric key encryption of the session, and the server does the same.
+The server then sends the client a "hello" message, with the cipher suites that it can handle, the session id, as well as a server random, which again, is random information from the server. The server also sends it's public key.
 \\
 \\
-After that, the client and the server use their current session keys for the rest of their communication during that session with the current cipher suite.
+The server then sends its certificate to the client in which the client verifies the validity of it with the Certificaiton Authority.
+\\
+\\
+Client then creates the pre-master key from the server's public key, and then encrypts the key with the same public key and sends the encrypted key to the server.
+\\
+\\
+The Server recieves the pre-master key and decrypts it with its own private key.
+\\
+\\
+Now both the server and the client have the pre-master key and their own, as well as each other's random, so with these three things, they create the master-key.
+\\
+\\
+Now the Client checks if they both have the same master-key, and sends the server a message encrypted with the master-key (with a function called \codeword{ChangeCipher}). The Master then recieves this message and decrypts it. If it is successful in decrypting the message, then the server sends it's own encrypted message with the master-key to the client (with a function, again called \codeword{ChangeCipher}).
+\\
+\\
+After this, both the client and the server both encrypt their messages with the master-key.
 
 \end{document}

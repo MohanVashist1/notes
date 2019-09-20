@@ -12,7 +12,7 @@
 
 **Security Theature:**
 
-
+![security theatre](/Users/joshuaconcon/notes/cscd27/security theatre.png)
 
 **CIA Security Properties:**
 
@@ -51,4 +51,14 @@ Security is often a Compromise
 - Goal: Make sure that the security mechanisms realize the security goals
 - Outcome: Methodology
 - Principle: Full assurance cannot be achieved.
+
+#### Risk Management Analysis of Security
+
+- You can never prevent a threat, you can only lower the risk
+- Performing an attack is more or less difficult 
+  - the asset to protect vs the attacker's efforts
+- Deploying a counter-measure has a cost
+  - cost of recoverying vs cost of deployment
+
+Risk Exposure $=$ probability $\times$ impact
 

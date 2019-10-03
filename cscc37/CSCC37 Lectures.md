@@ -136,3 +136,131 @@ $x_I$ is a non-negative integer
 $x_F$ can have an infinite number of digits
 
 **example:** $(0.\bar7)_{10} = 7 \times 10^{-1} + 7 \times 10^{-2} + ...$
+
+### LEC 3: Monday, September 23, 2019
+
+#### Representation of the Reals
+
+If $x \in \mathbb{R}$ then $x = \pm (x_I \cdot x_F)_b = \pm (d_n d_{n-1}...d_0 \cdot d_{-1} d_{-1} ...)$
+
+For binary ststem ($b=2$)
+
+$\begin{align*} (.000110011....)_2 &= (.0\bar{0011})_2 \\ &= 0\cdot2^{-1} + 0\cdot 2^{-2} + 0\cdot 2^{-3} +1\cdot 2^{-4} + ... \end{align*}$
+
+For base $b$ system
+
+$x_F = (.d_{-1}d_{-2}d_{-3}...)_b = d_{-1} b^{-1} + d_{-2} b^{-2} + .... = \sum^\infty_{i=1} d_{-i} b^{-i}$
+
+Note: A terminating <u>binary</u> Fraction with $n$ digits has a terminating decimal fraction representation.
+
+Converting base $b$ fractions to decimal? See above.
+
+Converting decimal fractions to base $b$ ($b=2$)
+
+<u>example:</u> What is $(.625)_{10}$ in binary?
+
+| multiplier | base | product | integral | fraction |
+| ---------- | ---- | ------- | -------- | -------- |
+| .625       | 2    | 1.25    | 1        | .25      |
+| .25        | 2    | 0.5     | 0        | .5       |
+| .5         | 2    | 1       | 1        | 0        |
+
+Then you read the integral part from up to down.
+
+$(.625)_{10} = (.101)_2$
+
+<u>example:</u> What is $(.1)_{10}$ in binary?
+
+| multiplier | base | product | integral | fraction |
+| ---------- | ---- | ------- | -------- | -------- |
+| .1         | 2    | 0.2     | 0        | .2       |
+| .2         | 2    | 0.4     | 0        | .4       |
+| .4         | 2    | 0.8     | 1        |          |
+| .8         | 2    | 1.6     | 1        |          |
+| .6         | 2    | 1.2     | 0        |          |
+| .2         | 2    | 0.4     | 0        |          |
+
+This pattern keeps going and going, it doesn't terminate. $(.1)_{10} = (.0\bar{0011})_2$. It's a terminating decimal fraction that turns into a binary non terminating fraction. This can be expressed as an infinite sum with a finite result.
+
+#### Machine Representation of Reals
+
+Reals represented in computer as floating point numbers. A floating point number $x$ in base $b$ has the form:
+
+$x = (F)_b \cdot b^{(e)_b}$ where $e$ is an exponent.
+
+Fraction $F = \pm (. d_1 d_2...d_t)$ is called the **mantissa** and $e = \pm (e_s e_{s-1} ... e_1)_b$ is called the ($s$ digit) **exponent**
+
+The Floating point number is **noramlized** if $d_1 \neq 0$ unless $d_1 = d_2 = ... = d_t = 0$
+
+**Significant digits** (of a non-zero floating point number) are the digits following and include the first non zero digit. All digits of the manitssa of a normalized Floating Point numbers are significant.
+
+Absolute value of mantissa is always $\geq 0$ and $< 1$.
+
+Exponent is limited: $-M \leq e \leq M$ where $M = (aa...a)_b$ is a $s$ digit number and $a = b-1$. 
+
+The largest floating point number in absolute value is $t$ digit $(.aa....a)_b$ multiplied by $b^{(aa...a)_{b}}$ where the exponent has $s$ digits and $(a=b-1)$
+
+The smallest floating point number in absolute value, non zero is $(.1000....0)_b \cdot b^{-(aa...a)_b}$ where $(a=b-1)$ and the exponent has $s$ digits and the base has $t$ digits.
+
+The non-normalized version (the first digit can be 0) will result in the real smallest number possible.
+
+$\mathbb{R}_b(t,s)$ is the set of all base $b$ floating point numbers with absolute value inside these ranges
+
+**Overflow** or **underflow** occur whenever an non-zero floating point number with absolute value outside of their ranges must be stored on the computer.
+
+- Underflowing is being too close to 0, overflow is being an absolute value that is too large.
+
+Note that $\mathbb{R}_b(t,s)$ is <u>finite</u>, whereas $\mathbb{R}$ is <u>infinite</u>.
+
+Also, $\mathbb{R}$ is compact whereas $\mathbb{R}_b(t,s)$ is not.
+
+fgk
+
+#### Machine Arithmetic
+
+Let $x,y \in \mathbb{R}$ and $Fl(x), Fl(y) \in \mathbb{R}_b (t,s)$
+
+Consider $\circ \in \{ +, -, \cdot, /\}$
+
+Does a computer give $x \circ y$ ? No.
+
+$Fl(x) \circ Fl(y)$? No.
+
+Computer gives $Fl(Fl(x) \circ Fl(y))$. ie.e $x\circ y \approx Fl(Fl(x) \circ Fl(y))$
+
+<u>Example:</u> in $\mathbb{R}_{10} (2,4), x = 2, y = 0.000058$
+
+(In $\mathbb{R}, x+y = 2 + 0.000058 = 2.000058$)
+
+$Fl(x) = (+0.20 \cdot 10^1)_{10}$
+
+$Fl(x) = (+0.58 \cdot 10^{-5})_{10}$
+
+Note: no RRO in $Fl(x) = x, Fl(y) = y$
+
+So $0.20 \cdot 10^1 + 0.58 \cdot 10^{-5} = 0.20000058 \cdot 10^1$
+
+This result is only stored temporarily. We will need to store in 2-digit mantissa.
+
+Then $Fl(Fl(x) \circ Fl(y)) = +0.20 \cdot 10^1$ (the 0.00000058 was truncated).
+
+#### Machine Precision (or machine epsilon or eps)
+
+The smallest non-normalized Floating Point Number eps such that $1 + eps > 1$ is called machine precision or machine epsilon.
+
+$eps = \begin{cases}b^{1-t} & \text{chopping} \\ \frac{1}{2}b^{1-t} & \text{rounding}\end{cases}$
+
+Recall $\delta = \frac{x - Fl(x)}{x}$ is the RRO.
+
+$\begin{cases} 0 \leq \delta \leq eps & \text{chopping} \\ -eps \leq \delta \leq eps & \text{rounding} \end{cases}$
+
+### LEC: Monday, September 30, 2019
+
+How exactly is error propogated in each of $\circ \in \{ +, -, \cdot, / \}$?
+
+Let $x,y \in \mathbb{R}$. Then $Fl(x) = x(1-\delta x), Fl(y) = y(1-\delta y)$
+
+<u>Multiplication:</u> $x \cdot y$
+
+Computer gives $\begin{align*} Fl(Fl(x) \cdot Fl(y)) &= [x(1-\delta_1), y (1-\delta_2)](1 - \delta_3) \\ &= x \cdot y (1 - \delta_1) (1-\delta_2) (1 - \delta_3) \\ &= x \cdot y (1 - \delta_1 - \delta_2 + \delta_1 \delta_2 + \delta_1 \delta_3 + \delta_2 \delta_3 - \delta_1 \delta_2 \delta_3) \\ &\approx x \cdot y (1 - \delta_1 - \delta_2 - \delta_3). \\ &= x \cdot y (1 - \delta_\cdot)\end{align*}$
+

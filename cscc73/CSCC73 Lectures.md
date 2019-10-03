@@ -315,8 +315,8 @@ Algorithm:
 
 - $R := \empty$
 - $d(s) := 0$
-- $p(s) := $NIL
-- for each node $v\neq s$ do $d(v := \infty)$
+- $p(s) := $ NIL
+- for each node $v\neq s$ do $d(v) := \infty$​
 - while $R \neq V$ do
   - $u :=$ node not in $R$ with min $d$ value
   - $R := R \cup \{ u \}$
@@ -494,3 +494,165 @@ $\leq AD(T') + f(x) + f(y)$ because $H'$ is optimal.
 
 $= AD(T)$ this is optimal by assumption.
 
+### LEC 5: Wednesday, September 18, 2019
+
+#### Divide and Conquer (KT 2, DPV 5)
+
+<u>Merge Sort</u> -  To sort an array $A$ of $n$ items $(a = b = 2)$
+
+- if $n = 1$, trivial
+- else
+  - split into two $\frac{n}{2}$ subarrays
+  - sort each subarray
+  - merge sorted subarrays
+
+<u>Binary Seach</u> Searching a sorted array $A[1...n]$ $(a = 1, b = 2)$
+
+- if $n=1$, trivial
+- else if $A[\frac{n}{2}] \geq$ element (ceiling) is what we are looking for 
+  - then we recursively search $A[1... \frac{n}{2}]$
+  - else we recursively search $A[\frac{n}{2} ... n]$
+
+To solve an instance of size $n$ of some problem:
+
+- if $n$ is "small", solve directly
+- else
+  - split input into some $a$ pieces, each of size $\frac{n}{b} $($a \geq 1, b > 1$ are constants)
+  - recursively solve each subproblem (each of size $\frac{n}{b}$)
+  - combine solutions to subproblems of original instance (of size $n$)
+
+With this recursion, we're reducing the input size by a factor of $b$ at each call, rather than by a constant. i.e.
+
+$$n \longrightarrow n-c \text{ vs. } n\longrightarrow \frac{n}{2}$$
+
+This means that the depth of recursion for divide and conquer algorithms is $\Theta (\log n)$.
+
+Our Divide and Conquer Algorithms will reduce the input size to $\frac{n}{b^{\log_b n}} = 1$ (assuming $n$ is a power of $b$). There are $a^{\log_b n} = n^{\log_b a}$ subproblems of size 1.
+
+Generally, Divide and Conquer running times look like such:
+
+$T(n) = a \cdot T(\frac{n}{b}) + c \cdot n^d$
+
+$T(1) = c$
+
+Where $a$ are the recursive calls, $b$ is how much the input is divided by and $d$ is the amount of work that is done every recursion.
+
+**Master Theorem:** Solution to
+
+$T(n) = a \cdot T(\frac{n}{b}) + c \cdot n^d$
+
+$T(1) = c$
+
+- (a) if $a < b^d$ then $T(n) = \Theta (n^d)$ 
+- (b) if $a = b^d$ then $T(n) = \Theta (n^d \log n)$ 
+- (c) if $a > b^d$ then $T(n) = \Theta (n^{\log_b a})$ 
+
+The intuition is that we're count how many time we need for each step.
+
+For recursive call $i$, it takes $a^i \cdot c \cdot (\frac{n}{b^i})^d$
+
+So we can represent this as a sum:
+
+$T(n) = cn^d \sum^{\log_b n}_{i = 0} (\frac{a}{b^d})^i$
+
+Consider $G(n) = \sum^{\log_b n}_{i = 0} (\frac{a}{b^d})^i$
+
+Remember that $\sum^k_{i=0} x^i = \frac{x^{k+1} - 1}{x-1} $
+
+And that $x \in (0,1) | \sum^\infty_{i=0} x^i = \frac{1}{1-x}$
+
+Lets consider each case
+
+<u>case $(a)$:</u> $a < b^d$
+
+$G(n) \leq \sum^\infty_{i = 0} (\frac{a}{b^d})^i = \frac{1}{1-\frac{a}{b^d}} \leq k | k \in \mathbb{z}$
+
+So $T(n) = \Theta (cn^d \cdot k) = \Theta (n^d)$
+
+<u>case $(b)$:</u>  $a = b^d$
+
+$G(n) = 1 + \log_b n = \Theta (\log_b n)$
+
+So then $T(n) = \Theta (n^d \log n)$
+
+
+
+### LEC 6: Monday, September 23, 2019
+
+#### Closest pair of points (KT 5.4, DPV 2.32)
+
+<u>Input:</u> Set $P$ of $n$ points on the plane, each point $p = (x,y) \in P$
+
+The Distance between $p=(x,y)$ and  $p'=(x',y')$ is euclidean, i.e. $d(p, p') = \sqrt{(x-x')^2 + (y-y')^2}$
+
+<u>Output:</u> A pair of points $(p,p')$ in $P$ no farther apart than any other two points. $\forall q,q' \in P, d(p,p') \leq d(q,q')$
+
+Let us first consider the one dimension version of this, we dont have to compare each point to every other, we just have to compare each point to their neighbours. We can say that $T(n) = 2 T(\frac{n}{2})+c$, so $a=2, b=2, d=0$, and since $2 > 2^0$ Then $T(n) = \Theta (n^{\log_2 2})$
+
+So, consider a bunch of points, the algorithm would be splitting the points into 2 groups, and finding the two closest points in the two groups, with distance $\delta_L, \delta_R$. We will consider the $m$ point, which separates the left from the right, and consider the band $B$ which is on $m$ with a distance of $\delta = min(\delta_L, \delta_R)$ on both the left and right side. We can now focus on the band.
+
+Let us now focus on some point $x$ on the bottom (we'll consider them in increasing $y$). We do not need to compare $x$ with all of the points on the other side, but the next 7 points on the other side (will be explained later).
+
+To find the clostest pair of points in $B$ that are less than $\delta$ apart, it suffices to consider, for each point in $B$, only the "next" 7 points above that point (greater $y$ coordinate).
+
+<u>Claim:</u>
+
+ Let $p,q \in B, p\neq q$. If $d(p,q) < \delta$, then $\exists \leq 6$ points other than $p,q \in B$ whose $y$-coordinates are between $p$'s and $q$'s.
+
+<u>Proof:</u> Assume for contradiction that this is false, so we assume that $\exists \geq 7$ points between $p=(x,y)$ and $q=(x',y')$. Without Loss of Generality, assume $y \leq y'$.
+
+Consider $p$ on one side. $q$ cannot be on the same side because then it would get picked up by our recursion. $q$ cannot be on the other side outside of the $\delta$ box as it is already further than $\delta$, and we're looking for two points shorter than $\delta$. Therefore since we have 9 points including $p,q$ and 7 other points, which must be in two boxes. We can say that one box must hold at least 5 points
+
+So in this one box with at least 5 points, we can split the box into quarters of $\delta/2$. We have 5 points for $4$ quarters of the box, so by pigeonhole principle, one box must contain 2 points. The max distance two points can be in the box is $\frac{\sqrt{2}\delta}{2}$. This is a contradiction, since we stated that $\delta$ was the shortest distance between any two points bween any two points, and $\delta > \frac{\sqrt{2}\delta}{2}$ .
+
+Algorithm is another sheet online.
+
+<u>Running Time:</u> $T(n) = 2 T(\frac{n}{2}) + n$, $a=2, b=2, d=1$ so $T(n) = \Theta(n\log n)$
+
+Fun practice problem: Toronto has acquired a new park that is 35 by 35 meters, and someone decided to plan 50 trees. Someone then decides that the trees need to be at least 7.5 meters apart. You must prove that it cannot be done.
+
+### LEC: Monday, September 30, 2019
+
+#### Fast Fourier Transform (FFT) (DPV 2.6, KT 5.6)
+
+Suppose we have two polynomials of degree $m$.
+
+$A(x) = a_0 + ... + a_m x^m$
+
+$B(x) = b_0 + ... + b_m x^m$
+
+$C(x) = B(x) \cdot A(x) = c_0 + ... + c_{2m} x^{2m}$
+
+Note that:
+
+$c_0 = a_0 + b_0$
+
+$c_1 = a_1 b_0 + a_0 b_1$
+
+$c_2 = a_2 b_0 + a_1 b_1 + a_0 b_2$
+
+....
+
+$c_{2m} = a_m b_m$
+
+So essentially, $c_k = \sum_{1 \leq i,j \leq m | i + j = k} a_i b_j$
+
+The number of operations to compute $c_k$s are $\Theta (1+2+...+m+(m+1) +m+ m-1 + ... +1) = \Theta (m^2)$
+
+Note: This is <u>Convolution</u>
+
+$(a_0, ..., a_m) \star (b_0 ,...,b_m) = (c_0, ..., c_{2m})$
+
+This is used for signal processing. A signal is just a vector that we pass through a filter.
+
+We can represent polynomials as coefficient vectors in the coefficient representation of the polynomial, we can also use a value representation of the polynomial.
+
+<u>Interpolation Theorem:</u> A polynomial of degree $m$ is uniquely determined by its value at $m+1$ points.
+
+We have seen interpolation before. Given 2 points, we can draw a unique line connecting them, given 3 points, we can draw a parabola, etc.
+
+Coefficient representation of $A(x) = a_0,a_2,...,a_m$
+
+Value representation of $A(x) = A(x_0),A(x_1), ..., A(x_m)$
+
+**Evalution** is going from Coefficient $\longrightarrow$ Value

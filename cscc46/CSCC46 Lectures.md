@@ -8,14 +8,19 @@ Basically Networks.
 
 How can we analyze networks?
 
-- We can predict the type of a given node
-- We can predict whether two nodes are linked
-- We can identify densely linked clusters of nodes
-- We can predict common pathways
+- Node Classification: We can predict the type of a given node
+- Link Prediction: We can predict whether two nodes are linked
+- Community Detection: We can identify densely linked clusters of nodes
+- Social Influence: We can predict common pathways
+- Network Similarity: We can measure similarity between nodes and networks
 
-A Network is a **Graph**; a collection of **Nodes** that are connected by **Edges**.
+A Network is a **Graph**; a collection of **Nodes** (set $N$) that are connected by **Edges** (set $E$). $G(N,E)$
 
 **Networks** often refer to real systems, while **Graphs** are methematical representation of a network.
+
+**Directed Networks** have directed edges
+
+**Undirected Networks** have symmetrical edges
 
 **Connected Components (undirected):**
 
@@ -32,6 +37,8 @@ An **Articulation point** is a point that if we erase, then the graph becomes di
 
 **Weakly connected directed graphs** is connected if we disregard the edge directions
 
+What does the Web look like? The web looks like a directed graph
+
 $In(v) = \{ w | w \text{ can reach } v \}$
 
 $Out(v) = \{ v | w \text{ can reach } v \}$
@@ -47,19 +54,35 @@ $Out(v) = \{ v | w \text{ can reach } v \}$
 - every pair of nodes $S$ can reach each other
 - There is no larger set containing $S$ with this property
 
-Every Directed Graph is a DAG on its SCCs (so if we turn SCCs into Nodes)
+**Fact:** Every Directed Graph is a DAG on its SCCs (so if we turn SCCs into Nodes)
 
 **Claim:** SCCs partitions nodes of $G$. Meaning that each node is a member of exactly 1 SCC
 
 **Proof of Claim:** By Contradiction:
 
-- Suppose there exists
+- Suppose there exists there exists a node $v$ which is a member of two SCCs $S$ and $S'$, but then $S \cup S'$ is one large SCC. Contradiction!
 
-**Claim:** $G'$ (graph of SCCs) is a DAG
+**Claim:** $G'$ (graph of SCCs) is a DAG ($G'$ has no cycles)
 
 **Proof of Claim:** By Contradiction:
 
-Assume $G'$ is not a DAG, then $G'$ is a directed cycle
+Assume $G'$ is not a DAG, then $G'$ is a directed cycle. Now all nodes on the cycle  are mutually reachable and all are part of the same SCC. But then $G'$ is not a graph of connections between SCCs. Contradiction.
+
+**Fact:** $Out(A) \cap In(A)$ is a Strongly Connected Component
+
+##### Structure of The Web
+
+Bow-tie.
+
+Millions of Nodes going into a large SCC
+
+A large SCC
+
+Millions of nodes coming out of the SCC
+
+Tendrills sticking out of the IN and OUT sections
+
+Tubes connecting IN and OUT sections, bypassing the SCC
 
 ### LEC 2: Monday, September 16, 2019
 
@@ -72,6 +95,8 @@ How do we represent graphs?
   - example: ${1: [2,4], 2: [1,4], 3: [4]}$
 - Adjacency Matrix, where $A_{ij} = 1$ means that there is a link from node $i$ to node $j$ and $A_{ij} = 0$ if otherwise
 - Undirected and Directed graphs
+  - Undirected Graphs have Undirected Links
+  - Directed Graphs have Directed Links
 - Unweighted and weighted graphs
   - $\bar k$ (or $\langle k \rangle$) is the average degree of all nodes in the graph
   - $E$ is the number of edges in the graph
@@ -95,7 +120,7 @@ We'll focus on **connectivity** and **distance**
 <u>Connectivity:</u>
 
 - Undirected
-  - $k_j$ Node degree: the number od edges adjacent to node $j$
+  - $k_j$ Node degree: the number of edges adjacent to node $j$
   - Average degree: $\bar k = \langle k \rangle = \frac{1}{N} \sum^N_{i=1} k_i = \frac{2E}{N}$
 - Directed
   - Source: Node with $k^{in} = 0$
@@ -151,3 +176,121 @@ Let $X_v$ be a random variable mesuring the degree of node $v$
 
 We want to know $E[X_v] = \sum^{n-1}_{j=0} j P(X_v = j) = (n-1)p$
 
+### LEC 3: Monday, September 23, 2019
+
+#### Strength of Weak Ties
+
+**Networks: Flow of Information**
+
+- How does information flow through networks?
+  - What role do links (short vs long) and nodes play?
+- How people find out new jobs?
+
+**Granovetter's Answer**
+
+- Structural: Friendships span different parts of the network
+- Interpersonal: Friendship between two people vary in strength, you can be close or not close to someone.
+
+Note: Friendships can span two communities and friendships can be within communities.
+
+**Structural Force: Triadic Close**
+
+Triangles are more likely to be closed in social networks (you are more likely to make friends with someone if you have mutual friends with them).
+
+Triadic Closures result in a High Clustering coefficient.
+
+**Reasons:**
+
+- If $B$ and $C$ have a friend $A$ in common, then
+  - $B$ is more likely to meet $C$
+  - $B$ and $C$ trust each other
+
+**Granovetter's Explanation**
+
+- Granovetter makes a connection between social and structural role on an edge
+- First Pont: Structure
+- Second Point: Information
+
+**Network Vocabulary**
+
+- Span (bridge): The span of an edge is the distance of the edge endpoints if the edge is deleted
+- Bridge edge: If removed, it disconnects the graph
+  - span of a bridge edge = $\infty$
+- Local Bridge: Edge of span > 2 (any edge that doesnt close a triangle)
+  - Idea: Local bridges with long span are like real bridges
+
+**Granovetter's Explanation**
+
+- Model: Two types of edges: Strong (friend), Weak (acquaintance)
+- Model: Strong Triadic Closure Property: Two strong ties imply a third edge
+- Fact: If strong triadic closure is satisfied, then local birdges are weak ties.
+
+**Claim:** If node $A$ satisfies the Strong Triadic Closure and has two strong ties, then any local bridge adjacent to A must be a weak tie.
+
+Proof: By Contradiction
+
+- Assume A satisfies the strong triadic closure and has two strong ties
+- Let $A-B$ be a local bedge, assume it is a strong tie
+- Then $B-C$ must exist because of strong triadic closure
+- But then $A-B$ is no longer a local birdge, because its span is 2.
+
+Granovetter's theory leads to strong ties being in clusters and weak ties bridging the different clusters.
+
+Weak ties have access to different parts of the network. Access to other sources and other kinds of information. Strong ties have redundant information.
+
+#### Tie Strength in Real Data
+
+For many years, this theory was not tested, so it is legit? Yes.
+
+#### Neighbourhood Overlap
+
+- Edge Overlap: as the number of shared neighbours divided by the union of neighbours $O_{ij} = \frac{N(i) \cap N(j)}{N(i) \cup N(j)}$
+  - $O_ij = 0$ implies a local bridge
+
+#### Link Removal by Strength
+
+- An important, recurring concept in network analysis is network robustness: how quickly does the graph become disconnected as you remove links?
+- The faster the netwrok falls apart, the more prone to failure it is
+- Test importange of edges by changing the order in which you remove them
+- In the mobile call graph, we will test the importance of strong/weak edges, as well as high/low overlap edges, by employing this strategy?
+  - **low to high** disconnects the network sooner
+  - **high to low** does the opposite
+  - This is more evident if we do this based off overlap
+
+#### Network Communities
+
+- Granovetter's stength of weak ties theory suggests that networks are compoased of tightly connected sets of nodes
+- Network communities: sets of nodes with lots of connections inside a few to outside (the rest of the network)
+
+#### Social Network Data
+
+Zachary's Karate Club Network: Observe social ties and rivalries in a university karate club
+
+- During his observation, conflicts led to the group to split
+- Split could be explained by a minumum cut in the network.
+
+#### Graph Partitioning
+
+Two general approaches:
+
+1. Start with every node in the same cluster and break apart at "weak links" ("divisive clustering")
+2. Start with every node in its own community and join communities that are close together "agglomerative clustering"
+
+**Girvan-Newman Algorithm**
+
+- Divisive hierarchical clustering based on the notion of edge betweenness (number of shortests paths passing through an edge)
+- Girvan-Newman Algo
+  - Repeat until no edges are left:
+    - (Re)calculate betweenness of every edge
+    - Remove edges with highest betweenness (if ties, remove all edges tied for highest)
+    - Connected components are communities
+- Gives a hierarchical decomposition of the network
+
+**Dendrogram**
+
+- Graphical depiction of the hierarchical clustering splits done at every step
+
+Note: How do we compute betweenness? Computing every pair is commutationally challenging.
+
+- If we want to compute betweenness of paths starting at node A, we do a BFS starting from A.
+- Count the number of shortests paths from A to all other nodes in the graph

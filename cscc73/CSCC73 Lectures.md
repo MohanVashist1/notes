@@ -561,11 +561,11 @@ Remember that $\sum^k_{i=0} x^i = \frac{x^{k+1} - 1}{x-1} $
 
 And that $x \in (0,1) | \sum^\infty_{i=0} x^i = \frac{1}{1-x}$
 
-Lets consider each case
+Lets consider each case where $T(n) = cn^d \cdot G(n)$
 
 <u>case $(a)$:</u> $a < b^d$
 
-$G(n) \leq \sum^\infty_{i = 0} (\frac{a}{b^d})^i = \frac{1}{1-\frac{a}{b^d}} \leq k | k \in \mathbb{z}$
+$G(n) = \sum^\infty_{i = 0} (\frac{a}{b^d})^i = \frac{1}{1-\frac{a}{b^d}} \leq k | k \in \mathbb{z}$
 
 So $T(n) = \Theta (cn^d \cdot k) = \Theta (n^d)$
 
@@ -574,6 +574,18 @@ So $T(n) = \Theta (cn^d \cdot k) = \Theta (n^d)$
 $G(n) = 1 + \log_b n = \Theta (\log_b n)$
 
 So then $T(n) = \Theta (n^d \log n)$
+
+<u>case (c):</u> $a > b^d$
+
+So we know that the series does not converge
+
+So $G(n) = \frac{(\frac{a}{b^d})^{1 + \log_b n} - 1}{\frac{a}{b^d} -1} = \Theta (\frac{a}{b^d})^{\log_b n}$
+
+ $(\frac{a}{b^d})^{\log_b n} = \frac{a^{\log_b n}}{(b^{log_b n})^d} = \frac{a^{\log_b n}}{n^d}$
+
+So $G(n) = \frac{a^{\log_b n}}{n^d}$
+
+So $T(n) = \Theta (a^{\log_b n}) = \Theta (n^{\log_b a})$
 
 
 

@@ -668,3 +668,62 @@ Coefficient representation of $A(x) = a_0,a_2,...,a_m$
 Value representation of $A(x) = A(x_0),A(x_1), ..., A(x_m)$
 
 **Evalution** is going from Coefficient $\longrightarrow$ Value
+
+### LEC: Monday, October 7, 2019
+
+#### Dynamic Programming (KT, DPV Ch 6)
+
+Consider the Longest increasing subsequence (LIS) problem.
+
+A **subsequence** of a sequence $A = a_1, a_2, ..., a_n$ is a sequence $a_{i_1}, a_{i_2}, ..., a_{i_k} | 1 \leq i_1 < i_2 < ... < i_k \leq n$
+
+<u>Input:</u> A sequence $A = a_1, a_2, ..., a_n$  of numbers
+
+<u>Output:</u> A LIS of A (length of LIS of A) (there are multiple so we just want any)
+
+To solve this, we want to look "backwards"
+
+Assume we are given a LIS of A, say S. $S = S', a_i$ ($S$ is built from $S'$). So $S$ ends with $a_i$ at position $i$ of $A$. So we claim that $S'$ is a longest, increasing subsequence at $A$, ending at some position $j | j < i$ and $a_j < a_i$
+
+But suppose, for contradiction, $\exists S'' | S''$ is an
+
+- increasing subsequence of $A$ ending in position $k$
+- such that $k < i$ and $a_k < a_i$
+- $|S''| > |S'|$
+
+Look at $S'', a_i$.
+
+This is called a "cut-and-paste" argument.
+
+So we found the "optimal substructure" of this problem. This means that the optimal solution to the problem is an optimal solution to some subproblem, extended.
+
+This sounds like all problems, but some problems don't have this. Like finding the cheapest flight which may not have optimal solutions to sub problems due to airline loyalty programs.
+
+The Length of LIS ending at position $i$ = The Lenfth of LIS ending at some position $j | j < i$ (with $a_j < a_i$). Which $j$? Don't know, try them all, use the best.
+
+<u>Definition:</u> $L(i) = $ length of LIS of $A$ ending at position $i$. (Definition $\star$)
+
+How to compute $L(i)$?
+
+$L(i) = \begin{cases} 1, \text{if $a_i <a_j$ for all $j | 1 \leq j < i$}\\ \text{max}\{L(j) + 1 : 1 \leq j < i \text{ and } a_j < a_i \} \end{cases}$ (Definition $\dagger$)
+
+LongestIncreasingSubsequence$(A)$
+
+- for $i := 1$ to $n$ do
+  - $L(i) := 1$
+  - $\text{pre}(i) := 0$
+  - for $j := 1$ to $i-1$ do
+    - if $a_j < a_i$ and $L(j) + 1 > L(i)$ then
+      - $L(i) := L(j) + 1$
+      - $\text{pre}(i) := j$
+- return $L(\text{argmax}(L))$
+
+But aren't $\star$ and $\dagger$ different?
+
+We will show that they are the same. We will rename $\star L(i)$ to $L'(i)$
+
+The steps for Dynamic Programming
+
+1. Define a polynomial number of subproblems (from whose solution we can "easily" find the solution to our problem)
+2. Devise a recursive formula to compute the subproblems.
+3. Derive a solution to original problem from solutions to subproblems.

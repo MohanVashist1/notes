@@ -151,3 +151,66 @@ All roots are bases, but not all bases are roots
 **Inflectional Affixes**: These do not change the category of the base they attach to, but express grammatical information
 
 Inflectional Morphemes typically follow Derivational Morphemes in English
+
+### LEC 3: Monday, September 23, 2019
+
+Some words in English are **structurally ambigious**
+
+**structurally ambigious**: words with more than one meaning due to more than one structure they can enter into
+
+**derivation**: a process that forms a word with a meaning and/or category distinct from that of its base
+
+- derivations can apply more than once
+- it is possible to create multiple levels of word structure
+- structure creation is rule-governed
+
+**compounding**: taking two already existent words and combines them
+
+- another process of word building
+- How do we determine the category of a compound?
+  - The morpheme that determines the category of the entire word is called the **head**
+- Adjective-noun compounds are characterized by more prominent stress of their first component
+- Group adjectives+nouns, which are not compounds, have the second element stressed
+- If a compound's meaning is related to the meaning of their head they are called **endocentric**
+- If a compound's meaning is not related to the meaning of their head they are called **exocentric**
+
+##### Inflection
+
+- Another type of word structure creation process
+- Inflectional morphemes never change the category of words or morphemes to which they are attached
+- Represents for the most part the so-called **grammatical markers**, encoding information about tense, number, gender, etc.
+- **Inflectional** morphemes do not change the category of the meaning of the word they attach to.
+- Derivational morphemes might change the category; they also change the type of meaning of their bases
+- How is Inflection marked cross-linguistically?
+  - Suffixation
+  - Internal Change
+    - A process that substitutes a non-morphemic segment for another to mark a grammatical contrast
+    - **Ablaut**: a vowel alternation that marks grammatical contrast
+  - Suppletation
+    - Replaces a morpheme with an entirely different morpheme to indicate a grammatical contrast
+  - Reduplication
+    - Partial Reduplication
+      - Some languages allow **partial reduplication**, that copies only a part of the base
+    - Full Reduplication
+      - Some languages allow **full reduplication**, that copies the whole base
+
+##### Zero Derivation (aka Conversion)
+
+- A process that assigns an already existing word to a new syntactic category
+- Often considered a type of derivation, because of the change in the category and the meaning that it brings about
+- This is changing a word's category without changing its form
+
+**Acronyms**: Derived from the initials of other words
+
+**Blends**: parts of the words are combined or deleted, in a manner similar to compounding
+
+**Eponyms** (words for names): common words derived from proper names
+
+**Abbreviation** (initialism): formed by using the first letter of each word in a phrase
+
+**Clipping**: making a word by omitting syllables in an existing word
+
+**Backformation**: making a word by omitting what appears to be a morpheme
+
+- Backformation is a process that creates a new word by removing a real or supposed affix from another word in the language.
+

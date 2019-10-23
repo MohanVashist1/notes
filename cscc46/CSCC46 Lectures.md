@@ -176,6 +176,40 @@ Let $X_v$ be a random variable mesuring the degree of node $v$
 
 We want to know $E[X_v] = \sum^{n-1}_{j=0} j P(X_v = j) = (n-1)p$
 
+Fact: **Degree distribution** of $G_{np}$ is Binomial. Let $P(k)$ denote a fraction of nodes with degree $k$:
+
+$P(k)= {n-1 \choose k} p^k (1-p)^{n-1-k}$
+
+$\bar{k} = p (n-1)$
+
+Remember that $C_i = \frac{2e_i}{k_i (k_i -1)}$
+
+An the edges in $G_{np}$ appear independently and identically distributed
+
+So $e_i = p \frac{k_i (k_i - 1)}{2}$
+
+$C = \frac{p \cdot k_i (k_i - 1)}{k_i (k_i - 1)} = p = \frac{\bar{k}}{n-1}$
+
+##### Real Networks vs $G_{np}$
+
+- Are real networks like random graphs?
+  - no
+- The problem with the random networks models is that
+  - clustering coefficient is too low
+  - degree distribution differs from that of real networks
+  - also, real networks are not random
+- So why is $G_{np}$ important?
+  - It will help us calculate many quanitities that can be compared to the real data
+  - If the quantity you just calculated also shows up in $G_{np}$, then it is probably not significant
+
+#### Strong and Weak Ties
+
+- Mark Granovetter studied how people found new jobs
+  - It was mostly through acquaintances
+- There are two perspectives on friendships:
+  - **Structural**: Friendships span different parts of the network
+  - **Interpersonal**: Friendship between two people vary in strength, you acn be close or not so close to someone.
+
 ### LEC 3: Monday, September 23, 2019
 
 #### Strength of Weak Ties

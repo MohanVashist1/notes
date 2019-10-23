@@ -727,3 +727,39 @@ The steps for Dynamic Programming
 1. Define a polynomial number of subproblems (from whose solution we can "easily" find the solution to our problem)
 2. Devise a recursive formula to compute the subproblems.
 3. Derive a solution to original problem from solutions to subproblems.
+
+### LEC: Monday, October 21, 2019
+
+#### Optimal Binary Search Trees
+
+Records with keys $1,2,...,n$
+
+$P(i) =$ probability of searching for key $i$.
+
+<u>Use linked list:</u> $c(L) = \sum^n_{i = 1} P(i)\cdot \text{position}(L,i)$
+
+A binary search tree has $\frac{2n\choose n}{n+1}$ of combinations
+
+We want a tree that minimizes $c(T) = \sum^n_{i=1} P(i) \cdot (\text{depth}(T,i) + 1)$
+
+We can try inserting nodes in a tree by their $P(i)$ value, but this is not optimal because if the last/first value has the highest probablity, only one side is used in the tree.
+
+Maybe we should try to make a tree that is balanced? That doesn't work, we need to do Dynamic Programming
+
+Suppose $T$ is an optimal BST for $1,2,...,n$ with left and right trees $T_L, T_R$ and the head has a value of $k$
+
+What can we say about the subtrees? $T_L, T_R$ are both binary search trees and that $T_L$ contains values from $1...k-1$ and $T_R$ contains values from $k+1...n$. They are also optimal. Let's prove this.
+
+Fact: $c(T) + c(T_L) + c(T_R) + \sum_{u\in T} P(u)$ because
+
+$\begin{align*}c(T) &= \sum^n_{i=1} P(i) \cdot (\text{depth}(T,i) + 1)\\&= P(k)\cdot 1 + \sum_{i \in T_L} P(i) \cdot (depth(T,i) +1) + \sum_{i \in T_R} P(i) \cdot (depth(T,i) + 1) \\ &= \sum_{u\in T} P(u) + c(T_L) + c(T_R) \end{align*}$
+
+Subproblems to solve: Find optimal BST for $i...j$, $1 \leq i \leq j \leq n$, call it $T_{ij}$
+
+For $T_{1n}$ we need $T_{1,k-1}$ and $T_{k-1,n}$, but we need more, we need all $T_{ij}$ where the head is $i$ to $T_{ij}$ where the head is $j$.
+
+$C[i,j]=c(T_{ij}), 1 \leq i \leq j \leq n$
+
+$C[i,j] = \min_{i \leq k \leq j} C[i, k+1] + C[k+1, j] + \sum_{i \leq u \leq j} P(u)$
+
+Compute with increasing $j-i$ + 1. This is the size of the problem (number of nodes in the tree).

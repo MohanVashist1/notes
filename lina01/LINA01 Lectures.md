@@ -164,7 +164,7 @@ Some words in English are **structurally ambigious**
 - it is possible to create multiple levels of word structure
 - structure creation is rule-governed
 
-**compounding**: taking two already existent words and combines them
+**compounding**: taking two already existent words and combining them
 
 - another process of word building
 - How do we determine the category of a compound?
@@ -180,7 +180,7 @@ Some words in English are **structurally ambigious**
 - Inflectional morphemes never change the category of words or morphemes to which they are attached
 - Represents for the most part the so-called **grammatical markers**, encoding information about tense, number, gender, etc.
 - **Inflectional** morphemes do not change the category of the meaning of the word they attach to.
-- Derivational morphemes might change the category; they also change the type of meaning of their bases
+- **Derivational** morphemes might change the category; they also change the type of meaning of their bases
 - How is Inflection marked cross-linguistically?
   - Suffixation
   - Internal Change

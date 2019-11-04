@@ -763,3 +763,54 @@ $C[i,j]=c(T_{ij}), 1 \leq i \leq j \leq n$
 $C[i,j] = \min_{i \leq k \leq j} C[i, k+1] + C[k+1, j] + \sum_{i \leq u \leq j} P(u)$
 
 Compute with increasing $j-i$ + 1. This is the size of the problem (number of nodes in the tree).
+
+### LEC: Monday, November 4, 2019
+
+#### Max Flow and Applications (KT 7, DPV 7.2)
+
+A Flow Network $\mathcal{F}(G,s,t,c)$
+
+$G = (V,E)$ is a directed graph
+
+$s,t \in V$
+
+$c : E \mapsto \mathbb{R}^+_0$
+
+$G$ has no edges into $s$ and no edges out of $t$.
+
+Flow $f$ in $\mathcal{F}$: $f : E \mapsto \mathbb{R}^+_0$ such that:
+
+- $\forall e \in E, 0 \leq f(e) \leq c(e)$ [capacity constraint]
+- $\forall v \in V - \{ s,t \}, \sum_{e \in out(v)} f(e) = \sum_{e \in in(v)} f(e)$ [conservation constraint]
+
+where $out(v) = \{ (v,u) : (v,u) \in E \}$ and $in(v) = \{ (u,v) : (u,v) \in E \}$
+
+Value of flow $f$: $V(f) = \sum_{e \in out(s)} f(e)$
+
+##### Max Flow Problem
+
+<u>Input:</u> Flow network $\mathcal{F} = (G,s,t,c)$
+
+<u>Output:</u> Flow $f$ in $\mathcal{F}$ of max value. $\forall$flow $f'$ in $\mathcal{F}$ , $V(f) \geq V(f')$
+
+##### Min Cut PRoblem
+
+Cut of flow net $\mathcal{F} = (G=(V,E), s,t,c)$:
+
+$S, T \subseteq V | s \in S, t \in T, S \cap T = \empty, S \cup T = V$
+
+capacity of cut $(S,T) = c(S,T) = \sum_{u \in S, v \in T} c(u,v)$
+
+<u>Input:</u>  $\mathcal{F}$
+
+<u>Output:</u> Cut $(S,T)$ of minimum capacity
+
+$\forall$cut $(S', T')$ of $\mathcal{F}, c(S,T) \leq c(S',T')$
+
+Max Flow = Min Cut
+
+<u>Algo for improving flow</u>
+
+- Found simple $s\to t$ path [ignore direction]
+- increased flow through edges traversed in forward direction by $(b \leq c(e)-f(e))$ 
+- decreased flow through edges traversed backward by $(b \leq f(e))$

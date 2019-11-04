@@ -328,3 +328,79 @@ Note: How do we compute betweenness? Computing every pair is commutationally cha
 
 - If we want to compute betweenness of paths starting at node A, we do a BFS starting from A.
 - Count the number of shortests paths from A to all other nodes in the graph
+
+### LEC: Monday, October 28, 2019
+
+How do we Organize and Find Information? Search Engines!
+
+How do search engines work exactly?
+
+The web is huge and messy, how do you organize it?
+
+**The first attempt** was Human Curation by Yahoo, taking a page from Library Science.
+
+- This did not work out as the web got bigger and better.
+
+How do we organize information? This is a difficult problem
+
+**The second attempt** was a web search.
+
+- This is Informational Retrieval
+- But the web is filled without untrusted documents, spam, random things
+- we need to be able to rank webpages
+
+Problem Retrieval Pre-Web Problem: **Scarcity**
+
+Search on the Web Problem: **Abundance**
+
+The Key Idea is that nothing on the "ideal" page makes it stand out from the thousands of others.
+
+- But the ideal page will be very often be linked to by others!
+
+- So we want to rank the nodes in a graph by their importance by looking at the links.
+
+  - What's a natural first thing to try?
+  - Idea: Links at votes
+    - However, some links to the website are better than others.
+    - Note: Each page has a hub and authority score corresponding to out links and in links respectively, this is recursive though, so we'll need to control for that.
+      - We use the Principle of Iterated Improvement to stop this recursion.
+    - **Hubs** are pages that are lists of links that link to good stuff
+    - **Authorities** are pages that are good and are linked to by good hubs
+    - **Authority Update Rule**: For each page $p$ update auth$(p)$ to be the sum of the hub scores of all pages that point to it
+    - **Hub Update Rule**: opposite of authority update
+    - Link Analysis
+      - We don't just want to find results, but good results.
+    - How we stop the recursion
+      - HITS algorithm
+        - init all scores to 1
+        - Perform hub-authority updates
+          - Apply auth update
+          - apply hub update
+        - normalize
+      - This algorithm always converges to the same hub and authority scores
+
+  #### PageRank
+
+  The problem with the Hubs and Auth is that commercial pages are unlikely to link to their competitors, and in many situations, importance passes directly from one prominent page to another
+
+  **"Flow" Model**
+
+  - Each link's vote is proportional to the importance of its source page
+  - if page $i$ with importance $r_i$ has $d_i$ out-links, each link gets $\frac{r_i}{d_i}$ votes
+  - page $j$'s own importance $r_j$ is the sum of the votes on its in-links
+
+  We link of PageRank as a "fluid" that circulates around the network.
+
+  There is a problem with PageRank is that all the PageRank can pool up in a cycle.
+
+  The solution to this is Scaled PageRank
+
+  
+
+  Random Surfer Model
+
+  #### Spectral Analysis
+
+  This relates to matrix analysis, to eigen vectors and eigen values.
+
+  

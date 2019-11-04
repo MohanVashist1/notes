@@ -91,7 +91,7 @@
 - often the only approach: analytical solution does not exist
 - often cheaper than analytical solutions
 
-#### Converting base $b$ to decimal
+#### Converting base $b$ to decimal ($b > 0, b \in\mathbb{Z}$)
 
 **example:** recall that $b$ has to be a natural number. let us convert from $b=16$ (hexadecimal)
 

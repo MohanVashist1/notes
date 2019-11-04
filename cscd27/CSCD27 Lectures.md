@@ -50,7 +50,7 @@ Security is often a Compromise
 
 - Goal: Make sure that the security mechanisms realize the security goals
 - Outcome: Methodology
-- Principle: Full assurance cannot be achieved.
+- ### Principle: Full assurance cannot be achieved.
 
 #### Risk Management Analysis of Security
 

@@ -111,7 +111,7 @@ Complex words have structure
 
 **Affixation**
 
-The propecess by with morphemes attach to other morphemes or words
+The propecess by which morphemes attach to other morphemes or words
 
 Affixes are bound morphemes
 

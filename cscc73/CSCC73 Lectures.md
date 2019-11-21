@@ -764,7 +764,7 @@ $C[i,j] = \min_{i \leq k \leq j} C[i, k+1] + C[k+1, j] + \sum_{i \leq u \leq j} 
 
 Compute with increasing $j-i$ + 1. This is the size of the problem (number of nodes in the tree).
 
-### LEC: Monday, November 4, 2019
+### LEC 16: Monday, November 4, 2019
 
 #### Max Flow and Applications (KT 7, DPV 7.2)
 
@@ -793,7 +793,7 @@ Value of flow $f$: $V(f) = \sum_{e \in out(s)} f(e)$
 
 <u>Output:</u> Flow $f$ in $\mathcal{F}$ of max value. $\forall$flow $f'$ in $\mathcal{F}$ , $V(f) \geq V(f')$
 
-##### Min Cut PRoblem
+##### Min Cut Problem
 
 Cut of flow net $\mathcal{F} = (G=(V,E), s,t,c)$:
 
@@ -814,3 +814,198 @@ Max Flow = Min Cut
 - Found simple $s\to t$ path [ignore direction]
 - increased flow through edges traversed in forward direction by $(b \leq c(e)-f(e))$ 
 - decreased flow through edges traversed backward by $(b \leq f(e))$
+
+### LEC 17: Wednesday, November 6, 2019
+
+We will be looking at residual graphs today
+
+Residual Graph $G_{f'}$ with respect to flow $f'$. Every edge is replaced with two edges, one going in the same direction and another going in the reverse direction, This represents the capacity that can be pushed or reversed, if an edge has 0, then we don't write it.
+
+Given flow $f$ in flow network $F = (G,s,t,c), G=(V,E)$ the residual graph $G_f$ with residual capacities $c_f$. $G_f = V, E_f$ where 
+
+- for every edge $(u,v)$ such that $f(u,v) < c(u,v)$ we put edge $(u,v)$ with residual capacity $c_f (u,v) = c(u,v) - f(u,v)$ in $E_f$ [forward edge]
+- for everg edge $(u,v)$ such that $f(u,v) > 0$ we put edge $(v,u)$ with residual capacity $c_f (v,u) = f(u,v)$ in $E_f$. [backward edge]
+- All residual capacities are strictly positive
+
+augment($f$ = flow, $p$ = simple $s\to t$ path in $G_f$) [augmenting the graph]
+
+- $b :=$ min res cap of any edge on $p$
+- for each edge $(u,v)$ on $p$
+  - if $(u,v)$ is a forward edge then $f(u,v) = f(u,v) + b$
+  - else $f(v,u) = f(v,u) -b$
+- return $f$
+
+The returned $f$ of this function is an improved flow. We will prove this.
+
+If $f$ is a flow and $p$ is a simple $s\to t$ path in $G_f$ then $f'$ = augment$(f,p)$ is a better flow. (better meaning that $V(f') > V(f)$). To prove that $f'$ is a flow, we need to show that it satisdies the capacity constraint and the conservation constraint.
+
+**capacity constraint**: the concern is that we have either increased the flow to above the capacity or decreased the flow to below 0.
+
+if $(u,v)$ is a forward edge, then 
+
+$\begin{align*}f'(u,v) &= f(u,v) + b\\ &\leq f(u,v) + c_f (u,v)\\ &= f(u,v) + c(u,v) - f(u,v) \\ &= c(u,v) \end{align*}$
+
+So this is safe.
+
+if $(u,v)$ is a backward edge, then
+
+$\begin{align*} f'(v,u) &= f(v,u) - b \\ &\leq f(v,u) - c_f(u,v) \\ &= f(v,u) - f(v,u) \\ &= 0\end{align*}$
+
+So this is safe as well.
+
+**conservation constraint:** $p$ in $G_f$ starts at $s$, goes to $t$, we may have messed up the conservation constraint, so let's check it.
+
+For every node $v \neq s,t$ the paths in front or behind are either forwards or backwards, we'll prove that in all cases, the conservation constraing holds.
+
+Forward, Forward preserves the constraint
+
+Forward, Backward preserves the constraint
+
+Backward, Forward preserves the constraint
+
+Backward, Backward preserves the constraint
+
+Therefore, we proved that our augmenting step produces a better flow.
+
+#### Ford-Fulkerson Max Flow Algorithm
+
+FF($F$ = $(G, s,t, c)$)
+
+- for each edge $(u,v)$ of $G$ do $f(u,v) = 0$
+- construct $G_f$
+- while $G_f$ has an $s\to t$ path do
+  - $p :=$ any simple $s\to t$ path in $G_f$
+  - $f := $agument$(f,p)$
+  - update $G_f$
+- return $f$
+
+1. Does this algorithm terminate?
+2. Is this algorithm correct?
+
+We will assume our capacities are integers, as irrational capacities may not terminate.
+
+Observe.
+
+1. $f(u,v)$ is always an non negative integer.
+2. $C = \sum_{e=out(s)} c(e) \leq V(\text{max flow})$
+3. Every iteration improves value of the flow by at least one
+
+After observing these, the algorithm terminates after at most $C$ iterations.
+
+The running time is $O(n + m)$, $n = |V|, m = |E|$
+
+It is $O(m)$ if every node is reachable from the source.
+
+The running time of FF is $\Theta(mC)$ which is psuedo-polynomial.
+
+We can improve this by picking augmenting paths cleverly.
+
+1. Pick "widest" path (maximum $b$) This results in $O(m\log C)$ iterations, which is polynomial. This results in $O(m^2\log C)$ for running time
+2. Pick the path with the fewest edges. This results in $O(mn)$ iterations, which results in an $O(m^2 n)$ time algorithm.
+
+### Lecture: Monday, November 18, 2019
+
+#### Linear Programming (DPV 7.1, 7.4, 7.6, KT 11.6)
+
+Optimization problems:
+
+- optimize (min/max) object function subject to constraint
+
+##### Diet Problem
+
+- $n$ types of food $F_1, F_2, ..., F_n$
+- $m$ types of nutrients $N_1, N_2,... N_m$
+- Unit of $F_j, 1 \leq j \leq n$
+  - costs $c_j$
+  - provides $a_{ij}$ units of $N_i$
+
+We must obtain $\geq b_i$ units of $N_i$
+
+1. Variables: $X_1 ,..., x_n$ = amount of $F_j$ in diet $1 \leq j \leq n$
+
+2. min $c_1 x_1 + ... + c_n x_n$
+
+3. constraints:
+
+   $a_{11}x_1 + a_{12}x_2 + ... + a_{1n} x_n \geq b_1$
+
+   .
+
+   .
+
+   .
+
+   $a_{m1}x_1 + a_{m2}x_2 + ... + a_{mn} x_n \geq b_m$
+
+##### Transportation Problem
+
+$k$ plants $P_1 ,..., P_k$
+
+$l$ outlets $O_1 ,..,  O_l$
+
+$P_i$ makes $s_i$ of some product
+
+$O_j$ requires $d_j$ of that product
+
+$c_{ij}$ is the cost of transporting unit of product $P_i$ to $O_j$
+
+1. Variables $x_{ij} =$ amount shippsed from $P_i$ to $O_j$
+
+2. Object Function: min $\sum_{1 \leq i \leq k, 1 \leq j \leq l} c_{ij} x_{ij}$
+
+3. Constraints
+
+   $\forall 1 \leq i \leq k, \sum_{1 \leq j \leq l} x_{ij} \leq s_i$
+
+   $\forall 1 \leq j \leq l, \sum_{1 \leq j \leq l} x_{ij} \geq d_j$
+
+   $x_{ij} \geq 0$
+
+##### General Form of Linear Programs
+
+1. Vars $x_1 ,..., x_n \in \mathbb{R}$
+
+2. Object Function, min/max $\sum^n_{j=1} c_j x_j, c_j \in\mathbb{R}$
+
+3. Constraints: $\sum^n_{j=1} a_{ij} x_j \dagger b_i$
+
+   where $b_i, a_{ij} \in \mathbb{R}$ and $\dagger \in \{ \leq, =, \geq \}$
+
+Input: $a_{ij}, b_i, c_j \in \mathbb{R} | 1 \leq i \leq m, 1 \leq j \leq n$
+
+Output: Values for $x_1,...,x_n$ that min/max object function and satisfy all constraints.
+
+Note: we cannot have non-linear things.
+
+##### Corn Crop Problem
+
+There are 2 types of corn crops, $C1$ that is used for human consumption and $C2$ used for animal feed.
+
+Planting requires:
+
+- labour
+- seed
+- pesticide
+
+Profit:
+
+- $C1$: $3/hec
+- $C2$: $2/hec
+
+Resources:
+
+- $\leq 40$ hours of labour
+- $\leq 100$ kg seed
+- $\leq 10$ bags of fertilizer
+
+C1 requires per hec: 2 hrs of labour, 1 kg seed, 1 bag pest
+
+C2 requires per hec: 1 hr of labour, 3 kg seed, 0 bag pest
+
+Variables: $x_1, x_2$: amount of hec to plant of $C1, C2$
+
+Object function: max $3x_1 + 2x_2$
+
+Subject to $2x_1 + x_2 \leq 40$ (labour), $x_1 + 3x_2 \le 100$ (seed), $x_1 \leq 10$ (pesticide), $x_1, x_2 \geq 0$
+
+When we draw the feasible region, we get a complex polygon. 

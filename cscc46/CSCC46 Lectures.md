@@ -404,3 +404,29 @@ The Key Idea is that nothing on the "ideal" page makes it stand out from the tho
   This relates to matrix analysis, to eigen vectors and eigen values.
 
   
+
+### LEC: Monday, November 11, 2019
+
+How to we get to UTSC from Mississauga? 401 or Gardiner?
+
+Everyone has an idea of what everyone else is doing and tries to do the opposite.
+
+For Graphs in Traffic Routing, we have two types of edges
+
+- **Constant edges**: wide highways that dont get congested
+- **Traffic Dependent edges**: quick routes that can get congested
+
+Players: Drivers 1,...,n
+
+Strategies:
+
+Payoff: Negative Drive Time
+
+#### Braess's Paradox
+
+Sometimes having more strategies can hurt you.
+
+Price of Anarchy = $\frac{\text{cost in equilibrium}}{\text{socially optimal cost}}$
+
+#### Diffision of Decisions
+

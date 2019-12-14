@@ -251,3 +251,25 @@ The seeds of modern cryptography
   - meant for verifying identity
   - binding between a public key and an owner
   - certified by a certification authority
+
+### LEC: Thursday, November 21, 2019
+
+Thierry likes Null Byte
+
+WWW $\neq$ Internet
+
+Sir Tim Berners-Lee
+
+- He invented HTML, URLS, hyperlink
+
+The web is great because it's easy to deply and update
+
+But if a web application is hacked, the users are also at risk.
+
+ip addresses changes a lot, so we cant use that for session id, so they'll be using cookies
+
+Mixed content is dangerous because the browser attaches cookies to HTTP requests as well.
+
+SameSite cookie flag
+
+The request always goes through for ajax requests across domains

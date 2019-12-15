@@ -450,9 +450,70 @@ If the fraction of cross-gender edges is significantly less than random, then th
 
 # LEC 5 - NOT ADDED TO ANKI
 
+**Milgram's experiment**
 
+- Picked ~300 people in Kansas
+- Asked each person to try to get a letter to a particular person in Boston
+- But they could only send the letter to someone they know on a first-name basis
+- Each resulting chain took 6.2 steps on average
 
+**The Bacon Number**
 
+- Create a network of Hollywood actors
+- Connect two actors if they co-appeared in a movie
+- The number of steps to Kevin Bacon is the bacon number
+
+**Criticism of Milgram experiment**
+
+- Not that many samples
+- Starting points and target were non-random
+- 31 of 64 chains passed through 1 of 3 people (not all links/nodes are equal)
+
+**Columbia Small-World Study**
+
+- 18 diverse targets
+- 24k first steps
+- 65% dropout per step
+- 1.5% of chains completed
+
+**What was the problem with the Columbia Small-World Study?**
+
+People stop participating
+
+**Funneling effect**
+
+Some target's friends are more likely to be the final step
+
+**Effects of target's characteristics**
+
+Structurally high-status target easier to find
+
+**If assume each human is connected to 100 other people, in 5 steps we can each 10 billion people, what's wrong here?**
+
+92% of new FB friends are to a friend-of-a-friend
+
+**What are the basic properties of real social networks?**
+
+Short paths
+
+**How can we model short paths?**
+
+Path lengths
+
+**Rings**
+
+Networks with high clustering and long paths
+
+**Small-World Model's two components**
+
+- Low-dimensional regular lattice
+- Rewiring
+
+**Low-dimensional regular lattice in the Small-World Model**
+
+- Has high clustering coefficient
+- Now introduce randomness ("shortcuts")
+- (Ring can be used as a lattice)
 
 
 

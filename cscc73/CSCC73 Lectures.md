@@ -383,7 +383,7 @@ FF($F$ = $(G, s,t, c)$)
 - construct $G_f$
 - while $G_f$ has an $s\to t$ path do
   - $p :=$ any simple $s\to t$ path in $G_f$
-  - $f := $agument$(f,p)$
+  - $f := $ augment$(f,p)$
   - update $G_f$
 - return $f$
 

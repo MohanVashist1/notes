@@ -1,0 +1,7 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}LEC 1: Monday, January 6, 2020}{2}{section.1}
+\contentsline {paragraph}{Decision Problem}{2}{section*.2}
+\contentsline {paragraph}{Instance}{2}{section*.3}
+\contentsline {paragraph}{Yes-Instance}{2}{section*.4}
+\contentsline {paragraph}{No-Instance}{2}{section*.5}
+\contentsline {paragraph}{Algorithm}{2}{section*.6}

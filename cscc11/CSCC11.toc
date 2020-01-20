@@ -1,0 +1,9 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}LEC 1: Tuesday, January 7, 2020}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Machine Learning Definitions}{2}{subsection.1.1}
+\contentsline {paragraph}{AI View}{2}{section*.2}
+\contentsline {paragraph}{Software Engineering View}{2}{section*.3}
+\contentsline {paragraph}{Statistics View}{2}{section*.4}
+\contentsline {paragraph}{Training}{2}{section*.6}
+\contentsline {paragraph}{Application}{2}{section*.7}
+\contentsline {subsection}{\numberline {1.2}A Simple Problem}{2}{subsection.1.2}

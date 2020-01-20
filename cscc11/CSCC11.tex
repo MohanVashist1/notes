@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+
+\usepackage{upgreek}
+
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+\graphicspath{ {imgs/} }
+
+\usepackage{dsfont}
+
+\usepackage{mathtools}
+
+\usepackage{hyperref}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{mathtools}
+
+\usepackage{textcomp}
+
+\usepackage[english]{babel}
+
+\usepackage{tikz}
+
+\usepackage{tcolorbox}
+
+\usepackage{amsthm,amssymb}
+
+\setlength{\parindent}{0cm}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Machine Learning -- Winter 2020}
+\fancyhead[RE,LO]{Joshua Concon}
+\fancyfoot[CE,CO]{\leftmark}
+\fancyfoot[LE,RO]{\thepage}
+
+
+\begin{document}
+
+\title{CSCC11: Machine Learning\\ Lecture Notes}
+\date{University of Toronto Scarborough -- Winter 2020}
+\author{Joshua Concon}
+\maketitle
+Instructor is Dr. David Fleet. If you find any problems in these notes, feel free to contact me at conconjoshua@gmail.com.
+
+\tableofcontents
+
+\pagebreak
+
+\section{LEC 1: Tuesday, January 7, 2020}
+
+\subsection{Machine Learning Definitions}
+
+\paragraph{AI View} Automatic Learning
+\paragraph{Software Engineering View} Can be fine-tuned
+\paragraph{Statistics View} Machine Learning is fast Statistics
+
+\subsection*{Machine Learning methods are broken into 2 phases}
+\paragraph{Training} a model is learned from a collection of training data
+\paragraph{Application} the model is used to make decisions about some new test data
+
+\subsection*{Types of Machine Learning}
+\begin{itemize}
+  \item Supervised Learning: The training data is labelled with the correct answers
+  \begin{itemize}
+    \item Classification: Outputs are discrete labels
+    \item Regression: Outputs are real-valued
+  \end{itemize}
+  \item Unsupervized Learning: Deriving patterns and structure from unlabelled data
+  \item Reinforcement Learning: An agent seeks to learn optimal actions to take based on state of the world, and learn from the consequences of past actions
+\end{itemize}
+
+\subsection{A Simple Problem}
+Consider a problem where the goal is to fit a 1D curve. There are many curves that may fit.
+\\
+\\
+Using Machine Learning requires us to make certain choices:
+
+\begin{enumerate}
+  \item How do we parameterize the curve? (linear, quadratic, sine...)
+  \item What criteria (objective function) do we use to judge the quality of the fit?
+  \item How long are we willing to wait for a solution (or can we use approximations)?
+  \item How do we prevent overfitting?
+\end{enumerate}
+
+\textbf{Overfitting} is when a model fits the training data well, but performs poorly on test data.
+
+Properties of the input that are not relevant to the task at hand are called \textbf{Noise}.
+
+
+\end{document}

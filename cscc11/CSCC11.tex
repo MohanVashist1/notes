@@ -93,5 +93,82 @@ Using Machine Learning requires us to make certain choices:
 
 Properties of the input that are not relevant to the task at hand are called \textbf{Noise}.
 
+\section{LEC 2: Thursday, January 9, 2020}
+
+\subsection{Linear Regression}
+
+Our goal is to learn a mapping $y=f(x), x\in\mathbb{R}, y\in\mathbb{R}$ and $f$ is a linear function $(y = w x + b)$ where $w$ is the weight and $b$ is the bias.
+\\
+\\
+We want to estimate $w$ and $b$ from $N$ training pairs
+
+$$\{(x_i, y_i)\}^N_{i=1}$$
+
+Then once we have $w$ and $b$, we can predict outputs $y$ for some new inputs $x$.
+\\
+\\
+When $N > 2$ we are looking for a line that is as close to the training points as possible. So we ultimately want to minimize the errors between the data points and our hypothetical model
+
+$$\min y_i - (wx_i + b)$$
+
+The most common way to estimate is \underline{least-squares regression}.
+\\
+\\
+First, we define the error of the $i$th training point as
+
+$$e_i = y_i - (wx_i +b)$$
+
+The sum of the squared errors over all training points is then used to measure the quality of the fit.\\
+\\
+This is called the \textbf{Objective Function, Energy Function,} or \textbf{Imperial Loss}.
+
+$$E(w,b) = \sum^N_{i=1} e_i^2 = \sum^N_{i=1} (y_i - (wx_i + b))^2$$
+
+The results in an error function is 0 iff $\forall e_i, e_i = 0$ and the results are always non-negative.
+\\
+\\
+Finding the line that minimum square error is equivalent to solving for the $w$ and $b$ that minimize $E(w,b)$. This can be solved by setting the derivatives of $E$ with respect to these parameters to 0.
+
+\begin{align*}
+     \frac{\partial E}{\partial b} &= -2 \sum_i (y_i - (wx_i + b)) = 0\\
+     b^* &=  \frac{\sum_i y_i}{N} - w \frac{\sum_i x_i}{N} = \hat{y} - w \hat{x}
+\end{align*}
+
+Where $\hat{x}$ and $\hat{y}$ are the averages of $x$ and $y$ respectively. $b^*$ still depends on $w$. We get the following after substitution.
+
+\begin{align*}
+    E(w,b) &= \sum_i ((y_i - \hat{y}) - w (x_i - \hat{x}))^2\\
+    \frac{\partial E}{\partial w} &= -2 \sum_i ((y_i - \hat{y}) - w(x_i - \hat{x}))(x_i - \hat{x})\\
+    \text{and if we set $\frac{\partial E}{\partial w} = 0$ then we get}\\
+    w^* &= \frac{\sum_i (y_i - \hat{y})(x_i - \hat{x})}{\sum_i (x_i - \hat{x})^2}
+\end{align*}
+
+The values $w^*$ and $b^*$ are the least squares estimates for the parameters of the linear regression.
+
+\subsection{Multi-Dimensional Inputs}
+
+To learn a mapping from $D$-dimensional inputs to scalar outputs ($x\in\mathbb{R}^D, y \in\mathbb{R}$)
+
+$$f(x) = w^T x + b = \sum^D_{j=1} w_j x_j + b$$
+
+For convenience, we can fold $b$ into the weight vector.
+
+$$\tilde{w} = \begin{bmatrix}
+   w_{1} \\
+   \vdots \\
+   w_{D}\\
+   b
+ \end{bmatrix}, \tilde{x} = \begin{bmatrix}
+   x_{1} \\
+   \vdots \\
+   x_{D} \\
+   1
+ \end{bmatrix}$$
+ 
+Then we can write the mapping as such
+
+$$f(x) = \tilde{w}^T \tilde{x}$$
+
+Given $N$ training input-output pairs, the least-squares objective function is 
 
 \end{document}

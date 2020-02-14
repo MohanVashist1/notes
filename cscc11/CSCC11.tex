@@ -169,6 +169,83 @@ Then we can write the mapping as such
 
 $$f(x) = \tilde{w}^T \tilde{x}$$
 
-Given $N$ training input-output pairs, the least-squares objective function is 
+Given $N$ training input-output pairs, the least-squares objective function is
+
+$$E(\tilde{w}) = \sum^N_{i=1} (y_i - \tilde{w}^T \tilde{x_i})^2$$
+
+If we stack the outputs in a vector and the inputs in a matrix, we can also write this as:
+
+$$E(\tilde{w}) = || y - \tilde{X}\tilde{w}||^2 \text{ where } y = \begin{bmatrix}
+   y_{1} \\
+   \vdots \\
+   y_{N}\\
+ \end{bmatrix}, \tilde{X} = \begin{bmatrix}
+   x^T_{1} & 1 \\
+   \vdots & \vdots \\
+   x^T_{N} & 1\\
+ \end{bmatrix}$$
+ 
+We can also rewrite as such
+
+$$E(\tilde{w}) = (y - \tilde{X}\tilde{w})^T (y - \tilde{X}\tilde{w}) = \tilde{w}^T\tilde{X}^T\tilde{X}\tilde{w} - 2y^T\tilde{X}\tilde{w} + y^T y$$
+
+We can optimize this by setting all values of $\frac{\partial E}{\partial w_i} = 0$ and solving the resulting system of equations
+
+$$w^* = (\tilde{X}^T \tilde{X})^{-1} \tilde{X}^T y$$
+
+
+\underline{Note:} $\tilde{X}^+ \equiv (\tilde{X}^T \tilde{X})^{-1} \tilde{X}^T$ is the pseudoinverse of $\tilde{X}$
+
+So we can represent $w^*$ as such
+
+$$w^* = \tilde{X}^+ y$$
+
+\subsection{Multi-Dimensional Outputs}
+
+With multi-dimensional inputs and outputs, we have a case that handles that.
+\\
+\\
+So for $D$ inputs and $K$ outputs we get
+
+$$y = \tilde{W}^T \tilde{x} \text{ where } y\in\mathbb{R}^K, \tilde{W} \in\mathbb{R}^{(D+1) \times K}$$
+$$\text{and where } \tilde{W} = [\tilde{w}_1,...,\tilde{w}_K] = \begin{bmatrix}
+    w_1 & \dots & w_k\\
+    b_1 & \dots & b_k
+\end{bmatrix}$$
+$$\text{and where } w_i \in\mathbb{R}^D, i\in [1,k], i\in\mathbb{Z}, x \in \mathbb{R}^{(D+1)}$$
+
+We can then express the mapping from the input $\tilde{x}$ to the $j$th element of $y$ as
+
+$$y_j = \tilde{w}_j^T x$$
+
+Given $N$ training samples denoted $\{ \tilde{x}_i, y_i \}^N_{i=1}$, then squared error of $\tilde{W}$
+
+$$E(\tilde{W}) = \sum^N_{i=1} \sum^K_{j=1} (y_{i,j} - \tilde{w}_j^T \tilde{x}_i)^2$$
+
+$$\text{where $y_{i,j}$ is the $j$th index of the $y_i$ array}$$
+
+\underline{Note:} Euclidean Norm of $v$ is defined as $||v|| = \sqrt{\sum_i v_i^2}$
+\\
+\\
+With the euclidean norm, we can also express $E$ as the sum over output dimensions.
+
+\begin{align*}
+    E(\tilde{w}) &= \sum^N_{i=1} \sum^K_{j=1} (y_{i,j} - \tilde{w}_j^T\tilde{x}_i)^2\\
+    &= \sum^K_{j=1} ||y_j'- \tilde{X}\tilde{w}_j ||^2\\
+    \text{where } & y_j' \in\mathbb{R}^N, y_j' = [y_{1,j},\dots, y_{N,j}]^T\\
+                  & y' \in\mathbb{R}^{N \times K}, y' = [y_1',\dots, y_k']\\
+                  & \tilde{X} = \begin{bmatrix}
+  \tilde{x}_{1} \\
+   \vdots \\
+   \tilde{x}_{N}\\
+ \end{bmatrix}
+\end{align*}
+
+You can also stack everything into a matrix equation.
+
+$$E(\tilde{W}) = ||Y - \tilde{X}\tilde{W}||^2_F \text{ where } Y = [y_1',\dots, y_K']$$
+
+\underline{Note:} The Frobenius norm of $Y$ is
+$$||Y||_F = \sqrt{\sum_{i,j} Y^2_{i,j}}$$
 
 \end{document}

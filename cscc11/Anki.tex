@@ -65,4 +65,32 @@
 
 \paragraph{Noise} {Properties of the input that are not relevant to the task at hand}
 
+\section{LEC 2}
+
+\paragraph{Least-Squares Regression} summing up the squared errors $E(w,b) = \sum^N_{i=1} e_i^2$
+
+\paragraph{Linear Regression} Mapping 1-D input to 1-D output $y = f(x) = wx + b$
+
+\paragraph{Multi-Dimensional Inputs} Mapping D-D inputs to 1-D output $f(x) = w^T x + b = \sum^D_{j=1} w_j x_j + b$
+
+\paragraph{Folding the bias $b$ in Multi-Dimensional Inputs} $\tilde{w} = \begin{bmatrix}
+   w_{1} \\
+   \vdots \\
+   w_{D}\\
+   b
+ \end{bmatrix}, \tilde{x} = \begin{bmatrix}
+   x_{1} \\
+   \vdots \\
+   x_{D} \\
+   1
+ \end{bmatrix}, f(x) = \tilde{w}^T\tilde{x}$
+
+\paragraph{pseudoinverse of $\tilde{X}$}{$\tilde{X}^+ \equiv (\tilde{X}^T \tilde{X})^{-1} \tilde{X}^T$}
+
+\paragraph{Multi-dimensional Outputs}{Mapping $D$-D inputs to $K$-D outputs $y = W^T x, y\in\mathbb{R}^K, W \in\mathbb{R}^{(D+1) \times K}$}
+
+\paragraph{Euclidean Norm of $v$}{$||v|| = \sqrt{\sum_i v_i^2}$}
+
+\paragraph{Frobenius Norm of $Y$}{$||Y||_F = \sqrt{\sum_{i,j} Y^2_{i,j}}$}
+
 \end{document}

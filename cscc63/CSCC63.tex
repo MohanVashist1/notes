@@ -227,6 +227,111 @@ We cannot use something like the pumping lemma to prove / disprove that a progra
 
 \section{LEC 3: Monday, January 13, 2020}
 
+The Turing Machines are good for our purpose of describing algorithms because we can program them in a way that's similar to regular computers.
+\\
+\\
+Of course, if there's another way of building these machines that's more powerful then that type of machine would be better.
+\\
+\\
+Let's look at a couple of ways we might try to make these automata more powerful.
+\\
+\\
+Here's some ways we might want to try to do this:
+\begin{itemize}
+    \item Using more than one tape
+    \item Using non-deterministic machines
+    \item Allowing the TM to access arbitrary places in its memory
+\end{itemize}
 
+We'll start this week by arguing that these modifications \textbf{don't change the expressive power of the TM}, we can prove this by emulating these machines using a regular TM.
+\\
+\\
+Let's first look at multiple tapes
+
+\subsection{Multiple Tape Turing Machines}
+
+This means we have multiple input strings, with tape heads (that may be in different positions) for each tape.
+\begin{itemize}
+    \item multi-tape TMs are just as powerful as regular TMs
+    \item but multi-tape TMs are faster
+    \item there is actually a guaranteed amount of slow down when using single-tape TMs
+\end{itemize}
+
+We can emulate a multi-tape TM using a single-tape TM by doing the following:
+\begin{itemize}
+    \item concatenate the input tapes into a single one, without loss of info
+    \begin{itemize}
+        \item So we omit intermediate blank space symbols and replace them with another symbol (say, \#)
+        \item We also use another symbol (say, \$), to denote the beginning char
+        \item We'll also need another symbol to denote the tape heads (say, $.$)
+    \end{itemize}
+    \item How it works: two passes on the concatenated string will be used for each "next step"
+    \begin{itemize}
+        \item \textbf{rightwards sweep}, which will take note of current states and the next symbols for each string. By the end of the sweep, we know the states and next symbols of each string
+        \item \textbf{leftwards sweep}, which will use the info we gathered beforehand to update each of the strings
+    \end{itemize}
+    \item We need to do some bookkeeping to remember what symbols we've seen
+\end{itemize}
+
+So we can emulate multiple tapes with a single-tape TM.
+\\
+\\
+We end up with a time cost, though: if our strings have a maximum length of $n$, the process of moving back and forth on the tape to update our positions will take up to $n$ times as many steps.
+
+\subsection{Non-deterministic Turing Machines}
+
+\begin{itemize}
+    \item non-determinism are for the questions of the form: "does there exist a solution for this problem"?
+    \item while determinism questions are like: "is x a solution for this problem"?
+\end{itemize}
+
+Non-deterministic TMs (NTM) are defined as having multiple outgoing arrows from a state, and that we can follow any one of these arrows.
+
+\textbf{How NTMs accept \slash reject a string}?
+\begin{itemize}
+    \item the input forms a tree that results from branching from all possible arrows
+    \item if any one of the branches leads to a configuration with $q_\text{accept}$, then we accept the string, otherwise reject.
+\end{itemize}
+\\
+\\
+We can do this by performing a breath first search (BFS) on the configuration tree.
+\\
+\\
+Why not use DFS? Because using DFS might cause us to explore an infinitely looping branch, even if there exists another branch with an accepting state. BFS avoids this by exploring branches level by level.
+\\
+\\
+emulating a NTM using a deterministic TM is possible but has a cost $\Theta (k^n)$
+
+\subsection{RAM in a Turing Machine}
+
+Finally, we discuss RAM (random access memory)
+\begin{itemize}
+    \item The ability to jump to arbitray memory locations
+    \item gives $n^6$ slowdown
+    \item still doable
+\end{itemize}
+\\
+\\
+Key Points:
+\begin{itemize}
+    \item We have different ways to implement Turing Machines but all have the same expressive power
+    \item all we need from these variants is that they
+    \begin{itemize}
+        \item allow arbitrary memory access
+        \item do finite amount of work in any step
+    \end{itemize}
+\end{itemize}
+
+This leads us to the Church-Turing thesis.
+
+\begin{tcolorbox}
+ The Church-Turing Thesis: Anything that we can reasonably expect to do with an algorithm can also be decided using a TM. So a problem can be solved by an algorithm iff the problem can also be solved using Turing Machines
+\end{tcolorbox}
+\\
+\\
+Of course, so far we've only talked about decision problems. If we want to talk about programs that return some non-Boolean value, we just treat whatever is on the TM's tape when it halts as its return value.
+\\
+\\
+Now that we've argued that TMs can encode any algorithm, we'll start to look at all the things that TMs cannot do.
 
 \end{document}

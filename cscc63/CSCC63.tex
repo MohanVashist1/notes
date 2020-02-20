@@ -11,6 +11,8 @@
 
 \usepackage{mathtools}
 
+\usepackage{tcolorbox}
+
 \usepackage{hyperref}
 
 \usepackage[utf8]{inputenc}
@@ -86,5 +88,145 @@ If we wanted to work with graphs, we'd have to encode a graph in a computer as a
 Note that there are some things we cannot represent in a computer, like $\pi$
 
 \paragraph{Algorithm} A finite sequence of logical steps that always terminates.
+
+\section{LEC 2: Wednesday, January 8, 2020}
+
+Note that some problems cannot be solved and that we cannot build an algorithm to solve them. For example, "does one set of statements (in first order logic) imply another?"
+\\
+\\
+How do we prove that a problem is not computable? And not by examples...
+\\
+\\
+We have various Formulisms to understand algorithms:
+\begin{itemize}
+    \item Lambda Calculus
+    \item Turing Machine -- automatons with arbitrary memory
+    \item Post Machine --  automatons with states and arbitrary memory
+\end{itemize}
+\\
+\\
+These Formulisms emulate computers and each other.
+\\
+\\
+Before expanding on Turing Machines, let us first revisit automata.
+
+\begin{tcolorbox}
+ DFSA (Deterministic Finite State Automata)
+ \begin{itemize}
+     \item have states and arrows
+     \item doesn't store anything
+ \end{itemize}
+\end{tcolorbox}
+
+Note that DFSAs cannot solve any problem that would require some sort of counting.
+\\
+\\
+To solve this, we introduce:
+
+\begin{tcolorbox}
+ PDA (Push-down automata)
+ \begin{itemize}
+     \item has stack memory
+     \item this means we cannot access memory in an arbitrary order
+     \item we cannot interleave patterns
+     \item size limitation: input string
+ \end{itemize}
+\end{tcolorbox}
+
+Now, consider the following: How can we check if a number is prime?
+\\
+\\
+\begin{itemize}
+    \item By trying to divide it by every number? This is inefficient
+    \item But there is a polynomial time algorithm that checks primality
+    \item It's not enough to simply show an algorithm as 'proof' that there exists no efficient algo that solves a problem
+\end{itemize}
+
+So how do we show that there is no algorithm to efficiently solve some problem?
+\\
+\\
+We can use Formulisms, such as Turning Machines, which are stronger versions of Finite State Automata.
+
+Recall that:
+\begin{itemize}
+    \item DFSAs are deciders, they answer YES or NO
+    \item DFSAs recognize regular languages
+    \item the string or the "tape" is read left to right, char by char, each time going to the next state
+\end{itemize}
+
+Also Recall that:
+\begin{itemize}
+    \item PDAs can also recognize context free languages
+\end{itemize}
+
+Now, A Turning Machine is a more powerful version of these automata. It is defined as such:
+
+\begin{tcolorbox}
+ Turing Machines:
+ \begin{itemize}
+     \item Has unrestricted computing time as the head of the tape can move around upon reading a character (like a cursor)
+     \item Unrestricted memory, as we are allowed to write on the tape and we assume the tape has infinite blank characters to its right
+ \end{itemize}
+\end{tcolorbox}
+
+A more formal Definition of a Turing Machine is as such:
+\begin{tcolorbox}
+ a TM $M$ is a tuple
+ 
+ $$M = (Q, \Sigma, \Gamma, \delta, s, q_A, q_R)$$
+ 
+ \begin{itemize}
+     \item $Q$ is a set of states
+     \item $\Sigma$ is the input alphabet (does not include blanks)
+     \item $Gamma$ is the tape alphabet
+     \item $\delta$ is the transition function, defined as $$\delta: Q \times \Gamma \mapsto Q \times \Gamma \times \{ L,R \}$$
+     \item $s$ is the start state
+     \item $q_A$ is the accept state
+     \item $q_R$ is the reject state
+ \end{itemize}
+ 
+\end{tcolorbox}
+
+Note that: $\Sigma \subseteq \Gamma$
+\\
+\\
+Note that: If we ever reach a point where there's no arrow out of the current state, we immediately go into an implicit state, reject, and halt.
+\\
+\\
+Note that: If we're on the left side of the tape and try to move left, we just stay in the same place.
+\\
+\\
+We have been looking at deterministic TMs, but non-deterministic ones also exist.
+\\
+\\
+We'll give our one more definition -- Configurations represent the state of the TM, and what char is being looked at in the input string.
+\\
+\\
+We'll be focusing on TMs, but not on the automata themselves. We like them for 2 reasons:
+\begin{itemize}
+    \item We can basically program them like regular computers
+    \item Their configurations are well-behaved, and so we can do math on them. This will be what allows us to relate TMs (and computability results on TMs) to non-TM objects later on
+\end{itemize}
+We'll explore more on the second reason later.
+\\
+\\
+So how do we build a TM from a language ourselves?
+\begin{enumerate}
+    \item Convert the language into code for a recognizer for that language
+    \item Convert that code into a flowchart
+    \item Convert the flowchart into a Turing Machine
+\end{enumerate}
+
+Can we tell when (and if) a TM will halt on a given input? Nope.
+\\
+\\
+This is because we have an unlimited tape length, thus unlimited memory, and unlimited possible configurations!
+\\
+\\
+We cannot use something like the pumping lemma to prove / disprove that a program will halt on an input.
+
+\section{LEC 3: Monday, January 13, 2020}
+
+
 
 \end{document}

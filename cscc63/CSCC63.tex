@@ -7,6 +7,35 @@
 \usepackage{graphicx}
 \graphicspath{ {imgs/} }
 
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
 \usepackage{dsfont}
 
 \usepackage{mathtools}
@@ -333,5 +362,140 @@ Of course, so far we've only talked about decision problems. If we want to talk 
 \\
 \\
 Now that we've argued that TMs can encode any algorithm, we'll start to look at all the things that TMs cannot do.
+
+\section{LEC 4: Wednesday, January 15, 2020}
+
+We'll be discussing the RAM model of computation in this lecture. In this model, each tape cell has an address, and we can jump to any address we want during the computation. In particular, we can read memory addresses from the tape in order to figure out where to jump.
+\\
+\\
+You can see that this basically gives us something similar to a regular computer's architecture.
+\\
+\\
+We won't describe how to implement this model in detail, but we will state that we can implement it, and that the cost is in the order if an $n^6$ slowdown where $n$ is the length of the string.
+\\
+\\
+So all told, we have several ways of implementing TMs, and we can see that they are equivalent in terms of expressive power.
+\\
+\\
+In fact, any model we can build in which:
+\begin{itemize}
+    \item We allow arbitrary memory access
+    \item Every step can only do a finite amount of work
+\end{itemize}
+Ends up having the same expressive power. This leads us to what we call the Church-Turing Thesis.
+\\
+\\
+
+Although TMs can encode any language -- there are things that TMs cannot do. A lot of the trouble comes from self-references (when TMs can take itself as input).
+\\
+\\
+We know that we can write TMs as strings, and feed that string to another TM (or itself!)
+\\
+\\
+Consider the language $$A_{TM} : \{ <M,w> : M\text{ accepts }w \}$$
+We can probably note that there would be some self-reference in a TM that solves this.
+\\
+\\
+We will try to prove that it isn't decidable via proof by diagonalization.
+\\
+\\
+Basically a proof by contradiction:
+\begin{itemize}
+    \item assume that we can solve the language $A_{TM}$ with a TM $M_A$
+    \item then we write another TM $D$, which uses $M_A$
+\end{itemize}
+Where $D$ does the following:
+
+\begin{lstlisting}
+on input <M>:
+    run M_A on input <M,M>
+    if M_A accepts, then reject
+    if M_A rejects, then accept
+\end{lstlisting}
+
+What if you input $<D>$ into $D$?
+\begin{itemize}
+    \item if $D$ accepts $<D>$ (because $M_A$ runs in $D$), then $D$ will reject $<D>$
+    \item if $D$ rejects $<D>$ (because $M_A$ runs in $D$), then $D$ will accept $<D>$
+\end{itemize}
+This cannot be. Basically, this logic may emulate an infinite stack, it will not halt.
+\\
+\\
+We cannot have something like $M_A$ exist, thus, $A_{TM}$ cannot be solved.
+\\
+\\
+There is no algorithm (and thus -- TM) that can solve $A_{TM}$. We say that $A_{TM}$ is undecidable
+\\
+\\
+There are two types of languages:
+\begin{itemize}
+    \item Decidable: there exists a decider (a TM that halts and either accepts or rejects every possible input)
+    \item Undecidable: there is no decider. However, the language could be recognizable, co-recognizable, or neither.
+\end{itemize}
+\\
+\\
+The basic idea is that we're going to a particular type of proof called diagnolization: we're going to try to code something called the liar's paradox into a program, under the assumption that a particular problem is decidable.
+\\
+\\
+If we could succeed, we'd have a paradox, so there must be a flaw somewhere in our code. The flaw will be the assumption that our original program is decidable.
+
+\begin{tcolorbox}
+ A Liar's Paradox is just a statement of the form "This statement is false" (a problematic statement in computer language).
+ \\
+ \\
+ You can see that this statement can't be true, otherwise that would mean that it would be false, in which case, it can't be true.
+ \\
+ \\
+ But if it's false, then it can't be false either.
+ \\
+ \\
+ Natural language can handle this kind of mess, since we don't require all of its statements to be true or false. But in logic, or in a computer program that always gives one of two answers, we should never be able to see this sort of statement.
+\end{tcolorbox}
+
+So here's the first language we'll show that is not solvable using algorithms (because solving it would involve some amount of self-reference):
+
+$$A_{TM} = \{ <M,w> | M \text{ accepts }w \}$$
+
+So we want to build a liar's paradox around this program,  Here's how we'll do it:
+
+\begin{itemize}
+    \item We'll assume that $A_{TM}$ can be solved by some TM $M_A$
+    \item{We'll use $M_A$ to build another TM $D$. Now, $D$ will take input of the form $<M>$, where $M$ is some TM. Here's its pseudocode:
+    \begin{lstlisting}
+    D = on input <M>:
+        run M_A on input <M,M>
+        if M_A accepts, then reject
+        if M_A rejects, then accept
+    \end{lstlisting}}
+    \item So basically, $D$ just flips the output of $M_A$, but the thing is that $M_A$ should halt and give the right answers on all of its inputs, including $<D,D>$
+    \item So what happens if we plug $<D>$ as input into $D$?
+    \begin{itemize}
+        \item $D$ runs $M_A$ on $<D,D>$
+        \item $M_A$ halts and accepts iff $D$ accepts the input $<D>$. Otherwise it halts and rejects.
+        \item $D$ flips this answer, so if $D$ accepts $<D>$, it must reject. If it rejects $<D>$, it must accept.
+    \end{itemize}
+    \item You can see that neither of these answers is possible -- and so $D$ can't have a well-defined result.
+    \item This is our contradiction: the only place in our construction where we made any assumption was when we assumed that $M_A$ existed.
+\end{itemize}
+
+Hence, there is no TM (or algorithm) $M_A$ that can solve $A_{TM}$ ($A_{TM}$ is an undecidable problem).
+\\
+\\
+A problem that cannot be solved using a TM or an algorithm is called decidable. A problem that cannot is called undecidable. So $A_{TM}$ is undecidable.
+\\
+\\
+So what goes wrong?
+\\
+\\
+Think about what happens if you try to run $D$. It tries to guess its output in order to reverse it, but then, that second level $D$ would just be trying to reverse another $D$ another level down, which is trying to reverse another run of $D$...
+\\
+\\
+You get an inifinite number of runs of $D$, all trying to second guess each other. There's no place where you can ever stop.
+\\
+\\
+That's how we can get out of this problem: our programs can accept or reject, but they can also loop forever. That's what happens here.
+\\
+\\
+Now once we allow algorithms that can loop, it's easy enough to write a TM that will tell if a TM $M$ accepts an input $w$:
 
 \end{document}

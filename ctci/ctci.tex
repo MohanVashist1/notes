@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+
+\usepackage{upgreek}
+
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+\graphicspath{ {imgs/} }
+
+\usepackage{dsfont}
+
+\usepackage{mathtools}
+
+\usepackage{hyperref}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{mathtools}
+
+\usepackage{textcomp}
+
+\usepackage[english]{babel}
+
+\usepackage{tikz}
+
+\usepackage{tcolorbox}
+
+\usepackage{amsthm,amssymb}
+
+\setlength{\parindent}{0cm}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Cracking the Coding Interview}
+\fancyhead[RE,LO]{Joshua Concon}
+\fancyfoot[CE,CO]{\leftmark}
+\fancyfoot[LE,RO]{\thepage}
+
+
+\begin{document}
+
+\title{Cracking the Coding Interview Notes}
+\date{Gayle Laakmann Mcdowell}
+\author{Joshua Concon}
+\maketitle
+If you find any problems in these notes, feel free to contact me at conconjoshua@gmail.com.
+
+\tableofcontents
+
+\pagebreak
+
+\section{Chapter 6}
+
+\subsection{Big $O \slash \Theta \slash \Omega$ }
+
+\paragraph{Big O}{Upper bound on the time of the algorithm}
+\paragraph{Big \Omega}{Lower bound on time of algorithm}
+\paragraph{Big \Theta}{both Big $\Omega$ and Big $O$}
+
+Note: The industry definition of "Big O" is closer to what academics mean by Big $\Theta$
+
+\subsection{Best, Worst, Expected Cases}
+
+We can describe an algorithm's run time in 3 different ways:
+\begin{enumerate}
+    \item Best Case (This is rarely helpful)
+    \item Worst Case (This is usually the most helpful) (Is usually the "unlucky" case)
+    \item Excepted Case (Useful for more probability dependent algorithms)
+\end{enumerate}
+
+\subsection{Space Complexity}
+
+Sometimes we care about the amount of memory or space an algorithm requires.
+\\
+\\
+Note: Drop constants and other non-dominant terms for Big $O \slash \Theta$
+
+\subsection{Amortized Time}
+
+Considering multiple operations all as one operation, and finding the run time of the aggregated operation. 
+\subsection{Recursive Runtime}
+
+f
+
+
+\end{document}

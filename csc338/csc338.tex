@@ -1,0 +1,193 @@
+\documentclass[12pt]{article}
+
+\usepackage{upgreek}
+
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+\graphicspath{ {imgs/} }
+
+\usepackage{dsfont}
+
+\usepackage{mathtools}
+
+\usepackage{hyperref}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{mathtools}
+
+\usepackage{textcomp}
+
+\usepackage[english]{babel}
+
+\usepackage{tikz}
+
+\usepackage{tcolorbox}
+
+\usepackage{amsthm,amssymb}
+
+\setlength{\parindent}{0cm}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Machine Learning -- Summer 2020}
+\fancyhead[RE,LO]{Joshua Concon}
+\fancyfoot[CE,CO]{\leftmark}
+\fancyfoot[LE,RO]{\thepage}
+
+
+\begin{document}
+
+\title{CSC338: Numerical Methods\\ Lecture Notes}
+\date{University of Toronto Mississauga -- Summer 2020}
+\author{Joshua Concon}
+\maketitle
+Instructor is Dr. Ilir Dema.
+
+\tableofcontents
+
+\pagebreak
+
+\section{LEC 1: Monday, May 4, 2020}
+
+Numerical Methods aka Scientific Computing is design and analysis for numerically solving mathematical problems in science and engineering
+
+\subsection{Scientific Computations}
+
+\subsubsection{Steps for Solving a Computational Problem}
+
+\begin{itemize}
+    \item Develop a mathematical model. That often involves
+    \begin{itemize}
+        \item Replace infinite with finite, continuous with discrete
+        \item Differential with algebraic
+        \item Nonlinear with linear
+    \end{itemize}
+    \item Develop an algorithm to solve the problem numerically (this is the focus of this course)
+    \item Run the algorithm and interpret the results
+\end{itemize}
+
+\subsection{Computational Problems}
+
+\begin{itemize}
+    \item Problem is \textbf{well-posed} if solution
+    \begin{itemize}
+        \item exists
+        \item is unique
+        \item depends continuously on problem data
+    \end{itemize}
+    \item otherwise, problem is \textbf{ill-posed}
+\end{itemize}
+
+Examples:
+
+\begin{itemize}
+    \item Compute $f(x) = x^2 - 1$ is well-posed
+    \item Solve $x^2 - 1 = 0$ is ill-posed
+    \item Solve $x^3 - x^2 +x - 1 = 0$ (real solutions) is well-posed
+    \item Solve $2x-1 = 0$ in integers is ill-posed
+    \item Transform a colour image to gray scale is well-posed
+    \item Transform a gray scale image to colour is ill-posed
+    \item Compute the winding number of a circle around a point is ill-posed
+\end{itemize}
+
+\textbf{Sensitivity:} Even if problem is well-posed, solution may still be sensitive to input data.
+\begin{itemize}
+    \item small changes in input results in large changes in output
+\end{itemize}
+
+\subsection{Accuracy}
+
+\textbf{Accuracy} is the "closeness" of a computed solution to the actual solution
+\begin{itemize}
+    \item Absolute Error: Difference between approximate value and true value (good estimate for true value)
+    \item Relative Error: Ratio between absolute error and true value (good estimate for true value)
+\end{itemize}
+
+Consider computing $\cos \frac{\pi}{6}$
+\begin{itemize}
+    \item True input: $x = \frac{\pi}{6} = 0.52.....$
+    \item Approximate input: $\hat{x} = 0.524$
+    \item True function: $f(x) = \cos x$
+    \item Approximate function: $\hat{f} (x) = 1 - \frac{x^2}{2}$
+    \begin{itemize}
+        \item Obtained by truncating $\cos x = \sum^\infty_{k=0} (-1)^k \frac{2^{2k}}{(2k)!}$
+    \end{itemize}
+\end{itemize}
+
+\subsection{Forward and Backward Error}
+
+Suppose we want to compute $y = f(x)$, where $f\mathbb{R} \mapsto \mathbb{R}$, but obtain approximate value $\hat{y}$
+
+Forward Error: $\Delta y = \hat{y} - y$
+
+Backward Error: $\Delta x = \hat{x} - x$, where $f(\hat{x}) = \hat{y}$
+
+Going back to $\cos \frac{\pi}{6}$
+\begin{itemize}
+    \item $\hat{f}(x) = 1 - \frac{x^2}{2}, f(x) = cos(x)$
+    \item $\hat{x} = 0.524, x = \frac{\pi}{6}$
+    \item Total Error: $\hat{f}(\hat{x}) - f(x) = \hat{f}(\hat{x}) - f(\hat{x}) + f(\hat{x}) - f(x)$
+    \item Forward Error:
+    \begin{itemize}
+        \item Computational Error: $\hat{f}(\hat{x}) - f(\hat{x})$
+        \item Propogated data error: $f(\hat{x}) - f(x)$
+    \end{itemize}
+    \item Backward error: $\hat{x} - x$
+\end{itemize}
+
+Note that when computing $y=\sqrt{x}$, the absolute error is $|y - \hat{y}|=|\sqrt{x} - \hat{y}|$, but we cannot compute it, but it is easier to evaluate backward error $|\hat{y}^2 - x|$.
+\\
+\\
+You can also start with an initial guess for the square root at $s$ and improve iteratively
+$$x_{n+1} = \frac{1}{2} (x_n + \frac{s}{x_n})$$
+
+\subsection{Conditioning}
+\begin{itemize}
+    \item A problem is \textbf{well-conditioned} or insensitive if a relative change in the input causes a similar relative change in the solution
+    \item A problem is \textbf{ill-conditioned} or sensitive if a relative change in the input cases a much larger change in the solution
+    \item Formally, \textbf{Conditioning Number $C_N$} can be defined as follows: $C_N = \frac{|\Delta y/y|}{|\Delta x/x|} = \frac{|(f(\hat{x}) - f(x)) / f(x)|}{|(\hat{x} - x) / x|}$
+    \item Otherwise $|\text{relative forward error}| = C_N |\text{relative backward error}|$
+    \item if $C_N > 1$ then problem is ill-conditioned
+\end{itemize}
+
+If we assume that $f$ is differentiable then
+
+\begin{itemize}
+    \item $C_N = \frac{|(f(x + \Delta x) - f(x))| / |f(x)|}{|
+    \Delta x|/ |x|} \approx \frac{|xf'(x)|}{f(x)}$
+    \item please note that this definition is not good when $f(x) = 0$
+    \item in such cases, $C_N$ can be defined as the ratio of absolute errors leading to $C_N = \frac{1}{f'(x)}$ which means the root finding problem is well conditioned if the slope at the root is $>>1$
+\end{itemize}
+
+Example:
+
+If $C_N = \frac{\Delta A (y)}{ \Delta A (x)}$ and $z(t) = 0$. Find the roots of $z$ (what is y and x?)
+Solving this means $t = y(z)$
+\begin{align*}
+    C_N &= \frac{\Delta A (y)}{ \Delta A (x)}\\
+    &= |\frac{\hat{t} - t}{z(\hat{t}) - z(t)}|
+\end{align*}
+
+\subsection{Stability}
+
+An algorithm is \textbf{stable} if the result is relatively insensitive to perturbations during computation.
+\\
+\\
+Note: An algorithm is stable if the result is the exact solution to a nearby problem. This is also called the "backward error view"
+\\
+\\
+When can we obtain accurate solutions?
+\begin{itemize}
+    \item When the problem is well conditioned
+    \item and whent he algorithm is stable
+\end{itemize}
+
+Note: insensitive = well-conditioned
+
+\end{document}

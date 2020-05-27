@@ -40,4 +40,138 @@
 
 \section{LEC 1}
 
+\paragraph{Well-posed}
+
+A problem is \_ if the solution
+\begin{itemize}
+    \item exists
+    \item is unique
+    \item depends continuously on problem data
+\end{itemize}
+
+\paragraph{Ill-posed}
+
+not well-posed
+
+\paragraph{Is the solution of $f(x) = x^2 - 1$ well-posed?}
+
+Yes
+
+\paragraph{Solving $0 = x^2 - 1$ is well-posed?}
+
+No
+
+\paragraph{Sensitivity}
+
+Small changes in the input results in large changes in output
+
+\paragraph{Can a solution be sensitive if a problem is well-posed?}
+
+Yes, it may be
+
+\paragraph{Accuracy}
+
+the "closeness" of a computed solution to the actual solution
+
+\paragraph{Absolute Error}
+
+approx value − true value
+
+\paragraph{Relative Error}
+
+$\frac{\text{absolute error}}{\text{true value}}$
+
+\paragraph{How do we derive Approx value from true value and relative error?}
+
+Approx value = (true value)(1 + relative error)
+
+\paragraph{$\hat{x}$}
+
+Approximate value of $x$
+
+\paragraph{$\hat{f}$}
+
+Approximate function of $f$
+
+\paragraph{$\hat{y}$}
+
+Approximate of $y=f(x)$, so equal to $f(\hat{x})$
+
+\paragraph{Forward Error}
+
+$\Delta y = \hat{y} - y$
+
+\paragraph{Backward Error}
+
+$\Delta x = \hat{x} - x$
+
+\paragraph{Computational Error}
+
+$\hat{f}(\hat{x}) - f(\hat{x})$
+
+\paragraph{Propogated data error}
+
+$f(\hat{x}) - f(x)$
+
+\paragraph{Total Error}
+
+$\hat{f}(\hat{x}) - f(x) = \hat{f}(\hat{x}) - f(\hat{x}) + f(\hat{x}) - f(x)$
+
+\paragraph{Truncation Error}
+
+Difference between true result (for actual input) and result produced by given algorithm using exact arithmetic
+
+\paragraph{Rounding Error}
+
+Difference between result produced by given algorithm using exact arithmetic and result produced by same algorithm using limited precision arithmetic
+
+\paragraph{well-conditioned (or insensitive)}
+
+A problem is \_ if a relative change in the input causes a similar relative change in the solution
+
+\paragraph{well-conditioned (or sensitive)}
+
+A problem is \_ if a relative change in the input cases a much larger change in the solution
+
+\paragraph{Conditioning Number $C_N$}
+
+$C_N = \frac{|\Delta y/y|}{|\Delta x/x|} = \frac{|(f(\hat{x}) - f(x)) / f(x)|}{|(\hat{x} - x) / x|}$
+
+\paragraph{What does it mean if $C_N > 1$}
+
+Then the problem is ill-conditioned
+
+\paragraph{What is the $C_N$ if $f$ is differentiable?}
+
+$C_N = \frac{|(f(x + \Delta x) - f(x))| / |f(x)|}{|
+    \Delta x|/ |x|} \approx \frac{|xf'(x)|}{f(x)}$
+    
+\paragraph{If $f$ is differentiable, is the definition good for when $f(x)=0$ (root finding)?}
+
+No.
+
+\paragraph{What is the intuition of the Condition Number?}
+
+The condition number is the "amplification factor" relating relative forward error to relative backward error.
+
+\paragraph{Relative Forward Error}
+
+$\frac{\Delta y}{y}$
+
+\paragraph{Relative Backward Error}
+
+$\frac{\Delta x}{x}$
+
+\paragraph{Stable}
+
+An Algorithm is \_ if the result is relatively insensitive to perturbations during computation
+
+\paragraph{Backward Error View}
+
+An algorithm is stable if the result is the exact solution to a nearby problem
+
+\paragraph{When can we obtain accurate solutions?}
+
+When the problem is well conditioned and the algorithm is stable
+
 \end{document}
